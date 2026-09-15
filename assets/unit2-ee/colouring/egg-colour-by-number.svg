@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-labelledby="title desc">
+  <title id="title">Egg colour by number</title><desc id="desc">Interactive decorated egg colouring page with six numbered colour regions.</desc>
+  <defs><clipPath id="eggClip"><path d="M450 54C310 54 205 296 205 454c0 132 99 205 245 205s245-73 245-205C695 296 590 54 450 54Z"/></clipPath></defs>
+  <style>.paint-region{stroke:#173b75;stroke-width:12;stroke-linejoin:round;cursor:pointer}.number{font:900 42px Arial,sans-serif;fill:#173b75;text-anchor:middle;pointer-events:none}</style>
+  <g clip-path="url(#eggClip)" fill="#fff">
+    <path class="paint-region" id="egg-top" data-number="1" data-color="yellow" d="M180 30h540v160H180Z"/>
+    <path class="paint-region" id="egg-band-one" data-number="2" data-color="blue" d="m175 188 75-50 75 50 75-50 75 50 75-50 75 50 75-50 75 50v105H175Z"/>
+    <path class="paint-region" id="egg-middle" data-number="3" data-color="pink" d="M175 292h550v116H175Z"/>
+    <path class="paint-region" id="egg-band-two" data-number="4" data-color="purple" d="m175 408 75-45 75 45 75-45 75 45 75-45 75 45 75-45 75 45v100H175Z"/>
+    <path class="paint-region" id="egg-lower" data-number="5" data-color="green" d="M175 507h550v105H175Z"/>
+    <path class="paint-region" id="egg-bottom" data-number="6" data-color="orange" d="M175 600h550v110H175Z"/>
+  </g>
+  <path d="M450 54C310 54 205 296 205 454c0 132 99 205 245 205s245-73 245-205C695 296 590 54 450 54Z" fill="none" stroke="#173b75" stroke-width="18" pointer-events="none"/>
+  <text class="number" x="450" y="145">1</text><text class="number" x="450" y="270">2</text><text class="number" x="450" y="367">3</text><text class="number" x="450" y="480">4</text><text class="number" x="450" y="565">5</text><text class="number" x="450" y="635">6</text>
+</svg>

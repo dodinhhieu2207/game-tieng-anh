@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "theme": "Ee Adventure - Elephant & Egg Classroom",
+  "palette": {
+    "navy": "#173B75",
+    "elephantBlue": "#8FB7F2",
+    "peach": "#FFAE8A",
+    "cream": "#FFF8DC",
+    "yellow": "#FFCB57",
+    "coral": "#FF725E",
+    "mint": "#8FE1CE",
+    "purple": "#7358D6"
+  },
+  "characters": {
+    "neutral": "characters/elephant-neutral.png",
+    "listening": "characters/elephant-listening.png",
+    "celebrate": "characters/elephant-celebrate.png",
+    "letterEe": "characters/elephant-letter-ee.png",
+    "countingSixEggs": "characters/elephant-counting.png",
+    "colouring": "characters/elephant-colouring.png"
+  },
+  "letters": {
+    "eeCard": "letters/letter-ee-card.svg"
+  },
+  "objects": {
+    "eggWhole": "objects/egg-whole.png",
+    "eggCracked": "objects/egg-cracked.png",
+    "eggBroken": "objects/egg-broken.png",
+    "eggNest5": "objects/egg-nest-5.svg",
+    "eggNest6": "objects/egg-nest-6.svg"
+  },
+  "numbers": {
+    "fiveCard": "numbers/number-5-card.svg",
+    "sixCard": "numbers/number-6-card.svg"
+  },
+  "colouring": {
+    "elephant": "colouring/elephant-colour-by-number.svg",
+    "egg": "colouring/egg-colour-by-number.svg",
+    "regionSelector": ".paint-region",
+    "answerAttributes": ["data-number", "data-color"]
+  },
+  "audio": {
+    "correct": "audio/correct-chime.wav",
+    "tryAgain": "audio/try-again.wav",
+    "eggCrack": "audio/egg-crack.wav",
+    "elephantCall": "audio/elephant-call.wav"
+  }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-labelledby="title desc">
+  <title id="title">Elephant colour by number</title><desc id="desc">Interactive numbered elephant colouring page with six colour regions.</desc>
+  <style>.paint-region{fill:#fff;stroke:#173b75;stroke-width:14;stroke-linejoin:round;cursor:pointer}.number{font:900 42px Arial,sans-serif;fill:#173b75;text-anchor:middle;pointer-events:none}</style>
+  <path class="paint-region" id="elephant-body" data-number="1" data-color="blue" d="M305 315c-68 22-110 95-101 183 9 93 70 144 169 142h173c87 0 145-43 153-117 9-82-22-159-105-190-76-28-216-43-289-18Z"/>
+  <path class="paint-region" id="elephant-left-ear" data-number="2" data-color="pink" d="M325 348c-100 34-197-42-170-153 20-82 122-99 197-40 38 30 43 76 22 122-13 30-26 62-49 71Z"/>
+  <path class="paint-region" id="elephant-right-ear" data-number="2" data-color="pink" d="M553 161c86-75 204-33 209 76 4 88-77 148-163 113-38-16-50-65-58-105-7-34-12-63 12-84Z"/>
+  <path class="paint-region" id="elephant-head" data-number="3" data-color="purple" d="M335 132c86-63 220-34 269 57 40 75 26 168-31 219-50 44-179 45-245-12-70-60-65-210 7-264Z"/>
+  <path class="paint-region" id="elephant-trunk" data-number="4" data-color="yellow" d="M525 298c40-16 86 3 104 38 27 52 57 69 102 54 35-11 57 31 28 56-65 56-155 37-201-34-27-41-60-102-33-114Z"/>
+  <path class="paint-region" id="elephant-feet" data-number="5" data-color="green" d="M270 520h105v120H244c-27-46-17-87 26-120Zm279 0h103c45 33 51 75 25 120H549V520Z"/>
+  <path class="paint-region" id="elephant-tail" data-number="6" data-color="orange" d="M220 385c-57 24-78 66-60 113 12 31-18 44-37 19-38-49-13-137 77-173Z"/>
+  <g fill="#173b75"><circle cx="407" cy="258" r="13"/><circle cx="526" cy="258" r="13"/></g><path d="M432 323c26 21 54 21 80 0" fill="none" stroke="#173b75" stroke-width="10" stroke-linecap="round"/>
+  <text class="number" x="446" y="500">1</text><text class="number" x="261" y="242">2</text><text class="number" x="650" y="238">2</text><text class="number" x="455" y="205">3</text><text class="number" x="638" y="385">4</text><text class="number" x="313" y="602">5</text><text class="number" x="604" y="602">5</text><text class="number" x="174" y="425">6</text>
+</svg>
