@@ -20,5 +20,5 @@ The raster assets were produced with the built-in image generation tool using th
 - Letter Ee introduction: `elephant-letter-ee.png` and `letter-ee-card.svg`
 - Listen and count: `elephant-listening.png`, egg state PNGs, `egg-crack.wav`
 - Choose 5 or 6: number cards and egg-nest SVGs
-- Reward and completion: `elephant-celebrate.png`, `correct-chime.wav`
+- Reward and completion: `elephant-celebrate-four-limbs.png`, `correct-chime.wav`
 - Colour by number: the two interactive colouring SVGs and `elephant-colouring.png`

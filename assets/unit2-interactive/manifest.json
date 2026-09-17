@@ -1,0 +1,54 @@
+{
+  "pack": "unit2-interactive",
+  "version": 1,
+  "status": "phase-2-review",
+  "purpose": "Reusable classroom-object sprites for Unit 2 vocabulary, counting, fine-motor and speaking activities",
+  "format": "png",
+  "background": "transparent",
+  "style": "original preschool educational illustration with rounded forms, navy outline and soft 2D shading",
+  "objects": {
+    "desk": {
+      "src": "objects/desk.png",
+      "spokenForms": ["desk", "a desk", "it's a desk", "it is a desk"],
+      "countable": false
+    },
+    "chair": {
+      "src": "objects/chair.png",
+      "spokenForms": ["chair", "a chair", "it's a chair", "it is a chair"],
+      "countable": true
+    },
+    "pencil": {
+      "src": "objects/pencil.png",
+      "plural": "pencils",
+      "spokenForms": ["pencil", "a pencil", "it's a pencil", "it is a pencil"],
+      "countable": true
+    },
+    "crayon": {
+      "src": "objects/crayon.png",
+      "plural": "crayons",
+      "spokenForms": ["crayon", "a crayon", "it's a crayon", "it is a crayon"],
+      "countable": true
+    },
+    "notebook": {
+      "src": "objects/notebook.png",
+      "plural": "notebooks",
+      "spokenForms": ["notebook", "a notebook", "it's a notebook", "it is a notebook"],
+      "countable": true
+    },
+    "egg": {
+      "src": "objects/egg.png",
+      "plural": "eggs",
+      "spokenForms": ["egg", "an egg", "it's an egg", "it is an egg"],
+      "countable": true,
+      "letter": "E"
+    },
+    "elephant": {
+      "src": "objects/elephant.png",
+      "plural": "elephants",
+      "spokenForms": ["elephant", "an elephant", "it's an elephant", "it is an elephant"],
+      "countable": false,
+      "letter": "E",
+      "role": "vocabulary sprite; existing Ellie assets remain the guide character"
+    }
+  }
+}
