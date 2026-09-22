@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 280" role="img" aria-labelledby="title desc">
+  <title id="title">Lowercase letter e</title>
+  <desc id="desc">A large rounded blue lowercase e for a preschool phonics activity.</desc>
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#438cf0"/>
+      <stop offset="1" stop-color="#2367c7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="11" stdDeviation="1" flood-color="#173b75"/>
+      <feDropShadow dx="0" dy="17" stdDeviation="7" flood-color="#173b75" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)" transform="translate(-18 0)">
+    <path d="M43 151c0-66 44-112 108-112 61 0 101 39 101 99 0 24-10 36-33 36H104c7 25 26 38 55 38 18 0 33-4 49-13 13-8 27-5 35 8l6 10c8 14 4 28-10 37-25 16-54 24-87 24-67 0-109-47-109-127Zm64-21h80c-3-24-17-38-38-38-22 0-36 13-42 38Z" fill="url(#blue)" stroke="#173b75" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M112 70q40-21 78 4" fill="none" stroke="#8fc0ff" stroke-width="7" stroke-linecap="round" opacity=".75"/>
+  </g>
+</svg>

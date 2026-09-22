@@ -10,6 +10,11 @@ This folder is intentionally not wired into `index.html` yet. It is the reusable
 - A correct answer may set the region `fill`, add a locked class, and play `audio/correct-chime.wav`.
 - A wrong answer must leave the region unpainted and may play `audio/try-again.wav`.
 - Browser speech synthesis can pronounce `E`, `/e/`, `egg`, `elephant`, `five`, and `six`; the WAV files in this pack are short sound effects.
+- Phonics mouth guides live in `phonics/`. Each sound declares its symbol, image path, and short cue in `manifest.json`, so another sound can reuse the same interface without changing its layout.
+- Static letter fallbacks are separated into `letter-e-capital.svg` and `letter-e-lowercase.svg`; the lowercase glyph is optically centered inside its own canvas.
+- Rendered motion now lives in real image frames under `letters/motion-e/` and `phonics/motion-short-e/`. Runtime code swaps these frame files in sequence; it does not geometrically distort or morph one still image.
+- Copy-ready generation prompts and frame timing are documented in `phonics/ASSET-PROMPTS.md`.
+- `letter-e-name.wav` models the letter name /iː/. `short-e-sound.wav` models the short vowel /ɛ/ in “egg”; the lesson may retain `/e/` on screen to match the learner's book notation.
 
 ## Image generation prompt set
 
@@ -18,6 +23,7 @@ The raster assets were produced with the built-in image generation tool using th
 ## Intended activity mapping
 
 - Letter Ee introduction: `elephant-letter-ee.png` and `letter-ee-card.svg`
+- Short /e/ articulation guide: `phonics/mouth-short-e.svg`
 - Listen and count: `elephant-listening.png`, egg state PNGs, `egg-crack.wav`
 - Choose 5 or 6: number cards and egg-nest SVGs
 - Reward and completion: `elephant-celebrate-four-limbs.png`, `correct-chime.wav`

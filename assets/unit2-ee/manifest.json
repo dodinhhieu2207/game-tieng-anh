@@ -20,7 +20,34 @@
     "colouring": "characters/elephant-colouring.png"
   },
   "letters": {
-    "eeCard": "letters/letter-ee-card.svg"
+    "eeCard": "letters/letter-ee-card.svg",
+    "capitalE": "letters/letter-e-capital.svg",
+    "lowercaseE": "letters/letter-e-lowercase.svg",
+    "capitalEMotionSprite": "letters/motion-e/letter-e-motion-sprite.png",
+    "capitalEMotionFrames": [
+      "letters/motion-e/letter-e-frame-01.png",
+      "letters/motion-e/letter-e-frame-02.png",
+      "letters/motion-e/letter-e-frame-03.png",
+      "letters/motion-e/letter-e-frame-04.png",
+      "letters/motion-e/letter-e-frame-05.png",
+      "letters/motion-e/letter-e-frame-06.png"
+    ]
+  },
+  "phonics": {
+    "shortE": {
+      "symbol": "/e/",
+      "mouthGuide": "phonics/mouth-short-e.svg",
+      "motionSprite": "phonics/motion-short-e/short-e-mouth-motion-sprite.png",
+      "motionFrames": [
+        "phonics/motion-short-e/short-e-mouth-frame-01.png",
+        "phonics/motion-short-e/short-e-mouth-frame-02.png",
+        "phonics/motion-short-e/short-e-mouth-frame-03.png",
+        "phonics/motion-short-e/short-e-mouth-frame-04.png",
+        "phonics/motion-short-e/short-e-mouth-frame-05.png",
+        "phonics/motion-short-e/short-e-mouth-frame-06.png"
+      ],
+      "cue": "Smile softly. Open a little. Keep your tongue forward."
+    }
   },
   "objects": {
     "eggWhole": "objects/egg-whole.png",
@@ -40,6 +67,8 @@
     "answerAttributes": ["data-number", "data-color"]
   },
   "audio": {
+    "letterEName": "audio/letter-e-name.wav",
+    "shortE": "audio/short-e-sound.wav",
     "correct": "audio/correct-chime.wav",
     "tryAgain": "audio/try-again.wav",
     "eggCrack": "audio/egg-crack.wav",
