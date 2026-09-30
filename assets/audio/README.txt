@@ -1,0 +1,1 @@
+﻿All voice files are made with the Microsoft Zira voice from tools/letters_a_z.json. letter-x.mp3 = letter name, sound-x.mp3 = phonics sound (exact IPA), word.mp3 = vocabulary word. Rebuild: powershell -ExecutionPolicy Bypass -File tools\make_letter_audio.ps1 (add -Only G,H for some letters)
