@@ -19,6 +19,12 @@ const S={ask:0,allRun:0,practice:store.get('practice','0')==='1',level:LEVELS[st
 const L=()=>LEVELS[S.level];
 const alive=k=>currentGame===k;
 let RUN=0;/* bumped on every (re)start so timers from an old round are ignored */
+/* Run fn after the voice clip has finished playing (and at least minMs have passed), plus a short breath.
+   maxMs is a safety net so a stuck audio element can never freeze the game. */
+const afterVoice=(key,voice,minMs,fn,maxMs=9000)=>{
+  const r=RUN,wait=ms=>new Promise(res=>setTimeout(res,ms));
+  Promise.race([Promise.all([voice,wait(minMs)]),wait(maxMs)]).then(()=>wait(450)).then(()=>{if(r===RUN&&alive(key))fn();});
+};
 const later=(key,ms,fn)=>{const r=RUN;setTimeout(()=>{if(r===RUN&&alive(key))fn();},ms);};
 
 /* ---------- audio (SFX + word voice; one mute switch controls both) ---------- */
@@ -123,8 +129,8 @@ games.u3catch={queue:[],target:'',round:0,stars:0,mistakes:0,wrongNow:0,locked:t
       this.locked=true;b.classList.add('correct');badge(b,true);bursting(b);sfx('correct');
       if(!this.wrongNow&&!S.practice)this.stars++;this.mistakes+=this.wrongNow;
       setStatus(`Yes! ${this.target}!`,'good');this.round++;
-      playClip('yes_'+this.target,`Yes! It's a ${this.target}!`);
-      later('u3catch',1500,()=>{if(!S.practice&&this.round>=GOAL)victory('u3catch',{stars:starsFor(this.mistakes),msg:`You caught all ${GOAL} toys!`,again:()=>this.start()});else this.next(false);});
+      const said=playClip('yes_'+this.target,`Yes! It's a ${this.target}!`);
+      afterVoice('u3catch',said,900,()=>{if(!S.practice&&this.round>=GOAL)victory('u3catch',{stars:starsFor(this.mistakes),msg:`You caught all ${GOAL} toys!`,again:()=>this.start()});else this.next(false);});
     }else{
       this.wrongNow++;b.classList.add('wrong');badge(b,false);sfx('wrong_soft');setStatus('Try again!','retry');setTimeout(()=>b.classList.remove('wrong'),400);
       later('u3catch',500,()=>this.prompt());
@@ -162,8 +168,8 @@ games.u3mystery={queue:[],target:'',stage:0,round:0,stars:0,mistakes:0,wrongNow:
     if(b.dataset.w===this.target){
       this.locked=true;this.stage=3;this.paint();b.classList.add('correct');badge(b,true);bursting(document.getElementById('u3Box'));sfx('correct');
       if(!this.wrongNow&&!S.practice)this.stars++;this.mistakes+=this.wrongNow;this.round++;
-      setStatus(`It's a ${this.target}!`,'good');playClip('its_a_'+this.target,`It's a ${this.target}!`);
-      later('u3mystery',1900,()=>{if(!S.practice&&this.round>=GOAL)victory('u3mystery',{stars:starsFor(this.mistakes),msg:'You guessed every mystery toy!',again:()=>this.start()});else this.next(false);});
+      setStatus(`It's a ${this.target}!`,'good');const said=playClip('its_a_'+this.target,`It's a ${this.target}!`);
+      afterVoice('u3mystery',said,1400,()=>{if(!S.practice&&this.round>=GOAL)victory('u3mystery',{stars:starsFor(this.mistakes),msg:'You guessed every mystery toy!',again:()=>this.start()});else this.next(false);});
     }else{
       this.wrongNow++;b.classList.add('wrong');badge(b,false);sfx('wrong_soft');setStatus('Not this one. Try again!','retry');setTimeout(()=>b.classList.remove('wrong'),400);
       if(S.practice&&this.stage<2){this.stage++;this.paint();}
@@ -208,8 +214,8 @@ games.u3missing={queue:[],order:[],missing:'',phase:'look',round:0,stars:0,mista
       this.locked=true;this.phase='found';b.classList.add('correct');badge(b,true);sfx('correct');
       const hole=document.getElementById('u3Hole');if(hole){hole.classList.remove('empty');hole.classList.add('found');hole.innerHTML=`<img src="${img(this.missing)}" alt="${this.missing}">`;bursting(hole);}
       if(!this.wrongNow&&!S.practice)this.stars++;this.mistakes+=this.wrongNow;this.round++;
-      setStatus(`The ${this.missing} was missing!`,'good');playClip('missing_'+this.missing,`Yes! The missing toy is the ${this.missing}.`);
-      later('u3missing',2000,()=>{if(!S.practice&&this.round>=MISSING_GOAL)victory('u3missing',{stars:starsFor(this.mistakes),msg:`You found the missing toy in all ${MISSING_GOAL} rounds!`,again:()=>this.start()});else this.next(false);});
+      setStatus(`The ${this.missing} was missing!`,'good');const said=playClip('missing_'+this.missing,`Yes! The missing toy is the ${this.missing}.`);
+      afterVoice('u3missing',said,1400,()=>{if(!S.practice&&this.round>=MISSING_GOAL)victory('u3missing',{stars:starsFor(this.mistakes),msg:`You found the missing toy in all ${MISSING_GOAL} rounds!`,again:()=>this.start()});else this.next(false);});
     }else{
       this.wrongNow++;b.classList.add('wrong');badge(b,false);sfx('wrong_soft');setStatus('Look at the empty place. Try again!','retry');setTimeout(()=>b.classList.remove('wrong'),400);
       if(S.practice||this.wrongNow>=2)later(currentGame,700,()=>{const c=document.querySelector(`#u3Grid [data-w="${this.missing}"]`);if(c)c.classList.add('hint');});
@@ -233,7 +239,7 @@ games.u3match={items:[],words:[],sel:null,matched:new Set(),mistakes:0,rounds:0,
   tap(kind,b){
     if(this.locked||b.classList.contains('done'))return;
     const w=b.dataset.w;
-    if(kind==='word')sayWord(w);else sfx('click',.5);
+    const said=kind==='word'?sayWord(w):(sfx('click',.5),Promise.resolve());
     if(!this.sel||this.sel.kind===kind){
       document.querySelectorAll('.selected').forEach(x=>x.classList.remove('selected'));
       b.classList.add('selected');this.sel={kind,w,b};
@@ -248,7 +254,7 @@ games.u3match={items:[],words:[],sel:null,matched:new Set(),mistakes:0,rounds:0,
       const hudChip=document.querySelector('.u3-hud .u3-chip');if(hudChip&&!S.practice)hudChip.textContent=`✔ ${this.matched.size} / ${this.items.length}`;
       if(this.matched.size===this.items.length){
         this.locked=true;
-        later('u3match',1300,()=>{if(S.practice){this.board();}else victory('u3match',{stars:starsFor(this.mistakes),msg:'You matched every picture with its word!',again:()=>this.start()});});
+        afterVoice('u3match',said,1000,()=>{if(S.practice){this.board();}else victory('u3match',{stars:starsFor(this.mistakes),msg:'You matched every picture with its word!',again:()=>this.start()});});
       }
     }else{
       this.mistakes++;sfx('wrong_soft');
