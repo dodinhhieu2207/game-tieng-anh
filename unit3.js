@@ -270,13 +270,164 @@ games.u3match={items:[],words:[],sel:null,matched:new Set(),mistakes:0,rounds:0,
   }
 };
 
+/* =========================================================
+   5. TRACE THE TOY  and  6. COLOUR THE TOY
+   Both are built from the textbook toy art itself:
+     assets/unit3/trace/<toy>.json        dotted outline path (computed from the toy silhouette)
+     assets/unit3/colour/<toy>-line.png   black outlines only (transparent inside)
+     assets/unit3/colour/<toy>-regions.png  region map, red channel = region id (0 = not paintable)
+   ========================================================= */
+const PALETTE=['#e53935','#fb8c00','#fdd835','#43a047','#1e88e5','#8e24aa','#ec407a','#795548','#ffffff','#263238'];
+const imgCache={};
+const loadImage=src=>imgCache[src]||(imgCache[src]=new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=()=>rej(new Error('image '+src));i.src=src;}));
+const pickerHTML=(cur,done)=>`<div class="u3-grid u3-thumbs">${WORDS.map(x=>card(x,{cls:'small'+(x===cur?' selected':''),extra:done.has(x)?'<i class="u3-tick">✓</i>':''})).join('')}</div>`;
+const nextUndone=(cur,done)=>{for(let k=1;k<=WORDS.length;k++){const w=WORDS[(WORDS.indexOf(cur)+k)%WORDS.length];if(!done.has(w))return w;}return null;};
+const canvasPos=(cv,e)=>{const r=cv.getBoundingClientRect();return{x:(e.clientX-r.left)*cv.width/r.width,y:(e.clientY-r.top)*cv.height/r.height};};
+const confettiPop=card=>{if(!card)return;const i=document.createElement('img');i.className='u3-confetti-pop';i.alt='';i.src=UI+'confetti.webp';card.appendChild(i);setTimeout(()=>i.remove(),2600);};
+
+/* ---------- Trace the Toy ---------- */
+games.u3trace={word:'plane',done:new Set(),d:null,covered:new Set(),trail:[],tk:0,drawing:false,finished:false,
+  enter(){RUN++;this.done=new Set();this.word=WORDS[0];this.load();restartCurrent=()=>{this.done=new Set();this.word=WORDS[0];this.load();};replayCurrent=()=>this.prompt();},
+  async load(){
+    const my=++this.tk;this.finished=false;this.covered=new Set();this.trail=[];
+    const w=this.word;
+    try{const [json,guide,full]=await Promise.all([fetch(`assets/unit3/trace/${w}.json`).then(r=>r.json()),loadImage(img(w)),loadImage(img(w))]);
+      if(my!==this.tk||!alive('u3trace'))return;this.d=json;this.guide=guide;this.full=full;
+    }catch(e){console.warn('Unit 3 trace: could not load',w,e);setStage(frame('Trace the Toy','Follow the dots with your finger.','<div class="u3-status" id="u3Status">Could not load this toy.</div>',{modes:false}));return;}
+    this.render();this.prompt();
+  },
+  render(){
+    const w=this.word,d=this.d;
+    setStage(frame('Trace the Toy','Follow the dots with your finger.',`${pickerHTML(w,this.done)}<div class="u3-canvas-card" id="u3Card" style="${vars(w)};--ar:${d.w}/${d.h}"><div class="u3-stack"><canvas id="u3Canvas" width="${d.w}" height="${d.h}" aria-label="Trace the ${w}"></canvas><img class="u3-reveal" id="u3Reveal" src="${img(w)}" alt="${w}"></div></div><div class="u3-meter" aria-hidden="true"><i id="u3Meter"></i></div><div class="u3-status" id="u3Status">Start at the green dot.</div>${controlRow(buttonHTML('u3Hear','HEAR IT','speaker')+buttonHTML('u3Redo','TRY AGAIN','reset')+buttonHTML('u3NextToy','NEXT TOY','next','primary'))}`,{modes:false}));
+    bindBar(()=>{});
+    this.cv=document.getElementById('u3Canvas');this.ctx=this.cv.getContext('2d');
+    document.querySelectorAll('.u3-thumbs .u3-card').forEach(b=>b.onclick=()=>{this.word=b.dataset.w;this.load();});
+    document.getElementById('u3Hear').onclick=()=>this.prompt();
+    document.getElementById('u3Redo').onclick=()=>this.load();
+    document.getElementById('u3NextToy').onclick=()=>{this.word=nextUndone(this.word,this.done)||WORDS[(WORDS.indexOf(this.word)+1)%WORDS.length];this.load();};
+    const cv=this.cv;
+    cv.onpointerdown=e=>{if(this.finished)return;this.drawing=true;try{cv.setPointerCapture(e.pointerId);}catch(err){}this.trail=[];this.touch(canvasPos(cv,e));};
+    cv.onpointermove=e=>{if(!this.drawing||this.finished)return;this.touch(canvasPos(cv,e));};
+    cv.onpointerup=cv.onpointercancel=()=>{this.drawing=false;this.trail=[];this.draw();};
+    this.draw();this.meter();
+  },
+  prompt(){return playClip('trace_'+this.word,`Trace the ${this.word}!`,document.getElementById('u3Hear'));},
+  touch(p){
+    this.trail.push(p);if(this.trail.length>160)this.trail.shift();
+    const R=Math.max(26,this.d.step*0.8);let hit=false;
+    this.d.dots.forEach((q,i)=>{if(!this.covered.has(i)&&Math.hypot(q[0]-p.x,q[1]-p.y)<R){this.covered.add(i);hit=true;}});
+    if(hit)sfx('click',.35);
+    this.draw();this.meter();
+    if(this.covered.size>=Math.ceil(this.d.dots.length*0.92))this.complete();
+  },
+  nextDot(){let i=0;while(i<this.d.dots.length&&this.covered.has(i))i++;return i<this.d.dots.length?i:-1;},
+  draw(){
+    const c=this.ctx,d=this.d,N=d.dots.length;c.clearRect(0,0,d.w,d.h);
+    c.save();c.globalAlpha=.2;c.drawImage(this.guide,0,0,d.w,d.h);c.restore();
+    c.lineCap='round';c.lineJoin='round';
+    for(let i=0;i<N;i++){const j=(i+1)%N;if(this.covered.has(i)&&this.covered.has(j)){c.strokeStyle=`hsl(${Math.round(i/N*300)},85%,55%)`;c.lineWidth=15;c.beginPath();c.moveTo(d.dots[i][0],d.dots[i][1]);c.lineTo(d.dots[j][0],d.dots[j][1]);c.stroke();}}
+    if(this.trail.length>1){c.strokeStyle='rgba(137,117,228,.4)';c.lineWidth=9;c.beginPath();c.moveTo(this.trail[0].x,this.trail[0].y);for(const p of this.trail)c.lineTo(p.x,p.y);c.stroke();}
+    const nx=this.nextDot();
+    d.dots.forEach((q,i)=>{const on=this.covered.has(i);c.beginPath();c.arc(q[0],q[1],on?9:6.5,0,Math.PI*2);c.fillStyle=on?`hsl(${Math.round(i/N*300)},85%,50%)`:'#7e63d8';c.fill();c.lineWidth=2.5;c.strokeStyle='#fff';c.stroke();});
+    const s=d.dots[0];if(!this.covered.has(0)){c.beginPath();c.arc(s[0],s[1],17,0,Math.PI*2);c.fillStyle='#43a047';c.fill();c.lineWidth=4;c.strokeStyle='#fff';c.stroke();c.fillStyle='#fff';c.font='700 16px "Comic Sans MS",cursive';c.textAlign='center';c.textBaseline='middle';c.fillText('GO',s[0],s[1]+1);}
+    else if(nx>0){const q=d.dots[nx];c.beginPath();c.arc(q[0],q[1],14,0,Math.PI*2);c.fillStyle='rgba(253,216,53,.95)';c.fill();c.lineWidth=3.5;c.strokeStyle='#fff';c.stroke();}
+  },
+  meter(){const m=document.getElementById('u3Meter');if(m)m.style.width=Math.round(this.covered.size/this.d.dots.length*100)+'%';},
+  complete(){
+    if(this.finished)return;this.finished=true;this.drawing=false;this.trail=[];this.covered=new Set(this.d.dots.map((_,i)=>i));this.draw();this.meter();
+    const card=document.getElementById('u3Card');if(card){card.classList.add('revealed');confettiPop(card);}
+    this.done.add(this.word);sfx('correct');setStatus('Wonderful tracing!','good');
+    document.querySelectorAll('.u3-thumbs .u3-card').forEach(b=>{if(this.done.has(b.dataset.w)&&!b.querySelector('.u3-tick'))b.insertAdjacentHTML('beforeend','<i class="u3-tick">✓</i>');});
+    const said=playClip('nice_trace','Wonderful tracing! Great job!');
+    afterVoice('u3trace',said,2200,()=>{
+      const nxt=nextUndone(this.word,this.done);
+      if(!nxt)victory('u3trace',{stars:3,msg:'You traced all five toys!',again:()=>{this.done=new Set();this.word=WORDS[0];this.load();}});
+      else{this.word=nxt;this.load();}
+    });
+  }
+};
+
+/* ---------- Colour the Toy ---------- */
+async function loadColourData(word){
+  if(loadColourData[word])return loadColourData[word];
+  const [line,regions]=await Promise.all([loadImage(`assets/unit3/colour/${word}-line.png`),loadImage(`assets/unit3/colour/${word}-regions.png`)]);
+  const w=regions.naturalWidth,h=regions.naturalHeight;
+  const cv=document.createElement('canvas');cv.width=w;cv.height=h;const cx=cv.getContext('2d',{willReadFrequently:true});cx.drawImage(regions,0,0);
+  const px=cx.getImageData(0,0,w,h).data,labels=new Uint8Array(w*h),counts=new Uint32Array(256);
+  for(let i=0;i<w*h;i++){labels[i]=px[i*4];counts[labels[i]]++;}
+  const lists=[];for(let k=0;k<256;k++)lists.push(counts[k]&&k?new Uint32Array(counts[k]):null);
+  const fillIdx=new Uint32Array(256);for(let i=0;i<w*h;i++){const k=labels[i];if(k){lists[k][fillIdx[k]++]=i;}}
+  let total=0;for(let k=1;k<256;k++)total+=counts[k];
+  return loadColourData[word]={w,h,line,labels,lists,counts,total};
+}
+games.u3colour={word:'plane',done:new Set(),d:null,colour:PALETTE[0],painted:new Set(),tk:0,finished:false,down:false,lastLabel:0,
+  enter(){RUN++;this.done=new Set();this.word=WORDS[0];this.colour=PALETTE[0];this.load();restartCurrent=()=>{this.done=new Set();this.word=WORDS[0];this.load();};replayCurrent=()=>this.prompt();},
+  async load(){
+    const my=++this.tk;this.finished=false;this.painted=new Set();this.lastLabel=0;
+    try{const d=await loadColourData(this.word);if(my!==this.tk||!alive('u3colour'))return;this.d=d;}
+    catch(e){console.warn('Unit 3 colour: could not load',this.word,e);setStage(frame('Colour the Toy','Pick a colour. Touch a part to paint it.','<div class="u3-status" id="u3Status">Could not load this toy.</div>',{modes:false}));return;}
+    this.render();this.prompt();
+  },
+  render(){
+    const w=this.word,d=this.d;
+    setStage(frame('Colour the Toy','Pick a colour. Touch a part to paint it.',`${pickerHTML(w,this.done)}<div class="u3-canvas-card" id="u3Card" style="${vars(w)};--ar:${d.w}/${d.h}"><div class="u3-stack"><canvas id="u3Canvas" width="${d.w}" height="${d.h}" aria-label="Colour the ${w}"></canvas></div><div class="u3-ref"><img src="${img(w)}" alt="${w} in the book"><small>Look!</small></div></div><div class="u3-palette" role="group" aria-label="Crayons">${PALETTE.map(c=>`<button class="u3-crayon${c===this.colour?' on':''}" type="button" data-c="${c}" style="--c:${c}" aria-label="crayon ${c}"></button>`).join('')}</div><div class="u3-meter" aria-hidden="true"><i id="u3Meter"></i></div><div class="u3-status" id="u3Status">Pick a crayon. Then touch the toy.</div>${controlRow(buttonHTML('u3Hear','HEAR IT','speaker')+buttonHTML('u3Redo','CLEAR','reset')+buttonHTML('u3NextToy','NEXT TOY','next','primary'))}`,{modes:false}));
+    bindBar(()=>{});
+    this.cv=document.getElementById('u3Canvas');this.ctx=this.cv.getContext('2d');
+    this.fill=document.createElement('canvas');this.fill.width=d.w;this.fill.height=d.h;this.fctx=this.fill.getContext('2d');this.fimg=this.fctx.createImageData(d.w,d.h);
+    document.querySelectorAll('.u3-thumbs .u3-card').forEach(b=>b.onclick=()=>{this.word=b.dataset.w;this.load();});
+    document.querySelectorAll('.u3-crayon').forEach(b=>b.onclick=()=>{this.colour=b.dataset.c;document.querySelectorAll('.u3-crayon').forEach(x=>x.classList.toggle('on',x===b));sfx('click',.5);});
+    document.getElementById('u3Hear').onclick=()=>this.prompt();
+    document.getElementById('u3Redo').onclick=()=>this.load();
+    document.getElementById('u3NextToy').onclick=()=>{this.word=nextUndone(this.word,this.done)||WORDS[(WORDS.indexOf(this.word)+1)%WORDS.length];this.load();};
+    const cv=this.cv;
+    cv.onpointerdown=e=>{if(this.finished)return;this.down=true;try{cv.setPointerCapture(e.pointerId);}catch(err){}this.lastLabel=0;this.paintAt(canvasPos(cv,e));};
+    cv.onpointermove=e=>{if(this.down&&!this.finished)this.paintAt(canvasPos(cv,e));};
+    cv.onpointerup=cv.onpointercancel=()=>{this.down=false;};
+    this.redraw();this.meter();
+  },
+  prompt(){return playClip('colour_'+this.word,`Colour the ${this.word}!`,document.getElementById('u3Hear'));},
+  labelAt(p){
+    const d=this.d,x=Math.round(p.x),y=Math.round(p.y);
+    for(let r=0;r<=9;r+=3){for(let dy=-r;dy<=r;dy+=Math.max(1,r)){for(let dx=-r;dx<=r;dx+=Math.max(1,r)){
+      const xx=x+dx,yy=y+dy;if(xx<0||yy<0||xx>=d.w||yy>=d.h)continue;const k=d.labels[yy*d.w+xx];if(k)return k;}}}
+    return 0;
+  },
+  paintAt(p){
+    const k=this.labelAt(p);if(!k||k===this.lastLabel&&this.lastColour===this.colour)return;
+    this.lastLabel=k;this.lastColour=this.colour;
+    const d=this.d,list=d.lists[k];if(!list)return;
+    const hex=this.colour,r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16),data=this.fimg.data;
+    for(let n=0;n<list.length;n++){const o=list[n]*4;data[o]=r;data[o+1]=g;data[o+2]=b;data[o+3]=255;}
+    this.fctx.putImageData(this.fimg,0,0);
+    if(hex==='#ffffff')this.painted.delete(k);else this.painted.add(k);
+    sfx('click',.4);this.redraw();this.meter();
+    if(!this.finished&&this.progress()>=0.8)this.complete();
+  },
+  progress(){let a=0;this.painted.forEach(k=>{a+=this.d.counts[k];});return a/this.d.total;},
+  meter(){const m=document.getElementById('u3Meter');if(m)m.style.width=Math.min(100,Math.round(this.progress()/0.8*100))+'%';},
+  redraw(){const c=this.ctx,d=this.d;c.clearRect(0,0,d.w,d.h);c.drawImage(this.fill,0,0);c.drawImage(d.line,0,0);},
+  complete(){
+    this.finished=true;this.down=false;this.done.add(this.word);
+    const card=document.getElementById('u3Card');confettiPop(card);sfx('correct');setStatus('Beautiful colours!','good');
+    document.querySelectorAll('.u3-thumbs .u3-card').forEach(b=>{if(this.done.has(b.dataset.w)&&!b.querySelector('.u3-tick'))b.insertAdjacentHTML('beforeend','<i class="u3-tick">✓</i>');});
+    const said=playClip('beautiful','Beautiful colours! Great job!');
+    afterVoice('u3colour',said,2600,()=>{
+      const nxt=nextUndone(this.word,this.done);
+      if(!nxt)victory('u3colour',{stars:3,msg:'You coloured all five toys!',again:()=>{this.done=new Set();this.word=WORDS[0];this.load();}});
+      else{this.word=nxt;this.load();}
+    });
+  }
+};
+
 /* ---------- metadata ---------- */
 Object.assign(GAME_META,{
   u3learn:['UNIT 3 · LESSON 1','Meet the Toys','Look • listen • say'],
   u3catch:['UNIT 3 · GAME 1','Listen & Catch','Listen and touch the toy'],
   u3mystery:['UNIT 3 · GAME 2','Mystery Toy','Guess from the shape'],
   u3missing:['UNIT 3 · GAME 3',"What's Missing?",'Remember • spot • choose'],
-  u3match:['UNIT 3 · GAME 4','Match Picture–Word','Touch the picture and its word']
+  u3match:['UNIT 3 · GAME 4','Match Picture–Word','Touch the picture and its word'],
+  u3trace:['UNIT 3 · GAME 5','Trace the Toy','Follow the dots with your finger'],
+  u3colour:['UNIT 3 · GAME 6','Colour the Toy','Pick • touch • colour']
 });
 
 /* ---------- Unit 3 space (side-nav item + home panel) ---------- */
@@ -291,8 +442,8 @@ if(soon)soon.textContent='More units will appear here.';
 const space=document.createElement('div');space.className='space unit3-toytown';space.id='spaceUnit3';space.hidden=true;
 const tile=(game,cls,small,title,desc,pill,w)=>`<button class="activity-card u3 ${cls}" data-game="${game}" type="button"><span class="activity-card-copy"><small>${small}</small><b>${title}</b><em>${desc}</em><span class="play-pill">${pill}</span></span><img src="${img(w)}" alt=""></button>`;
 space.innerHTML=`<div class="hero u3-hero"><div class="hero-copy"><div class="eyebrow">Family and Friends Starter · Unit 3</div><h1>Toy Town</h1><p>Meet the plane, puppet, robot, balloon and teddy. Listen, look, remember and match.</p><div class="hero-badges" aria-label="Unit skills"><span class="hero-badge">🧸 Toys</span><span class="hero-badge">👂 Listening</span><span class="hero-badge">🗣 Speaking</span></div></div><div class="hero-scene" aria-hidden="true">${WORDS.map(w=>`<img src="${img(w)}" alt="">`).join('')}</div></div>
-<section class="learning-zone"><div class="library-heading"><div class="zone-title-row"><span class="zone-bubble">U3</span><div><h2>Lesson 1 · Toys</h2><p>Meet the five toys first, then play. Every game has Practice mode and three levels.</p></div></div><span class="library-count">1 lesson + 4 games</span></div>
-<div class="activity-grid">${tile('u3learn','mint','Vocabulary lesson','Meet the Toys','Touch each toy and hear its name.','START','teddy')}${tile('u3catch','','Listening game','Listen & Catch','Hear a word and touch the right toy.','PLAY','plane')}${tile('u3mystery','warm','Guessing game','Mystery Toy','Guess the toy from its shape.','PLAY','puppet')}${tile('u3missing','mint','Memory game',"What's Missing?",'Remember five toys. Which one went away?','PLAY','robot')}${tile('u3match','','Picture and word','Match Picture–Word','Touch a picture, then its word.','MATCH','balloon')}</div></section>`;
+<section class="learning-zone"><div class="library-heading"><div class="zone-title-row"><span class="zone-bubble">U3</span><div><h2>Lesson 1 · Toys</h2><p>Meet the five toys first, then play. Every game has Practice mode and three levels.</p></div></div><span class="library-count">1 lesson + 6 games</span></div>
+<div class="activity-grid">${tile('u3learn','mint','Vocabulary lesson','Meet the Toys','Touch each toy and hear its name.','START','teddy')}${tile('u3catch','','Listening game','Listen & Catch','Hear a word and touch the right toy.','PLAY','plane')}${tile('u3mystery','warm','Guessing game','Mystery Toy','Guess the toy from its shape.','PLAY','puppet')}${tile('u3missing','mint','Memory game',"What's Missing?",'Remember five toys. Which one went away?','PLAY','robot')}${tile('u3match','','Picture and word','Match Picture–Word','Touch a picture, then its word.','MATCH','balloon')}${tile('u3trace','warm','Fine-motor game','Trace the Toy','Follow the dots around the toy.','TRACE','plane')}${tile('u3colour','mint','Crayon game','Colour the Toy','Pick a crayon and paint the toy.','COLOUR','teddy')}</div></section>`;
 wrap.appendChild(space);
 space.querySelectorAll('[data-game]').forEach(b=>b.addEventListener('click',()=>openGame(b.dataset.game)));
 

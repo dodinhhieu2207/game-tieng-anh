@@ -11,3 +11,5 @@
   to the browser voice (and to the older Zira .wav files for the five words).
 - Licence note: the Higgs v3 checkpoint is research / non-commercial.
 
+
+- colour/ and trace/ - colouring pages (outline + region map) and dotted tracing paths, generated from the textbook toy art by script (no AI redraw).
