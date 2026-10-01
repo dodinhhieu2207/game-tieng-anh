@@ -30,7 +30,7 @@ const later=(key,ms,fn)=>{const r=RUN;setTimeout(()=>{if(r===RUN&&alive(key))fn(
 /* ---------- audio (SFX + word voice; one mute switch controls both) ---------- */
 function stopAudio(){S.tok++;S.ask++;if(S.aud){try{S.aud.pause();}catch(e){}S.aud=null;}cancelVoice();}
 function sfx(name,vol=.7){if(S.muted||!els.soundFx.checked)return;try{const a=new Audio(`assets/unit3/sfx/${name}.mp3`);a.volume=vol;a.play().catch(()=>{});}catch(e){}}
-/* Voice clips (Higgs TTS, pre-rendered): assets/unit3/audio/<name>.mp3 (or .wav). If a clip is missing the
+/* Voice clips (Higgs TTS, pre-rendered): assets/unit3/audio/<name>.mp3. If a clip is missing the
    site's browser voice reads the fallback text, so nothing breaks while recordings are being added. */
 function playClip(name,fallback,btn){
   return new Promise(resolve=>{
@@ -38,17 +38,22 @@ function playClip(name,fallback,btn){
     stopAudio();const my=S.tok;let finished=false;
     const fin=()=>{if(finished)return;finished=true;if(btn)btn.classList.remove('playing');resolve();};
     if(btn)btn.classList.add('playing');
-    const srcs=['mp3','wav'].map(e=>`assets/unit3/audio/${name}.${e}`).filter(s=>!S.bad.has(s));
-    const next=()=>{
-      if(my!==S.tok){fin();return;}
-      const src=srcs.shift();
-      if(!src){speakText(fallback,{interrupt:true}).then(fin);return;}
-      const a=new Audio(src);S.aud=a;let used=false;
-      const fail=e=>{if(used)return;used=true;if(e&&e.name==='NotAllowedError'){fin();return;}S.bad.add(src);next();};
-      a.onerror=()=>fail();a.onended=fin;a.play().catch(fail);
-    };
-    next();
+    const src=`assets/unit3/audio/${name}.mp3`;
+    const useBrowserVoice=()=>{if(my!==S.tok){fin();return;}speakText(fallback,{interrupt:true}).then(fin);};
+    if(S.bad.has(src)){useBrowserVoice();return;}
+    const a=new Audio(src);S.aud=a;let used=false;
+    /* Only a real load/decode failure marks a clip as broken. Being interrupted by a newer clip
+       (AbortError) or blocked by autoplay (NotAllowedError) never blames the file. */
+    const broken=()=>{if(used)return;used=true;S.bad.add(src);useBrowserVoice();};
+    a.onerror=broken;a.onended=fin;
+    a.play().catch(e=>{if(e&&e.name==='NotSupportedError')broken();else fin();});
   });
+}
+let clipsWarmed=false;
+function warmClips(){
+  if(clipsWarmed)return;clipsWarmed=true;
+  const names=[...WORDS,...['touch_','yes_','its_a_','missing_','colour_','trace_'].flatMap(p=>WORDS.map(w=>p+w)),'whats_in_box','look_remember','whats_missing','touch_picture_word','great_job','pick_colour','trace_hint','beautiful','nice_trace'];
+  names.forEach((n,i)=>setTimeout(()=>{const a=new Audio(`assets/unit3/audio/${n}.mp3`);a.preload='auto';},i*70));
 }
 const sayWord=(word,btn)=>playClip(word,word,btn);
 function say(text,btn){return S.muted?Promise.resolve():speakText(text,{interrupt:true,button:btn||null});}
@@ -79,7 +84,7 @@ function victory(key,{stars,msg,again}){
   playClip('great_job','Great job!');
 }
 const BG={'Meet the Toys':'classroom','Listen & Catch':'meadow','Mystery Toy':'stage',"What's Missing?":'classroom','Match Picture–Word':'meadow',victory:'party'};
-function setBg(name){const g=els.gameStage;if(!g)return;const gs=document.getElementById('gameScreen');if(gs)gs.classList.add('u3-on');g.classList.add('u3-stage');g.style.setProperty('--u3-bg',`url(assets/unit3/bg/${name}.webp)`);}
+function setBg(name){const g=els.gameStage;if(!g)return;const gs=document.getElementById('gameScreen');if(gs)gs.classList.add('u3-on');warmClips();g.classList.add('u3-stage');g.style.setProperty('--u3-bg',`url(assets/unit3/bg/${name}.webp)`);}
 function badge(el,ok){if(!el)return;const i=document.createElement('img');i.className='u3-badge';i.alt=ok?'Correct':'Try again';i.src=`assets/unit3/ui/badge-${ok?'check':'x'}.webp`;el.appendChild(i);if(!ok)setTimeout(()=>i.remove(),700);}
 const setStatus=(text,kind='')=>{const s=document.getElementById('u3Status');if(s){s.textContent=text;s.className='u3-status '+kind;}};
 const bursting=el=>{if(el&&typeof burst==='function'){let layer=el.querySelector('.particle-layer');if(!layer){layer=document.createElement('div');layer.className='particle-layer';el.appendChild(layer);}burst(layer,14);}};
