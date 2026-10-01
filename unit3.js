@@ -24,18 +24,19 @@ const later=(key,ms,fn)=>{const r=RUN;setTimeout(()=>{if(r===RUN&&alive(key))fn(
 /* ---------- audio (SFX + word voice; one mute switch controls both) ---------- */
 function stopAudio(){S.tok++;S.ask++;if(S.aud){try{S.aud.pause();}catch(e){}S.aud=null;}cancelVoice();}
 function sfx(name,vol=.7){if(S.muted||!els.soundFx.checked)return;try{const a=new Audio(`assets/unit3/sfx/${name}.mp3`);a.volume=vol;a.play().catch(()=>{});}catch(e){}}
-/* Word audio: recorded file (mp3 first, then wav) -> falls back to the site's browser voice if no file loads. */
-function sayWord(word,btn){
+/* Voice clips (Higgs TTS, pre-rendered): assets/unit3/audio/<name>.mp3 (or .wav). If a clip is missing the
+   site's browser voice reads the fallback text, so nothing breaks while recordings are being added. */
+function playClip(name,fallback,btn){
   return new Promise(resolve=>{
     if(S.muted){resolve();return;}
     stopAudio();const my=S.tok;let finished=false;
     const fin=()=>{if(finished)return;finished=true;if(btn)btn.classList.remove('playing');resolve();};
     if(btn)btn.classList.add('playing');
-    const srcs=['mp3','wav'].map(e=>`assets/unit3/audio/${word}.${e}`).filter(s=>!S.bad.has(s));
+    const srcs=['mp3','wav'].map(e=>`assets/unit3/audio/${name}.${e}`).filter(s=>!S.bad.has(s));
     const next=()=>{
       if(my!==S.tok){fin();return;}
       const src=srcs.shift();
-      if(!src){speakText(word,{interrupt:true}).then(fin);return;}
+      if(!src){speakText(fallback,{interrupt:true}).then(fin);return;}
       const a=new Audio(src);S.aud=a;let used=false;
       const fail=e=>{if(used)return;used=true;if(e&&e.name==='NotAllowedError'){fin();return;}S.bad.add(src);next();};
       a.onerror=()=>fail();a.onended=fin;a.play().catch(fail);
@@ -43,8 +44,8 @@ function sayWord(word,btn){
     next();
   });
 }
+const sayWord=(word,btn)=>playClip(word,word,btn);
 function say(text,btn){return S.muted?Promise.resolve():speakText(text,{interrupt:true,button:btn||null});}
-async function ask(prefix,word,btn){const id=++S.ask;await say(prefix);if(S.muted||id!==S.ask)return;await sayWord(word,btn);}
 
 /* ---------- shared UI pieces ---------- */
 function bar({modes=true}={}){
@@ -65,7 +66,7 @@ function victory(key,{stars,msg,again}){
   setBg(BG.victory);
   setStage(`<div class="unit3-toytown game-layout u3-layout"><div class="u3-victory"><img class="u3-trophy" src="assets/unit3/ui/trophy.webp" alt=""><img class="u3-confetti" src="assets/unit3/ui/confetti.webp" alt=""><div class="u3-stars" aria-label="${stars} of 3 stars">${'★'.repeat(stars)}${'☆'.repeat(3-stars)}</div><h2>Toy Town champion!</h2><p>${msg}</p>${controlRow(buttonHTML('u3Again','PLAY AGAIN','reset','primary')+buttonHTML('u3Lib','GAME LIBRARY','home','secondary'))}</div></div>`);
   document.getElementById('u3Again').onclick=again;document.getElementById('u3Lib').onclick=()=>showHome();
-  if(!S.muted)speakSequence(['Great job!'],{interrupt:true});
+  playClip('great_job','Great job!');
 }
 const BG={'Meet the Toys':'classroom','Listen & Catch':'meadow','Mystery Toy':'stage',"What's Missing?":'classroom','Match Picture–Word':'meadow',victory:'party'};
 function setBg(name){const g=els.gameStage;if(!g)return;g.classList.add('u3-stage');g.style.setProperty('--u3-bg',`url(assets/unit3/bg/${name}.webp)`);}
@@ -115,14 +116,14 @@ games.u3catch={queue:[],target:'',round:0,stars:0,mistakes:0,wrongNow:0,locked:t
     const sk=document.getElementById('u3Skip');if(sk)sk.onclick=()=>this.next(false);
     document.querySelectorAll('#u3Grid .u3-card').forEach(b=>b.onclick=()=>this.check(b));
   },
-  prompt(){return ask('Touch the',this.target,document.getElementById('u3Prompt'));},
+  prompt(){return playClip('touch_'+this.target,`Touch the ${this.target}.`,document.getElementById('u3Prompt'));},
   check(b){
     if(this.locked)return;
     if(b.dataset.w===this.target){
       this.locked=true;b.classList.add('correct');badge(b,true);bursting(b);sfx('correct');
       if(!this.wrongNow&&!S.practice)this.stars++;this.mistakes+=this.wrongNow;
       setStatus(`Yes! ${this.target}!`,'good');this.round++;
-      ask('Yes!',this.target);
+      playClip('yes_'+this.target,`Yes! It's a ${this.target}!`);
       later('u3catch',1500,()=>{if(!S.practice&&this.round>=GOAL)victory('u3catch',{stars:starsFor(this.mistakes),msg:`You caught all ${GOAL} toys!`,again:()=>this.start()});else this.next(false);});
     }else{
       this.wrongNow++;b.classList.add('wrong');badge(b,false);sfx('wrong_soft');setStatus('Try again!','retry');setTimeout(()=>b.classList.remove('wrong'),400);
@@ -153,7 +154,7 @@ games.u3mystery={queue:[],target:'',stage:0,round:0,stars:0,mistakes:0,wrongNow:
     const sk=document.getElementById('u3Skip');if(sk)sk.onclick=()=>this.next(false);
     document.querySelectorAll('#u3Grid .u3-card').forEach(b=>b.onclick=()=>this.check(b));
   },
-  prompt(){return say("What's in the toy box?",document.getElementById('u3Prompt'));},
+  prompt(){return playClip('whats_in_box',"What's in the toy box?",document.getElementById('u3Prompt'));},
   paint(){const box=document.getElementById('u3Box');if(!box)return;box.querySelector('.toy').outerHTML=this.stageImg();const q=box.querySelector('.q');if(q&&this.stage>=3)q.remove();},
   more(){if(this.locked||this.stage>=2)return;this.stage++;sfx('reveal');this.paint();if(this.stage>=2)document.getElementById('u3More').disabled=true;},
   check(b){
@@ -161,7 +162,7 @@ games.u3mystery={queue:[],target:'',stage:0,round:0,stars:0,mistakes:0,wrongNow:
     if(b.dataset.w===this.target){
       this.locked=true;this.stage=3;this.paint();b.classList.add('correct');badge(b,true);bursting(document.getElementById('u3Box'));sfx('correct');
       if(!this.wrongNow&&!S.practice)this.stars++;this.mistakes+=this.wrongNow;this.round++;
-      setStatus(`It's a ${this.target}!`,'good');ask("It's a",this.target);
+      setStatus(`It's a ${this.target}!`,'good');playClip('its_a_'+this.target,`It's a ${this.target}!`);
       later('u3mystery',1900,()=>{if(!S.practice&&this.round>=GOAL)victory('u3mystery',{stars:starsFor(this.mistakes),msg:'You guessed every mystery toy!',again:()=>this.start()});else this.next(false);});
     }else{
       this.wrongNow++;b.classList.add('wrong');badge(b,false);sfx('wrong_soft');setStatus('Not this one. Try again!','retry');setTimeout(()=>b.classList.remove('wrong'),400);
@@ -196,18 +197,18 @@ games.u3missing={queue:[],order:[],missing:'',phase:'look',round:0,stars:0,mista
     if(look)document.getElementById('u3Ready').onclick=()=>this.toGuess();
     else{document.getElementById('u3Again2').onclick=()=>this.ask();const sk=document.getElementById('u3Skip');if(sk)sk.onclick=()=>this.next(false);document.querySelectorAll('#u3Grid .u3-card').forEach(b=>b.onclick=()=>this.check(b));}
   },
-  async intro(){if(this.phase!=='look')return;this.clear();await say('Look and remember.',document.getElementById('u3Prompt'));if(!alive('u3missing')||this.phase!=='look')return;this.startTimer();},
+  async intro(){if(this.phase!=='look')return;this.clear();await playClip('look_remember','Look and remember.',document.getElementById('u3Prompt'));if(!alive('u3missing')||this.phase!=='look')return;this.startTimer();},
   startTimer(){this.clear();this.left=this.total;this.tick();this.timer=setInterval(()=>{this.left--;this.tick();if(this.left<=0)this.toGuess();},1000);},
   tick(){const t=document.getElementById('u3Timer'),s=document.getElementById('u3Sec');if(s)s.textContent=Math.max(0,this.left);if(t)t.style.setProperty('--pct',Math.max(0,this.left)/this.total*100);},
   toGuess(){if(this.phase!=='look')return;this.clear();this.phase='guess';this.locked=false;if(S.level==='challenge')this.order=shuffle(this.order);this.render();sfx('reveal');autoSpeak(()=>this.ask(),180);},
-  ask(){return say("What's missing?",document.getElementById('u3Prompt'));},
+  ask(){return playClip('whats_missing',"What's missing?",document.getElementById('u3Prompt'));},
   check(b){
     if(this.locked)return;
     if(b.dataset.w===this.missing){
       this.locked=true;this.phase='found';b.classList.add('correct');badge(b,true);sfx('correct');
       const hole=document.getElementById('u3Hole');if(hole){hole.classList.remove('empty');hole.classList.add('found');hole.innerHTML=`<img src="${img(this.missing)}" alt="${this.missing}">`;bursting(hole);}
       if(!this.wrongNow&&!S.practice)this.stars++;this.mistakes+=this.wrongNow;this.round++;
-      setStatus(`The ${this.missing} was missing!`,'good');ask('Yes! The missing toy is the',this.missing);
+      setStatus(`The ${this.missing} was missing!`,'good');playClip('missing_'+this.missing,`Yes! The missing toy is the ${this.missing}.`);
       later('u3missing',2000,()=>{if(!S.practice&&this.round>=MISSING_GOAL)victory('u3missing',{stars:starsFor(this.mistakes),msg:`You found the missing toy in all ${MISSING_GOAL} rounds!`,again:()=>this.start()});else this.next(false);});
     }else{
       this.wrongNow++;b.classList.add('wrong');badge(b,false);sfx('wrong_soft');setStatus('Look at the empty place. Try again!','retry');setTimeout(()=>b.classList.remove('wrong'),400);
@@ -220,9 +221,9 @@ games.u3missing={queue:[],order:[],missing:'',phase:'look',round:0,stars:0,mista
    5. MATCH PICTURE – WORD  (tap + tap, no dragging, no spelling)
    ========================================================= */
 games.u3match={items:[],words:[],sel:null,matched:new Set(),mistakes:0,rounds:0,locked:false,
-  enter(){this.start();restartCurrent=()=>this.start();replayCurrent=()=>say('Touch a picture. Then touch its word.');},
+  enter(){this.start();restartCurrent=()=>this.start();replayCurrent=()=>playClip('touch_picture_word','Touch a picture. Then touch its word.');},
   start(){RUN++;this.rounds=0;this.mistakes=0;this.board();},
-  board(){this.items=pick(WORDS,L().pairs);this.words=shuffle([...this.items]);this.sel=null;this.matched=new Set();this.locked=false;this.render();autoSpeak(()=>say('Touch a picture. Then touch its word.'),250);},
+  board(){this.items=pick(WORDS,L().pairs);this.words=shuffle([...this.items]);this.sel=null;this.matched=new Set();this.locked=false;this.render();autoSpeak(()=>playClip('touch_picture_word','Touch a picture. Then touch its word.'),250);},
   render(){
     setStage(frame('Match Picture–Word','Touch a picture. Then touch its word.',`<div class="u3-pairs"><div class="u3-grid n${this.items.length}" id="u3Pics">${this.items.map(w=>card(w,{cls:this.matched.has(w)?'done':''})).join('')}</div><div class="u3-words" id="u3Words">${this.words.map(w=>`<button class="u3-word${this.matched.has(w)?' done':''}" type="button" data-w="${w}" style="${vars(w)}">${w}</button>`).join('')}</div></div><div class="u3-status" id="u3Status">Touch a picture, then its word.</div>`,{hud:S.practice?hud(0,1,0):`<div class="u3-hud"><span class="u3-chip">✔ ${this.matched.size} / ${this.items.length}</span></div>`}));
     bindBar(()=>this.start());
