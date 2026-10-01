@@ -98,3 +98,42 @@
 
 /* matched pair fades out so the child only sees what is left to do */
 .unit3-toytown .u3-card.gone,.unit3-toytown .u3-word.gone{opacity:0;transform:scale(.55);visibility:hidden;pointer-events:none;transition:opacity .5s ease,transform .5s ease,visibility 0s .5s}
+
+/* v3: Comic Sans + the new asset set (banner, pill buttons, speech bubble, drop zone, stars, hand) */
+.unit3-toytown,#gameScreen.u3-on .game-topbar,#gameScreen.u3-on .current-game{font-family:"Comic Sans MS","Comic Sans","Chalkboard SE","Comic Neue",cursive,sans-serif}
+.unit3-toytown *,#gameScreen.u3-on .game-topbar *{font-family:inherit}
+#gameScreen.u3-on .current-game h1{font-weight:700;letter-spacing:0}
+
+.unit3-toytown .game-intro{width:100%;display:grid;justify-items:center}
+.unit3-toytown .u3-banner{width:min(94%,640px);aspect-ratio:700/185;background:url(assets/unit3/ui/banner.webp) center/contain no-repeat;display:grid;place-items:center;padding:0 14%}
+.unit3-toytown .u3-banner span{font-size:clamp(14px,2.1vw,26px);font-weight:700;color:#3d3b63;text-align:center;line-height:1.15}
+
+.unit3-toytown .toy-button.pill,.unit3-toytown .btn,.unit3-toytown .voice-prompt{background-color:transparent;background-repeat:no-repeat;background-position:center;background-size:100% 100%;border:0;box-shadow:none;border-radius:0;color:#fff;font-weight:700;text-shadow:0 2px 0 rgba(0,0,0,.4),0 0 5px rgba(0,0,0,.25);min-height:60px;min-width:150px;padding:10px 30px;display:inline-flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:transform .12s}
+.unit3-toytown .toy-button.pill:active,.unit3-toytown .btn:active,.unit3-toytown .voice-prompt:active{transform:translateY(3px) scale(.98);box-shadow:none}
+.unit3-toytown .toy-button.pill:hover,.unit3-toytown .btn:hover,.unit3-toytown .voice-prompt:hover{transform:translateY(-2px)}
+.unit3-toytown .toy-button.green{background-image:url(assets/unit3/ui/pill-green.webp)}
+.unit3-toytown .toy-button.orange{background-image:url(assets/unit3/ui/pill-orange.webp)}
+.unit3-toytown .toy-button.blue,.unit3-toytown .btn,.unit3-toytown .btn.secondary{background-image:url(assets/unit3/ui/pill-blue.webp)}
+.unit3-toytown .btn.primary{background-image:url(assets/unit3/ui/pill-green.webp)}
+.unit3-toytown .voice-prompt{background-image:url(assets/unit3/ui/pill-orange.webp);min-width:280px;min-height:78px;font-size:clamp(22px,3vw,32px);padding:12px 40px}
+.unit3-toytown .btn img,.unit3-toytown .voice-prompt img{filter:brightness(0) invert(1);width:26px;height:26px}
+.unit3-toytown .pill .ic{width:34px;height:auto;filter:drop-shadow(0 1px 0 rgba(255,255,255,.7))}
+.unit3-toytown .btn:disabled,.unit3-toytown .toy-button:disabled{opacity:.55;filter:grayscale(.5)}
+.unit3-toytown .u3-lv span{font-weight:700}
+.unit3-toytown .u3-lv select{font-weight:700;cursor:pointer}
+
+.unit3-toytown .u3-status{background:url(assets/unit3/ui/bubble.webp) center/100% 100% no-repeat;border-radius:0;box-shadow:none;padding:20px 48px 30px;min-width:min(86%,300px);font-weight:700;color:#35557c}
+.unit3-toytown .u3-status:empty{display:none}
+.unit3-toytown .u3-slot.empty{background:url(assets/unit3/ui/dropzone.webp) center/100% 100% no-repeat;border:0;color:#b9a98c}
+
+.unit3-toytown .u3-star{width:26px;height:auto;vertical-align:-6px}
+.unit3-toytown .u3-star.off{filter:grayscale(1) brightness(1.25);opacity:.5}
+.unit3-toytown .u3-chip{font-weight:700}
+.unit3-toytown .u3-stars{letter-spacing:0;display:flex;gap:8px;justify-content:center}
+.unit3-toytown .u3-stars .u3-star{width:clamp(56px,9vw,92px);vertical-align:baseline}
+.unit3-toytown .u3-card .u3-hand{position:absolute;right:-8px;bottom:-16px;width:62px;height:auto;pointer-events:none;z-index:3;animation:u3-tap .8s ease-in-out infinite}
+@keyframes u3-tap{50%{transform:translate(-10px,-10px) rotate(-8deg)}}
+@media(max-width:560px){.unit3-toytown .u3-banner{padding:0 15%}.unit3-toytown .u3-banner span{font-size:13px}.unit3-toytown .toy-button.pill,.unit3-toytown .btn{min-width:120px;padding:8px 20px}}
+.unit3-toytown .btn img,.unit3-toytown .voice-prompt img{display:none}
+.unit3-toytown .voice-prompt::after{content:"";width:42px;height:36px;background:url(assets/unit3/ui/speaker-on.webp) center/contain no-repeat;filter:drop-shadow(0 1px 0 rgba(255,255,255,.8))}
+.unit3-toytown .voice-prompt.playing::after{animation:u3-float .6s ease-in-out infinite}

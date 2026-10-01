@@ -54,28 +54,32 @@ const sayWord=(word,btn)=>playClip(word,word,btn);
 function say(text,btn){return S.muted?Promise.resolve():speakText(text,{interrupt:true,button:btn||null});}
 
 /* ---------- shared UI pieces ---------- */
+const UI='assets/unit3/ui/';
+const muteHTML=()=>`<img class="ic" src="${UI}speaker-${S.muted?'off':'on'}.webp" alt="">${S.muted?'Sound off':'Sound on'}`;
+const starImg=(on=true)=>`<img class="u3-star${on?'':' off'}" src="${UI}star.webp" alt="">`;
+function hint(card){if(!card||card.classList.contains('hint'))return;card.classList.add('hint');card.insertAdjacentHTML('beforeend',`<img class="u3-hand" src="${UI}hand.webp" alt="">`);}
 function bar({modes=true}={}){
-  return `<div class="u3-bar" role="group" aria-label="Game settings">${modes?`<button id="u3Mode" class="toy-button" type="button" aria-pressed="${S.practice}" title="Practice: no score, try as many times as you like">${S.practice?'🧸 Practice mode':'⭐ Play mode'}</button><label class="u3-lv"><span>Level</span><select id="u3Level" aria-label="Difficulty">${Object.entries(LEVELS).map(([k,v])=>`<option value="${k}"${k===S.level?' selected':''}>${v.label}</option>`).join('')}</select></label>`:''}<button id="u3Mute" class="toy-button" type="button" aria-pressed="${S.muted}">${S.muted?'🔇 Sound off':'🔊 Sound on'}</button></div>`;
+  return `<div class="u3-bar" role="group" aria-label="Game settings">${modes?`<button id="u3Mode" class="toy-button pill ${S.practice?'orange':'green'}" type="button" aria-pressed="${S.practice}" title="Practice: no score, try as many times as you like">${S.practice?'Practice mode':'Play mode'}</button><label class="u3-lv"><span>Level</span><select id="u3Level" aria-label="Difficulty">${Object.entries(LEVELS).map(([k,v])=>`<option value="${k}"${k===S.level?' selected':''}>${v.label}</option>`).join('')}</select></label>`:''}<button id="u3Mute" class="toy-button pill blue" type="button" aria-pressed="${S.muted}">${muteHTML()}</button></div>`;
 }
 function bindBar(restart){
   const m=document.getElementById('u3Mode'),l=document.getElementById('u3Level'),mu=document.getElementById('u3Mute');
   if(m)m.onclick=()=>{S.practice=!S.practice;store.set('practice',S.practice?'1':'0');restart();};
   if(l)l.onchange=()=>{S.level=l.value;store.set('level',S.level);restart();};
-  if(mu)mu.onclick=()=>{S.muted=!S.muted;store.set('muted',S.muted?'1':'0');if(S.muted)stopAudio();mu.textContent=S.muted?'🔇 Sound off':'🔊 Sound on';mu.setAttribute('aria-pressed',String(S.muted));};
+  if(mu)mu.onclick=()=>{S.muted=!S.muted;store.set('muted',S.muted?'1':'0');if(S.muted)stopAudio();mu.innerHTML=muteHTML();mu.setAttribute('aria-pressed',String(S.muted));};
 }
-const frame=(title,intro,body,{modes=true,hud=''}={})=>{setBg(BG[title]||'classroom');return `<div class="unit3-toytown game-layout u3-layout"><div class="u3-top">${bar({modes})}${hud}</div><div class="game-intro"><h2>${title}</h2><p>${intro}</p></div>${body}</div>`;};
-const hud=(round,goal,stars)=>S.practice?`<div class="u3-hud"><span class="u3-chip soft">🧸 Practice · no score</span></div>`:`<div class="u3-hud"><span class="u3-chip">⭐ ${stars}</span><span class="u3-chip soft">Round ${Math.min(round+1,goal)} / ${goal}</span></div>`;
+const frame=(title,intro,body,{modes=true,hud=''}={})=>{setBg(BG[title]||'classroom');return `<div class="unit3-toytown game-layout u3-layout"><div class="u3-top">${bar({modes})}${hud}</div><div class="game-intro"><div class="u3-banner" role="heading" aria-level="2"><span>${intro}</span></div></div>${body}</div>`;};
+const hud=(round,goal,stars)=>S.practice?`<div class="u3-hud"><span class="u3-chip soft">🧸 Practice · no score</span></div>`:`<div class="u3-hud"><span class="u3-chip">${starImg()} ${stars}</span><span class="u3-chip soft">Round ${Math.min(round+1,goal)} / ${goal}</span></div>`;
 const card=(w,{label=false,cls='',extra=''}={})=>`<button class="u3-card ${cls}" type="button" data-w="${w}" style="${vars(w)}" aria-label="${w}"><img src="${img(w)}" alt="">${label?`<span class="u3-label">${w}</span>`:''}${extra}</button>`;
 function starsFor(mistakes){return mistakes<=1?3:mistakes<=4?2:1;}
 function victory(key,{stars,msg,again}){
   sfx('complete');
   setBg(BG.victory);
-  setStage(`<div class="unit3-toytown game-layout u3-layout"><div class="u3-victory"><img class="u3-trophy" src="assets/unit3/ui/trophy.webp" alt=""><img class="u3-confetti" src="assets/unit3/ui/confetti.webp" alt=""><div class="u3-stars" aria-label="${stars} of 3 stars">${'★'.repeat(stars)}${'☆'.repeat(3-stars)}</div><h2>Toy Town champion!</h2><p>${msg}</p>${controlRow(buttonHTML('u3Again','PLAY AGAIN','reset','primary')+buttonHTML('u3Lib','GAME LIBRARY','home','secondary'))}</div></div>`);
+  setStage(`<div class="unit3-toytown game-layout u3-layout"><div class="u3-victory"><img class="u3-trophy" src="assets/unit3/ui/trophy.webp" alt=""><img class="u3-confetti" src="assets/unit3/ui/confetti.webp" alt=""><div class="u3-stars" aria-label="${stars} of 3 stars">${starImg(true).repeat(stars)}${starImg(false).repeat(3-stars)}</div><h2>Toy Town champion!</h2><p>${msg}</p>${controlRow(buttonHTML('u3Again','PLAY AGAIN','reset','primary')+buttonHTML('u3Lib','GAME LIBRARY','home','secondary'))}</div></div>`);
   document.getElementById('u3Again').onclick=again;document.getElementById('u3Lib').onclick=()=>showHome();
   playClip('great_job','Great job!');
 }
 const BG={'Meet the Toys':'classroom','Listen & Catch':'meadow','Mystery Toy':'stage',"What's Missing?":'classroom','Match Picture–Word':'meadow',victory:'party'};
-function setBg(name){const g=els.gameStage;if(!g)return;g.classList.add('u3-stage');g.style.setProperty('--u3-bg',`url(assets/unit3/bg/${name}.webp)`);}
+function setBg(name){const g=els.gameStage;if(!g)return;const gs=document.getElementById('gameScreen');if(gs)gs.classList.add('u3-on');g.classList.add('u3-stage');g.style.setProperty('--u3-bg',`url(assets/unit3/bg/${name}.webp)`);}
 function badge(el,ok){if(!el)return;const i=document.createElement('img');i.className='u3-badge';i.alt=ok?'Correct':'Try again';i.src=`assets/unit3/ui/badge-${ok?'check':'x'}.webp`;el.appendChild(i);if(!ok)setTimeout(()=>i.remove(),700);}
 const setStatus=(text,kind='')=>{const s=document.getElementById('u3Status');if(s){s.textContent=text;s.className='u3-status '+kind;}};
 const bursting=el=>{if(el&&typeof burst==='function'){let layer=el.querySelector('.particle-layer');if(!layer){layer=document.createElement('div');layer.className='particle-layer';el.appendChild(layer);}burst(layer,14);}};
@@ -97,7 +101,7 @@ games.u3learn={cur:'plane',seen:new Set(),
   },
   go(w){S.allRun++;this.cur=w;this.render();this.speak();},
   async speak(){S.allRun++;const w=this.cur;sfx('click',.5);await sayWord(w,document.getElementById('u3Hero'));if(!alive('u3learn'))return;if(!this.seen.has(w)){this.seen.add(w);this.mark();}},
-  mark(){const done=this.seen.size;setStatus(done>=5?'You met all the toys! ⭐':`${done}/5 toys met`,done>=5?'good':'');document.querySelectorAll('.u3-thumbs .u3-card').forEach(b=>{if(this.seen.has(b.dataset.w)&&!b.querySelector('.u3-tick'))b.insertAdjacentHTML('beforeend','<i class="u3-tick">✓</i>');});if(done===5){sfx('complete');}},
+  mark(){const done=this.seen.size;setStatus(done>=5?'You met all the toys!':`${done}/5 toys met`,done>=5?'good':'');document.querySelectorAll('.u3-thumbs .u3-card').forEach(b=>{if(this.seen.has(b.dataset.w)&&!b.querySelector('.u3-tick'))b.insertAdjacentHTML('beforeend','<i class="u3-tick">✓</i>');});if(done===5){sfx('complete');}},
   async all(){const my=++S.allRun;for(const w of WORDS){if(!alive('u3learn')||S.allRun!==my)return;this.cur=w;this.render();await sayWord(w,document.getElementById('u3Hero'));if(!alive('u3learn')||S.allRun!==my)return;this.seen.add(w);await new Promise(r=>setTimeout(r,350));}if(alive('u3learn')&&S.allRun===my){this.render();this.mark();}}
 };
 
@@ -134,7 +138,7 @@ games.u3catch={queue:[],target:'',round:0,stars:0,mistakes:0,wrongNow:0,locked:t
     }else{
       this.wrongNow++;b.classList.add('wrong');badge(b,false);sfx('wrong_soft');setStatus('Try again!','retry');setTimeout(()=>b.classList.remove('wrong'),400);
       later('u3catch',500,()=>this.prompt());
-      if(S.practice||this.wrongNow>=2)later(currentGame,900,()=>{const c=document.querySelector(`#u3Grid [data-w="${this.target}"]`);if(c)c.classList.add('hint');});
+      if(S.practice||this.wrongNow>=2)later(currentGame,900,()=>{const c=document.querySelector(`#u3Grid [data-w="${this.target}"]`);hint(c);});
     }
   }
 };
@@ -218,7 +222,7 @@ games.u3missing={queue:[],order:[],missing:'',phase:'look',round:0,stars:0,mista
       afterVoice('u3missing',said,1400,()=>{if(!S.practice&&this.round>=MISSING_GOAL)victory('u3missing',{stars:starsFor(this.mistakes),msg:`You found the missing toy in all ${MISSING_GOAL} rounds!`,again:()=>this.start()});else this.next(false);});
     }else{
       this.wrongNow++;b.classList.add('wrong');badge(b,false);sfx('wrong_soft');setStatus('Look at the empty place. Try again!','retry');setTimeout(()=>b.classList.remove('wrong'),400);
-      if(S.practice||this.wrongNow>=2)later(currentGame,700,()=>{const c=document.querySelector(`#u3Grid [data-w="${this.missing}"]`);if(c)c.classList.add('hint');});
+      if(S.practice||this.wrongNow>=2)later(currentGame,700,()=>{const c=document.querySelector(`#u3Grid [data-w="${this.missing}"]`);hint(c);});
     }
   }
 };
@@ -261,7 +265,7 @@ games.u3match={items:[],words:[],sel:null,matched:new Set(),mistakes:0,rounds:0,
       this.mistakes++;sfx('wrong_soft');
       [first.b,b].forEach(x=>{x.classList.add('wrong');if(x.classList.contains('u3-card'))badge(x,false);setTimeout(()=>x.classList.remove('wrong'),400);});
       setStatus('Not a match. Try again!','retry');
-      if(S.practice){const c=document.querySelector(`#u3Pics [data-w="${first.kind==='pic'?first.w:w}"]`);if(c)setTimeout(()=>c.classList.add('hint'),500);}
+      if(S.practice){const c=document.querySelector(`#u3Pics [data-w="${first.kind==='pic'?first.w:w}"]`);if(c)setTimeout(()=>hint(c),500);}
     }
   }
 };
@@ -294,7 +298,7 @@ space.querySelectorAll('[data-game]').forEach(b=>b.addEventListener('click',()=>
 
 /* other games must not inherit the Unit 3 background */
 const baseOpen=window.openGame;
-window.openGame=function(name){if(!String(name).startsWith('u3')&&els.gameStage){els.gameStage.classList.remove('u3-stage');els.gameStage.style.removeProperty('--u3-bg');}return baseOpen.apply(this,arguments);};
+window.openGame=function(name){if(!String(name).startsWith('u3')&&els.gameStage){const gs=document.getElementById('gameScreen');if(gs)gs.classList.remove('u3-on');els.gameStage.classList.remove('u3-stage');els.gameStage.style.removeProperty('--u3-bg');}return baseOpen.apply(this,arguments);};
 
 /* wrap setSpace so 'unit3' is a valid space; other spaces behave exactly as before */
 const baseSetSpace=window.setSpace;
