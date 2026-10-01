@@ -280,6 +280,14 @@ games.u3match={items:[],words:[],sel:null,matched:new Set(),mistakes:0,rounds:0,
 const PALETTE=['#e53935','#fb8c00','#fdd835','#43a047','#1e88e5','#8e24aa','#ec407a','#795548','#ffffff','#263238'];
 const imgCache={};
 const loadImage=src=>imgCache[src]||(imgCache[src]=new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=()=>rej(new Error('image '+src));i.src=src;}));
+let artP=null;
+const artData=()=>artP||(artP=new Promise((res,rej)=>{
+  if(window.U3_ART){res(window.U3_ART);return;}
+  const s=document.createElement('script');s.src='assets/unit3/art-data.js';
+  s.onload=()=>window.U3_ART?res(window.U3_ART):rej(new Error('art data empty'));
+  s.onerror=()=>{artP=null;rej(new Error('assets/unit3/art-data.js missing'));};
+  document.head.appendChild(s);
+}));
 const pickerHTML=(cur,done)=>`<div class="u3-grid u3-thumbs">${WORDS.map(x=>card(x,{cls:'small'+(x===cur?' selected':''),extra:done.has(x)?'<i class="u3-tick">✓</i>':''})).join('')}</div>`;
 const nextUndone=(cur,done)=>{for(let k=1;k<=WORDS.length;k++){const w=WORDS[(WORDS.indexOf(cur)+k)%WORDS.length];if(!done.has(w))return w;}return null;};
 const canvasPos=(cv,e)=>{const r=cv.getBoundingClientRect();return{x:(e.clientX-r.left)*cv.width/r.width,y:(e.clientY-r.top)*cv.height/r.height};};
@@ -291,8 +299,8 @@ games.u3trace={word:'plane',done:new Set(),d:null,covered:new Set(),trail:[],tk:
   async load(){
     const my=++this.tk;this.finished=false;this.covered=new Set();this.trail=[];
     const w=this.word;
-    try{const [json,guide,full]=await Promise.all([fetch(`assets/unit3/trace/${w}.json`).then(r=>r.json()),loadImage(img(w)),loadImage(img(w))]);
-      if(my!==this.tk||!alive('u3trace'))return;this.d=json;this.guide=guide;this.full=full;
+    try{const [art,guide]=await Promise.all([artData(),loadImage(img(w))]);
+      if(my!==this.tk||!alive('u3trace'))return;this.d=art[w];this.guide=guide;
     }catch(e){console.warn('Unit 3 trace: could not load',w,e);setStage(frame('Trace the Toy','Follow the dots with your finger.','<div class="u3-status" id="u3Status">Could not load this toy.</div>',{modes:false}));return;}
     this.render();this.prompt();
   },
@@ -350,11 +358,9 @@ games.u3trace={word:'plane',done:new Set(),d:null,covered:new Set(),trail:[],tk:
 /* ---------- Colour the Toy ---------- */
 async function loadColourData(word){
   if(loadColourData[word])return loadColourData[word];
-  const [line,regions]=await Promise.all([loadImage(`assets/unit3/colour/${word}-line.png`),loadImage(`assets/unit3/colour/${word}-regions.png`)]);
-  const w=regions.naturalWidth,h=regions.naturalHeight;
-  const cv=document.createElement('canvas');cv.width=w;cv.height=h;const cx=cv.getContext('2d',{willReadFrequently:true});cx.drawImage(regions,0,0);
-  const px=cx.getImageData(0,0,w,h).data,labels=new Uint8Array(w*h),counts=new Uint32Array(256);
-  for(let i=0;i<w*h;i++){labels[i]=px[i*4];counts[labels[i]]++;}
+  const [art,line]=await Promise.all([artData(),loadImage(`assets/unit3/colour/${word}-line.png`)]);
+  const a=art[word],w=a.w,h=a.h,labels=new Uint8Array(w*h),counts=new Uint32Array(256);
+  let p=0;for(let i=0;i<a.rle.length;i+=2){const k=a.rle[i],n=a.rle[i+1];labels.fill(k,p,p+n);counts[k]+=n;p+=n;}
   const lists=[];for(let k=0;k<256;k++)lists.push(counts[k]&&k?new Uint32Array(counts[k]):null);
   const fillIdx=new Uint32Array(256);for(let i=0;i<w*h;i++){const k=labels[i];if(k){lists[k][fillIdx[k]++]=i;}}
   let total=0;for(let k=1;k<256;k++)total+=counts[k];

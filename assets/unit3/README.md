@@ -12,4 +12,5 @@
 - Licence note: the Higgs v3 checkpoint is research / non-commercial.
 
 
-- colour/ and trace/ - colouring pages (outline + region map) and dotted tracing paths, generated from the textbook toy art by script (no AI redraw).
+- colour/ - colouring-page outlines; art-data.js - dotted tracing paths + colouring region maps (RLE). Generated from the textbook toy art by script (no AI redraw). Plain script so the games also work when index.html is opened from disk (file://).
+
