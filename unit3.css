@@ -159,3 +159,6 @@
 @media(max-width:560px){.unit3-toytown .u3-ref{width:64px}.unit3-toytown .u3-ref img{height:44px}.unit3-toytown .u3-ref small{font-size:11px}}
 .unit3-toytown .u3-ref{top:-26px;right:-30px;width:76px}
 .unit3-toytown .u3-ref img{height:54px}
+
+/* v5: new line art - the revealed book toy keeps its own proportions */
+.unit3-toytown .u3-reveal{object-fit:contain}

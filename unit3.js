@@ -299,7 +299,7 @@ games.u3trace={word:'plane',done:new Set(),d:null,covered:new Set(),trail:[],tk:
   async load(){
     const my=++this.tk;this.finished=false;this.covered=new Set();this.trail=[];
     const w=this.word;
-    try{const [art,guide]=await Promise.all([artData(),loadImage(img(w))]);
+    try{const [art,guide]=await Promise.all([artData(),loadImage(`assets/unit3/colour/${w}-line.png`)]);
       if(my!==this.tk||!alive('u3trace'))return;this.d=art[w];this.guide=guide;
     }catch(e){console.warn('Unit 3 trace: could not load',w,e);setStage(frame('Trace the Toy','Follow the dots with your finger.','<div class="u3-status" id="u3Status">Could not load this toy.</div>',{modes:false}));return;}
     this.render();this.prompt();
@@ -331,7 +331,7 @@ games.u3trace={word:'plane',done:new Set(),d:null,covered:new Set(),trail:[],tk:
   nextDot(){let i=0;while(i<this.d.dots.length&&this.covered.has(i))i++;return i<this.d.dots.length?i:-1;},
   draw(){
     const c=this.ctx,d=this.d,N=d.dots.length;c.clearRect(0,0,d.w,d.h);
-    c.save();c.globalAlpha=.2;c.drawImage(this.guide,0,0,d.w,d.h);c.restore();
+    c.save();c.globalAlpha=.4;c.drawImage(this.guide,0,0,d.w,d.h);c.restore();
     c.lineCap='round';c.lineJoin='round';
     for(let i=0;i<N;i++){const j=(i+1)%N;if(this.covered.has(i)&&this.covered.has(j)){c.strokeStyle=`hsl(${Math.round(i/N*300)},85%,55%)`;c.lineWidth=15;c.beginPath();c.moveTo(d.dots[i][0],d.dots[i][1]);c.lineTo(d.dots[j][0],d.dots[j][1]);c.stroke();}}
     if(this.trail.length>1){c.strokeStyle='rgba(137,117,228,.4)';c.lineWidth=9;c.beginPath();c.moveTo(this.trail[0].x,this.trail[0].y);for(const p of this.trail)c.lineTo(p.x,p.y);c.stroke();}
