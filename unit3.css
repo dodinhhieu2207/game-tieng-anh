@@ -95,3 +95,6 @@
 .unit3-toytown .u3-victory .u3-trophy{width:clamp(110px,16vh,170px);height:auto;animation:u3-float 3s ease-in-out infinite}
 .unit3-toytown .u3-victory .u3-confetti{position:absolute;inset:-30px 0 auto 0;margin:auto;width:min(100%,520px);opacity:.9;pointer-events:none;animation:toy-pop .6s ease-out both}
 .unit3-toytown .u3-lv span{background:rgba(255,255,255,.9);padding:4px 12px;border-radius:999px}
+
+/* matched pair fades out so the child only sees what is left to do */
+.unit3-toytown .u3-card.gone,.unit3-toytown .u3-word.gone{opacity:0;transform:scale(.55);visibility:hidden;pointer-events:none;transition:opacity .5s ease,transform .5s ease,visibility 0s .5s}

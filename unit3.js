@@ -231,7 +231,7 @@ games.u3match={items:[],words:[],sel:null,matched:new Set(),mistakes:0,rounds:0,
   start(){RUN++;this.rounds=0;this.mistakes=0;this.board();},
   board(){this.items=pick(WORDS,L().pairs);this.words=shuffle([...this.items]);this.sel=null;this.matched=new Set();this.locked=false;this.render();autoSpeak(()=>playClip('touch_picture_word','Touch a picture. Then touch its word.'),250);},
   render(){
-    setStage(frame('Match Picture–Word','Touch a picture. Then touch its word.',`<div class="u3-pairs"><div class="u3-grid n${this.items.length}" id="u3Pics">${this.items.map(w=>card(w,{cls:this.matched.has(w)?'done':''})).join('')}</div><div class="u3-words" id="u3Words">${this.words.map(w=>`<button class="u3-word${this.matched.has(w)?' done':''}" type="button" data-w="${w}" style="${vars(w)}">${w}</button>`).join('')}</div></div><div class="u3-status" id="u3Status">Touch a picture, then its word.</div>`,{hud:S.practice?hud(0,1,0):`<div class="u3-hud"><span class="u3-chip">✔ ${this.matched.size} / ${this.items.length}</span></div>`}));
+    setStage(frame('Match Picture–Word','Touch a picture. Then touch its word.',`<div class="u3-pairs"><div class="u3-grid n${this.items.length}" id="u3Pics">${this.items.map(w=>card(w,{cls:this.matched.has(w)?'done gone':''})).join('')}</div><div class="u3-words" id="u3Words">${this.words.map(w=>`<button class="u3-word${this.matched.has(w)?' done gone':''}" type="button" data-w="${w}" style="${vars(w)}">${w}</button>`).join('')}</div></div><div class="u3-status" id="u3Status">Touch a picture, then its word.</div>`,{hud:S.practice?hud(0,1,0):`<div class="u3-hud"><span class="u3-chip">✔ ${this.matched.size} / ${this.items.length}</span></div>`}));
     bindBar(()=>this.start());
     document.querySelectorAll('#u3Pics .u3-card').forEach(b=>b.onclick=()=>this.tap('pic',b));
     document.querySelectorAll('#u3Words .u3-word').forEach(b=>b.onclick=()=>this.tap('word',b));
@@ -250,6 +250,7 @@ games.u3match={items:[],words:[],sel:null,matched:new Set(),mistakes:0,rounds:0,
     if(first.w===w){
       this.matched.add(w);sfx('correct');document.querySelectorAll(`#u3Pics [data-w="${w}"]`).forEach(x=>badge(x,true));
       document.querySelectorAll(`[data-w="${w}"]`).forEach(x=>{x.classList.add('done','correct');});
+      setTimeout(()=>document.querySelectorAll(`#u3Pics [data-w="${w}"],#u3Words [data-w="${w}"]`).forEach(x=>x.classList.add('gone')),850);
       setStatus(`${w}! ✓`,'good');
       const hudChip=document.querySelector('.u3-hud .u3-chip');if(hudChip&&!S.practice)hudChip.textContent=`✔ ${this.matched.size} / ${this.items.length}`;
       if(this.matched.size===this.items.length){
