@@ -368,22 +368,22 @@ async function loadColourData(word){
   let p=0;for(let i=0;i<a.rle.length;i+=2){const k=a.rle[i],n=a.rle[i+1];labels.fill(k,p,p+n);counts[k]+=n;p+=n;}
   const lists=[];for(let k=0;k<256;k++)lists.push(counts[k]&&k?new Uint32Array(counts[k]):null);
   const fillIdx=new Uint32Array(256);for(let i=0;i<w*h;i++){const k=labels[i];if(k){lists[k][fillIdx[k]++]=i;}}
-  let total=0;for(let k=1;k<256;k++)total+=counts[k];
-  return loadColourData[word]={w,h,line,labels,lists,counts,total};
+  let total=0,regions=0;for(let k=1;k<256;k++){total+=counts[k];if(counts[k])regions++;}
+  return loadColourData[word]={w,h,line,labels,lists,counts,total,regions};
 }
 games.u3colour={word:'plane',done:new Set(),d:null,colour:PALETTE[0],painted:new Set(),tk:0,finished:false,down:false,lastLabel:0,
   enter(){RUN++;this.done=new Set();this.word=WORDS[0];this.colour=PALETTE[0];this.load();restartCurrent=()=>{this.done=new Set();this.word=WORDS[0];this.load();};replayCurrent=()=>this.prompt();},
   async load(){
     const my=++this.tk;this.finished=false;this.painted=new Set();this.lastLabel=0;
     try{const d=await loadColourData(this.word);if(my!==this.tk||!alive('u3colour'))return;this.d=d;}
-    catch(e){console.warn('Unit 3 colour: could not load',this.word,e);setStage(frame('Colour the Toy','Pick a colour. Touch a part to paint it.','<div class="u3-status" id="u3Status">Could not load this toy.</div>',{modes:false}));return;}
+    catch(e){console.warn('Unit 3 colour: could not load',this.word,e);setStage(frame('Colour the Toy','Pick a colour. Colour every part of the toy.','<div class="u3-status" id="u3Status">Could not load this toy.</div>',{modes:false}));return;}
     this.render();this.prompt();
   },
   render(){
     const w=this.word,d=this.d;
-    setStage(frame('Colour the Toy','Pick a colour. Touch a part to paint it.',`${pickerHTML(w,this.done)}<div class="u3-canvas-card" id="u3Card" style="${vars(w)};--ar:${d.w}/${d.h}"><div class="u3-stack"><canvas id="u3Canvas" width="${d.w}" height="${d.h}" aria-label="Colour the ${w}"></canvas></div><div class="u3-ref"><img src="${img(w)}" alt="${w} in the book"><small>Look!</small></div></div><div class="u3-palette" role="group" aria-label="Crayons">${PALETTE.map(c=>`<button class="u3-crayon${c===this.colour?' on':''}" type="button" data-c="${c}" style="--c:${c}" aria-label="crayon ${c}"></button>`).join('')}</div><div class="u3-meter" aria-hidden="true"><i id="u3Meter"></i></div><div class="u3-status" id="u3Status">Pick a crayon. Then touch the toy.</div>${controlRow(buttonHTML('u3Hear','HEAR IT','speaker')+buttonHTML('u3Redo','CLEAR','reset')+buttonHTML('u3NextToy','NEXT TOY','next','primary'))}`,{modes:false}));
+    setStage(frame('Colour the Toy','Pick a colour. Colour every part of the toy.',`${pickerHTML(w,this.done)}<div class="u3-canvas-card" id="u3Card" style="${vars(w)};--ar:${d.w}/${d.h}"><div class="u3-stack"><canvas id="u3Canvas" width="${d.w}" height="${d.h}" aria-label="Colour the ${w}"></canvas><canvas id="u3Hint" class="u3-hint" width="${d.w}" height="${d.h}"></canvas></div><div class="u3-ref"><img src="${img(w)}" alt="${w} in the book"><small>Look!</small></div></div><div class="u3-palette" role="group" aria-label="Crayons">${PALETTE.map(c=>`<button class="u3-crayon${c===this.colour?' on':''}" type="button" data-c="${c}" style="--c:${c}" aria-label="crayon ${c}"></button>`).join('')}</div><div class="u3-meter" aria-hidden="true"><i id="u3Meter"></i></div><div class="u3-status" id="u3Status">Pick a crayon. Then touch the toy.</div>${controlRow(buttonHTML('u3Hear','HEAR IT','speaker')+buttonHTML('u3Redo','CLEAR','reset')+buttonHTML('u3NextToy','NEXT TOY','next','primary'))}`,{modes:false}));
     bindBar(()=>{});
-    this.cv=document.getElementById('u3Canvas');this.ctx=this.cv.getContext('2d');
+    this.cv=document.getElementById('u3Canvas');this.ctx=this.cv.getContext('2d');this.hintCv=document.getElementById('u3Hint');this.hctx=this.hintCv.getContext('2d');
     this.fill=document.createElement('canvas');this.fill.width=d.w;this.fill.height=d.h;this.fctx=this.fill.getContext('2d');this.fimg=this.fctx.createImageData(d.w,d.h);
     document.querySelectorAll('.u3-thumbs .u3-card').forEach(b=>b.onclick=()=>{this.word=b.dataset.w;this.load();});
     document.querySelectorAll('.u3-crayon').forEach(b=>b.onclick=()=>{this.colour=b.dataset.c;document.querySelectorAll('.u3-crayon').forEach(x=>x.classList.toggle('on',x===b));sfx('click',.5);});
@@ -394,7 +394,7 @@ games.u3colour={word:'plane',done:new Set(),d:null,colour:PALETTE[0],painted:new
     cv.onpointerdown=e=>{if(this.finished)return;this.down=true;try{cv.setPointerCapture(e.pointerId);}catch(err){}this.lastLabel=0;this.paintAt(canvasPos(cv,e));};
     cv.onpointermove=e=>{if(this.down&&!this.finished)this.paintAt(canvasPos(cv,e));};
     cv.onpointerup=cv.onpointercancel=()=>{this.down=false;};
-    this.redraw();this.meter();
+    this.redraw();this.meter();this.hintLeft();
   },
   prompt(){return playClip('colour_'+this.word,`Colour the ${this.word}!`,document.getElementById('u3Hear'));},
   labelAt(p){
@@ -412,14 +412,29 @@ games.u3colour={word:'plane',done:new Set(),d:null,colour:PALETTE[0],painted:new
     this.fctx.putImageData(this.fimg,0,0);
     if(hex==='#ffffff')this.painted.delete(k);else this.painted.add(k);
     sfx('click',.4);this.redraw();this.meter();
-    if(!this.finished&&this.progress()>=0.8)this.complete();
+    this.afterPaint();
+  },
+  left(){return this.d.regions-this.painted.size;},
+  afterPaint(){
+    const left=this.left();this.hintLeft();
+    if(this.finished)return;
+    if(left<=0)this.complete();
+    else setStatus(left===1?'Just 1 part left!':`Keep going! ${left} parts left.`);
+  },
+  /* when only a few parts are still white they blink yellow, so a child can always find the last ones */
+  hintLeft(){
+    const d=this.d,c=this.hctx;c.clearRect(0,0,d.w,d.h);
+    const left=this.left();if(left<=0||left>Math.max(4,Math.ceil(d.regions*0.2)))return;
+    const im=c.createImageData(d.w,d.h),px=im.data;
+    for(let k=1;k<256;k++){if(!d.lists[k]||this.painted.has(k))continue;const list=d.lists[k];for(let n=0;n<list.length;n++){const o=list[n]*4;px[o]=255;px[o+1]=214;px[o+2]=0;px[o+3]=150;}}
+    c.putImageData(im,0,0);
   },
   progress(){let a=0;this.painted.forEach(k=>{a+=this.d.counts[k];});return a/this.d.total;},
-  meter(){const m=document.getElementById('u3Meter');if(m)m.style.width=Math.min(100,Math.round(this.progress()/0.8*100))+'%';},
+  meter(){const m=document.getElementById('u3Meter');if(m)m.style.width=Math.round(this.painted.size/this.d.regions*100)+'%';},
   redraw(){const c=this.ctx,d=this.d;c.clearRect(0,0,d.w,d.h);c.drawImage(this.fill,0,0);c.drawImage(d.line,0,0);},
   complete(){
     this.finished=true;this.down=false;this.done.add(this.word);
-    const card=document.getElementById('u3Card');confettiPop(card);sfx('correct');setStatus('Beautiful colours!','good');
+    const card=document.getElementById('u3Card');confettiPop(card);sfx('correct');setStatus('Every part is coloured! Beautiful!','good');
     document.querySelectorAll('.u3-thumbs .u3-card').forEach(b=>{if(this.done.has(b.dataset.w)&&!b.querySelector('.u3-tick'))b.insertAdjacentHTML('beforeend','<i class="u3-tick">✓</i>');});
     const said=playClip('beautiful','Beautiful colours! Great job!');
     afterVoice('u3colour',said,2600,()=>{
