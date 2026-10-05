@@ -68,9 +68,9 @@ const BASE='http://127.0.0.1:8765/index.html';
  for(let i=0;i<10;i++){const s=await state();negatives+=Number(!s.round.yes);assert.equal(await page.locator('#l2Question').textContent(),'');assert.equal(await page.locator('#l2Model').textContent(),'');
   await page.locator(`[data-choice="${s.round.yes}"]`).click();await phase('resolved');assert.match(await page.locator('#l2Question').textContent(),/^Is it a/);assert.match(await page.locator('#l2Status').textContent(),/Accuracy:/);await next();}
  assert.equal(negatives,5);console.log('PASS listening: transcript hidden until response, positive/negative, accuracy');
- await enter('talk-to-toy-buddy');await page.locator('[data-teacher]').click();assert.match(await page.locator('.l2-manual-note').textContent(),/no microphone recording/);
+ await enter('talk-to-toy-buddy');await page.locator('[data-teacher]').click();assert.match(await page.locator('.l2-manual-note').textContent(),/teacher/);
  assert.equal(await page.evaluate(()=>LearningProgress.get('3/2/talk-to-toy-buddy').completed),false);
- await page.locator('#l2Mic').click();
+ assert(await page.locator('#l2Teacher').isVisible());
  for(const [result,text] of [['partial','Good! Say the whole sentence.'],['logical','Look again. Try again.'],['unclear',"I couldn't hear you. Try again."]]){await page.evaluate(r=>Unit3Lesson2.current().gradeSpeech(r),result);await phase('listening');assert.equal(await page.locator('#l2Status').textContent(),text);assert(await page.locator('#l2Next').isDisabled());}
  const speech=await page.evaluate(()=>['Yes, it is.','yes',"No, it isn't.",'mumble'].map(t=>Unit3Lesson2.evaluateSpeech(t,true)));assert.deepEqual(speech,['correct','partial','logical','unclear']);
  await page.locator('#l2Level').selectOption('practice');await phase('listening');assert.equal(await page.locator('.l2-speaking-support').textContent(),'YES / NO');

@@ -53,6 +53,7 @@
    const busy=['starting','recording','processing'].includes(this.phase);
    if(this.phase==='recording')this.root.querySelector('#l2Mic').disabled=false;
    this.ui.Next.disabled=this.phase!=='resolved';this.ui.Replay.disabled=busy||['asking','checking','complete'].includes(this.phase);this.ui.Level.disabled=busy||['asking','checking','resolved','complete'].includes(this.phase);
+   if(this.kind==='talk-to-toy-buddy')ToyVoiceUI.update(this.root,{phase:this.phase,manual:this.manualMode,feedback:this.voiceFeedback});
   }
   clip(key){return window.Unit3Lesson2Clips?.clips[key];}
   async speak(key,token,{asking=false,endState='IDLE'}={}){
@@ -67,7 +68,7 @@
   stopRecognition(){this.recognition?.cancel?.();this.recognition=null;}
   resetAudio(){this.run++;this.stopRecognition();this.cancelDrag();this.buddy.stopAudio();this.sounds.forEach(a=>a.pause());this.sounds.clear();this.sfxDone?.();this.sfxDone=null;}
   setRound(preserveWrong=false){
-   const wasWrong=this.roundWrong;this.resetAudio();this.phase='idle';this.buddy.setState('IDLE');this.roundWrong=preserveWrong&&wasWrong;this.round=this.rounds[this.index];this.ui.Result.hidden=true;
+   const wasWrong=this.roundWrong;this.resetAudio();this.phase='idle';this.voiceFeedback=null;this.buddy.setState('IDLE');this.roundWrong=preserveWrong&&wasWrong;this.round=this.rounds[this.index];this.ui.Result.hidden=true;
    this.ui.Progress.textContent=`Round ${this.index+1} / ${this.rounds.length}`;this.ui.Toy.src=toy(this.round.shown);this.ui.Toy.alt='A '+this.round.shown;
    const hidden=this.kind==='listen-decide';this.ui.Question.textContent=hidden?'':(this.round.text||question(this.round.asked));this.ui.Bubble.textContent=hidden?'Listen carefully!':(this.round.text||question(this.round.asked));
    if(this.kind==='build-sentence'&&this.level!=='easy'&&this.round.form==='question'){this.ui.Question.textContent='Build the question.';this.ui.Bubble.textContent='Listen, then build the question.';}
@@ -106,7 +107,8 @@
   speakingControls(){
    const adapter=api.recognitionAdapter&&!this.manualMode;
    const support=this.level==='easy'?"Yes, it is. / No, it isn't.":this.level==='practice'?'YES / NO':'Say your answer.';
-   this.ui.Interaction.innerHTML=`<p class="l2-speaking-support">${support}</p><div class="l2-speaking-actions"><button id="l2Mic" type="button">${adapter?'🎙 Tap the microphone':'Speak, then teacher check'}</button><button data-teacher type="button">Teacher Check</button></div><p class="l2-manual-note">${adapter?'Speak after the question ends. Tap Stop when finished, or recording stops after four seconds.':'Teacher check mode: no microphone recording. The teacher listens and checks the response.'}</p><div id="l2Teacher" class="l2-teacher" hidden><b>Teacher: check the whole answer.</b><button type="button" data-validate="correct">CORRECT</button><button type="button" data-validate="unclear">TRY AGAIN</button></div><p id="l2Heard"></p><span class="l2-waveform" role="status" aria-label="Checking your answer" hidden><i></i><i></i><i></i><i></i><i></i></span>`;
+   this.ui.Interaction.innerHTML=ToyVoiceUI.html({support,adapter});
+   this.ui.Replay.innerHTML='<img src="assets/shared-ui/replay.png" alt=""><span>Replay Question</span>';
   }
   async click(event){
    const b=event.target.closest('button');if(!b||b.disabled)return;
@@ -175,19 +177,19 @@
    if(this.phase!=='listening')return;
    const adapter=this.manualMode?null:api.recognitionAdapter;
    if(!adapter){this.teacherCheck();return;}
-   if(this.recognition)return;const token=this.run;this.phase='starting';this.root.querySelector('#l2Heard').textContent='';this.refresh();this.status('Starting microphone…');
+   if(this.recognition)return;const token=this.run;this.voiceFeedback=null;this.phase='starting';this.root.querySelector('#l2Heard').textContent='';this.refresh();this.status('Starting microphone…');
    try{
     const recognition=adapter.start({questionToy:this.round.asked,displayedToy:this.round.shown,
-     onStart:()=>{if(!this.active(token))return;this.phase='recording';this.root.querySelector('#l2Mic').textContent='■ Stop recording';this.buddy.setState('LISTENING');this.status('Listening… say the whole answer.');this.refresh();},
-     onProcessing:()=>{if(!this.active(token))return;this.phase='processing';this.root.querySelector('#l2Mic').textContent='Checking…';this.buddy.setState('THINKING');this.root.querySelector('.l2-waveform').hidden=false;this.status('Checking your answer…');this.refresh();},
-     onResult:result=>{if(!this.active(token)||this.phase!=='processing')return;this.stopRecognition();this.phase='listening';this.root.querySelector('.l2-waveform').hidden=true;this.root.querySelector('#l2Mic').textContent='🎙 Tap the microphone';this.root.querySelector('#l2Heard').textContent=result.transcript?'Heard: '+result.transcript:'';this.gradeSpeech({CORRECT:'correct',INCOMPLETE:'partial',WRONG_LOGIC:'logical',UNCLEAR:'unclear'}[result.result]||'unclear');},
+     onStart:()=>{if(!this.active(token))return;this.phase='recording';this.buddy.setState('LISTENING');this.status('Listening… say the whole answer.');this.refresh();},
+     onProcessing:()=>{if(!this.active(token))return;this.phase='processing';this.buddy.setState('THINKING');this.status('Checking your answer…');this.refresh();},
+     onResult:result=>{if(!this.active(token)||this.phase!=='processing')return;this.stopRecognition();this.phase='listening';this.root.querySelector('#l2Heard').textContent=result.transcript?'Heard: '+result.transcript:'';this.gradeSpeech({CORRECT:'correct',INCOMPLETE:'partial',WRONG_LOGIC:'logical',UNCLEAR:'unclear'}[result.result]||'unclear');},
      onError:()=>{if(this.active(token))this.teacherCheck();}
     });
     if(this.active(token)&&['starting','recording','processing'].includes(this.phase)&&!this.manualMode)this.recognition=recognition;else recognition?.cancel?.();
    }catch{this.teacherCheck();}
   }
   async gradeSpeech(result){
-   if(this.phase!=='listening')return;this.stopRecognition();
+   if(this.phase!=='listening')return;this.stopRecognition();this.voiceFeedback=result;
    if(result==='correct'){
     this.phase='checking';this.attempts++;this.refresh();const token=this.run;this.buddy.setState('CORRECT');
     if(!await this.speak('feedback/excellent',token,{endState:'CELEBRATE'}))return;
