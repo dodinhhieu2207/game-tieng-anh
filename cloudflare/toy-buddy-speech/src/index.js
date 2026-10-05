@@ -37,7 +37,7 @@ export default {
   catch(e){return reply({error:e.message==='LARGE'?'AUDIO_TOO_LARGE':'INVALID_FORM'},e.message==='LARGE'?413:400);}
   const questionToy=form.get('questionToy'),displayedToy=form.get('displayedToy'),audio=form.get('audio');
   const questionType=form.get('questionType')||'yes-no';
-  if(!['yes-no','name','name-question'].includes(questionType))return reply({error:'INVALID_QUESTION_TYPE'},400);
+  if(!['yes-no','name','name-question','mystery-question'].includes(questionType))return reply({error:'INVALID_QUESTION_TYPE'},400);
   if(!ToySpeechEvaluator.toys.includes(questionToy)||!ToySpeechEvaluator.toys.includes(displayedToy))return reply({error:'INVALID_TOY'},400);
   // expectedAnswer is deliberately ignored: derive truth from the two validated toys.
   if(!audio||typeof audio.arrayBuffer!=='function'||!audio.size)return reply({error:'EMPTY_AUDIO'},400);

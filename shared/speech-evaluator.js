@@ -5,9 +5,14 @@
  function normalize(text){return String(text||'').toLowerCase().replace(/[’‘ʼ`]/g,"'").replace(/[.,!?;:"()\[\]{}]/g,' ').replace(/\s+/g,' ').trim();}
  function evaluate(transcript,questionToy,displayedToy,questionType='yes-no'){
   if(!toys.includes(questionToy)||!toys.includes(displayedToy))throw new Error('INVALID_TOY');
-  if(!['yes-no','name','name-question'].includes(questionType))throw new Error('INVALID_QUESTION_TYPE');
+  if(!['yes-no','name','name-question','mystery-question'].includes(questionType))throw new Error('INVALID_QUESTION_TYPE');
   transcript=typeof transcript==='string'?transcript:'';
   const normalized=normalize(transcript);
+  if(questionType==='mystery-question'){
+   const match=normalized.match(/^is it a (plane|puppet|robot|balloon|teddy)$/);
+   const partial=toys.includes(normalized)||/^is it(?: a)?$/.test(normalized)||/^(?:a|is it) (plane|puppet|robot|balloon|teddy)$/.test(normalized);
+   return {transcript,normalized,result:match?'CORRECT':partial?'INCOMPLETE':'UNCLEAR',answerType:match?'QUESTION':null,guessedToy:match?.[1]||null};
+  }
   if(questionType==='name-question'){
    const full=["what's this",'whats this','what is this'].includes(normalized);
    return {transcript,normalized,result:full?'CORRECT':['what','what is',"what's",'whats','this'].includes(normalized)?'INCOMPLETE':'UNCLEAR',answerType:full?'QUESTION':null};

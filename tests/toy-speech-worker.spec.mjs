@@ -32,6 +32,11 @@ for(const shown of E.toys){
  for(const text of ['noise',"It's a robot.",'Yes it is'])assert.equal(E.evaluate(text,'robot',shown,'name-question').result,'UNCLEAR');
 }
 assert.equal((await request('yes it is','robot','robot',{questionType:'invalid'})).status,400);
+for(const shown of E.toys)for(const guessed of E.toys){
+ const response=await request(`Is it a ${guessed}?`,'robot',shown,{questionType:'mystery-question'}),r=await response.json();assert.equal(r.result,'CORRECT');assert.equal(r.guessedToy,guessed);cases++;
+}
+for(const text of ['robot','is it','is it a','is it robot'])assert.equal(E.evaluate(text,'robot','teddy','mystery-question').result,'INCOMPLETE');
+for(const text of ['yes it is',"it's a robot",'is it a car','noise'])assert.equal(E.evaluate(text,'robot','teddy','mystery-question').result,'UNCLEAR');
 assert.equal((await worker.fetch(new Request('https://worker.example/api/speaking-check',{headers:{Origin:'http://127.0.0.1:8765'}}),env)).status,405);
 // Oversize streaming body without Content-Length cannot bypass upload bounds.
 const stream=new ReadableStream({start(c){c.enqueue(new Uint8Array(1024*1024+16385));c.close();}});

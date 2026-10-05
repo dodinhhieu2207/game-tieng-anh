@@ -17,6 +17,7 @@
    const response=await fetch(url,{method:'POST',body:form,signal,credentials:'omit',cache:'no-store',referrerPolicy:'no-referrer'});
    if(!response.ok)throw new Error('service-unavailable');
    const result=await response.json();
+   if(round.questionType==='mystery-question'&&result.result==='CORRECT'&&!window.ToySpeechEvaluator.toys.includes(result.guessedToy))throw new Error('invalid-response');
    if(typeof result.transcript!=='string'||typeof result.normalized!=='string'||!['CORRECT','INCOMPLETE','WRONG_LOGIC','UNCLEAR'].includes(result.result)||!['YES','NO','NAME','QUESTION',null].includes(result.answerType))throw new Error('invalid-response');
    return result;
   },
