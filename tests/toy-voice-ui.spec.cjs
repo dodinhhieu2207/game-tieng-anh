@@ -32,5 +32,15 @@ const assert=require('node:assert/strict');
  await page.setViewportSize({width:1366,height:768});await page.locator('[data-teacher]').click();assert(await page.locator('#l2Teacher').isVisible());assert(await page.locator('#l2Mic').isHidden());
  const bounds=await page.locator('.l2-scene').boundingBox();assert(bounds.y+bounds.height<=768);
  await page.screenshot({path:'tests/toy-voice-teacher.png',fullPage:true});
+ await page.evaluate(()=>{Unit3Lesson2.current().manualMode=false;});
+ for(const type of ['name','name-question']){
+  await page.selectOption('#l2SpeakingType',type);await page.waitForSelector('.l2-scene[data-phase="listening"]');
+  assert.equal(await page.locator('#l2Question').textContent(),"What's this?");
+  assert.match(await page.locator('.toy-voice-support').textContent(),type==='name'?/It's a/:/What's this/);
+  for(const [width,height] of [[1366,768],[390,844],[320,740]]){
+   await page.setViewportSize({width,height});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+   const b=await page.locator('#l2SpeakingType').boundingBox();assert(b.x>=0&&b.x+b.width<=width);await page.screenshot({path:`tests/toy-voice-${type}-${width}.png`,fullPage:true});
+  }
+ }
  assert.deepEqual(errors,[]);await browser.close();console.log('PASS voice UI: visual states, mic availability, Stop indicator, reduced motion, 320/390 touch layouts, teacher controls and desktop fit.');
 })().catch(e=>{console.error(e);process.exit(1)});

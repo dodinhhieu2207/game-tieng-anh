@@ -925,6 +925,199 @@
           "ms": 1020
         }
       ]
+    },
+    "answers/its_a_plane": {
+      "src": "assets/unit3/audio/its_a_plane.mp3",
+      "text": "It's a plane.",
+      "duration": 1.24,
+      "sha256": "6809f879fcde5709eacb7a2185bb13921c3e8d1472e74c81d2b761ec71c7d71d",
+      "provenance": "Existing approved Unit 3 Higgs Belinda recording; original bytes retained",
+      "cues": [
+        {
+          "id": 0,
+          "ms": 0
+        },
+        {
+          "id": 15,
+          "ms": 120
+        },
+        {
+          "id": 4,
+          "ms": 270
+        },
+        {
+          "id": 21,
+          "ms": 340
+        },
+        {
+          "id": 19,
+          "ms": 540
+        },
+        {
+          "id": 4,
+          "ms": 630
+        },
+        {
+          "id": 15,
+          "ms": 840
+        },
+        {
+          "id": 0,
+          "ms": 1120
+        }
+      ]
+    },
+    "answers/its_a_puppet": {
+      "src": "assets/unit3/audio/its_a_puppet.mp3",
+      "text": "It's a puppet.",
+      "duration": 1.12,
+      "sha256": "6ad9fd69bc49da441599f6a71330d616779e0d961fd3baeecf28d5736aef5b5d",
+      "provenance": "Existing approved Unit 3 Higgs Belinda recording; original bytes retained",
+      "cues": [
+        {
+          "id": 0,
+          "ms": 0
+        },
+        {
+          "id": 15,
+          "ms": 120
+        },
+        {
+          "id": 21,
+          "ms": 300
+        },
+        {
+          "id": 4,
+          "ms": 380
+        },
+        {
+          "id": 21,
+          "ms": 560
+        },
+        {
+          "id": 15,
+          "ms": 640
+        },
+        {
+          "id": 0,
+          "ms": 1030
+        }
+      ]
+    },
+    "answers/its_a_robot": {
+      "src": "assets/unit3/audio/its_a_robot.mp3",
+      "text": "It's a robot.",
+      "duration": 1.24,
+      "sha256": "245a7b4365b572997f466cf0b8b060b64b23a21628756e7040c4900127f575d9",
+      "provenance": "Existing approved Unit 3 Higgs Belinda recording; original bytes retained",
+      "cues": [
+        {
+          "id": 0,
+          "ms": 0
+        },
+        {
+          "id": 15,
+          "ms": 120
+        },
+        {
+          "id": 9,
+          "ms": 280
+        },
+        {
+          "id": 7,
+          "ms": 420
+        },
+        {
+          "id": 9,
+          "ms": 490
+        },
+        {
+          "id": 21,
+          "ms": 630
+        },
+        {
+          "id": 2,
+          "ms": 710
+        },
+        {
+          "id": 15,
+          "ms": 850
+        },
+        {
+          "id": 0,
+          "ms": 1130
+        }
+      ]
+    },
+    "answers/its_a_balloon": {
+      "src": "assets/unit3/audio/its_a_balloon.mp3",
+      "text": "It's a balloon.",
+      "duration": 1.08,
+      "sha256": "bc570c0f3ae24993493502b48137b8b11e33d6808d03d38eab302baf4f331454",
+      "provenance": "Existing approved Unit 3 Higgs Belinda recording; original bytes retained",
+      "cues": [
+        {
+          "id": 0,
+          "ms": 0
+        },
+        {
+          "id": 15,
+          "ms": 120
+        },
+        {
+          "id": 21,
+          "ms": 280
+        },
+        {
+          "id": 4,
+          "ms": 360
+        },
+        {
+          "id": 7,
+          "ms": 480
+        },
+        {
+          "id": 0,
+          "ms": 970
+        }
+      ]
+    },
+    "answers/its_a_teddy": {
+      "src": "assets/unit3/audio/its_a_teddy.mp3",
+      "text": "It's a teddy.",
+      "duration": 1.08,
+      "sha256": "2d099935f28ba480239bdbd70e7952688fc546221e95204d9e0b5c76aada3e8b",
+      "provenance": "Existing approved Unit 3 Higgs Belinda recording; original bytes retained",
+      "cues": [
+        {
+          "id": 0,
+          "ms": 0
+        },
+        {
+          "id": 15,
+          "ms": 120
+        },
+        {
+          "id": 4,
+          "ms": 270
+        },
+        {
+          "id": 15,
+          "ms": 340
+        },
+        {
+          "id": 4,
+          "ms": 410
+        },
+        {
+          "id": 15,
+          "ms": 620
+        },
+        {
+          "id": 0,
+          "ms": 970
+        }
+      ]
     }
   }
 }

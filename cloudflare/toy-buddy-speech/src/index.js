@@ -36,6 +36,8 @@ export default {
   try{const body=await readBody(request);form=await new Response(body,{headers:{'Content-Type':type}}).formData();}
   catch(e){return reply({error:e.message==='LARGE'?'AUDIO_TOO_LARGE':'INVALID_FORM'},e.message==='LARGE'?413:400);}
   const questionToy=form.get('questionToy'),displayedToy=form.get('displayedToy'),audio=form.get('audio');
+  const questionType=form.get('questionType')||'yes-no';
+  if(!['yes-no','name','name-question'].includes(questionType))return reply({error:'INVALID_QUESTION_TYPE'},400);
   if(!ToySpeechEvaluator.toys.includes(questionToy)||!ToySpeechEvaluator.toys.includes(displayedToy))return reply({error:'INVALID_TOY'},400);
   // expectedAnswer is deliberately ignored: derive truth from the two validated toys.
   if(!audio||typeof audio.arrayBuffer!=='function'||!audio.size)return reply({error:'EMPTY_AUDIO'},400);
@@ -49,7 +51,7 @@ export default {
    // Discard low-confidence/no-speech segments instead of interpreting a hallucinated answer.
    const segments=Array.isArray(output.segments)?output.segments:[];
    const unreliable=segments.length&&segments.every(s=>s.no_speech_prob>=.6||s.avg_logprob< -1);
-   return reply(ToySpeechEvaluator.evaluate(unreliable?'':output.text,questionToy,displayedToy));
+   return reply(ToySpeechEvaluator.evaluate(unreliable?'':output.text,questionToy,displayedToy,questionType));
   }catch(e){return reply({error:e.message==='TIMEOUT'?'AI_TIMEOUT':'AI_UNAVAILABLE'},e.message==='TIMEOUT'?504:502);}
   finally{clearTimeout(timer);form=null;}
  }

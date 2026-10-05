@@ -30,6 +30,17 @@ const assert=require('node:assert/strict');
   if(index===9){await page.waitForSelector('.l2-scene[data-phase="complete"]');await page.locator('#restartGame').click();await ready();}
  }
  // A stale pending result after Back cannot mutate the old scene or next scene.
+ for(const type of ['name','name-question']){
+  await page.selectOption('#l2SpeakingType',type);await ready();assert.equal(await page.locator('#l2Question').textContent(),"What's this?");
+  const seen=new Set();
+  for(let i=0;i<5;i++){
+   const shown=await page.evaluate(()=>Unit3Lesson2.current().round.shown);seen.add(shown);
+   if(i===0){transcript=type==='name'?shown:'what';await start();await ready();assert.match(await page.locator('#l2Status').textContent(),/whole sentence/);assert.equal(await page.evaluate(()=>Unit3Lesson2.current().index),0);}
+   if(i===0&&type==='name'){transcript=`It's a ${shown==='robot'?'teddy':'robot'}.`;await start();await ready();assert.match(await page.locator('#l2Status').textContent(),/Look again/);}
+   transcript=type==='name'?`It's a ${shown}.`:"What's this?";await start();await page.waitForFunction(i=>Unit3Lesson2.current()?.index>i,i);if(i<4)await ready();
+  }
+  assert.equal(seen.size,5);await page.waitForSelector('.l2-scene[data-phase="complete"]');await page.locator('#restartGame').click();await ready();
+ }
  hold=true;transcript='Yes, it is.';await start();await page.waitForSelector('.l2-scene[data-phase="processing"]');await page.locator('[data-shell-action="back"]').click();await page.waitForTimeout(600);assert.equal(await page.evaluate(()=>Unit3Lesson2.current()),null);await enter();await ready();hold=false;
  // Permission denied: exactly two teacher controls, same audio and actor remain.
  await page.evaluate(()=>{navigator.mediaDevices.getUserMedia=async()=>{throw new DOMException('denied','NotAllowedError');};});

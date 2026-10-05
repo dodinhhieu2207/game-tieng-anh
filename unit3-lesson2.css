@@ -124,3 +124,6 @@
 .l2-scene .l2-waveform i:nth-child(2n){animation-delay:.2s}.l2-scene .l2-waveform i:nth-child(3n){animation-delay:.4s}
 @keyframes l2-wave{to{transform:scaleY(.3)}}
 @media(prefers-reduced-motion:reduce){.l2-scene .l2-waveform i{animation:none}}
+
+.l2-scene .l2-level:has(#l2SpeakingType){flex-wrap:wrap;max-width:100%}
+.l2-scene #l2SpeakingType{max-width:100%;min-width:0;font-size:17px}

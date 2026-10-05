@@ -37,6 +37,11 @@
    this.buddy=new ToyBuddy(this.root.querySelector('#l2Actor'),{onStateChange:state=>{this.root.dataset.state=state;},onAudioError:()=>{if(!this.destroyed){this.phase='audio-error';this.status('Audio could not play. Tap Replay Question to try again.');this.refresh();}}});
    this.ui.Replay.onclick=()=>this.prompt();this.ui.Next.onclick=()=>this.next();
    this.ui.Level.onchange=()=>{this.level=this.ui.Level.value;this.setRound(true);};
+   if(kind==='talk-to-toy-buddy'){
+    const label=document.createElement('label');label.className='l2-level';label.innerHTML='Speaking <select id="l2SpeakingType" aria-label="Speaking practice"><option value="yes-no">Is it a toy?</option><option value="name">What’s this? — Answer</option><option value="name-question">What’s this? — Ask</option></select>';
+    this.root.querySelector('.l2-head').insertBefore(label,this.ui.Progress);this.ui.SpeakingType=label.querySelector('select');
+    this.ui.SpeakingType.onchange=()=>{const type=this.ui.SpeakingType.value;this.index=0;this.errors=0;this.attempts=0;this.firstCorrect=0;this.rounds=type==='yes-no'?rounds():mix(WORDS.map(shown=>({shown,asked:shown,questionType:type,text:"What's this?",clip:'questions/whats_this'})));this.setRound();};
+   }
    this.root.addEventListener('click',e=>this.click(e));
    this.root.addEventListener('pointerdown',e=>this.pointerDown(e));this.root.addEventListener('pointermove',e=>this.pointerMove(e));this.root.addEventListener('pointerup',e=>this.pointerUp(e));this.root.addEventListener('pointercancel',()=>this.cancelDrag());
    this.observer=new MutationObserver(()=>{if(!this.root.isConnected||currentGame!==this.entry[1]||!els.gameScreen.classList.contains('active'))this.dispose();});
@@ -53,6 +58,7 @@
    const busy=['starting','recording','processing'].includes(this.phase);
    if(this.phase==='recording')this.root.querySelector('#l2Mic').disabled=false;
    this.ui.Next.disabled=this.phase!=='resolved';this.ui.Replay.disabled=busy||['asking','checking','complete'].includes(this.phase);this.ui.Level.disabled=busy||['asking','checking','resolved','complete'].includes(this.phase);
+   if(this.ui.SpeakingType)this.ui.SpeakingType.disabled=busy||['asking','checking','complete'].includes(this.phase);
    if(this.kind==='talk-to-toy-buddy')ToyVoiceUI.update(this.root,{phase:this.phase,manual:this.manualMode,feedback:this.voiceFeedback});
   }
   clip(key){return window.Unit3Lesson2Clips?.clips[key];}
@@ -74,6 +80,7 @@
    if(this.kind==='build-sentence'&&this.level!=='easy'&&this.round.form==='question'){this.ui.Question.textContent='Build the question.';this.ui.Bubble.textContent='Listen, then build the question.';}
    const instructions={'meet-pattern':'Look, listen, then choose YES or NO.','question-detective':'What kind of question did you hear?','match-answer':'Drag an answer to the question card, or tap an answer.','build-sentence':'Move the word tiles into the slots. You can drag or tap.','listen-decide':'Listen first. Choose YES or NO.','talk-to-toy-buddy':'Listen, then say the whole answer.'};
    this.ui.Instruction.textContent=instructions[this.kind];
+   if(this.round.questionType==='name-question')this.ui.Instruction.textContent='Listen, then ask: What’s this?';
    if(this.kind==='question-detective')this.ui.Interaction.innerHTML=`<div class="l2-categories">${TYPES.map((t,i)=>`<button type="button" data-category="${t}">${i<2?`<img src="assets/shared-ui/${TYPE_ICONS[i]}.png" alt="">`:i===2?'<span class="l2-colors" aria-hidden="true">● ● ●</span>':'<span class="l2-number-icon" aria-hidden="true">1 2 3</span>'}<span>${t}</span></button>`).join('')}</div>`;
    else if(this.kind==='match-answer')this.matchCards();
    else if(this.kind==='build-sentence')this.buildTiles();
@@ -106,7 +113,8 @@
   }
   speakingControls(){
    const adapter=api.recognitionAdapter&&!this.manualMode;
-   const support=this.level==='easy'?"Yes, it is. / No, it isn't.":this.level==='practice'?'YES / NO':'Say your answer.';
+   const type=this.round.questionType||'yes-no';
+   const support=this.level==='challenge'?(type==='yes-no'?'Say your answer.':'Say the whole sentence.'):type==='name-question'?(this.level==='easy'?"What's this?":'Ask about the toy.'):type==='name'?(this.level==='easy'?"It's a …":'Name the toy.'):(this.level==='easy'?"Yes, it is. / No, it isn't.":'YES / NO');
    this.ui.Interaction.innerHTML=ToyVoiceUI.html({support,adapter});
    this.ui.Replay.innerHTML='<img src="assets/shared-ui/replay.png" alt=""><span>Replay Question</span>';
   }
@@ -179,7 +187,7 @@
    if(!adapter){this.teacherCheck();return;}
    if(this.recognition)return;const token=this.run;this.voiceFeedback=null;this.phase='starting';this.root.querySelector('#l2Heard').textContent='';this.refresh();this.status('Starting microphone…');
    try{
-    const recognition=adapter.start({questionToy:this.round.asked,displayedToy:this.round.shown,
+    const recognition=adapter.start({questionToy:this.round.asked,displayedToy:this.round.shown,questionType:this.round.questionType||'yes-no',
      onStart:()=>{if(!this.active(token))return;this.phase='recording';this.buddy.setState('LISTENING');this.status('Listening… say the whole answer.');this.refresh();},
      onProcessing:()=>{if(!this.active(token))return;this.phase='processing';this.buddy.setState('THINKING');this.status('Checking your answer…');this.refresh();},
      onResult:result=>{if(!this.active(token)||this.phase!=='processing')return;this.stopRecognition();this.phase='listening';this.root.querySelector('#l2Heard').textContent=result.transcript?'Heard: '+result.transcript:'';this.gradeSpeech({CORRECT:'correct',INCOMPLETE:'partial',WRONG_LOGIC:'logical',UNCLEAR:'unclear'}[result.result]||'unclear');},
@@ -192,6 +200,7 @@
    if(this.phase!=='listening')return;this.stopRecognition();this.voiceFeedback=result;
    if(result==='correct'){
     this.phase='checking';this.attempts++;this.refresh();const token=this.run;this.buddy.setState('CORRECT');
+    if(this.round.questionType&&this.round.questionType!=='yes-no')if(!await this.speak('answers/its_a_'+this.round.shown,token,{endState:'CORRECT'}))return;
     if(!await this.speak('feedback/excellent',token,{endState:'CELEBRATE'}))return;
     if(!await this.sfx('correct',token))return;if(!this.roundWrong)this.firstCorrect++;
     this.buddy.setState('CELEBRATE');this.phase='resolved';this.status('Excellent!');this.refresh();this.next();return;
@@ -206,8 +215,10 @@
    document.dispatchEvent(new CustomEvent('learning:activity-completed',{detail:{game:this.entry[1],stars:this.stars}}));
    const last=this.kind==='talk-to-toy-buddy',ctx=window.LearningApp?.context();
    const earned=ENTRIES.reduce((sum,e)=>sum+(window.LearningProgress?.get('3/2/'+e[0]).stars||0),0);
+   const speakingSummary=this.round.questionType==='name-question'?"What’s this?":this.round.questionType==='name'?"What’s this?<br>It’s a …":"Is it a ...?<br>Yes, it is.<br>No, it isn't.";
    this.ui.Result.hidden=false;this.ui.Result.innerHTML=`<div class="l2-complete"><div class="l2-complete-actor"></div><div class="l2-complete-copy"><h2>${last?'UNIT 3 – LESSON 2 COMPLETE':'Activity Complete'}</h2><h3>Great job!</h3><p class="l2-earned">${'★'.repeat(this.stars)}${'☆'.repeat(3-this.stars)}</p><p>${this.firstCorrect} / ${this.rounds.length} correct on the first try.</p>${last?`<p>Is it a ...?<br>Yes, it is.<br>No, it isn't.</p><p>Lesson stars earned: ${earned} / 18</p>`:''}<div class="l2-complete-controls"><button type="button" data-complete-action="again">PLAY AGAIN</button><button type="button" data-complete-action="activities">CHOOSE ACTIVITY</button>${last?'<button type="button" data-complete-action="unit">BACK TO UNIT 3</button>':'<button type="button" data-complete-action="next">NEXT ACTIVITY</button>'}</div></div></div>`;
    this.ui.Result.querySelector('.l2-complete-actor').appendChild(this.buddy.root);
+   if(last)this.ui.Result.querySelectorAll('.l2-complete-copy>p')[2].innerHTML=speakingSummary;
    this.root.classList.add('l2-finished');this.status(last?'Lesson Complete!':'Activity complete!');this.refresh();
    this.speak('feedback/great_job',this.run,{endState:'CELEBRATE'});
   }

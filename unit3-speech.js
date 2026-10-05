@@ -13,13 +13,14 @@
    form.append('audio',audio,'answer.'+(audio.type.includes('mp4')?'m4a':audio.type.includes('ogg')?'ogg':'webm'));
    form.append('questionToy',round.questionToy);form.append('displayedToy',round.displayedToy);
    form.append('expectedAnswer',round.questionToy===round.displayedToy?'yes':'no');
+   if(round.questionType)form.append('questionType',round.questionType);
    const response=await fetch(url,{method:'POST',body:form,signal,credentials:'omit',cache:'no-store',referrerPolicy:'no-referrer'});
    if(!response.ok)throw new Error('service-unavailable');
    const result=await response.json();
-   if(typeof result.transcript!=='string'||typeof result.normalized!=='string'||!['CORRECT','INCOMPLETE','WRONG_LOGIC','UNCLEAR'].includes(result.result)||!['YES','NO',null].includes(result.answerType))throw new Error('invalid-response');
+   if(typeof result.transcript!=='string'||typeof result.normalized!=='string'||!['CORRECT','INCOMPLETE','WRONG_LOGIC','UNCLEAR'].includes(result.result)||!['YES','NO','NAME','QUESTION',null].includes(result.answerType))throw new Error('invalid-response');
    return result;
   },
-  start({questionToy,displayedToy,onStart=()=>{},onProcessing=()=>{},onResult=()=>{},onError=()=>{}}){
+  start({questionToy,displayedToy,questionType,onStart=()=>{},onProcessing=()=>{},onResult=()=>{},onError=()=>{}}){
    if(current)throw new Error('busy');
    let active=true,stream=null,recorder=null,chunks=[],recordTimer,permissionTimer,requestTimer;
    const controller=new AbortController();
@@ -44,7 +45,7 @@
       if(!audio.size){fail('empty-recording');return;}
       if(audio.size>1024*1024){fail('recording-too-large');return;}
       onProcessing();requestTimer=setTimeout(()=>fail('network-timeout'),Math.min(config.requestTimeoutMs||20000,30000));
-      try{const result=await api.evaluate(audio,{questionToy,displayedToy},controller.signal);if(!active)return;active=false;release();if(current===handle)current=null;onResult(result);}
+      try{const result=await api.evaluate(audio,{questionToy,displayedToy,questionType},controller.signal);if(!active)return;active=false;release();if(current===handle)current=null;onResult(result);}
       catch(e){if(active)fail(e.name==='AbortError'?'network-timeout':e.message||'network');}
      };
      recorder.start();onStart();recordTimer=setTimeout(finish,Math.min(config.maxRecordingMs||4000,4000));
