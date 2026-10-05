@@ -1,0 +1,50 @@
+/* Shared preschool UI typography. Uses bundled fonts; handwriting/trace letter artwork stays separate. */
+@font-face{font-family:"App Outfit";src:url("../assets/fonts/Outfit-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"App Outfit";src:url("../assets/fonts/Outfit-ExtraBold.ttf") format("truetype");font-weight:800;font-style:normal;font-display:swap}
+:root{--app-font:"App Outfit","Arial Rounded MT Bold","Trebuchet MS",sans-serif;--app-reading-size:18px;--app-control-size:20px;--app-title-size:clamp(30px,3vw,42px)}
+html,body{font-family:var(--app-font);font-weight:700;font-size:var(--app-reading-size);line-height:1.35;font-synthesis:none;text-rendering:optimizeLegibility}
+button,select,input,textarea{font-family:var(--app-font)}
+.unit3-toytown,#gameScreen.u3-on .game-topbar,#gameScreen.u3-on .current-game{font-family:var(--app-font)}
+.brand b{font-size:20px;font-weight:800}.brand small{font-size:15px;line-height:1.4}
+.header-actions .icon-control,.shell-game-controls button.btn{font-size:18px;font-weight:800}
+.shell-game-context{font-size:17px;font-weight:800;line-height:1.3}
+.library-heading h1,#lessonApp .hero h1{font-size:var(--app-title-size);font-weight:800;line-height:1.12;letter-spacing:-.02em}
+#lessonApp .library-heading h2{font-size:34px;line-height:1.2;font-weight:800}
+#lessonApp .hero p,#lessonApp .shell-mode-hint{font-size:20px;line-height:1.5}
+#lessonApp .activity-card-copy b{font-size:25px;line-height:1.2;font-weight:800}
+#lessonApp .activity-card-copy p{font-size:18px;line-height:1.45}
+#lessonApp .activity-card-copy em{font-size:17px;line-height:1.4}
+.side-item .side-copy b{font-size:18px;font-weight:800}.side-item .side-copy em{font-size:15px;line-height:1.3}
+.hero-board::before,.hero-board::after{font-family:var(--app-font)}
+/* Child-facing lesson text is larger than the teacher's secondary controls. */
+.l2-scene{font-weight:700;line-height:1.3}
+#gameScreen:has(.l2-scene) .current-game h1{font-size:32px;line-height:1.15;font-weight:800;letter-spacing:-.015em}
+.l2-scene .l2-level,.l2-scene select{font-size:18px;font-weight:800}
+.l2-scene #l2Progress{font-size:18px;font-weight:800}
+.l2-scene .l2-bubble{font-size:26px;line-height:1.25;font-weight:800}
+.l2-scene #l2Question{font-size:34px;font-weight:800;line-height:1.2}
+.l2-scene #l2Instruction{font-size:20px;line-height:1.4}
+.l2-scene #l2Status{font-size:23px;line-height:1.3;font-weight:800;margin:8px 0}
+.l2-scene .l2-round-controls button{font-size:22px;font-weight:800;line-height:1.2;min-height:50px}
+.toy-voice-panel .toy-voice-support{font-size:27px!important;line-height:1.25;font-weight:800;margin-bottom:6px!important}
+.toy-voice-panel .toy-voice-state{font-size:19px;line-height:1.25;font-weight:800}
+.toy-voice-panel .toy-voice-duration{font-size:14px;font-weight:800}
+.toy-voice-panel button.toy-voice-mic{font-size:25px!important;font-weight:800;line-height:1.15;text-shadow:0 1px 1px #075a93}
+.toy-voice-panel button.toy-voice-teacher{font-size:21px!important;font-weight:800;line-height:1.15;text-shadow:0 1px 1px #663198}
+.toy-voice-panel .toy-voice-note{font-size:17px!important;line-height:1.35}
+.toy-voice-panel .toy-voice-heard{font-size:18px;line-height:1.35}
+.toy-voice-panel .toy-voice-validation>b{font-size:17px;font-weight:800}
+.toy-voice-panel .toy-voice-validation button{font-size:19px!important;font-weight:800;line-height:1.2}
+@media(max-width:650px){
+ :root{--app-title-size:32px}
+ .header-actions .icon-control{font-size:16px}.brand b{font-size:18px}.brand small{font-size:14px}
+ .shell-game-controls button.btn{font-size:17px}.shell-game-context{font-size:16px}
+ #lessonApp .activity-card-copy b{font-size:23px}#lessonApp .hero p{font-size:18px}
+ #lessonApp .library-heading h2{font-size:28px}
+ #gameScreen:has(.l2-scene) .current-game h1{font-size:30px}
+ .l2-scene .l2-bubble{font-size:21px}.l2-scene #l2Question{font-size:25px}
+ .l2-scene #l2Status{font-size:21px}.l2-scene .l2-round-controls button{font-size:20px}
+ .toy-voice-panel .toy-voice-support{font-size:24px!important}.toy-voice-panel .toy-voice-state{font-size:18px}
+ .toy-voice-panel button.toy-voice-mic{font-size:23px!important}.toy-voice-panel button.toy-voice-teacher{font-size:20px!important}
+ .toy-voice-panel .toy-voice-note{font-size:16px!important}
+}
