@@ -21,7 +21,7 @@ npm run deploy
 
 For development, `npm run dev` starts Wrangler. Workers AI inference still requires an authenticated Cloudflare account and uses the remote AI service; it is not an offline Whisper engine. Set the development frontend endpoint to `http://127.0.0.1:8787/api/speaking-check` temporarily. The production static config must use the HTTPS Worker URL.
 
-After a successful deploy, replace only `endpoint:''` in `data/speech-config.js` with the real HTTPS endpoint. Publish the current website files to its existing GitHub Pages repository, including `data/speech-config.js`, `shared/speech-evaluator.js`, `unit3-speech.js`, the updated Lesson 2 JS/CSS and updated external script tags in `index.html`. The current Desktop site has prior navigation/Lesson 2 additions not yet present in the older Git checkout; publish its required dependencies together, preserving original game assets. Bump the script/config version queries for any subsequent URL changes, then inspect the served config and test production in Chrome/Edge.
+After deploying a replacement Worker, update the public endpoint in `data/speech-config.js`. Publish the current website files to its existing GitHub Pages repository, including `data/speech-config.js`, `shared/speech-evaluator.js`, `unit3-speech.js`, the updated Lesson 2 JS/CSS and updated external script tags in `index.html`. The navigation/Lesson 2 dependencies were published together with the speech integration, preserving original game assets. Bump the script/config version queries for any subsequent URL changes, then inspect the served config and test production in Chrome/Edge.
 
 Run a live smoke test from the website root:
 
@@ -58,5 +58,13 @@ Modified files: `index.html` external imports/version queries, `unit3-speech.js`
 - `node tests/unit3-speech.spec.cjs`: actual Chrome MediaRecorder bytes through the Worker handler with mocked AI; ended gating, waveform, all outcomes, all five toys and yes/no, teacher fallback, automatic advance.
 - Existing `tests/unit3-lesson2.spec.cjs`, layout/navigation/asset checks protect Games 1–5, original Unit 2/Letter Land and the audio files.
 - `npm run check`: Wrangler dry-run bundle/binding validation. No live deployment or live inference is implied by this command.
+
+## Production verification — 2026-10-05
+
+Website implementation commit: `d9502fe5db88214a340edb6e17a07d3445c52ee8`. [GitHub Pages deployment](https://github.com/dodinhhieu2207/game-tieng-anh/actions/runs/37332278123) completed successfully. The served config contains the deployed Worker endpoint.
+
+`tests/unit3-speech-live.spec.cjs` passed with `SPEECH_TEST_BASE=https://dodinhhieu2207.github.io/game-tieng-anh/index.html?release=d9502fe`. Actual Chrome MediaRecorder uploads from the production origin reached the deployed Worker and real Whisper: positive CORRECT, negative CORRECT, mismatched full sentence WRONG_LOGIC. The test also checked audio-ended gating, processing locks, feedback, correct-answer automatic advancement, retry staying on the current round, and no JavaScript errors. Input audio was synthetic Higgs answer clips; this does not verify an actual child's microphone or classroom recognition quality.
+
+`tools/check_live_speech.mjs` passed all ten full-answer toy cases against the deployed model. `tests/speech-live-edge.spec.mjs` returned INCOMPLETE for isolated synthetic Yes and No, and UNCLEAR for synthetic silence and noise. No child recordings were used for these tests.
 
 Primary API references: [Whisper model schema](https://developers.cloudflare.com/workers-ai/models/whisper-large-v3-turbo/), [AI binding](https://developers.cloudflare.com/workers-ai/configuration/bindings/), [native rate limiter](https://developers.cloudflare.com/workers/runtime-apis/bindings/rate-limit/).

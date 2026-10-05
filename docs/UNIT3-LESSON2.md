@@ -49,7 +49,7 @@ Generated inventory:
 
 The microphone starts only after question audio ends, stops after at most four seconds or a manual Stop, then locks during processing. The Worker normalizes punctuation/case/apostrophes and distinguishes full, incomplete, wrong-logic and unclear answers. Teacher Check is always available and offers CORRECT / TRY AGAIN. Successful Game 6 responses play the existing Excellent audio and celebration before automatic progression. No lives are removed and manual validation never pretends to be recognition.
 
-The Cloudflare integration is implemented; its live deployment and real Whisper acceptance remain pending authentication. Until a deployed endpoint is configured, the page uses Teacher Check. Actual child/noisy-classroom recognition has not been human-tested. See [UNIT3-SPEECH-AI.md](UNIT3-SPEECH-AI.md) for verification limits and deployment instructions.
+The Cloudflare integration is deployed to the user-selected hiei1121 account and configured on GitHub Pages. Real Chrome MediaRecorder uploads from the public website passed through the deployed Worker and Whisper for full positive/negative answers and wrong-logic retry. Synthetic isolated Yes/No, silence and noise were also checked against the live model. Actual child/noisy-classroom recognition has not been human-tested. See [UNIT3-SPEECH-AI.md](UNIT3-SPEECH-AI.md) for verification limits and deployment instructions.
 
 ## Validation and reproduction
 
@@ -74,6 +74,6 @@ Created: `unit3-lesson2.js`, `unit3-lesson2.css`, `unit3-speech.js`, the 25 MP3s
 
 Modified: `index.html` imports, `data/units.js` Lesson 2 entries, `app/app-shell.js` completion/cancellation/mute compatibility, existing `toy-buddy.js` / `.css` state/audio support, existing actor/lip-sync/navigation tests, and the prototype documentation note.
 
-This folder is the working local deliverable; there is no Git repository here and no Pages push was performed. The build runtime, models and QA Whisper cache stay outside the deployable website.
+This folder is the working local deliverable. Its required website files were synchronized to the existing game-tieng-anh Git repository and published in commit d9502fe. GitHub Pages deployment succeeded, and the public Game 6 passed the live browser/Worker/Whisper check. The build runtime, models and QA Whisper cache stay outside the deployable website.
 
 Before public production release, confirm the applicable Higgs V3 license for the intended application and generated audio. The cached model package identifies research/non-commercial licensing; upstream terms now also include a scoped Creator Use Grant. This task does not establish that the user's educational application falls under that grant or that a commercial license is already held. Current upstream terms: https://huggingface.co/bosonai/higgs-tts-3-4b/blob/main/LICENSE . Do not deploy the model/runtime with the site.
