@@ -1,0 +1,202 @@
+[
+  {
+    "key": "questions/is_it_a_plane",
+    "expected": "Is it a plane?",
+    "recognized": "Is it a plane?",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.63,
+    "truePeakDB": -3.6
+  },
+  {
+    "key": "questions/is_it_a_puppet",
+    "expected": "Is it a puppet?",
+    "recognized": "Is it a puppet?",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.25,
+    "truePeakDB": -2.78
+  },
+  {
+    "key": "questions/is_it_a_robot",
+    "expected": "Is it a robot?",
+    "recognized": "Is it a robot?",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.39,
+    "truePeakDB": -4.88
+  },
+  {
+    "key": "questions/is_it_a_balloon",
+    "expected": "Is it a balloon?",
+    "recognized": "Is it a balloon?",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.7,
+    "truePeakDB": -3.13
+  },
+  {
+    "key": "questions/is_it_a_teddy",
+    "expected": "Is it a teddy?",
+    "recognized": "Is it a teddy?",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.37,
+    "truePeakDB": -4.62
+  },
+  {
+    "key": "questions/whats_this",
+    "expected": "What's this?",
+    "recognized": "What's this?",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.22,
+    "truePeakDB": -2.42
+  },
+  {
+    "key": "questions/what_color",
+    "expected": "What color is it?",
+    "recognized": "What color is it?",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.28,
+    "truePeakDB": -3.43
+  },
+  {
+    "key": "questions/how_many",
+    "expected": "How many?",
+    "recognized": "How many?",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.34,
+    "truePeakDB": -6.52
+  },
+  {
+    "key": "answers/yes_it_is",
+    "expected": "Yes, it is.",
+    "recognized": "Yes, it is.",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.23,
+    "truePeakDB": -4.16
+  },
+  {
+    "key": "answers/no_it_isnt",
+    "expected": "No, it isn't.",
+    "recognized": "No, it isn't.",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.23,
+    "truePeakDB": -4.46
+  },
+  {
+    "key": "feedback/your_turn",
+    "expected": "Your turn!",
+    "recognized": "Your turn.",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.29,
+    "truePeakDB": -4.64
+  },
+  {
+    "key": "feedback/excellent",
+    "expected": "Excellent!",
+    "recognized": "Excellent.",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.67,
+    "truePeakDB": -3.67
+  },
+  {
+    "key": "feedback/great_job",
+    "expected": "Great job!",
+    "recognized": "Great job.",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.33,
+    "truePeakDB": -3.9
+  },
+  {
+    "key": "feedback/try_again",
+    "expected": "Try again.",
+    "recognized": "Try again.",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.38,
+    "truePeakDB": -4.15
+  },
+  {
+    "key": "feedback/look_again",
+    "expected": "Look again. Try again.",
+    "recognized": "Look again. Try again.",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.14,
+    "truePeakDB": -3.92
+  },
+  {
+    "key": "feedback/say_the_whole_sentence",
+    "expected": "Good! Say the whole sentence.",
+    "recognized": "Good, say the whole sentence.",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.3,
+    "truePeakDB": -4.08
+  },
+  {
+    "key": "feedback/i_couldnt_hear_you",
+    "expected": "I couldn't hear you. Try again.",
+    "recognized": "I couldn't hear you. Try again.",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.36,
+    "truePeakDB": -2.26
+  },
+  {
+    "key": "feedback/tap_the_microphone",
+    "expected": "Tap the microphone.",
+    "recognized": "Tap the microphone.",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.37,
+    "truePeakDB": -3.73
+  },
+  {
+    "key": "feedback/listen",
+    "expected": "Listen.",
+    "recognized": "Listen",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.03,
+    "truePeakDB": -2.37
+  },
+  {
+    "key": "feedback/look",
+    "expected": "Look.",
+    "recognized": "Look.",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.04,
+    "truePeakDB": -4.64
+  },
+  {
+    "key": "feedback/choose",
+    "expected": "Choose.",
+    "recognized": "Choose.",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.18,
+    "truePeakDB": -5.56
+  },
+  {
+    "key": "feedback/well_done",
+    "expected": "Well done!",
+    "recognized": "Well done!",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.7,
+    "truePeakDB": -5.23
+  },
+  {
+    "key": "feedback/listen_and_choose",
+    "expected": "Listen and choose.",
+    "recognized": "Listen and choose.",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.29,
+    "truePeakDB": -2.8
+  },
+  {
+    "key": "feedback/build_sentence",
+    "expected": "Build the sentence.",
+    "recognized": "Build the sentence.",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.32,
+    "truePeakDB": -4.05
+  },
+  {
+    "key": "feedback/listen_again",
+    "expected": "Listen again.",
+    "recognized": "Listen again.",
+    "transcriptMatch": true,
+    "integratedLUFS": -18.27,
+    "truePeakDB": -4.25
+  }
+]

@@ -1,0 +1,126 @@
+/* Lesson 2 only: keeps the app shell, Unit 2, Letter Land and Lesson 1 untouched. */
+.l2-scene{max-width:1100px;margin:auto;padding:20px 24px;border:3px solid #b5ddee;border-radius:28px;background:#fffffff2;color:#173958;box-shadow:0 7px 0 #7195af25}
+.l2-scene .l2-head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.l2-scene h2{margin:0;font-size:clamp(23px,3vw,34px)}
+.l2-scene .l2-level{display:flex;align-items:center;gap:8px;font-weight:900}
+.l2-scene select{min-height:46px;border:2px solid #96c5df;border-radius:12px;padding:5px 10px;background:white;color:inherit}
+.l2-scene #l2Progress{font-size:17px;font-weight:900;padding:7px 14px;background:#eaf6ff;border-radius:14px}
+.l2-scene .l2-playground{display:grid;grid-template-columns:minmax(190px,.7fr) minmax(0,1.3fr);align-items:center;gap:24px;margin:18px 0}
+.l2-scene .l2-friend{display:flex;flex-direction:column;align-items:center;gap:12px}
+.l2-scene .toy-buddy{width:clamp(170px,22vw,260px)}
+.l2-scene .l2-bubble{padding:12px 20px;border:3px solid #77c0df;border-radius:24px;background:#eafaff;text-align:center;font-size:clamp(19px,2.4vw,27px);font-weight:bold}
+.l2-scene .l2-task{min-width:0;text-align:center}
+.l2-scene .l2-picture{padding:12px;border:2px dashed #8ec5b9;border-radius:24px;background:#f1fbf4;display:flex;flex-direction:column;align-items:center;gap:8px}
+.l2-scene .l2-picture img{display:block;width:100%;height:clamp(130px,21vh,215px);object-fit:contain}
+.l2-scene #l2Question{font-size:clamp(20px,2.7vw,30px);font-weight:900}
+.l2-scene #l2Question:empty{display:none}
+.l2-scene #l2Instruction{font-size:18px;line-height:1.35;font-weight:800}
+.l2-scene button{font:inherit;font-size:19px;font-weight:900;color:#173958;min-height:52px;padding:10px 18px;border:2px solid #98c7e0;border-radius:16px;background:#eef8ff;cursor:pointer;touch-action:manipulation}
+.l2-scene button:disabled{opacity:.45;cursor:default}
+.l2-scene button:not(:disabled):active{transform:translateY(2px)}
+.l2-scene button:focus-visible,.l2-scene select:focus-visible{outline:4px solid #2d73c4;outline-offset:3px}
+.l2-scene .l2-yesno,.l2-scene .l2-answer-bank,.l2-scene .l2-round-controls,.l2-scene .l2-complete-controls{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.l2-scene [data-choice]{min-width:125px;font-size:28px;min-height:70px}
+.l2-scene [data-choice="true"]{background:#dcf6c6;border-color:#77b85b}
+.l2-scene [data-choice="false"]{background:#ffe5e9;border-color:#e8a9b5}
+.l2-scene .l2-categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.l2-scene .l2-categories button{min-height:64px}
+.l2-scene .l2-categories button{display:flex;align-items:center;justify-content:center;gap:10px}
+.l2-scene .l2-categories img{width:58px;height:58px;object-fit:contain}
+.l2-scene .l2-colors{font-family:Arial,sans-serif;font-size:27px;color:#ef588b;text-shadow:8px 0 #44abdb,-8px 0 #f5c840;white-space:nowrap}
+.l2-scene .l2-number-icon{font-size:27px;color:#3184cf;white-space:nowrap}
+.l2-scene .l2-speaking-actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.l2-scene #l2Heard:empty{display:none}
+.l2-scene .l2-match-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.l2-scene .l2-match-card{padding:12px;border:2px solid #c9dce7;border-radius:20px;display:grid;gap:8px;align-content:start;opacity:.7}
+.l2-scene .l2-current-card{border-color:#64a8cf;opacity:1;background:#f2fbff}
+.l2-scene .l2-match-card img{width:100%;height:110px;object-fit:contain}
+.l2-scene .l2-match-card b{font-size:20px}
+.l2-scene .l2-match-card .l2-drop{font-size:18px;margin:0;min-height:76px}
+.l2-scene.l2-multi-match .l2-picture{display:none}
+.l2-scene .l2-model,.l2-scene .l2-speaking-support{font-size:24px;font-weight:900;color:#27764a;min-height:32px;margin:12px 0}
+.l2-scene .l2-drop{min-height:66px;border:3px dashed #86b8d4;border-radius:17px;background:#f6fbff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900}
+.l2-scene .l2-answer-drop{margin-bottom:18px;padding:12px}
+.l2-scene .l2-draggable{touch-action:none;user-select:none;position:relative;z-index:2}
+.l2-scene .l2-dragging{z-index:10;opacity:.85;box-shadow:0 8px 20px #17395835;pointer-events:auto}
+.l2-scene .l2-snapped{background:#e0f5cf;border-color:#78b454;animation:l2-snap .3s ease-out}
+.l2-scene .l2-return{animation:l2-return .35s ease-out}
+.l2-scene .l2-slots,.l2-scene .l2-tiles{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:12px 0 18px}
+.l2-scene [data-slot]{min-width:54px;padding:8px 12px}
+.l2-scene .l2-ghost{opacity:.35}
+.l2-scene .l2-sentence-model{font-size:24px;font-weight:900;margin:12px 0}
+.l2-scene #l2Status{min-height:32px;text-align:center;font-size:21px;font-weight:bold;margin:12px 0}
+.l2-scene .l2-manual-note{font-size:15px;line-height:1.3;color:#567287;margin:12px 0}
+.l2-scene .l2-teacher{display:grid;gap:8px;padding:14px;background:#fff8e5;border:2px solid #ead39e;border-radius:18px}
+.l2-scene .l2-teacher button{font-size:16px;text-align:left}
+.l2-scene .l2-complete{text-align:center;padding:24px 10px}
+.l2-scene .l2-complete h3{font-size:30px;margin:10px 0}
+.l2-scene .l2-complete p{font-size:22px;line-height:1.45}
+.l2-scene .l2-earned{font-size:48px!important;color:#e2a616;letter-spacing:8px}
+.l2-scene.l2-finished .l2-playground,.l2-scene.l2-finished .l2-round-controls,.l2-scene.l2-finished #l2Status{display:none}
+.l2-scene [hidden]{display:none!important}
+.l2-scene .l2-complete{display:grid;grid-template-columns:180px minmax(0,1fr);gap:16px;align-items:center;padding:12px}
+.l2-scene .l2-complete-actor .toy-buddy{width:175px}
+.l2-scene .l2-complete p{margin:8px 0;font-size:20px}
+.l2-scene .l2-complete h2{font-size:26px}
+.l2-scene .l2-complete h3{margin:6px 0;font-size:26px}
+.l2-scene.l2-finished .l2-head{display:none}
+@keyframes l2-snap{from{transform:scale(.9)}to{transform:scale(1)}}
+@keyframes l2-return{35%{transform:translateX(-7px)}70%{transform:translateX(5px)}}
+@media(max-width:650px){.l2-scene{padding:16px 12px}.l2-scene .l2-playground{grid-template-columns:130px minmax(0,1fr);gap:10px;align-items:start}.l2-scene .toy-buddy{width:125px}.l2-scene .l2-bubble{font-size:17px;padding:8px;border-width:2px}.l2-scene .l2-picture img{height:130px}.l2-scene #l2Instruction{font-size:16px}.l2-scene button{font-size:17px;padding:8px 10px}.l2-scene .l2-categories{grid-template-columns:1fr}.l2-scene [data-choice]{min-width:72px;min-height:58px;font-size:24px}.l2-scene .l2-yesno{gap:8px}.l2-scene #l2Question{font-size:19px}.l2-scene .l2-sentence-model,.l2-scene .l2-speaking-support{font-size:19px}.l2-scene [data-slot]{min-width:38px;padding:5px}.l2-scene .l2-slots,.l2-scene .l2-tiles{gap:6px}.l2-scene #l2Status{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.l2-scene .l2-snapped,.l2-scene .l2-return{animation:none}}
+/* Only Lesson 2 receives compact spacing; the existing shell and other lessons keep their layout. */
+#gameScreen:has(.l2-scene) .game-topbar{margin-bottom:8px}
+#gameScreen:has(.l2-scene) .current-game h1{font-size:30px;margin:2px 0}
+#gameScreen:has(.l2-scene) .current-game p{display:none}
+#gameScreen:has(.l2-scene) .shell-game-nav{margin-bottom:8px;padding:8px}
+#gameStage:has(.l2-scene){padding:12px;min-height:0}
+.l2-scene .l2-head h2{display:none}
+@media(min-width:700px){
+ .l2-scene{padding:10px 16px;max-width:1200px}
+ .l2-scene .l2-playground{gap:16px;margin:8px 0;grid-template-columns:minmax(150px,.5fr) minmax(0,1.5fr)}
+ .l2-scene .toy-buddy{width:175px}
+ .l2-scene .l2-bubble{font-size:21px;padding:8px 12px}
+ .l2-scene .l2-picture{flex-direction:row;padding:6px 12px}
+ .l2-scene .l2-picture img{width:140px;height:115px}
+ .l2-scene #l2Instruction{font-size:16px;margin:8px 0}
+ .l2-scene .l2-model,.l2-scene .l2-speaking-support,.l2-scene .l2-sentence-model{font-size:22px;margin:6px 0;min-height:24px}
+ .l2-scene #l2Status{font-size:18px;margin:6px 0;min-height:26px}
+ .l2-scene button{min-height:46px;padding:7px 12px}
+ .l2-scene .l2-teacher{grid-template-columns:repeat(4,minmax(0,1fr));padding:8px;gap:6px}
+ .l2-scene .l2-teacher b{grid-column:1/-1}
+ .l2-scene .l2-teacher button{font-size:14px;min-height:50px}
+ .l2-scene .l2-task:has(.l2-teacher:not([hidden])) .l2-manual-note{display:none}
+ .l2-scene .l2-task:has(.l2-teacher:not([hidden])) #l2Instruction{display:none}
+ .l2-scene .l2-match-card img{height:90px}
+ .l2-scene .l2-categories img{height:42px;width:42px}
+}
+@media(min-width:700px) and (max-height:850px){
+ #gameScreen:has(.l2-scene) .shell-game-context{margin-bottom:4px}
+ #gameScreen:has(.l2-scene) .shell-game-controls button{min-height:46px;padding:6px 10px}
+ #gameScreen:has(.l2-scene) .shell-game-controls button img{max-height:34px;max-width:80px;object-fit:contain}
+ #gameScreen:has(.l2-scene) .current-game small{display:none}
+ #gameScreen:has(.l2-scene) .current-game h1{font-size:25px}
+ #gameScreen:has(.l2-scene) .game-topbar{min-height:46px}
+ .l2-scene .l2-picture img{height:90px;width:115px}
+ .l2-scene .l2-slots,.l2-scene .l2-tiles{margin:8px 0;gap:8px}
+ .l2-scene .l2-drop{min-height:48px}
+ .l2-scene .l2-manual-note{margin:6px 0;font-size:13px}
+ .l2-scene .l2-picture{border-radius:18px}
+ .l2-scene:has(.l2-slots) .l2-picture img{height:55px;width:90px}
+ .l2-scene:has(.l2-slots) #l2Question{display:none}
+ .l2-scene .l2-match-cards{margin:8px 0}
+ .l2-scene .l2-match-card{padding:8px}
+ .l2-scene .l2-match-card img{height:70px}
+ .l2-scene .l2-match-card .l2-drop{min-height:62px}
+}
+@media(max-width:650px){.l2-scene .l2-match-cards{grid-template-columns:1fr}.l2-scene .l2-match-card img{height:80px}.l2-scene .l2-categories img{width:35px;height:35px}.l2-scene .l2-categories button{flex-wrap:wrap}}
+@media(max-width:650px){.l2-scene .l2-complete{grid-template-columns:1fr}.l2-scene .l2-complete-actor .toy-buddy{width:100px;margin:auto}}
+/* Game 6 processing indicator; uses existing palette and layout. */
+.l2-scene .l2-waveform{display:flex;justify-content:center;gap:4px;height:24px;margin:6px auto}
+.l2-scene .l2-waveform[hidden]{display:none}
+.l2-scene .l2-teacher{grid-template-columns:repeat(2,minmax(0,1fr))}
+.l2-scene .l2-waveform i{width:5px;height:18px;background:#219ee5;border-radius:4px;animation:l2-wave .8s ease-in-out infinite alternate}
+.l2-scene .l2-waveform i:nth-child(2n){animation-delay:.2s}.l2-scene .l2-waveform i:nth-child(3n){animation-delay:.4s}
+@keyframes l2-wave{to{transform:scaleY(.3)}}
+@media(prefers-reduced-motion:reduce){.l2-scene .l2-waveform i{animation:none}}

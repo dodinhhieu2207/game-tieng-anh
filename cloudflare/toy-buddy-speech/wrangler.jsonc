@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "toy-buddy-speech",
+  "account_id": "8e9400940cc5df880d572f560ad5acc0",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-05",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "ai": {"binding": "AI"},
+  "ratelimits": [{"name": "SPEECH_LIMITER", "namespace_id": "320206", "simple": {"limit": 90, "period": 60}}],
+  "vars": {"ALLOWED_ORIGINS": "https://dodinhhieu2207.github.io,http://127.0.0.1:8765,http://localhost:8765"},
+  "observability": {"enabled": false}
+}

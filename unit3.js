@@ -29,6 +29,8 @@ const later=(key,ms,fn)=>{const r=RUN;setTimeout(()=>{if(r===RUN&&alive(key))fn(
 
 /* ---------- audio (SFX + word voice; one mute switch controls both) ---------- */
 function stopAudio(){S.tok++;S.ask++;if(S.aud){try{S.aud.pause();}catch(e){}S.aud=null;}cancelVoice();}
+/* Let additive Toy Buddy scenes stop the current Unit 3 clip. */
+document.addEventListener('toybuddy:enter',stopAudio);
 function sfx(name,vol=.7){if(S.muted||!els.soundFx.checked)return;try{const a=new Audio(`assets/unit3/sfx/${name}.mp3`);a.volume=vol;a.play().catch(()=>{});}catch(e){}}
 /* Voice clips (Higgs TTS, pre-rendered): assets/unit3/audio/<name>.mp3. If a clip is missing the
    site's browser voice reads the fallback text, so nothing breaks while recordings are being added. */
