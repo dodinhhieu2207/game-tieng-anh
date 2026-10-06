@@ -157,7 +157,7 @@
    if(!correct){this.roundWrong=true;this.errors++;this.status('Good try! Look again.');
     if(!await this.speak(this.kind==='question-detective'?'feedback/listen_again':'feedback/try_again',token,{endState:'RETRY'}))return;
     if(this.kind==='meet-pattern'||this.kind==='listen-decide'){this.root.querySelector('#l2Model').textContent=answer(this.round.yes);if(!await this.speak(answerClip(this.round.yes),token,{endState:'RETRY'}))return;}
-    this.phase='listening';this.refresh();return;
+    window.LearningFeedback?.play('retry',this.root.querySelector('#l2Model'));this.phase='listening';this.refresh();return;
    }
    if(this.kind!=='question-detective'){
     const model=this.root.querySelector('#l2Model');if(model)model.textContent=answer(this.round.yes);

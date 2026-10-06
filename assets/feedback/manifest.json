@@ -1,0 +1,63 @@
+{
+  "creator": "Kenney",
+  "license": "CC0 1.0",
+  "sources": [
+    "https://kenney.nl/assets/interface-sounds",
+    "https://kenney.nl/assets/particle-pack"
+  ],
+  "audio": [
+    {
+      "file": "click_003.wav",
+      "source": "click_003.ogg",
+      "duration": 0.01,
+      "sampleRate": 44100
+    },
+    {
+      "file": "confirmation_002.wav",
+      "source": "confirmation_002.ogg",
+      "duration": 0.539,
+      "sampleRate": 44100
+    },
+    {
+      "file": "question_002.wav",
+      "source": "question_002.ogg",
+      "duration": 0.333,
+      "sampleRate": 44100
+    },
+    {
+      "file": "pluck_001.wav",
+      "source": "pluck_001.ogg",
+      "duration": 0.102,
+      "sampleRate": 44100
+    },
+    {
+      "file": "maximize_003.wav",
+      "source": "maximize_003.ogg",
+      "duration": 0.212,
+      "sampleRate": 44100
+    },
+    {
+      "file": "confirmation_004.wav",
+      "source": "confirmation_004.ogg",
+      "duration": 0.49,
+      "sampleRate": 44100
+    },
+    {
+      "file": "open_001.wav",
+      "source": "open_001.ogg",
+      "duration": 0.148,
+      "sampleRate": 44100
+    },
+    {
+      "file": "select_002.wav",
+      "source": "select_002.ogg",
+      "duration": 0.043,
+      "sampleRate": 44100
+    }
+  ],
+  "particles": [
+    "star_04.png",
+    "spark_01.png"
+  ],
+  "conversion": "Original OGG decoded to PCM16 WAV for browser compatibility. No voice clips modified."
+}

@@ -1,0 +1,7 @@
+/* Candy-coloured Kenney particle masks; no overlay captures input. */
+.learning-fx-layer{position:fixed;inset:0;pointer-events:none!important;z-index:1100;overflow:hidden;contain:strict}
+.learning-fx-particle{position:absolute;width:28px;height:28px;background:var(--fx-color);mask:url('../assets/feedback/star_04.png') center/contain no-repeat;-webkit-mask:url('../assets/feedback/star_04.png') center/contain no-repeat;filter:drop-shadow(0 2px 2px #d9812533);will-change:transform,opacity}
+.learning-fx-particle:nth-child(3n){width:20px;height:20px;mask-image:url('../assets/feedback/spark_01.png');-webkit-mask-image:url('../assets/feedback/spark_01.png')}
+.learning-fx-reward{width:46px!important;height:46px!important;background:none;mask:none!important;-webkit-mask:none!important;background-image:url('../assets/rewards/reward-atlas.png');background-size:300% 200%;background-position:0 0;filter:drop-shadow(0 3px 4px #b37b2855)}
+.learning-fx-halo{position:absolute;width:90px;height:90px;transform:translate(-50%,-50%);border:3px solid #ffd044;border-radius:50%;box-shadow:0 0 24px #ffd04466}
+@media(prefers-reduced-motion:reduce){.learning-fx-particle{display:none}}

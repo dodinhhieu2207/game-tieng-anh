@@ -10,6 +10,7 @@
  const inGame=()=>document.body.dataset.learningScreen==='game'||!!window.LearningApp?.context()?.activity;
  function totals(){const values=Object.values(get().all());return {stars:values.reduce((s,v)=>s+(Number.isFinite(v.stars)?v.stars:0),0),completed:values.filter(v=>v.completed).length};}
  function sound(name){
+  if(window.LearningFeedback){window.LearningFeedback.play({'open-book':'open','star-earned':'star','lesson-complete':'complete','badge-unlocked':'badge'}[name],document.querySelector('.reward-toast'),{visualize:false});return;}
   if(window.LearningApp?.isMuted()||!document.querySelector('#soundFx')?.checked)return;
   // Avoid obscuring the lesson's voice with a reward chime.
   if([...document.querySelectorAll('audio')].some(a=>!a.paused&&!a.ended)||window.Unit3Lesson2?.current()?.buddy.audio&&!window.Unit3Lesson2.current().buddy.audio.paused)return;
@@ -47,8 +48,8 @@
   const deliver=()=>{
    if(!pending)return;
    // Wait until the current spoken confirmation has finished. Never interrupt speech.
-   const actor=window.Unit3Lesson2?.current();if(actor&&(['asking','checking'].includes(actor.phase)||(actor.buddy.audio&&!actor.buddy.audio.paused&&!actor.buddy.audio.ended))){timer=setTimeout(deliver,180);return;}
-   const d=pending;pending=null;const kind=rewardKind(d);const actions=window.LearningApp?.context()?.activity?'<div class="app-reward-actions"><button type="button" data-reward-action="replay">Play again</button><button type="button" data-reward-action="next">Next game</button></div>':'';toast.innerHTML=`${sprite(kind.asset)}<div><b>${kind.title}</b><span>+${d.points} reward points · ${totals().stars} stars collected</span>${actions}</div><button type="button" data-toast-close aria-label="Dismiss reward">×</button><span class="reward-sparkles" aria-hidden="true">${Array.from({length:9},(_,i)=>sprite('sparkle',`reward-particle particle-${i}`)).join('')}</span>`;toast.hidden=false;toast.classList.remove('reward-pop');void toast.offsetWidth;toast.classList.add('reward-pop');sound(kind.sound);timer=setTimeout(()=>{toast.hidden=true;toast.innerHTML='';},6000);
+   const actor=window.Unit3Lesson2?.current();if(window.LearningApp?.isVoiceBusy?.()||window.speechSynthesis?.speaking){timer=setTimeout(deliver,180);return;}if(actor&&(['asking','checking'].includes(actor.phase)||(actor.buddy.audio&&!actor.buddy.audio.paused&&!actor.buddy.audio.ended))){timer=setTimeout(deliver,180);return;}
+   const d=pending;pending=null;const kind=rewardKind(d);const actions=window.LearningApp?.context()?.activity?'<div class="app-reward-actions"><button type="button" data-reward-action="replay">Play again</button><button type="button" data-reward-action="next">Next game</button></div>':'';toast.innerHTML=`${sprite(kind.asset)}<div><b>${kind.title}</b><span>+${d.points} reward points · ${totals().stars} stars collected</span>${actions}</div><button type="button" data-toast-close aria-label="Dismiss reward">×</button><span class="reward-sparkles" aria-hidden="true">${Array.from({length:9},(_,i)=>sprite('sparkle',`reward-particle particle-${i}`)).join('')}</span>`;toast.hidden=false;toast.classList.remove('reward-pop');void toast.offsetWidth;toast.classList.add('reward-pop');window.LearningFeedback?.visual('reward',toast);window.LearningFeedback?.visual('reward',toast);sound(kind.sound);timer=setTimeout(()=>{toast.hidden=true;toast.innerHTML='';},6000);
   };requestAnimationFrame(()=>requestAnimationFrame(deliver));
  }
  document.addEventListener('DOMContentLoaded',()=>{
