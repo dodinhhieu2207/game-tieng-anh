@@ -21,6 +21,11 @@ const assert=require('node:assert/strict');
  await page.evaluate(()=>{LearningConfig.units[1].lessons[5].activities.push({id:'future-story',game:'future-story',title:'Future story test'});LearningRewards.record({unit:3,lesson:6,activity:'future-story',stars:3});});await page.locator('#rewardOpen').click();assert.match(await page.locator('#reward-unit-3').textContent(),/Future story test/);await page.locator('[data-reward-close]').click();
  await page.evaluate(()=>LearningApp.go('#/unit/2/lesson/1?mode=practice&activity=missing'));await page.waitForFunction(()=>currentGame==='missing');
  await page.evaluate(()=>games.missing.renderVictory());await page.waitForFunction(()=>LearningProgress.get('2/1/missing').stars===3);assert.equal(await page.evaluate(()=>LearningProgress.get('2/1/missing').completed),true);
+ assert.equal(await page.locator('#gameScreen .reward-game-best .reward-star-row').getAttribute('aria-label'),'3 of 3 stars');
+ assert.equal(await page.locator('#gameScreen .reward-game-book b').textContent(),'9');
+ assert.equal(await page.locator('#gameScreen .reward-toast').count(),1);
+ await page.screenshot({path:'tests/rewards-in-game.png',fullPage:true});
+ await page.locator('.reward-game-book').click();assert(await page.locator('.reward-book').isVisible());await page.locator('[data-reward-close]').click();
  await page.locator('#rewardOpen').click();assert(await page.locator('#rewardStudent').isDisabled());assert.equal(await page.locator('#rewardNewStudent').count(),0);await page.locator('[data-reward-close]').click();
  await page.evaluate(()=>LearningApp.go('#/'));await page.waitForSelector('#lessonApp h1');await page.locator('#rewardOpen').click();
  for(const [width,height] of [[1366,900],[390,844],[320,740]]){

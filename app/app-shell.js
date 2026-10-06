@@ -112,6 +112,7 @@
   function renderGameNav(){
    const {unit,lesson,activity}=context,index=lesson.activities.findIndex(a=>a.id===activity.id);
    nav.innerHTML=`<div class="shell-game-context">Unit ${unit.id}${lesson.id?' · Lesson '+lesson.id:' · Existing activities'} · ${activity.final?'Final Mission':'Activity '+(index+1)} / ${lesson.activities.length}</div><div class="shell-game-controls">${[['home','home','Home'],['back','back','Back'],['drawer','menu','Activities'],['replay','replay','Replay'],['sound',muted?'sound-off':'sound-on',muted?'Sound off':'Sound on'],['fullscreen','full-screen','Full Screen'],['next','next',index===lesson.activities.length-1?'Finish':'Next']].map(([act,img,label])=>`<button type="button" class="btn secondary" data-shell-action="${act}" ${act==='replay'&&!activity.game?'disabled':''}>${icon(img)}<span class="${['replay','sound'].includes(act)?'shell-sr-only':''}">${label}</span></button>`).join('')}</div>`;
+   document.dispatchEvent(new Event('learning:game-nav-rendered'));
   }
   function openDrawer(){
    lastFocus=document.activeElement;const {unit,lesson,activity}=context;

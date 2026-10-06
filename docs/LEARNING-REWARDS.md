@@ -2,6 +2,8 @@
 
 The shared star book covers the configured games in Unit 2 and Unit 3, six lessons per unit. Open **Stars** in the header. On Home, add a learner nickname or select a learner before starting a game. Switching learners is disabled inside a game to avoid crediting the wrong learner.
 
+Inside playable Unit games, the game controls also show **My best** with three star slots and the learner's total **Stars**. Both update when a result improves. The in-game Stars button opens the same book; the reward notification lives inside the game screen so it remains available in fullscreen.
+
 ## Scoring and storage
 
 - Each activity retains its best result of 1–3 stars. Replaying with an equal or lower result does not add stars or points. Improving a result awards only the difference.
