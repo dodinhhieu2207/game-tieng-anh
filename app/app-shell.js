@@ -165,7 +165,7 @@
    if(act==='home')router.go('#/');if(act==='back')router.go(parentRoute());if(act==='drawer')openDrawer();if(act==='replay')replayCurrent();if(act==='fullscreen')toggleFullscreen();
    if(act==='next'){const list=context.lesson.activities,i=list.findIndex(a=>a.id===context.activity.id);if(i+1<list.length)navigateActivity(list[i+1].id);else router.go(parentRoute());}
    if(act==='sound'){
-    muted=!muted;els.soundFx.checked=!muted;els.autoVoice.checked=!muted;if(muted)window.LearningFeedback?.stopSounds();
+    muted=!muted;els.soundFx.checked=!muted;els.autoVoice.checked=!muted;if(muted){window.LearningFeedback?.stopSounds();window.LearningClickSound?.stop();}
     document.querySelectorAll('audio,video').forEach(media=>media.muted=muted);
     media.forEach(audio=>{audio.muted=muted;if(muted&&!window.Unit3Lesson2?.current())audio.pause();});
     document.dispatchEvent(new Event('toybuddy:enter'));if(muted){cancelVoice();letterAudio.stop();}

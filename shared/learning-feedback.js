@@ -31,6 +31,7 @@
   }
  }
  function play(kind,target,{visualize=true}={}){
+  if(kind==='tap'&&window.LearningClickSound)return window.LearningClickSound.play(target);
   if(visualize&&['place','correct','retry','complete','badge'].includes(kind))visual(['place','correct','retry'].includes(kind)?kind:'reward',target);
   if(!enabled()||!clips[kind])return Promise.resolve(false);
   if(kind==='place'&&performance.now()-lastCorrectSound<220)return Promise.resolve(false);
@@ -93,6 +94,7 @@
    const old=path.match(/assets\/unit3\/sfx\/([^/.]+)/)?.[1];if(old)kind=({correct:'correct',wrong_soft:'retry',complete:'complete',click:'tap',reveal:'reveal'})[old];kind=kind||extraRoutes.get(path);
    if(path.includes('/unit2-ff/game-pack/audio/'))kind=({'correct-star.wav':'correct','retry-soft.wav':'retry','pickup-pop.wav':'tap','drop-snap.wav':'tap','game-complete.wav':'complete'})[path.split('/').pop()];
    const a=new AudioOwner(kind?base+clips[kind]+'.wav':src);
+   if(kind==='tap'&&window.LearningClickSound){a.learningSfx=true;a.play=()=>window.LearningClickSound.legacy(lastTarget).then(()=>{a.dispatchEvent(new Event('ended'));});return a;}
    if(kind||path.startsWith(base)||path.includes('assets/rewards/')||path.includes('/unit2-ff/game-pack/audio/')){a.learningSfx=true;sounds.add(a);const release=()=>sounds.delete(a);a.addEventListener('ended',release);a.addEventListener('error',release);a.addEventListener('learning:sfx-cancel',()=>a.dispatchEvent(new Event('ended')));}
    if(kind){a.volume=.38;a.addEventListener('play',()=>{a.volume=Math.min(a.volume,.4);if(['correct','retry','complete'].includes(kind))visual(kind==='complete'?'reward':kind);const now=performance.now();if(!enabled()||busy()||(kind==='correct'&&now-lastCorrectSound<200)){if(enabled()&&busy()&&['correct','retry','complete'].includes(kind))deferred={kind,target:lastTarget,scene:sceneSerial};a.pause();a.dispatchEvent(new Event('ended'));return;}if(kind==='correct')lastCorrectSound=now;lastSound={kind,target:lastTarget,scene:sceneSerial,time:now};sounds.forEach(other=>{if(other!==a){other.pause();other.dispatchEvent(new Event('learning:sfx-cancel'));}});});}
    return a;

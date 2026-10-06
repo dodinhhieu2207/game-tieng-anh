@@ -3,7 +3,8 @@
   "license": "CC0 1.0",
   "sources": [
     "https://kenney.nl/assets/interface-sounds",
-    "https://kenney.nl/assets/particle-pack"
+    "https://kenney.nl/assets/particle-pack",
+    "https://kenney.nl/assets/ui-audio"
   ],
   "audio": [
     {
@@ -53,6 +54,46 @@
       "source": "select_002.ogg",
       "duration": 0.043,
       "sampleRate": 44100
+    },
+    {
+      "file": "ui-click1.wav",
+      "source": "click1.ogg",
+      "pack": "UI Audio",
+      "duration": 0.0938,
+      "sampleRate": 44100,
+      "peak": 0.82,
+      "peakGain": 1.158264,
+      "channels": 1
+    },
+    {
+      "file": "ui-click3.wav",
+      "source": "click3.ogg",
+      "pack": "UI Audio",
+      "duration": 0.0861,
+      "sampleRate": 44100,
+      "peak": 0.82,
+      "peakGain": 0.938277,
+      "channels": 1
+    },
+    {
+      "file": "ui-rollover4.wav",
+      "source": "rollover4.ogg",
+      "pack": "UI Audio",
+      "duration": 0.1132,
+      "sampleRate": 44100,
+      "peak": 0.82,
+      "peakGain": 1.446731,
+      "channels": 1
+    },
+    {
+      "file": "toggle_001.wav",
+      "source": "toggle_001.ogg",
+      "pack": "Interface Sounds",
+      "duration": 0.1393,
+      "sampleRate": 44100,
+      "peak": 0.82,
+      "peakGain": 0.910444,
+      "channels": 1
     }
   ],
   "particles": [
