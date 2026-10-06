@@ -1,0 +1,9 @@
+{
+  "version": "20261006-rewards1",
+  "atlas": "reward-atlas.png",
+  "grid": {"columns": 3, "rows": 2},
+  "sprites": {"star": [0,0], "silver": [1,0], "trophy": [2,0], "medal": [0,1], "chest": [1,1], "sparkle": [2,1]},
+  "sounds": ["star-earned.wav", "lesson-complete.wav", "badge-unlocked.wav", "open-book.wav"],
+  "motion": ["reward-bounce", "reward-fly"],
+  "provenance": "New generated transparent preschool reward atlas; original short offline synthesized chimes. Existing game art and voice audio retained."
+}

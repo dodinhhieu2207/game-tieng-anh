@@ -159,8 +159,8 @@
   document.addEventListener('learning:activity-completed',event=>{const {game,stars}=event.detail||{};if(context&&mounted&&context.activity.game===game)progress.completed(key(context.unit.id,context.lesson.id??'existing',context.activity),Math.max(1,Math.min(3,stars)));});
   new MutationObserver(()=>{
    if(!context||!mounted)return;
-   const victory=els.gameStage.querySelector('.u3-victory'),complete=els.gameStage.querySelector('.ff-complete,.tb-scene[data-state="SUCCESS"]');
-   if(victory||complete){const stars=victory?Math.min(3,victory.querySelectorAll('.u3-stars .u3-star:not(.off)').length)||null:null;progress.completed(key(context.unit.id,context.lesson.id??'existing',context.activity),stars);}
+   const victory=els.gameStage.querySelector('.u3-victory'),complete=els.gameStage.querySelector('.ff-complete,.paint-complete,.missing-victory,.tb-scene[data-state="SUCCESS"]');
+   if(victory||complete){const stars=victory?Math.min(3,victory.querySelectorAll('.u3-stars .u3-star:not(.off)').length)||null:complete.classList.contains('missing-victory')?3:null;progress.completed(key(context.unit.id,context.lesson.id??'existing',context.activity),stars);}
   }).observe(els.gameStage,{childList:true,subtree:true,attributes:true,attributeFilter:['data-state']});
   function render(next){
    closeDrawer();route=next;context=null;
