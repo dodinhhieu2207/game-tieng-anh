@@ -26,7 +26,7 @@ const assert=require('node:assert/strict');
  assert.equal(await page.locator('#gameScreen .reward-toast').count(),1);
  await page.screenshot({path:'tests/rewards-in-game.png',fullPage:true});
  await page.locator('.reward-game-book').click();assert(await page.locator('.reward-book').isVisible());await page.locator('[data-reward-close]').click();
- await page.locator('#rewardOpen').click();assert(await page.locator('#rewardStudent').isDisabled());assert.equal(await page.locator('#rewardNewStudent').count(),0);await page.locator('[data-reward-close]').click();
+ await page.locator('.reward-game-book').click();assert(await page.locator('#rewardStudent').isDisabled());assert.equal(await page.locator('#rewardNewStudent').count(),0);await page.locator('[data-reward-close]').click();
  await page.evaluate(()=>LearningApp.go('#/'));await page.waitForSelector('#lessonApp h1');await page.locator('#rewardOpen').click();
  for(const [width,height] of [[1366,900],[390,844],[320,740]]){
   await page.setViewportSize({width,height});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));const b=await page.locator('.reward-book').boundingBox();assert(b.x>=0&&b.x+b.width<=width);assert(b.height<=height);await page.screenshot({path:`tests/reward-book-${width}.png`,fullPage:true});

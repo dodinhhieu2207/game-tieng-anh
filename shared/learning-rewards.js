@@ -7,6 +7,7 @@
  const activityTitle=a=>a.title||(typeof GAME_META!=='undefined'?GAME_META[a.game]?.[1]:null)||a.id;
  let book,button,toast,timer,pending,lastFocus,activeSound;
  const get=()=>window.LearningProgress;
+ const inGame=()=>document.body.dataset.learningScreen==='game'||!!window.LearningApp?.context()?.activity;
  function totals(){const values=Object.values(get().all());return {stars:values.reduce((s,v)=>s+(Number.isFinite(v.stars)?v.stars:0),0),completed:values.filter(v=>v.completed).length};}
  function sound(name){
   if(window.LearningApp?.isMuted()||!document.querySelector('#soundFx')?.checked)return;
@@ -26,7 +27,7 @@
  }
  function update(){const t=totals();button.querySelector('b').textContent=t.stars+' Stars';button.setAttribute('aria-label',`My Stars, ${t.stars} stars, ${t.stars*100} reward points`);gameHud();if(book.open)render();}
  function render(){
-  const p=get(),t=totals(),inGame=!!window.LearningApp?.context()?.activity;
+  const p=get(),t=totals(),inGame=window.LearningApp?.context()?.activity||document.body.dataset.learningScreen==='game';
   book.innerHTML=`<div class="reward-book-head"><div>${sprite('medal')}<h2>My Star Book</h2></div><button type="button" data-reward-close aria-label="Close star book">×</button></div><div class="reward-student"><label>Star book for <select id="rewardStudent" ${inGame?'disabled':''}>${p.students().map(s=>`<option value="${s.id}" ${s.id===p.student().id?'selected':''}>${esc(s.name)}</option>`).join('')}</select></label>${inGame?'<span>Go Home to change learner.</span>':'<form id="rewardNewStudent"><input name="name" aria-label="New learner nickname" maxlength="24" placeholder="Learner nickname" required><button type="submit">Add learner</button></form>'}</div><div class="reward-totals"><div>${sprite('star')}<b>${t.stars}</b><span>Stars collected</span></div><div>${sprite('chest')}<b>${t.stars*100}</b><span>Reward points</span></div><div>${sprite('trophy')}<b>${t.completed}</b><span>Games completed</span></div></div><p class="reward-guidance">Every star shows your practice. Play again to improve your best result!</p><div class="reward-badges">${[1,5,15,30,60].map((goal,i)=>`<div class="${t.stars>=goal?"earned":"waiting"}">${sprite(i<2?"medal":i<4?"chest":"trophy")}<b>${goal} star${goal===1?"":"s"}</b><span>${t.stars>=goal?"Unlocked!":"Keep practising"}</span></div>`).join("")}</div><div class="reward-unit-tabs">${window.LearningConfig.units.map(u=>`<a href="#reward-unit-${u.id}">Unit ${u.id}</a>`).join('')}</div>${window.LearningConfig.units.map(u=>`<section class="reward-unit" id="reward-unit-${u.id}"><h3>Unit ${u.id} · ${esc(u.title)}</h3><div class="reward-lessons">${u.lessons.map(l=>{
    const activities=l.activities.filter(a=>a.game),values=activities.map(a=>p.get(`${u.id}/${l.id}/${a.id}`)),earned=values.reduce((s,v)=>s+(v.stars||0),0),done=values.filter(v=>v.completed).length;
    return `<details class="reward-lesson"><summary>${sprite(done&&done===activities.length?'medal':'star')}<div><b>Lesson ${l.id}</b><span>${esc(l.selectorLabel||l.title||'Coming soon')}</span></div><strong>${activities.length?earned+' ★':'Soon'}</strong></summary>${activities.length?`<div class="reward-lesson-meter"><span>${done} / ${activities.length} games completed</span><progress value="${done}" max="${activities.length}" aria-label="Lesson ${l.id} completed games"></progress></div><div class="reward-activities">${activities.map((a,i)=>{const v=values[i];return `<a href="#/unit/${u.id}/lesson/${l.id}?mode=practice&activity=${encodeURIComponent(a.id)}"><span>${esc(activityTitle(a))}</span>${stars(v.stars||0)}<small>${v.completed?'Completed':v.played?'Keep practising':'Ready to play'}</small></a>`;}).join('')}</div>`:'<p>Activities coming soon. Your stars will appear here when you play.</p>'}</details>`;
@@ -55,8 +56,8 @@
   book=document.createElement('dialog');book.className='reward-book';book.setAttribute('aria-label','My Star Book');document.body.appendChild(book);
   toast=document.createElement('aside');toast.className='reward-toast';toast.setAttribute('role','status');toast.setAttribute('aria-live','polite');toast.hidden=true;document.body.appendChild(toast);
   book.addEventListener('click',e=>{if(e.target.closest('[data-reward-close]'))close();if(e.target.closest('.reward-activities a'))close();});book.addEventListener('cancel',()=>lastFocus?.focus());
-  book.addEventListener('change',e=>{if(e.target.id==='rewardStudent'&&!window.LearningApp?.context()?.activity){get().selectStudent(e.target.value);window.LearningApp.go(location.hash);}});
-  book.addEventListener('submit',e=>{if(e.target.id!=='rewardNewStudent')return;e.preventDefault();const s=get().addStudent(new FormData(e.target).get('name'));if(s){get().selectStudent(s.id);window.LearningApp.go(location.hash);}});
+  book.addEventListener('change',e=>{if(e.target.id==='rewardStudent'&&!inGame()){get().selectStudent(e.target.value);window.LearningApp.go(location.hash);}});
+  book.addEventListener('submit',e=>{if(e.target.id!=='rewardNewStudent')return;e.preventDefault();if(inGame())return;const s=get().addStudent(new FormData(e.target).get('name'));if(s){get().selectStudent(s.id);window.LearningApp.go(location.hash);}});
   toast.addEventListener('click',e=>{if(e.target.closest('[data-toast-close]')){toast.hidden=true;clearTimeout(timer);}});
   document.addEventListener('learning:progress-updated',e=>{update();celebrate(e.detail);});document.addEventListener('learning:student-changed',update);
   document.addEventListener('learning:game-nav-rendered',gameHud);

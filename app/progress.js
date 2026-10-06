@@ -16,6 +16,8 @@
    if(delta>0||!old.completed)document.dispatchEvent(new CustomEvent('learning:progress-updated',{detail:{key,previous:old,current:{...data[key]},delta,points:delta*100}}));
   },
   all(){return JSON.parse(JSON.stringify(data));},
+  remember(hash){if(typeof hash!=='string'||!hash.startsWith('#/'))return;try{localStorage.setItem('learning.resume.'+active+'.v1',hash);}catch{}},
+  last(){try{return localStorage.getItem('learning.resume.'+active+'.v1')||null;}catch{return null;}},
   students(){return students.map(s=>({...s}));},
   student(){return {...students.find(s=>s.id===active)};},
   addStudent(name){name=String(name||'').trim().slice(0,24);if(!name)return null;const s={id:'student-'+Date.now()+'-'+Math.random().toString(36).slice(2,8),name};students.push(s);saveStudents();return {...s};},

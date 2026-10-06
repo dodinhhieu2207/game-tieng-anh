@@ -4,7 +4,7 @@ const assert=require('node:assert/strict');
  const browser=await chromium.launch({channel:'msedge',headless:true});const page=await browser.newPage({viewport:{width:1400,height:1000}});
  const errors=[],missing=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)missing.push(r.url());});
  await page.goto('http://127.0.0.1:8765/index.html');
- await page.waitForSelector('#lessonApp h1');assert.equal(await page.locator('#lessonApp h1').textContent(),'Choose a unit');
+ await page.waitForSelector('#lessonApp h1');assert.equal(await page.locator('#lessonApp h1').textContent(),"Let's learn and play!");
  await page.locator('#lessonApp a[href="#/unit/3"]').click();await page.waitForSelector('#lessonApp [data-lesson]');assert.equal(await page.locator('#lessonApp [data-lesson]').count(),6);
  await page.screenshot({path:'tests/navigation-unit3.png',fullPage:true});
  await page.locator('#lessonApp [data-lesson="1"]').click();await page.waitForSelector('#lessonApp [data-activity]');assert.equal(await page.locator('#lessonApp [data-activity]').count(),7);assert.equal(await page.locator('#lessonApp .hero h1').textContent(),'Toy Town');

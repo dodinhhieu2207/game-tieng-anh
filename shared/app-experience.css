@@ -1,0 +1,42 @@
+/* The learning shell: toy worlds, one clear next action, original game layouts retained. */
+body:not([data-learning-screen="game"]){min-height:100vh;background:#eaf8ff url('../assets/shared-ui/navigation-home-bg.png') center top/cover no-repeat}
+body:not([data-learning-screen="game"]) .classroom-world{display:none}
+body:not([data-learning-screen="game"]) .app-header{position:relative;background:#ffffffec;border:2px solid #d2eafa;border-radius:24px;padding:12px 16px;box-shadow:0 5px 0 #c8e5f255}
+#lessonApp.shell-art-home{background:none;padding:8px 2px 24px}
+#lessonApp .shell-welcome{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:4px 0 20px;padding:0 8px}
+#lessonApp .shell-welcome h1{font-size:clamp(27px,3vw,38px);line-height:1.12;margin:0 0 8px;color:#194a75}
+#lessonApp .shell-welcome p{margin:0;font-size:18px;font-weight:700;color:#57768e}
+.shell-learner-button{display:flex;align-items:center;gap:10px;min-height:54px;border:2px solid #b7dff4;border-radius:18px;padding:6px 14px;background:#fff;color:#194a75;font:800 18px var(--app-font);cursor:pointer;text-align:left}
+.shell-learner-button img{width:40px;height:40px;object-fit:contain}.shell-learner-button small{display:block;font-size:13px;color:#57768e}
+.shell-learner-button{max-width:100%}.shell-learner-button>span{min-width:0;overflow-wrap:anywhere}#lessonApp .shell-welcome h1{overflow-wrap:anywhere}
+body[data-learning-screen="game"]:has(.reward-game-hud) #rewardOpen,body[data-learning-screen="game"]:has(.reward-game-hud) #fullscreenBtn{display:none}
+#lessonApp .shell-continue{display:grid;grid-template-columns:90px minmax(0,1fr) auto;align-items:center;gap:20px;padding:18px 22px;margin-bottom:24px;border:3px solid #f0c649;border-radius:26px;background:#fff8d8;box-shadow:0 5px 0 #edcf744d}
+#lessonApp .shell-continue>img{width:90px;height:90px;object-fit:contain}#lessonApp .shell-continue h2{margin:4px 0;font-size:26px;line-height:1.12}#lessonApp .shell-continue p{margin:0;color:#57768e;font-weight:700}#lessonApp .shell-continue div>span{font-size:16px;font-weight:800;color:#8a6518}
+#lessonApp .shell-continue .btn{min-width:130px;min-height:60px;font-size:24px;background:#6bbf39;color:#143e16;border:2px solid #4fa329;box-shadow:0 4px 0 #408b25}#lessonApp .shell-continue .btn img{width:40px;height:34px;object-fit:contain}
+#lessonApp .shell-worlds>h2{font-size:23px;margin:8px 8px 14px}#lessonApp .shell-unit-grid{gap:22px;margin:0 0 22px}
+#lessonApp .shell-unit-art-card{background:#fff;border:2px solid #b9def2;border-radius:26px;padding:10px 12px 14px;gap:10px;box-shadow:0 5px 0 #9acfe433;overflow:hidden;text-align:left}
+#lessonApp .shell-unit-art-card>img{border-radius:18px;width:100%;margin:0;aspect-ratio:2.7/1;object-fit:contain}
+#lessonApp .shell-unit-card-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;padding:0 4px}
+#lessonApp .shell-unit-name{font-size:21px;font-weight:800}#lessonApp .shell-unit-name small{display:block;font-size:15px;color:#58788e;font-weight:700}
+.shell-action-label{display:flex;align-items:center;gap:6px;color:#21658b;font-size:18px;font-weight:800}.shell-action-label img{width:30px;height:30px;object-fit:contain}
+#lessonApp .shell-integrated-progress{width:100%;background:#f0faff;border-radius:16px;padding:12px;color:#194a75}
+#lessonApp .shell-integrated-progress>div{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:16px}
+#lessonApp .shell-integrated-progress span{white-space:nowrap;font-size:19px;font-weight:800;color:#9b6d12}#lessonApp .shell-integrated-progress small{color:#5d7a90;font-size:13px;margin-left:6px}
+#lessonApp .shell-integrated-progress progress{height:12px;margin:8px 0 0;appearance:none;border:0;border-radius:20px;overflow:hidden;background:#d3e9f2}
+#lessonApp .shell-integrated-progress progress::-webkit-progress-bar{background:#d3e9f2;border-radius:20px}#lessonApp .shell-integrated-progress progress::-webkit-progress-value{background:#62bb51;border-radius:20px}#lessonApp .shell-integrated-progress progress::-moz-progress-bar{background:#62bb51;border-radius:20px}
+#lessonApp .shell-letter-world{display:flex;align-items:center;gap:18px;border:2px solid #ccb7f0;border-radius:24px;background:#faf5ff;padding:14px 22px;box-shadow:0 5px 0 #ccb7f033}
+#lessonApp .shell-letter-world>img{width:72px;height:72px;object-fit:contain}#lessonApp .shell-letter-world b{display:block;font-size:25px}#lessonApp .shell-letter-world small{display:block;font-size:17px;color:#687493;font-weight:700}#lessonApp .shell-letter-world .shell-action-label{margin-left:auto;color:#7950a9}
+#lessonApp.shell-art-selector{background:none!important}#lessonApp .shell-image-banner{margin:0 0 18px;border-radius:22px;overflow:hidden}#lessonApp .shell-image-banner>img{height:auto;object-fit:contain}
+#lessonApp .shell-breadcrumb{margin:0 4px 14px;font-size:16px}#lessonApp .shell-breadcrumb a{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;border-radius:12px;background:#ffffffdf}
+#lessonApp .shell-illustrated-lesson{border:2px solid #c8e0f1;background:#fff;border-radius:24px;padding:8px 10px 12px;gap:8px;box-shadow:0 4px 0 #9acfe426}
+#lessonApp .shell-lesson-art{width:100%;max-height:310px;object-fit:contain}#lessonApp .shell-lesson-state{font-size:16px;font-weight:800;color:#51718a}
+#lessonApp .shell-current-lesson{border:3px solid #e9bd3d;background:#fffbe8}#lessonApp .shell-current-lesson .shell-lesson-state{color:#896615}
+#lessonApp .shell-lesson-grid{gap:18px}#lessonApp .learning-zone{padding:16px;background:#ffffffcf;border-radius:24px;border:1px solid #d3e8f3}
+#lessonApp:not(.shell-art-home):not(.shell-art-selector)>.hero{padding:20px 24px;min-height:180px;margin-bottom:18px}#lessonApp:not(.shell-art-home):not(.shell-art-selector)>.hero .hero-scene{max-height:180px}
+#lessonApp .shell-mode-hint{font-size:15px}#lessonApp .shell-progress-badge{font-size:15px;text-transform:none}#lessonApp .shell-mode-row .btn{min-height:54px;font-size:19px}
+.shell-teacher-learners{margin-top:14px}.shell-teacher-learners p{font-size:14px;color:#57768e;margin:6px 0 0}
+.shell-learner-button:focus-visible,#lessonApp .shell-letter-world:focus-visible{outline:4px solid #9672d5;outline-offset:3px}
+body[data-learning-screen="home"] .side-item.active{background:#f5fbff;border-color:transparent;box-shadow:none}
+@media(max-width:700px){body:not([data-learning-screen="game"]) .side-nav{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:8px}body:not([data-learning-screen="game"]) .side-item{flex-direction:column;gap:5px;padding:8px 2px;border-radius:16px;text-align:center}body:not([data-learning-screen="game"]) .side-item .side-copy b{font-size:15px}body:not([data-learning-screen="game"]) .side-item .side-copy em{display:none}body:not([data-learning-screen="game"]) .side-icon{width:36px;height:36px}body:not([data-learning-screen="game"]) .side-title,body:not([data-learning-screen="game"]) .side-soon{display:none}}
+@media(max-width:700px){#lessonApp .shell-welcome{align-items:flex-start;flex-direction:column;gap:12px}#lessonApp .shell-continue{grid-template-columns:64px minmax(0,1fr);gap:12px;padding:16px}#lessonApp .shell-continue>img{width:64px;height:64px}#lessonApp .shell-continue h2{font-size:23px}#lessonApp .shell-continue .btn{grid-column:1/-1}#lessonApp .shell-unit-grid{grid-template-columns:1fr}#lessonApp .shell-letter-world{padding:12px;gap:10px}#lessonApp .shell-letter-world>img{width:54px;height:54px}#lessonApp .shell-letter-world b{font-size:21px}#lessonApp .shell-letter-world .shell-action-label{font-size:0;gap:0}#lessonApp .shell-integrated-progress>div{font-size:14px}#lessonApp .shell-integrated-progress small{display:block;margin:0;text-align:right}#lessonApp .learning-zone{padding:10px}#lessonApp .shell-image-banner>img{object-fit:contain}body:not([data-learning-screen="game"]) .app-header{padding:8px}#lessonApp .shell-lesson-art{max-height:none}}
+@media(prefers-reduced-motion:reduce){#lessonApp .shell-unit-art-card,#lessonApp .shell-lesson-card{transition:none;transform:none!important}}

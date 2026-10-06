@@ -15,6 +15,7 @@
   const pane=document.createElement('div');pane.id='lessonApp';pane.className='space';document.querySelector('.space-wrap').appendChild(pane);
   const nav=document.createElement('div');nav.className='shell-game-nav';nav.hidden=true;els.gameScreen.prepend(nav);
   const drawer=document.createElement('dialog');drawer.className='shell-drawer';drawer.setAttribute('aria-label','Choose an activity');document.body.appendChild(drawer);
+  const learners=document.createElement('div');learners.className='shell-teacher-learners';learners.innerHTML=`<button type="button" class="btn secondary" id="manageLearners">${icon('student')}Learners & star books</button><p>Choose a learner on Home before starting a game.</p>`;document.getElementById('teacherPanel').appendChild(learners);learners.querySelector('button').onclick=()=>window.LearningRewards?.open();
   let route={screen:'home'},context=null,mounted='',muted=false,lastFocus=null;
   // Existing games keep their Audio API; this shared owner stops detached clips and applies mute.
   const NativeAudio=window.Audio,media=new Set();
@@ -55,6 +56,14 @@
    return h.outerHTML;
   }
   function statusHTML(value){return value.stars?`${'★'.repeat(value.stars)}`:value.completed?'COMPLETED':value.played?'PLAYED':'NEW';}
+  function savedActivity(){
+   const hash=progress.last(),r=hash&&router.parse(hash);if(!r)return null;
+   if(r.screen==='letter-game'&&config.independentGames.includes(r.game))return {hash,title:GAME_META[r.game]?.[1]||'Letter Land',image:asset('flashcards'),label:'Letter Land'};
+   const u=unitById(r.unit),l=u&&lessonById(u,r.lesson),a=l?.activities.find(a=>a.id===r.activity&&a.game);
+   return a?{hash,unit:u,lesson:l,activity:a,title:a.title||GAME_META[a.game]?.[1]||a.id,image:u.thumbnail,label:`Unit ${u.id} · Lesson ${l.id}`} : null;
+  }
+  function progressPanel(keys,label){const s=progress.summary(keys),stars=keys.reduce((n,k)=>n+(progress.get(k).stars||0),0);return `<div class="shell-integrated-progress"><div><b>${s.completed?`${s.completed} game${s.completed===1?'':'s'} completed`:'Ready to explore'}</b><span>${stars} ★ <small>${s.completed} / ${s.total}</small></span></div><progress max="${s.total||1}" value="${s.completed}" aria-label="${esc(label)} completed games"></progress></div>`;}
+  function headerState(next){const u=unitById(next.unit),letters=next.screen.startsWith('letter'),brand=document.getElementById('brandHome');document.body.dataset.learningScreen=next.activity||next.screen==='letter-game'?'game':next.screen;brand.querySelector('.brand-mark').textContent=u?'U'+u.id:letters?'ABC':'★';brand.querySelector('b').textContent=u?u.title:letters?'Letter Land':'My English Adventure';brand.querySelector('small').textContent=u?'Family and Friends Starter':letters?'Letters A–F':'Family and Friends Starter';brand.setAttribute('aria-label','Go Home');}
   function activityCard(activity,index,unit,lesson){
    const value=progress.get(key(unit.id,lesson.id,activity));const legacy=originals.get(activity.game);let card;
    if(legacy?.classList.contains('activity-card'))card=legacy.cloneNode(true);
@@ -69,14 +78,14 @@
    return card.outerHTML;
   }
   function home(){
-   const cards=config.units.map(unit=>{const s=progress.summary(unit.lessons.flatMap(l=>lessonKeys(unit,l)));
-    if(unit.navigationCard)return `<a class="shell-unit-art-card" href="#/unit/${unit.id}" aria-label="Unit ${unit.id}: ${esc(unit.title)}, 6 lessons"><img src="${unit.navigationCard}" alt=""><span class="shell-art-progress">${s.completed} / ${s.total} activities completed<progress max="${s.total||1}" value="${s.completed}" aria-label="Unit ${unit.id} completed activities"></progress></span></a>`;
-    return `<a class="activity-card shell-unit-card" href="#/unit/${unit.id}"><span class="activity-card-copy"><small>Unit ${unit.id}</small><b>${esc(unit.title)}</b><em>6 lessons</em><progress max="${s.total||1}" value="${s.completed}" aria-label="Unit ${unit.id} completed activities"></progress><span class="play-pill">CHOOSE</span></span><img src="${unit.thumbnail}" alt=""></a>`;}).join('');
-   main(`<div class="hero"><div class="hero-copy"><div class="eyebrow">Family and Friends Starter</div><h1>Choose a unit</h1><p>Pick your unit, then choose a lesson.</p></div></div><div class="activity-grid shell-unit-grid">${cards}</div><a class="btn secondary shell-letter-link" href="#/letters">Letter Land · Letters A–F</a>`);
+   const learner=progress.student(),last=savedActivity();
+   const cards=config.units.map(unit=>`<a class="shell-unit-art-card" href="#/unit/${unit.id}" aria-label="Unit ${unit.id}: ${esc(unit.title)}, 6 lessons"><img src="${unit.navigationCard||unit.thumbnail}" alt=""><div class="shell-unit-card-bottom"><span class="shell-unit-name">Unit ${unit.id} <small>6 lessons</small></span><span class="shell-action-label">Explore ${icon('next')}</span></div>${progressPanel(unit.lessons.flatMap(l=>lessonKeys(unit,l)),'Unit '+unit.id)}</a>`).join('');
+   main(`<header class="shell-welcome"><div><h1>${learner.id==='default'?"Let's learn and play!":`Hello, ${esc(learner.name)}!`}</h1><p>${last?'Your next adventure is waiting.':'Choose a world to start your adventure.'}</p></div><button type="button" class="shell-learner-button" data-manage-learner>${icon('student')}<span>${esc(learner.name)}<small>Change learner</small></span></button></header>${last?`<section class="shell-continue"><img src="${last.image}" alt=""><div><span>Continue learning</span><h2>${esc(last.title)}</h2><p>${esc(last.label)}</p></div><a class="btn primary" data-continue href="${esc(last.hash)}">${icon('next')}Play</a></section>`:''}<section class="shell-worlds"><h2>Choose a unit</h2><div class="activity-grid shell-unit-grid">${cards}</div></section><a class="shell-letter-world" href="#/letters">${icon('flashcards')}<span><b>Letter Land</b><small>Explore letters A–F</small></span><span class="shell-action-label">Explore ${icon('next')}</span></a>`);
   }
   function selectUnit(unit){
-   const cards=unit.lessons.map(lesson=>{const s=progress.summary(lessonKeys(unit,lesson));const state=lesson.locked?'locked':s.total&&s.total===lesson.activities.length&&s.completed===s.total?'completed':s.played?'played':'normal';
-    if(lesson.cardImage)return `<a class="shell-lesson-card shell-illustrated-lesson ${state}" data-lesson="${lesson.id}" data-status="${state}" aria-label="Unit ${unit.id}, Lesson ${lesson.id}: ${esc(lesson.selectorLabel||lesson.title||'Choose a lesson')}" ${lesson.locked?'aria-disabled="true" tabindex="-1"':`href="${lessonHref(unit.id,lesson.id)}"`}><img class="shell-lesson-art" style="aspect-ratio:${lesson.cardAspect||'1 / 1.1'}" src="${lesson.cardImage}" alt="" aria-hidden="true"><span class="shell-art-progress"><span>${state==='completed'?'Completed':state==='played'?'Played':lesson.activities.length?'Choose lesson':'Coming soon'}</span><progress max="${s.total||1}" value="${s.completed}" aria-label="Lesson ${lesson.id} completed activities"></progress></span></a>`;
+   const last=savedActivity();
+   const cards=unit.lessons.map(lesson=>{const s=progress.summary(lessonKeys(unit,lesson));const state=lesson.locked?'locked':s.total&&s.total===lesson.activities.length&&s.completed===s.total?'completed':s.played?'played':'normal';const current=last?.unit?.id===unit.id&&last.lesson.id===lesson.id;
+    if(lesson.cardImage)return `<a class="shell-lesson-card shell-illustrated-lesson ${state}${current?' shell-current-lesson':''}" data-lesson="${lesson.id}" data-status="${state}" ${current?'aria-current="step"':''} aria-label="Unit ${unit.id}, Lesson ${lesson.id}: ${esc(lesson.selectorLabel||lesson.title||'Choose a lesson')}" ${lesson.locked?'aria-disabled="true" tabindex="-1"':`href="${lessonHref(unit.id,lesson.id)}"`}><img class="shell-lesson-art" style="aspect-ratio:${lesson.cardAspect||'1 / 1.1'}" src="${lesson.cardImage}" alt="" aria-hidden="true"><span class="shell-lesson-state">${current?'Your current lesson':state==='completed'?'Completed':state==='played'?'Keep exploring':lesson.activities.length?'Choose lesson':'Coming soon'}</span>${lesson.activities.length?progressPanel(lessonKeys(unit,lesson),'Lesson '+lesson.id):''}</a>`;
     return `<a class="activity-card shell-lesson-card ${state}" data-lesson="${lesson.id}" data-status="${state}" ${lesson.locked?'aria-disabled="true" tabindex="-1"':`href="${lessonHref(unit.id,lesson.id)}"`}><img class="shell-card-frame" src="${asset('lesson-frame-'+((lesson.id-1)%5+1))}" alt=""><span class="shell-lesson-copy"><small>Unit ${unit.id}</small><b>Lesson ${lesson.id}</b>${lesson.title?`<em>${esc(lesson.title)}</em>`:''}<span>${state==='completed'?'Completed':state==='played'?'Played':lesson.activities.length?'Choose':'Coming soon'}</span><progress max="${s.total||1}" value="${s.completed}" aria-label="Lesson ${lesson.id} completed activities"></progress></span></a>`;
    }).join('');
    const unmapped=config.migration.filter(m=>m.unit===unit.id&&m.lesson===null);
@@ -85,7 +94,8 @@
   }
   function lessonPage(unit,lesson){
    const activityCards=lesson.activities.map((a,i)=>activityCard(a,i,unit,lesson)).join('');
-   main(`${bread(unit,lesson)}${hero(unit,lesson)}<section class="learning-zone"><div class="library-heading"><div class="zone-title-row"><span class="zone-bubble">L${lesson.id}</span><div><h2>Lesson ${lesson.id}${lesson.title?' · '+esc(lesson.title):''}</h2><p>${lesson.targetLanguage.length?esc(lesson.targetLanguage.join(' ')):'Choose Class Mode or Practice Mode.'}</p></div></div><span class="library-count">${lesson.activities.length} activities</span></div><div class="shell-mode-row"><button type="button" class="btn primary" data-start-class>${icon('teacher')}Class Mode</button><a class="btn secondary" href="${lessonHref(unit.id,lesson.id,'practice')}" ${route.mode==='practice'?'aria-current="page"':''}>${icon('student')}Practice Mode</a></div><p class="shell-mode-hint">Class Mode: follow the activities together. Practice Mode: choose any activity.</p><div class="activity-grid">${activityCards}</div>${!lesson.activities.length?`<div class="shell-empty"><h3>Activities coming soon</h3><p>${unit.id===2&&lesson.id===6?'Story activities will be added here.':'This lesson is ready for future activities.'}</p>${unit.id===2?'<a class="btn secondary" href="#/unit/2/existing">Open existing activities</a>':''}</div>`:''}</section>`,unit);
+   const last=savedActivity(),resume=last?.unit?.id===unit.id&&last.lesson.id===lesson.id;
+   main(`${bread(unit,lesson)}${hero(unit,lesson)}<section class="learning-zone"><div class="library-heading"><div class="zone-title-row"><span class="zone-bubble">L${lesson.id}</span><div><h2>Lesson ${lesson.id}${lesson.title?' · '+esc(lesson.title):''}</h2><p>${lesson.targetLanguage.length?esc(lesson.targetLanguage.join(' ')):'Choose Class Mode or Practice Mode.'}</p></div></div><span class="library-count">${lesson.activities.length} activities</span></div>${lesson.activities.length?progressPanel(lessonKeys(unit,lesson),'Lesson '+lesson.id):''}<div class="shell-mode-row">${resume?`<a class="btn primary" data-continue href="${esc(last.hash)}">${icon('next')}Continue learning</a>`:''}<button type="button" class="btn secondary" data-start-class>${icon('teacher')}Class Mode</button><a class="btn ${resume?'secondary':'primary'}" href="${lessonHref(unit.id,lesson.id,'practice')}" ${route.mode==='practice'?'aria-current="page"':''}>${icon('student')}Practice Mode</a></div><p class="shell-mode-hint">Class Mode: follow the activities together. Practice Mode: choose any activity.</p><div class="activity-grid">${activityCards}</div>${!lesson.activities.length?`<div class="shell-empty"><h3>Activities coming soon</h3><p>${unit.id===2&&lesson.id===6?'Story activities will be added here.':'This lesson is ready for future activities.'}</p>${unit.id===2?'<a class="btn secondary" href="#/unit/2/existing">Open existing activities</a>':''}</div>`:''}</section>`,unit);
   }
   function existing(unit){
    const entries=config.migration.filter(m=>m.unit===unit.id&&m.lesson===null&&(!route.group||m.group===route.group));
@@ -105,7 +115,7 @@
    if(mounted===token)return;
    if(mounted||currentGame)stop();hideLibraries();pane.hidden=true;activeSidebar(unit.space);currentSpace=unit.space;
    mounted=token;context={unit,lesson,activity,mode};
-   if(activity.game){original.openGame(activity.game);progress.played(key(unit.id,lesson.id??'existing',activity));}
+   if(activity.game){original.openGame(activity.game);progress.played(key(unit.id,lesson.id??'existing',activity));if(lesson.id)progress.remember(lessonHref(unit.id,lesson.id,mode,activity.id));}
    else {els.homeScreen.classList.remove('active');els.gameScreen.classList.add('active');currentGame=null;els.gameNumber.textContent='UNIT '+unit.id+' · LESSON '+lesson.id;els.gameTitle.textContent=activity.title;els.gameSubtitle.textContent='Coming soon';setStage(`<div class="game-layout shell-placeholder"><img src="${asset(activity.icon||'flashcards')}" alt=""><h2>${esc(activity.title)}</h2><p>This activity will be added later.</p><p>Use Activities to choose an existing game, or Next to preview the next activity.</p></div>`);}
    nav.hidden=false;els.gameScreen.classList.add('app-managed');renderGameNav();
   }
@@ -138,6 +148,7 @@
    if(event.target.closest('#brandHome')){event.preventDefault();event.stopImmediatePropagation();router.go('#/');return;}
   },true);
   pane.addEventListener('click',event=>{
+   if(event.target.closest('[data-manage-learner]'))window.LearningRewards?.open();
    const a=event.target.closest('[data-activity]');if(a){event.preventDefault();navigateActivity(a.dataset.activity);}
    if(event.target.closest('[data-start-class]')){const lesson=lessonById(unitById(route.unit),route.lesson);if(lesson.activities.length)router.go(lessonHref(route.unit,route.lesson,'class',lesson.activities[0].id));}
   });
@@ -164,10 +175,10 @@
    if(victory||complete){const stars=victory?Math.min(3,victory.querySelectorAll('.u3-stars .u3-star:not(.off)').length)||null:complete.classList.contains('missing-victory')?3:null;progress.completed(key(context.unit.id,context.lesson.id??'existing',context.activity),stars);}
   }).observe(els.gameStage,{childList:true,subtree:true,attributes:true,attributeFilter:['data-state']});
   function render(next){
-   closeDrawer();route=next;context=null;
+   closeDrawer();route=next;context=null;headerState(next);
    if(next.screen==='home')return home();
    if(next.screen==='letters'){if(mounted||currentGame)stop();pane.hidden=true;original.setSpace('letters',{scroll:false});activeSidebar('letters');return;}
-   if(next.screen==='letter-game'){if(!config.independentGames.includes(next.game))return invalid();if(mounted||currentGame)stop();pane.hidden=true;original.setSpace('letters',{scroll:false});original.openGame(next.game);mounted='letter/'+next.game;return;}
+   if(next.screen==='letter-game'){if(!config.independentGames.includes(next.game))return invalid();if(mounted||currentGame)stop();pane.hidden=true;original.setSpace('letters',{scroll:false});original.openGame(next.game);mounted='letter/'+next.game;progress.remember('#/letters/game/'+next.game);return;}
    const unit=unitById(next.unit);if(!unit)return invalid();
    if(next.screen==='unit')return selectUnit(unit);
    if(next.screen==='existing')return existing(unit);
