@@ -1,0 +1,3076 @@
+{
+  "version": "20261006-unit2-higgs1",
+  "engine": "Higgs V3 offline",
+  "voice": "Existing Belinda reference",
+  "clips": {
+    "what s this": {
+      "text": "What's this?",
+      "src": "assets/unit2/audio-higgs/deb638426a803ec6.mp3",
+      "qaTranscript": "What's this?",
+      "transcriptMatch": true,
+      "sha256": "3ecabe48bf2e7e7571fe5d0135224495a7d9722b8935ab6a37d06dd102141792",
+      "duration": 1.166
+    },
+    "it s a": {
+      "text": "It's a",
+      "src": "assets/unit2/audio-higgs/aa4f88ffa85549e2.mp3",
+      "qaTranscript": "It's a...",
+      "transcriptMatch": true,
+      "sha256": "7f7a2eac8477e15a2988e30ae6731a964841cbbeaa0d0de942aaf6f1a27c9c50",
+      "duration": 0.697
+    },
+    "spin and say": {
+      "text": "Spin and say.",
+      "src": "assets/unit2/audio-higgs/8ffde7a81bd0fcb7.mp3",
+      "qaTranscript": "Spin and say.",
+      "transcriptMatch": true,
+      "sha256": "0a300a3e51e5bf720bfd25a91bde628b055edc95d190ed071ae9214914a29bb3",
+      "duration": 1.576
+    },
+    "yeah great job": {
+      "text": "Yeah! Great job!",
+      "src": "assets/unit2/audio-higgs/72a9272aebede351.mp3",
+      "qaTranscript": "Yeah, great job.",
+      "transcriptMatch": true,
+      "sha256": "dc80bcfd0d41c3824f171f1b3a5995209ec39e38e04e92b908759b50d7995b95",
+      "duration": 2.236
+    },
+    "try again": {
+      "text": "Try again!",
+      "src": "assets/unit2/audio-higgs/5b5dedee32c5bd67.mp3",
+      "qaTranscript": "Try again.",
+      "transcriptMatch": true,
+      "sha256": "716d73e7982558c296d1c5e7e3a992d77bac8a68f0958ed0fcdc16fb00614564",
+      "duration": 1.085
+    },
+    "look and remember": {
+      "text": "Look and remember.",
+      "src": "assets/unit2/audio-higgs/8c9560527f0854e3.mp3",
+      "qaTranscript": "Look and remember.",
+      "transcriptMatch": true,
+      "sha256": "9a47da8a6ddfa8be7d3efa966a21042f9edfcd72a50ba6389a8da25439104599",
+      "duration": 1.704
+    },
+    "what s missing": {
+      "text": "What's missing?",
+      "src": "assets/unit2/audio-higgs/7196299cb3924563.mp3",
+      "qaTranscript": "What's missing?",
+      "transcriptMatch": true,
+      "sha256": "4b473db3266b94c3740093c9976740e4510db57fbfda945f9d31946058eea8d5",
+      "duration": 1.211
+    },
+    "choose the missing picture": {
+      "text": "Choose the missing picture.",
+      "src": "assets/unit2/audio-higgs/1f9a14e215a186c2.mp3",
+      "qaTranscript": "Choose the missing picture.",
+      "transcriptMatch": true,
+      "sha256": "5c11d00335fe760c8cf1c6c35585597d60595ee9c7d4bcca99d94372ddbfa455",
+      "duration": 1.845
+    },
+    "correct": {
+      "text": "Correct!",
+      "src": "assets/unit2/audio-higgs/15a596e3c98c407e.mp3",
+      "qaTranscript": "correct",
+      "transcriptMatch": true,
+      "sha256": "af716fd17c346a89da017430bc13883e362b315fcec3740c6253fcddb6022913",
+      "duration": 1.047
+    },
+    "match the picture to the word": {
+      "text": "Match the picture to the word.",
+      "src": "assets/unit2/audio-higgs/05485f2529b3de12.mp3",
+      "qaTranscript": "Match the picture to the word.",
+      "transcriptMatch": true,
+      "sha256": "bd15cc44742b7a4c29b8e1e4db2ddca7ea7a6fe6a0633aa50da51e93cd60e620",
+      "duration": 2.33
+    },
+    "fantastic all five are matched": {
+      "text": "Fantastic! All five are matched!",
+      "src": "assets/unit2/audio-higgs/989f6a0b95d7047e.mp3",
+      "qaTranscript": "Fantastic! All five are matched!",
+      "transcriptMatch": true,
+      "sha256": "a0282e84434e6c16c9c70e2e57ac55c273f62ffb0e95d0cb9d24ef9ac442af8c",
+      "duration": 3.092
+    },
+    "match the two halves of the same picture": {
+      "text": "Match the two halves of the same picture.",
+      "src": "assets/unit2/audio-higgs/be767358f5263bca.mp3",
+      "qaTranscript": "Match the two halves of the same picture.",
+      "transcriptMatch": true,
+      "sha256": "faa0af001c8ea0031fbbf434a94f6049fcc4a3c9c76e0c2b83f88771647ec9e4",
+      "duration": 2.726
+    },
+    "puzzle complete great job": {
+      "text": "Puzzle complete! Great job!",
+      "src": "assets/unit2/audio-higgs/03349264a64c6995.mp3",
+      "qaTranscript": "Puzzle complete. Great job.",
+      "transcriptMatch": true,
+      "sha256": "bf772f22f4dc78012c6690fc27edd698ccfb18f7278f1dd633f77c50fbf61a3b",
+      "duration": 2.856
+    },
+    "find uppercase e and lowercase e": {
+      "text": "Find uppercase E and lowercase e.",
+      "src": "assets/unit2/audio-higgs/fba042dd851629ca.mp3",
+      "qaTranscript": "Find uppercase E and lowercase E.",
+      "transcriptMatch": true,
+      "sha256": "d53756872b9e889b2a4fa4b86edc6cd6d738d7bd341b48a8d29026ee0e47980d",
+      "duration": 2.87
+    },
+    "capital e": {
+      "text": "Capital E",
+      "src": "assets/unit2/audio-higgs/5e4877aa0bf75c2b.mp3",
+      "qaTranscript": "capital E",
+      "transcriptMatch": true,
+      "sha256": "707ab6608c65c93496d227cc853951ac73e9818344cb434f4d64fe2cfee4e220",
+      "duration": 1.367
+    },
+    "lowercase e": {
+      "text": "Lowercase e",
+      "src": "assets/unit2/audio-higgs/83c99a09fff59af9.mp3",
+      "qaTranscript": "lower case E",
+      "transcriptMatch": true,
+      "sha256": "c0f3ae0edbf39c50aca7ec6dcdef3697cb47878ea7e6ee07398dedd95e4fd534",
+      "duration": 1.518
+    },
+    "capital f": {
+      "text": "Capital F",
+      "src": "assets/unit2/audio-higgs/7828c1fe4c51f9d4.mp3",
+      "qaTranscript": "capital F",
+      "transcriptMatch": true,
+      "sha256": "54429fdf8dc959e676758627cca539afd4990aa54a70884ffbbe6c8041b824ea",
+      "duration": 1.322
+    },
+    "listen and count": {
+      "text": "Listen and count.",
+      "src": "assets/unit2/audio-higgs/5429b86801294dce.mp3",
+      "qaTranscript": "Listen and count.",
+      "transcriptMatch": true,
+      "sha256": "b99ac909e68712729e60faa36494e92626604a0d5e091ca4b459283a60ea0764",
+      "duration": 1.767
+    },
+    "how many eggs": {
+      "text": "How many eggs?",
+      "src": "assets/unit2/audio-higgs/3daed5a57c2ca65a.mp3",
+      "qaTranscript": "How many eggs?",
+      "transcriptMatch": true,
+      "sha256": "a87cdf4f63263f137c20a211d740019729511fdf3091d5835b37abaa4db6d5f8",
+      "duration": 1.417
+    },
+    "choose a colour then paint the matching number": {
+      "text": "Choose a colour. Then paint the matching number.",
+      "src": "assets/unit2/audio-higgs/158fa90c874eeda8.mp3",
+      "qaTranscript": "Choose a color, then paint the matching number.",
+      "transcriptMatch": true,
+      "sha256": "c57d9471555b1fe2fcb32b49b47a1dee4c8617e2f36ae68d113b497cc73c1b3d",
+      "duration": 3.415
+    },
+    "beautiful work you finished the picture": {
+      "text": "Beautiful work! You finished the picture.",
+      "src": "assets/unit2/audio-higgs/d34ac22d1bb02c3d.mp3",
+      "qaTranscript": "Beautiful work. You finished the picture.",
+      "transcriptMatch": true,
+      "sha256": "fbfacfee61d1af568e36738e6d657a4f9610289670f6e0d87392dc610f67fc4f",
+      "duration": 3.142
+    },
+    "team a wins": {
+      "text": "Team A wins!",
+      "src": "assets/unit2/audio-higgs/509bdef14b5bbd09.mp3",
+      "qaTranscript": "Team A wins.",
+      "transcriptMatch": true,
+      "sha256": "0b40c062348d01018cc8672019046aae57eced2ee01b12484fd2b7bea08037d9",
+      "duration": 1.571
+    },
+    "team b wins": {
+      "text": "Team B wins!",
+      "src": "assets/unit2/audio-higgs/7c8515d6969b14a9.mp3",
+      "qaTranscript": "Team B wins.",
+      "transcriptMatch": true,
+      "sha256": "370304a946f0fc0a669ee447ef511bbf851feb34d7f4c61a5d24d93f7bd2b285",
+      "duration": 1.608
+    },
+    "fantastic teamwork": {
+      "text": "Fantastic teamwork!",
+      "src": "assets/unit2/audio-higgs/c6af531df4936c24.mp3",
+      "qaTranscript": "Fantastic teamwork!",
+      "transcriptMatch": true,
+      "sha256": "4c4e90be7e5310b7d2d2e8464254c7dc3e432d9b60c74149d537184e86cf4315",
+      "duration": 2.004
+    },
+    "incorrect try again look carefully": {
+      "text": "Incorrect. Try again. Look carefully.",
+      "src": "assets/unit2/audio-higgs/d5ae91f50c4dcef9.mp3",
+      "qaTranscript": "Incorrect. Try again. Look carefully.",
+      "transcriptMatch": true,
+      "sha256": "69a4727b068f6d214d29fb05bef6e70198b146a41800ef3bf594fe7851ed6699",
+      "duration": 3.774
+    },
+    "hello i m ellie let s meet desk chair pencil crayon notebook egg elephant": {
+      "text": "Hello! I'm Ellie. Let's meet desk, chair, pencil, crayon, notebook, egg, elephant.",
+      "src": "assets/unit2/audio-higgs/7ff686c3959e066e.mp3",
+      "qaTranscript": "Hello, I'm Ellie. Let's meet desk, chair, pencil, crayon, notebook, egg, elephant.",
+      "transcriptMatch": true,
+      "sha256": "c72cc91c23544f952e231e7afeb24e1463c6ef921b123e4714a07fe5b0bf1551",
+      "duration": 9.355
+    },
+    "yeah great learning choose a game to practise again": {
+      "text": "Yeah! Great learning! Choose a game to practise again.",
+      "src": "assets/unit2/audio-higgs/2611618293951ae0.mp3",
+      "qaTranscript": "Yeah. Great learning. Choose a game to practice again.",
+      "transcriptMatch": true,
+      "sha256": "a282f237a690fe778cf6a62d6414c18b8489fe69e807dc91b20f4383fb975dbc",
+      "duration": 4.298
+    },
+    "e": {
+      "text": "E",
+      "src": "assets/unit2/audio-higgs/3f79bb7b435b0532.mp3",
+      "qaTranscript": "E.",
+      "transcriptMatch": true,
+      "phonicsReviewRequired": false,
+      "sha256": "0c87e33eb7c5a90a182355cc20b46fabe09ee0390288df8883e7d7e1504b5bc3",
+      "duration": 0.661,
+      "acoustics": {
+        "highFrequencyFraction": 0.044,
+        "formantsMedian": [
+          349.8670770268944,
+          3146.979211568523
+        ]
+      }
+    },
+    "f": {
+      "text": "F",
+      "src": "assets/unit2/audio-higgs/252f10c83610ebca.mp3",
+      "qaTranscript": "F",
+      "transcriptMatch": true,
+      "phonicsReviewRequired": false,
+      "sha256": "772621e5113e9daa391b36ac46572d16238e21b7578e4002567573bf69de9692",
+      "duration": 0.815
+    },
+    "eh": {
+      "text": "Eh.",
+      "src": "assets/unit2/audio-higgs/0c044a36c373b6a8.mp3",
+      "qaTranscript": "Eh?",
+      "transcriptMatch": true,
+      "phonicsReviewRequired": false,
+      "sha256": "36da516b149ad071cf8a86cebcfa66054a52e1e6277914ae80b41dfd83b38bba",
+      "duration": 0.626,
+      "acoustics": {
+        "highFrequencyFraction": 0.078,
+        "formantsMedian": [
+          848.7211076114672,
+          2212.8937822276207
+        ]
+      },
+      "phonicsAcousticCheck": true,
+      "qaNote": "Acoustic distinction from letter name; not a human listening approval."
+    },
+    "fff": {
+      "text": "Fff.",
+      "src": "assets/unit2/audio-higgs/f284bdc3c1c9e24a.mp3",
+      "qaTranscript": "Pfft!",
+      "transcriptMatch": true,
+      "phonicsReviewRequired": false,
+      "sha256": "fb4ba038534d38d711e6872bd35907ca281ca3cd77e5f61bf28e64ad01403aaf",
+      "duration": 0.724,
+      "acoustics": {
+        "highFrequencyFraction": 0.803,
+        "formantsMedian": [
+          1403.9442066153101,
+          2783.429115620964
+        ]
+      },
+      "phonicsAcousticCheck": true,
+      "qaNote": "Acoustic distinction from letter name; not a human listening approval."
+    },
+    "desk": {
+      "text": "desk",
+      "src": "assets/unit2/audio-higgs/49be417ad74080a0.mp3",
+      "qaTranscript": "Desk",
+      "transcriptMatch": true,
+      "sha256": "c38442a986ea60b332185c423276c3c68cebe525b1e1ae8d85e95bae3a8ead29",
+      "duration": 0.939
+    },
+    "chair": {
+      "text": "chair",
+      "src": "assets/unit2/audio-higgs/3d7eb3d3dab17ee5.mp3",
+      "qaTranscript": "Chair.",
+      "transcriptMatch": true,
+      "sha256": "0ac0b51b99e1f60384475da57ed49902d96215cfd35d2da610c5feab2a0b0733",
+      "duration": 0.795
+    },
+    "pencil": {
+      "text": "pencil",
+      "src": "assets/unit2/audio-higgs/13809668fb436386.mp3",
+      "qaTranscript": "Pencil",
+      "transcriptMatch": true,
+      "sha256": "68b8e27a1c7d4ba4962f546bc64bde16a0dfc5179c9fe10ce854c638872a4119",
+      "duration": 0.898
+    },
+    "crayon": {
+      "text": "crayon",
+      "src": "assets/unit2/audio-higgs/d8b1858e24ae6176.mp3",
+      "qaTranscript": "crayon",
+      "transcriptMatch": true,
+      "sha256": "57841538f4dee88661f27fc7c5abb989fc299ca4c4e6fa90a5e0fc0a92482cb0",
+      "duration": 0.926
+    },
+    "notebook": {
+      "text": "notebook",
+      "src": "assets/unit2/audio-higgs/b53bcf919f24746d.mp3",
+      "qaTranscript": "Notebook.",
+      "transcriptMatch": true,
+      "sha256": "07651dd87ba13e181b136575423a5d1d1794f0d82a2e17478c90b246db718d4d",
+      "duration": 0.959
+    },
+    "egg": {
+      "text": "egg",
+      "src": "assets/unit2/audio-higgs/34707c3f40dfa20c.mp3",
+      "qaTranscript": "Egg.",
+      "transcriptMatch": true,
+      "sha256": "2c7d5a81fdd302ffda0471e15a86f720661906d3440df54077bf1d0f0c95c1d0",
+      "duration": 0.782
+    },
+    "elephant": {
+      "text": "elephant",
+      "src": "assets/unit2/audio-higgs/cd08c4c4316df20d.mp3",
+      "qaTranscript": "Elephant",
+      "transcriptMatch": true,
+      "sha256": "2b797f996940b405fb6f4e74fbda63f82fdd6294bade761d2d643fd5d0434f04",
+      "duration": 0.999
+    },
+    "fish": {
+      "text": "fish",
+      "src": "assets/unit2/audio-higgs/b474a99a2705e23c.mp3",
+      "qaTranscript": "Fish.",
+      "transcriptMatch": true,
+      "sha256": "9807c6d300bb35d47e328c9a651f35357fc10b5f39f30c24a175e28e652a35c5",
+      "duration": 0.918
+    },
+    "farm": {
+      "text": "farm",
+      "src": "assets/unit2/audio-higgs/c8cf701f30ad11d3.mp3",
+      "qaTranscript": "Farm.",
+      "transcriptMatch": true,
+      "sha256": "378f1356224e67ff5950e694d4cf2be3b41dd4582ab01d3e659fbdc89e98bd51",
+      "duration": 0.872
+    },
+    "one": {
+      "text": "one",
+      "src": "assets/unit2/audio-higgs/7692c3ad3540bb80.mp3",
+      "qaTranscript": "One.",
+      "transcriptMatch": true,
+      "sha256": "61a01d3c181cbe07f5fb0f8097e18e7b45632a7e66132c4cdf9d4e6e384165e9",
+      "duration": 0.781
+    },
+    "two": {
+      "text": "two",
+      "src": "assets/unit2/audio-higgs/3fc4ccfe745870e2.mp3",
+      "qaTranscript": "2.",
+      "transcriptMatch": true,
+      "sha256": "672fcc93c40ece08bd5bb0ea7708f436ce23a32f946931009348d28a2edbf4a0",
+      "duration": 0.81
+    },
+    "three": {
+      "text": "three",
+      "src": "assets/unit2/audio-higgs/8b5b9db0c13db242.mp3",
+      "qaTranscript": "3.",
+      "transcriptMatch": true,
+      "sha256": "382636f8ebb561091e2fa61e938d379a9afcebca7cc1c6c9dcea726d200b82ad",
+      "duration": 0.918
+    },
+    "four": {
+      "text": "four",
+      "src": "assets/unit2/audio-higgs/04efaf080f5a3e74.mp3",
+      "qaTranscript": "4.",
+      "transcriptMatch": true,
+      "sha256": "ded92aac00bc440eacd62ba83f96c8c73cfc7d9bc964eb15f35dbb189717d819",
+      "duration": 0.868
+    },
+    "five": {
+      "text": "five",
+      "src": "assets/unit2/audio-higgs/222b0bd51fcef7e6.mp3",
+      "qaTranscript": "5.",
+      "transcriptMatch": true,
+      "sha256": "843f1b63e55458f5fed67a689c8a8b9708985db7105b8cf13dfc97f30659ad90",
+      "duration": 1.0
+    },
+    "six": {
+      "text": "six",
+      "src": "assets/unit2/audio-higgs/44778d82365e4af6.mp3",
+      "qaTranscript": "6.",
+      "transcriptMatch": true,
+      "sha256": "73a878ff8e5bafddcdb410d20d6cb5d86980412a33d2d8fea0bacc1142bda75f",
+      "duration": 0.984
+    },
+    "it s a desk": {
+      "text": "It's a desk.",
+      "src": "assets/unit2/audio-higgs/310aba1fed6b309d.mp3",
+      "qaTranscript": "It's a desk.",
+      "transcriptMatch": true,
+      "sha256": "57acd2962e3866ef9bbd90eb7003993f9551d3a58c97c17513c6347685bc909e",
+      "duration": 1.264
+    },
+    "yeah great listening desk": {
+      "text": "Yeah! Great listening! desk.",
+      "src": "assets/unit2/audio-higgs/fe54c681207de574.mp3",
+      "qaTranscript": "Yeah! Great listening. Desk.",
+      "transcriptMatch": true,
+      "sha256": "590b5bbfc8fd41d273758911d1f65c4d06e0c567f8441da4111f0097e0c45ee6",
+      "duration": 3.319
+    },
+    "incorrect try again touch the desk": {
+      "text": "Incorrect. Try again. Touch the desk.",
+      "src": "assets/unit2/audio-higgs/36ca8f8dd99a719c.mp3",
+      "qaTranscript": "Incorrect. Try again. Touch the desk.",
+      "transcriptMatch": true,
+      "sha256": "acb53481d3148a9b3073050815651931cdd261437994166418e65bcb5457082f",
+      "duration": 3.579
+    },
+    "yeah great job desk": {
+      "text": "Yeah! Great job! desk.",
+      "src": "assets/unit2/audio-higgs/17235ccd19e465db.mp3",
+      "qaTranscript": "Yeah, great job, desk.",
+      "transcriptMatch": true,
+      "sha256": "326c5d9703236531e1fe13eb64e379c6eaacdab2b9909705ee158bb985ddd73e",
+      "duration": 3.244
+    },
+    "touch the desk": {
+      "text": "Touch the desk.",
+      "src": "assets/unit2/audio-higgs/21f3fa18744e3132.mp3",
+      "qaTranscript": "Touch the desk.",
+      "transcriptMatch": true,
+      "sha256": "1edf237a25be163f54a344c5a9c52e1f9f684546c2c2adf479b50b365255caaf",
+      "duration": 1.369
+    },
+    "listen it s a desk now you try": {
+      "text": "Listen: It's a desk. Now you try.",
+      "src": "assets/unit2/audio-higgs/fe808feae06a4ae7.mp3",
+      "qaTranscript": "Listen, it's a desk. Now you try.",
+      "transcriptMatch": true,
+      "sha256": "cd73f4810dbc2b799f2912b7fed6835ce614953e7a63025f03d93f04ec520b24",
+      "duration": 3.585
+    },
+    "the missing picture is desk": {
+      "text": "The missing picture is desk.",
+      "src": "assets/unit2/audio-higgs/64b743451a9eb4c4.mp3",
+      "qaTranscript": "The missing picture is desk.",
+      "transcriptMatch": true,
+      "sha256": "1579cc9cc4a6b7d2c0f0ec730e0affaaaf6c90572e2794640978fe66d3de564c",
+      "duration": 2.274
+    },
+    "put one desk on the yellow mat": {
+      "text": "Put one desk on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/b83900ff841cb8dd.mp3",
+      "qaTranscript": "Put one desk on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "4816c44c3c1b7241847693275eac4d59ad46eac6c2abc9b3fa13a8e461fd41d0",
+      "duration": 2.462
+    },
+    "yeah great job one desk": {
+      "text": "Yeah! Great job! one desk.",
+      "src": "assets/unit2/audio-higgs/68b00d12e78eac54.mp3",
+      "qaTranscript": "Yeah, great job. One desk.",
+      "transcriptMatch": true,
+      "sha256": "3a2edffcf6786833b71496ac25704b77e095947ccc730f99f6a88663da8142b9",
+      "duration": 3.688
+    },
+    "put two desks on the yellow mat": {
+      "text": "Put two desks on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/8573d47e2d2d8012.mp3",
+      "qaTranscript": "Put two desks on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "807036d22bf4ee865b1e4459b45c7ec6622e34c15cf7e8c3568e922880788998",
+      "duration": 2.369
+    },
+    "yeah great job two desks": {
+      "text": "Yeah! Great job! two desks.",
+      "src": "assets/unit2/audio-higgs/c28d602c18c05082.mp3",
+      "qaTranscript": "Yeah, great job, two desks.",
+      "transcriptMatch": true,
+      "sha256": "e61de6bbe3b1afdf68a1127c7de338eb7fe51a70bdbc3a820a2be4f81ec00e18",
+      "duration": 3.531
+    },
+    "put three desks on the yellow mat": {
+      "text": "Put three desks on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/7e60ad26c0ec9e0c.mp3",
+      "qaTranscript": "Put three desks on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "35cea4c37528d19561ee514725bcaba950279da92962ce54c535f03ca3b0dcaf",
+      "duration": 2.582
+    },
+    "yeah great job three desks": {
+      "text": "Yeah! Great job! three desks.",
+      "src": "assets/unit2/audio-higgs/c095bf03def19a58.mp3",
+      "qaTranscript": "Yeah. Great job. Three desks.",
+      "transcriptMatch": true,
+      "sha256": "1c66f1889f98de488e15eecba8ba0a1c1e8abfe3ec7b329efab44634056cd4b9",
+      "duration": 3.797
+    },
+    "put four desks on the yellow mat": {
+      "text": "Put four desks on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/4a5d56b56bcff4f2.mp3",
+      "qaTranscript": "Put four desks on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "0d2c799041020f282ca0f4a99617e6c7ea4cc6469731e668b620d57a377bbd72",
+      "duration": 2.641
+    },
+    "yeah great job four desks": {
+      "text": "Yeah! Great job! four desks.",
+      "src": "assets/unit2/audio-higgs/a87614356b22e8ef.mp3",
+      "qaTranscript": "Yeah. Great job. Four desks.",
+      "transcriptMatch": true,
+      "sha256": "9b90c96a6c7cecd8b7cd48c3136b9cd3c8860369ca8775c28c0bf20fcba6264c",
+      "duration": 3.54
+    },
+    "put five desks on the yellow mat": {
+      "text": "Put five desks on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/b43e901da8f8e528.mp3",
+      "qaTranscript": "Put five desks on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "36a1e420635f88f1f93551bc3e6e83b52af6a9cea67ea69ccc150a8aeecb204e",
+      "duration": 2.734
+    },
+    "yeah great job five desks": {
+      "text": "Yeah! Great job! five desks.",
+      "src": "assets/unit2/audio-higgs/3c4410e746a6052c.mp3",
+      "qaTranscript": "Yeah, great job. 5 desks.",
+      "transcriptMatch": true,
+      "sha256": "0fe066f5c83f582e6c92c87e540bda2ba32aa7c953e0905dd8ecccf3558a8b20",
+      "duration": 3.867
+    },
+    "put six desks on the yellow mat": {
+      "text": "Put six desks on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/1e2178cb11d8173a.mp3",
+      "qaTranscript": "Put six desks on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "ec4f38f4c02d67b9015f2c3cb2730d372d7a3a69c36b06a470b924272770bf79",
+      "duration": 2.645
+    },
+    "yeah great job six desks": {
+      "text": "Yeah! Great job! six desks.",
+      "src": "assets/unit2/audio-higgs/45044dceebd1680d.mp3",
+      "qaTranscript": "Yeah. Great job. Six desks.",
+      "transcriptMatch": true,
+      "sha256": "59c6491fcf915a91dbb25a0c8961a14ca96496540526edce378bcc78699cf2c9",
+      "duration": 3.885
+    },
+    "it s a chair": {
+      "text": "It's a chair.",
+      "src": "assets/unit2/audio-higgs/adb1d943e6270819.mp3",
+      "qaTranscript": "It's a chair.",
+      "transcriptMatch": true,
+      "sha256": "c2060dc33576d465d6216ff2e7f14c74e525b512bcbcb591d3dab717b5ae5351",
+      "duration": 1.173
+    },
+    "yeah great listening chair": {
+      "text": "Yeah! Great listening! chair.",
+      "src": "assets/unit2/audio-higgs/e0ca18534b144329.mp3",
+      "qaTranscript": "Yeah. Great listening. Chair.",
+      "transcriptMatch": true,
+      "sha256": "52ccd61bd142a8a47b877aaf65664f9cbb9aeb5063928fc7e7ceed7a1c7e57ec",
+      "duration": 3.154
+    },
+    "incorrect try again touch the chair": {
+      "text": "Incorrect. Try again. Touch the chair.",
+      "src": "assets/unit2/audio-higgs/c0524c14bf421a0b.mp3",
+      "qaTranscript": "Incorrect. Try again. Touch the chair.",
+      "transcriptMatch": true,
+      "sha256": "368fc0145692d6acbf5dc7c67057249cd93985e825b90ef0fd85e04f70e026c9",
+      "duration": 3.42
+    },
+    "yeah great job chair": {
+      "text": "Yeah! Great job! chair.",
+      "src": "assets/unit2/audio-higgs/988be685706f9d6f.mp3",
+      "qaTranscript": "Yeah, great job, chair.",
+      "transcriptMatch": true,
+      "sha256": "575f06dc0d0c5e8eb3916120627f4b36e2dc19b8b459a8c274f00be3de31f700",
+      "duration": 3.169
+    },
+    "touch the chair": {
+      "text": "Touch the chair.",
+      "src": "assets/unit2/audio-higgs/55a4239bd687c03b.mp3",
+      "qaTranscript": "Touch the chair.",
+      "transcriptMatch": true,
+      "sha256": "56577076ba0726bcf092e8db4cb9b4f9013c054acdd18c32c25a9c0fc00eb5d2",
+      "duration": 1.482
+    },
+    "listen it s a chair now you try": {
+      "text": "Listen: It's a chair. Now you try.",
+      "src": "assets/unit2/audio-higgs/ab3cbe5dab1d0f4a.mp3",
+      "qaTranscript": "Listen, it's a chair. Now you try.",
+      "transcriptMatch": true,
+      "sha256": "56a9da2597467ed0370cc546b560705f413d6308d9d56205226efb60a1d5bbc3",
+      "duration": 3.348
+    },
+    "the missing picture is chair": {
+      "text": "The missing picture is chair.",
+      "src": "assets/unit2/audio-higgs/7c90c2acb61e2385.mp3",
+      "qaTranscript": "The missing picture is chair.",
+      "transcriptMatch": true,
+      "sha256": "7de645ec9e8c8e7ab08277a1d066f29107d71ce0e83d99af56a3f1e18b991f90",
+      "duration": 2.372
+    },
+    "put one chair on the yellow mat": {
+      "text": "Put one chair on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/72840c46073de490.mp3",
+      "qaTranscript": "Put one chair on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "95c6ff91d5df15d3e71f6959e4f8ed7b6f24bfa8794c1f577b2e0bb32bd875ac",
+      "duration": 2.402
+    },
+    "yeah great job one chair": {
+      "text": "Yeah! Great job! one chair.",
+      "src": "assets/unit2/audio-higgs/78c0232b09ecf2af.mp3",
+      "qaTranscript": "Yeah, great job, one chair.",
+      "transcriptMatch": true,
+      "sha256": "28daa32114eb7c640b627fea3f914df90c69d5fc9d42802a6e43b4a040a146f2",
+      "duration": 3.532
+    },
+    "put two chairs on the yellow mat": {
+      "text": "Put two chairs on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/b9a316d5c58f246d.mp3",
+      "qaTranscript": "Put two chairs on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "5819a7371ec320d36b3df22afa7687b6da1510612dbfcdd82e7e9a22496cb35b",
+      "duration": 2.435
+    },
+    "yeah great job two chairs": {
+      "text": "Yeah! Great job! two chairs.",
+      "src": "assets/unit2/audio-higgs/94eef664a8154ff6.mp3",
+      "qaTranscript": "Yeah, great job, two chairs.",
+      "transcriptMatch": true,
+      "sha256": "a74d6a5fb3ba45fe80abe468f736cf274922e23be46859f298e67383f6f52fab",
+      "duration": 3.372
+    },
+    "put three chairs on the yellow mat": {
+      "text": "Put three chairs on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/63a92630a62a87dc.mp3",
+      "qaTranscript": "Put three chairs on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "8440979abbd44fbc7e6083436ec02f3203a7edbb3341765738566b0d32800145",
+      "duration": 2.348
+    },
+    "yeah great job three chairs": {
+      "text": "Yeah! Great job! three chairs.",
+      "src": "assets/unit2/audio-higgs/61ade5517a0d1c41.mp3",
+      "qaTranscript": "Yeah. Great job. Three chairs.",
+      "transcriptMatch": true,
+      "sha256": "088326076b7dcd584a4f9b2e385b7e47dee92d23f0ee61bdf09e8d20ead62bda",
+      "duration": 3.616
+    },
+    "put four chairs on the yellow mat": {
+      "text": "Put four chairs on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/2c903f67e38d7d7d.mp3",
+      "qaTranscript": "Put four chairs on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "9c8620f1c8c53a80e574540be6aecadc1cf20d28eca43d0a8e10aea4d22e27d9",
+      "duration": 2.504
+    },
+    "yeah great job four chairs": {
+      "text": "Yeah! Great job! four chairs.",
+      "src": "assets/unit2/audio-higgs/de0fc19b2b1c166c.mp3",
+      "qaTranscript": "Yeah. Great job. Four chairs.",
+      "transcriptMatch": true,
+      "sha256": "94e65fed33c820ca418cad62ea664d94a3bfa6bd2e86d944d64a4bc4c9d39dd8",
+      "duration": 3.692
+    },
+    "put five chairs on the yellow mat": {
+      "text": "Put five chairs on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/f9b427fc32817a3d.mp3",
+      "qaTranscript": "Put five chairs on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "a3b21a6c980ff0cb0ccbdc112a75007af6a997a4c4f07da62629fd07af1f5fa6",
+      "duration": 2.373
+    },
+    "yeah great job five chairs": {
+      "text": "Yeah! Great job! five chairs.",
+      "src": "assets/unit2/audio-higgs/f1c80d5803644bde.mp3",
+      "qaTranscript": "Yeah, great job, five chairs.",
+      "transcriptMatch": true,
+      "sha256": "5da4690f1445db4b324d8c6837e8814bc0ff7c358bf3b12a673167c36d296cd0",
+      "duration": 3.883
+    },
+    "put six chairs on the yellow mat": {
+      "text": "Put six chairs on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/5b2f89481917748f.mp3",
+      "qaTranscript": "Put six chairs on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "edd41b4090ded5d2d4541d3457094647380c8bf5bb6a68c20eca088e7b87a3bf",
+      "duration": 2.683
+    },
+    "yeah great job six chairs": {
+      "text": "Yeah! Great job! six chairs.",
+      "src": "assets/unit2/audio-higgs/a1281732c5d567d5.mp3",
+      "qaTranscript": "Yeah, great job, six chairs.",
+      "transcriptMatch": true,
+      "sha256": "83e42bcbdcf52c6ef4b07800aacb6dd626be4d57ce4a6af7c26c214402f7ab08",
+      "duration": 3.623
+    },
+    "it s a pencil": {
+      "text": "It's a pencil.",
+      "src": "assets/unit2/audio-higgs/f40f70b20e0b1833.mp3",
+      "qaTranscript": "It's a pencil.",
+      "transcriptMatch": true,
+      "sha256": "0afb4d58ffc5f3897c401adbfaf17f9ed2d577d1218925eeab2ae24d9b6156f2",
+      "duration": 1.23
+    },
+    "yeah great listening pencil": {
+      "text": "Yeah! Great listening! pencil.",
+      "src": "assets/unit2/audio-higgs/fcca243ca2368f01.mp3",
+      "qaTranscript": "Yeah. Great listening. Pencil.",
+      "transcriptMatch": true,
+      "sha256": "a59e8c5e6ab6865329ac38ba4d6079707d1bc33d725f0b547a823d26e2996f10",
+      "duration": 3.262
+    },
+    "incorrect try again touch the pencil": {
+      "text": "Incorrect. Try again. Touch the pencil.",
+      "src": "assets/unit2/audio-higgs/9c692488ec912e4f.mp3",
+      "qaTranscript": "Incorrect. Try again. Touch the pencil.",
+      "transcriptMatch": true,
+      "sha256": "148084a2e67a7b62285b25aca129dc046f8631bf369e7515dba32e4e76f09795",
+      "duration": 3.741
+    },
+    "yeah great job pencil": {
+      "text": "Yeah! Great job! pencil.",
+      "src": "assets/unit2/audio-higgs/63398b90471c2fa1.mp3",
+      "qaTranscript": "Yeah, great job. Pencil.",
+      "transcriptMatch": true,
+      "sha256": "a37057c8c2506b227e9c60013cbec6178797c5a2630f0fbf2625d18d68e03cb1",
+      "duration": 3.271
+    },
+    "touch the pencil": {
+      "text": "Touch the pencil.",
+      "src": "assets/unit2/audio-higgs/2dac4cc71435a048.mp3",
+      "qaTranscript": "Touch the pencil.",
+      "transcriptMatch": true,
+      "sha256": "e26cd6bacc5c8355b71c758406adcfcfd19a49cbf86f9b11e3e6d3fd95f31ad3",
+      "duration": 1.294
+    },
+    "listen it s a pencil now you try": {
+      "text": "Listen: It's a pencil. Now you try.",
+      "src": "assets/unit2/audio-higgs/529dc4abe0cf43e4.mp3",
+      "qaTranscript": "Listen, it's a pencil, now you try.",
+      "transcriptMatch": true,
+      "sha256": "798117f8281b6074544059e87d2cbd77ee72c4b0f858315388b60e16b38867fc",
+      "duration": 3.452
+    },
+    "the missing picture is pencil": {
+      "text": "The missing picture is pencil.",
+      "src": "assets/unit2/audio-higgs/81c60f6991bd8272.mp3",
+      "qaTranscript": "The missing picture is pencil.",
+      "transcriptMatch": true,
+      "sha256": "91b36888a462ebbdf1907785fa837c32df262198fd2805c8fa77586d15d2a2e8",
+      "duration": 2.33
+    },
+    "put one pencil on the yellow mat": {
+      "text": "Put one pencil on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/9864ffe09cec30e4.mp3",
+      "qaTranscript": "Put one pencil on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "c887b11d8f09176c11e902b4193db5ff5635bb67a1cc724a737a80029b1f69d2",
+      "duration": 2.657
+    },
+    "yeah great job one pencil": {
+      "text": "Yeah! Great job! one pencil.",
+      "src": "assets/unit2/audio-higgs/a4d7fb26dcec44ee.mp3",
+      "qaTranscript": "Yeah, great job, one pencil.",
+      "transcriptMatch": true,
+      "sha256": "cc755f9484c479e4ca37a52f0f1937a10da5ac4b03052c03f51655ee7cab3772",
+      "duration": 3.666
+    },
+    "put two pencils on the yellow mat": {
+      "text": "Put two pencils on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/a5433d79aa45a523.mp3",
+      "qaTranscript": "Put two pencils on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "ffac3c73990ad9548384a96101e516bd71337759e8234b2dff053e46a3f336d4",
+      "duration": 2.595
+    },
+    "yeah great job two pencils": {
+      "text": "Yeah! Great job! two pencils.",
+      "src": "assets/unit2/audio-higgs/091904090f7158bf.mp3",
+      "qaTranscript": "Yeah. Great job. Two pencils.",
+      "transcriptMatch": true,
+      "sha256": "80136c2399c112e087aa0bf5b6ea5b27cb85fc96521e920f84d5c421ce7cea24",
+      "duration": 3.811
+    },
+    "put three pencils on the yellow mat": {
+      "text": "Put three pencils on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/02cf023a5c1d0365.mp3",
+      "qaTranscript": "Put three pencils on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "d80df4bd06b3b62da98a5564f420d5270f01b586fbb0bb8b1827d8f9f32da01c",
+      "duration": 2.454
+    },
+    "yeah great job three pencils": {
+      "text": "Yeah! Great job! three pencils.",
+      "src": "assets/unit2/audio-higgs/03a5fa1cf2c04bdc.mp3",
+      "qaTranscript": "Yeah. Great job. Three pencils.",
+      "transcriptMatch": true,
+      "sha256": "27846fbd6915492fb267c76276033cf3606c72d9c0aed9b74a261c93636e0e27",
+      "duration": 3.943
+    },
+    "put four pencils on the yellow mat": {
+      "text": "Put four pencils on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/1063f4d97ff477a8.mp3",
+      "qaTranscript": "Put four pencils on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "49955dbb5ac305dc4092f9ba0141c09db459b1c2818da08c16f98fc686160a20",
+      "duration": 2.555
+    },
+    "yeah great job four pencils": {
+      "text": "Yeah! Great job! four pencils.",
+      "src": "assets/unit2/audio-higgs/be733278f93cee70.mp3",
+      "qaTranscript": "Yeah. Great job. Four pencils.",
+      "transcriptMatch": true,
+      "sha256": "b92380c8173912526e5e9dc549f5b303d9dbe09c5f7eaba0a0c35b147f5d1ad8",
+      "duration": 3.703
+    },
+    "put five pencils on the yellow mat": {
+      "text": "Put five pencils on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/b2ac8decede0f143.mp3",
+      "qaTranscript": "Put five pencils on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "ec1938874be1ba844b4c87f44355fb1b61e9dccc3d35d9098c2e8dc1dce20659",
+      "duration": 2.49
+    },
+    "yeah great job five pencils": {
+      "text": "Yeah! Great job! five pencils.",
+      "src": "assets/unit2/audio-higgs/3e1bd37fa7280610.mp3",
+      "qaTranscript": "Yeah, great job. Five pencils.",
+      "transcriptMatch": true,
+      "sha256": "61a800c6b296b48c81da03b97a27e034779eed7bdc1531ebbbf45f113ac0a8b0",
+      "duration": 3.525
+    },
+    "put six pencils on the yellow mat": {
+      "text": "Put six pencils on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/9da6f25529150960.mp3",
+      "qaTranscript": "Put six pencils on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "220ee1d68161032e289111ea4e5570ce775e97f311e1bd5595fc5639e775117d",
+      "duration": 2.555
+    },
+    "yeah great job six pencils": {
+      "text": "Yeah! Great job! six pencils.",
+      "src": "assets/unit2/audio-higgs/70b29951b181d523.mp3",
+      "qaTranscript": "Yeah. Great job. Six pencils.",
+      "transcriptMatch": true,
+      "sha256": "a3bdc3cc231e103ea60c9027f1f031d11d3e78c76501c130756925df36a4812a",
+      "duration": 3.903
+    },
+    "it s a crayon": {
+      "text": "It's a crayon.",
+      "src": "assets/unit2/audio-higgs/ff8bb18b8b88ab65.mp3",
+      "qaTranscript": "It's a crayon.",
+      "transcriptMatch": true,
+      "sha256": "2948af0deac1b2206274bff79fac90813b15671bd056f57022cf6cc58e18f685",
+      "duration": 1.298
+    },
+    "yeah great listening crayon": {
+      "text": "Yeah! Great listening! crayon.",
+      "src": "assets/unit2/audio-higgs/c1cbdf9f49c55d10.mp3",
+      "qaTranscript": "Yeah! Great listening! Crayon //",
+      "transcriptMatch": true,
+      "sha256": "9bbcc5e0df5f6cc5c114eb5e8277f81a3e6f1f4f50394df6e8f09615e5312aaa",
+      "duration": 4.826
+    },
+    "incorrect try again touch the crayon": {
+      "text": "Incorrect. Try again. Touch the crayon.",
+      "src": "assets/unit2/audio-higgs/b1e80506fd06c7ae.mp3",
+      "qaTranscript": "incorrect, try again, touch the crayon.",
+      "transcriptMatch": true,
+      "sha256": "71d9cf13100dd763aab2864530ff2b5d4a27f5964bbf40f097ed388796e6b524",
+      "duration": 3.619
+    },
+    "yeah great job crayon": {
+      "text": "Yeah! Great job! crayon.",
+      "src": "assets/unit2/audio-higgs/b970b4fec6579bda.mp3",
+      "qaTranscript": "Yeah, great job! crayon",
+      "transcriptMatch": true,
+      "sha256": "301fe4fbced9ca723ffcaad93f082923dd0545b2abe2ce6942189eaf56e50c62",
+      "duration": 7.957
+    },
+    "touch the crayon": {
+      "text": "Touch the crayon.",
+      "src": "assets/unit2/audio-higgs/91f8519d68b9ebdf.mp3",
+      "qaTranscript": "Touch the crayon.",
+      "transcriptMatch": true,
+      "sha256": "1ad1e0b2b2fc6189e9518f609e12f37979806b54d0bef74f3a5f4f7663c2305e",
+      "duration": 1.565
+    },
+    "listen it s a crayon now you try": {
+      "text": "Listen: It's a crayon. Now you try.",
+      "src": "assets/unit2/audio-higgs/12bc3c556fd5cb29.mp3",
+      "qaTranscript": "Listen, it's a crayon, now you try.",
+      "transcriptMatch": true,
+      "sha256": "f49ee7e36a943dfd418230c803bc35ca22568795c1b5a69c9dc78adb3174bd9d",
+      "duration": 3.579
+    },
+    "the missing picture is crayon": {
+      "text": "The missing picture is crayon.",
+      "src": "assets/unit2/audio-higgs/2ca663c148fb2ce7.mp3",
+      "qaTranscript": "The missing picture is crayon.",
+      "transcriptMatch": true,
+      "sha256": "48420fd36aef001379abe7f0a08d07bae0d73030eb11033bbeee5a733d999830",
+      "duration": 2.583
+    },
+    "put one crayon on the yellow mat": {
+      "text": "Put one crayon on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/34788e9265d3939b.mp3",
+      "qaTranscript": "Put one crayon on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "efc79f68cb089dec4e079efbe841d96f82777fc36418a812d54762352fc9f2ca",
+      "duration": 2.72
+    },
+    "yeah great job one crayon": {
+      "text": "Yeah! Great job! one crayon.",
+      "src": "assets/unit2/audio-higgs/416ba1c25fcc5e8e.mp3",
+      "qaTranscript": "Yeah, great job, one crayon.",
+      "transcriptMatch": true,
+      "sha256": "32036254edff6a9f050d6456b7ad7a5b0b886b6a09695d596042d84243700e6a",
+      "duration": 3.529
+    },
+    "put two crayons on the yellow mat": {
+      "text": "Put two crayons on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/93b37eb49487b704.mp3",
+      "qaTranscript": "Put two crayons on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "914dc58ea290e54dda8f81f43ed783a8d2e344b149e1e44f53ab3d647001b629",
+      "duration": 2.486
+    },
+    "yeah great job two crayons": {
+      "text": "Yeah! Great job! two crayons.",
+      "src": "assets/unit2/audio-higgs/7726a510fce245bb.mp3",
+      "qaTranscript": "Yeah, great job, two crayons.",
+      "transcriptMatch": true,
+      "sha256": "23ef1475d3ca13a0ba39f07d8dfa62e66e6f621473bdfc9437620b94c220f3d5",
+      "duration": 3.53
+    },
+    "put three crayons on the yellow mat": {
+      "text": "Put three crayons on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/76a1267ad642e99c.mp3",
+      "qaTranscript": "Put three crayons on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "d4a791ed98f666de51ef6650ea4e9f21c5545c3c7e194c62e61f75961515355a",
+      "duration": 2.564
+    },
+    "yeah great job three crayons": {
+      "text": "Yeah! Great job! three crayons.",
+      "src": "assets/unit2/audio-higgs/c1cb37e6744f7c07.mp3",
+      "qaTranscript": "Yeah. Great job. Three crayons.",
+      "transcriptMatch": true,
+      "sha256": "cdd05ae4810381807ffb711bcb58430a6419f66a1daefc5d927fca12b62a2212",
+      "duration": 3.744
+    },
+    "put four crayons on the yellow mat": {
+      "text": "Put four crayons on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/1ecfef29baa16f7f.mp3",
+      "qaTranscript": "Put four crayons on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "fa4952178ad12b3644a720becfc05473f2fa3094ee0e44bbbb2c57aaf9bc9772",
+      "duration": 2.679
+    },
+    "yeah great job four crayons": {
+      "text": "Yeah! Great job! four crayons.",
+      "src": "assets/unit2/audio-higgs/7295579a5b30c47c.mp3",
+      "qaTranscript": "Yeah, great job, four crayons.",
+      "transcriptMatch": true,
+      "sha256": "b52d18cff48f0bf575c90a59cd26eaef236ebbd35274dfeb22d089501d6e94e2",
+      "duration": 3.512
+    },
+    "put five crayons on the yellow mat": {
+      "text": "Put five crayons on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/b3c8b6bde2106bc4.mp3",
+      "qaTranscript": "Put 5 crayons on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "e4d311c65ca4b61470cf32358af670ebd1145d49b4ebbdf2373cee41b9fca460",
+      "duration": 2.804
+    },
+    "yeah great job five crayons": {
+      "text": "Yeah! Great job! five crayons.",
+      "src": "assets/unit2/audio-higgs/2842a8df328550b1.mp3",
+      "qaTranscript": "Yeah, great job, 5 crayons.",
+      "transcriptMatch": true,
+      "sha256": "7394688f8f687781954b468ab851bf53be7779ceaec56f9b272b2583ef755a49",
+      "duration": 3.767
+    },
+    "put six crayons on the yellow mat": {
+      "text": "Put six crayons on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/3f724df81a07fc43.mp3",
+      "qaTranscript": "Put six crayons on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "0a8dacf7f104e8a956110f5f38489d22849777d6e400ab8b7522544172e7b8d8",
+      "duration": 2.548
+    },
+    "yeah great job six crayons": {
+      "text": "Yeah! Great job! six crayons.",
+      "src": "assets/unit2/audio-higgs/e96ed2e1384f9c78.mp3",
+      "qaTranscript": "Yeah, great job, 6 crayons.",
+      "transcriptMatch": true,
+      "sha256": "43f5de26aea994df4de3741fa962e7d5ac85f14f6e2fbf71eb921ba1b0a6bf01",
+      "duration": 3.587
+    },
+    "it s a notebook": {
+      "text": "It's a notebook.",
+      "src": "assets/unit2/audio-higgs/7ac6b6012dfc8c27.mp3",
+      "qaTranscript": "It's a notebook.",
+      "transcriptMatch": true,
+      "sha256": "d7b545c28519f0e208bdfd89301b5bf8198db7be0ba3c80c23250501eba2a52f",
+      "duration": 1.262
+    },
+    "yeah great listening notebook": {
+      "text": "Yeah! Great listening! notebook.",
+      "src": "assets/unit2/audio-higgs/793427b029ee6a54.mp3",
+      "qaTranscript": "Yeah, great listening. Notebook.",
+      "transcriptMatch": true,
+      "sha256": "c730105ea673e49a23a58f1dc02e7f5b1b5fe5adf0b39b99d1a59fe50b467e04",
+      "duration": 3.346
+    },
+    "incorrect try again touch the notebook": {
+      "text": "Incorrect. Try again. Touch the notebook.",
+      "src": "assets/unit2/audio-higgs/7a703c75ffb52f38.mp3",
+      "qaTranscript": "Incorrect. Try again. Touch the notebook.",
+      "transcriptMatch": true,
+      "sha256": "c5f7d620e31f35b3dd03fb893cefe24b28e6cc6b2b1c624d2cbb1a6cbcb0cd5e",
+      "duration": 3.779
+    },
+    "yeah great job notebook": {
+      "text": "Yeah! Great job! notebook.",
+      "src": "assets/unit2/audio-higgs/999a9c401e29c9f0.mp3",
+      "qaTranscript": "Yeah. Great job. Notebook.",
+      "transcriptMatch": true,
+      "sha256": "20189f2185969b7fbd911d440688376cf31c8acfa456145e9be276690c3a13b2",
+      "duration": 3.755
+    },
+    "touch the notebook": {
+      "text": "Touch the notebook.",
+      "src": "assets/unit2/audio-higgs/3d62942290626495.mp3",
+      "qaTranscript": "Touch the notebook.",
+      "transcriptMatch": true,
+      "sha256": "24e56cd98c3fa10effdca682a0d6c8c199e22116b2d09dc92b3898c673e7c618",
+      "duration": 1.418
+    },
+    "listen it s a notebook now you try": {
+      "text": "Listen: It's a notebook. Now you try.",
+      "src": "assets/unit2/audio-higgs/fb1633d10f701b2c.mp3",
+      "qaTranscript": "Listen, it's a notebook. Now you try.",
+      "transcriptMatch": true,
+      "sha256": "39814fe4ca0552c021c6a7c3a03e8503429bf5a4dcbdb26f62243f3eebd0abf9",
+      "duration": 3.649
+    },
+    "the missing picture is notebook": {
+      "text": "The missing picture is notebook.",
+      "src": "assets/unit2/audio-higgs/304ce63fa23f10cd.mp3",
+      "qaTranscript": "The missing picture is notebook.",
+      "transcriptMatch": true,
+      "sha256": "916c30f40acc3cbe219a8a04d3e71837cf55c5e68d86ad7ee3a60f4b1451a8e2",
+      "duration": 2.355
+    },
+    "put one notebook on the yellow mat": {
+      "text": "Put one notebook on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/104b18f3b21a3552.mp3",
+      "qaTranscript": "Put one notebook on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "67a57d940abe9fec66c7173e72693f821e993237ca83fffb7aba35b886f6da4f",
+      "duration": 2.455
+    },
+    "yeah great job one notebook": {
+      "text": "Yeah! Great job! one notebook.",
+      "src": "assets/unit2/audio-higgs/da31837327a6ba56.mp3",
+      "qaTranscript": "Yeah, great job, one notebook.",
+      "transcriptMatch": true,
+      "sha256": "cb71fee81189b90bd0baf44ab286c420026c415e7be8312db80d225cb84bbbe8",
+      "duration": 3.262
+    },
+    "put two notebooks on the yellow mat": {
+      "text": "Put two notebooks on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/5afa8541fd6dcf5d.mp3",
+      "qaTranscript": "Put two notebooks on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "bbdd17737a5f1a663f25d185a8a48607ff20a8f83301a240064325b2c420acc8",
+      "duration": 2.533
+    },
+    "yeah great job two notebooks": {
+      "text": "Yeah! Great job! two notebooks.",
+      "src": "assets/unit2/audio-higgs/970bce109cd9a452.mp3",
+      "qaTranscript": "Yeah, great job! Two notebooks.",
+      "transcriptMatch": true,
+      "sha256": "d4234885e18a8bc28ce852a86e52c938092e44dd08a2b6892fd48f15c684cde6",
+      "duration": 3.778
+    },
+    "put three notebooks on the yellow mat": {
+      "text": "Put three notebooks on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/27754472ed655d5f.mp3",
+      "qaTranscript": "Put three notebooks on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "d8f6994b83f9eaee7b0aeeb0ee5f85326d1db18d2609a130661c9b623b467d3b",
+      "duration": 2.558
+    },
+    "yeah great job three notebooks": {
+      "text": "Yeah! Great job! three notebooks.",
+      "src": "assets/unit2/audio-higgs/8a7ba37efa39d2af.mp3",
+      "qaTranscript": "Yeah, great job. Three notebooks.",
+      "transcriptMatch": true,
+      "sha256": "c14154b002691b63a1c56b64875cbcd3405d801f9c74ef021bedaab962bc9d32",
+      "duration": 3.8
+    },
+    "put four notebooks on the yellow mat": {
+      "text": "Put four notebooks on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/4a8d58565fccec26.mp3",
+      "qaTranscript": "Put four notebooks on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "7c34792eb13ee1bb8e3e96937394f8a7cfabfacdf66b02fa30c8ea7d514ac7b5",
+      "duration": 2.588
+    },
+    "yeah great job four notebooks": {
+      "text": "Yeah! Great job! four notebooks.",
+      "src": "assets/unit2/audio-higgs/3acb606435d97d32.mp3",
+      "qaTranscript": "Yeah, great job. Four notebooks.",
+      "transcriptMatch": true,
+      "sha256": "b62a189ca2ca5aa051021929c56562d5db83b4128a33c604dca4aaf42ec11855",
+      "duration": 3.527
+    },
+    "put five notebooks on the yellow mat": {
+      "text": "Put five notebooks on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/1bb8c9aae100f717.mp3",
+      "qaTranscript": "Put five notebooks on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "77340a6e9716a0413e8b0c3e500ab700dfc8e2a7525378cdd2c9faf3f68a0e3a",
+      "duration": 2.534
+    },
+    "yeah great job five notebooks": {
+      "text": "Yeah! Great job! five notebooks.",
+      "src": "assets/unit2/audio-higgs/a1396c3ca4c035ca.mp3",
+      "qaTranscript": "Yeah. Great job. Five notebooks.",
+      "transcriptMatch": true,
+      "sha256": "26a2f409a9a6458dd63b31fc8490abeb2e3a8ff943d537197548df30cd09ed2f",
+      "duration": 3.968
+    },
+    "put six notebooks on the yellow mat": {
+      "text": "Put six notebooks on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/af73d327303db584.mp3",
+      "qaTranscript": "Put six notebooks on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "ffff10dbc2a84cd4dc5553e11155b1f0a76eb3a64aea8661983a176a20ab01e0",
+      "duration": 2.587
+    },
+    "yeah great job six notebooks": {
+      "text": "Yeah! Great job! six notebooks.",
+      "src": "assets/unit2/audio-higgs/112426f85987ecc4.mp3",
+      "qaTranscript": "Yeah, great job. Six notebooks.",
+      "transcriptMatch": true,
+      "sha256": "5e8113b0f89ce2f710b3e8be573861428eac708d66b302697cb55226cbc95af7",
+      "duration": 3.873
+    },
+    "it s an egg": {
+      "text": "It's an egg.",
+      "src": "assets/unit2/audio-higgs/0eabbb2ea719c034.mp3",
+      "qaTranscript": "It's an egg.",
+      "transcriptMatch": true,
+      "sha256": "6db449e2370f67469da4b6040cdba049b9247547bbef91b3dbefa747eb999f1a",
+      "duration": 1.141
+    },
+    "yeah great listening egg": {
+      "text": "Yeah! Great listening! egg.",
+      "src": "assets/unit2/audio-higgs/51ec0d08d9e77558.mp3",
+      "qaTranscript": "Yeah. Great listening. Egg.",
+      "transcriptMatch": true,
+      "sha256": "2ea48b211e13a38cc53444d0ed20e28341c5d0011fa9026fe45d5a1ae9b95ca3",
+      "duration": 3.266
+    },
+    "incorrect try again touch the egg": {
+      "text": "Incorrect. Try again. Touch the egg.",
+      "src": "assets/unit2/audio-higgs/49de18420c73efb4.mp3",
+      "qaTranscript": "Incorrect. Try again. Touch the egg.",
+      "transcriptMatch": true,
+      "sha256": "d51f8d5ea0bb93b3e2f9a19626a5ca6c1deafc37d1f2a7f8777002a59d51f204",
+      "duration": 3.578
+    },
+    "yeah great job egg": {
+      "text": "Yeah! Great job! egg.",
+      "src": "assets/unit2/audio-higgs/2f7edc9691293c08.mp3",
+      "qaTranscript": "Yeah. Great job. Egg.",
+      "transcriptMatch": true,
+      "sha256": "cbb994864a50ee83506e615634190f4bc6d96356ffb66939856949ce179f7b8c",
+      "duration": 3.083
+    },
+    "touch the egg": {
+      "text": "Touch the egg.",
+      "src": "assets/unit2/audio-higgs/9d48a4b689087f20.mp3",
+      "qaTranscript": "Touch the egg.",
+      "transcriptMatch": true,
+      "sha256": "ff845cc3d9dfd117c734963bd51d05d59ce0f6f67fe9da6e85b83f6be7098fdf",
+      "duration": 1.37
+    },
+    "listen it s an egg now you try": {
+      "text": "Listen: It's an egg. Now you try.",
+      "src": "assets/unit2/audio-higgs/d38fe739332e51d4.mp3",
+      "qaTranscript": "Listen, it's an egg, now you try.",
+      "transcriptMatch": true,
+      "sha256": "b0e5e9a67da14d40544078aac6a1191baf8995434fccd1d937fe851c13725053",
+      "duration": 3.568
+    },
+    "the missing picture is egg": {
+      "text": "The missing picture is egg.",
+      "src": "assets/unit2/audio-higgs/2a9fab0daef7739e.mp3",
+      "qaTranscript": "The missing picture is egg.",
+      "transcriptMatch": true,
+      "sha256": "d1ae9c122b5323acec2ad480c5d35a700e539c8a678b6c52449647fbd86a1c81",
+      "duration": 2.098
+    },
+    "put one egg on the yellow mat": {
+      "text": "Put one egg on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/6dff2218a6cc3d8c.mp3",
+      "qaTranscript": "Put one egg on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "7a0d225b4fd165ddda5750dea690c508f959076704825c9fda9f57ea5a86f690",
+      "duration": 2.301
+    },
+    "yeah great job one egg": {
+      "text": "Yeah! Great job! one egg.",
+      "src": "assets/unit2/audio-higgs/2717d0280ff0808a.mp3",
+      "qaTranscript": "Yeah, great job. One egg.",
+      "transcriptMatch": true,
+      "sha256": "e74fafb0ef6577eb1f0959cecfca8f7f1c04c1647fa9fd557b0fb65f9256bb46",
+      "duration": 3.094
+    },
+    "put two eggs on the yellow mat": {
+      "text": "Put two eggs on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/e36fb3ceb13ff2fe.mp3",
+      "qaTranscript": "Put two eggs on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "2553af46aa9292d30c90e8a86c9205b114d99c56b9d1e20e6ceecbb1ac791b82",
+      "duration": 2.416
+    },
+    "yeah great job two eggs": {
+      "text": "Yeah! Great job! two eggs.",
+      "src": "assets/unit2/audio-higgs/eaf062028ae2cd76.mp3",
+      "qaTranscript": "Yeah. Great job. Two eggs.",
+      "transcriptMatch": true,
+      "sha256": "ba55d4ff1e3f73bc7e5d0405d497546a95786ebd60b46c1759bcda585ff63134",
+      "duration": 3.484
+    },
+    "put three eggs on the yellow mat": {
+      "text": "Put three eggs on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/7b1d762645c0f4d0.mp3",
+      "qaTranscript": "Put three eggs on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "24c61de050d5e0380b12215f083b13bf11aca3a7ae334c44bbbe3ec9f45a9a38",
+      "duration": 2.485
+    },
+    "yeah great job three eggs": {
+      "text": "Yeah! Great job! three eggs.",
+      "src": "assets/unit2/audio-higgs/72e317f959e2392e.mp3",
+      "qaTranscript": "Yeah, great job. Three eggs.",
+      "transcriptMatch": true,
+      "sha256": "518efea8ae12a1b3b7bd7d71b4ea2c7b4d246ecd5fe2bc197bc77ff051bd6807",
+      "duration": 3.634
+    },
+    "put four eggs on the yellow mat": {
+      "text": "Put four eggs on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/96e839bfa6972161.mp3",
+      "qaTranscript": "Put four eggs on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "463d60ec0d969ffb015597359cec7b7fd5f81c543927cacd4c587ba285d8eacb",
+      "duration": 2.301
+    },
+    "yeah great job four eggs": {
+      "text": "Yeah! Great job! four eggs.",
+      "src": "assets/unit2/audio-higgs/f7e2c73e33b73a1f.mp3",
+      "qaTranscript": "Yeah, great job. Four eggs.",
+      "transcriptMatch": true,
+      "sha256": "814ce77220f3964acb14d6fb94d34fed942fe4748b40833e95534c00bd8b2335",
+      "duration": 3.413
+    },
+    "put five eggs on the yellow mat": {
+      "text": "Put five eggs on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/6e2382e106591662.mp3",
+      "qaTranscript": "Put five eggs on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "1aed59239a2a1433dcd9a8b7b32a8cfb31c84280a764e2007655d99218cfadb8",
+      "duration": 2.502
+    },
+    "yeah great job five eggs": {
+      "text": "Yeah! Great job! five eggs.",
+      "src": "assets/unit2/audio-higgs/37830713fc30d454.mp3",
+      "qaTranscript": "Yeah, great job. 5 eggs.",
+      "transcriptMatch": true,
+      "sha256": "14f0b0cc36424d4b7741ad626691d0b42a25265f148401dc004c84b0b802ae06",
+      "duration": 3.582
+    },
+    "put six eggs on the yellow mat": {
+      "text": "Put six eggs on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/5e2a38ada099b2cd.mp3",
+      "qaTranscript": "Put six eggs on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "d46b9757dceeff29d4c8d3f22b58deaa95fbe31696feb418a9df7c7e8f03a5d8",
+      "duration": 2.359
+    },
+    "yeah great job six eggs": {
+      "text": "Yeah! Great job! six eggs.",
+      "src": "assets/unit2/audio-higgs/3169defe07ae8a12.mp3",
+      "qaTranscript": "Yeah, great job, six eggs.",
+      "transcriptMatch": true,
+      "sha256": "0f9711c3da26351ddd762c651428292107295c12c932a1250a7398f20a743a6f",
+      "duration": 3.355
+    },
+    "it s an elephant": {
+      "text": "It's an elephant.",
+      "src": "assets/unit2/audio-higgs/e372f563394daa43.mp3",
+      "qaTranscript": "It's an elephant.",
+      "transcriptMatch": true,
+      "sha256": "4cea7a6b60d757f3c1ecc141aa344c075e8d9dbabb9357d383c02ae24bcf928d",
+      "duration": 1.38
+    },
+    "yeah great listening elephant": {
+      "text": "Yeah! Great listening! elephant.",
+      "src": "assets/unit2/audio-higgs/f8255499a2f8b22c.mp3",
+      "qaTranscript": "Yeah. Great listening. Elephant.",
+      "transcriptMatch": true,
+      "sha256": "a508d63fa0b94a8daecd68bc44a4174b7f0aa2e4a70a10765321a38c08e31b06",
+      "duration": 3.446
+    },
+    "incorrect try again touch the elephant": {
+      "text": "Incorrect. Try again. Touch the elephant.",
+      "src": "assets/unit2/audio-higgs/eac4776007515dbe.mp3",
+      "qaTranscript": "incorrect, try again, touch the elephant.",
+      "transcriptMatch": true,
+      "sha256": "e7cd9b5c73bbf127acc29565e060c97ecd59b501f0fe1da8e015722b849e71f9",
+      "duration": 3.739
+    },
+    "yeah great job elephant": {
+      "text": "Yeah! Great job! elephant.",
+      "src": "assets/unit2/audio-higgs/290fb2a73cb4c6c5.mp3",
+      "qaTranscript": "Yeah, great job, elephant.",
+      "transcriptMatch": true,
+      "sha256": "0e8f6c5921ae21cff7ebb10d17bc7716165c09eb881c44b5b4a3f62e498b24c3",
+      "duration": 3.483
+    },
+    "touch the elephant": {
+      "text": "Touch the elephant.",
+      "src": "assets/unit2/audio-higgs/64d72884292e5c73.mp3",
+      "qaTranscript": "Touch the elephant.",
+      "transcriptMatch": true,
+      "sha256": "562058203a2848f79cbded7517f97644c4be4c3a52765a61a0ca779bcbd7bba5",
+      "duration": 1.453
+    },
+    "listen it s an elephant now you try": {
+      "text": "Listen: It's an elephant. Now you try.",
+      "src": "assets/unit2/audio-higgs/b37041b3744187cd.mp3",
+      "qaTranscript": "Listen, it's an elephant. Now you try.",
+      "transcriptMatch": true,
+      "sha256": "713936f202a9a8ec07ae8fb2b73c4c504ec84a62c31f56549c4c6e84f15b017f",
+      "duration": 3.608
+    },
+    "the missing picture is elephant": {
+      "text": "The missing picture is elephant.",
+      "src": "assets/unit2/audio-higgs/9282a95a82cd7593.mp3",
+      "qaTranscript": "The missing picture is elephant.",
+      "transcriptMatch": true,
+      "sha256": "8e35f0f375a7b9554ea5011b66d18b79635d38f799da228f8d5fb50a6b2c660f",
+      "duration": 2.372
+    },
+    "put one elephant on the yellow mat": {
+      "text": "Put one elephant on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/ba8bb6e2fbb48380.mp3",
+      "qaTranscript": "Put one elephant on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "d59dad3e39b50ffd54c453643abbe1f3fefe3d727185fb76e7a4268e5bedbb40",
+      "duration": 2.688
+    },
+    "yeah great job one elephant": {
+      "text": "Yeah! Great job! one elephant.",
+      "src": "assets/unit2/audio-higgs/1fddef4fb3e4856d.mp3",
+      "qaTranscript": "Yeah, great job, one elephant.",
+      "transcriptMatch": true,
+      "sha256": "b7ecbfd70f62136e1bffc415c38551a9a0db83ea5ea1a89e7dc4dcb83a11b64a",
+      "duration": 3.755
+    },
+    "put two elephants on the yellow mat": {
+      "text": "Put two elephants on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/d8ae1659816097e0.mp3",
+      "qaTranscript": "Put two elephants on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "45086b5df2b4f01632aa17e93c6c373ed0ea93589a9d9dd188757a6c7d662b10",
+      "duration": 2.679
+    },
+    "yeah great job two elephants": {
+      "text": "Yeah! Great job! two elephants.",
+      "src": "assets/unit2/audio-higgs/7ee0d5ccb5631c77.mp3",
+      "qaTranscript": "Yeah, great job, two elephants.",
+      "transcriptMatch": true,
+      "sha256": "95485fbfd649af76d8443a53c35f2fd3b168eff76b93625ed093e39699c70e55",
+      "duration": 3.806
+    },
+    "put three elephants on the yellow mat": {
+      "text": "Put three elephants on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/800294e7eb30f7a6.mp3",
+      "qaTranscript": "Put three elephants on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "98cf4e32988b9c61301295afd81bcb08eb1188cda41ed29b24c333df4978ee9e",
+      "duration": 2.857
+    },
+    "yeah great job three elephants": {
+      "text": "Yeah! Great job! three elephants.",
+      "src": "assets/unit2/audio-higgs/1a0a1674295d8b2f.mp3",
+      "qaTranscript": "Yeah. Great job. Three elephants.",
+      "transcriptMatch": true,
+      "sha256": "7e871a67994f979b0e627e4669427cd231b0de16aec17c0f628da4729c9ca066",
+      "duration": 4.0
+    },
+    "put four elephants on the yellow mat": {
+      "text": "Put four elephants on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/20762431446f07f6.mp3",
+      "qaTranscript": "Put four elephants on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "553ac5a5d14dcb93d44e43f73c982d9540e6536ae18e1e124c8d6a9ec7ea841a",
+      "duration": 2.943
+    },
+    "yeah great job four elephants": {
+      "text": "Yeah! Great job! four elephants.",
+      "src": "assets/unit2/audio-higgs/0f6498297052af6b.mp3",
+      "qaTranscript": "Yeah, great job, four elephants.",
+      "transcriptMatch": true,
+      "sha256": "468947163959c69f9bac6be53cac1039a0829bd5c7078590f14bfc8954b47b77",
+      "duration": 3.858
+    },
+    "put five elephants on the yellow mat": {
+      "text": "Put five elephants on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/34406cd510e8001a.mp3",
+      "qaTranscript": "Put five elephants on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "517d0bb994e14132b1502b0881bb7609f0b79b3d4000f94b0492a5bd801a296b",
+      "duration": 2.609
+    },
+    "yeah great job five elephants": {
+      "text": "Yeah! Great job! five elephants.",
+      "src": "assets/unit2/audio-higgs/e22ffc60fbb22ea3.mp3",
+      "qaTranscript": "Yeah, great job, five elephants.",
+      "transcriptMatch": true,
+      "sha256": "6a6092978ac6ad7256aeee3653d8ed379efb01e18bbfac24a6e474cdfe5e7344",
+      "duration": 4.042
+    },
+    "put six elephants on the yellow mat": {
+      "text": "Put six elephants on the yellow mat.",
+      "src": "assets/unit2/audio-higgs/c54997d1f1c18201.mp3",
+      "qaTranscript": "Put six elephants on the yellow mat.",
+      "transcriptMatch": true,
+      "sha256": "401f5089212de478ec94b79d504377b1362c2b14afe6bb19e38e6006e9dfa539",
+      "duration": 2.756
+    },
+    "yeah great job six elephants": {
+      "text": "Yeah! Great job! six elephants.",
+      "src": "assets/unit2/audio-higgs/6e4080e51681e82d.mp3",
+      "qaTranscript": "Yeah, great job, six elephants.",
+      "transcriptMatch": true,
+      "sha256": "946c77b5c36ddb65985bd965a5f7a2cc4838500438b7d15b881e462e356591bd",
+      "duration": 3.728
+    },
+    "red desk": {
+      "text": "red desk",
+      "src": "assets/unit2/audio-higgs/5e99b421912dec06.mp3",
+      "qaTranscript": "Red desk",
+      "transcriptMatch": true,
+      "sha256": "49fcb7999c2816a8596ce683330ace57bd6937857365885c07bfe6d9c8cd43fa",
+      "duration": 1.102
+    },
+    "one red desk": {
+      "text": "one red desk",
+      "src": "assets/unit2/audio-higgs/a6571ccc5a6747cd.mp3",
+      "qaTranscript": "1 Red Desk",
+      "transcriptMatch": true,
+      "sha256": "0333636302d6db00470a45ec9ed0903ef876f309f6e706a896972fda87764fd0",
+      "duration": 1.448
+    },
+    "two red desks": {
+      "text": "two red desks",
+      "src": "assets/unit2/audio-higgs/56ca9a28735b7c9e.mp3",
+      "qaTranscript": "2 red desks",
+      "transcriptMatch": true,
+      "sha256": "11d28feab0daef60f84c57b39ebfb155fc908534bc95180dee6a32cd2de66690",
+      "duration": 1.609
+    },
+    "three red desks": {
+      "text": "three red desks",
+      "src": "assets/unit2/audio-higgs/cddd00eac2b26b93.mp3",
+      "qaTranscript": "Three red desks.",
+      "transcriptMatch": true,
+      "sha256": "71f9bc1ec74fecf2000d6a799963269ff0f007e0f208010d1b07afb023a74b9e",
+      "duration": 1.597
+    },
+    "four red desks": {
+      "text": "four red desks",
+      "src": "assets/unit2/audio-higgs/215687fa6abf698b.mp3",
+      "qaTranscript": "4 red desks.",
+      "transcriptMatch": true,
+      "sha256": "e59a348e76d462d51455ab2e6c86da68564fde365210eb087eb349f981b445d3",
+      "duration": 1.707
+    },
+    "green desk": {
+      "text": "green desk",
+      "src": "assets/unit2/audio-higgs/f7617f3dfc1dedda.mp3",
+      "qaTranscript": "Green Desk",
+      "transcriptMatch": true,
+      "sha256": "0bd8e44db346c9ded2a82d0079d2cf286ad0559d33879c810249d49bc2227a48",
+      "duration": 1.181
+    },
+    "one green desk": {
+      "text": "one green desk",
+      "src": "assets/unit2/audio-higgs/4bd9913232d64058.mp3",
+      "qaTranscript": "1 Green Desk",
+      "transcriptMatch": true,
+      "sha256": "40ae10616db1b9754fa58a0b94fab5df7a04cdc395633b5a64f0e7265f378955",
+      "duration": 1.646
+    },
+    "two green desks": {
+      "text": "two green desks",
+      "src": "assets/unit2/audio-higgs/c5624b12992772b8.mp3",
+      "qaTranscript": "2 green desks",
+      "transcriptMatch": true,
+      "sha256": "8bcab0fd488ccc51891b76afec7bcc5672b768287f10a373260244bc7640b661",
+      "duration": 1.676
+    },
+    "three green desks": {
+      "text": "three green desks",
+      "src": "assets/unit2/audio-higgs/9b28559bb5390442.mp3",
+      "qaTranscript": "3 green desks",
+      "transcriptMatch": true,
+      "sha256": "46ca08c561b3786d157e3ecf7b9ea8a5458538079edfb092eb3893c87a428c56",
+      "duration": 1.902
+    },
+    "four green desks": {
+      "text": "four green desks",
+      "src": "assets/unit2/audio-higgs/e1a2575b74d9e13a.mp3",
+      "qaTranscript": "4 green desks",
+      "transcriptMatch": true,
+      "sha256": "3d60660a3f4e00e78027214cf9b4dfd234f027361a6e83349264dd76a4de8c09",
+      "duration": 1.656
+    },
+    "blue desk": {
+      "text": "blue desk",
+      "src": "assets/unit2/audio-higgs/d1d52b92e8675744.mp3",
+      "qaTranscript": "Blue desk.",
+      "transcriptMatch": true,
+      "sha256": "569889125b76b5936be25fc7c0f30df21ba03441ebbfae2530ae034913c19a43",
+      "duration": 1.182
+    },
+    "one blue desk": {
+      "text": "one blue desk",
+      "src": "assets/unit2/audio-higgs/4b691c3b27fc7c85.mp3",
+      "qaTranscript": "1 Blue Desk",
+      "transcriptMatch": true,
+      "sha256": "92b06fbfe9d5be542cd5ca3610d6b944f0994aa9b7aa7174bf1839bcf61200ba",
+      "duration": 1.463
+    },
+    "two blue desks": {
+      "text": "two blue desks",
+      "src": "assets/unit2/audio-higgs/ef66671d1c641648.mp3",
+      "qaTranscript": "Two blue desks.",
+      "transcriptMatch": true,
+      "sha256": "a72f7600206c6f71b09b12544d0561bc88c994c03ad3e129142346f78099c40e",
+      "duration": 1.65
+    },
+    "three blue desks": {
+      "text": "three blue desks",
+      "src": "assets/unit2/audio-higgs/babdf898f3a2daff.mp3",
+      "qaTranscript": "3 blue desks",
+      "transcriptMatch": true,
+      "sha256": "a767629fee9b907dce9e9373c19234f00dc03e716b61a53ed6de7815317da613",
+      "duration": 1.619
+    },
+    "four blue desks": {
+      "text": "four blue desks",
+      "src": "assets/unit2/audio-higgs/83f996b2559b66f1.mp3",
+      "qaTranscript": "four blue desks.",
+      "transcriptMatch": true,
+      "sha256": "acdb299e8ff8af4fe88c487ec9af20681041e954125dbffbae20c34bb1b6904c",
+      "duration": 1.801
+    },
+    "black desk": {
+      "text": "black desk",
+      "src": "assets/unit2/audio-higgs/6fde3be2762a270e.mp3",
+      "qaTranscript": "Black desk.",
+      "transcriptMatch": true,
+      "sha256": "6636283b4266073d8b3dd7a705d4e08f82914ca7d9f0d991c31ca3e31180ecb6",
+      "duration": 1.22
+    },
+    "one black desk": {
+      "text": "one black desk",
+      "src": "assets/unit2/audio-higgs/b80e5cb95868adc4.mp3",
+      "qaTranscript": "1 black desk",
+      "transcriptMatch": true,
+      "sha256": "dec3efbbb85cca84f0a3c5070ff8a489f632a017044f7d4baebe3d9fc673872a",
+      "duration": 1.546
+    },
+    "two black desks": {
+      "text": "two black desks",
+      "src": "assets/unit2/audio-higgs/e7f32c36f9e192f7.mp3",
+      "qaTranscript": "2 black desks",
+      "transcriptMatch": true,
+      "sha256": "96dde8116e995545d40a5705262dc9a93febdad61b3da03bdec84e5db0808b8f",
+      "duration": 1.567
+    },
+    "three black desks": {
+      "text": "three black desks",
+      "src": "assets/unit2/audio-higgs/0e4d03847673133d.mp3",
+      "qaTranscript": "3 black desks",
+      "transcriptMatch": true,
+      "sha256": "858b81c82f28218df72fe9939947ec213cf87923f018565a75e4f9d91b38e859",
+      "duration": 1.747
+    },
+    "four black desks": {
+      "text": "four black desks",
+      "src": "assets/unit2/audio-higgs/5d2c51a759beccbc.mp3",
+      "qaTranscript": "4 black desks",
+      "transcriptMatch": true,
+      "sha256": "a69350514639230e67b48647219ac90870a3da2ab4aaad6ac322fd59bb4c3661",
+      "duration": 1.637
+    },
+    "white desk": {
+      "text": "white desk",
+      "src": "assets/unit2/audio-higgs/65ab81ba74f20839.mp3",
+      "qaTranscript": "White desk.",
+      "transcriptMatch": true,
+      "sha256": "249b2f7a32f4d7009d6320f0d8577225d2d9eff81a4fcc44d95cdaca75db19cb",
+      "duration": 1.256
+    },
+    "one white desk": {
+      "text": "one white desk",
+      "src": "assets/unit2/audio-higgs/aa6238ab8b7fae17.mp3",
+      "qaTranscript": "1 white desk",
+      "transcriptMatch": true,
+      "sha256": "ba76ccc128db4010e8440a7f996334ffa02047761d65109a5ebf595b22141c95",
+      "duration": 1.436
+    },
+    "two white desks": {
+      "text": "two white desks",
+      "src": "assets/unit2/audio-higgs/bbd67d28b7d2515c.mp3",
+      "qaTranscript": "2 white desks",
+      "transcriptMatch": true,
+      "sha256": "6040607c5e1ce6a396747703f9888ae8d45d3a70a8a59999d714b724cf971282",
+      "duration": 1.604
+    },
+    "three white desks": {
+      "text": "three white desks",
+      "src": "assets/unit2/audio-higgs/e081418e5d6d7bcd.mp3",
+      "qaTranscript": "3 white desks",
+      "transcriptMatch": true,
+      "sha256": "8035392350f81676231edf5d59b332b710b48cd2603e277612d80d0778b4eff7",
+      "duration": 1.738
+    },
+    "four white desks": {
+      "text": "four white desks",
+      "src": "assets/unit2/audio-higgs/e2d2783e89719e68.mp3",
+      "qaTranscript": "4 white desks.",
+      "transcriptMatch": true,
+      "sha256": "c59946e3033a3cd3fcef885bb604c7b838e8c082ba2c63e7eabc77bc60988268",
+      "duration": 1.808
+    },
+    "red chair": {
+      "text": "red chair",
+      "src": "assets/unit2/audio-higgs/aeadafa79d05cd44.mp3",
+      "qaTranscript": "Red Chair",
+      "transcriptMatch": true,
+      "sha256": "cdf3e4be9baf5e5e1287ab9c45d04292ea4311e22c6241ae092f3da0376bd327",
+      "duration": 1.073
+    },
+    "one red chair": {
+      "text": "one red chair",
+      "src": "assets/unit2/audio-higgs/e10d9d86396fc1f2.mp3",
+      "qaTranscript": "1 Red Chair",
+      "transcriptMatch": true,
+      "sha256": "1c025aa4152ca1923b90086e37e32f4912fde21cbd816e92c96b03ebf307b39c",
+      "duration": 1.307
+    },
+    "two red chairs": {
+      "text": "two red chairs",
+      "src": "assets/unit2/audio-higgs/0c6309e4d6d5f9df.mp3",
+      "qaTranscript": "2 Red Chairs",
+      "transcriptMatch": true,
+      "sha256": "3a4b8e21a1e1f6887bc9e6246f7f2125b32a45481c05fc5ffff3fb6e4d2f7b69",
+      "duration": 1.929
+    },
+    "three red chairs": {
+      "text": "three red chairs",
+      "src": "assets/unit2/audio-higgs/bde197324b2f999c.mp3",
+      "qaTranscript": "3 Red Chairs",
+      "transcriptMatch": true,
+      "sha256": "431331e91f3cbb70de709ed83bc556ff883cfd088f9a7b886ad0532756b03c06",
+      "duration": 1.694
+    },
+    "four red chairs": {
+      "text": "four red chairs",
+      "src": "assets/unit2/audio-higgs/6447ae9724162385.mp3",
+      "qaTranscript": "4 Red Chairs",
+      "transcriptMatch": true,
+      "sha256": "8b4450e21eb9c1e0398ef7e19b0285f1ec11b5f6da45f39e2b48eb30844c130e",
+      "duration": 1.75
+    },
+    "green chair": {
+      "text": "green chair",
+      "src": "assets/unit2/audio-higgs/baf821922c46f614.mp3",
+      "qaTranscript": "Green chair.",
+      "transcriptMatch": true,
+      "sha256": "1b4150134d82fd12e7a0e05df39e4228b05d8df10b1339a4dc44ae3fce74b5ee",
+      "duration": 1.336
+    },
+    "one green chair": {
+      "text": "one green chair",
+      "src": "assets/unit2/audio-higgs/7558c239b21874c7.mp3",
+      "qaTranscript": "1 Green Chair",
+      "transcriptMatch": true,
+      "sha256": "2c8d4f2bbdd4a24462411f775127bae9fb8f84a3f5f20300863bd23ba963eb81",
+      "duration": 1.464
+    },
+    "two green chairs": {
+      "text": "two green chairs",
+      "src": "assets/unit2/audio-higgs/c5a49e32ff2e75a7.mp3",
+      "qaTranscript": "2 Green Chairs",
+      "transcriptMatch": true,
+      "sha256": "d5e18e20b753d7e58f0c0226862464e0e6d4a9723aaae658484b10b6635b660b",
+      "duration": 1.806
+    },
+    "three green chairs": {
+      "text": "three green chairs",
+      "src": "assets/unit2/audio-higgs/fa79e770514623c0.mp3",
+      "qaTranscript": "3. Green Chairs",
+      "transcriptMatch": true,
+      "sha256": "7f313cc000597bd298a88de44b5da7f5c89e430c22d8f64c457d1aacd7e28dcd",
+      "duration": 1.834
+    },
+    "four green chairs": {
+      "text": "four green chairs",
+      "src": "assets/unit2/audio-higgs/c59f5c87f9de70a0.mp3",
+      "qaTranscript": "4 Green Chairs",
+      "transcriptMatch": true,
+      "sha256": "82a1d001b5311b2c11f4eab5123904bde6622c6c1e4b77f68560eaec030b3b03",
+      "duration": 1.584
+    },
+    "blue chair": {
+      "text": "blue chair",
+      "src": "assets/unit2/audio-higgs/9a36e05f5d57b2c3.mp3",
+      "qaTranscript": "Blue chair.",
+      "transcriptMatch": true,
+      "sha256": "688d2ba4d7eeacd6cc58a220b05b397042e327f50a5444e4b8c4a475d272d768",
+      "duration": 1.063
+    },
+    "one blue chair": {
+      "text": "one blue chair",
+      "src": "assets/unit2/audio-higgs/4e679af63b85be5e.mp3",
+      "qaTranscript": "1 blue chair",
+      "transcriptMatch": true,
+      "sha256": "bf8c36e5c12d95b14e6abcda0955cb0ae8ec2932391b57f0e567dc2fd527888f",
+      "duration": 1.499
+    },
+    "two blue chairs": {
+      "text": "two blue chairs",
+      "src": "assets/unit2/audio-higgs/fb5bdf638af1d960.mp3",
+      "qaTranscript": "Two blue chairs.",
+      "transcriptMatch": true,
+      "sha256": "5657cd22888e0ae6ddff2d8b3c6e358e095d461cc7b6ea671106b1bce7cce030",
+      "duration": 1.716
+    },
+    "three blue chairs": {
+      "text": "three blue chairs",
+      "src": "assets/unit2/audio-higgs/67bea4d9a5733b97.mp3",
+      "qaTranscript": "3 blue chairs",
+      "transcriptMatch": true,
+      "sha256": "c29389fe660d92503f68c31a2b66c44017cd2716b33de9e295caa4101772a75c",
+      "duration": 1.704
+    },
+    "four blue chairs": {
+      "text": "four blue chairs",
+      "src": "assets/unit2/audio-higgs/1db6eec7181d609d.mp3",
+      "qaTranscript": "4 blue chairs",
+      "transcriptMatch": true,
+      "sha256": "767d6718f8ab24782ff26cc8171af679169753bde19a07f036822b70bfcd2fe9",
+      "duration": 1.791
+    },
+    "black chair": {
+      "text": "black chair",
+      "src": "assets/unit2/audio-higgs/c83642862c26a094.mp3",
+      "qaTranscript": "Black chair",
+      "transcriptMatch": true,
+      "sha256": "b090820abf94c2f2dac59ba8409ec12faf5e473705e0cbd60efaac60f79a625a",
+      "duration": 1.092
+    },
+    "one black chair": {
+      "text": "one black chair",
+      "src": "assets/unit2/audio-higgs/1823ccded0ca9a75.mp3",
+      "qaTranscript": "1. Black Chair",
+      "transcriptMatch": true,
+      "sha256": "77562248eee31144543996d0a21999557cdc97fc18484dd10e67fe382a209773",
+      "duration": 1.417
+    },
+    "two black chairs": {
+      "text": "two black chairs",
+      "src": "assets/unit2/audio-higgs/61c6f57777ac0257.mp3",
+      "qaTranscript": "2 black chairs",
+      "transcriptMatch": true,
+      "sha256": "e10237512d88d23a4471047c2726113d3a8e51216d85cacb41d2c04beb6de412",
+      "duration": 1.728
+    },
+    "three black chairs": {
+      "text": "three black chairs",
+      "src": "assets/unit2/audio-higgs/fc2ff25d486c7b62.mp3",
+      "qaTranscript": "3 Black Chairs",
+      "transcriptMatch": true,
+      "sha256": "29cac561f774926e2a087c5079c9106deda3688d7a39e171657dfe2e7cc9dfaa",
+      "duration": 1.83
+    },
+    "four black chairs": {
+      "text": "four black chairs",
+      "src": "assets/unit2/audio-higgs/2671274075e439fd.mp3",
+      "qaTranscript": "4 black chairs",
+      "transcriptMatch": true,
+      "sha256": "cb169dc6d068549e7602e0d1dbd081bdcd2d935dc4dc687e518e3bebee14eec7",
+      "duration": 1.944
+    },
+    "white chair": {
+      "text": "white chair",
+      "src": "assets/unit2/audio-higgs/0ff69ed332e87078.mp3",
+      "qaTranscript": "White chair.",
+      "transcriptMatch": true,
+      "sha256": "b22c00b57395d5e938acdacb537bad36307bd9f7056f7a60aa6ec3d0446b619e",
+      "duration": 1.234
+    },
+    "one white chair": {
+      "text": "one white chair",
+      "src": "assets/unit2/audio-higgs/0b53881e7ee6b208.mp3",
+      "qaTranscript": "1 white chair",
+      "transcriptMatch": true,
+      "sha256": "e305e05d34e8cc2ff3938065e03b244392e1deaa23e2b29d7636907accc3bba5",
+      "duration": 1.475
+    },
+    "two white chairs": {
+      "text": "two white chairs",
+      "src": "assets/unit2/audio-higgs/8e60644640af2e40.mp3",
+      "qaTranscript": "2 white chairs",
+      "transcriptMatch": true,
+      "sha256": "68e1cea75d543e04ab3fd0a47e90ad37a96544fb4922284dbdbad171dac69204",
+      "duration": 1.719
+    },
+    "three white chairs": {
+      "text": "three white chairs",
+      "src": "assets/unit2/audio-higgs/ec65b63e3b71671d.mp3",
+      "qaTranscript": "3. White Chairs",
+      "transcriptMatch": true,
+      "sha256": "35ccb969715e41529153c4a96d20c9f0db9ff31f1ae259729528ad2da5ca9e7f",
+      "duration": 1.649
+    },
+    "four white chairs": {
+      "text": "four white chairs",
+      "src": "assets/unit2/audio-higgs/f8fd1ed3aad69483.mp3",
+      "qaTranscript": "4 white chairs",
+      "transcriptMatch": true,
+      "sha256": "9cdcadfed9953e091b4b465cee8ec7183c7bd2202ad932f3a30e2a1fe6ce9026",
+      "duration": 1.659
+    },
+    "red pencil": {
+      "text": "red pencil",
+      "src": "assets/unit2/audio-higgs/298916dc20f7c3ff.mp3",
+      "qaTranscript": "Red Pencil",
+      "transcriptMatch": true,
+      "sha256": "e511b780f8421d8c80f6020fa958c1f6495d752492bb41e9219336faa4637a9a",
+      "duration": 1.145
+    },
+    "one red pencil": {
+      "text": "one red pencil",
+      "src": "assets/unit2/audio-higgs/53decdeccd45cd2f.mp3",
+      "qaTranscript": "1 Red Pencil",
+      "transcriptMatch": true,
+      "sha256": "66ec98246056211ab5222879e91a2d72f17fe5df92d312fbd39adcea2013bf7f",
+      "duration": 1.544
+    },
+    "two red pencils": {
+      "text": "two red pencils",
+      "src": "assets/unit2/audio-higgs/92ff41c0aa27747e.mp3",
+      "qaTranscript": "2 red pencils",
+      "transcriptMatch": true,
+      "sha256": "a256cbc4d45b4d9a9346b103009807c27bca315c98687d4b83f7b30aabc875c7",
+      "duration": 1.808
+    },
+    "three red pencils": {
+      "text": "three red pencils",
+      "src": "assets/unit2/audio-higgs/ba545a1278a9e05f.mp3",
+      "qaTranscript": "3 Red Pencils",
+      "transcriptMatch": true,
+      "sha256": "ec6ac29cc354a097e027e0324dc836d38f51d57fd16a7d016067255fa752a240",
+      "duration": 1.669
+    },
+    "four red pencils": {
+      "text": "four red pencils",
+      "src": "assets/unit2/audio-higgs/049a95cf44da25c8.mp3",
+      "qaTranscript": "4 Red Pencils",
+      "transcriptMatch": true,
+      "sha256": "141646acd30ffd8d953adf5d837741cd28e8d47f1d6f7bad37584eaacdd54833",
+      "duration": 1.747
+    },
+    "green pencil": {
+      "text": "green pencil",
+      "src": "assets/unit2/audio-higgs/06912ac3c6e14a90.mp3",
+      "qaTranscript": "Green Pencil",
+      "transcriptMatch": true,
+      "sha256": "034b278a0030be22e6fe43d391aa48d0b4ff1bd6a7431bb33d7de92b25c963ae",
+      "duration": 1.271
+    },
+    "one green pencil": {
+      "text": "one green pencil",
+      "src": "assets/unit2/audio-higgs/541bdc800e4c7a4e.mp3",
+      "qaTranscript": "1 Green Pencil",
+      "transcriptMatch": true,
+      "sha256": "bd49b3fdb6738a72e13987440d54dabf1c4c7bccb80814eedf5a172215b4aa8a",
+      "duration": 1.88
+    },
+    "two green pencils": {
+      "text": "two green pencils",
+      "src": "assets/unit2/audio-higgs/8db2ac722df7022f.mp3",
+      "qaTranscript": "Two green pencils.",
+      "transcriptMatch": true,
+      "sha256": "9682e8f9f2d02840914a8629ef700cbcb05ef053ac457f660dfe282763ed33a9",
+      "duration": 1.877
+    },
+    "three green pencils": {
+      "text": "three green pencils",
+      "src": "assets/unit2/audio-higgs/5d9ea2d803eb6093.mp3",
+      "qaTranscript": "3 Green Pencils",
+      "transcriptMatch": true,
+      "sha256": "26c821967f4fe56f4a182e233a29f56e7fc340e038eb37cb77ec28b0975770c3",
+      "duration": 1.792
+    },
+    "four green pencils": {
+      "text": "four green pencils",
+      "src": "assets/unit2/audio-higgs/765c0a16c41847b4.mp3",
+      "qaTranscript": "4 Green Pencils",
+      "transcriptMatch": true,
+      "sha256": "85838ff75f5c0c630190a6afb3bd4f488c8d78b08caa689e2ec8db355d8c5021",
+      "duration": 2.006
+    },
+    "blue pencil": {
+      "text": "blue pencil",
+      "src": "assets/unit2/audio-higgs/968a4dadce5b60bd.mp3",
+      "qaTranscript": "Blue Pencil",
+      "transcriptMatch": true,
+      "sha256": "0197e50132a6bedf21aea569a4349d1bcf2bf04df9113fb2e23d323f2f329649",
+      "duration": 1.223
+    },
+    "one blue pencil": {
+      "text": "one blue pencil",
+      "src": "assets/unit2/audio-higgs/09ef7acb0982e319.mp3",
+      "qaTranscript": "1 Blue Pencil",
+      "transcriptMatch": true,
+      "sha256": "7e54e8722820f2ac8667b27c69eaba6f07440d8952722bd511ab22140385fb0f",
+      "duration": 1.719
+    },
+    "two blue pencils": {
+      "text": "two blue pencils",
+      "src": "assets/unit2/audio-higgs/0dddf9b165b03c9f.mp3",
+      "qaTranscript": "Two blue pencils.",
+      "transcriptMatch": true,
+      "sha256": "3b087affc3ecc60dab3e45f64eb8b111a97d33038f43fc9ca908b160187375b7",
+      "duration": 1.711
+    },
+    "three blue pencils": {
+      "text": "three blue pencils",
+      "src": "assets/unit2/audio-higgs/5ce1c8e422909c98.mp3",
+      "qaTranscript": "3 blue pencils",
+      "transcriptMatch": true,
+      "sha256": "484b755c7ebb39d8f71ae52638c581b849c9c6be9efca7abf18f48e09df678f8",
+      "duration": 1.704
+    },
+    "four blue pencils": {
+      "text": "four blue pencils",
+      "src": "assets/unit2/audio-higgs/7376391d206bf5f8.mp3",
+      "qaTranscript": "4 Blue Pencils",
+      "transcriptMatch": true,
+      "sha256": "0f17c15de958eb342293a5915793cf4eb41011751d524b7901d707d62a379df3",
+      "duration": 1.824
+    },
+    "black pencil": {
+      "text": "black pencil",
+      "src": "assets/unit2/audio-higgs/00fec85ba50a5f3d.mp3",
+      "qaTranscript": "Black Pencil",
+      "transcriptMatch": true,
+      "sha256": "c7b452ed9462bcc563d15477b6cd394257e7240c3812234abfe4cad50300e22f",
+      "duration": 1.296
+    },
+    "one black pencil": {
+      "text": "one black pencil",
+      "src": "assets/unit2/audio-higgs/b12e57a62f7a2783.mp3",
+      "qaTranscript": "1 Black Pencil",
+      "transcriptMatch": true,
+      "sha256": "8b1eaff0e1b465f9206868f0eba100ffaa6905d9e13f1b0fcaab956b3dbf3642",
+      "duration": 1.503
+    },
+    "two black pencils": {
+      "text": "two black pencils",
+      "src": "assets/unit2/audio-higgs/025f15f05fa7e53e.mp3",
+      "qaTranscript": "2 Black Pencils",
+      "transcriptMatch": true,
+      "sha256": "246a2cb9a1f38f9933ddd0f61674da1e9638d9314a9c27b61bf220c6b7c02ed0",
+      "duration": 1.697
+    },
+    "three black pencils": {
+      "text": "three black pencils",
+      "src": "assets/unit2/audio-higgs/5a162dfc9b43c5c8.mp3",
+      "qaTranscript": "3 Black Pencils",
+      "transcriptMatch": true,
+      "sha256": "13fcb2718f4d7197c2e37e657492a0054fd5b55fc839c429c0832c1566c8eb6c",
+      "duration": 1.811
+    },
+    "four black pencils": {
+      "text": "four black pencils",
+      "src": "assets/unit2/audio-higgs/df5acfa5921badd8.mp3",
+      "qaTranscript": "4 Black Pencils",
+      "transcriptMatch": true,
+      "sha256": "7dd4461752e3f15ab097007043955090fa8583dbe9268eb153b48433ccd69fd8",
+      "duration": 1.698
+    },
+    "white pencil": {
+      "text": "white pencil",
+      "src": "assets/unit2/audio-higgs/811b80e6c60fbaf7.mp3",
+      "qaTranscript": "White Pencil",
+      "transcriptMatch": true,
+      "sha256": "98fb6acb8ecdb6b949e5b60a80939958e19cb2184446832dc6533ea083f15b8f",
+      "duration": 1.323
+    },
+    "one white pencil": {
+      "text": "one white pencil",
+      "src": "assets/unit2/audio-higgs/1e50ed680cac1167.mp3",
+      "qaTranscript": "1. White Pencil",
+      "transcriptMatch": true,
+      "sha256": "57caa6b20aaf9dd22246479fe0e07de94344534504a84a3bf1499adc934c79f0",
+      "duration": 1.691
+    },
+    "two white pencils": {
+      "text": "two white pencils",
+      "src": "assets/unit2/audio-higgs/d0d3baf5cbabeff6.mp3",
+      "qaTranscript": "2 White Pencils",
+      "transcriptMatch": true,
+      "sha256": "c3ec37ff9b97a823fb689f1d67927f9a0aae0aba5b3ae4b2ed3ce3a33c5c6b75",
+      "duration": 1.752
+    },
+    "three white pencils": {
+      "text": "three white pencils",
+      "src": "assets/unit2/audio-higgs/10de2cadf72d1ff9.mp3",
+      "qaTranscript": "3 White Pencils",
+      "transcriptMatch": true,
+      "sha256": "9e62f86cc46b6a17a3507aaa1e136114c83da42f5a498680bc28705683b6878c",
+      "duration": 1.926
+    },
+    "four white pencils": {
+      "text": "four white pencils",
+      "src": "assets/unit2/audio-higgs/e68c32ab02122be4.mp3",
+      "qaTranscript": "4 white pencils",
+      "transcriptMatch": true,
+      "sha256": "32a25c9bd8c400478774d14c13ec1e0ffea37cc3931189851082a30be8080294",
+      "duration": 2.005
+    },
+    "red crayon": {
+      "text": "red crayon",
+      "src": "assets/unit2/audio-higgs/ce62e80c36a1f0ea.mp3",
+      "qaTranscript": "Red crayon.",
+      "transcriptMatch": true,
+      "sha256": "3bd9cb0b41c9dafb51c2bab5f75bf813ab70ee7de5d687583f8613a2e9903f22",
+      "duration": 1.304
+    },
+    "one red crayon": {
+      "text": "one red crayon",
+      "src": "assets/unit2/audio-higgs/5fd3dccf740c880f.mp3",
+      "qaTranscript": "1 Red crayon",
+      "transcriptMatch": true,
+      "sha256": "722a421908d21b41fbe60385fb19dc9cef003659e01c0abf095dd2775847f407",
+      "duration": 1.672
+    },
+    "two red crayons": {
+      "text": "two red crayons",
+      "src": "assets/unit2/audio-higgs/6f49a7cf7d1bbcd5.mp3",
+      "qaTranscript": "2 red crayons",
+      "transcriptMatch": true,
+      "sha256": "42a41395286e05b199a8c7f3b989bf3f047336459da419a88f60ab7c230025d1",
+      "duration": 1.774
+    },
+    "three red crayons": {
+      "text": "three red crayons",
+      "src": "assets/unit2/audio-higgs/7b5a4738e846ad45.mp3",
+      "qaTranscript": "3 Red crayons",
+      "transcriptMatch": true,
+      "sha256": "a546fa922058d919188eec34b95d44546c161931487fe790b857e1d32baa04fa",
+      "duration": 1.846
+    },
+    "four red crayons": {
+      "text": "four red crayons",
+      "src": "assets/unit2/audio-higgs/edae009ae6d85cae.mp3",
+      "qaTranscript": "4 Red crayons",
+      "transcriptMatch": true,
+      "sha256": "6a839618656ce9d278c00dde8731b930c72ca631a612e899e04fce7d72146b54",
+      "duration": 1.847
+    },
+    "green crayon": {
+      "text": "green crayon",
+      "src": "assets/unit2/audio-higgs/38bb008094be8fad.mp3",
+      "qaTranscript": "Green Crayon",
+      "transcriptMatch": true,
+      "sha256": "544504b36e07a036212561cf84591052874a57b6d55b9f256900ad47da0d8655",
+      "duration": 1.497
+    },
+    "one green crayon": {
+      "text": "one green crayon",
+      "src": "assets/unit2/audio-higgs/766316eb97ac9bf7.mp3",
+      "qaTranscript": "1. Green crayon",
+      "transcriptMatch": true,
+      "sha256": "27925f9e91411fc22793154168b1728345a0204622774a6a1445a3d596cabf5a",
+      "duration": 1.75
+    },
+    "two green crayons": {
+      "text": "two green crayons",
+      "src": "assets/unit2/audio-higgs/8bdc9bd124dacbf7.mp3",
+      "qaTranscript": "Two green crayons.",
+      "transcriptMatch": true,
+      "sha256": "c39e7e8b849a6b53f0bcdd97b00f09dd765082e89fe91801000cc0de370d6a95",
+      "duration": 1.715
+    },
+    "three green crayons": {
+      "text": "three green crayons",
+      "src": "assets/unit2/audio-higgs/74eb7ab2d956a83a.mp3",
+      "qaTranscript": "3. Green crayons",
+      "transcriptMatch": true,
+      "sha256": "da365eceac5d2f443667ff14d75431a5f29dc97ea26d20760bd8918456a026bb",
+      "duration": 1.755
+    },
+    "four green crayons": {
+      "text": "four green crayons",
+      "src": "assets/unit2/audio-higgs/b0d3c1f89419010a.mp3",
+      "qaTranscript": "4. Green crayons",
+      "transcriptMatch": true,
+      "sha256": "45d952c2428290a4386927571cc9591af2413e1b4e01c900ba70eec30e0759f7",
+      "duration": 1.957
+    },
+    "blue crayon": {
+      "text": "blue crayon",
+      "src": "assets/unit2/audio-higgs/4f0518fbf28c8be6.mp3",
+      "qaTranscript": "Blue crayon.",
+      "transcriptMatch": true,
+      "sha256": "5ec0d5b3697f70b3d181ff22b909b8ae533e977fd9cf1471f17bf96b4b119099",
+      "duration": 1.292
+    },
+    "one blue crayon": {
+      "text": "one blue crayon",
+      "src": "assets/unit2/audio-higgs/33d42f3d20e0d15a.mp3",
+      "qaTranscript": "One blue crayon.",
+      "transcriptMatch": true,
+      "sha256": "56c49ac143c7487805857e546933d833ddfc43a91ba05dfa1ce2cc80f1b308f3",
+      "duration": 1.444
+    },
+    "two blue crayons": {
+      "text": "two blue crayons",
+      "src": "assets/unit2/audio-higgs/1029ba52fa23f312.mp3",
+      "qaTranscript": "Two blue crayons.",
+      "transcriptMatch": true,
+      "sha256": "6191402fede7f07218bfe0b9b57ec0e0d82b27ead4ec172325faf6797e44da10",
+      "duration": 1.766
+    },
+    "three blue crayons": {
+      "text": "three blue crayons",
+      "src": "assets/unit2/audio-higgs/06afd60bf83f0e50.mp3",
+      "qaTranscript": "3 blue crayons",
+      "transcriptMatch": true,
+      "sha256": "761bb5c3b1fca615c3c756ef661bb5fa5da9e41e58b435821d0e1cb1cdc8096b",
+      "duration": 1.773
+    },
+    "four blue crayons": {
+      "text": "four blue crayons",
+      "src": "assets/unit2/audio-higgs/f16f639d425f7ac3.mp3",
+      "qaTranscript": "4 blue crayons",
+      "transcriptMatch": true,
+      "sha256": "54493d10c895a23b478307c5e84aad58bcaf30b041045d33479e6c79069d24e2",
+      "duration": 2.045
+    },
+    "black crayon": {
+      "text": "black crayon",
+      "src": "assets/unit2/audio-higgs/5e6f1d1d3be7ae0e.mp3",
+      "qaTranscript": "Black crayon.",
+      "transcriptMatch": true,
+      "sha256": "9229fffa4e87b5351272e0669522c3a0ac8224ccc48cf46af31538bbd3e1a504",
+      "duration": 1.454
+    },
+    "one black crayon": {
+      "text": "one black crayon",
+      "src": "assets/unit2/audio-higgs/fa616caf1f08807a.mp3",
+      "qaTranscript": "One black crayon.",
+      "transcriptMatch": true,
+      "sha256": "ff56d3b35c7d71a2c1a108aac6432da173c7aff30cf194beeb31f367f63d756c",
+      "duration": 1.702
+    },
+    "two black crayons": {
+      "text": "two black crayons",
+      "src": "assets/unit2/audio-higgs/f22a3bea9d6e8629.mp3",
+      "qaTranscript": "Two black crayons.",
+      "transcriptMatch": true,
+      "sha256": "0461f3c39e7555b6272bc348a759e32889f1f401d4b806ba1606dc041465f880",
+      "duration": 1.941
+    },
+    "three black crayons": {
+      "text": "three black crayons",
+      "src": "assets/unit2/audio-higgs/4077e0882f703260.mp3",
+      "qaTranscript": "3 Black crayons",
+      "transcriptMatch": true,
+      "sha256": "35df2a67f86d733938c8ebab397c1199675919082bb53b33607bf17b615986a4",
+      "duration": 1.754
+    },
+    "four black crayons": {
+      "text": "four black crayons",
+      "src": "assets/unit2/audio-higgs/101ae33e4516db93.mp3",
+      "qaTranscript": "4 black crayons",
+      "transcriptMatch": true,
+      "sha256": "82ce30b739f46a73e92f69c23d9c5c74bbd6fdb6af3dd7595dcd9cca2000a99e",
+      "duration": 1.95
+    },
+    "white crayon": {
+      "text": "white crayon",
+      "src": "assets/unit2/audio-higgs/e33caf2e6b18684c.mp3",
+      "qaTranscript": "White crayon.",
+      "transcriptMatch": true,
+      "sha256": "581295bf83eab49e3c0e4eb0e3c8d3d8fbd5cf8753bd86e2297f9ee90d037d0d",
+      "duration": 1.337
+    },
+    "one white crayon": {
+      "text": "one white crayon",
+      "src": "assets/unit2/audio-higgs/5ae435f75b4d911b.mp3",
+      "qaTranscript": "1 white crayon",
+      "transcriptMatch": true,
+      "sha256": "eaa6de191fd91745b6b23e51fdde995c0e53a89ec2e15aade8495187c5034582",
+      "duration": 1.66
+    },
+    "two white crayons": {
+      "text": "two white crayons",
+      "src": "assets/unit2/audio-higgs/f47b3613f852bb67.mp3",
+      "qaTranscript": "Two white crayons.",
+      "transcriptMatch": true,
+      "sha256": "2f87c2534ce88a3bb56d81ada4a7e44ba57a47816117ba02d35841294400ecd1",
+      "duration": 1.849
+    },
+    "three white crayons": {
+      "text": "three white crayons",
+      "src": "assets/unit2/audio-higgs/558da4078e85c618.mp3",
+      "qaTranscript": "3 white crayons",
+      "transcriptMatch": true,
+      "sha256": "e61c84d43e0c1b1078bb48563280dbabcd0cf0d42d23328db6da07b8f288b176",
+      "duration": 1.729
+    },
+    "four white crayons": {
+      "text": "four white crayons",
+      "src": "assets/unit2/audio-higgs/2fcf9f90c8b9ec6f.mp3",
+      "qaTranscript": "4 white crayons",
+      "transcriptMatch": true,
+      "sha256": "2a2bdeec3ffa94c4a3af854cba86c355334b8ac0e5fab2c48b3cf725b211153e",
+      "duration": 1.748
+    },
+    "red notebook": {
+      "text": "red notebook",
+      "src": "assets/unit2/audio-higgs/38b728b3acdb7d69.mp3",
+      "qaTranscript": "Red Notebook",
+      "transcriptMatch": true,
+      "sha256": "d04473051c1307173224889ddfe1242206601e76dcdbe1694cfd7052b719d0f0",
+      "duration": 1.334
+    },
+    "one red notebook": {
+      "text": "one red notebook",
+      "src": "assets/unit2/audio-higgs/eb40febfa898a1a1.mp3",
+      "qaTranscript": "One Red Notebook",
+      "transcriptMatch": true,
+      "sha256": "58b30dc43d0e89641e1e505a7141e1e08867813c0c8f41d7ed2864f093971cd5",
+      "duration": 1.66
+    },
+    "two red notebooks": {
+      "text": "two red notebooks",
+      "src": "assets/unit2/audio-higgs/15eb334067b4f88f.mp3",
+      "qaTranscript": "Two red notebooks.",
+      "transcriptMatch": true,
+      "sha256": "364319d9f5177ab6935b783a78a8f5ad6b4a8d28a1dea6890fedbbd655f311c5",
+      "duration": 1.808
+    },
+    "three red notebooks": {
+      "text": "three red notebooks",
+      "src": "assets/unit2/audio-higgs/9fd0b81027cf868a.mp3",
+      "qaTranscript": "Three red notebooks.",
+      "transcriptMatch": true,
+      "sha256": "2fbc1f4abd8a42c847e05fd96a673d976ef5d586f74728bde37d7d6dbb205aa6",
+      "duration": 1.778
+    },
+    "four red notebooks": {
+      "text": "four red notebooks",
+      "src": "assets/unit2/audio-higgs/7f0698d58f87fd78.mp3",
+      "qaTranscript": "4 Red Notebooks",
+      "transcriptMatch": true,
+      "sha256": "d351131274a4ff48195a401c6e58eb027f9add41133185aafe8e7bc0c877237d",
+      "duration": 1.865
+    },
+    "green notebook": {
+      "text": "green notebook",
+      "src": "assets/unit2/audio-higgs/42f98a72b7471547.mp3",
+      "qaTranscript": "Green Notebook",
+      "transcriptMatch": true,
+      "sha256": "7fe6d3350a04806411c2a6a27f03877c9fc29c12f353cfa40cb8a0b7e841af41",
+      "duration": 1.313
+    },
+    "one green notebook": {
+      "text": "one green notebook",
+      "src": "assets/unit2/audio-higgs/9b38a0924522d3d0.mp3",
+      "qaTranscript": "1 Green Notebook",
+      "transcriptMatch": true,
+      "sha256": "cfd327592f6308e0f8a8c42cb6bb065e9ea49d08bf77bab7492e8f908a607908",
+      "duration": 1.658
+    },
+    "two green notebooks": {
+      "text": "two green notebooks",
+      "src": "assets/unit2/audio-higgs/4faddadbe5e5c5d2.mp3",
+      "qaTranscript": "Two green notebooks.",
+      "transcriptMatch": true,
+      "sha256": "94939c8ff161dc65c5cf8da82c16cb36c3ce1bed869f5673c5b44fb5bae4a148",
+      "duration": 1.89
+    },
+    "three green notebooks": {
+      "text": "three green notebooks",
+      "src": "assets/unit2/audio-higgs/83f7729f1bb3ed6d.mp3",
+      "qaTranscript": "3 Green Notebooks",
+      "transcriptMatch": true,
+      "sha256": "d2f62f143ab542f63b5cff30cb45df5f0c3434808f38b231148638f04ac744b7",
+      "duration": 1.953
+    },
+    "four green notebooks": {
+      "text": "four green notebooks",
+      "src": "assets/unit2/audio-higgs/82a3f96b4c978cee.mp3",
+      "qaTranscript": "4 Green Notebooks",
+      "transcriptMatch": true,
+      "sha256": "fa0f19d4b5c49bb131e7da49a422977224abae2137f60ba9794c3d21248c9e94",
+      "duration": 1.91
+    },
+    "blue notebook": {
+      "text": "blue notebook",
+      "src": "assets/unit2/audio-higgs/42da1966c224c783.mp3",
+      "qaTranscript": "Blue Notebook",
+      "transcriptMatch": true,
+      "sha256": "d609aba364ec92aac8c3e1aba6986d9c438f1fa56456db92d2529eceb2cc665c",
+      "duration": 1.299
+    },
+    "one blue notebook": {
+      "text": "one blue notebook",
+      "src": "assets/unit2/audio-higgs/4e1db1084cb05ca1.mp3",
+      "qaTranscript": "One Blue Notebook.",
+      "transcriptMatch": true,
+      "sha256": "1406bbf704e3b32dcdb0312c3588dcce898faa1d58b99d58f5c4d655b105312e",
+      "duration": 1.677
+    },
+    "two blue notebooks": {
+      "text": "two blue notebooks",
+      "src": "assets/unit2/audio-higgs/d477d481f41f4361.mp3",
+      "qaTranscript": "Two blue notebooks.",
+      "transcriptMatch": true,
+      "sha256": "6fdb9aa95b53eeacad14fc34a723d549653302a71089af5fd5b991c660cbee4c",
+      "duration": 1.846
+    },
+    "three blue notebooks": {
+      "text": "three blue notebooks",
+      "src": "assets/unit2/audio-higgs/3ddb8f63d9853ee1.mp3",
+      "qaTranscript": "Three blue notebooks.",
+      "transcriptMatch": true,
+      "sha256": "78a6deb301d46b3a4deba252512710555e6475d01593e12c745daa3920496007",
+      "duration": 2.034
+    },
+    "four blue notebooks": {
+      "text": "four blue notebooks",
+      "src": "assets/unit2/audio-higgs/a5f0e23612892b54.mp3",
+      "qaTranscript": "Four blue notebooks.",
+      "transcriptMatch": true,
+      "sha256": "be14ee3b41e9235a0b14dbcf582f3537ff23c13f308aeccbfdd63b34125cac5e",
+      "duration": 1.776
+    },
+    "black notebook": {
+      "text": "black notebook",
+      "src": "assets/unit2/audio-higgs/0bb1ffb0a1607e2d.mp3",
+      "qaTranscript": "Black Notebook",
+      "transcriptMatch": true,
+      "sha256": "c2400ee95ece39124d4aa60c6915a707214fc49bc5d4c6b451189348903db605",
+      "duration": 1.336
+    },
+    "one black notebook": {
+      "text": "one black notebook",
+      "src": "assets/unit2/audio-higgs/123d55c26273c4ab.mp3",
+      "qaTranscript": "One Black Notebook.",
+      "transcriptMatch": true,
+      "sha256": "0cc3df1c893ddc8c60a02a3c4738829b60420f5eb0970dbee67745a437f87c76",
+      "duration": 1.663
+    },
+    "two black notebooks": {
+      "text": "two black notebooks",
+      "src": "assets/unit2/audio-higgs/cd4a4eb805bdd3e5.mp3",
+      "qaTranscript": "Two black notebooks.",
+      "transcriptMatch": true,
+      "sha256": "a01c337842465caf12755566542fcd94cf7e3a5a0185e247506e0091d7663113",
+      "duration": 1.848
+    },
+    "three black notebooks": {
+      "text": "three black notebooks",
+      "src": "assets/unit2/audio-higgs/0f6843068edccc10.mp3",
+      "qaTranscript": "3 Black Notebooks",
+      "transcriptMatch": true,
+      "sha256": "7f5aac92e9f0685bd9c2e6f27e3bce2ddd94ae84f6921352ff8a5e56e5ef8ce9",
+      "duration": 1.798
+    },
+    "four black notebooks": {
+      "text": "four black notebooks",
+      "src": "assets/unit2/audio-higgs/410a29438f0b38e2.mp3",
+      "qaTranscript": "4 Black Notebooks",
+      "transcriptMatch": true,
+      "sha256": "f835899e43b849b4aee35ad744d04fe2cef7d37501f875837d7eb42e82f82f3e",
+      "duration": 1.94
+    },
+    "white notebook": {
+      "text": "white notebook",
+      "src": "assets/unit2/audio-higgs/f20022d61dc60c62.mp3",
+      "qaTranscript": "white notebook",
+      "transcriptMatch": true,
+      "sha256": "2c3a75bae407f0c581a13dfa798e8b3da0e5b4d8aa107112ae4097b077cac0b5",
+      "duration": 1.301
+    },
+    "one white notebook": {
+      "text": "one white notebook",
+      "src": "assets/unit2/audio-higgs/8a7b3883b9d3053e.mp3",
+      "qaTranscript": "One white notebook.",
+      "transcriptMatch": true,
+      "sha256": "f0df89dade87067a2208a20ab4f84458c115328b0d0321fc47ca3df694a7c505",
+      "duration": 1.618
+    },
+    "two white notebooks": {
+      "text": "two white notebooks",
+      "src": "assets/unit2/audio-higgs/deaf54d8c921fb3f.mp3",
+      "qaTranscript": "Two white notebooks.",
+      "transcriptMatch": true,
+      "sha256": "cdc57a54cb9d7eff17a85be47289e465422ebd859375f2af793ec0e157e615d5",
+      "duration": 1.688
+    },
+    "three white notebooks": {
+      "text": "three white notebooks",
+      "src": "assets/unit2/audio-higgs/623543d5f43d5f57.mp3",
+      "qaTranscript": "3 white notebooks",
+      "transcriptMatch": true,
+      "sha256": "6849a477fbcf4fcd4c0c0b7e22ccfb2063797bcbf8a68dcdfec77d0140f1aefa",
+      "duration": 1.875
+    },
+    "four white notebooks": {
+      "text": "four white notebooks",
+      "src": "assets/unit2/audio-higgs/f4830e25ddfed423.mp3",
+      "qaTranscript": "4 white notebooks",
+      "transcriptMatch": true,
+      "sha256": "4f7a05bff8ea953ef1006c8567d8e9310e2c2614ecb84027325b19a2f3d565ab",
+      "duration": 1.7
+    },
+    "five eggs": {
+      "text": "Five eggs.",
+      "src": "assets/unit2/audio-higgs/2152feebf857f449.mp3",
+      "qaTranscript": "5 Eggs",
+      "transcriptMatch": true,
+      "sha256": "6dbc9b48770a45c292edc09ba7ad6c5e0e5a870dd9ac7971d18e52ecd348cf38",
+      "duration": 1.421
+    },
+    "correct five eggs": {
+      "text": "Correct! Five eggs.",
+      "src": "assets/unit2/audio-higgs/ce7cf0d11107fd95.mp3",
+      "qaTranscript": "Correct, 5 eggs.",
+      "transcriptMatch": true,
+      "sha256": "c0e15a48021b0a03c591e535fb895a995034f50262effd9f7bf319f696911c21",
+      "duration": 2.349
+    },
+    "six eggs": {
+      "text": "Six eggs.",
+      "src": "assets/unit2/audio-higgs/9e4c3a070548eb43.mp3",
+      "qaTranscript": "6 Eggs",
+      "transcriptMatch": true,
+      "sha256": "ab4e3a259eac68b2224e1ac80489b9def2387d23d7118ccc840168169d5048b2",
+      "duration": 1.377
+    },
+    "correct six eggs": {
+      "text": "Correct! Six eggs.",
+      "src": "assets/unit2/audio-higgs/ebec9c207e785758.mp3",
+      "qaTranscript": "Correct. Six eggs.",
+      "transcriptMatch": true,
+      "sha256": "f970ed6edba70fcc7d0a5fb00fe1ea60fe59ba2c6b40ec399ef1dae3cbf1531c",
+      "duration": 2.271
+    },
+    "1 yellow": {
+      "text": "1. yellow.",
+      "src": "assets/unit2/audio-higgs/261d9e0c0090ee9f.mp3",
+      "qaTranscript": "1. Yellow",
+      "transcriptMatch": true,
+      "sha256": "bf77e6e972d6973a92263df56657192d72968df93e7dcbe9cbcd22d34381ae72",
+      "duration": 1.837
+    },
+    "correct number 1 is yellow": {
+      "text": "Correct. Number 1 is yellow.",
+      "src": "assets/unit2/audio-higgs/6896928738863340.mp3",
+      "qaTranscript": "Correct. Number one is yellow.",
+      "transcriptMatch": true,
+      "sha256": "a278598b17c253b0e386866c852a711a606c1aabe2718c0f9c3fe37bab869623",
+      "duration": 2.962
+    },
+    "1 pink": {
+      "text": "1. pink.",
+      "src": "assets/unit2/audio-higgs/a41497857d94398b.mp3",
+      "qaTranscript": "1. Pink",
+      "transcriptMatch": true,
+      "sha256": "4d16c093ed6c2275d212e3e5cbde336ec3042583f02a49db8c706f44a84bcc18",
+      "duration": 1.661
+    },
+    "correct number 1 is pink": {
+      "text": "Correct. Number 1 is pink.",
+      "src": "assets/unit2/audio-higgs/50fab02956fae38b.mp3",
+      "qaTranscript": "Correct. Number one is pink.",
+      "transcriptMatch": true,
+      "sha256": "ec3bee0f501a8a89c6f3f46873e1e653de8d277cf89727d34c215a95432dc040",
+      "duration": 2.62
+    },
+    "1 purple": {
+      "text": "1. purple.",
+      "src": "assets/unit2/audio-higgs/309db3337eba5def.mp3",
+      "qaTranscript": "1. Purple.",
+      "transcriptMatch": true,
+      "sha256": "b8da977c81fec833367ae55a3b41424093ee2df9e7679e31dda22f91aff62e8e",
+      "duration": 1.724
+    },
+    "correct number 1 is purple": {
+      "text": "Correct. Number 1 is purple.",
+      "src": "assets/unit2/audio-higgs/066849346acd3e2b.mp3",
+      "qaTranscript": "Correct. Number one is purple.",
+      "transcriptMatch": true,
+      "sha256": "5aa1d4979ff9ef1b97ff5d427e63b163b42821fa1d7e9fe10b7710d0585f5114",
+      "duration": 2.885
+    },
+    "1 orange": {
+      "text": "1. orange.",
+      "src": "assets/unit2/audio-higgs/d5ccc70f50bf81c0.mp3",
+      "qaTranscript": "1. Orange.",
+      "transcriptMatch": true,
+      "sha256": "4871cecad5094e5706ee0c37cb06cc724512b2017ee43d049886c37ed0e39603",
+      "duration": 1.856
+    },
+    "correct number 1 is orange": {
+      "text": "Correct. Number 1 is orange.",
+      "src": "assets/unit2/audio-higgs/bd43988d51f757be.mp3",
+      "qaTranscript": "Correct! Number one is orange.",
+      "transcriptMatch": true,
+      "sha256": "c018c1ffdeade46d79805aa6c216efa4dbafd05ffd802f0ca97f6a7c6430a135",
+      "duration": 2.885
+    },
+    "1 blue": {
+      "text": "1. blue.",
+      "src": "assets/unit2/audio-higgs/72a98d71b0bbbe6b.mp3",
+      "qaTranscript": "1. Blue.",
+      "transcriptMatch": true,
+      "sha256": "b9dca25066fa5e58fa79b4d98e760b897c5ab0cb08c8399c57933e792a47a7f8",
+      "duration": 1.578
+    },
+    "correct number 1 is blue": {
+      "text": "Correct. Number 1 is blue.",
+      "src": "assets/unit2/audio-higgs/17766f4abe2c2c66.mp3",
+      "qaTranscript": "Correct. Number one is blue.",
+      "transcriptMatch": true,
+      "sha256": "014bfe52ac9e5838cdf835fb66c1e521389b94dc726a1d6af694bddc0aea3a5b",
+      "duration": 2.824
+    },
+    "1 green": {
+      "text": "1. green.",
+      "src": "assets/unit2/audio-higgs/05c8a3851ac69f9b.mp3",
+      "qaTranscript": "1. Green",
+      "transcriptMatch": true,
+      "sha256": "233f1de17dbd28367e9f9e81cb1d42f83092c715c4bb7c622d9b58d70bac5595",
+      "duration": 1.723
+    },
+    "correct number 1 is green": {
+      "text": "Correct. Number 1 is green.",
+      "src": "assets/unit2/audio-higgs/66e9907cc60c6c52.mp3",
+      "qaTranscript": "Correct, number one is green.",
+      "transcriptMatch": true,
+      "sha256": "684f88a0e3611be036c0ae1000edf3dbe38e4a1aeeb90d7eda45c8279b73ddd4",
+      "duration": 2.659
+    },
+    "2 yellow": {
+      "text": "2. yellow.",
+      "src": "assets/unit2/audio-higgs/82611140a11663ad.mp3",
+      "qaTranscript": "2. Yellow",
+      "transcriptMatch": true,
+      "sha256": "e06d30bd0d771e7e1597be4f07b49c15c7032430491425b9a60d333f903cc8d1",
+      "duration": 1.574
+    },
+    "correct number 2 is yellow": {
+      "text": "Correct. Number 2 is yellow.",
+      "src": "assets/unit2/audio-higgs/5eba022cab86e0db.mp3",
+      "qaTranscript": "correct number two is yellow",
+      "transcriptMatch": true,
+      "sha256": "b62bdf2f101c222892063d2983dd6822a26d7b1b45c6ca16f431afc4e045d4f5",
+      "duration": 2.701
+    },
+    "2 pink": {
+      "text": "2. pink.",
+      "src": "assets/unit2/audio-higgs/774bd1adf08c9b06.mp3",
+      "qaTranscript": "2. Pink",
+      "transcriptMatch": true,
+      "sha256": "d410cadef099f50f3b265a42432b4b10459c04dd2e224d41ce989b1dce7ea5d0",
+      "duration": 1.564
+    },
+    "correct number 2 is pink": {
+      "text": "Correct. Number 2 is pink.",
+      "src": "assets/unit2/audio-higgs/50e528a17b5b4ce5.mp3",
+      "qaTranscript": "correct number two is pink",
+      "transcriptMatch": true,
+      "sha256": "5e05f70529dc7f04ef3ce997fa833eed13044595168ba7f40059d87f46267711",
+      "duration": 2.701
+    },
+    "2 purple": {
+      "text": "2. purple.",
+      "src": "assets/unit2/audio-higgs/e55499ae03c9089d.mp3",
+      "qaTranscript": "2. Purple",
+      "transcriptMatch": true,
+      "sha256": "42881b1a91abf24da45b52748140f7a01aefeccbb62bc4186d079a25be20cacb",
+      "duration": 1.726
+    },
+    "correct number 2 is purple": {
+      "text": "Correct. Number 2 is purple.",
+      "src": "assets/unit2/audio-higgs/e7ac287688fe23a3.mp3",
+      "qaTranscript": "Correct, number two is purple.",
+      "transcriptMatch": true,
+      "sha256": "4dd6628fa6fcbf07cc16e4677e43bdec4a3c898eb1dccf2f99c6139533afd48e",
+      "duration": 2.591
+    },
+    "2 orange": {
+      "text": "2. orange.",
+      "src": "assets/unit2/audio-higgs/4d3b4b1ce3048609.mp3",
+      "qaTranscript": "2. Orange",
+      "transcriptMatch": true,
+      "sha256": "61b2bd2e39f476fd701cbd7f64186a8293458c1e4f0f99aa7f5041af12cdd19b",
+      "duration": 1.841
+    },
+    "correct number 2 is orange": {
+      "text": "Correct. Number 2 is orange.",
+      "src": "assets/unit2/audio-higgs/aeba11700b588920.mp3",
+      "qaTranscript": "correct number two is orange",
+      "transcriptMatch": true,
+      "sha256": "2ab736e8ee94a0d4bc15f028a13a07a7cf23f93291d51be124a83f64189bfaf0",
+      "duration": 3.044
+    },
+    "2 blue": {
+      "text": "2. blue.",
+      "src": "assets/unit2/audio-higgs/4c36f3538f78b4dc.mp3",
+      "qaTranscript": "2. Blue",
+      "transcriptMatch": true,
+      "sha256": "2f0c1e25b4c287b546c79cd15a618c4f7db4944ade65db94b5943603bd90f444",
+      "duration": 1.605
+    },
+    "correct number 2 is blue": {
+      "text": "Correct. Number 2 is blue.",
+      "src": "assets/unit2/audio-higgs/54b482028946ad84.mp3",
+      "qaTranscript": "Correct, number two is blue.",
+      "transcriptMatch": true,
+      "sha256": "ea4d5642632eb625d56a9607d10875b286e9ab8f77200a7c2474437927128b2f",
+      "duration": 2.659
+    },
+    "2 green": {
+      "text": "2. green.",
+      "src": "assets/unit2/audio-higgs/f3c28e264a21cf7e.mp3",
+      "qaTranscript": "2. Green",
+      "transcriptMatch": true,
+      "sha256": "dce9c1a06c552b2e691862e52bc6d7b62c18a1ec9ea6f3e99b7eb931c913e822",
+      "duration": 1.812
+    },
+    "correct number 2 is green": {
+      "text": "Correct. Number 2 is green.",
+      "src": "assets/unit2/audio-higgs/05abad72e4d25a8c.mp3",
+      "qaTranscript": "Correct number two is green",
+      "transcriptMatch": true,
+      "sha256": "53a5bcf45ea558e37b7e2d1e9baf9155e4a1e00e9fd85f59a6793149118d3d5b",
+      "duration": 2.88
+    },
+    "3 yellow": {
+      "text": "3. yellow.",
+      "src": "assets/unit2/audio-higgs/0d42c8a7d233e7fb.mp3",
+      "qaTranscript": "3. Yellow",
+      "transcriptMatch": true,
+      "sha256": "098ea0045ebc5d312b79931ce0aef8e8b68df7cb009f254108984f901f9434a9",
+      "duration": 1.94
+    },
+    "correct number 3 is yellow": {
+      "text": "Correct. Number 3 is yellow.",
+      "src": "assets/unit2/audio-higgs/bf5de02510219e97.mp3",
+      "qaTranscript": "Correct. Number 3 is yellow.",
+      "transcriptMatch": true,
+      "sha256": "6a13357f29c0e84ddf3f7a4e0fc47cafb32fcccf2c34be7e7a5d1b9e20799c02",
+      "duration": 3.08
+    },
+    "3 pink": {
+      "text": "3. pink.",
+      "src": "assets/unit2/audio-higgs/78f53e2032b57be5.mp3",
+      "qaTranscript": "Three. Pink.",
+      "transcriptMatch": true,
+      "sha256": "a2c77cd61bbcdf69de28e6dca4dccfc9fd3f768ca6f3c907f884833cbaa7666f",
+      "duration": 1.698
+    },
+    "correct number 3 is pink": {
+      "text": "Correct. Number 3 is pink.",
+      "src": "assets/unit2/audio-higgs/62f79ef381d77516.mp3",
+      "qaTranscript": "Correct number three is pink",
+      "transcriptMatch": true,
+      "sha256": "e7af9f8fb5886d07201d1c79a0775793595e1e4284b7e8fa700ded9dfe803fc0",
+      "duration": 3.046
+    },
+    "3 purple": {
+      "text": "3. purple.",
+      "src": "assets/unit2/audio-higgs/665bd88ce5c10df3.mp3",
+      "qaTranscript": "3. Purple",
+      "transcriptMatch": true,
+      "sha256": "cccb941f8508916242de29d0f6c9fab25feebda7d5007f6b52b13978a8ed4ad0",
+      "duration": 1.742
+    },
+    "correct number 3 is purple": {
+      "text": "Correct. Number 3 is purple.",
+      "src": "assets/unit2/audio-higgs/f086c9f699c4edad.mp3",
+      "qaTranscript": "Correct. Number three is purple.",
+      "transcriptMatch": true,
+      "sha256": "4de23c2bf7df7e827b7dd95759abc9ddf174f81d700e646c40348301773bdd79",
+      "duration": 2.814
+    },
+    "3 orange": {
+      "text": "3. orange.",
+      "src": "assets/unit2/audio-higgs/a01f8518310d077f.mp3",
+      "qaTranscript": "3. Orange",
+      "transcriptMatch": true,
+      "sha256": "3087a1ee0674ff8826175a77978334435a6dfc2d77c29a2b09412258cbb56b98",
+      "duration": 1.968
+    },
+    "correct number 3 is orange": {
+      "text": "Correct. Number 3 is orange.",
+      "src": "assets/unit2/audio-higgs/ea87668adc198621.mp3",
+      "qaTranscript": "Correct, number three is orange.",
+      "transcriptMatch": true,
+      "sha256": "3f0e38d93d8f4782e55edd688c9a860fedeb0e49d0b68c23dc123a9dea4a1cf1",
+      "duration": 3.128
+    },
+    "3 blue": {
+      "text": "3. blue.",
+      "src": "assets/unit2/audio-higgs/f2f0e00aa68edf06.mp3",
+      "qaTranscript": "3. Blue",
+      "transcriptMatch": true,
+      "sha256": "8640bec2868f56fa60bc9385c0780fa3b414c74256d8a7951044550eabf5309c",
+      "duration": 1.558
+    },
+    "correct number 3 is blue": {
+      "text": "Correct. Number 3 is blue.",
+      "src": "assets/unit2/audio-higgs/4868436bdb0487e4.mp3",
+      "qaTranscript": "Correct number three is blue",
+      "transcriptMatch": true,
+      "sha256": "6bb8b37bdd2b09c2692d2c17d68a31322da62e0a6ea125859243909c7c09afc6",
+      "duration": 2.83
+    },
+    "3 green": {
+      "text": "3. green.",
+      "src": "assets/unit2/audio-higgs/33596749e35b45c5.mp3",
+      "qaTranscript": "3. Green",
+      "transcriptMatch": true,
+      "sha256": "161d60689f10ac9ad75e51a96b876ab053672b2c23d17b8ab2c6991b8cafa67e",
+      "duration": 1.849
+    },
+    "correct number 3 is green": {
+      "text": "Correct. Number 3 is green.",
+      "src": "assets/unit2/audio-higgs/29f2dc232500f0fa.mp3",
+      "qaTranscript": "Correct number three is green",
+      "transcriptMatch": true,
+      "sha256": "4dd78ab6f8542ebd150626a319dc511a895adb0a4b7813751382292eced24372",
+      "duration": 3.006
+    },
+    "4 yellow": {
+      "text": "4. yellow.",
+      "src": "assets/unit2/audio-higgs/0362c48d86556702.mp3",
+      "qaTranscript": "4. Yellow",
+      "transcriptMatch": true,
+      "sha256": "ff7d55c324a35f2b91c58586caca26256a012b7a7540b13856e989ef2e15d1ca",
+      "duration": 1.782
+    },
+    "correct number 4 is yellow": {
+      "text": "Correct. Number 4 is yellow.",
+      "src": "assets/unit2/audio-higgs/1b1238291d792958.mp3",
+      "qaTranscript": "Correct. Number four is yellow.",
+      "transcriptMatch": true,
+      "sha256": "880e23b5936afc9d739344ef6ed989043e7a59fac663adc58871b2e98ef52fef",
+      "duration": 2.885
+    },
+    "4 pink": {
+      "text": "4. pink.",
+      "src": "assets/unit2/audio-higgs/1152786f8e712cf6.mp3",
+      "qaTranscript": "4. Pink",
+      "transcriptMatch": true,
+      "sha256": "ad32d00cee096e632697aad4c1634c3fb4fccf887907b191a9153edef4b11121",
+      "duration": 1.701
+    },
+    "correct number 4 is pink": {
+      "text": "Correct. Number 4 is pink.",
+      "src": "assets/unit2/audio-higgs/8ab692539699ad42.mp3",
+      "qaTranscript": "Correct number four is pink",
+      "transcriptMatch": true,
+      "sha256": "19aecbf93d37ce97a10e810f611969bad566d42a95f08d8c35aa5742261fe33f",
+      "duration": 2.993
+    },
+    "4 purple": {
+      "text": "4. purple.",
+      "src": "assets/unit2/audio-higgs/bf1d7005d619f108.mp3",
+      "qaTranscript": "4. Purple.",
+      "transcriptMatch": true,
+      "sha256": "ed6d79986397e57c1c003d97cf439877178b2ac58a9ff6a33788391966d49f86",
+      "duration": 1.635
+    },
+    "correct number 4 is purple": {
+      "text": "Correct. Number 4 is purple.",
+      "src": "assets/unit2/audio-higgs/c0893c71a26d2602.mp3",
+      "qaTranscript": "Correct. Number four is purple.",
+      "transcriptMatch": true,
+      "sha256": "96b1947abf15bbb4742859c8e953dffef378334ac3a29d7e3df79fdcb7e77d10",
+      "duration": 2.768
+    },
+    "4 orange": {
+      "text": "4. orange.",
+      "src": "assets/unit2/audio-higgs/c72a5a5ce7921c07.mp3",
+      "qaTranscript": "4. Orange",
+      "transcriptMatch": true,
+      "sha256": "cf0336541cc25d962e09752ca58531820d1dab11f59908a7f3723f6a31f2913d",
+      "duration": 1.917
+    },
+    "correct number 4 is orange": {
+      "text": "Correct. Number 4 is orange.",
+      "src": "assets/unit2/audio-higgs/f2bcf090719014b5.mp3",
+      "qaTranscript": "correct number four is orange",
+      "transcriptMatch": true,
+      "sha256": "cf43b7d9d5b88e8d138aa2606704d8c9a8b69b24bc02fd71f2f4ca4562bc31b0",
+      "duration": 2.982
+    },
+    "4 blue": {
+      "text": "4. blue.",
+      "src": "assets/unit2/audio-higgs/0cc55318664da079.mp3",
+      "qaTranscript": "4. Blue.",
+      "transcriptMatch": true,
+      "sha256": "5a3f9f3e59b0b79c1440a1166997ad78a1cb8be8c706229d606769409b2580df",
+      "duration": 1.713
+    },
+    "correct number 4 is blue": {
+      "text": "Correct. Number 4 is blue.",
+      "src": "assets/unit2/audio-higgs/58b7a4fb131985c9.mp3",
+      "qaTranscript": "Correct, number four is blue.",
+      "transcriptMatch": true,
+      "sha256": "199f667d9d16bdbea87933e742273ecb2cfe2282dc7ddc5824feadbb1dab2400",
+      "duration": 2.541
+    },
+    "4 green": {
+      "text": "4. green.",
+      "src": "assets/unit2/audio-higgs/ae0d086290c912a5.mp3",
+      "qaTranscript": "4. Green",
+      "transcriptMatch": true,
+      "sha256": "800c4138b02785940629f6a023f9953700ce28df13a4bf31ef9475050717e0b3",
+      "duration": 1.782
+    },
+    "correct number 4 is green": {
+      "text": "Correct. Number 4 is green.",
+      "src": "assets/unit2/audio-higgs/99e7f84644e28ab6.mp3",
+      "qaTranscript": "Correct. Number four is green.",
+      "transcriptMatch": true,
+      "sha256": "3cce86d782b2e967eea5a9f05bc1fe03d0c47e5e19f936c7392224a2bd195518",
+      "duration": 2.708
+    },
+    "5 yellow": {
+      "text": "5. yellow.",
+      "src": "assets/unit2/audio-higgs/4217a747220f2363.mp3",
+      "qaTranscript": "5. Yellow",
+      "transcriptMatch": true,
+      "sha256": "65ce8cd7eb1b1c569309c8964468ddd503aa9c422f49b1e67930008372031e87",
+      "duration": 1.903
+    },
+    "correct number 5 is yellow": {
+      "text": "Correct. Number 5 is yellow.",
+      "src": "assets/unit2/audio-higgs/43a7a58c8516ad14.mp3",
+      "qaTranscript": "Correct. Number 5 is yellow.",
+      "transcriptMatch": true,
+      "sha256": "e214ff1c8f706ac74d26a765fe1578a5898404f35c4010abf13077b2f70ed112",
+      "duration": 2.853
+    },
+    "5 pink": {
+      "text": "5. pink.",
+      "src": "assets/unit2/audio-higgs/2491670510345936.mp3",
+      "qaTranscript": "5. Pink",
+      "transcriptMatch": true,
+      "sha256": "3445556f93df388f41baea8a0cfd14af15d80b069fe80a367bab8c2fd291dd24",
+      "duration": 2.279
+    },
+    "correct number 5 is pink": {
+      "text": "Correct. Number 5 is pink.",
+      "src": "assets/unit2/audio-higgs/d539690a1aa78974.mp3",
+      "qaTranscript": "Correct number five is pink",
+      "transcriptMatch": true,
+      "sha256": "8aa62649daca21963dfa0ce962c70f5e71be56d9ddc6a7bf9f27982d0e1ec562",
+      "duration": 2.765
+    },
+    "5 purple": {
+      "text": "5. purple.",
+      "src": "assets/unit2/audio-higgs/531aa6d9196e7515.mp3",
+      "qaTranscript": "5. Purple",
+      "transcriptMatch": true,
+      "sha256": "04fc64b32397df9a911e92cd2c5711884ed8807d26e4ca3c8ae41d3db55bc712",
+      "duration": 1.907
+    },
+    "correct number 5 is purple": {
+      "text": "Correct. Number 5 is purple.",
+      "src": "assets/unit2/audio-higgs/c96ba7550a28add6.mp3",
+      "qaTranscript": "Correct. Number 5 is purple.",
+      "transcriptMatch": true,
+      "sha256": "feaba9206fee871acc40690b49bb10f09ac1be3bf116933662f7979f63dda857",
+      "duration": 2.797
+    },
+    "5 orange": {
+      "text": "5. orange.",
+      "src": "assets/unit2/audio-higgs/eae4d1cd82bb70e4.mp3",
+      "qaTranscript": "5. Orange",
+      "transcriptMatch": true,
+      "sha256": "3bcc0d57e2fdd92d41e52358b7f2f3aede28b052e4a5d092f6ca873917579cdc",
+      "duration": 1.822
+    },
+    "correct number 5 is orange": {
+      "text": "Correct. Number 5 is orange.",
+      "src": "assets/unit2/audio-higgs/5b4760a74e669dfc.mp3",
+      "qaTranscript": "Correct, number five is orange.",
+      "transcriptMatch": true,
+      "sha256": "44aa5cef8713926d9604c1dfbde2de6807f68190e40b60aaa65849015ca39caa",
+      "duration": 3.05
+    },
+    "5 blue": {
+      "text": "5. blue.",
+      "src": "assets/unit2/audio-higgs/7c66a0fd318a426c.mp3",
+      "qaTranscript": "5. Blue.",
+      "transcriptMatch": true,
+      "sha256": "61b55cb9bbff2cf55834eef08404679baea1658506466bb785b5ed776aa48870",
+      "duration": 1.719
+    },
+    "correct number 5 is blue": {
+      "text": "Correct. Number 5 is blue.",
+      "src": "assets/unit2/audio-higgs/751af36b9af5c789.mp3",
+      "qaTranscript": "Correct. Number 5 is blue.",
+      "transcriptMatch": true,
+      "sha256": "db3209edfc55ae906860ef3bd77f2c57b491d95f562f60e066c19caa53c05fa1",
+      "duration": 2.84
+    },
+    "5 green": {
+      "text": "5. green.",
+      "src": "assets/unit2/audio-higgs/3d27ad4d7de132d7.mp3",
+      "qaTranscript": "5. Green",
+      "transcriptMatch": true,
+      "sha256": "7bedce087ee6a5835df35b8573d0f4a6aec9315add2f66d0eecd515141fb62e2",
+      "duration": 1.834
+    },
+    "correct number 5 is green": {
+      "text": "Correct. Number 5 is green.",
+      "src": "assets/unit2/audio-higgs/3988338016861c08.mp3",
+      "qaTranscript": "Correct. Number 5 is green.",
+      "transcriptMatch": true,
+      "sha256": "fe9fe12dd6d872e0750fa077c60f4619f7a0bd6b02250e81e7603db4464468f1",
+      "duration": 2.763
+    },
+    "6 yellow": {
+      "text": "6. yellow.",
+      "src": "assets/unit2/audio-higgs/64e99f7cff818e56.mp3",
+      "qaTranscript": "6. Yellow",
+      "transcriptMatch": true,
+      "sha256": "0b6a00e309e7811462d5aa16071c8be56fa6e484d006118de703899b2c3219a5",
+      "duration": 1.849
+    },
+    "correct number 6 is yellow": {
+      "text": "Correct. Number 6 is yellow.",
+      "src": "assets/unit2/audio-higgs/3585a0596218e66b.mp3",
+      "qaTranscript": "Correct. Number 6 is yellow.",
+      "transcriptMatch": true,
+      "sha256": "b4535cfb0f7a57c28139cbd948de14879409712e043a46196c12e82ffe027ace",
+      "duration": 2.915
+    },
+    "6 pink": {
+      "text": "6. pink.",
+      "src": "assets/unit2/audio-higgs/fd5d2f3fd7f8cc0b.mp3",
+      "qaTranscript": "6. Pink",
+      "transcriptMatch": true,
+      "sha256": "04b118c3a3b0fec55db1b6a7bb86fcc9b35bd2188aee642e0236ac2df870c5e0",
+      "duration": 1.693
+    },
+    "correct number 6 is pink": {
+      "text": "Correct. Number 6 is pink.",
+      "src": "assets/unit2/audio-higgs/14cf56b22d7b1d51.mp3",
+      "qaTranscript": "Correct number six is pink",
+      "transcriptMatch": true,
+      "sha256": "95b4587565c1c11a7c9caa3aeee75db211efdd74c52af83136bfacdd9b609854",
+      "duration": 3.055
+    },
+    "6 purple": {
+      "text": "6. purple.",
+      "src": "assets/unit2/audio-higgs/7e65b873d0fd57b0.mp3",
+      "qaTranscript": "6. Purple",
+      "transcriptMatch": true,
+      "sha256": "71805b6ce88bead94c639d21c2dba557658720bd0d7749f8c08ee3497206b78c",
+      "duration": 1.832
+    },
+    "correct number 6 is purple": {
+      "text": "Correct. Number 6 is purple.",
+      "src": "assets/unit2/audio-higgs/dbb8724551d2f0ea.mp3",
+      "qaTranscript": "Correct. Number six is purple.",
+      "transcriptMatch": true,
+      "sha256": "ddc46bb15a7095c7a400cd0b7b821dbd7e85bbdd7fb9aceaf0d8c74b3892c840",
+      "duration": 2.803
+    },
+    "6 orange": {
+      "text": "6. orange.",
+      "src": "assets/unit2/audio-higgs/f672d77c4b1d951d.mp3",
+      "qaTranscript": "6. Orange",
+      "transcriptMatch": true,
+      "sha256": "9f8ed51715a0dc049fd494a1e2b02fe631dd68d5010af18bfe6be79888e8f0f7",
+      "duration": 1.933
+    },
+    "correct number 6 is orange": {
+      "text": "Correct. Number 6 is orange.",
+      "src": "assets/unit2/audio-higgs/da4200237fce5b98.mp3",
+      "qaTranscript": "Correct. Number 6 is orange.",
+      "transcriptMatch": true,
+      "sha256": "86606d34ce6e27cfdce32a822c83ccf17aac74a02bd9ed7dced816fcb240c6f0",
+      "duration": 3.072
+    },
+    "6 blue": {
+      "text": "6. blue.",
+      "src": "assets/unit2/audio-higgs/24b0501444b0e096.mp3",
+      "qaTranscript": "6. Blue.",
+      "transcriptMatch": true,
+      "sha256": "fde54e89935edb26e2735331abe138c9b51c47b37878b91c7abb02421a11f104",
+      "duration": 1.848
+    },
+    "correct number 6 is blue": {
+      "text": "Correct. Number 6 is blue.",
+      "src": "assets/unit2/audio-higgs/2cfc7282cd8c224b.mp3",
+      "qaTranscript": "Correct. Number 6 is blue.",
+      "transcriptMatch": true,
+      "sha256": "3de88479e3e1a6078242a0c670c5dc7f046a02bb66124be4c703f942ce72de57",
+      "duration": 2.709
+    },
+    "6 green": {
+      "text": "6. green.",
+      "src": "assets/unit2/audio-higgs/32de10948166f631.mp3",
+      "qaTranscript": "6. Green",
+      "transcriptMatch": true,
+      "sha256": "4415190e3114d55baf88b75b59ab9ec3f8e851d2b7ba4c1f1b61a974634a86eb",
+      "duration": 1.973
+    },
+    "correct number 6 is green": {
+      "text": "Correct. Number 6 is green.",
+      "src": "assets/unit2/audio-higgs/64bf8de6641b78e5.mp3",
+      "qaTranscript": "Correct. Number 6 is green.",
+      "transcriptMatch": true,
+      "sha256": "927b66734eb665eebf702f9a68f6bfbd430500d47bc1d447a3b7dfe0355a6350",
+      "duration": 3.018
+    }
+  }
+}

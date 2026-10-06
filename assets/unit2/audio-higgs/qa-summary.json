@@ -1,0 +1,27 @@
+{
+  "clips": 380,
+  "failed": [],
+  "phonics": {
+    "e": {
+      "highFrequencyFraction": 0.044,
+      "formantsMedian": [
+        349.8670770268944,
+        3146.979211568523
+      ]
+    },
+    "eh": {
+      "highFrequencyFraction": 0.078,
+      "formantsMedian": [
+        848.7211076114672,
+        2212.8937822276207
+      ]
+    },
+    "fff": {
+      "highFrequencyFraction": 0.803,
+      "formantsMedian": [
+        1403.9442066153101,
+        2783.429115620964
+      ]
+    }
+  }
+}

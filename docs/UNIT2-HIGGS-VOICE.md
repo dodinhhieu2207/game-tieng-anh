@@ -1,0 +1,13 @@
+# Unit 2 recorded voice
+
+The Unit 2 voice catalogue contains 380 recordings (about 10.6 MB), covering school object names and complete What's this? / It's a ... dialogues, Ellie instructions and feedback, number/count phrases, randomized Spin & Say phrases, colour instructions, Ee/Ff letter names, separate phonics sounds, fish/farm vocabulary, game prompts and team results. Story Lesson 6 has no supplied playable content, so it has no invented narration.
+
+Generation uses the existing cached Higgs V3 environment and Belinda reference. Only static MP3 files and public text/source/hash metadata are shipped. No model, credentials or inference request is sent to the child's browser. Known full sentences are independently generated recordings; randomized number/colour phrases have their own complete recordings rather than concatenated words.
+
+`shared/unit2-higgs-voice.js` adapts the existing `speakText` and `playLearningSound` calls only in Unit 2. Unit 3 and Letter Land retain their voice systems. Unit 2 has no silent browser-TTS fallback: missing/load failures emit a diagnostic event and show a retry message. Sound settings apply to all recordings. Queues use actual ended events, rapid replay cancels the earlier owner, and activity/visibility changes settle canceled playback promises.
+
+Unit 2 Build the Sentence still reads individual tiles, then plays its full recorded question and answer. The previous 1.7-second auto-advance remains replaced by manual Next. Existing animation delays in selected Ellie/team/race/memory/matching/colour/number games are retained, with an additional recording/sequence-ended wait so a longer recorded sentence cannot be cut by round advancement.
+
+`tools/build_unit2_higgs_audio.py` maintains the finite catalogue and offline transcript QA with regeneration attempts. QA allows equivalent numeral spelling and British/American colour spelling. Short phonics need separate acoustic verification; transcript recognition alone does not distinguish letter names from isolated sounds. Automated checks are technical validation, not a guarantee of classroom learning or a listening approval study.
+
+Validation: `tests/unit2-higgs-assets.spec.cjs` verifies all 380 files and `tests/unit2-higgs-voice.spec.cjs` exercises all 27 activity replays, a deliberately slow recording beyond the previous advance timer, vocabulary, phonics lesson buttons, cancellation and mute with zero browser speech calls. Sentence tile tests, original engine/audio preservation and navigation/feedback/reward/click-sound regressions also pass. Original inline game engines and original voice files remain available; adapters do not change game rules, pictures, speech recognition or reward ownership.
