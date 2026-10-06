@@ -3,16 +3,17 @@ const assert=require('node:assert/strict');
 (async()=>{
  const browser=await chromium.launch({channel:'msedge',headless:true});const page=await browser.newPage({viewport:{width:1400,height:1000}});
  const errors=[],missing=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)missing.push(r.url());});
+ async function action(name){if(name!=='back')await page.locator('.app-game-more>summary').click();await page.locator('[data-shell-action="'+name+'"]').click();}
  await page.goto('http://127.0.0.1:8765/index.html');
- await page.waitForSelector('#lessonApp h1');assert.equal(await page.locator('#lessonApp h1').textContent(),"Let's learn and play!");
+ await page.waitForSelector('#lessonApp h1');assert.equal(await page.locator('#lessonApp h1').textContent(),"Ready to play?");
  await page.locator('#lessonApp a[href="#/unit/3"]').click();await page.waitForSelector('#lessonApp [data-lesson]');assert.equal(await page.locator('#lessonApp [data-lesson]').count(),6);
  await page.screenshot({path:'tests/navigation-unit3.png',fullPage:true});
  await page.locator('#lessonApp [data-lesson="1"]').click();await page.waitForSelector('#lessonApp [data-activity]');assert.equal(await page.locator('#lessonApp [data-activity]').count(),7);assert.equal(await page.locator('#lessonApp .hero h1').textContent(),'Toy Town');
  await page.screenshot({path:'tests/navigation-unit3-lesson1.png',fullPage:true});
  await page.locator('[data-start-class]').click();await page.waitForSelector('#gameScreen.app-managed');
  assert(page.url().includes('mode=class'));assert(page.url().includes('activity=u3learn'));
- await page.locator('[data-shell-action="next"]').click();await page.waitForFunction(()=>currentGame==='u3catch');
- await page.locator('[data-shell-action="drawer"]').click();await page.locator('[data-jump="u3colour"]').click();await page.waitForFunction(()=>currentGame==='u3colour');
+ await action('next');await page.waitForFunction(()=>currentGame==='u3catch');
+ await action('drawer');await page.locator('[data-jump="u3colour"]').click();await page.waitForFunction(()=>currentGame==='u3colour');
  await page.locator('[data-shell-action="back"]').click();await page.waitForSelector('#lessonApp [data-start-class]');
  await page.goBack();await page.waitForFunction(()=>currentGame==='u3colour');
  await page.reload();await page.waitForFunction(()=>currentGame==='u3colour');
@@ -21,15 +22,15 @@ const assert=require('node:assert/strict');
  const sequence=await page.evaluate(()=>LearningConfig.units.find(u=>u.id===3).lessons[1].activities.map(a=>a.title));
  assert.deepEqual(sequence,['Meet the Pattern','Question Detective','Match the Answer','Build the Sentence','Listen & Decide','Talk to Toy Buddy']);
  await page.locator('[data-start-class]').click();await page.waitForSelector('.l2-scene');
- await page.locator('[data-shell-action="drawer"]').click();await page.locator('[data-jump="talk-to-toy-buddy"]').click();
+ await action('drawer');await page.locator('[data-jump="talk-to-toy-buddy"]').click();
  await page.waitForSelector('.toy-buddy[data-state="LISTENING"]');
  await page.locator('[data-teacher]').click();await page.locator('[data-validate="correct"]').click();await page.waitForFunction(()=>Unit3Lesson2.current()?.index===1);
  await page.locator('[data-shell-action="back"]').click();
  await page.waitForSelector('#lessonApp [data-activity="talk-to-toy-buddy"][data-status="played"]');
  await page.evaluate(()=>LearningApp.go('#/unit/2'));assert.equal(await page.locator('[data-lesson]').count(),6);
  assert.equal(await page.locator('#lessonApp .shell-lesson-art').count(),6);
- assert.equal(await page.locator('#lessonApp .shell-image-banner').count(),1);
- assert(await page.locator('#lessonApp .shell-lesson-art').evaluateAll(imgs=>imgs.every(i=>i.getBoundingClientRect().width>i.parentElement.getBoundingClientRect().width*.9)));
+ assert.equal(await page.locator('#lessonApp .app-journey-heading').count(),1);
+ await page.waitForFunction(()=>[...document.querySelectorAll('#lessonApp .shell-lesson-art')].every(i=>i.complete&&i.naturalWidth>0));
  assert(await page.locator('[data-lesson="6"]').textContent().then(t=>t.includes('Coming soon')));
  await page.screenshot({path:'tests/navigation-unit2.png',fullPage:true});
  for(const id of [1,2,3,4,5,6]){await page.evaluate(n=>LearningApp.go('#/unit/2/lesson/'+n),id);await page.waitForSelector('#lessonApp .zone-title-row h2');}
@@ -37,14 +38,14 @@ const assert=require('node:assert/strict');
  // Exercise all original game entry points via the new adapter, with their startup callbacks.
  const keys=await page.evaluate(()=>Object.keys(games));
  for(const game of keys){await page.evaluate(k=>openGame(k),game);await page.waitForTimeout(420);assert(await page.locator('#gameStage').textContent(),game+' did not render');}
- await page.evaluate(()=>LearningApp.go('#/letters'));assert(await page.locator('#spaceLetters').isVisible());assert(await page.locator('.side-item[data-space="letters"]').isVisible());
- await page.locator('.side-item[data-space="unit3"]').click();await page.waitForSelector('#lessonApp [data-lesson]');
+ await page.evaluate(()=>LearningApp.go('#/letters'));assert(await page.locator('#spaceLetters').isVisible());assert(await page.locator('.app-bottom-nav').isVisible());
+ await page.evaluate(()=>LearningApp.go('#/unit/3'));await page.waitForSelector('#lessonApp [data-lesson]');
  
  await page.evaluate(()=>LearningApp.go('#/unit/3/lesson/1?mode=practice&activity=u3learn'));
- await page.waitForSelector('[data-shell-action="sound"]');
+ await page.waitForSelector('[data-shell-action="sound"]',{state:'attached'});
  await page.evaluate(()=>{window.testClip=new Audio('assets/unit3/audio/robot.mp3');window.stalePrompt=false;autoSpeak(()=>{window.stalePrompt=true;},40);});
- await page.locator('[data-shell-action="sound"]').click();assert(await page.evaluate(()=>testClip.muted));
- await page.locator('[data-shell-action="sound"]').click();assert(!(await page.evaluate(()=>testClip.muted)));
+ await action('sound');assert(await page.evaluate(()=>testClip.muted));
+ await action('sound');assert(!(await page.evaluate(()=>testClip.muted)));
  await page.evaluate(()=>{window.stalePrompt=false;autoSpeak(()=>{window.stalePrompt=true;},40);LearningApp.go('#/unit/2');});
  await page.waitForTimeout(100);assert(!(await page.evaluate(()=>stalePrompt)),'Detached automatic prompt fired');
  await page.evaluate(()=>{LearningConfig.units.push({id:4,title:'Future Unit',space:'unit4',thumbnail:'assets/unit3/toys/teddy.webp',lessons:Array.from({length:6},(_,i)=>({id:i+1,title:null,targetLanguage:[],activities:[],locked:false}))});LearningApp.go('#/unit/4');});

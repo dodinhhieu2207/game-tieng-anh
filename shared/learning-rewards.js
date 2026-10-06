@@ -48,7 +48,7 @@
    if(!pending)return;
    // Wait until the current spoken confirmation has finished. Never interrupt speech.
    const actor=window.Unit3Lesson2?.current();if(actor&&(['asking','checking'].includes(actor.phase)||(actor.buddy.audio&&!actor.buddy.audio.paused&&!actor.buddy.audio.ended))){timer=setTimeout(deliver,180);return;}
-   const d=pending;pending=null;const kind=rewardKind(d);toast.innerHTML=`${sprite(kind.asset)}<div><b>${kind.title}</b><span>+${d.points} reward points · ${totals().stars} stars collected</span></div><button type="button" data-toast-close aria-label="Dismiss reward">×</button><span class="reward-sparkles" aria-hidden="true">${Array.from({length:9},(_,i)=>sprite('sparkle',`reward-particle particle-${i}`)).join('')}</span>`;toast.hidden=false;toast.classList.remove('reward-pop');void toast.offsetWidth;toast.classList.add('reward-pop');sound(kind.sound);timer=setTimeout(()=>{toast.hidden=true;toast.innerHTML='';},3600);
+   const d=pending;pending=null;const kind=rewardKind(d);const actions=window.LearningApp?.context()?.activity?'<div class="app-reward-actions"><button type="button" data-reward-action="replay">Play again</button><button type="button" data-reward-action="next">Next game</button></div>':'';toast.innerHTML=`${sprite(kind.asset)}<div><b>${kind.title}</b><span>+${d.points} reward points · ${totals().stars} stars collected</span>${actions}</div><button type="button" data-toast-close aria-label="Dismiss reward">×</button><span class="reward-sparkles" aria-hidden="true">${Array.from({length:9},(_,i)=>sprite('sparkle',`reward-particle particle-${i}`)).join('')}</span>`;toast.hidden=false;toast.classList.remove('reward-pop');void toast.offsetWidth;toast.classList.add('reward-pop');sound(kind.sound);timer=setTimeout(()=>{toast.hidden=true;toast.innerHTML='';},6000);
   };requestAnimationFrame(()=>requestAnimationFrame(deliver));
  }
  document.addEventListener('DOMContentLoaded',()=>{
@@ -58,7 +58,7 @@
   book.addEventListener('click',e=>{if(e.target.closest('[data-reward-close]'))close();if(e.target.closest('.reward-activities a'))close();});book.addEventListener('cancel',()=>lastFocus?.focus());
   book.addEventListener('change',e=>{if(e.target.id==='rewardStudent'&&!inGame()){get().selectStudent(e.target.value);window.LearningApp.go(location.hash);}});
   book.addEventListener('submit',e=>{if(e.target.id!=='rewardNewStudent')return;e.preventDefault();if(inGame())return;const s=get().addStudent(new FormData(e.target).get('name'));if(s){get().selectStudent(s.id);window.LearningApp.go(location.hash);}});
-  toast.addEventListener('click',e=>{if(e.target.closest('[data-toast-close]')){toast.hidden=true;clearTimeout(timer);}});
+  toast.addEventListener('click',e=>{const action=e.target.closest('[data-reward-action]')?.dataset.rewardAction;if(action){document.querySelector(`[data-shell-action="${action}"]`)?.click();toast.hidden=true;clearTimeout(timer);}if(e.target.closest('[data-toast-close]')){toast.hidden=true;clearTimeout(timer);}});
   document.addEventListener('learning:progress-updated',e=>{update();celebrate(e.detail);});document.addEventListener('learning:student-changed',update);
   document.addEventListener('learning:game-nav-rendered',gameHud);
   addEventListener('hashchange',()=>{pending=null;clearTimeout(timer);toast.hidden=true;gameHud();});update();

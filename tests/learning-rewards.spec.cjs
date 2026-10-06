@@ -24,6 +24,8 @@ const assert=require('node:assert/strict');
  assert.equal(await page.locator('#gameScreen .reward-game-best .reward-star-row').getAttribute('aria-label'),'3 of 3 stars');
  assert.equal(await page.locator('#gameScreen .reward-game-book b').textContent(),'9');
  assert.equal(await page.locator('#gameScreen .reward-toast').count(),1);
+ await page.waitForSelector('.reward-toast:not([hidden]) [data-reward-action="replay"]');
+ await page.locator('[data-reward-action="replay"]').click();assert.equal(await page.evaluate(()=>LearningProgress.get('2/1/missing').stars),3);
  await page.screenshot({path:'tests/rewards-in-game.png',fullPage:true});
  await page.locator('.reward-game-book').click();assert(await page.locator('.reward-book').isVisible());await page.locator('[data-reward-close]').click();
  await page.locator('.reward-game-book').click();assert(await page.locator('#rewardStudent').isDisabled());assert.equal(await page.locator('#rewardNewStudent').count(),0);await page.locator('[data-reward-close]').click();

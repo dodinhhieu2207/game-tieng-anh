@@ -1,5 +1,7 @@
 # Preschool learning app shell
 
+This first shell design is superseded by the complete playground design documented in `APP-WORLD.md`. Resume storage and learner separation described here remain in use.
+
 The October 6 update reshapes Home and the shared navigation without replacing any game engine or voice asset.
 
 ## Design
