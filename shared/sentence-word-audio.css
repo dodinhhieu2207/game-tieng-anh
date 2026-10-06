@@ -1,0 +1,9 @@
+.sentence-word-speaking{outline:4px solid #ffca35!important;box-shadow:0 0 0 8px #ffdc6940!important}
+.sentence-word-slots{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:14px 0}
+.sentence-word-slots .sentence-slot{min-width:85px;min-height:60px;flex:0 1 auto;font-size:25px}
+.sentence-word-bank{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.sentence-word-bank .sentence-tile{font-size:27px;min-width:85px;min-height:64px;touch-action:none}
+.sentence-word-bank .sentence-tile img{width:64px;height:64px;object-fit:contain}
+.sentence-word-bank .sentence-tile.used{display:none}
+.sentence-word-bank .sentence-tile.word-dragging{position:relative;z-index:10;pointer-events:none}
+@media(max-width:600px){.sentence-word-bank .sentence-tile{font-size:23px;min-width:65px}.sentence-word-slots .sentence-slot{font-size:22px;min-width:60px}}

@@ -1,0 +1,50 @@
+{
+  "voice": "Higgs V3 with existing approved Belinda reference",
+  "clips": {
+    "is": {
+      "text": "Is",
+      "src": "assets/sentence-words/is.mp3",
+      "sha256": "66d3722bf1a094b1155489cbb36164be1e640bd02a0853ce335707e39a9b472c"
+    },
+    "it": {
+      "text": "it",
+      "src": "assets/sentence-words/it.mp3",
+      "sha256": "1ec16bef6f2e5803adc7c73fd1c671a7b7db8b9761bb5bbaa1cbae4af92b7ede"
+    },
+    "a": {
+      "text": "a",
+      "src": "assets/sentence-words/a.mp3",
+      "sha256": "ab7002410650b1c7d655984c53b9f96aeee1770b4572331b73b4fb83748e58ce"
+    },
+    "yes": {
+      "text": "Yes",
+      "src": "assets/sentence-words/yes.mp3",
+      "sha256": "eb17571ef9359ef505adcf9658311a2014d7c14cc21995ad4fa3667f3a7159df"
+    },
+    "no": {
+      "text": "No",
+      "src": "assets/sentence-words/no.mp3",
+      "sha256": "104c99a90c08287bb7e9ed0119528ca3c165aae3a72601316fb33a747aeba492"
+    },
+    "isnt": {
+      "text": "isn't",
+      "src": "assets/sentence-words/isnt.mp3",
+      "sha256": "2b9e150fb7a532e45b070279ddbade805ff953cfb0631b9e25574d7eaa46edb5"
+    },
+    "whats": {
+      "text": "What's",
+      "src": "assets/sentence-words/whats.mp3",
+      "sha256": "7af7362279fa627c35b58c4e37dc57b8d65ba0378dae3187acee7dab53b2551b"
+    },
+    "this": {
+      "text": "this",
+      "src": "assets/sentence-words/this.mp3",
+      "sha256": "d5e2be8aaa5daa02dcda9c71782f19c4053c3b837d2e66d4d7498d11a2bde708"
+    },
+    "its": {
+      "text": "It's",
+      "src": "assets/sentence-words/its.mp3",
+      "sha256": "ddf23711ce6b557381006ff0c485d6bebd7fd8d15f85fe2605386748659b3214"
+    }
+  }
+}

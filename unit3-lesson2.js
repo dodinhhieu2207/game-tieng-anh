@@ -78,7 +78,7 @@
    const ok=await new Promise(resolve=>{const done=()=>{this.sounds.delete(a);resolve(this.active(token));};a.addEventListener('ended',done,{once:true});a.addEventListener('error',done,{once:true});a.play().catch(done);this.sfxDone=()=>{a.pause();resolve(false);};});return ok;
   }
   stopRecognition(){this.recognition?.cancel?.();this.recognition=null;}
-  resetAudio(){this.run++;this.stopRecognition();this.cancelDrag();this.buddy.stopAudio();this.sounds.forEach(a=>a.pause());this.sounds.clear();this.sfxDone?.();this.sfxDone=null;}
+  resetAudio(){this.run++;window.SentenceWordAudio?.stop();this.stopRecognition();this.cancelDrag();this.buddy.stopAudio();this.sounds.forEach(a=>a.pause());this.sounds.clear();this.sfxDone?.();this.sfxDone=null;}
   setRound(preserveWrong=false){
    const wasWrong=this.roundWrong;this.resetAudio();this.phase='idle';this.voiceFeedback=null;this.buddy.setState('IDLE');this.roundWrong=preserveWrong&&wasWrong;this.round=this.rounds[this.index];this.ui.Result.hidden=true;
    this.root.dataset.speakingType=this.round.questionType||'yes-no';
@@ -120,7 +120,7 @@
    this.ui.Interaction.innerHTML=`${multi?`<div class="l2-match-cards">${cards.map((r,i)=>{const n=start+i,current=n===this.index,done=n<this.index;return `<div class="l2-match-card ${current?'l2-current-card':''}"><img src="${toy(r.shown)}" alt="A ${r.shown}"><b>${question(r.asked)}</b><div class="l2-drop l2-answer-drop ${done?'l2-snapped':''}" ${current?'data-drop-answer':''}>${done?answer(r.yes):current?'Drop the answer here':'Next question'}</div></div>`;}).join('')}</div>`:'<div class="l2-drop l2-answer-drop" data-drop-answer aria-label="Drop your answer here">Drop the answer here</div>'}<div class="l2-answer-bank">${[true,false].map(y=>`<button type="button" class="l2-draggable" data-match="${y}">${answer(y)}</button>`).join('')}</div>`;
   }
   buildTiles(){
-   const r=this.round;this.tokens=r.form==='question'?['Is','it','a',r.asked,'?']:r.form==='positive'?['Yes',',','it','is','.']:['No',',','it',"isn't",'.'];this.placed=Array(this.tokens.length).fill(null);
+   const r=this.round;this.tokens=r.form==='question'?['Is','it','a',r.asked+'?']:r.form==='positive'?['Yes,','it','is.']:['No,','it',"isn't."];this.placed=Array(this.tokens.length).fill(null);
    this.tiles=mix(this.tokens.map((word,id)=>({id,word})));if(this.level==='challenge')this.tiles=mix([...this.tiles,{id:100,word:r.form==='question'?'No':'Is'},{id:101,word:r.form==='negative'?'is':"isn't"}]);
    this.ui.Interaction.innerHTML=`<p class="l2-sentence-model" ${this.level==='easy'?'':'hidden'}>${this.tokens.join(' ').replace(/ ([,.?])/g,'$1')}</p><div class="l2-slots" role="group" aria-label="Sentence slots">${this.tokens.map((word,i)=>`<button type="button" class="l2-drop" data-slot="${i}" aria-label="Word slot ${i+1}">${this.level==='easy'?`<span class="l2-ghost">${esc(word)}</span>`:i+1}</button>`).join('')}</div><div class="l2-tiles">${this.tiles.map(t=>`<button type="button" class="l2-draggable" data-tile="${t.id}">${esc(t.word)}</button>`).join('')}</div><button type="button" data-undo>Undo last word</button>`;
   }
@@ -148,12 +148,13 @@
    if(b.dataset.choice!==undefined)this.check((b.dataset.choice==='true')===this.round.yes);
    if(b.dataset.category)this.check(b.dataset.category===this.round.category);
    if(b.dataset.match!==undefined&&!this.suppressClick)this.placeAnswer(b);
-   if(b.dataset.tile!==undefined&&!this.suppressClick)this.placeTile(Number(b.dataset.tile));
+   if(b.dataset.tile!==undefined&&!this.suppressClick){if(this.wordPointer!==b)window.SentenceWordAudio?.play(b.textContent,this.root,b);this.wordPointer=null;this.placeTile(Number(b.dataset.tile));}
    if(b.hasAttribute('data-teacher'))this.teacherCheck();if(b.id==='l2Mic')this.listen();if(b.dataset.validate)this.gradeSpeech(b.dataset.validate);
   }
   reveal(){if(this.kind==='listen-decide'){const q=question(this.round.asked);this.ui.Question.textContent=q;this.ui.Bubble.textContent=q;}}
   async check(correct){
    if(this.phase!=='listening')return;this.phase='checking';this.attempts++;this.refresh();const token=this.run;this.buddy.setState('THINKING');this.reveal();
+   if(this.kind==='build-sentence'){if(correct)await window.SentenceWordAudio?.finished();else window.SentenceWordAudio?.stop();if(!this.active(token))return;}
    if(!correct){this.roundWrong=true;this.errors++;this.status('Good try! Look again.');
     if(!await this.speak(this.kind==='question-detective'?'feedback/listen_again':'feedback/try_again',token,{endState:'RETRY'}))return;
     if(this.kind==='meet-pattern'||this.kind==='listen-decide'){this.root.querySelector('#l2Model').textContent=answer(this.round.yes);if(!await this.speak(answerClip(this.round.yes),token,{endState:'RETRY'}))return;}
@@ -184,6 +185,7 @@
   undo(){const slot=this.placed.findLastIndex(id=>id!==null);if(slot<0)return;const id=this.placed[slot];this.placed[slot]=null;const b=this.root.querySelector(`[data-slot="${slot}"]`);b.innerHTML=this.level==='easy'?`<span class="l2-ghost">${esc(this.tokens[slot])}</span>`:slot+1;b.classList.remove('l2-snapped');this.root.querySelector(`[data-tile="${id}"]`).hidden=false;}
   pointerDown(e){
    const b=e.target.closest('.l2-draggable');if(!b||b.disabled||this.phase!=='listening')return;
+   if(this.kind==='build-sentence'){this.wordPointer=b;window.SentenceWordAudio?.play(b.textContent,this.root,b);}
    this.drag={b,id:e.pointerId,x:e.clientX,y:e.clientY,moved:false};try{b.setPointerCapture(e.pointerId);}catch{}
   }
   pointerMove(e){
@@ -194,7 +196,7 @@
   pointerUp(e){
    const d=this.drag;if(!d||d.id!==e.pointerId)return;
    const rects=[...this.root.querySelectorAll('.l2-drop')].map(b=>({b,r:b.getBoundingClientRect()}));
-   this.cancelDrag();if(!d.moved)return;
+   this.cancelDrag();setTimeout(()=>{this.wordPointer=null;},0);if(!d.moved)return;
    this.suppressClick=true;queueMicrotask(()=>setTimeout(()=>{this.suppressClick=false;},0));
    const target=rects.find(({b,r})=>(d.b.dataset.match===undefined||b.hasAttribute('data-drop-answer'))&&e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom)?.b;
    if(target){if(d.b.dataset.match!==undefined)this.placeAnswer(d.b);else this.placeTile(Number(d.b.dataset.tile),Number(target.dataset.slot));}
