@@ -5,3 +5,17 @@
 .learning-fx-reward{width:46px!important;height:46px!important;background:none;mask:none!important;-webkit-mask:none!important;background-image:url('../assets/rewards/reward-atlas.png');background-size:300% 200%;background-position:0 0;filter:drop-shadow(0 3px 4px #b37b2855)}
 .learning-fx-halo{position:absolute;width:90px;height:90px;transform:translate(-50%,-50%);border:3px solid #ffd044;border-radius:50%;box-shadow:0 0 24px #ffd04466}
 @media(prefers-reduced-motion:reduce){.learning-fx-particle{display:none}}
+
+/* State cues stay visible after the short particle burst has finished. */
+#gameStage :is(button,a,[data-ff-drag],.l2-drop,.lf-slot){transition:box-shadow .18s ease,border-color .18s ease,background-color .18s ease}
+#gameStage :is(.selected,.l2-selected,.is-over){box-shadow:0 0 0 3px #38c5ec70,0 5px 18px #269dc42b}
+#gameStage :is(.correct,.l2-snapped,.lf-slot.filled,.ff-drop-target.is-filled){box-shadow:0 0 0 3px #86d54788,0 0 20px #a9e75235}
+#gameStage :is(.playing,.l2-scene[data-phase="asking"] .l2-bubble){box-shadow:0 0 0 3px #4ec9ff88,0 0 24px #42bdf044}
+#gameStage.learning-drag-active :is(.l2-drop,.ff-drop-target,.lf-slot:not(.filled)){outline:3px dashed #55b8ed;outline-offset:3px;background-color:#eaf8ff}
+#gameStage.learning-drag-active :is(.is-over,.l2-over){outline-style:solid;outline-color:#89d13c;box-shadow:0 0 22px #a9df5966}
+#gameStage :is(.colour-meter>i,.meter>i,.meter>span,[role="progressbar"]){transition:width .35s ease,background-color .2s ease}
+#gameStage :is(.l2-snapped,.lf-slot.filled,.ff-drop-target.is-filled){background-color:#f0fbe8}
+dialog:is(.reward-book,.shell-drawer)[open]{animation:learning-dialog-arrive .22s cubic-bezier(.2,.8,.3,1)}
+@keyframes learning-dialog-arrive{from{opacity:.25;transform:translateY(10px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(prefers-reduced-motion:reduce){#gameStage *{transition-duration:0s!important}}
+@media(prefers-reduced-motion:reduce){dialog:is(.reward-book,.shell-drawer)[open]{animation:none}}

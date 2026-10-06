@@ -3,7 +3,7 @@ const assert=require('node:assert/strict');
 (async()=>{
  const browser=await chromium.launch({channel:'chrome',headless:true}),page=await browser.newPage({viewport:{width:1366,height:900}}),errors=[],missing=[];
  page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)missing.push(r.url());});
- await page.addInitScript(()=>{window.feedbackMedia=[];const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){feedbackMedia.push(this);if(this.src.includes('/lesson2/'))this.playbackRate=4;return play.call(this);};});
+ await page.addInitScript(()=>{window.feedbackMedia=[];const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){feedbackMedia.push(this);if(this.src.includes('/lesson2/')&&this!==window.testVoice)this.playbackRate=4;return play.call(this);};});
  await page.goto(process.env.FEEDBACK_TEST_BASE||'http://127.0.0.1:8765/index.html');await page.waitForFunction(()=>!!window.LearningFeedback&&!!window.LearningApp);
  await page.locator('[data-start-adventure]').click();await page.waitForSelector('#gameScreen.active');
  await page.evaluate(()=>LearningFeedback.play('correct',document.querySelector('.shell-game-nav')));await page.waitForTimeout(120);
@@ -12,7 +12,7 @@ const assert=require('node:assert/strict');
  await page.screenshot({path:'tests/feedback-correct.png'});await page.waitForTimeout(1200);assert.equal(await page.locator('.learning-fx-particle').count(),0);
  // Voice owns audio: a real prerecorded voice cancels the currently playing effect.
  await page.evaluate(async()=>{LearningFeedback.play('badge');window.testVoice=new Audio('assets/unit3/lesson2/audio/questions/whats_this.mp3');await testVoice.play();});
- assert(await page.evaluate(()=>feedbackMedia.filter(a=>a.learningSfx).every(a=>a.paused||a.ended)));
+ await page.waitForFunction(()=>testVoice.paused||feedbackMedia.filter(a=>a.learningSfx).every(a=>a.paused||a.ended));
  const before=await page.evaluate(()=>feedbackMedia.length);await page.evaluate(()=>LearningFeedback.play('correct'));assert.equal(await page.evaluate(()=>feedbackMedia.length),before);await page.evaluate(()=>testVoice.pause());
  // Real Lesson 2 answer path still waits for audio ended, then resolves and offers Next.
  await page.evaluate(()=>LearningApp.go('#/unit/3/lesson/2?mode=practice&activity=listen-decide'));

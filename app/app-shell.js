@@ -19,9 +19,9 @@
   let route={screen:'home'},context=null,mounted='',muted=false,lastFocus=null;
   // Existing games keep their Audio API; this shared owner stops detached clips and applies mute.
   const NativeAudio=window.Audio,media=new Set();
-  window.Audio=function(src){const audio=new NativeAudio(src);audio.muted=muted;media.add(audio);audio.addEventListener('play',()=>{media.add(audio);if(!audio.learningSfx)document.dispatchEvent(new Event('learning:voice-start'));});audio.addEventListener('ended',()=>media.delete(audio));audio.addEventListener('error',()=>media.delete(audio));return audio;};
+  window.Audio=function(src){const audio=new NativeAudio(src);audio.muted=muted;media.add(audio);audio.addEventListener('play',()=>{media.add(audio);if(!audio.learningSfx)document.dispatchEvent(new Event('learning:voice-start'));});const ended=()=>{media.delete(audio);if(!audio.learningSfx)document.dispatchEvent(new Event('learning:voice-end'));};audio.addEventListener('ended',ended);audio.addEventListener('error',ended);return audio;};
   window.Audio.prototype=NativeAudio.prototype;Object.setPrototypeOf(window.Audio,NativeAudio);
-  window.speakText=function(){if(muted)return Promise.resolve();document.dispatchEvent(new Event('learning:voice-start'));return original.speakText.apply(this,arguments);};
+  window.speakText=function(){if(muted)return Promise.resolve();document.dispatchEvent(new Event('learning:voice-start'));return original.speakText.apply(this,arguments).finally(()=>document.dispatchEvent(new Event('learning:voice-end')));};
   window.autoSpeak=function(fn,delay){const owner=currentGame;return original.autoSpeak(()=>{if(currentGame===owner)fn();},delay);};
   const key=(u,l,a)=>`${u}/${l}/${a.id}`;
   const lessonKeys=(u,l)=>l.activities.filter(a=>a.game).map(a=>key(u.id,l.id,a));
