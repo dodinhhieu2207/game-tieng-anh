@@ -15,11 +15,11 @@ const assert=require('node:assert/strict');
  const enter=async()=>{await page.evaluate(()=>LearningApp.go('#/unit/3/lesson/2?mode=practice&activity=talk-to-toy-buddy'));};
  await enter();assert(await page.locator('#l2Mic').isDisabled());assert.equal(uploads,0);
  const ready=()=>page.waitForSelector('.l2-scene[data-phase="listening"]');
- const start=async()=>{await ready();await page.locator('#l2Mic').click();await page.waitForSelector('.l2-scene[data-phase="recording"]');assert.match(await page.locator('#l2Mic').textContent(),/Stop recording/);};
+ const start=async()=>{await ready();await page.locator('#l2Mic').click();await page.waitForSelector('.l2-scene[data-phase="recording"]');assert.match(await page.locator('#l2Mic').textContent(),/Done speaking/);};
  await start();await page.locator('#l2Mic').click();await ready();assert.match(await page.locator('#l2Status').textContent(),/whole sentence/);assert(await page.locator('#l2Next').isDisabled());assert.equal(await page.evaluate(()=>Unit3Lesson2.current().characterState),'LISTENING');
  let yes=await page.evaluate(()=>Unit3Lesson2.current().round.yes);
  transcript=yes?"No, it isn't.":'Yes it is';await start();await ready();assert.match(await page.locator('#l2Status').textContent(),/Look again/);
- transcript='music noise';await start();await ready();assert.match(await page.locator('#l2Status').textContent(),/couldn't hear/);
+ transcript='music noise';await start();await ready();assert.match(await page.locator('#l2Status').textContent(),/No mistake recorded/);
  // Actual browser MediaRecorder bytes reach the Worker handler. Inference remains mocked.
  transcript=yes?'YES, IT IS.':'no it is not';hold=true;await start();await page.waitForSelector('.l2-scene[data-phase="processing"]');assert(await page.locator('#l2Mic').isDisabled());assert(await page.locator('#l2Replay').isDisabled());assert(await page.locator('.l2-waveform').isVisible());assert.equal(await page.evaluate(()=>Unit3Lesson2.current().characterState),'THINKING');assert(await page.evaluate(()=>qaCapture.getTracks().every(t=>t.readyState==='ended')));await page.screenshot({path:'tests/unit3-speaking-processing.png',fullPage:true});
  await page.waitForFunction(()=>Unit3Lesson2.current()?.index===1);await ready();hold=false;
@@ -27,7 +27,7 @@ const assert=require('node:assert/strict');
  for(const shown of ['plane','puppet','robot','balloon','teddy'])for(const truth of [true,false]){
   await page.evaluate(({shown,truth})=>{const s=Unit3Lesson2.current();s.rounds[s.index]={shown,asked:truth?shown:shown==='robot'?'teddy':'robot',yes:truth};s.setRound();},{shown,truth});await ready();
   const index=await page.evaluate(()=>Unit3Lesson2.current().index);transcript=truth?'Yes, it is.':"No, it isn't.";await start();await page.waitForFunction(i=>Unit3Lesson2.current()?.index>i,index);if(index<9)await ready();
-  if(index===9){await page.waitForSelector('.l2-scene[data-phase="complete"]');await page.locator('#restartGame').click();await ready();}
+  if(index===9){await page.waitForSelector('.l2-scene[data-phase="complete"]');await page.locator('[data-complete-action=again]').click();await ready();}
  }
  // A stale pending result after Back cannot mutate the old scene or next scene.
  for(const type of ['name','name-question']){
@@ -39,7 +39,7 @@ const assert=require('node:assert/strict');
    if(i===0&&type==='name'){transcript=`It's a ${shown==='robot'?'teddy':'robot'}.`;await start();await ready();assert.match(await page.locator('#l2Status').textContent(),/Look again/);}
    transcript=type==='name'?`It's a ${shown}.`:"What's this?";await start();await page.waitForFunction(i=>Unit3Lesson2.current()?.index>i,i);if(i<4)await ready();
   }
-  assert.equal(seen.size,5);await page.waitForSelector('.l2-scene[data-phase="complete"]');await page.locator('#restartGame').click();await ready();
+  assert.equal(seen.size,5);await page.waitForSelector('.l2-scene[data-phase="complete"]');await page.locator('[data-complete-action=again]').click();await ready();
  }
  hold=true;transcript='Yes, it is.';await start();await page.waitForSelector('.l2-scene[data-phase="processing"]');await page.locator('[data-shell-action="back"]').click();await page.waitForTimeout(600);assert.equal(await page.evaluate(()=>Unit3Lesson2.current()),null);await enter();await ready();hold=false;
  // Permission denied: exactly two teacher controls, same audio and actor remain.

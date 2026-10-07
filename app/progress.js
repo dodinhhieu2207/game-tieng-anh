@@ -16,6 +16,12 @@
    if(delta>0||!old.completed)document.dispatchEvent(new CustomEvent('learning:progress-updated',{detail:{key,previous:old,current:{...data[key]},delta,points:delta*100}}));
   },
   all(){return JSON.parse(JSON.stringify(data));},
+  speakingReview(key,evidence){
+   if(typeof key!=='string'||!/^\d+\/(?:[1-6]|existing)\/[^/]+$/.test(key))return;
+   const fields=['aiConfirmed','teacherConfirmed','recognitionReviews'];
+   if(!evidence||fields.some(f=>!Number.isInteger(evidence[f])||evidence[f]<0||evidence[f]>1000))return;
+   data[key]={...this.get(key),speakingReview:Object.fromEntries(fields.map(f=>[f,evidence[f]]))};save();
+  },
   remember(hash){if(typeof hash!=='string'||!hash.startsWith('#/'))return;try{localStorage.setItem('learning.resume.'+active+'.v1',hash);}catch{}},
   last(){try{return localStorage.getItem('learning.resume.'+active+'.v1')||null;}catch{return null;}},
   students(){return students.map(s=>({...s}));},

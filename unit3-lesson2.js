@@ -21,7 +21,7 @@
  class LessonScene {
   get currentGame(){return this.entry[1];}get currentRound(){return this.index+1;}get score(){return this.firstCorrect;}get soundEnabled(){return !window.LearningApp?.isMuted();}get isQuestionPlaying(){return this.phase==='asking';}get isInputEnabled(){return this.phase==='listening';}get characterState(){return this.buddy.state;}get currentToy(){return this.round.shown;}get questionToy(){return this.round.asked;}get correctAnswer(){return this.round.yes;}get difficulty(){return this.level;}
   constructor(kind){
-   this.kind=kind;this.entry=ENTRIES.find(e=>e[0]===kind);this.destroyed=false;this.run=0;this.phase='idle';this.index=0;this.errors=0;this.attempts=0;this.firstCorrect=0;this.roundWrong=false;this.level='easy';this.sounds=new Set();this.drag=null;this.recognition=null;
+   this.kind=kind;this.entry=ENTRIES.find(e=>e[0]===kind);this.destroyed=false;this.run=0;this.phase='idle';this.index=0;this.errors=0;this.attempts=0;this.firstCorrect=0;this.teacherConfirmed=0;this.recognitionReviews=0;this.aiConfirmed=0;this.roundWrong=false;this.level='easy';this.sounds=new Set();this.drag=null;this.recognition=null;
    this.rounds=rounds();
    if(kind==='meet-pattern'){const shown=mix([...WORDS,...mix(WORDS).slice(0,3)]),truth=mix([true,true,true,true,false,false,false,false]);this.rounds=mix(shown.map((w,i)=>({shown:w,asked:truth[i]?w:mix(WORDS.filter(x=>x!==w))[0],yes:truth[i]})));}
    if(kind==='question-detective')this.rounds=mix([...WORDS.map(w=>({shown:w,asked:w,category:'YES / NO',clip:'questions/is_it_a_'+w,text:question(w)})),{shown:'puppet',category:'NAME',clip:'questions/whats_this',text:"What's this?"},{shown:'balloon',category:'COLOR',clip:'questions/what_color',text:'What color is it?'},{shown:'teddy',category:'NUMBER',clip:'questions/how_many',text:'How many?'}]);
@@ -40,7 +40,7 @@
    if(kind==='talk-to-toy-buddy'){
     const label=document.createElement('label');label.className='l2-level';label.innerHTML='Speaking <select id="l2SpeakingType" aria-label="Speaking practice"><option value="yes-no">Is it a toy? — Answer</option><option value="mystery-question">Mystery Toy — Ask</option><option value="name">What’s this? — Answer</option><option value="name-question">What’s this? — Ask</option></select>';
     this.root.querySelector('.l2-head').insertBefore(label,this.ui.Progress);this.ui.SpeakingType=label.querySelector('select');
-    this.ui.SpeakingType.onchange=()=>{const type=this.ui.SpeakingType.value;this.index=0;this.errors=0;this.attempts=0;this.firstCorrect=0;this.rounds=type==='yes-no'?rounds():mix(WORDS.map(shown=>({shown,asked:shown,questionType:type,guesses:[],text:type==='mystery-question'?'Mystery Toy':"What's this?",clip:['mystery-question','name-question'].includes(type)?'feedback/your_turn':'questions/whats_this'})));this.setRound();};
+    this.ui.SpeakingType.onchange=()=>{const type=this.ui.SpeakingType.value;this.index=0;this.errors=0;this.attempts=0;this.firstCorrect=0;this.teacherConfirmed=0;this.recognitionReviews=0;this.aiConfirmed=0;this.rounds=type==='yes-no'?rounds():mix(WORDS.map(shown=>({shown,asked:shown,questionType:type,guesses:[],text:type==='mystery-question'?'Mystery Toy':"What's this?",clip:['mystery-question','name-question'].includes(type)?'feedback/your_turn':'questions/whats_this'})));this.setRound();};
    }
    this.root.addEventListener('click',e=>this.click(e));
    this.root.addEventListener('pointerdown',e=>this.pointerDown(e));this.root.addEventListener('pointermove',e=>this.pointerMove(e));this.root.addEventListener('pointerup',e=>this.pointerUp(e));this.root.addEventListener('pointercancel',()=>this.cancelDrag());
@@ -80,6 +80,7 @@
   stopRecognition(){this.recognition?.cancel?.();this.recognition=null;}
   resetAudio(){this.run++;window.SentenceWordAudio?.stop();this.stopRecognition();this.cancelDrag();this.buddy.stopAudio();this.sounds.forEach(a=>a.pause());this.sounds.clear();this.sfxDone?.();this.sfxDone=null;}
   setRound(preserveWrong=false){
+   this.speechReview?.destroy();this.speechReview=null;this.lastRecording=null;this.teacherAssistedRound=false;
    const wasWrong=this.roundWrong;this.resetAudio();this.phase='idle';this.voiceFeedback=null;this.buddy.setState('IDLE');this.roundWrong=preserveWrong&&wasWrong;this.round=this.rounds[this.index];this.ui.Result.hidden=true;
    this.root.dataset.speakingType=this.round.questionType||'yes-no';
    this.ui.Progress.textContent=`Round ${this.index+1} / ${this.rounds.length}`;this.ui.Toy.src=toy(this.round.shown);this.ui.Toy.alt='A '+this.round.shown;
@@ -144,12 +145,12 @@
    if(b.hasAttribute('data-undo')&&this.phase==='listening'){this.undo();return;}
    if(b.id==='l2Mic'&&this.phase==='recording'){this.recognition?.stop?.();return;}
    if(this.phase!=='listening')return;
-   if(b.dataset.guess){this.gradeMystery(b.dataset.guess);return;}
+   if(b.dataset.guess){this.teacherAssistedRound=true;this.teacherConfirmed=(this.teacherConfirmed||0)+1;this.gradeMystery(b.dataset.guess);return;}
    if(b.dataset.choice!==undefined)this.check((b.dataset.choice==='true')===this.round.yes);
    if(b.dataset.category)this.check(b.dataset.category===this.round.category);
    if(b.dataset.match!==undefined&&!this.suppressClick)this.placeAnswer(b);
    if(b.dataset.tile!==undefined&&!this.suppressClick){if(this.wordPointer!==b)window.SentenceWordAudio?.play(b.textContent,this.root,b);this.wordPointer=null;this.placeTile(Number(b.dataset.tile));}
-   if(b.hasAttribute('data-teacher'))this.teacherCheck();if(b.id==='l2Mic')this.listen();if(b.dataset.validate)this.gradeSpeech(b.dataset.validate);
+   if(b.hasAttribute('data-teacher'))this.teacherCheck();if(b.id==='l2Mic')this.listen();if(b.dataset.validate){if(b.dataset.validate==='correct'){this.teacherAssistedRound=true;this.teacherConfirmed=(this.teacherConfirmed||0)+1;}this.gradeSpeech(b.dataset.validate);}
   }
   reveal(){if(this.kind==='listen-decide'){const q=question(this.round.asked);this.ui.Question.textContent=q;this.ui.Bubble.textContent=q;}}
   async check(correct){
@@ -166,7 +167,7 @@
     if(!await this.speak(key,token,{endState:'CORRECT'}))return;
    }else if(!await this.speak('feedback/excellent',token,{endState:'CELEBRATE'}))return;
    if(!await this.sfx('correct',token))return;
-   if(!this.roundWrong)this.firstCorrect++;
+   if(!this.roundWrong&&!this.teacherAssistedRound)this.firstCorrect++;
    this.buddy.setState('CORRECT');this.phase='resolved';this.status('Great job! '+(this.kind==='listen-decide'?`Accuracy: ${this.firstCorrect} / ${this.index+1} first tries. `:'')+'Tap Next.');this.refresh();
   }
   placeAnswer(b){
@@ -204,31 +205,38 @@
   }
   cancelDrag(){if(this.drag){this.drag.b.style.transform='';this.drag.b.classList.remove('l2-dragging');try{this.drag.b.releasePointerCapture(this.drag.id);}catch{}this.drag=null;}}
   teacherCheck(){this.stopRecognition();this.phase='listening';this.buddy.setState('LISTENING');this.manualMode=true;this.speakingControls();this.root.querySelector('#l2Teacher').hidden=false;this.status('Say your answer. Your teacher will check it.');this.refresh();}
+  reviewSpeech(result={}){
+   this.speechReview?.destroy();const token=this.run,type=this.round.questionType;
+   this.speechReview=SpeakingReview.mount(this.root,{audio:this.lastRecording,transcript:result.transcript,reason:result.reason?`Review needed: ${result.reason}. No mistake was recorded.`:'Listen before confirming. Teacher confirmation is recorded separately.',onConfirm:type==='mystery-question'?null:()=>{if(!this.active(token)||this.phase!=='listening')return;this.teacherAssistedRound=true;this.teacherConfirmed=(this.teacherConfirmed||0)+1;this.gradeSpeech('correct');}});
+  }
   listen(){
    if(this.phase!=='listening')return;
    const adapter=this.manualMode?null:api.recognitionAdapter;
    if(!adapter){this.teacherCheck();return;}
-   if(this.recognition)return;const token=this.run;this.voiceFeedback=null;this.phase='starting';this.root.querySelector('#l2Heard').textContent='';this.refresh();this.status('Starting microphone…');
+   if(this.recognition)return;cancelVoice();this.speechReview?.destroy();this.lastRecording=null;const token=this.run;this.voiceFeedback=null;this.phase='starting';this.root.querySelector('#l2Heard').textContent='';this.refresh();this.status('Starting microphone…');
    try{
     const recognition=adapter.start({questionToy:this.round.asked,displayedToy:this.round.shown,questionType:this.round.questionType||'yes-no',
-     onStart:()=>{if(!this.active(token))return;this.phase='recording';this.buddy.setState('LISTENING');this.status('Listening… say the whole answer.');this.refresh();},
+     onStart:()=>{if(!this.active(token))return;this.phase='recording';this.buddy.setState('LISTENING');this.status('Listening… up to 8 seconds. Tap Done when finished.');this.refresh();},
+     onRecording:audio=>{if(this.active(token))this.lastRecording=audio;},
      onProcessing:()=>{if(!this.active(token))return;this.phase='processing';this.buddy.setState('THINKING');this.status('Checking your answer…');this.refresh();},
-     onResult:result=>{if(!this.active(token)||this.phase!=='processing')return;this.stopRecognition();this.phase='listening';this.root.querySelector('#l2Heard').textContent=result.transcript?'Heard: '+result.transcript:'';if(this.round.questionType==='mystery-question'&&result.result==='CORRECT')this.gradeMystery(result.guessedToy);else this.gradeSpeech({CORRECT:'correct',INCOMPLETE:'partial',WRONG_LOGIC:'logical',UNCLEAR:'unclear'}[result.result]||'unclear');},
-     onError:()=>{if(this.active(token))this.teacherCheck();}
+     onResult:result=>{if(!this.active(token)||this.phase!=='processing')return;this.stopRecognition();this.phase='listening';this.root.querySelector('#l2Heard').textContent=result.transcript?'Heard: '+result.transcript:'No clear transcript';this.reviewSpeech(result);if(this.round.questionType==='mystery-question'&&result.result==='CORRECT')this.gradeMystery(result.guessedToy);else this.gradeSpeech({CORRECT:'correct',INCOMPLETE:'partial',WRONG_LOGIC:'logical',UNCLEAR:'unclear'}[result.result]||'unclear');},
+     onError:reason=>{if(this.active(token)){this.teacherCheck();this.reviewSpeech({reason});this.status('Microphone or recognition needs checking. No mistake recorded.');}}
     });
     if(this.active(token)&&['starting','recording','processing'].includes(this.phase)&&!this.manualMode)this.recognition=recognition;else recognition?.cancel?.();
    }catch{this.teacherCheck();}
   }
   async gradeSpeech(result){
    if(this.phase!=='listening')return;this.stopRecognition();this.voiceFeedback=result;
+   if(result==='unclear'){this.recognitionReviews++;this.voiceFeedback=null;this.buddy.setState('LISTENING');this.status('Let’s check together. The computer could not confirm this answer. No mistake recorded.');this.refresh();return;}
    if(result==='correct'){
+    if(!this.teacherAssistedRound)this.aiConfirmed=(this.aiConfirmed||0)+1;
     this.phase='checking';this.attempts++;this.refresh();const token=this.run;this.buddy.setState('CORRECT');
     if(this.round.questionType&&this.round.questionType!=='yes-no')if(!await this.speak('answers/its_a_'+this.round.shown,token,{endState:'CORRECT'}))return;
     if(!await this.speak('feedback/excellent',token,{endState:'CELEBRATE'}))return;
-    if(!await this.sfx('correct',token))return;if(!this.roundWrong)this.firstCorrect++;
+    if(!await this.sfx('correct',token))return;if(!this.roundWrong&&!this.teacherAssistedRound)this.firstCorrect++;
     this.buddy.setState('CELEBRATE');this.phase='resolved';this.status('Excellent!');this.refresh();this.next();return;
    }
-   this.phase='checking';this.roundWrong=true;this.errors++;this.attempts++;this.refresh();const token=this.run;this.buddy.setState('THINKING');
+   this.phase='checking';if(result==='logical'){this.roundWrong=true;this.errors++;}this.attempts++;this.refresh();const token=this.run;this.buddy.setState('THINKING');
    const feedback={partial:['Good! Say the whole sentence.','say_the_whole_sentence'],logical:['Look again. Try again.','look_again'],unclear:["I couldn't hear you. Try again.",'i_couldnt_hear_you']};const [text,key]=feedback[result]||feedback.unclear;
    this.status(text);if(await this.speak('feedback/'+key,token,{endState:result==='partial'?'LISTENING':'RETRY'})){this.phase='listening';this.refresh();}
   }
@@ -244,9 +252,10 @@
    this.ui.Bubble.textContent=answer(yes);this.status(answer(yes));
    if(!await this.speak(answerClip(yes),token,{endState:yes?'CORRECT':'LISTENING'}))return;
    if(!yes){this.phase='listening';this.status('Ask about another toy!');this.refresh();if(this.manualMode)this.root.querySelector('#l2Teacher').hidden=false;return;}
+   if(!this.teacherAssistedRound)this.aiConfirmed=(this.aiConfirmed||0)+1;
    r.earnedStars=r.guesses.length===1?3:r.guesses.length<=3?2:1;
    this.ui.Toy.src=toy(r.shown);this.ui.Toy.alt='A '+r.shown;this.ui.Question.textContent=`Found it! ${'★'.repeat(r.earnedStars)}`;
-   this.firstCorrect+=Number(r.guesses.length===1);
+   this.firstCorrect+=Number(r.guesses.length===1&&!this.teacherAssistedRound);
    if(!await this.sfx('correct',token))return;
    this.buddy.setState('CELEBRATE');this.phase='resolved';this.status(`Found it in ${r.guesses.length} question${r.guesses.length===1?'':'s'}!`);this.refresh();
   }
@@ -255,12 +264,12 @@
    this.resetAudio();this.phase='complete';this.stars=this.firstCorrect/this.rounds.length>=.9?3:this.firstCorrect/this.rounds.length>=.65?2:1;this.buddy.setState('CELEBRATE');
    if(this.round.questionType==='mystery-question')this.stars=Math.max(1,Math.round(this.rounds.reduce((sum,r)=>sum+r.earnedStars,0)/this.rounds.length));
    document.dispatchEvent(new CustomEvent('learning:activity-completed',{detail:{game:this.entry[1],stars:this.stars}}));
-   const last=this.kind==='talk-to-toy-buddy',ctx=window.LearningApp?.context();
+   const last=this.kind==='talk-to-toy-buddy',ctx=window.LearningApp?.context();if(last)window.LearningProgress?.speakingReview?.('3/2/'+this.entry[0],{aiConfirmed:this.aiConfirmed||0,teacherConfirmed:this.teacherConfirmed||0,recognitionReviews:this.recognitionReviews||0});
    const earned=ENTRIES.reduce((sum,e)=>sum+(window.LearningProgress?.get('3/2/'+e[0]).stars||0),0);
    const speakingSummary=this.round.questionType==='name-question'?"What’s this?":this.round.questionType==='name'?"What’s this?<br>It’s a …":"Is it a ...?<br>Yes, it is.<br>No, it isn't.";
-   this.ui.Result.hidden=false;this.ui.Result.innerHTML=`<div class="l2-complete"><div class="l2-complete-actor"></div><div class="l2-complete-copy"><h2>${last?'UNIT 3 – LESSON 2 COMPLETE':'Activity Complete'}</h2><h3>Great job!</h3><p class="l2-earned">${'★'.repeat(this.stars)}${'☆'.repeat(3-this.stars)}</p><p>${this.firstCorrect} / ${this.rounds.length} correct on the first try.</p>${last?`<p>Is it a ...?<br>Yes, it is.<br>No, it isn't.</p><p>Lesson stars earned: ${earned} / 18</p>`:''}<div class="l2-complete-controls"><button type="button" data-complete-action="again">PLAY AGAIN</button><button type="button" data-complete-action="activities">CHOOSE ACTIVITY</button>${last?'<button type="button" data-complete-action="unit">BACK TO UNIT 3</button>':'<button type="button" data-complete-action="next">NEXT ACTIVITY</button>'}</div></div></div>`;
+   this.ui.Result.hidden=false;this.ui.Result.innerHTML=`<div class="l2-complete"><div class="l2-complete-actor"></div><div class="l2-complete-copy"><h2>${last?'UNIT 3 – LESSON 2 COMPLETE':'Activity Complete'}</h2><h3>Great job!</h3><p class="l2-earned">${'★'.repeat(this.stars)}${'☆'.repeat(3-this.stars)}</p><p>${this.firstCorrect} / ${this.rounds.length} correct on the first try.</p>${this.teacherConfirmed?`<p>${this.teacherConfirmed} teacher-confirmed answers.</p>`:''}${last?`<p class="l2-speaking-summary">Is it a ...?<br>Yes, it is.<br>No, it isn't.</p><p>Lesson stars earned: ${earned} / 18</p>`:''}<div class="l2-complete-controls"><button type="button" data-complete-action="again">PLAY AGAIN</button><button type="button" data-complete-action="activities">CHOOSE ACTIVITY</button>${last?'<button type="button" data-complete-action="unit">BACK TO UNIT 3</button>':'<button type="button" data-complete-action="next">NEXT ACTIVITY</button>'}</div></div></div>`;
    this.ui.Result.querySelector('.l2-complete-actor').appendChild(this.buddy.root);
-   if(last)this.ui.Result.querySelectorAll('.l2-complete-copy>p')[2].innerHTML=speakingSummary;
+   if(last)this.ui.Result.querySelector('.l2-speaking-summary').innerHTML=speakingSummary;
    if(this.round.questionType==='mystery-question'){
     const paragraphs=this.ui.Result.querySelectorAll('.l2-complete-copy>p');paragraphs[1].textContent=`${this.attempts} questions · ${this.rounds.reduce((sum,r)=>sum+r.earnedStars,0)} / 15 mystery stars`;
     paragraphs[2].textContent='Is it a …? Ask fewer questions to earn more stars!';

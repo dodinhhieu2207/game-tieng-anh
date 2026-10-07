@@ -37,21 +37,26 @@ export default {
   catch(e){return reply({error:e.message==='LARGE'?'AUDIO_TOO_LARGE':'INVALID_FORM'},e.message==='LARGE'?413:400);}
   const questionToy=form.get('questionToy'),displayedToy=form.get('displayedToy'),audio=form.get('audio');
   const questionType=form.get('questionType')||'yes-no';
-  if(!['yes-no','name','name-question','mystery-question'].includes(questionType))return reply({error:'INVALID_QUESTION_TYPE'},400);
-  if(!ToySpeechEvaluator.toys.includes(questionToy)||!ToySpeechEvaluator.toys.includes(displayedToy))return reply({error:'INVALID_TOY'},400);
+  if(!['yes-no','name','school-name','name-question','mystery-question'].includes(questionType))return reply({error:'INVALID_QUESTION_TYPE'},400);
+  const vocabulary=questionType==='school-name'?ToySpeechEvaluator.school:ToySpeechEvaluator.toys;
+  if(!vocabulary.includes(questionToy)||!vocabulary.includes(displayedToy))return reply({error:'INVALID_TOY'},400);
   // expectedAnswer is deliberately ignored: derive truth from the two validated toys.
   if(!audio||typeof audio.arrayBuffer!=='function'||!audio.size)return reply({error:'EMPTY_AUDIO'},400);
   if(audio.size>MAX_AUDIO)return reply({error:'AUDIO_TOO_LARGE'},413);
   if(!TYPES.has(audio.type.split(';')[0].toLowerCase()))return reply({error:'UNSUPPORTED_AUDIO'},415);
   let timer;
   try{
-   const input={audio:Buffer.from(await audio.arrayBuffer()).toString('base64'),task:'transcribe',language:'en',vad_filter:true,initial_prompt:CONTEXT,condition_on_previous_text:false};
+   // Short, quiet child utterances should not be discarded by a pre-transcription VAD.
+   // Context includes the whole lesson vocabulary, never the expected answer.
+   const input={audio:Buffer.from(await audio.arrayBuffer()).toString('base64'),task:'transcribe',language:'en',vad_filter:false,initial_prompt:questionType==='school-name'?'English classroom speech. Vocabulary: '+vocabulary.join(', ')+'.':CONTEXT,condition_on_previous_text:false};
    const output=await Promise.race([env.AI.run(MODEL,input),new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('TIMEOUT')),18000);})]);
    if(!output||typeof output.text!=='string')return reply({error:'AI_UNAVAILABLE'},502);
    // Discard low-confidence/no-speech segments instead of interpreting a hallucinated answer.
    const segments=Array.isArray(output.segments)?output.segments:[];
    const unreliable=segments.length&&segments.every(s=>s.no_speech_prob>=.6||s.avg_logprob< -1);
-   return reply(ToySpeechEvaluator.evaluate(unreliable?'':output.text,questionToy,displayedToy,questionType));
+   const result=ToySpeechEvaluator.evaluate(output.text,questionToy,displayedToy,questionType);
+   if(unreliable||result.result==='UNCLEAR')return reply({...result,result:'UNCLEAR',reason:unreliable?'recognition-uncertain':output.text.trim()?'sentence-unrecognized':'no-transcript'});
+   return reply(result);
   }catch(e){return reply({error:e.message==='TIMEOUT'?'AI_TIMEOUT':'AI_UNAVAILABLE'},e.message==='TIMEOUT'?504:502);}
   finally{clearTimeout(timer);form=null;}
  }

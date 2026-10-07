@@ -14,7 +14,7 @@ const assert=require('node:assert/strict');
  assert(await page.locator('#l2Mic svg').isVisible());assert(await page.locator('#l2Mic').isEnabled());
  await page.screenshot({path:'tests/toy-voice-ready.png',fullPage:true});
  // Presentation states only; real recording and speech progression are covered separately.
- for(const [phase,state,label] of [['asking','ASKING','Tap the microphone'],['starting','STARTING','Starting microphone'],['recording','RECORDING','Stop recording'],['processing','THINKING','Checking']]){
+ for(const [phase,state,label] of [['asking','ASKING','Tap the microphone'],['starting','STARTING','Starting microphone'],['recording','RECORDING','Done speaking'],['processing','THINKING','Checking']]){
   await page.evaluate(phase=>{const s=Unit3Lesson2.current();s.phase=phase;s.refresh();},phase);
   assert.equal(await page.locator('.toy-voice-panel').getAttribute('data-voice-state'),state);assert.match(await page.locator('#l2Mic').getAttribute('aria-label'),new RegExp(label));
   assert.equal(await page.locator('#l2Mic').isEnabled(),phase==='recording');

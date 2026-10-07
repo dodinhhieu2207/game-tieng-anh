@@ -8,11 +8,11 @@ async function request(text,q='robot',d='robot',options={}){
  return worker.fetch(new Request('https://worker.example/api/speaking-check',{method:'POST',headers:{Origin:options.origin||'https://dodinhhieu2207.github.io'},body:form}),options.env||env);
 }
 for(const q of E.toys)for(const d of E.toys){
- for(const [text,expected] of [['Yes, it is.',q===d?'CORRECT':'WRONG_LOGIC'],["NO IT ISN’T!",q===d?'WRONG_LOGIC':'CORRECT'],['no it is not',q===d?'WRONG_LOGIC':'CORRECT'],['yes','INCOMPLETE'],['no','INCOMPLETE'],['','UNCLEAR'],['music and noise','UNCLEAR'],['yes yes it is','UNCLEAR'],['yesterday it is','UNCLEAR']]){
-  const response=await request(text,q,d);assert.equal(response.status,200);const result=await response.json();assert.equal(result.result,expected);assert.deepEqual(result,E.evaluate(text,q,d));assert.equal(response.headers.get('Cache-Control'),'no-store');cases++;
+ for(const [text,expected] of [['Yes, it is.',q===d?'CORRECT':'WRONG_LOGIC'],["NO IT ISN’T!",q===d?'WRONG_LOGIC':'CORRECT'],['no it is not',q===d?'WRONG_LOGIC':'CORRECT'],['yes','INCOMPLETE'],['no','INCOMPLETE'],['','UNCLEAR'],['music and noise','UNCLEAR'],['yes yes it is',q===d?'CORRECT':'WRONG_LOGIC'],['yesterday it is','UNCLEAR']]){
+  const response=await request(text,q,d);assert.equal(response.status,200);const result=await response.json();assert.equal(result.result,expected);assert.deepEqual({transcript:result.transcript,normalized:result.normalized,result:result.result,answerType:result.answerType},E.evaluate(text,q,d));assert.equal(response.headers.get('Cache-Control'),'no-store');cases++;
  }
 }
-assert.equal(calls[0].model,MODEL);assert.equal(calls[0].input.language,'en');assert.equal(calls[0].input.vad_filter,true);assert.equal(calls[0].input.initial_prompt,CONTEXT);assert(calls.every(c=>c.input.initial_prompt===CONTEXT));assert.equal(Buffer.from(calls[0].input.audio,'base64').length,600);
+assert.equal(calls[0].model,MODEL);assert.equal(calls[0].input.language,'en');assert.equal(calls[0].input.vad_filter,false);assert.equal(calls[0].input.initial_prompt,CONTEXT);assert(calls.every(c=>c.input.initial_prompt===CONTEXT));assert.equal(Buffer.from(calls[0].input.audio,'base64').length,600);
 assert.equal((await request('yes it is','invalid')).status,400);
 assert.equal((await request('yes it is','robot','robot',{origin:'https://evil.example'})).status,403);
 assert.equal((await request('yes it is','robot','robot',{audio:new Blob([],{type:'audio/webm'})})).status,400);

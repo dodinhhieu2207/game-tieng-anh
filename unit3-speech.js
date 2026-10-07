@@ -21,7 +21,7 @@
    if(typeof result.transcript!=='string'||typeof result.normalized!=='string'||!['CORRECT','INCOMPLETE','WRONG_LOGIC','UNCLEAR'].includes(result.result)||!['YES','NO','NAME','QUESTION',null].includes(result.answerType))throw new Error('invalid-response');
    return result;
   },
-  start({questionToy,displayedToy,questionType,onStart=()=>{},onProcessing=()=>{},onResult=()=>{},onError=()=>{}}){
+  start({questionToy,displayedToy,questionType,onStart=()=>{},onRecording=()=>{},onProcessing=()=>{},onResult=()=>{},onError=()=>{}}){
    if(current)throw new Error('busy');
    let active=true,stream=null,recorder=null,chunks=[],recordTimer,permissionTimer,requestTimer;
    const controller=new AbortController();
@@ -45,11 +45,11 @@
       if(!active)return;release();const audio=new Blob(chunks,{type:recorder.mimeType||mime||'audio/webm'});chunks=[];
       if(!audio.size){fail('empty-recording');return;}
       if(audio.size>1024*1024){fail('recording-too-large');return;}
-      onProcessing();requestTimer=setTimeout(()=>fail('network-timeout'),Math.min(config.requestTimeoutMs||20000,30000));
+      onRecording(audio);onProcessing();requestTimer=setTimeout(()=>fail('network-timeout'),Math.min(config.requestTimeoutMs||20000,30000));
       try{const result=await api.evaluate(audio,{questionToy,displayedToy,questionType},controller.signal);if(!active)return;active=false;release();if(current===handle)current=null;onResult(result);}
       catch(e){if(active)fail(e.name==='AbortError'?'network-timeout':e.message||'network');}
      };
-     recorder.start();onStart();recordTimer=setTimeout(finish,Math.min(config.maxRecordingMs||4000,4000));
+     recorder.start();onStart();recordTimer=setTimeout(finish,Math.min(config.maxRecordingMs||8000,10000));
     }catch(e){fail(['NotAllowedError','SecurityError'].includes(e.name)?'permission-denied':e.name==='NotFoundError'?'no-microphone':'recording-error');}
    })();
    return handle;

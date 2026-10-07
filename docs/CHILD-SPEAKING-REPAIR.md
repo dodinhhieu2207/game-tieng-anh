@@ -1,0 +1,11 @@
+# Child speaking review
+
+Recordings now allow up to 8 seconds and a manual Done action. Unit 2 Ellie uses the shared recorded Cloudflare boundary, including school vocabulary, instead of silently relying on browser SpeechRecognition. Scheduled Ellie prompts are suppressed during capture/processing. All question/feedback Higgs files remain unchanged.
+
+The Worker transcribes without pre-VAD for short quiet utterances, with English lesson vocabulary context only (never a supplied correct sentence or target-only hint). Low-confidence transcripts remain available for review, but cannot automatically earn success. Fillers and adjacent word repetitions are removed for grammar matching; polarity, complete sentence grammar, articles and the actual pictured object still matter. Bare words/yes/no stay incomplete. No phonetic guess or edit-distance auto-pass is used.
+
+Uncertain recognition does not increment wrong answers, first-try failures or student attempt counters in Toy Buddy. Ellie also records no mistake/attempt for uncertainty. Teachers can replay the last clip, read the recognized transcript/reason, and confirm a full sentence. Toy Buddy displays teacher confirmations separately and excludes them from independent first-try counts; Ellie records source/result as teacher-confirmed and counts support in its learning report. Mystery questions still require the teacher to select the toy actually asked about.
+
+Review audio is an ephemeral Blob URL in the open tab. URLs are revoked on replacement, round changes and navigation; audio/transcripts are not added to server logs or persistent recording storage. Leaving/backgrounding stops capture. Recorded byte upload is bounded and retains the original allowed-origin/rate-limit protections.
+
+Verification includes grammar negative cases, real browser MediaRecorder capture longer than four seconds, manual Done, uncertain results without a penalty, teacher confirmation evidence and cleanup. Recognition in UI tests is mocked, so these checks do not establish child speech accuracy. Real child recordings should be compared with teacher judgements under the same classroom conditions; the implementation cannot guarantee Whisper recognizes every child's voice.
