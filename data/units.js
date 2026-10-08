@@ -21,7 +21,9 @@
      activity('match-answer','u3answer',{title:'Match the Answer',icon:'matching'}),
      activity('build-sentence','u3sentence',{title:'Build the Sentence',icon:'sentence'}),
      activity('listen-decide','u3decide',{title:'Listen & Decide',icon:'listening'}),
-     activity('talk-to-toy-buddy','u3buddy',{title:'Talk to Toy Buddy'})]}
+     activity('talk-to-toy-buddy','u3buddy',{title:'Talk to Toy Buddy'})]},
+    3:{title:'Sounds and letters: Gg',description:'Meet G and g. Listen, sort, trace and say girl and guitar.',status:'available',targetLanguage:['G g','girl','guitar'],activities:[
+     activity('meet-gg','u3ggmeet',{title:'Meet Gg',icon:'flashcards'}),activity('sound-detective','u3ggsound',{title:'Sound Detective',icon:'listening'}),activity('catch-g','u3ggcatch',{title:'Catch the G',icon:'question'}),activity('big-small','u3ggsort',{title:'Big G or small g?',icon:'matching'}),activity('fix-word','u3ggfix',{title:'Fix the Word',icon:'sentence'}),activity('trace-say','u3ggtrace',{title:'Trace & Say',icon:'book'}),activity('final-challenge','u3ggfinal',{title:'Final Challenge',icon:'question',final:true})]}
    }).map(lesson=>({...lesson,cardImage:`assets/shared-ui/unit3-navigation-lesson${lesson.id}.png`,cardAspect:'2 / 1',selectorLabel:['Toys','Grammar','Sounds and letters','Numbers','Review','Story'][lesson.id-1]}))}
   ],
   // The integrated Ellie lesson has no confirmed textbook lesson assignment.

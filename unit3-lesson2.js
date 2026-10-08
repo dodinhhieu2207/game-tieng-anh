@@ -43,7 +43,7 @@
     this.ui.SpeakingType.onchange=()=>{const type=this.ui.SpeakingType.value;this.index=0;this.errors=0;this.attempts=0;this.firstCorrect=0;this.teacherConfirmed=0;this.recognitionReviews=0;this.aiConfirmed=0;this.rounds=type==='yes-no'?rounds():mix(WORDS.map(shown=>({shown,asked:shown,questionType:type,guesses:[],text:type==='mystery-question'?'Mystery Toy':"What's this?",clip:['mystery-question','name-question'].includes(type)?'feedback/your_turn':'questions/whats_this'})));this.setRound();};
    }
    this.root.addEventListener('click',e=>this.click(e));
-   this.root.addEventListener('pointerdown',e=>this.pointerDown(e));this.root.addEventListener('pointermove',e=>this.pointerMove(e));this.root.addEventListener('pointerup',e=>this.pointerUp(e));this.root.addEventListener('pointercancel',()=>this.cancelDrag());
+   this.dragEngine=ActivityDrag.bind(this.root,{enabled:()=>this.phase==='listening',pick:b=>{if(this.kind==='build-sentence'){this.wordPointer=b;window.SentenceWordAudio?.play(b.textContent,this.root,b);}},gesture:(b,moved)=>{if(moved)this.wordPointer=null;},drop:(b,target)=>{if(b.dataset.match!==undefined){if(target.hasAttribute('data-drop-answer'))this.placeAnswer(b);}else this.placeTile(Number(b.dataset.tile),Number(target.dataset.slot));}});
    this.observer=new MutationObserver(()=>{if(!this.root.isConnected||currentGame!==this.entry[1]||!els.gameScreen.classList.contains('active'))this.dispose();});
    this.observer.observe(els.gameStage,{childList:true});this.observer.observe(els.gameScreen,{attributes:true,attributeFilter:['class']});
    this.hideListener=()=>{if(document.hidden&&!this.destroyed){this.run++;this.stopRecognition();this.phase='audio-error';this.buddy.stopAudio();this.buddy.setState('IDLE');this.status('Tap Replay Question when you are ready.');this.refresh();}};
@@ -184,26 +184,7 @@
    if(this.placed.every(id=>id!==null))this.check(true);
   }
   undo(){const slot=this.placed.findLastIndex(id=>id!==null);if(slot<0)return;const id=this.placed[slot];this.placed[slot]=null;const b=this.root.querySelector(`[data-slot="${slot}"]`);b.innerHTML=this.level==='easy'?`<span class="l2-ghost">${esc(this.tokens[slot])}</span>`:slot+1;b.classList.remove('l2-snapped');this.root.querySelector(`[data-tile="${id}"]`).hidden=false;}
-  pointerDown(e){
-   const b=e.target.closest('.l2-draggable');if(!b||b.disabled||this.phase!=='listening')return;
-   if(this.kind==='build-sentence'){this.wordPointer=b;window.SentenceWordAudio?.play(b.textContent,this.root,b);}
-   this.drag={b,id:e.pointerId,x:e.clientX,y:e.clientY,moved:false};try{b.setPointerCapture(e.pointerId);}catch{}
-  }
-  pointerMove(e){
-   const d=this.drag;if(!d||d.id!==e.pointerId)return;
-   if(Math.hypot(e.clientX-d.x,e.clientY-d.y)>8)d.moved=true;
-   if(d.moved){d.b.classList.add('l2-dragging');d.b.style.transform=`translate(${e.clientX-d.x}px,${e.clientY-d.y}px)`;}
-  }
-  pointerUp(e){
-   const d=this.drag;if(!d||d.id!==e.pointerId)return;
-   const rects=[...this.root.querySelectorAll('.l2-drop')].map(b=>({b,r:b.getBoundingClientRect()}));
-   this.cancelDrag();setTimeout(()=>{this.wordPointer=null;},0);if(!d.moved)return;
-   this.suppressClick=true;queueMicrotask(()=>setTimeout(()=>{this.suppressClick=false;},0));
-   const target=rects.find(({b,r})=>(d.b.dataset.match===undefined||b.hasAttribute('data-drop-answer'))&&e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom)?.b;
-   if(target){if(d.b.dataset.match!==undefined)this.placeAnswer(d.b);else this.placeTile(Number(d.b.dataset.tile),Number(target.dataset.slot));}
-   else {d.b.classList.remove('l2-return');void d.b.offsetWidth;d.b.classList.add('l2-return');}
-  }
-  cancelDrag(){if(this.drag){this.drag.b.style.transform='';this.drag.b.classList.remove('l2-dragging');try{this.drag.b.releasePointerCapture(this.drag.id);}catch{}this.drag=null;}}
+  cancelDrag(){this.dragEngine?.cancel();}
   teacherCheck(){this.stopRecognition();this.phase='listening';this.buddy.setState('LISTENING');this.manualMode=true;this.speakingControls();this.root.querySelector('#l2Teacher').hidden=false;this.status('Say your answer. Your teacher will check it.');this.refresh();}
   reviewSpeech(result={}){
    this.speechReview?.destroy();const token=this.run,type=this.round.questionType;
@@ -284,7 +265,7 @@
    if(action==='unit')window.LearningApp.go('#/unit/3');
    if(action==='next'){const next=ENTRIES[ENTRIES.findIndex(e=>e[0]===this.kind)+1];if(next)window.LearningApp.go('#/unit/3/lesson/2?mode='+mode+'&activity='+next[0]);}
   }
-  dispose(){if(this.destroyed)return;this.resetAudio();this.destroyed=true;this.observer?.disconnect();document.removeEventListener('visibilitychange',this.hideListener);this.buddy.destroy();if(scene===this)scene=null;}
+  dispose(){if(this.destroyed)return;this.resetAudio();this.destroyed=true;this.observer?.disconnect();document.removeEventListener('visibilitychange',this.hideListener);this.dragEngine?.destroy();this.buddy.destroy();if(scene===this)scene=null;}
  }
  function enter(kind){scene?.dispose();const current=new LessonScene(kind);scene=current;/* async audio promises settle after assignment */}
  ENTRIES.forEach(([id,game,title])=>{games[game]={enter:()=>enter(id)};GAME_META[game]=['UNIT 3 · LESSON 2',title,'Listen • look • answer'];});
