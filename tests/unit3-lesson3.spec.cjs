@@ -5,7 +5,7 @@ const ids=['meet-gg','sound-detective','catch-g','big-small','fix-word','trace-s
 const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
 (async()=>{
  const manifest=JSON.parse(fs.readFileSync('assets/unit3/lesson3/audio/manifest.json'));
- assert.equal(Object.keys(manifest.clips).length,16);assert.equal(manifest.clips['sound-g'].humanReviewed,true);
+ assert.equal(Object.keys(manifest.clips).length,17);assert.equal(manifest.clips['sound-g'].humanReviewed,true);
  const artManifest=JSON.parse(fs.readFileSync('assets/unit3/lesson3/art/manifest.json'));
  assert.equal(Object.keys(artManifest.sources).length,18);assert.equal(Object.keys(artManifest.items).length,75);
  for(const item of Object.values(artManifest.items))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(item.src)).digest('hex'),item.sha256);
@@ -14,9 +14,10 @@ const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
  p.on('pageerror',e=>errors.push(e.message));p.on('response',r=>{if(r.status()>=400)missing.push(r.url());});
  await p.addInitScript(()=>{window.voiceEvents=[];const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){this.playbackRate=5;voiceEvents.push(this.getAttribute('src'));return play.call(this);};});
  await p.goto(BASE);await p.locator('body').click({position:{x:2,y:2}});await p.waitForFunction(()=>window.LearningApp&&window.Unit3Lesson3);
+ async function finishIntro(){while(await p.evaluate(()=>Unit3Lesson3.current()?.introStep!==null)){await p.locator('[data-next]').click();await phase(p,'listening');}}
  async function route(id,level='easy',mode='practice'){
-  await p.evaluate(({id,mode})=>LearningApp.go('#/unit/3/lesson/3?mode='+mode+'&activity='+id),{id,mode});await phase(p,'listening');
-  if(level!=='easy'){await p.locator('select[data-level]').selectOption(level);await phase(p,'listening');}
+  await p.evaluate(({id,mode})=>LearningApp.go('#/unit/3/lesson/3?mode='+mode+'&activity='+id),{id,mode});await phase(p,'listening');await finishIntro();
+  if(level!=='easy'){await p.locator('select[data-level]').selectOption(level);await phase(p,'listening');await finishIntro();}
  }
  async function drag(item,zone){const a=await item.boundingBox(),b=await zone.boundingBox();await p.mouse.move(a.x+a.width/2,a.y+a.height/2);await p.mouse.down();await p.mouse.move(b.x+b.width/2,b.y+b.height/2,{steps:15});await p.mouse.up();}
  async function trace(){
@@ -38,6 +39,13 @@ const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
    for(const w of ['girl','guitar'])if(d.filter(r=>r.target===w).length!==2)return false;
   }return true;
  });assert(randomQA);
+ // Intro must teach names, mouth/sound and words before asking for matches.
+ await p.evaluate(()=>LearningApp.go('#/unit/3/lesson/3?mode=practice&activity=meet-gg'));await phase(p,'listening');
+ assert.equal(await p.locator('[data-answer]').count(),0);assert.equal(await p.evaluate(()=>Unit3Lesson3.current().introStep),0);assert(await p.locator('[data-intro-clip="capital-g"]').isVisible());assert(await p.locator('[data-intro-clip="lowercase-g"]').isVisible());assert.equal(await p.locator('[data-intro-clip="girl"]').count(),0);
+ await p.screenshot({path:'tests/g3-intro-letters.png',fullPage:true});await p.evaluate(()=>voiceEvents.length=0);await p.locator('[data-next]').click();await phase(p,'listening');
+ assert.equal(await p.evaluate(()=>Unit3Lesson3.current().introStep),1);assert.equal(await p.locator('.g3-mouth-pictures svg').count(),2);assert.deepEqual(await p.evaluate(()=>voiceEvents.map(s=>s.split('/').pop())),['mouth-guide.mp3','sound-g.mp3']);assert.equal(await p.locator('[data-intro-clip="girl"]').count(),0);await p.screenshot({path:'tests/g3-intro-sound.png',fullPage:true});
+ await p.evaluate(()=>voiceEvents.length=0);await p.locator('[data-next]').click();await phase(p,'listening');assert.equal(await p.evaluate(()=>Unit3Lesson3.current().introStep),2);assert.deepEqual(await p.evaluate(()=>voiceEvents.map(s=>s.split('/').pop())),['girl.mp3','guitar.mp3']);assert.equal(await p.locator('[data-answer]').count(),0);await p.screenshot({path:'tests/g3-intro-words.png',fullPage:true});
+ await p.locator('[data-intro-clip="girl"]').click();await phase(p,'listening');await p.locator('[data-intro-back]').click();await phase(p,'listening');assert.equal(await p.evaluate(()=>Unit3Lesson3.current().introStep),1);await finishIntro();assert.equal(await p.locator('[data-answer]').count(),2);assert.equal(await p.evaluate(()=>LearningProgress.get('3/3/meet-gg').completed),false);
  for(const id of ids){
   await route(id);let completed=false;
   for(let round=0;round<15&&!completed;round++){
@@ -55,7 +63,7 @@ const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
   }
   assert(completed,id+' never completed');const saved=await p.evaluate(id=>LearningProgress.get('3/3/'+id),id);assert(saved.completed);assert.equal(saved.stars,3);
   // Sound off still allows a child to learn using visual support, replay never awards extra stars.
-  const old=await p.evaluate(()=>LearningProgress.all());await p.locator('[data-complete="again"]').click();await phase(p,'listening');assert.deepEqual(await p.evaluate(()=>LearningProgress.all()),old);
+  const old=await p.evaluate(()=>LearningProgress.all());await p.locator('[data-complete="again"]').click();await phase(p,'listening');await finishIntro();assert.deepEqual(await p.evaluate(()=>LearningProgress.all()),old);
  }
  // A wrong letter stays available and does not become a correct card.
  // Approved name, sound and words remain separate and play in order.
@@ -82,9 +90,12 @@ const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
  await route('final-challenge','challenge','class');assert.equal(await p.locator('select[data-role]').inputValue(),'teacher');await p.locator('[data-reverse]').click();await p.waitForSelector('[data-asked]',{state:'attached'});await phase(p,'listening');await p.locator('[data-work] summary').click();await p.locator('[data-asked="guitar"]').click();await phase(p,'resolved');assert.equal(await p.evaluate(()=>Unit3Lesson3.current().supported),1);
  await p.locator('[data-replay]').click();await phase(p,'resolved');assert.equal(await p.evaluate(()=>Unit3Lesson3.current().supported),1);
  // TV/projector, laptop and tablet: no missing controls or horizontal overflow.
- for(const viewport of [{width:1920,height:1080},{width:1366,height:768},{width:1024,height:768},{width:390,height:844},{width:320,height:740}]){
+ for(const viewport of [{width:1920,height:1080},{width:1366,height:768},{width:1024,height:768},{width:768,height:1024},{width:390,height:844},{width:320,height:740}]){
   await p.setViewportSize(viewport);for(const id of ids){await route(id);assert(await p.locator('[data-next]').isVisible());assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,id+' horizontal overflow');if(viewport.width>=1024){const bottom=await p.locator('.g3-scene').evaluate(e=>e.getBoundingClientRect().bottom);assert(bottom<=viewport.height+1,id+' at '+viewport.width+' vertical overflow: '+bottom);}}
   await route('meet-gg');await p.screenshot({path:'tests/g3-meet-'+viewport.width+'.png',fullPage:true});
+  await p.evaluate(()=>{const s=Unit3Lesson3.current();s.introStep=0;s.renderIntro();});await phase(p,'listening');
+  for(let step=0;step<3;step++){assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'intro overflow '+step);if(viewport.width>=1024){const bottom=await p.locator('.g3-scene').evaluate(e=>e.getBoundingClientRect().bottom);assert(bottom<=viewport.height+1,'intro '+step+' at '+viewport.width+': '+bottom);}await p.screenshot({path:'tests/g3-intro-'+step+'-'+viewport.width+'.png',fullPage:true});await p.locator('[data-next]').click();await phase(p,'listening');}
+
  }
  // Native browser touch dragging reaches the same shared drop handler.
  await p.setViewportSize({width:1024,height:768});await route('big-small');
@@ -101,5 +112,5 @@ const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
  // Leave while voice is playing: old actor and drag engine are cleaned up.
  await route('meet-gg');const clean=await p.evaluate(()=>{const s=Unit3Lesson3.current();s.prompt();LearningApp.go('#/');return new Promise(resolve=>setTimeout(()=>resolve({destroyed:s.destroyed,audio:s.actor.audio,scene:Unit3Lesson3.current()}),100));});assert(clean.destroyed);assert.equal(clean.audio,null);assert.equal(clean.scene,null);
  assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);await browser.close();
- console.log('PASS Lesson 3: 7 real playable completions, actual SVG tracing, mouse drag/touch tap, all support levels, balanced replay, teacher extension, deduplicated stars, cleanup and 5 viewport checks; 16 Higgs clips, 75 supplied assets and separate letter/sound/word playback.');
+ console.log('PASS Lesson 3: 7 real playable completions, actual SVG tracing, mouse drag/touch tap, all support levels, balanced replay, teacher extension, deduplicated stars, cleanup and 6 viewport checks, including all three intro steps; 17 Higgs clips, 75 supplied assets and separate letter/sound/word playback.');
 })().catch(e=>{console.error(e);process.exit(1)});

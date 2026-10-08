@@ -107,3 +107,11 @@ Additional verification checks: all 75 asset hashes; 18-source provenance; 16 pr
 ## Phonics button visibility fix — 2026-10-08
 
 Meet Gg now puts **Hear it all: G → /g/ → guitar → girl** above the matching cards, followed by **Hear the sound /g/**. The whole model uses four existing approved Higgs clips in that exact order. The isolated phoneme displays `/g/`, rather than the generation spelling. Explicit listen controls remain available after a blocked opening cue and after a correct answer; listening preserves Next and does not award points again. The lowercase name remains in its own matching round. Manual sound approval and teacher fallback are unchanged.
+
+## Full letter introduction — 2026-10-08
+
+Meet Gg opens with three teaching steps before the existing eight matching rounds. Letter Gg shows both supplied capital and lowercase art with individual Higgs name playback. Sound /g/ shows original front-mouth and side-tongue schematic drawings, a new Belinda Higgs mouth-guide instruction, then the approved take 1. Tongue lift/release uses actual sound media progress and resets when playback ends; this is a teaching illustration, not live lip video or pronunciation scoring. Girl and guitar are only shown after the sound step, with matching word clips. Children then choose Start playing. Previous step and Review Gg lesson retain the current game and saved stars.
+
+Articulatory guidance was checked against the content creator's [Sounds American lesson on /g/](https://soundsamerican.net/article/consonant_sound_g_as_in_gift): back of tongue contact followed by a voiced release. SVG artwork in shared/phonics-mouth-g.js is drawn for this project; no third-party artwork was copied. The original Ee/Ff assets and engines are unchanged.
+
+Intro validation: tests/gg-intro.spec.cjs checks actual sound-driven tongue lift/release, rejection of unapproved phoneme playback, and return from review without double-counting a correct round. The main Lesson 3 suite checks all three intro steps at six viewports in addition to all seven playable completions.

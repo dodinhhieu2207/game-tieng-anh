@@ -1,0 +1,14 @@
+const {chromium}=require('C:/Users/Admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const assert=require('node:assert/strict');
+(async()=>{
+ const browser=await chromium.launch({channel:'chrome',headless:true});const page=await browser.newPage({viewport:{width:1366,height:768}});
+ await page.addInitScript(()=>{const play=HTMLMediaElement.prototype.play;window.introAudio=[];HTMLMediaElement.prototype.play=function(){this.playbackRate=this.src.includes('sound-g.mp3')?1:5;introAudio.push(this.src.split('/').pop());return play.call(this);};});
+ await page.goto(process.env.LESSON3_BASE||'http://127.0.0.1:8765/index.html');await page.locator('body').click({position:{x:2,y:2}});await page.evaluate(()=>LearningApp.go('#/unit/3/lesson/3?mode=practice&activity=meet-gg'));
+ const ready=()=>page.waitForFunction(()=>Unit3Lesson3.current().phase==='listening');await ready();
+ await page.locator('[data-next]').click();await page.waitForFunction(()=>document.querySelector('.g3-scene')?.dataset.mouthPhase==='lift');await page.waitForFunction(()=>document.querySelector('.g3-scene')?.dataset.mouthPhase==='release');await ready();assert.equal(await page.locator('[data-mouth-phase]').count(),0);
+ await page.evaluate(()=>{Unit3Lesson3Clips.clips['sound-g'].humanReviewed=false;introAudio=[];});await page.locator('[data-intro-clip="sound-g"]').click();await ready();assert.deepEqual(await page.evaluate(()=>introAudio),['sound-teacher.mp3']);await page.evaluate(()=>Unit3Lesson3Clips.clips['sound-g'].humanReviewed=true);
+ await page.locator('[data-next]').click();await ready();await page.locator('[data-next]').click();await ready();await page.locator('[data-answer="G"]').click();await page.waitForFunction(()=>Unit3Lesson3.current().phase==='resolved');const counted=await page.evaluate(()=>Unit3Lesson3.current().independent);
+ await page.locator('[data-review-intro]').click();await ready();for(let i=0;i<3;i++){await page.locator('[data-next]').click();await page.waitForFunction(()=>['listening','resolved'].includes(Unit3Lesson3.current().phase));}
+ await page.waitForFunction(()=>Unit3Lesson3.current().phase==='resolved');assert.equal(await page.evaluate(()=>Unit3Lesson3.current().independent),counted);assert(await page.locator('[data-next]').isEnabled());
+ await browser.close();console.log('PASS Gg intro: real audio tongue lift/release, unapproved phoneme guard, and review retains completed-round state without double counting.');
+})().catch(e=>{console.error(e);process.exit(1)});

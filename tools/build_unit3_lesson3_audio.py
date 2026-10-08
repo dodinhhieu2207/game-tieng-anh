@@ -11,6 +11,7 @@ TEXTS={
  'say':'Your turn. Say the word.','final':'Listen to the question. Say the whole answer.',
  'is-girl':'Is it a girl?','is-guitar':'Is it a guitar?',
  'sound-teacher':'Listen to your teacher. Then say the sound.',
+ 'mouth-guide':'Open your mouth a little. Lift the back of your tongue. Use your voice. Keep it short.',
 }
 def norm(s):return re.sub('[^a-z]','',s.lower())
 def main():
