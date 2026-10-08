@@ -75,9 +75,9 @@
    this.$('[data-bubble]').textContent=hideText?'Listen carefully!':key==='sound-g'?'/g/':key==='mouth-guide'?'Watch, listen, then copy.':c.text;
    const chip=this.root.querySelector('[data-intro-clip="'+key+'"]');chip?.setAttribute('data-playing','true');
    const playback=this.actor.play(c.src,{cues:c.cues,state:'TALKING',endState:'LISTENING'}),media=this.actor.audio;
-   let mouthFrame=0;const mouth=()=>{if(!this.alive(t))return;this.root.dataset.mouthPhase=media&&media.currentTime/(media.duration||c.duration)>.45?'release':'lift';mouthFrame=requestAnimationFrame(mouth);};
+   let mouthFrame=0;const mouth=()=>{if(!this.alive(t))return;const progress=media?media.currentTime/(media.duration||c.duration):0;this.root.dataset.mouthPhase=progress>.45?'release':'lift';this.root.dataset.mouthFrame=progress<.45?'1':progress<.82?'2':'3';mouthFrame=requestAnimationFrame(mouth);};
    if(key==='sound-g')mouth();
-   try{const result=await playback;return result&&this.alive(t);}finally{chip?.removeAttribute('data-playing');cancelAnimationFrame(mouthFrame);if(this.alive(t)&&key==='sound-g')delete this.root.dataset.mouthPhase;}
+   try{const result=await playback;return result&&this.alive(t);}finally{chip?.removeAttribute('data-playing');cancelAnimationFrame(mouthFrame);if(this.alive(t)&&key==='sound-g'){delete this.root.dataset.mouthPhase;delete this.root.dataset.mouthFrame;}}
 
   }
   refresh(){
@@ -176,12 +176,12 @@
   }
   updateTraceProgress(ratio){if(!this.alive(this.epoch)||this.phase!=='listening')return;this.$('#traceStatus').textContent=ratio<.6?'Keep following the path.':'Nearly there!';}
   renderIntro(){
-   this.epoch++;this.actor.stopAudio();this.dragEngine.cancel();delete this.root.dataset.mouthPhase;this.phase='idle';this.root.dataset.introStep=this.introStep;
+   this.epoch++;this.actor.stopAudio();this.dragEngine.cancel();delete this.root.dataset.mouthPhase;delete this.root.dataset.mouthFrame;this.phase='idle';this.root.dataset.introStep=this.introStep;
    const step=this.introStep,labels=['Letter Gg','Sound /g/','Girl and guitar'];
    this.$('[data-progress]').textContent=(step+1)+' / 3';this.$('[data-result]').hidden=true;
    this.$('[data-instruction]').textContent=step===0?'Meet capital G and lowercase g.':step===1?'Watch, listen, then copy /g/.':'G is for girl. G is for guitar.';
    const chip=(key,image,label)=>`<button type="button" class="g3-intro-card" data-intro-clip="${key}">${art(image,'',label)}<b>${TARGETS.includes(key)?'<span class="g3-initial">g</span>'+label.slice(1):label}</b></button>`;
-   let content=step===0?`<div class="g3-intro-letters">${chip('capital-g','capital-g','Capital G')}${chip('lowercase-g','lowercase-g','Lowercase g')}</div><p class="g3-intro-note">Two shapes. The same letter name.</p>`:step===1?`<section class="g3-mouth-lesson" aria-label="How to make the G sound">${GgMouthGuide.html()}<div class="g3-mouth-cues"><span>Lift the back of your tongue.</span><span>Let go with your voice.</span><span>Keep it short.</span></div><button type="button" data-intro-clip="sound-g" class="g3-intro-sound">${art('sound-g')}Hear /g/ and copy</button></section>`:`<div class="g3-intro-words">${chip('girl','girl','girl')}${chip('guitar','guitar','guitar')}</div><p class="g3-intro-note">Listen. Say each word.</p>`;
+   let content=step===0?`<div class="g3-intro-letters">${chip('capital-g','capital-g','Capital G')}${chip('lowercase-g','lowercase-g','Lowercase g')}</div><p class="g3-intro-note">Two shapes. The same letter name.</p>`:step===1?`<section class="g3-mouth-lesson" aria-label="How to make the G sound">${GgMouthGuide.html()}<button type="button" data-intro-clip="sound-g" class="g3-intro-sound">${art('sound-g')}Hear /g/ and copy</button></section>`:`<div class="g3-intro-words">${chip('girl','girl','girl')}${chip('guitar','guitar','guitar')}</div><p class="g3-intro-note">Listen. Say each word.</p>`;
    this.$('[data-intro-back]').hidden=step===0;
    this.$('[data-work]').innerHTML=`<ol class="g3-intro-path" aria-label="Gg lesson steps">${labels.map((label,i)=>`<li ${i===step?'aria-current="step"':''}>${label}</li>`).join('')}</ol>${content}`;
    this.$('[data-next]').innerHTML=art('button-play')+(step===2?'Start playing':step===0?'Meet the sound':'Meet the words');
@@ -190,7 +190,7 @@
   async introPrompt(keys){
    if(this.destroyed||this.introStep===null||['asking','checking','complete'].includes(this.phase))return;
    const t=++this.epoch;this.actor.stopAudio();this.phase='asking';this.refresh();
-   keys=keys||(this.introStep===0?['capital-g','lowercase-g']:this.introStep===1?['mouth-guide',this.soundURL||this.clip('sound-g')?.humanReviewed?'sound-g':'sound-teacher']:['girl','guitar']);
+   keys=keys||(this.introStep===0?['capital-g','lowercase-g']:this.introStep===1?[this.soundURL||this.clip('sound-g')?.humanReviewed?'sound-g':'sound-teacher']:['girl','guitar']);
    let heard=true;for(const key of keys){const safeKey=key==='sound-g'&&!this.soundURL&&!this.clip('sound-g')?.humanReviewed?'sound-teacher':key;const ok=key==='sound-g'&&this.soundURL?await this.actor.play(this.soundURL,{state:'TALKING',endState:'LISTENING'}):await this.speak(safeKey,t);if(!ok||!this.alive(t)){heard=false;break;}}
    if(!this.alive(t))return;this.phase=heard?'listening':'idle';this.status(heard?(this.introStep===1?'Your turn. Make a short /g/.':this.introStep===2?'Say girl. Say guitar. Then start playing.':'Tap a letter to hear its name again.'):'Tap Listen again. Your teacher can help if audio is unavailable.');this.refresh();
   }

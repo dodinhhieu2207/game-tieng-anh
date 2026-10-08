@@ -115,3 +115,9 @@ Meet Gg opens with three teaching steps before the existing eight matching round
 Articulatory guidance was checked against the content creator's [Sounds American lesson on /g/](https://soundsamerican.net/article/consonant_sound_g_as_in_gift): back of tongue contact followed by a voiced release. SVG artwork in shared/phonics-mouth-g.js is drawn for this project; no third-party artwork was copied. The original Ee/Ff assets and engines are unchanged.
 
 Intro validation: tests/gg-intro.spec.cjs checks actual sound-driven tongue lift/release, rejection of unapproved phoneme playback, and return from review without double-counting a correct round. The main Lesson 3 suite checks all three intro steps at six viewports in addition to all seven playable completions.
+
+## Front-facing photo motion replacement — 2026-10-08
+
+At the user's request, Sound /g/ now shows a generated front-facing photographic adult model instead of the side-tongue and lip diagrams. A four-frame sheet shows one portrait at a time, with preparation/release/neutral poses selected from actual Higgs playback time. The approved isolated take 1 is unchanged. The child view says Listen and copy; the old anatomical cues and mouth-guide speech are no longer in this step. The three-step letter, sound, then girl/guitar progression and all games are retained. This is animated generated photography, not a recorded real teacher video or a view of the hidden tongue contact. Provenance and generation prompt are in assets/unit3/lesson3/phonics/README.md.
+
+Validation checks the delivered photo loads, the correct quadrant moves with real media time, playback resets to neutral, the human-approved sound guard remains enforced, and review retains the completed-round state. Lesson layout checks cover all six viewport sizes.
