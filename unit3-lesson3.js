@@ -84,7 +84,7 @@
   }
   options(list,labels=false){return `<div class="g3-options">${shuffle(list).map(w=>button(w,visual(w,labels)+(labels&&!LETTERS.includes(w)?`<b>${w}</b>`:''),`aria-label="${LETTERS.includes(w)?(w==='G'?'Capital G':'Lowercase g'):w}"`)).join('')}</div>`;}
   render(){
-   this.epoch++;this.actor.stopAudio();this.dragEngine.cancel();this.round=this.rounds[this.index];this.phase='idle';this.roundWrong=false;this.roundSupported=false;this.selected=null;this.$('[data-result]').hidden=true;
+   this.epoch++;this.actor.stopAudio();this.dragEngine.cancel();this.round=this.rounds[this.index];this.phase='idle';this.roundWrong=false;this.roundSupported=false;this.sayStage=false;this.selected=null;this.$('[data-result]').hidden=true;
    this.$('[data-progress]').textContent=`${this.index+1} / ${this.rounds.length}`;const w=this.round.target;
    let html='',instruction='',bubble='G g';
    if(this.kind==='meet-gg'){
@@ -126,7 +126,7 @@
    else if(this.kind==='catch-g')keys=['catch'];
    else if(this.kind==='big-small')keys=['sort'];
    else if(this.kind==='fix-word')keys=['fix',w];
-   else if(this.kind==='trace-say')keys=['trace',w==='G'?'capital-g':'lowercase-g'];
+   else if(this.kind==='trace-say')keys=this.sayStage?[r.word,'say']:['trace',w==='G'?'capital-g':'lowercase-g'];
    else if(r.task==='grammar')keys=['final',TARGETS.includes(r.asked)?'is-'+r.asked:'questions/is_it_a_'+r.asked];
    else if(r.task==='letter')keys=[w==='G'?'capital-g':'lowercase-g'];else keys=['detective',sound];
    for(const key of keys)if(!await this.speak(key,t)){if(this.alive(t)){this.phase='idle';this.refresh();}return;}
@@ -185,11 +185,11 @@
   async phonicsWords(t){for(const word of TARGETS)if(!await this.speak(word,t))return;if(this.alive(t))this.status('Now say the letter, sound and words.');}
   async finishLetter(card){
    if(this.destroyed||this.phase!=='listening'||card.classList.contains('done'))return;card.classList.add('done');card.classList.remove('active');this.phase='checking';this.refresh();const t=this.epoch;
-   if(!await this.speak(this.round.word,t)||!await this.speak('say',t))return;
-    if(!this.alive(t))return;this.$('[data-work]').innerHTML=`<div class="g3-say-picture">${art('word-'+this.round.word,'',this.round.word)}</div><p>Your turn. Say the word.</p><button type="button" data-checked>${art('button-microphone')}${this.role==='teacher'?'Teacher: heard the word':'I said the word'}</button>`;this.phase='listening';this.status('Say it with your learning friend.');this.refresh();
+   const heard=await this.speak(this.round.word,t)&&await this.speak('say',t);
+   if(!this.alive(t))return;this.sayStage=true;this.$('[data-work]').innerHTML=`<div class="g3-say-picture">${art('word-'+this.round.word,'',this.round.word)}</div><p>Your turn. Say the word.</p><button type="button" data-checked>${art('button-microphone')}${this.role==='teacher'?'Teacher: heard the word':'I said the word'}</button>`;this.phase='listening';this.status(heard?'Say it with your learning friend.':'Audio is unavailable. Tap Listen again, or say the word with your teacher.');this.refresh();
   }
   async reverse(){
-   this.phase='asking';this.refresh();const t=this.epoch;if(!await this.speak('feedback/your_turn',t))return;
+   this.phase='asking';this.refresh();const t=this.epoch;if(!await this.speak('feedback/your_turn',t)){if(this.alive(t)){this.phase='listening';this.refresh();}return;}
    const models=[...TARGETS,...TOYS];this.$('[data-work]').innerHTML=`<div class="g3-final-picture">${visual(this.round.target,true)}</div><p class="g3-question">Your turn to ask</p><p>Is it a …?</p><details><summary>Teacher: check the question</summary><p>Select the object the child asked about.</p><div class="g3-question-bank">${models.map(w=>`<button type="button" data-asked="${w}">${w}</button>`).join('')}</div></details>`;
    this.root.querySelectorAll('[data-asked]').forEach(b=>b.onclick=async()=>{if(this.phase!=='listening')return;this.phase='checking';this.refresh();const yes=b.dataset.asked===this.round.target;this.roundSupported=true;await this.speak(yes?'answers/yes_it_is':'answers/no_it_isnt',t);if(this.alive(t)){this.phase='listening';this.check(true,'feedback/great_job',true);}});this.phase='listening';this.status('Ask a full question. Your teacher will check it.');this.refresh();
   }

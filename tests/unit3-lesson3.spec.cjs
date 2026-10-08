@@ -90,6 +90,9 @@ const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
  // Muting in the middle of a cue must not strand its pending promise.
  await route('meet-gg');await p.locator('[data-replay]').click();await phase(p,'asking');await p.locator('.app-game-more>summary').click();await p.locator('[data-shell-action="sound"]').click();await phase(p,'listening');assert.equal(await p.evaluate(()=>LearningApp.isMuted()),true);
  await p.locator('.app-game-more>summary').click();await p.locator('[data-shell-action="sound"]').click();
+ // A failed word cue after tracing must retain a usable oral-practice screen and replay.
+ await route('trace-say');const missingWord=await p.evaluate(()=>Unit3Lesson3.current().round.word);await p.route('**/lesson3/audio/'+missingWord+'.mp3',r=>r.abort());await trace();await phase(p,'resolved');await p.unroute('**/lesson3/audio/'+missingWord+'.mp3');await p.locator('[data-replay]').click();await phase(p,'resolved');
+ // The intentional failure above is separate from unexpected missing assets.
  // Leave while voice is playing: old actor and drag engine are cleaned up.
  await route('meet-gg');const clean=await p.evaluate(()=>{const s=Unit3Lesson3.current();s.prompt();LearningApp.go('#/');return new Promise(resolve=>setTimeout(()=>resolve({destroyed:s.destroyed,audio:s.actor.audio,scene:Unit3Lesson3.current()}),100));});assert(clean.destroyed);assert.equal(clean.audio,null);assert.equal(clean.scene,null);
  assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);await browser.close();
