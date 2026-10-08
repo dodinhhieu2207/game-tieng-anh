@@ -27,3 +27,7 @@
 @media(prefers-reduced-motion:reduce){.g3-reward-pop{animation-duration:.01s}}
 .g3-home{width:215px;max-width:100%;justify-self:center}.g3-home:nth-child(2){background:transparent!important}.g3-home .g3-ghost{top:64%;color:#fff}.g3-scene[data-level=challenge] .g3-home{background:white!important}.g3-result .g3-stars img{object-fit:contain}
 @media(max-width:600px){.g3-home{width:145px}}
+
+/* Keep the name-sound-words model prominent and usable after blocked autoplay. */
+.g3-phonics-tools{margin:0 auto 16px;max-width:650px}.g3-phonics-tools>.g3-sequence-button{flex-basis:100%;max-width:none;justify-content:center;font-size:clamp(17px,1.6vw,24px)!important;background:#fff0ae!important;border-color:#ebbd4e;min-height:54px!important}.g3-phonics-tools>.g3-sound-button{flex:none;min-height:48px!important}.g3-phonics-tools [data-phonics-sequence] span{overflow-wrap:anywhere}.g3-scene[data-activity-art=meet-gg] .g3-model{height:50px;margin-bottom:8px}.g3-scene[data-activity-art=meet-gg] .g3-model img{height:50px}.g3-scene[data-activity-art=meet-gg] .g3-options .g3-letter-art{height:115px;width:115px}
+@media(max-width:600px){.g3-phonics-tools{margin-bottom:12px}.g3-phonics-tools>.g3-sequence-button{font-size:17px!important}}

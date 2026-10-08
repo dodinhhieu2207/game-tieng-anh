@@ -104,3 +104,6 @@ The shared shell now accepts an optional activity image field, so Lesson 3 cards
 Audio audition builder: `tools/build_gg_phonics_review.py`. Selected take registration: `tools/approve_gg_sound.py`. The review page identifies take 1 as selected and the other takes as review-only. Rebuilding the ordinary word/instruction bank preserves an approved sound only while its file hash matches the approval manifest.
 
 Additional verification checks: all 75 asset hashes; 18-source provenance; 16 production clips, with human review metadata for the phoneme; the actual five-clip name/sound/word sequence; fallback teacher pause; no review-only clip in child playback.
+## Phonics button visibility fix — 2026-10-08
+
+Meet Gg now puts **Hear it all: G → /g/ → guitar → girl** above the matching cards, followed by **Hear the sound /g/**. The whole model uses four existing approved Higgs clips in that exact order. The isolated phoneme displays `/g/`, rather than the generation spelling. Explicit listen controls remain available after a blocked opening cue and after a correct answer; listening preserves Next and does not award points again. The lowercase name remains in its own matching round. Manual sound approval and teacher fallback are unchanged.

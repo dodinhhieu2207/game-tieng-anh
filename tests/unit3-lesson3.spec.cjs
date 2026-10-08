@@ -60,10 +60,15 @@ const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
  // A wrong letter stays available and does not become a correct card.
  // Approved name, sound and words remain separate and play in order.
  await route('meet-gg');await p.evaluate(()=>voiceEvents.length=0);await p.locator('[data-phonics-sequence]').click();await phase(p,'listening');
- let approved=await p.evaluate(()=>voiceEvents);assert.deepEqual(approved.map(s=>s.split('/').pop()),['capital-g.mp3','lowercase-g.mp3','sound-g.mp3','girl.mp3','guitar.mp3']);assert(!approved.some(s=>s.includes('/review/')));
+ let approved=await p.evaluate(()=>voiceEvents);assert.deepEqual(approved.map(s=>s.split('/').pop()),['capital-g.mp3','sound-g.mp3','guitar.mp3','girl.mp3']);assert(!approved.some(s=>s.includes('/review/')));
+ // Listening after a correct answer retains Next and never repeats points.
+ await p.locator('[data-answer="G"]').click();await phase(p,'resolved');await p.locator('[data-phonics-sequence]').click();await phase(p,'resolved');assert(await p.locator('[data-next]').isEnabled());
+ await route('fix-word');await route('meet-gg');
+ // A failed opening cue must not disable explicit phonics controls.
+ await p.route('**/assets/unit3/lesson3/audio/meet.mp3',r=>r.abort());await p.locator('[data-replay]').click();await phase(p,'idle');assert(await p.locator('[data-phonics-sequence]').isEnabled());assert(await p.locator('[data-sound-model]').isEnabled());await p.locator('[data-phonics-sequence]').click();await phase(p,'listening');await p.unroute('**/assets/unit3/lesson3/audio/meet.mp3');
  // When approval metadata is absent, the teacher model is required before the words.
  await p.evaluate(()=>{window.savedGSound=Unit3Lesson3Clips.clips['sound-g'];delete Unit3Lesson3Clips.clips['sound-g'];voiceEvents.length=0;});await p.locator('[data-phonics-sequence]').click();await phase(p,'phonics-pause');
- let sequence=await p.evaluate(()=>voiceEvents);assert(sequence.some(s=>s.endsWith('capital-g.mp3')));assert(sequence.some(s=>s.endsWith('lowercase-g.mp3')));assert(sequence.some(s=>s.endsWith('sound-teacher.mp3')));assert(!sequence.some(s=>s.includes('/review/')));assert(!sequence.some(s=>s.endsWith('/girl.mp3')));
+ let sequence=await p.evaluate(()=>voiceEvents);assert(sequence.some(s=>s.endsWith('capital-g.mp3')));assert(!sequence.some(s=>s.endsWith('lowercase-g.mp3')));assert(sequence.some(s=>s.endsWith('sound-teacher.mp3')));assert(!sequence.some(s=>s.includes('/review/')));assert(!sequence.some(s=>s.endsWith('/girl.mp3')));
  await p.locator('[data-phonics-continue]').click();await phase(p,'listening');sequence=await p.evaluate(()=>voiceEvents);assert(sequence.some(s=>s.endsWith('/girl.mp3')));assert(sequence.some(s=>s.endsWith('/guitar.mp3')));await p.evaluate(()=>Unit3Lesson3Clips.clips['sound-g']=savedGSound);
  await route('fix-word');await p.locator('[data-card][data-value="e"]').tap();await p.locator('[data-zone="g"]').tap();await phase(p,'listening');assert.equal(await p.evaluate(()=>Unit3Lesson3.current().errors),1);assert.equal(await p.locator('[data-card][data-value="e"]').isVisible(),true);
  // Pointer cancel must never place a card, unlike pointerup.

@@ -72,11 +72,12 @@
    if(LearningApp?.isMuted()){this.actor.setState('IDLE');return this.alive(t);}
    const c=this.clip(key);if(!c){this.status('Audio is missing. Tap Listen again after restoring the lesson files.');this.audioMissing=true;return false;}
    const hideText=(this.kind==='sound-detective'&&this.level!=='easy')||(this.kind==='meet-gg'&&this.level==='challenge')||(this.kind==='final-challenge'&&this.level==='challenge');
-   this.$('[data-bubble]').textContent=hideText?'Listen carefully!':c.text;const result=await this.actor.play(c.src,{cues:c.cues,state:'TALKING',endState:'LISTENING'});return result&&this.alive(t);
+   this.$('[data-bubble]').textContent=hideText?'Listen carefully!':key==='sound-g'?'/g/':c.text;const result=await this.actor.play(c.src,{cues:c.cues,state:'TALKING',endState:'LISTENING'});return result&&this.alive(t);
   }
   refresh(){
    this.root.dataset.phase=this.phase;this.root.dataset.level=this.level;
-   this.root.querySelectorAll('[data-answer],[data-card],[data-zone],[data-reverse],[data-checked],[data-try],[data-sound-model],[data-phonics-sequence]').forEach(b=>b.disabled=this.phase!=='listening');
+   this.root.querySelectorAll('[data-answer],[data-card],[data-zone],[data-reverse],[data-checked],[data-try]').forEach(b=>b.disabled=this.phase!=='listening');
+   this.root.querySelectorAll('[data-sound-model],[data-phonics-sequence]').forEach(b=>b.disabled=!['idle','listening','resolved'].includes(this.phase));
    this.$('[data-next]').disabled=this.phase!=='resolved';this.$('[data-replay]').disabled=['checking','asking','complete'].includes(this.phase);
    this.$('[data-level]').disabled=['asking','checking'].includes(this.phase);this.$('[data-role]').disabled=['asking','checking'].includes(this.phase);
    this.root.querySelectorAll('.g3-trace-board svg').forEach(s=>s.style.pointerEvents=this.phase==='listening'?'auto':'none');
@@ -89,7 +90,7 @@
    let html='',instruction='',bubble='G g';
    if(this.kind==='meet-gg'){
     instruction='Listen. Find the matching letter or picture.';
-    html=`<div class="g3-model" ${this.level==='challenge'?'hidden':''}>${this.level==='easy'?visual(w,true):art('headphones','g3-ear')}</div>`+this.options(LETTERS.includes(w)?LETTERS:TARGETS,this.level==='easy')+'<div class="g3-phonics-tools"><button type="button" class="g3-sound-button" data-sound-model>'+art('sound-g')+'<span>Listen to the sound</span></button><button type="button" class="g3-sequence-button" data-phonics-sequence>'+art('speaker')+'<span>Letter · Sound · Words</span></button></div>';
+    html='<div class="g3-phonics-tools"><button type="button" class="g3-sequence-button" data-phonics-sequence>'+art('speaker')+'<span>Hear it all: G → /g/ → guitar → girl</span></button><button type="button" class="g3-sound-button" data-sound-model>'+art('sound-g')+'<span>Hear the sound /g/</span></button></div>'+`<div class="g3-model" ${this.level==='challenge'?'hidden':''}>${this.level==='easy'?visual(w,true):art('headphones','g3-ear')}</div>`+this.options(LETTERS.includes(w)?LETTERS:TARGETS,this.level==='easy');
    }
    if(this.kind==='sound-detective'){
     instruction='Listen. Does it start like girl and guitar?';html=`<div class="g3-listen-picture" ${this.level==='easy'?'':'hidden'}>${visual(w,true)}${this.level==='easy'?`<b>${w}</b>`:''}</div><div class="g3-decision g3-sound-decision">${button('yes',art('g-sound','g3-decision-art'),'aria-label="G sound"')}${button('no',art('not-g-sound','g3-decision-art'),'aria-label="Not G sound"')}</div>`;
@@ -137,9 +138,10 @@
    const b=e.target.closest('button');if(!b||b.disabled)return;
    if(b.dataset.complete){this.completion(b.dataset.complete);return;}
    if(b.hasAttribute('data-clear-trace')){this.render();return;}
-   if(this.phase!=='listening')return;
+   if(!['idle','listening','resolved'].includes(this.phase))return;
    if(b.hasAttribute('data-sound-model')){this.modelSound();return;}
    if(b.hasAttribute('data-phonics-sequence')){this.phonicsSequence();return;}
+   if(this.phase!=='listening')return;
    if(b.hasAttribute('data-reverse')){this.reverse();return;}
    if(b.hasAttribute('data-checked')){this.check(true,'feedback/great_job',true);return;}
    if(b.hasAttribute('data-try')){this.status('Good try! Listen, then ask again.');this.speak('feedback/your_turn');return;}
@@ -161,28 +163,28 @@
   }
   updateTraceProgress(ratio){if(!this.alive(this.epoch)||this.phase!=='listening')return;this.$('#traceStatus').textContent=ratio<.6?'Keep following the path.':'Nearly there!';}
   async modelSound(){
-   const t=this.epoch;this.phase='asking';this.refresh();
+   const resolved=this.phase==='resolved',t=++this.epoch;this.actor.stopAudio();this.phase='asking';this.refresh();
    if(this.soundURL){await this.actor.play(this.soundURL,{state:'TALKING',endState:'LISTENING'});}
    else await this.speak(this.clip('sound-g')?.humanReviewed?'sound-g':'sound-teacher',t);
-   if(this.alive(t)){this.phase='listening';this.status(this.soundURL||this.clip('sound-g')?.humanReviewed?'Listen, then say the sound.':'Listen to your teacher. Say the sound together.');this.refresh();}
+   if(this.alive(t)){this.phase=resolved?'resolved':'listening';this.status(this.soundURL||this.clip('sound-g')?.humanReviewed?'Listen, then say the sound.':'Listen to your teacher. Say the sound together.');this.refresh();}
   }
   async phonicsSequence(){
-   const t=++this.epoch;this.actor.stopAudio();this.phase='asking';this.refresh();
+   const resolved=this.phase==='resolved',t=++this.epoch;this.actor.stopAudio();this.phase='asking';this.refresh();
    try{
-    if(!await this.speak('capital-g',t)||!await this.speak('lowercase-g',t))return;
+    if(!await this.speak('capital-g',t))return;
     if(this.soundURL){if(!await this.actor.play(this.soundURL,{state:'TALKING',endState:'LISTENING'})||!this.alive(t))return;}
     else if(this.clip('sound-g')?.humanReviewed){if(!await this.speak('sound-g',t))return;}
     else{
      if(!await this.speak('sound-teacher',t))return;
      this.phase='phonics-pause';this.status('Your teacher models the short sound. Then tap Hear the words.');this.refresh();
      const ready=document.createElement('button');ready.type='button';ready.dataset.phonicsContinue='';ready.className='g3-sequence-button';ready.textContent='Hear the words';
-     ready.onclick=async()=>{if(!this.alive(t)||this.phase!=='phonics-pause')return;ready.remove();this.phase='asking';this.refresh();try{await this.phonicsWords(t);}finally{if(this.alive(t)){this.phase='listening';this.refresh();}}};
+     ready.onclick=async()=>{if(!this.alive(t)||this.phase!=='phonics-pause')return;ready.remove();this.phase='asking';this.refresh();try{await this.phonicsWords(t);}finally{if(this.alive(t)){this.phase=resolved?'resolved':'listening';this.refresh();}}};
      this.$('.g3-phonics-tools').append(ready);return;
     }
     await this.phonicsWords(t);
-   }finally{if(this.alive(t)&&this.phase!=='phonics-pause'){this.phase='listening';this.refresh();}}
+   }finally{if(this.alive(t)&&this.phase!=='phonics-pause'){this.phase=resolved?'resolved':'listening';this.refresh();}}
   }
-  async phonicsWords(t){for(const word of TARGETS)if(!await this.speak(word,t))return;if(this.alive(t))this.status('Now say the letter, sound and words.');}
+  async phonicsWords(t){for(const word of ['guitar','girl'])if(!await this.speak(word,t))return;if(this.alive(t))this.status('Now say the letter, sound and words.');}
   async finishLetter(card){
    if(this.destroyed||this.phase!=='listening'||card.classList.contains('done'))return;card.classList.add('done');card.classList.remove('active');this.phase='checking';this.refresh();const t=this.epoch;
    const heard=await this.speak(this.round.word,t)&&await this.speak('say',t);
