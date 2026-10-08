@@ -1,7 +1,12 @@
 {
   "engine": "Higgs V3 offline",
   "voice": "Existing Belinda reference",
-  "phoneme": "Not generated; isolated /g/ requires teacher review",
+  "phoneme": {
+    "status": "human-reviewed",
+    "approvedTake": "hard-g-take-1",
+    "approvedOn": "2026-10-08",
+    "approval": "User listened to the audition files and explicitly selected take 1 in this task."
+  },
   "clips": {
     "girl": {
       "src": "assets/unit3/lesson3/audio/girl.mp3",
@@ -902,6 +907,38 @@
         {
           "id": 0,
           "ms": 3120
+        }
+      ]
+    },
+    "sound-g": {
+      "src": "assets/unit3/lesson3/audio/sound-g.mp3",
+      "text": "G sound.",
+      "kind": "phoneme",
+      "humanReviewed": true,
+      "intendedPhoneme": "/g/",
+      "duration": 0.706,
+      "sha256": "5ab7c0b5e611820bf41a4677276c041eb4aefd5cccfc1ad44da9d4e1973c52dd",
+      "reviewTake": "hard-g-take-1",
+      "cues": [
+        {
+          "id": 0,
+          "ms": 0
+        },
+        {
+          "id": 15,
+          "ms": 30
+        },
+        {
+          "id": 7,
+          "ms": 80
+        },
+        {
+          "id": 15,
+          "ms": 260
+        },
+        {
+          "id": 0,
+          "ms": 540
         }
       ]
     }

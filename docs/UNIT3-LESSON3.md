@@ -45,20 +45,20 @@ Meet introduces G, then g, then both words before its randomized review; it expo
 
 ## Audio and phonics boundary
 
-`assets/unit3/lesson3/audio/` contains 15 new static Higgs V3 MP3s with the existing accepted Belinda reference: girl, guitar, capital G, lowercase g, six game instructions, oral-practice prompt, final instruction, Is it a girl?, Is it a guitar?, and teacher-sound prompt. The manifest records text, duration, SHA-256, local Whisper transcript checks and Rhubarb waveform mouth cues. `tools/build_unit3_lesson3_audio.py` is an offline build tool, not browser code.
+`assets/unit3/lesson3/audio/` contains 16 production Higgs V3 MP3s with the existing accepted Belinda reference: girl, guitar, capital G, lowercase g, six game instructions, oral-practice prompt, final instruction, Is it a girl?, Is it a guitar?, teacher-sound prompt, and the user-approved isolated-sound take 1. The manifest records text, duration, SHA-256, local Whisper transcript checks and Rhubarb waveform mouth cues. `tools/build_unit3_lesson3_audio.py` is an offline build tool, not browser code.
 
 Existing Lesson 2 yes/no, toy-question and feedback clips and Lesson 1 toy-name recordings are reused. Playback is sequential and input waits for the audio promise. Next is manual. Muting permits a visual task to continue; leaving or backgrounding stops playback and invalidates old callbacks. No browser TTS fallback is introduced.
 
-**An isolated /g/ recording is not approved in this implementation.** The old `assets/audio/sound-g.mp3` is deliberately not silently substituted, and Higgs does not generate the isolated phoneme. The sound-model action tells children to listen to their teacher. In Teacher mode, a teacher may supply a short, already checked local audio file; its Blob URL lasts only for the activity and is revoked on replacement or exit. This avoids claiming a letter-name recording is a phoneme. The sound-detection games use the full-word Higgs recordings and teacher modeling.
+**The user listened to the three new Higgs auditions and explicitly selected take 1 on 2026-10-08.** That take is registered as `sound-g` with `humanReviewed: true`, its hash and review provenance. Transcript matching is used for words/instructions, not as phoneme approval. The isolated sample is used by the sound button, Sound Detective and the final sound task. The Letter · Sound · Words button plays capital G → lowercase g → approved /g/ → girl → guitar in sequence. A checked local teacher sound may replace the default for one activity; its Blob URL is revoked on replacement/exit. If the approved sample is absent, the sequence pauses for teacher modeling before the words. The old `assets/audio/sound-g.mp3` is not substituted. Audition 2 and the continuous audition sequence remain review-only, outside child playback.
 
 Trace & Say and the final oral extension are teacher-guided/self-reported practice, not automatic pronunciation grading. No new child recording is uploaded to Cloudflare by this module. Teacher-supported oral rounds are labeled separately in the completion panel. Stars reward completing the practice activity and are not a claim of independent speech mastery.
 
 ## Asset provenance
 
-- `girl`: reuses the original embedded textbook image `DATA.book.girlClose` from `index.html` unchanged.
+- `girl` and `guitar`: now use the artwork supplied by the user on 2026-10-08. The embedded textbook girl and earlier generated guitar remain preserved; other lessons retain their existing art.
 - Animated friend: existing `assets/toy-buddy/` girl sprites.
 - Review toys/backgrounds and rewards: existing supplied assets.
-- `guitar.webp`: new teaching illustration because no guitar artwork was present in the project inventory. It is not described as textbook artwork. Generated through the built-in image tool, with the original PNG preserved in `assets/unit3/lesson3/guitar.png`; WebP is a resized delivery copy.
+- Earlier `guitar.webp`: preserved from the first implementation, now superseded in this module by the supplied guitar. The original PNG and generation prompt below remain as provenance of that earlier file.
 
 Image prompt:
 
@@ -79,4 +79,28 @@ node tests/learning-rewards.spec.cjs
 
 The Lesson 3 browser suite uses real MP3 playback at an accelerated rate, real SVG-path pointer movement and mouse dragging, native touch dragging and touch tapping. It checks all seven completions, replay scoring, all support levels, Teacher reverse-role task, balanced exposure, cleanup and viewport layouts. Transcript/hash checks establish clip content and integrity; they do not establish child speech accuracy or approval of an isolated phoneme.
 
-Known boundary: replace the generated guitar illustration only if a permitted original textbook guitar image is later supplied; a checked /g/ sample is still needed for autonomous isolated-sound playback. Teacher modeling is the implemented phonics fallback.
+Known boundary: the selected /g/ sample is user-reviewed, not a claim of a laboratory phonetic certification. Oral practice remains teacher-guided/self-reported rather than automatic speech grading. The extra audition files are not used in child playback.
+
+## Supplied asset update – 2026-10-08
+
+All 18 new user attachments are inventoried in `assets/unit3/lesson3/art/manifest.json`, including source SHA-256 and extraction bounds. `tools/build_gg_assets.cjs` makes 75 WebP assets without repainting the supplied illustrations. Duplicate-case filenames are avoided for Windows. Three sprite cuts remove only neighboring, disconnected alpha islands. There is a browsable `catalog.html` covering the entire pack.
+
+| Screen | Artwork used |
+| --- | --- |
+| Lesson activity selector | Gg sign, headphones, letter bubble, letter home, missing g, pencil, trophy |
+| Meet Gg | music-stage background, oversized supplied G/g and girl/guitar, Gg sign, sound and speaker controls |
+| Sound Detective | listening-stage background, supplied objects, G SOUND / NOT G SOUND buttons |
+| Catch the G | meadow background, supplied G/g/E bubbles, gentle movement |
+| Big G or small g? | sorting garden, supplied letter homes and neutral black letter tiles; Challenge removes colored homes |
+| Fix the Word | work table, supplied object and blank initial-letter slot; written answers remain hidden when required |
+| Trace & Say | desk and paper artwork behind the existing SVG engine; supplied word cards after tracing |
+| Final Challenge / results | meadow, supplied objects, reward stage, trophy and star images |
+| Correct feedback | supplied check/sparkle pop beside the existing animated friend, outside the task text/buttons |
+
+The extra guided-letter graphics are reference artwork in the catalog. The active tracing task retains its existing validated SVG coordinate paths and pointer checks. No supplied tracing bitmap is treated as an interactive engine.
+
+The shared shell now accepts an optional activity image field, so Lesson 3 cards use the supplied art while older activities keep their original imagery. `data/units.js` is the only lesson registration changed.
+
+Audio audition builder: `tools/build_gg_phonics_review.py`. Selected take registration: `tools/approve_gg_sound.py`. The review page identifies take 1 as selected and the other takes as review-only. Rebuilding the ordinary word/instruction bank preserves an approved sound only while its file hash matches the approval manifest.
+
+Additional verification checks: all 75 asset hashes; 18-source provenance; 16 production clips, with human review metadata for the phoneme; the actual five-clip name/sound/word sequence; fallback teacher pause; no review-only clip in child playback.

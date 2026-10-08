@@ -1,0 +1,28 @@
+{
+  "engine": "Higgs V3",
+  "voice": "Existing Belinda reference",
+  "clips": {
+    "hard-g-take-1": {
+      "src": "assets/unit3/lesson3/audio/review/hard-g-take-1.mp3",
+      "input": "Guh.",
+      "sha256": "5ab7c0b5e611820bf41a4677276c041eb4aefd5cccfc1ad44da9d4e1973c52dd",
+      "status": "human-reviewed-selected-by-user",
+      "note": "Check hard /g/, no letter-name substitution, and no overlong added vowel. ASR is not phoneme approval.",
+      "approvedOn": "2026-10-08"
+    },
+    "hard-g-take-2": {
+      "src": "assets/unit3/lesson3/audio/review/hard-g-take-2.mp3",
+      "input": "Guh. Guh. Guh.",
+      "sha256": "e3fadf64f26e735144998e23cefb6453df9f74f7e15485aa36b314c7f61903f3",
+      "status": "pending-human-phonetics-review",
+      "note": "Check hard /g/, no letter-name substitution, and no overlong added vowel. ASR is not phoneme approval."
+    },
+    "phonics-sequence": {
+      "src": "assets/unit3/lesson3/audio/review/phonics-sequence.mp3",
+      "input": "G. Guh. Girl. Guitar.",
+      "sha256": "18727237bc881ea2e0455f575f0db183afe60a064c0d7210dd931f80bf213838",
+      "status": "pending-human-phonetics-review",
+      "note": "Check hard /g/, no letter-name substitution, and no overlong added vowel. ASR is not phoneme approval."
+    }
+  }
+}

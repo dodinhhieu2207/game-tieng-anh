@@ -68,7 +68,7 @@
    const value=progress.get(key(unit.id,lesson.id,activity));const legacy=originals.get(activity.game);let card;
    if(legacy?.classList.contains('activity-card'))card=legacy.cloneNode(true);
    else {card=document.createElement('button');card.className='activity-card'+(unit.id===3?' u3':'');
-    const image=legacy?.querySelector('img');card.innerHTML=`<span class="activity-card-copy"><small>${activity.final?'Final Mission':'Activity '+(index+1)}</small><b>${esc(activity.title||GAME_META[activity.game]?.[1]||'Activity')}</b><em>${esc(GAME_META[activity.game]?.[2]||'')}</em><span class="play-pill">PLAY</span></span>${image?image.outerHTML:icon(activity.icon||'flashcards')}`;
+    const image=legacy?.querySelector('img');card.innerHTML=`<span class="activity-card-copy"><small>${activity.final?'Final Mission':'Activity '+(index+1)}</small><b>${esc(activity.title||GAME_META[activity.game]?.[1]||'Activity')}</b><em>${esc(GAME_META[activity.game]?.[2]||'')}</em><span class="play-pill">PLAY</span></span>${activity.image?`<img src="${esc(activity.image)}" alt="">`:image?image.outerHTML:icon(activity.icon||'flashcards')}`;
    }
    card.type='button';card.removeAttribute('id');card.removeAttribute('data-game');card.dataset.activity=activity.id;card.classList.add('shell-activity');card.dataset.status=value.completed?'completed':value.played?'played':'normal';
    if(activity.title){const title=card.querySelector('b');if(title)title.textContent=activity.title;}

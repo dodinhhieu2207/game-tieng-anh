@@ -1,0 +1,1089 @@
+{
+  "source": "User supplied Lesson 3 asset pack",
+  "sources": {
+    "ChatGPT Image Oct 8, 2026, 03_19_12 PM-1.png": {
+      "sha256": "36cce26833505bbd09717de6cbb79f8e2e4687112725ea2a7abd06ff929ce32e",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_19_15 PM-2.png": {
+      "sha256": "ca8d8abe581e195a28b8deaac2991523207f6a310e1e510fa26799c053fc59b0",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_19_17 PM-3.png": {
+      "sha256": "95c536cb273aea3a6a737e518c0a76bbfb67ccc0dbf0f927684752eb42edd052",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_19_23 PM-4.png": {
+      "sha256": "8d18d8f616c004d276e2806b0c8293df5227750e490689958d535efdd4904262",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_19_25 PM-5.png": {
+      "sha256": "4320ac04f756077864fa94d654fd083a1754d3e11f502f14f1d9cae342e56fd8",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_19_27 PM-6.png": {
+      "sha256": "39c2f7091ce19914df6f983530f252ac285ab8c82a6773c6f30da98e5e6d45a6",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_19_29 PM-7.png": {
+      "sha256": "f27821ec860d680fee708ba845179d141b3d546052214067d3277d0ba6db949d",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_19_33 PM-8.png": {
+      "sha256": "a9fa5f410ae135abb272883ac5a6a452cd28c0882ead55d3eb236705de3c8671",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_19_35 PM-9.png": {
+      "sha256": "14477d679d4eee7ad6395323b552b6339423d9a0981265b37ad1c7081eb8f317",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png": {
+      "sha256": "8fe72921f1227beacb72f182bddc8920a20b6d949ad2429c1da41a6f52889803",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_21_59 PM-1.png": {
+      "sha256": "6d337e9f44ec2a46857afef3bce0145ae53354552ebfacc3014d7802f249951c",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_22_02 PM-2.png": {
+      "sha256": "6cb68f98d879feafce8d0f7271a90434387ad9542f1beb8b066d4756ff81fe4b",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_22_04 PM-3.png": {
+      "sha256": "ea472bc01e71740d32c1256a25f31f7361d63f1d19d14e20d9b85c3f2764b7cd",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_22_07 PM-4.png": {
+      "sha256": "e297da9b3c814871afd2349873d7a899a00c0b17afa4910015afc9339e304797",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_22_10 PM-5.png": {
+      "sha256": "c86a7954d703629cc398835ad4342f9dc61c64df867683a6625835f966935c33",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_22_25 PM-6.png": {
+      "sha256": "b36f5d12ccd21639481d47bf7cef1d53fa195432b0204328f98b12d250b78e4c",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_22_28 PM-7.png": {
+      "sha256": "2f24b5a4c679251103939f112c8616acb52acaab36432224194f0d3547bea89c",
+      "source": "User attachment, 2026-10-08"
+    },
+    "ChatGPT Image Oct 8, 2026, 03_22_30 PM-8.png": {
+      "sha256": "47b875fafcef0cc4a37e2af6774bf459c219702a90532f23f409cef5cba59e10",
+      "source": "User attachment, 2026-10-08"
+    }
+  },
+  "items": {
+    "girl": {
+      "src": "assets/unit3/lesson3/art/girl.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_12 PM-1.png",
+      "crop": {
+        "left": 165,
+        "top": 15,
+        "width": 590,
+        "height": 720
+      },
+      "width": 590,
+      "height": 720,
+      "hasAlpha": true,
+      "sha256": "f3736327f27dbc4bc3600872bbcaa95ebc9ec51673ec71db658104094160b24d"
+    },
+    "guitar": {
+      "src": "assets/unit3/lesson3/art/guitar.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_12 PM-1.png",
+      "crop": {
+        "left": 785,
+        "top": 25,
+        "width": 650,
+        "height": 710
+      },
+      "width": 600,
+      "height": 655,
+      "hasAlpha": true,
+      "sha256": "599356b0b974df1648faf31198972fc68b603229dc41c4c4bc68a84581529413"
+    },
+    "word-girl": {
+      "src": "assets/unit3/lesson3/art/word-girl.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_12 PM-1.png",
+      "crop": {
+        "left": 20,
+        "top": 738,
+        "width": 698,
+        "height": 337
+      },
+      "width": 600,
+      "height": 290,
+      "hasAlpha": true,
+      "sha256": "ee060a81348ecbde9627ac2efa56b73e8fd513d0760431bdf825f58808dc00c7"
+    },
+    "word-guitar": {
+      "src": "assets/unit3/lesson3/art/word-guitar.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_12 PM-1.png",
+      "crop": {
+        "left": 735,
+        "top": 738,
+        "width": 697,
+        "height": 337
+      },
+      "width": 600,
+      "height": 290,
+      "hasAlpha": true,
+      "sha256": "0576e6439c6cb2b51df5f6e67b4f96b12c5fcc7a3d7dacc275a407ec6cd73f02"
+    },
+    "capital-g": {
+      "src": "assets/unit3/lesson3/art/capital-g.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_15 PM-2.png",
+      "crop": {
+        "left": 10,
+        "top": 50,
+        "width": 473,
+        "height": 506
+      },
+      "width": 473,
+      "height": 506,
+      "hasAlpha": true,
+      "sha256": "e2284cabe2ef11050a6b11cbfd37ff6b449ba4189d87df3caa6130ff4bf40bd6"
+    },
+    "lowercase-g": {
+      "src": "assets/unit3/lesson3/art/lowercase-g.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_15 PM-2.png",
+      "crop": {
+        "left": 515,
+        "top": 65,
+        "width": 435,
+        "height": 486
+      },
+      "width": 435,
+      "height": 486,
+      "hasAlpha": true,
+      "sha256": "6d80abbaf6c6725b04615d534a9d5fe3c329e48ea338b73373ed94679426ae2b"
+    },
+    "outline-capital": {
+      "src": "assets/unit3/lesson3/art/outline-capital.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_15 PM-2.png",
+      "crop": {
+        "left": 975,
+        "top": 50,
+        "width": 460,
+        "height": 499
+      },
+      "width": 460,
+      "height": 499,
+      "hasAlpha": true,
+      "sha256": "e5b7bf29debe34f3329461d1b9a657d60df5b4cec8cb7c6d4efcce6b7de8d79a"
+    },
+    "outline-lowercase": {
+      "src": "assets/unit3/lesson3/art/outline-lowercase.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_15 PM-2.png",
+      "crop": {
+        "left": 30,
+        "top": 596,
+        "width": 398,
+        "height": 470
+      },
+      "width": 398,
+      "height": 470,
+      "hasAlpha": true,
+      "sha256": "53c132885c5da77a28ce62141954f26be3d7965d7d9b9c88034138f271eb2183"
+    },
+    "guide-capital": {
+      "src": "assets/unit3/lesson3/art/guide-capital.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_15 PM-2.png",
+      "crop": {
+        "left": 480,
+        "top": 571,
+        "width": 499,
+        "height": 503
+      },
+      "width": 499,
+      "height": 503,
+      "hasAlpha": true,
+      "sha256": "c2922ab4383e17d392a67f15c02ddaecc11f4e78f7d79b3c76c892589a79055d"
+    },
+    "guide-lowercase": {
+      "src": "assets/unit3/lesson3/art/guide-lowercase.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_15 PM-2.png",
+      "crop": {
+        "left": 1025,
+        "top": 588,
+        "width": 409,
+        "height": 486
+      },
+      "width": 409,
+      "height": 486,
+      "hasAlpha": true,
+      "sha256": "a124028f4e4e9977213046b7b198b25cdc612a7927006e7ea6d1ab54911c8d0e"
+    },
+    "card-girl": {
+      "src": "assets/unit3/lesson3/art/card-girl.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_17 PM-3.png",
+      "crop": {
+        "left": 183,
+        "top": 20,
+        "width": 532,
+        "height": 683
+      },
+      "width": 532,
+      "height": 683,
+      "hasAlpha": true,
+      "sha256": "ef46457ba405bb68d5970bcc28e93a11756f5ca1082ab35e03af33c770d05855"
+    },
+    "card-guitar": {
+      "src": "assets/unit3/lesson3/art/card-guitar.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_17 PM-3.png",
+      "crop": {
+        "left": 735,
+        "top": 20,
+        "width": 528,
+        "height": 683
+      },
+      "width": 528,
+      "height": 683,
+      "hasAlpha": true,
+      "sha256": "d0bc5c47d92ec03f03d0906859349565402c59fffadc7ab77d51869246f69250"
+    },
+    "badge-capital": {
+      "src": "assets/unit3/lesson3/art/badge-capital.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_17 PM-3.png",
+      "crop": {
+        "left": 18,
+        "top": 703,
+        "width": 395,
+        "height": 373
+      },
+      "width": 395,
+      "height": 373,
+      "hasAlpha": true,
+      "sha256": "b64c18fc6ffb24198bf1793052ea38306f029372edf041353116e04e9356f8b2"
+    },
+    "badge-lowercase": {
+      "src": "assets/unit3/lesson3/art/badge-lowercase.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_17 PM-3.png",
+      "crop": {
+        "left": 460,
+        "top": 703,
+        "width": 374,
+        "height": 373
+      },
+      "width": 374,
+      "height": 373,
+      "hasAlpha": true,
+      "sha256": "7933ea578c6b4d3acd1d4a7b8bf2436ebb7df5707597f0042f7ffbe1e3e1559c"
+    },
+    "sound-g": {
+      "src": "assets/unit3/lesson3/art/sound-g.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_17 PM-3.png",
+      "crop": {
+        "left": 857,
+        "top": 739,
+        "width": 570,
+        "height": 304
+      },
+      "width": 570,
+      "height": 304,
+      "hasAlpha": true,
+      "sha256": "d9e272f7ac5a5b8256f42dc217496421a6067f746d373c81e4e81d6f88ad74a3"
+    },
+    "button-listen": {
+      "src": "assets/unit3/lesson3/art/button-listen.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_23 PM-4.png",
+      "crop": {
+        "left": 0,
+        "top": 140,
+        "width": 360,
+        "height": 390
+      },
+      "width": 360,
+      "height": 390,
+      "hasAlpha": true,
+      "sha256": "37f26cbd7ee48806e1fc50e4916464f59fbd2a85fbf1fca6b13df88daed01b4a"
+    },
+    "button-replay": {
+      "src": "assets/unit3/lesson3/art/button-replay.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_23 PM-4.png",
+      "crop": {
+        "left": 362,
+        "top": 140,
+        "width": 360,
+        "height": 390
+      },
+      "width": 360,
+      "height": 390,
+      "hasAlpha": true,
+      "sha256": "9be61c16f1ab1dc9e838e1b0c48c22f9d74efea8c1a44a95cc44a95f5e3cd4e9"
+    },
+    "button-pencil": {
+      "src": "assets/unit3/lesson3/art/button-pencil.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_23 PM-4.png",
+      "crop": {
+        "left": 724,
+        "top": 140,
+        "width": 360,
+        "height": 390
+      },
+      "width": 360,
+      "height": 390,
+      "hasAlpha": true,
+      "sha256": "1f391310150fc242fc6e22657a064007e06ce9a597d804dfc90cfff0ba7ba15e"
+    },
+    "button-microphone": {
+      "src": "assets/unit3/lesson3/art/button-microphone.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_23 PM-4.png",
+      "crop": {
+        "left": 1086,
+        "top": 140,
+        "width": 360,
+        "height": 390
+      },
+      "width": 360,
+      "height": 390,
+      "hasAlpha": true,
+      "sha256": "bc25a6330f29ca708a32295fa7d5a152631aa0458398f056014e73a0a5268366"
+    },
+    "button-yes": {
+      "src": "assets/unit3/lesson3/art/button-yes.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_23 PM-4.png",
+      "crop": {
+        "left": 0,
+        "top": 550,
+        "width": 360,
+        "height": 390
+      },
+      "width": 360,
+      "height": 390,
+      "hasAlpha": true,
+      "sha256": "e368e60c89c547f097d6051cb486a5e27f762218cdfe1b758d292484fb3b1388"
+    },
+    "button-no": {
+      "src": "assets/unit3/lesson3/art/button-no.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_23 PM-4.png",
+      "crop": {
+        "left": 362,
+        "top": 550,
+        "width": 360,
+        "height": 390
+      },
+      "width": 360,
+      "height": 390,
+      "hasAlpha": true,
+      "sha256": "4fdf707750b471b888b3cdca545eee56dad717d3a8c3f83bcd3e5bc498a8f0e7"
+    },
+    "button-play": {
+      "src": "assets/unit3/lesson3/art/button-play.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_23 PM-4.png",
+      "crop": {
+        "left": 724,
+        "top": 550,
+        "width": 360,
+        "height": 390
+      },
+      "width": 360,
+      "height": 390,
+      "hasAlpha": true,
+      "sha256": "ea3fc4c43e2ca55f0fe376daa2ec23f04038be042417aeca934080a7f35f981a"
+    },
+    "button-restart": {
+      "src": "assets/unit3/lesson3/art/button-restart.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_23 PM-4.png",
+      "crop": {
+        "left": 1086,
+        "top": 550,
+        "width": 360,
+        "height": 390
+      },
+      "width": 360,
+      "height": 390,
+      "hasAlpha": true,
+      "sha256": "d53e7ecc685e63c8bffbbcc0cdc4ddff8ddcd5c641787cfe3a2cd22601a82733"
+    },
+    "sign-gg": {
+      "src": "assets/unit3/lesson3/art/sign-gg.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_25 PM-5.png",
+      "crop": {
+        "left": 50,
+        "top": 90,
+        "width": 922,
+        "height": 525
+      },
+      "width": 600,
+      "height": 342,
+      "hasAlpha": true,
+      "sha256": "f8f135760268b217bb4675ccfaa2e77fb145dc63c5c0dbf9c6b286e0662247cd"
+    },
+    "speaker": {
+      "src": "assets/unit3/lesson3/art/speaker.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_25 PM-5.png",
+      "crop": {
+        "left": 995,
+        "top": 142,
+        "width": 447,
+        "height": 460
+      },
+      "width": 447,
+      "height": 460,
+      "hasAlpha": true,
+      "sha256": "a40ea1e10eeb6b61303a7da1bf76b27e213edb9a465501b8bff9fad7a950c90f"
+    },
+    "halo": {
+      "src": "assets/unit3/lesson3/art/halo.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_25 PM-5.png",
+      "crop": {
+        "left": 0,
+        "top": 610,
+        "width": 462,
+        "height": 472
+      },
+      "width": 462,
+      "height": 472,
+      "hasAlpha": true,
+      "sha256": "3fc872c5e2d4328902a220292614cf5aec03f52325a727c6be59e5e9c3851b68"
+    },
+    "star": {
+      "src": "assets/unit3/lesson3/art/star.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_25 PM-5.png",
+      "crop": {
+        "left": 468,
+        "top": 621,
+        "width": 391,
+        "height": 396
+      },
+      "width": 391,
+      "height": 396,
+      "hasAlpha": true,
+      "sha256": "fc508994df6b8f92d6fd1d50c67ba22b89a795caa8387509395e931a0cfe26a3"
+    },
+    "star-small": {
+      "src": "assets/unit3/lesson3/art/star-small.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_25 PM-5.png",
+      "crop": {
+        "left": 833,
+        "top": 772,
+        "width": 272,
+        "height": 263
+      },
+      "width": 272,
+      "height": 263,
+      "hasAlpha": true,
+      "sha256": "8b561f89e94a7f8cb83f03e2c370de7921f2771218b3f10533b027a58e197b50"
+    },
+    "note": {
+      "src": "assets/unit3/lesson3/art/note.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_25 PM-5.png",
+      "crop": {
+        "left": 1119,
+        "top": 667,
+        "width": 322,
+        "height": 327
+      },
+      "width": 322,
+      "height": 327,
+      "hasAlpha": true,
+      "sha256": "247ae4b48481aee5345e38b82a7d716bb0dd6cac76bdde0c8261b4e3dd988899"
+    },
+    "g-sound": {
+      "src": "assets/unit3/lesson3/art/g-sound.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_27 PM-6.png",
+      "crop": {
+        "left": 38,
+        "top": 130,
+        "width": 683,
+        "height": 334
+      },
+      "width": 600,
+      "height": 293,
+      "hasAlpha": true,
+      "sha256": "782a814bc5b800e8725bfcccc4489a539d7551d0e899a49602a416f66fb4e1e9"
+    },
+    "not-g-sound": {
+      "src": "assets/unit3/lesson3/art/not-g-sound.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_27 PM-6.png",
+      "crop": {
+        "left": 736,
+        "top": 130,
+        "width": 687,
+        "height": 334
+      },
+      "width": 600,
+      "height": 292,
+      "hasAlpha": true,
+      "sha256": "096a40b717fcf64fc9adbf01ee0c1d51e53fa47c5bcbaebeb726feba99cbafc0"
+    },
+    "wave": {
+      "src": "assets/unit3/lesson3/art/wave.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_27 PM-6.png",
+      "crop": {
+        "left": 73,
+        "top": 573,
+        "width": 649,
+        "height": 370
+      },
+      "width": 600,
+      "height": 342,
+      "hasAlpha": true,
+      "sha256": "0ff4af3276b328fdf01edd91880206363fafc881203a46539403c0828d6241ae"
+    },
+    "headphones": {
+      "src": "assets/unit3/lesson3/art/headphones.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_27 PM-6.png",
+      "crop": {
+        "left": 748,
+        "top": 490,
+        "width": 675,
+        "height": 553
+      },
+      "width": 600,
+      "height": 492,
+      "hasAlpha": true,
+      "sha256": "3345a67ad09db6d3b6e411860132025a7756d9e65e1605248d2cf7456bf7e15b"
+    },
+    "bubble-capital": {
+      "src": "assets/unit3/lesson3/art/bubble-capital.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_29 PM-7.png",
+      "crop": {
+        "left": 25,
+        "top": 90,
+        "width": 466,
+        "height": 457
+      },
+      "width": 466,
+      "height": 457,
+      "hasAlpha": true,
+      "sha256": "30c63422002da8a3910eb8088b6c09c04adeb7e67a6c9ee821fc304e287de206"
+    },
+    "bubble-lowercase": {
+      "src": "assets/unit3/lesson3/art/bubble-lowercase.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_29 PM-7.png",
+      "crop": {
+        "left": 511,
+        "top": 90,
+        "width": 463,
+        "height": 455
+      },
+      "width": 463,
+      "height": 455,
+      "hasAlpha": true,
+      "sha256": "ee478f8a2fff0efb1900910fd0e6c4e0a09d59464246ac28d8559f1dfd0f00c9"
+    },
+    "bubble-E": {
+      "src": "assets/unit3/lesson3/art/bubble-E.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_29 PM-7.png",
+      "crop": {
+        "left": 991,
+        "top": 90,
+        "width": 434,
+        "height": 455
+      },
+      "width": 434,
+      "height": 455,
+      "hasAlpha": true,
+      "sha256": "66b64f06a17dc9e49e021bdaecf51afdc204d092318c49254f0806e4c11ae75e"
+    },
+    "catch-star": {
+      "src": "assets/unit3/lesson3/art/catch-star.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_29 PM-7.png",
+      "crop": {
+        "left": 179,
+        "top": 565,
+        "width": 456,
+        "height": 481
+      },
+      "width": 456,
+      "height": 481,
+      "hasAlpha": true,
+      "sha256": "f4753ccc1e26cc517cfffdd8a7cdc25e07cd0dccc5eade324a2f058973855544"
+    },
+    "cloud": {
+      "src": "assets/unit3/lesson3/art/cloud.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_29 PM-7.png",
+      "crop": {
+        "left": 712,
+        "top": 587,
+        "width": 666,
+        "height": 445
+      },
+      "width": 600,
+      "height": 401,
+      "hasAlpha": true,
+      "sha256": "42157eb39097f287bded4aa369716752147444abd4baee38f98e6bd4416114d2"
+    },
+    "home-capital": {
+      "src": "assets/unit3/lesson3/art/home-capital.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_33 PM-8.png",
+      "crop": {
+        "left": 2,
+        "top": 146,
+        "width": 410,
+        "height": 428
+      },
+      "width": 410,
+      "height": 428,
+      "hasAlpha": true,
+      "sha256": "aad25e476a2ff9f700f8bab0d0be43c7c2f13b5c38ef5c97a37c5d49fa81ec99"
+    },
+    "home-lowercase": {
+      "src": "assets/unit3/lesson3/art/home-lowercase.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_33 PM-8.png",
+      "crop": {
+        "left": 419,
+        "top": 150,
+        "width": 385,
+        "height": 425
+      },
+      "width": 385,
+      "height": 425,
+      "hasAlpha": true,
+      "sha256": "956a8a842967e865a2fdccd3ab60d73ff493184679e4789e02466c62ad74fca4"
+    },
+    "tile-capital": {
+      "src": "assets/unit3/lesson3/art/tile-capital.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_33 PM-8.png",
+      "crop": {
+        "left": 813,
+        "top": 202,
+        "width": 297,
+        "height": 356
+      },
+      "width": 297,
+      "height": 356,
+      "hasAlpha": true,
+      "sha256": "255f78bc5017481309bc58eae60057554014b421b4834fbed0c0cd172cc43dd5"
+    },
+    "tile-lowercase": {
+      "src": "assets/unit3/lesson3/art/tile-lowercase.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_33 PM-8.png",
+      "crop": {
+        "left": 1122,
+        "top": 202,
+        "width": 309,
+        "height": 359
+      },
+      "width": 309,
+      "height": 359,
+      "hasAlpha": true,
+      "sha256": "16e9c6e3e0ea3954e76feab2733290ac67209ad4cdba8c71914d53c0048c4c84"
+    },
+    "missing-g": {
+      "src": "assets/unit3/lesson3/art/missing-g.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_33 PM-8.png",
+      "crop": {
+        "left": 38,
+        "top": 617,
+        "width": 303,
+        "height": 365
+      },
+      "width": 303,
+      "height": 365,
+      "hasAlpha": true,
+      "sha256": "f99c0f0ce36cd39ad065a87ca7fbee93c530cf85e3459616eeb93fde01a128e1"
+    },
+    "gap": {
+      "src": "assets/unit3/lesson3/art/gap.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_33 PM-8.png",
+      "crop": {
+        "left": 353,
+        "top": 631,
+        "width": 325,
+        "height": 317
+      },
+      "width": 325,
+      "height": 317,
+      "hasAlpha": true,
+      "sha256": "8af61db73ab13c7bfa9ccdfe8a133a238f7db35664b8a0e26ed9d8811d15c920"
+    },
+    "frame": {
+      "src": "assets/unit3/lesson3/art/frame.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_33 PM-8.png",
+      "crop": {
+        "left": 685,
+        "top": 620,
+        "width": 359,
+        "height": 345
+      },
+      "width": 359,
+      "height": 345,
+      "hasAlpha": true,
+      "sha256": "91ed9bd1888b827b84b3943e3d2ec6197808a8b64ca1e6502cdee54a053280a9"
+    },
+    "burst": {
+      "src": "assets/unit3/lesson3/art/burst.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_33 PM-8.png",
+      "crop": {
+        "left": 1044,
+        "top": 575,
+        "width": 391,
+        "height": 422
+      },
+      "width": 391,
+      "height": 422,
+      "hasAlpha": true,
+      "sha256": "31c9023e0265568d214bc528282b7b9de3534398d9590672fdaf9e9f313074a2"
+    },
+    "trace-pencil": {
+      "src": "assets/unit3/lesson3/art/trace-pencil.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_35 PM-9.png",
+      "crop": {
+        "left": 41,
+        "top": 24,
+        "width": 586,
+        "height": 580
+      },
+      "width": 586,
+      "height": 580,
+      "hasAlpha": true,
+      "sha256": "93e24e135b10438472aaa474d2f5aa6f8d908723b3c34922639554df4b2511fc"
+    },
+    "trace-arrow": {
+      "src": "assets/unit3/lesson3/art/trace-arrow.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_35 PM-9.png",
+      "crop": {
+        "left": 583,
+        "top": 129,
+        "width": 526,
+        "height": 365
+      },
+      "width": 526,
+      "height": 365,
+      "hasAlpha": true,
+      "sha256": "097778ca62c2e0f9bf4bdc333885432274d2a1181a9593e2d43572a312b91c4d"
+    },
+    "trace-dot": {
+      "src": "assets/unit3/lesson3/art/trace-dot.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_35 PM-9.png",
+      "crop": {
+        "left": 1160,
+        "top": 232,
+        "width": 263,
+        "height": 266
+      },
+      "width": 263,
+      "height": 266,
+      "hasAlpha": true,
+      "sha256": "cbc85e9a41028b93b820ce293e268cec43583cfabac56a3265bdb822b46c7a53"
+    },
+    "trace-path": {
+      "src": "assets/unit3/lesson3/art/trace-path.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_35 PM-9.png",
+      "crop": {
+        "left": 9,
+        "top": 629,
+        "width": 864,
+        "height": 420
+      },
+      "width": 600,
+      "height": 292,
+      "hasAlpha": true,
+      "sha256": "e317ff27a33a9adf860f86d1fdf21f7fb607ad18d4fe9b3ccf2200fee2f8e4c3"
+    },
+    "trace-paper": {
+      "src": "assets/unit3/lesson3/art/trace-paper.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_35 PM-9.png",
+      "crop": {
+        "left": 880,
+        "top": 517,
+        "width": 553,
+        "height": 534
+      },
+      "width": 553,
+      "height": 534,
+      "hasAlpha": true,
+      "sha256": "b44323247e9c191038b7910fdef4641ebb53a6c75638c34d65f67db2bb3e1a8e"
+    },
+    "mystery": {
+      "src": "assets/unit3/lesson3/art/mystery.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 30,
+        "top": 53,
+        "width": 349,
+        "height": 263
+      },
+      "width": 349,
+      "height": 263,
+      "hasAlpha": true,
+      "sha256": "37f6facd6eb643f47d220e3b45b14e07a9ec3a0792d8cb1a1d35936a544d3f07"
+    },
+    "question": {
+      "src": "assets/unit3/lesson3/art/question.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 408,
+        "top": 40,
+        "width": 309,
+        "height": 265
+      },
+      "width": 309,
+      "height": 265,
+      "hasAlpha": true,
+      "sha256": "4f7e9de9a4d0269dfb1314d63e30a85b5ae2ca01b58d65b1c9082f0e7809ebd4"
+    },
+    "spotlight": {
+      "src": "assets/unit3/lesson3/art/spotlight.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 731,
+        "top": 20,
+        "width": 367,
+        "height": 350
+      },
+      "width": 367,
+      "height": 350,
+      "hasAlpha": true,
+      "sha256": "cf1e2362670d6e5bfe80f1d1cb21a8013317aecc28b31af715073cac64305a89"
+    },
+    "trophy": {
+      "src": "assets/unit3/lesson3/art/trophy.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 1093,
+        "top": 21,
+        "width": 323,
+        "height": 314
+      },
+      "width": 323,
+      "height": 314,
+      "hasAlpha": true,
+      "sha256": "ffe5b06105ed36c477c52e2a0cc908e5afeb2dc8bbb2c32d9707573dbad8f1b9"
+    },
+    "reward-star": {
+      "src": "assets/unit3/lesson3/art/reward-star.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 12,
+        "top": 320,
+        "width": 394,
+        "height": 302
+      },
+      "width": 394,
+      "height": 302,
+      "hasAlpha": true,
+      "sha256": "187e88fe99fec3451d38dde9465a06366042178c45c8ff6ab079cf2032b45401"
+    },
+    "confetti": {
+      "src": "assets/unit3/lesson3/art/confetti.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 427,
+        "top": 331,
+        "width": 303,
+        "height": 249
+      },
+      "width": 303,
+      "height": 249,
+      "hasAlpha": true,
+      "sha256": "265b2777aafb82709f5a9187a14224681ee10f3fd522a648d58cac3784d25d0a"
+    },
+    "small-star": {
+      "src": "assets/unit3/lesson3/art/small-star.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 814,
+        "top": 380,
+        "width": 205,
+        "height": 191
+      },
+      "width": 205,
+      "height": 191,
+      "hasAlpha": true,
+      "sha256": "46ac8a3477b36e76d549cafbf2a5fa401a31b9056c671c27d433b83bcd7d3416"
+    },
+    "sparkle": {
+      "src": "assets/unit3/lesson3/art/sparkle.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 1148,
+        "top": 335,
+        "width": 249,
+        "height": 244
+      },
+      "width": 249,
+      "height": 244,
+      "hasAlpha": true,
+      "sha256": "009885c85f0acb3fb4da4ea18183ba280c656a402641cb634b0bc8764f7d8190"
+    },
+    "magic": {
+      "src": "assets/unit3/lesson3/art/magic.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 10,
+        "top": 574,
+        "width": 397,
+        "height": 323
+      },
+      "width": 397,
+      "height": 323,
+      "hasAlpha": true,
+      "sha256": "c0063fd8efd24c234ecb239d46f1eac30695597db7e49694f25a8b461e0bb96d"
+    },
+    "ring": {
+      "src": "assets/unit3/lesson3/art/ring.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 425,
+        "top": 570,
+        "width": 288,
+        "height": 294
+      },
+      "width": 288,
+      "height": 294,
+      "hasAlpha": true,
+      "sha256": "04091e28518dfec6f44270f73484924e38a37a871904a91da5ead3654133170a"
+    },
+    "correct": {
+      "src": "assets/unit3/lesson3/art/correct.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 739,
+        "top": 570,
+        "width": 357,
+        "height": 292
+      },
+      "width": 357,
+      "height": 292,
+      "hasAlpha": true,
+      "sha256": "9ba178ec10eb1782a6a05ea256fbc897b0b167da91608d370c6cd508eea56e39"
+    },
+    "retry": {
+      "src": "assets/unit3/lesson3/art/retry.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 1110,
+        "top": 571,
+        "width": 326,
+        "height": 300
+      },
+      "width": 326,
+      "height": 300,
+      "hasAlpha": true,
+      "sha256": "77ee43048289563713c614e8608a2ef069e7f939bee42381ddfba61beddb52dc"
+    },
+    "blue-burst": {
+      "src": "assets/unit3/lesson3/art/blue-burst.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 12,
+        "top": 856,
+        "width": 382,
+        "height": 227
+      },
+      "width": 382,
+      "height": 227,
+      "hasAlpha": true,
+      "sha256": "edbf739da6c1f556b538d6b050edaf043d3e50996bd9c2023a2588b6801695f7"
+    },
+    "reward-cloud": {
+      "src": "assets/unit3/lesson3/art/reward-cloud.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 396,
+        "top": 846,
+        "width": 326,
+        "height": 236
+      },
+      "width": 326,
+      "height": 236,
+      "hasAlpha": true,
+      "sha256": "671674ca3c256de4effa53b63f9f1ac800a72298e6fa9c8165aef532e49e3ba9"
+    },
+    "notes": {
+      "src": "assets/unit3/lesson3/art/notes.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 751,
+        "top": 860,
+        "width": 324,
+        "height": 222
+      },
+      "width": 324,
+      "height": 222,
+      "hasAlpha": true,
+      "sha256": "2411ebf1b5e4fa0c781d3d37e6e4e50719c982faf102d9033b0193bd4dc7f2e7"
+    },
+    "sunburst": {
+      "src": "assets/unit3/lesson3/art/sunburst.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_19_37 PM-10.png",
+      "crop": {
+        "left": 1090,
+        "top": 847,
+        "width": 345,
+        "height": 236
+      },
+      "width": 345,
+      "height": 236,
+      "hasAlpha": true,
+      "sha256": "bc6209905dc614ebca29511ba2177d8c6952d3be8d8c40e6d893a9ed19c1aaaf"
+    },
+    "meadow": {
+      "src": "assets/unit3/lesson3/art/meadow.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_21_59 PM-1.png",
+      "crop": null,
+      "width": 1600,
+      "height": 900,
+      "hasAlpha": false,
+      "sha256": "17a36457903a4c13548233d44b859f2f12696be07ab77e16558aefb1b0dcdb05"
+    },
+    "music-stage": {
+      "src": "assets/unit3/lesson3/art/music-stage.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_22_02 PM-2.png",
+      "crop": null,
+      "width": 1600,
+      "height": 900,
+      "hasAlpha": false,
+      "sha256": "d221b6364e7c287f4b2e8ccf113199654443df8379715b85e04b37a9b80dd81d"
+    },
+    "listening-stage": {
+      "src": "assets/unit3/lesson3/art/listening-stage.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_22_04 PM-3.png",
+      "crop": null,
+      "width": 1600,
+      "height": 900,
+      "hasAlpha": false,
+      "sha256": "6b03559bcc43175d10adc1987f57e47069081f91f10f3895a3ac5d71f7526767"
+    },
+    "catch-meadow": {
+      "src": "assets/unit3/lesson3/art/catch-meadow.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_22_07 PM-4.png",
+      "crop": null,
+      "width": 1600,
+      "height": 900,
+      "hasAlpha": false,
+      "sha256": "547ffe0c91abf9f6608b765d79e77469a221b313a06354d513ec2a3b94a90ce0"
+    },
+    "sorting-garden": {
+      "src": "assets/unit3/lesson3/art/sorting-garden.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_22_10 PM-5.png",
+      "crop": null,
+      "width": 1600,
+      "height": 900,
+      "hasAlpha": false,
+      "sha256": "6f2052ae2a704453fc729e8611dfd7f99621c68a970921dcd0864c34bedb67c4"
+    },
+    "word-table": {
+      "src": "assets/unit3/lesson3/art/word-table.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_22_25 PM-6.png",
+      "crop": null,
+      "width": 1600,
+      "height": 900,
+      "hasAlpha": false,
+      "sha256": "dcecc843fa1d4eab1f7df03a360878b500e94122fab52861f25c0994b7b42d2a"
+    },
+    "trace-desk": {
+      "src": "assets/unit3/lesson3/art/trace-desk.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_22_28 PM-7.png",
+      "crop": null,
+      "width": 1600,
+      "height": 900,
+      "hasAlpha": false,
+      "sha256": "03d5f67784006d3898c87b3610db81c5a3b71857e35d21e9aef0006a748f0d7d"
+    },
+    "reward-stage": {
+      "src": "assets/unit3/lesson3/art/reward-stage.webp",
+      "source": "ChatGPT Image Oct 8, 2026, 03_22_30 PM-8.png",
+      "crop": null,
+      "width": 1600,
+      "height": 900,
+      "hasAlpha": false,
+      "sha256": "025e431401b1a7ec36254cf74a43833ab1139f1754a5aae4d6bdf43a4009f8b1"
+    }
+  }
+}

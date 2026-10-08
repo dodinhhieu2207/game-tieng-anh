@@ -5,8 +5,11 @@ const ids=['meet-gg','sound-detective','catch-g','big-small','fix-word','trace-s
 const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
 (async()=>{
  const manifest=JSON.parse(fs.readFileSync('assets/unit3/lesson3/audio/manifest.json'));
- assert.equal(Object.keys(manifest.clips).length,15);
- for(const c of Object.values(manifest.clips)){assert(c.transcriptMatch,c.text);assert.equal(crypto.createHash('sha256').update(fs.readFileSync(c.src)).digest('hex'),c.sha256);assert(c.duration>0&&c.duration<15);assert(c.cues.length>1);}
+ assert.equal(Object.keys(manifest.clips).length,16);assert.equal(manifest.clips['sound-g'].humanReviewed,true);
+ const artManifest=JSON.parse(fs.readFileSync('assets/unit3/lesson3/art/manifest.json'));
+ assert.equal(Object.keys(artManifest.sources).length,18);assert.equal(Object.keys(artManifest.items).length,75);
+ for(const item of Object.values(artManifest.items))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(item.src)).digest('hex'),item.sha256);
+ for(const c of Object.values(manifest.clips)){if(c.kind==='phoneme')assert(c.humanReviewed);else assert(c.transcriptMatch,c.text);assert.equal(crypto.createHash('sha256').update(fs.readFileSync(c.src)).digest('hex'),c.sha256);assert(c.duration>0&&c.duration<15);assert(c.cues.length>0);}
  const browser=await chromium.launch({channel:'chrome',headless:true}),context=await browser.newContext({viewport:{width:1366,height:768},hasTouch:true}),p=await context.newPage(),errors=[],missing=[];
  p.on('pageerror',e=>errors.push(e.message));p.on('response',r=>{if(r.status()>=400)missing.push(r.url());});
  await p.addInitScript(()=>{window.voiceEvents=[];const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){this.playbackRate=5;voiceEvents.push(this.getAttribute('src'));return play.call(this);};});
@@ -55,6 +58,13 @@ const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
   const old=await p.evaluate(()=>LearningProgress.all());await p.locator('[data-complete="again"]').click();await phase(p,'listening');assert.deepEqual(await p.evaluate(()=>LearningProgress.all()),old);
  }
  // A wrong letter stays available and does not become a correct card.
+ // Approved name, sound and words remain separate and play in order.
+ await route('meet-gg');await p.evaluate(()=>voiceEvents.length=0);await p.locator('[data-phonics-sequence]').click();await phase(p,'listening');
+ let approved=await p.evaluate(()=>voiceEvents);assert.deepEqual(approved.map(s=>s.split('/').pop()),['capital-g.mp3','lowercase-g.mp3','sound-g.mp3','girl.mp3','guitar.mp3']);assert(!approved.some(s=>s.includes('/review/')));
+ // When approval metadata is absent, the teacher model is required before the words.
+ await p.evaluate(()=>{window.savedGSound=Unit3Lesson3Clips.clips['sound-g'];delete Unit3Lesson3Clips.clips['sound-g'];voiceEvents.length=0;});await p.locator('[data-phonics-sequence]').click();await phase(p,'phonics-pause');
+ let sequence=await p.evaluate(()=>voiceEvents);assert(sequence.some(s=>s.endsWith('capital-g.mp3')));assert(sequence.some(s=>s.endsWith('lowercase-g.mp3')));assert(sequence.some(s=>s.endsWith('sound-teacher.mp3')));assert(!sequence.some(s=>s.includes('/review/')));assert(!sequence.some(s=>s.endsWith('/girl.mp3')));
+ await p.locator('[data-phonics-continue]').click();await phase(p,'listening');sequence=await p.evaluate(()=>voiceEvents);assert(sequence.some(s=>s.endsWith('/girl.mp3')));assert(sequence.some(s=>s.endsWith('/guitar.mp3')));await p.evaluate(()=>Unit3Lesson3Clips.clips['sound-g']=savedGSound);
  await route('fix-word');await p.locator('[data-card][data-value="e"]').tap();await p.locator('[data-zone="g"]').tap();await phase(p,'listening');assert.equal(await p.evaluate(()=>Unit3Lesson3.current().errors),1);assert.equal(await p.locator('[data-card][data-value="e"]').isVisible(),true);
  // Pointer cancel must never place a card, unlike pointerup.
  await p.evaluate(()=>{const b=document.querySelector('[data-card][data-value="g"]'),z=document.querySelector('[data-zone="g"]'),a=b.getBoundingClientRect(),r=z.getBoundingClientRect();b.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,pointerId:17,clientX:a.x+20,clientY:a.y+20}));b.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,pointerId:17,clientX:r.x+20,clientY:r.y+20}));b.dispatchEvent(new PointerEvent('pointercancel',{bubbles:true,pointerId:17,clientX:r.x+20,clientY:r.y+20}));});assert(await p.locator('[data-card][data-value="g"]').isVisible());
@@ -83,5 +93,5 @@ const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
  // Leave while voice is playing: old actor and drag engine are cleaned up.
  await route('meet-gg');const clean=await p.evaluate(()=>{const s=Unit3Lesson3.current();s.prompt();LearningApp.go('#/');return new Promise(resolve=>setTimeout(()=>resolve({destroyed:s.destroyed,audio:s.actor.audio,scene:Unit3Lesson3.current()}),100));});assert(clean.destroyed);assert.equal(clean.audio,null);assert.equal(clean.scene,null);
  assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);await browser.close();
- console.log('PASS Lesson 3: 7 real playable completions, actual SVG tracing, mouse drag/touch tap, all support levels, balanced replay, teacher extension, deduplicated stars, cleanup and 5 viewport checks; 15 Higgs clip hashes/transcripts.');
+ console.log('PASS Lesson 3: 7 real playable completions, actual SVG tracing, mouse drag/touch tap, all support levels, balanced replay, teacher extension, deduplicated stars, cleanup and 5 viewport checks; 16 Higgs clips, 75 supplied assets and separate letter/sound/word playback.');
 })().catch(e=>{console.error(e);process.exit(1)});
