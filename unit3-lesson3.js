@@ -190,6 +190,8 @@
   async introPrompt(keys){
    if(this.destroyed||this.introStep===null||['asking','checking','complete'].includes(this.phase))return;
    const t=++this.epoch;this.actor.stopAudio();this.phase='asking';this.refresh();
+   const photo=this.introStep===1?this.root.querySelector('.g3-photo-sheet'):null;
+   if(photo){this.status('Getting ready…');try{await photo.decode();}catch{this.status('Picture unavailable. Listen and copy the sound.');}if(!this.alive(t))return;}
    keys=keys||(this.introStep===0?['capital-g','lowercase-g']:this.introStep===1?[this.soundURL||this.clip('sound-g')?.humanReviewed?'sound-g':'sound-teacher']:['girl','guitar']);
    let heard=true;for(const key of keys){const safeKey=key==='sound-g'&&!this.soundURL&&!this.clip('sound-g')?.humanReviewed?'sound-teacher':key;const ok=key==='sound-g'&&this.soundURL?await this.actor.play(this.soundURL,{state:'TALKING',endState:'LISTENING'}):await this.speak(safeKey,t);if(!ok||!this.alive(t)){heard=false;break;}}
    if(!this.alive(t))return;this.phase=heard?'listening':'idle';this.status(heard?(this.introStep===1?'Your turn. Make a short /g/.':this.introStep===2?'Say girl. Say guitar. Then start playing.':'Tap a letter to hear its name again.'):'Tap Listen again. Your teacher can help if audio is unavailable.');this.refresh();
