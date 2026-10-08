@@ -12,7 +12,10 @@
  }
  function makeRounds(kind,level){
   let rounds;
-  if(kind==='meet-gg')rounds=balanced(['G','g','girl','guitar'],2).map(target=>({target}));
+  if(kind==='meet-gg'){
+   const words=shuffle(TARGETS),review=shuffle(['G','g',...TARGETS]);if(review[0]===words.at(-1))review.push(review.shift());
+   rounds=['G','g',...words,...review].map(target=>({target}));
+  }
   if(kind==='sound-detective'){const positives=balanced(TARGETS,2),neg=shuffle(TOYS).slice(0,4);rounds=balanced([...positives,...neg]).map(target=>({target}));}
   if(kind==='catch-g')rounds=Array.from({length:4},()=>({target:'Gg',field:shuffle(['G','g',...shuffle(['E','e','F','f']).slice(0,level==='easy'?1:level==='practice'?2:4)])}));
   if(kind==='big-small')rounds=Array.from({length:2},()=>({cards:shuffle(['G','g','G','g'])}));
@@ -23,7 +26,9 @@
    rounds=shown.map((target,i)=>({target,asked:truth[i]?target:shuffle([...TARGETS,...TOYS].filter(w=>w!==target))[0],yes:truth[i],task:'grammar'}));
    rounds.splice(3,0,{target:'G',task:'letter'});rounds.push({target:'g',task:'letter'},{target:shuffle(TARGETS)[0],task:'sound'});
   }
-  const signature=JSON.stringify(rounds),old=previous.get(kind);if(signature===old&&kind==='trace-say'){[rounds[0].word,rounds[1].word]=[rounds[1].word,rounds[0].word];}
+  const signature=JSON.stringify(rounds),old=previous.get(kind);if(signature===old&&kind==='meet-gg'){
+   const review=rounds.slice(4);for(let n=1;n<review.length;n++){const rotated=[...review.slice(n),...review.slice(0,n)];if(rotated[0].target!==rounds[3].target){rounds=[...rounds.slice(0,4),...rotated];break;}}
+  }else if(signature===old&&kind==='trace-say'){[rounds[0].word,rounds[1].word]=[rounds[1].word,rounds[0].word];}
   else if(signature===old&&rounds.length>1){
    for(let n=1;n<rounds.length;n++){const rotated=[...rounds.slice(n),...rounds.slice(0,n)];if(JSON.stringify(rotated)!==old&&!rotated.some((r,i)=>i&&r.target&&r.target===rotated[i-1].target)){rounds=rotated;break;}}
   }previous.set(kind,JSON.stringify(rounds));return rounds;

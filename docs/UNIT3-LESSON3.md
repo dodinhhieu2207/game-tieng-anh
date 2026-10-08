@@ -41,7 +41,7 @@ Every game offers Easy, Practice and Challenge. These change support rather than
 - Trace: strong path/dot and direction cue in Easy, dotted guide in Practice, lighter guide in Challenge. All levels retain a guide. G precedes g; the girl/guitar follow-up pairing varies on replay.
 - Final: eight balanced yes/no rounds, two case recognition rounds and a sound-picture task. Challenge hides the written question and adds an optional reverse-role task. Teacher listens to the full question and selects what the child asked about; the character answers yes/no for the displayed item.
 
-Meet exposes each of G, g, girl and guitar twice. Detective includes four target and four review words, with both target words twice. A randomized backtracking scheduler avoids adjacent duplicate target items, rather than using an unrestricted shuffle that can leave duplicates at the end. Replay sequence signatures are checked; feasible rotations change a repeated sequence without introducing adjacent duplicate targets. Grammar truth is balanced and alternates; displayed objects do not repeat immediately. Tracing keeps the required G-then-g order, while varying the follow-up word pairing.
+Meet introduces G, then g, then both words before its randomized review; it exposes each of G, g, girl and guitar twice. Detective includes four target and four review words, with both target words twice. A randomized backtracking scheduler avoids adjacent duplicate target items, rather than using an unrestricted shuffle that can leave duplicates at the end. Replay sequence signatures are checked; feasible rotations change a repeated sequence without introducing adjacent duplicate targets. Grammar truth is balanced and alternates; displayed objects do not repeat immediately. Tracing keeps the required G-then-g order, while varying the follow-up word pairing.
 
 ## Audio and phonics boundary
 
@@ -77,6 +77,6 @@ node tests/unit3-speech.spec.cjs
 node tests/learning-rewards.spec.cjs
 ```
 
-The Lesson 3 browser suite uses real MP3 playback at an accelerated rate, real SVG-path pointer movement and mouse dragging/touch tapping. It checks all seven completions, replay scoring, all support levels, Teacher reverse-role task, balanced exposure, cleanup and viewport layouts. Transcript/hash checks establish clip content and integrity; they do not establish child speech accuracy or approval of an isolated phoneme.
+The Lesson 3 browser suite uses real MP3 playback at an accelerated rate, real SVG-path pointer movement and mouse dragging, native touch dragging and touch tapping. It checks all seven completions, replay scoring, all support levels, Teacher reverse-role task, balanced exposure, cleanup and viewport layouts. Transcript/hash checks establish clip content and integrity; they do not establish child speech accuracy or approval of an isolated phoneme.
 
 Known boundary: replace the generated guitar illustration only if a permitted original textbook guitar image is later supplied; a checked /g/ sample is still needed for autonomous isolated-sound playback. Teacher modeling is the implemented phonics fallback.

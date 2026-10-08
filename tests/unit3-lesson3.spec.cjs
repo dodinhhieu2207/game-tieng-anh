@@ -28,7 +28,7 @@ const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
  await p.evaluate(()=>LearningApp.go('#/unit/3/lesson/3'));await p.waitForSelector('[data-activity]');assert.equal(await p.locator('[data-activity]').count(),7);
  const randomQA=await p.evaluate(()=>{
   for(let i=0;i<60;i++){
-   const a=Unit3Lesson3.makeRounds('meet-gg','easy'),b=Unit3Lesson3.makeRounds('meet-gg','easy');if(JSON.stringify(a)===JSON.stringify(b))return false;
+   const a=Unit3Lesson3.makeRounds('meet-gg','easy'),b=Unit3Lesson3.makeRounds('meet-gg','easy');if(JSON.stringify(a)===JSON.stringify(b))return false;if(a[0].target!=='G'||a[1].target!=='g'||!['girl','guitar'].includes(a[2].target)||!['girl','guitar'].includes(a[3].target))return false;
    for(const w of ['G','g','girl','guitar'])if(a.filter(r=>r.target===w).length!==2)return false;
    if(a.some((r,n)=>n&&r.target===a[n-1].target))return false;
    const d=Unit3Lesson3.makeRounds('sound-detective','challenge');if(d.filter(r=>['girl','guitar'].includes(r.target)).length!==4)return false;
