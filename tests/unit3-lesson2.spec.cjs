@@ -78,7 +78,7 @@ const BASE='http://127.0.0.1:8765/index.html';
  await page.locator('#l2Level').selectOption('challenge');await phase('listening');assert.equal(await page.locator('.l2-speaking-support').textContent(),'Say your answer.');
  await page.screenshot({path:'tests/unit3-lesson2-desktop.png',fullPage:true});
  for(let i=0;i<6;i++){await page.locator('[data-teacher]').click();await page.locator('[data-validate="correct"]').click();await phase('resolved');await page.locator('#l2Next').click();await page.waitForFunction(i=>Unit3Lesson2.current()?.index>i,i);await page.waitForFunction(()=>['listening','complete'].includes(Unit3Lesson2.current()?.phase));}
- assert.equal(await page.locator('[data-complete-action]').count(),3);assert.match(await page.locator('#l2Result').textContent(),/Lesson stars earned: 13 \/ 18/);
+ assert.equal(await page.locator('[data-complete-action]').count(),3);assert.match(await page.locator('#l2Result').textContent(),/Lesson stars earned: 14 \/ 18/);
  await page.waitForFunction(()=>Unit3Lesson2.current().buddy.state==='CELEBRATE'&&Unit3Lesson2.current().buddy.audio===null);
  await page.screenshot({path:'tests/unit3-lesson2-complete.png',fullPage:true});
  await page.reload();assert(await page.evaluate(()=>LearningProgress.get('3/2/talk-to-toy-buddy').completed));
