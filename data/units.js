@@ -14,7 +14,7 @@
    }).map(lesson=>({...lesson,cardImage:`assets/shared-ui/unit2-navigation-lesson${lesson.id}.png`,cardAspect:'1 / 1.06'}))},
    {id:3,title:'Toy Town',space:'unit3',selectorBanner:'assets/shared-ui/unit3-navigation-banner.png',selectorScene:'assets/shared-ui/unit3-navigation-bg.png',navigationCard:'assets/shared-ui/unit3-navigation-card.png',selectorBackground:'assets/shared-ui/unit3-select-bg.png',thumbnail:'assets/unit3/toys/teddy.webp',lessons:six({
     1:{title:'Toys',status:'available',description:'Meet the plane, puppet, robot, balloon and teddy. Listen, look, remember and match.',activities:[
-     activity('u3learn','u3learn',{title:'Say & Play'}),activity('u3catch','u3catch'),activity('u3mystery','u3mystery',{title:'Mystery Box'}),activity('u3missing','u3missing'),activity('u3match','u3match'),activity('u3trace','u3trace'),activity('u3colour','u3colour')]},
+     activity('u3learn','u3learn',{title:'Say & Play'}),activity('u3catch','u3catch'),activity('u3mystery','u3mystery',{title:'Mystery Box'}),activity('u3missing','u3missing'),activity('u3match','u3match',{title:'Toy Delivery'}),activity('u3trace','u3trace'),activity('u3colour','u3colour')]},
     2:{title:'Is it a ...?',status:'available',targetLanguage:['Is it a ...?','Yes, it is.',"No, it isn't."],activities:[
      activity('meet-pattern','u3pattern',{title:'Meet the Pattern',icon:'flashcards'}),
      activity('question-detective','u3detective',{title:'Question Detective',icon:'question'}),

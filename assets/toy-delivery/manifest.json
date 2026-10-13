@@ -1,0 +1,7 @@
+{
+ "name":"Toy Delivery", "created":"2026-10-13", "activity":"3/1/u3match",
+ "provenance":"New delivery UI objects and airfield generated with imagegen for this project. Approved textbook toy art retained separately. Existing licensed common feedback samples reused; see assets/feedback/LICENSE files.",
+ "atlas":{"file":"atlas.png","width":1536,"height":1024,"alpha":true},
+ "sprites":{"plane":[0,70,568,514],"crate":[600,100,1035,512],"open":[1065,0,1536,520],"pad":[0,610,555,960],"sign":[555,600,1050,940],"reward":[1050,580,1536,965]},
+ "background":"airport.png", "voice":"assets/unit3/audio/{robot,teddy,plane,puppet,balloon}.mp3"
+}
