@@ -1,1 +1,3 @@
 ﻿All voice files are made with the Microsoft Zira voice from tools/letters_a_z.json. letter-x.mp3 = letter name, sound-x.mp3 = phonics sound (exact IPA), word.mp3 = vocabulary word. Rebuild: powershell -ExecutionPolicy Bypass -File tools\make_letter_audio.ps1 (add -Only G,H for some letters)
+
+2026-10-13 correction: guitar.mp3 is now generated with offline Higgs V3, using the existing Letter Land girl/goat and other vocabulary MP3s as its voice reference. The source files and chant pauses are preserved. See guitar.json and tools/build_letter_guitar_higgs.py. Do not regenerate this word using SAPI or the Unit 3 Belinda reference.

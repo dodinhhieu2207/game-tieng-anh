@@ -1,10 +1,68 @@
 {
-  "engine": "Microsoft System.Speech SAPI",
-  "voice": "Microsoft Zira Desktop",
+  "engine": "Higgs Audio V3 offline",
+  "voice": "Cloned from the existing Letter Land girl/goat and vocabulary MP3s",
   "text": "Guitar.",
-  "rate": 0,
   "src": "assets/audio/guitar.mp3",
-  "sha256": "c1eef17d3d23fd2e6af1b1c6310bd679fcbb480b2beeb859cda2b03250c1d846",
+  "sha256": "76c3242e226f69e03238effefb88b6e8a3272c42df8cfa18e58292ff86f16a1c",
+  "duration": 1.164,
   "qaTranscript": "Guitar",
-  "scope": "New word only. Existing Letter Land MP3s and chant chain are unchanged."
+  "transcriptMatch": true,
+  "referenceText": "Girl. Goat. Fish. Farm. Girl. Goat. Cat. Car. Dog. Duck.",
+  "referenceSources": [
+    {
+      "word": "girl",
+      "src": "assets/audio/girl.mp3",
+      "sha256": "4fac29d0d66579ba7e1350c366a710fd1b4e3694f6fb451e892500295e548420"
+    },
+    {
+      "word": "goat",
+      "src": "assets/audio/goat.mp3",
+      "sha256": "67abd7948fccefeb84df05b8e2ec331b1fa761aef369299105841f322c542122"
+    },
+    {
+      "word": "fish",
+      "src": "assets/audio/fish.mp3",
+      "sha256": "9d3a4fe7bf08bf915a02cedb45c3172ff1212b036d7a5e1796fdaeb311f34a0d"
+    },
+    {
+      "word": "farm",
+      "src": "assets/audio/farm.mp3",
+      "sha256": "0336a3949f09e9d066dde2232eb12e6717f7705b2a24fa568ce847d7ab69b6b1"
+    },
+    {
+      "word": "girl",
+      "src": "assets/audio/girl.mp3",
+      "sha256": "4fac29d0d66579ba7e1350c366a710fd1b4e3694f6fb451e892500295e548420"
+    },
+    {
+      "word": "goat",
+      "src": "assets/audio/goat.mp3",
+      "sha256": "67abd7948fccefeb84df05b8e2ec331b1fa761aef369299105841f322c542122"
+    },
+    {
+      "word": "cat",
+      "src": "assets/audio/cat.mp3",
+      "sha256": "4d4f72994773f527065e748fd75706efab3b2ff50108e7f9fbe7709bb5041057"
+    },
+    {
+      "word": "car",
+      "src": "assets/audio/car.mp3",
+      "sha256": "ec8b89e81d2540a6fd9b1d8e4bcfa784c7b677683063f8372da4cde1d672586a"
+    },
+    {
+      "word": "dog",
+      "src": "assets/audio/dog.mp3",
+      "sha256": "8257cdd1db4ab6eae8a093734cea83f83fc726a940555c8fc560da061697e802"
+    },
+    {
+      "word": "duck",
+      "src": "assets/audio/duck.mp3",
+      "sha256": "bd225e40c4b969f3601fc02a5199da008f7d645f49b895169605881ce9eb6f4e"
+    }
+  ],
+  "referenceScope": "Original Letter Land bank only; no Unit 3 Belinda reference and no new SAPI synthesis",
+  "referenceActiveRms": 0.16240419762712593,
+  "gainApplied": 1.1417511762851027,
+  "seed": 43130,
+  "scope": "Only guitar is replaced; all original phoneme/name/girl clips and the chant timing are preserved."
 }

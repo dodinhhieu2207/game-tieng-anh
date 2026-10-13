@@ -135,3 +135,9 @@ The cards highlight from actual audio time. Chanting alone awards no stars; list
 Rebuild scripts: tools/build_letter_guitar_voice.ps1 (new word only), tools/build_gg_chant.py (Higgs words and approved-phoneme composition). The ordinary Lesson 3 audio builder preserves hash-valid chant entries. No other lesson audio is regenerated.
 
 Verification: tests/gg-chant.spec.cjs checks every original Letter Land MP3 against the publishing checkout, real media playback without browser speech fallback, G availability and goat-to-guitar replacement, phoneme approval, beat pattern, actual word highlighting, saved score preservation and leave cleanup. Lesson 3 completion/layout tests and shared navigation remain part of verification.
+
+## Letter Land guitar voice correction — 2026-10-13
+
+The first guitar replacement was generated with fresh Zira synthesis and was reported by the user as sounding different from Letter Land's chant. It is superseded by a Higgs V3 take conditioned on the actual unchanged Letter Land audio bank, including girl and goat, rather than using the separate Unit 3 Belinda reference. The guitar volume is matched to active RMS of the original girl/goat recordings. The manifest records exact reference hashes, text, seed, duration and word transcript. All existing Letter Land audio clips and chant timing are retained; Unit 3's Belinda chant is unchanged.
+
+Only the guitar URL receives a new audio version key, so the cached previous MP3 cannot be played by the new page. The old PowerShell build entry now delegates to the Higgs builder, preventing accidental SAPI regeneration. The original bank README is retained as historical provenance and carries the guitar correction. Audio transcript checking confirms the word; it is not a claim of perceptual voice identity. The generated chant preview lets the teacher hear the replacement in context.
