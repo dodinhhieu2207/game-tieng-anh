@@ -44,6 +44,7 @@
 @media(max-width:600px){.g3-head .g3-intro-back{font-size:15px;padding:6px 10px}}
 
 .g3-intro-card .g3-initial{color:#d82c4f}
+.g3-chant-tools{margin:12px 0 0}.g3-task .g3-chant-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#fff0f7;border-color:#ecafd0;font-size:21px;padding:8px 14px;min-height:52px}.g3-chant-button img{width:34px;height:34px}.g3-scene[data-chant-beat=sound-g] .g3-chant-button{outline:3px solid #e0b72b;outline-offset:2px}.g3-phonics-tools .g3-chant-button{font-size:17px}
 
 /* Four photographic frames; only move the sheet while the actual /g/ media plays. */
 .g3-photo-guide{margin:0 auto 12px;display:grid;justify-items:center;gap:9px}

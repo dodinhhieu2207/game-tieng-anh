@@ -5,7 +5,7 @@ const ids=['meet-gg','sound-detective','catch-g','big-small','fix-word','trace-s
 const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
 (async()=>{
  const manifest=JSON.parse(fs.readFileSync('assets/unit3/lesson3/audio/manifest.json'));
- assert.equal(Object.keys(manifest.clips).length,17);assert.equal(manifest.clips['sound-g'].humanReviewed,true);
+ assert.equal(Object.keys(manifest.clips).length,20);assert.equal(manifest.clips['sound-g'].humanReviewed,true);
  const artManifest=JSON.parse(fs.readFileSync('assets/unit3/lesson3/art/manifest.json'));
  assert.equal(Object.keys(artManifest.sources).length,18);assert.equal(Object.keys(artManifest.items).length,75);
  for(const item of Object.values(artManifest.items))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(item.src)).digest('hex'),item.sha256);
@@ -52,7 +52,7 @@ const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
    const r=await p.evaluate(()=>Unit3Lesson3.current().round);
    if(id==='meet-gg')await p.locator('[data-answer="'+r.target+'"]').click();
    else if(id==='sound-detective')await p.locator('[data-answer="'+(['girl','guitar'].includes(r.target)?'yes':'no')+'"]').click();
-   else if(id==='catch-g'){for(const c of ['G','g'])await p.locator('[data-letter="'+c+'"]').click();}
+   else if(id==='catch-g'){for(const c of ['G','g'])await p.locator('.g3-scene [data-letter="'+c+'"]').click();}
    else if(id==='big-small'){
     const cards=await p.locator('[data-card]').count();for(let i=0;i<cards;i++){const item=p.locator('[data-card="'+i+'"]'),v=await item.getAttribute('data-value');if(i===0)await drag(item,p.locator('[data-zone="'+v+'"]'));else{await item.tap();await p.locator('[data-zone="'+v+'"]').tap();}}
    }else if(id==='fix-word')await drag(p.locator('[data-card][data-value="g"]'),p.locator('[data-zone="g"]'));
@@ -112,5 +112,5 @@ const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
  // Leave while voice is playing: old actor and drag engine are cleaned up.
  await route('meet-gg');const clean=await p.evaluate(()=>{const s=Unit3Lesson3.current();s.prompt();LearningApp.go('#/');return new Promise(resolve=>setTimeout(()=>resolve({destroyed:s.destroyed,audio:s.actor.audio,scene:Unit3Lesson3.current()}),100));});assert(clean.destroyed);assert.equal(clean.audio,null);assert.equal(clean.scene,null);
  assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);await browser.close();
- console.log('PASS Lesson 3: 7 real playable completions, actual SVG tracing, mouse drag/touch tap, all support levels, balanced replay, teacher extension, deduplicated stars, cleanup and 6 viewport checks, including all three intro steps; 17 Higgs clips, 75 supplied assets and separate letter/sound/word playback.');
+ console.log('PASS Lesson 3: 7 real playable completions, actual SVG tracing, mouse drag/touch tap, all support levels, balanced replay, teacher extension, deduplicated stars, cleanup and 6 viewport checks, including all three intro steps; 20 Higgs clips, 75 supplied assets and separate letter/sound/word playback.');
 })().catch(e=>{console.error(e);process.exit(1)});

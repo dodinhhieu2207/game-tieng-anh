@@ -123,3 +123,15 @@ At the user's request, Sound /g/ now shows a generated front-facing photographic
 Validation checks the delivered photo loads, the correct quadrant moves with real media time, playback resets to neutral, the human-approved sound guard remains enforced, and review retains the completed-round state. Lesson layout checks cover all six viewport sizes.
 
 The sound step waits for the portrait image to decode before playing /g/, so a slow image connection cannot consume the short phoneme before the model is visible. The targeted test delays the real PNG by one second and verifies no sound is played before it loads.
+
+## Letter Land alignment and Higgs chant — 2026-10-13
+
+Letter Land now includes A-G by default. G vocabulary is girl and guitar. Both words use the supplied Lesson 3 illustrations (the old G girl image path was missing). Guitar uses a new Microsoft Zira Desktop MP3. All original Letter Land name, phoneme, girl and other letter recordings are retained without modification; the original two-sounds-before-each-word chant chain is unchanged. The old goat resources are retained but no longer referenced by G's data.
+
+Unit 3 Lesson 3 exposes Chant with me on the vocabulary introduction, and Chant: girl and guitar above the matching game. This finite 7.41-second clip uses the existing Belinda reference: new Higgs V3 word takes for girl/guitar, plus four repeats of the unchanged human-approved sound-g take 1. The rhythm matches Letter Land: sound, 450 ms, sound, 450 ms, word, 1000 ms, then the second word group. The manifest records source hashes, beat boundaries and shifted mouth cues. This is a spoken rhythmic chant, without singing or a backing track.
+
+The cards highlight from actual audio time. Chanting alone awards no stars; listening after a correct answer preserves Next and does not add points. Leaving cancels playback and clears the visual state. Muting uses the existing shared audio boundary. If the phoneme loses approved status, the chant button invokes the teacher model prompt instead of playing the composite.
+
+Rebuild scripts: tools/build_letter_guitar_voice.ps1 (new word only), tools/build_gg_chant.py (Higgs words and approved-phoneme composition). The ordinary Lesson 3 audio builder preserves hash-valid chant entries. No other lesson audio is regenerated.
+
+Verification: tests/gg-chant.spec.cjs checks every original Letter Land MP3 against the publishing checkout, real media playback without browser speech fallback, G availability and goat-to-guitar replacement, phoneme approval, beat pattern, actual word highlighting, saved score preservation and leave cleanup. Lesson 3 completion/layout tests and shared navigation remain part of verification.

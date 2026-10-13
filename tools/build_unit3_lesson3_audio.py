@@ -25,7 +25,8 @@ def main():
  old=json.loads((OUT/'manifest.json').read_text())['clips'] if (OUT/'manifest.json').exists() else {}
  def save():
   sound=old.get('sound-g');approved=bool(sound and sound.get('humanReviewed') and (ROOT/sound['src']).exists() and hashlib.sha256((ROOT/sound['src']).read_bytes()).hexdigest()==sound['sha256'])
-  doc={'engine':'Higgs V3 offline','voice':'Existing Belinda reference','phoneme':{'status':'human-reviewed','approvedTake':'hard-g-take-1','approvedOn':'2026-10-08'} if approved else 'Isolated /g/ requires teacher review','clips':{**entries,**({'sound-g':sound} if approved else {})}}
+  extras={key:clip for key,clip in old.items() if key.startswith('chant-') and (ROOT/clip['src']).exists() and hashlib.sha256((ROOT/clip['src']).read_bytes()).hexdigest()==clip['sha256']}
+  doc={'engine':'Higgs V3 offline','voice':'Existing Belinda reference','phoneme':{'status':'human-reviewed','approvedTake':'hard-g-take-1','approvedOn':'2026-10-08'} if approved else 'Isolated /g/ requires teacher review','clips':{**extras,**entries,**({'sound-g':sound} if approved else {})}}
   (OUT/'manifest.json').write_text(json.dumps(doc,indent=2),encoding='utf8');(OUT/'clips.js').write_text('window.Unit3Lesson3Clips='+json.dumps(doc)+';\n',encoding='utf8')
  for i,(key,text) in enumerate(TEXTS.items()):
   target=OUT/(key+'.mp3')

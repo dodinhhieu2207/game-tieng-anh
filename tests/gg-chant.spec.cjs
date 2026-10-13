@@ -1,0 +1,28 @@
+const {chromium}=require('C:/Users/Admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const fs=require('node:fs'),assert=require('node:assert/strict'),crypto=require('node:crypto');
+const hash=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+(async()=>{
+ const production='C:/Users/Admin/Documents/GitHub/game-tieng-anh/assets/audio/';
+ for(const file of fs.readdirSync(production).filter(f=>f.endsWith('.mp3')&&f!=='guitar.mp3'))assert.equal(hash('assets/audio/'+file),hash(production+file),'Original Letter Land voice changed: '+file);
+ const clips=JSON.parse(fs.readFileSync('assets/unit3/lesson3/audio/manifest.json')).clips,chant=clips['chant-gg'];
+ assert.deepEqual(chant.beats.map(b=>b.key),['sound-g','sound-g','chant-girl','sound-g','sound-g','chant-guitar']);
+ assert.deepEqual(chant.beats.map(b=>b.gapMs),[450,450,1000,450,450,0]);
+ for(const b of chant.beats){assert.equal(b.sourceSha256,clips[b.key].sha256);assert.equal(hash(clips[b.key].src),b.sourceSha256);}
+ assert.equal(clips['sound-g'].sha256,'5ab7c0b5e611820bf41a4677276c041eb4aefd5cccfc1ad44da9d4e1973c52dd');assert(clips['sound-g'].humanReviewed);
+ const browser=await chromium.launch({channel:'chrome',headless:true}),page=await browser.newPage({viewport:{width:1366,height:768}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.addInitScript(()=>{window.heard=[];const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){this.playbackRate=this.src.includes('chant-gg.mp3')?1:4;heard.push(this.src);return play.call(this);};window.fallbackSpeech=0;const speak=speechSynthesis.speak.bind(speechSynthesis);speechSynthesis.speak=u=>{fallbackSpeech++;return speak(u);};});
+ await page.goto(process.env.LESSON3_BASE||'http://127.0.0.1:8765/index.html');await page.waitForFunction(()=>window.LearningApp);await page.locator('body').click({position:{x:2,y:2}});
+ await page.evaluate(()=>{localStorage.removeItem('letterShowAll');letterShowAll=false;applyLetterScope();LearningApp.go('#/letters');});
+ await page.locator('[data-letter="G"]').waitFor();assert.equal(await page.locator('[data-letter="H"]').count(),0);assert.equal(await page.locator('[data-word="goat"]').count(),0);assert(await page.locator('[data-letter="G"] [data-word="guitar"]').isVisible());
+ assert.deepEqual(await page.evaluate(()=>letterData.G.words.map(w=>w.word)),['girl','guitar']);assert.equal(await page.locator('[data-letter="G"] img').evaluateAll(images=>images.length===2&&images.every(i=>i.complete&&i.naturalWidth>0)),true);
+ await page.evaluate(()=>heard=[]);await page.locator('[data-chant="G"]').click();await page.waitForFunction(()=>heard.filter(s=>s.includes('/assets/audio/')).length===6&&!document.querySelector('[data-chant="G"]').classList.contains('playing'));
+ assert.deepEqual(await page.evaluate(()=>heard.filter(s=>s.includes('/assets/audio/')).map(s=>s.split('/').pop())),['sound-g.mp3','sound-g.mp3','girl.mp3','sound-g.mp3','sound-g.mp3','guitar.mp3']);assert.equal(await page.evaluate(()=>fallbackSpeech),0);
+ await page.screenshot({path:'tests/letter-land-guitar.png',fullPage:true});
+ await page.evaluate(()=>LearningApp.go('#/unit/3/lesson/3?mode=practice&activity=meet-gg'));const ready=()=>page.waitForFunction(()=>Unit3Lesson3.current()?.phase==='listening');await ready();for(let i=0;i<2;i++){await page.locator('[data-next]').click();await ready();}
+ await page.evaluate(()=>heard=[]);await page.locator('[data-chant-model]').click();await page.waitForFunction(()=>document.querySelector('[data-intro-clip="girl"]')?.dataset.playing==='true');await page.waitForFunction(()=>document.querySelector('[data-intro-clip="guitar"]')?.dataset.playing==='true');await ready();
+ assert.equal(await page.locator('[data-chant-beat]').count(),0);assert.equal(await page.locator('.g3-intro-card[data-playing]').count(),0);assert.equal(await page.evaluate(()=>heard.some(s=>s.includes('chant-gg.mp3'))),true);assert.equal(await page.evaluate(()=>LearningProgress.get('3/3/meet-gg').completed),false);await page.screenshot({path:'tests/unit3-guitar-chant.png',fullPage:true});
+ await page.evaluate(()=>{Unit3Lesson3Clips.clips['sound-g'].humanReviewed=false;heard=[];});await page.locator('[data-chant-model]').click();await ready();assert.equal(await page.evaluate(()=>heard.some(s=>s.includes('chant-gg.mp3'))),false);await page.evaluate(()=>Unit3Lesson3Clips.clips['sound-g'].humanReviewed=true);
+ await page.locator('[data-next]').click();await ready();await page.locator('[data-answer="G"]').click();await page.waitForFunction(()=>Unit3Lesson3.current().phase==='resolved');const score=await page.evaluate(()=>Unit3Lesson3.current().independent);await page.locator('[data-chant-model]').click();await page.waitForFunction(()=>Unit3Lesson3.current().phase==='resolved');assert.equal(await page.evaluate(()=>Unit3Lesson3.current().independent),score);assert(await page.locator('[data-next]').isEnabled());
+ await page.locator('[data-chant-model]').click();await page.waitForFunction(()=>Unit3Lesson3.current().phase==='asking');await page.getByRole('button',{name:'Back to lesson',exact:true}).click();await page.waitForFunction(()=>!Unit3Lesson3.current());assert.equal(await page.locator('[data-chant-beat]').count(),0);
+ assert.deepEqual(errors,[]);await browser.close();console.log('PASS Gg: original Letter Land audio preserved; A-G with girl/guitar; actual Zira chant sequence without fallback; Higgs chant timing/highlights, approved sound guard, no reward duplication and cleanup.');
+})().catch(e=>{console.error(e);process.exit(1)});

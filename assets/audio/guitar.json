@@ -1,0 +1,10 @@
+{
+  "engine": "Microsoft System.Speech SAPI",
+  "voice": "Microsoft Zira Desktop",
+  "text": "Guitar.",
+  "rate": 0,
+  "src": "assets/audio/guitar.mp3",
+  "sha256": "c1eef17d3d23fd2e6af1b1c6310bd679fcbb480b2beeb859cda2b03250c1d846",
+  "qaTranscript": "Guitar",
+  "scope": "New word only. Existing Letter Land MP3s and chant chain are unchanged."
+}
