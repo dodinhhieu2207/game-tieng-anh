@@ -87,7 +87,7 @@
    this.speechReview?.destroy();this.speechReview=null;this.lastRecording=null;this.teacherAssistedRound=false;
    const wasWrong=this.roundWrong;this.resetAudio();this.phase='idle';this.voiceFeedback=null;this.buddy.setState('IDLE');this.roundWrong=preserveWrong&&wasWrong;this.round=this.rounds[this.index];this.ui.Result.hidden=true;
    this.root.dataset.speakingType=this.round.questionType||'yes-no';
-   this.ui.Toy.hidden=false;this.root.querySelector('.l2-new-box')?.remove();
+   this.ui.Toy.hidden=false;this.ui.Toy.style.left='';this.root.querySelector('.l2-new-box')?.remove();this.root.querySelector('.l2-mystery-options')?.remove();
    if(this.kind==='talk-to-toy-buddy')els.gameStage.style.setProperty('--u3-bg',`url(assets/speaking-play/${this.round.questionType==='mystery-question'?'mystery-garden':'say-stage'}.png)`);
    this.ui.Toy.classList.remove('l2-mystery-reveal','l2-box-wait');
    this.ui.Progress.textContent=`Round ${this.index+1} / ${this.rounds.length}`;this.ui.Toy.src=toy(this.round.shown);this.ui.Toy.alt='A '+this.round.shown;
@@ -140,7 +140,7 @@
    this.ui.Replay.innerHTML='<img src="assets/shared-ui/replay.png" alt=""><span>Replay Question</span>';
    if(type==='name-question')this.ui.Replay.querySelector('span').textContent='Replay Cue';
    if(type==='mystery-question'){
-    this.root.querySelector('.toy-voice-support').insertAdjacentHTML('beforebegin',`<div class="l2-mystery-options">${this.round.choices.map(w=>`<figure><img src="${toy(w)}" alt="${w}"><figcaption>${w}</figcaption></figure>`).join('')}</div>`);
+    this.root.querySelector('.l2-picture').insertAdjacentHTML('beforeend',`<div class="l2-mystery-options">${this.round.choices.map(w=>`<figure><img src="${toy(w)}" alt="${w}"><figcaption>${w}</figcaption></figure>`).join('')}</div>`);
     this.ui.Replay.querySelector('span').textContent='Replay Cue';
     this.root.querySelector('.toy-voice-note').innerHTML='<span id="l2GuessStats"></span><span id="l2GuessHistory"></span>';
     this.root.querySelector('#l2Teacher').innerHTML='<b>Teacher: choose the toy in the child’s full question.</b>'+WORDS.map(w=>`<button type="button" data-guess="${w}">${w}</button>`).join('')+'<button type="button" data-validate="partial">SAY THE WHOLE QUESTION</button>';
@@ -246,6 +246,7 @@
    if(!this.teacherAssistedRound)this.aiConfirmed=(this.aiConfirmed||0)+1;
    r.earnedStars=r.guesses.length===1?3:r.guesses.length<=3?2:1;
    const box=this.root.querySelector('.l2-new-box');if(box){box.dataset.spSprite='open';box.setAttribute('aria-label','Open mystery box');}this.ui.Toy.hidden=false;this.ui.Toy.src=toy(r.shown);this.ui.Toy.alt='A '+r.shown;this.ui.Toy.classList.add('l2-mystery-reveal');this.ui.Question.textContent=`Found it! ${'★'.repeat(r.earnedStars)}`;
+   if(box)this.ui.Toy.style.left=(box.offsetLeft+box.offsetWidth/2-55)+'px';
    this.firstCorrect+=Number(r.guesses.length===1&&!this.teacherAssistedRound);
    if(!await this.sfx('correct',token))return;
    this.buddy.setState('CELEBRATE');this.phase='resolved';this.status(`Found it in ${r.guesses.length} question${r.guesses.length===1?'':'s'}!`);this.refresh();
