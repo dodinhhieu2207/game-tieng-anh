@@ -4,7 +4,7 @@
  const base='assets/feedback/',clips={tap:'click_003',place:'pluck_001',correct:'confirmation_002',retry:'question_002',star:'pluck_001',complete:'maximize_003',badge:'confirmation_004',open:'open_001',reveal:'select_002'};
  const motion=matchMedia('(prefers-reduced-motion: reduce)'),sounds=new Set(),animations=new Set();
  let layer,lastTarget,lastTap=0,lastEffect=0,lastCorrectSound=0,sceneSerial=0,deferred,lastSound;
- const busy=()=>window.LearningApp?.isVoiceBusy?.()||['asking','recording','starting','processing'].includes(window.Unit3Lesson2?.current()?.phase)||window.speechSynthesis?.speaking;
+ const busy=()=>window.SpeakingPlay?.recording||window.LearningApp?.isVoiceBusy?.()||['asking','recording','starting','processing'].includes(window.Unit3Lesson2?.current()?.phase)||window.speechSynthesis?.speaking;
  const enabled=()=>!window.LearningApp?.isMuted()&&document.querySelector('#soundFx')?.checked;
  function stopSounds(){sounds.forEach(a=>{a.pause();a.dispatchEvent(new Event('learning:sfx-cancel'));});sounds.clear();}
  function clear(){deferred=null;lastSound=null;stopSounds();animations.forEach(a=>a.cancel());animations.clear();layer?.replaceChildren();}
@@ -105,7 +105,7 @@
   document.addEventListener('click',e=>{const b=e.target.closest('button,a[href]');if(!b||b.disabled||b.getAttribute('aria-disabled')==='true')return;lastTarget=b;if(!b.matches('.l2-draggable,.lf-tile,[data-ff-drag]'))visual('tap',b);if(performance.now()-lastTap>180){lastTap=performance.now();play('tap',b,{visualize:false});}},true);
   document.addEventListener('learning:voice-start',()=>{if(sounds.size&&lastSound&&performance.now()-lastSound.time<300&&['correct','retry','complete','badge','star'].includes(lastSound.kind))deferred=lastSound;stopSounds();});
   document.addEventListener('learning:voice-end',()=>requestAnimationFrame(()=>{if(deferred&&deferred.scene===sceneSerial&&!busy()&&enabled()){const d=deferred;deferred=null;play(d.kind,d.target,{visualize:false});}}));
-  new MutationObserver(()=>{if(['recording','starting','processing'].includes(window.Unit3Lesson2?.current()?.phase))stopSounds();}).observe(document.querySelector('#gameStage'),{subtree:true,attributes:true,attributeFilter:['data-phase']});
+  new MutationObserver(()=>{if(window.SpeakingPlay?.recording||['recording','starting','processing'].includes(window.Unit3Lesson2?.current()?.phase))stopSounds();}).observe(document.querySelector('#gameStage'),{subtree:true,attributes:true,attributeFilter:['data-phase']});
   document.addEventListener('learning:leave-activity',clear);addEventListener('hashchange',clear);document.addEventListener('visibilitychange',()=>{if(document.hidden)clear();});motion.addEventListener('change',clear);
   document.addEventListener('learning:feedback',e=>{const {kind,target}=e.detail||{};play(kind,target);});
  });

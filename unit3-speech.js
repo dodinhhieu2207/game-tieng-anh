@@ -18,7 +18,11 @@
    if(!response.ok)throw new Error('service-unavailable');
    const result=await response.json();
    if(round.questionType==='mystery-question'&&result.result==='CORRECT'&&!window.ToySpeechEvaluator.toys.includes(result.guessedToy))throw new Error('invalid-response');
-   if(typeof result.transcript!=='string'||typeof result.normalized!=='string'||!['CORRECT','INCOMPLETE','WRONG_LOGIC','UNCLEAR'].includes(result.result)||!['YES','NO','NAME','QUESTION',null].includes(result.answerType))throw new Error('invalid-response');
+   if(typeof result.transcript!=='string'||typeof result.normalized!=='string'||!['CORRECT','INCOMPLETE','WRONG_LOGIC','UNCLEAR'].includes(result.result)||!['YES','NO','NAME','QUESTION','WORD',null].includes(result.answerType))throw new Error('invalid-response');
+   if(['toy-word','gg-word'].includes(round.questionType)&&result.result==='CORRECT'){
+    const checked=window.ToySpeechEvaluator.evaluate(result.transcript,round.questionToy,round.displayedToy,round.questionType);
+    if(checked.result!=='CORRECT'||result.answerType!=='WORD')throw new Error('invalid-response');
+   }
    return result;
   },
   start({questionToy,displayedToy,questionType,onStart=()=>{},onRecording=()=>{},onProcessing=()=>{},onResult=()=>{},onError=()=>{}}){

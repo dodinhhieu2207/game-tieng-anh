@@ -1,7 +1,7 @@
 const {chromium}=require('C:/Users/Admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const assert=require('node:assert/strict'),fs=require('node:fs'),crypto=require('node:crypto');
 const BASE=process.env.LESSON3_BASE||'http://127.0.0.1:8765/index.html';
-const ids=['meet-gg','sound-detective','catch-g','big-small','fix-word','trace-say','final-challenge'];
+const ids=['meet-gg','sound-detective','catch-g','big-small','fix-word','trace-say'];
 const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
 (async()=>{
  const manifest=JSON.parse(fs.readFileSync('assets/unit3/lesson3/audio/manifest.json'));
@@ -20,13 +20,13 @@ const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
   if(level!=='easy'){await p.locator('select[data-level]').selectOption(level);await phase(p,'listening');await finishIntro();}
  }
  async function drag(item,zone){const a=await item.boundingBox(),b=await zone.boundingBox();await p.mouse.move(a.x+a.width/2,a.y+a.height/2);await p.mouse.down();await p.mouse.move(b.x+b.width/2,b.y+b.height/2,{steps:15});await p.mouse.up();}
- async function trace(){
+ async function trace(confirm=true){
   const strokes=await p.locator('.trace-ink').count();
   for(let i=0;i<strokes;i++){
    const points=await p.locator('.trace-ink').nth(i).evaluate(path=>{const svg=path.ownerSVGElement,m=svg.getScreenCTM(),len=path.getTotalLength(),out=[];for(let n=0;n<=len;n+=5){const q=path.getPointAtLength(n);out.push({x:m.a*q.x+m.e,y:m.d*q.y+m.f});}const q=path.getPointAtLength(len);out.push({x:m.a*q.x+m.e,y:m.d*q.y+m.f});return out;});
    await p.mouse.move(points[0].x,points[0].y);await p.mouse.down();for(const point of points.slice(1))await p.mouse.move(point.x,point.y);await p.mouse.up();
   }
-  await p.waitForSelector('[data-checked]');await phase(p,'listening');await p.locator('[data-checked]').click();
+  await p.waitForSelector('[data-word-turn]');if(!confirm)return;await p.waitForSelector('[data-word-turn][data-phase="listening"]');await p.evaluate(()=>{const turn=Unit3Lesson3.current().wordTurn;turn.reviewLast();turn.review.panel.open=true;});await p.locator('.speaking-review button').click();
  }
  // Curriculum, exposure balance, no same item twice, and replay sequence changes.
  await p.evaluate(()=>LearningApp.go('#/unit/3/lesson/3'));await p.waitForSelector('[data-activity]');assert.equal(await p.locator('[data-activity]').count(),7);
@@ -87,8 +87,7 @@ const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
  await route('big-small','challenge');assert.equal(await p.locator('.g3-ghost').count(),0);assert.equal(await p.locator('.g3-home').nth(0).evaluate(e=>getComputedStyle(e).backgroundColor),await p.locator('.g3-home').nth(1).evaluate(e=>getComputedStyle(e).backgroundColor));
  // Every game exposes all levels; true teacher/student role changes restart cleanly.
  for(const id of ids){for(const level of ['practice','challenge']){await route(id,level);assert.equal(await p.evaluate(()=>Unit3Lesson3.current().level),level);}}
- await route('final-challenge','challenge','class');assert.equal(await p.locator('select[data-role]').inputValue(),'teacher');await p.locator('[data-reverse]').click();await p.waitForSelector('[data-asked]',{state:'attached'});await phase(p,'listening');await p.locator('[data-work] summary').click();await p.locator('[data-asked="guitar"]').click();await phase(p,'resolved');assert.equal(await p.evaluate(()=>Unit3Lesson3.current().supported),1);
- await p.locator('[data-replay]').click();await phase(p,'resolved');assert.equal(await p.evaluate(()=>Unit3Lesson3.current().supported),1);
+ // Final Mystery Box and its microphone/teacher routes are covered in speaking-play.spec.cjs.
  // TV/projector, laptop and tablet: no missing controls or horizontal overflow.
  for(const viewport of [{width:1920,height:1080},{width:1366,height:768},{width:1024,height:768},{width:768,height:1024},{width:390,height:844},{width:320,height:740}]){
   await p.setViewportSize(viewport);for(const id of ids){await route(id);assert(await p.locator('[data-next]').isVisible());assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,id+' horizontal overflow');if(viewport.width>=1024){const bottom=await p.locator('.g3-scene').evaluate(e=>e.getBoundingClientRect().bottom);assert(bottom<=viewport.height+1,id+' at '+viewport.width+' vertical overflow: '+bottom);}}
@@ -107,10 +106,10 @@ const phase=(p,s)=>p.waitForFunction(s=>Unit3Lesson3.current()?.phase===s,s);
  await route('meet-gg');await p.locator('[data-replay]').click();await phase(p,'asking');await p.locator('.app-game-more>summary').click();await p.locator('[data-shell-action="sound"]').click();await phase(p,'listening');assert.equal(await p.evaluate(()=>LearningApp.isMuted()),true);
  await p.locator('.app-game-more>summary').click();await p.locator('[data-shell-action="sound"]').click();
  // A failed word cue after tracing must retain a usable oral-practice screen and replay.
- await route('trace-say');const missingWord=await p.evaluate(()=>Unit3Lesson3.current().round.word);await p.route('**/lesson3/audio/'+missingWord+'.mp3',r=>r.abort());await trace();await phase(p,'resolved');await p.unroute('**/lesson3/audio/'+missingWord+'.mp3');await p.locator('[data-replay]').click();await phase(p,'resolved');
+ await route('trace-say');const missingWord=await p.evaluate(()=>Unit3Lesson3.current().round.word);await p.route('**/lesson3/audio/'+missingWord+'.mp3',r=>r.abort());await trace(false);await phase(p,'idle');await p.unroute('**/lesson3/audio/'+missingWord+'.mp3');await p.locator('[data-replay]').click();await phase(p,'listening');
  // The intentional failure above is separate from unexpected missing assets.
  // Leave while voice is playing: old actor and drag engine are cleaned up.
  await route('meet-gg');const clean=await p.evaluate(()=>{const s=Unit3Lesson3.current();s.prompt();LearningApp.go('#/');return new Promise(resolve=>setTimeout(()=>resolve({destroyed:s.destroyed,audio:s.actor.audio,scene:Unit3Lesson3.current()}),100));});assert(clean.destroyed);assert.equal(clean.audio,null);assert.equal(clean.scene,null);
  assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);await browser.close();
- console.log('PASS Lesson 3: 7 real playable completions, actual SVG tracing, mouse drag/touch tap, all support levels, balanced replay, teacher extension, deduplicated stars, cleanup and 6 viewport checks, including all three intro steps; 20 Higgs clips, 75 supplied assets and separate letter/sound/word playback.');
+ console.log('PASS Lesson 3: 6 real playable completions (Mystery Box covered separately), actual SVG tracing, mouse drag/touch tap, all support levels, balanced replay, teacher word review, deduplicated stars, cleanup and 6 viewport checks, including all three intro steps; 20 Higgs clips, 75 supplied assets and separate letter/sound/word playback.');
 })().catch(e=>{console.error(e);process.exit(1)});

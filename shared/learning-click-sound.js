@@ -3,9 +3,9 @@
  'use strict';
  const NativeAudio=window.Audio,files={button:'ui-click1.wav',select:'ui-click3.wav',next:'ui-rollover4.wav',toggle:'toggle_001.wav'},raw=new Map(),buffers=new Map(),active=new Set();
  let ctx,last=0,lastGesture=-1000;
- const recording=()=>['starting','recording','processing'].includes(window.Unit3Lesson2?.current()?.phase);
+ const recording=()=>window.SpeakingPlay?.recording||['starting','recording','processing'].includes(window.Unit3Lesson2?.current()?.phase);
  function enabled(){if(document.hidden||window.LearningApp?.isMuted()||!document.querySelector('#soundFx')?.checked||recording())return false;if(document.querySelector('#gameScreen.active #u3Mute[aria-pressed="true"]'))return false;if(typeof currentGame!=='undefined'&&['letterfly','abcflash'].includes(currentGame)&&typeof letterAudio!=='undefined'&&!letterAudio.isOn())return false;return true;}
- function classify(target){if(target?.matches('[data-shell-action="sound"],.js-sound-toggle,#u3Mute'))return 'toggle';if(target?.matches('[data-shell-action="next"],[data-shell-action="back"],#l2Next,#u3NextToy,[data-start-adventure],[data-continue]'))return 'next';if(target?.matches('.u3-card,#u3Hero,.l2-draggable,[data-ff-drag],.lf-tile,[data-choice],[data-match],.crayon,.paint-swatch-btn'))return 'select';return 'button';}
+ function classify(target){if(target?.matches('[data-shell-action="sound"],.js-sound-toggle,#u3Mute'))return 'toggle';if(target?.matches('[data-shell-action="next"],[data-shell-action="back"],#l2Next,#u3NextToy,[data-sp-next],[data-start-adventure],[data-continue]'))return 'next';if(target?.matches('.u3-card,#u3Hero,[data-sp-model],.l2-draggable,[data-ff-drag],.lf-tile,[data-choice],[data-match],.crayon,.paint-swatch-btn'))return 'select';return 'button';}
  function stop(){for(const item of active){try{item.source?.stop();item.audio?.pause();}catch{}item.finish?.();}active.clear();}
  function duck(){for(const item of active){if(item.gain){item.gain.gain.cancelScheduledValues(ctx.currentTime);item.gain.gain.setTargetAtTime(.32,ctx.currentTime,.008);}if(item.audio)item.audio.volume=.32;}}
  function prime(){if(location.protocol==='file:')return;for(const file of Object.values(files))if(!raw.has(file))raw.set(file,fetch('assets/feedback/'+file).then(r=>{if(!r.ok)throw Error('Missing click sound');return r.arrayBuffer();}).catch(()=>null));}

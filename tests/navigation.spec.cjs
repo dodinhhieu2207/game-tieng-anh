@@ -3,7 +3,7 @@ const assert=require('node:assert/strict');
 (async()=>{
  const browser=await chromium.launch({channel:'msedge',headless:true});const page=await browser.newPage({viewport:{width:1400,height:1000}});
  const errors=[],missing=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)missing.push(r.url());});
- async function action(name){if(name!=='back')await page.locator('.app-game-more>summary').click();await page.locator('[data-shell-action="'+name+'"]').click();}
+ async function action(name){if(name!=='back'&&!await page.locator('[data-shell-action="'+name+'"]').isVisible())await page.locator('.app-game-more>summary').click();await page.locator('[data-shell-action="'+name+'"]').click();}
  await page.goto('http://127.0.0.1:8765/index.html');
  await page.waitForSelector('#lessonApp h1');assert.equal(await page.locator('#lessonApp h1').textContent(),"Ready to play?");
  await page.locator('#lessonApp a[href="#/unit/3"]').click();await page.waitForSelector('#lessonApp [data-lesson]');assert.equal(await page.locator('#lessonApp [data-lesson]').count(),6);
@@ -24,7 +24,7 @@ const assert=require('node:assert/strict');
  await page.locator('[data-start-class]').click();await page.waitForSelector('.l2-scene');
  await action('drawer');await page.locator('[data-jump="talk-to-toy-buddy"]').click();
  await page.waitForSelector('.toy-buddy[data-state="LISTENING"]');
- await page.locator('[data-teacher]').click();await page.locator('[data-validate="correct"]').click();await page.waitForFunction(()=>Unit3Lesson2.current()?.index===1);
+ await page.locator('[data-teacher]').click();await page.locator('[data-validate="correct"]').click();await page.waitForSelector('.l2-scene[data-phase="resolved"]');await page.locator('#l2Next').click();await page.waitForFunction(()=>Unit3Lesson2.current()?.index===1);
  await page.locator('[data-shell-action="back"]').click();
  await page.waitForSelector('#lessonApp [data-activity="talk-to-toy-buddy"][data-status="played"]');
  await page.evaluate(()=>LearningApp.go('#/unit/2'));assert.equal(await page.locator('[data-lesson]').count(),6);

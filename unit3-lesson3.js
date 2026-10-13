@@ -61,7 +61,7 @@
    this.dragEngine=ActivityDrag.bind(this.root,{enabled:()=>this.phase==='listening',pick:b=>{this.selected=b.dataset.card;this.root.querySelectorAll('[data-card]').forEach(c=>c.setAttribute('aria-pressed',String(c===b)));},drop:(b,z)=>this.place(b,z)});
    this.hide=()=>{if(document.hidden){this.epoch++;delete this.root.dataset.chantBeat;this.root.querySelectorAll('.g3-intro-card').forEach(card=>delete card.dataset.playing);this.actor.stopAudio();this.dragEngine.cancel();if(this.phase!=='complete'&&this.phase!=='resolved'){this.phase='idle';this.status('Tap Listen again when you are ready.');this.refresh();}}};document.addEventListener('visibilitychange',this.hide);
    // The shell pauses tracked media on mute. Resolve that paused cue so the task remains usable silently.
-   this.mute=()=>{if(LearningApp?.isMuted()&&this.actor.audio){this.actor.audio.pause();this.actor.audio.dispatchEvent(new Event('ended'));}};document.addEventListener('toybuddy:enter',this.mute);
+   this.mute=()=>{if(LearningApp?.isMuted())this.wordAction?.cancel();if(LearningApp?.isMuted()&&this.actor.audio){this.actor.audio.pause();this.actor.audio.dispatchEvent(new Event('ended'));}};document.addEventListener('toybuddy:enter',this.mute);
    this.root.dataset.role=this.role;this.$('[data-teacher-notes]').hidden=this.role!=='teacher';
    restartCurrent=()=>enter(kind,this.level,this.role);replayCurrent=()=>this.prompt();this.render();
   }
@@ -87,11 +87,15 @@
    this.root.querySelectorAll('[data-chant-model],[data-sound-model],[data-phonics-sequence],[data-intro-clip],[data-intro-back],[data-review-intro]').forEach(b=>b.disabled=!['idle','listening','resolved'].includes(this.phase));
    this.$('[data-next]').disabled=this.introStep!==null?this.phase!=='listening':this.phase!=='resolved';this.$('[data-replay]').disabled=['checking','asking','complete'].includes(this.phase);
    this.$('[data-level]').disabled=['asking','checking'].includes(this.phase);this.$('[data-role]').disabled=['asking','checking'].includes(this.phase);
+   if(this.wordTurn){const busy=['starting','recording','processing','asking','checking'].includes(this.wordTurn.phase);this.$('[data-replay]').disabled=busy;this.$('[data-level]').disabled=busy;this.$('[data-role]').disabled=busy;this.$('[data-clear-trace]').disabled=busy;}
    this.root.querySelectorAll('.g3-trace-board svg').forEach(s=>s.style.pointerEvents=this.phase==='listening'?'auto':'none');
    this.locked=this.phase!=='listening';
   }
   options(list,labels=false){return `<div class="g3-options">${shuffle(list).map(w=>button(w,visual(w,labels)+(labels&&!LETTERS.includes(w)?`<b>${w}</b>`:''),`aria-label="${LETTERS.includes(w)?(w==='G'?'Capital G':'Lowercase g'):w}"`)).join('')}</div>`;}
   render(){
+   els.gameStage.style.setProperty('--u3-bg',`url(${ART+BACKGROUNDS[this.kind]}.webp)`);
+   this.root.style.setProperty('--g3-scene-art',`url(${ART+BACKGROUNDS[this.kind]}.webp)`);
+   this.wordTurn?.destroy();this.wordTurn=null;this.wordAction?.cancel();
    if(this.introStep!==null){this.renderIntro();return;}
    delete this.root.dataset.introStep;this.$('[data-intro-back]').hidden=true;
    this.$('[data-next]').innerHTML=art('button-play')+'Next';
@@ -127,6 +131,7 @@
    this.$('[data-instruction]').textContent=instruction;this.$('[data-work]').innerHTML=html;this.$('[data-bubble]').textContent=bubble;this.status('Ready to listen.');this.refresh();this.prompt();
   }
   async prompt(){
+   if(this.sayStage&&this.wordTurn){this.wordTurn.prompt();return;}
    if(this.introStep!==null){this.introPrompt();return;}
    if(this.destroyed||['checking','complete','asking'].includes(this.phase))return;
    this.root.querySelector('[data-phonics-continue]')?.remove();
@@ -235,7 +240,15 @@
   async finishLetter(card){
    if(this.destroyed||this.phase!=='listening'||card.classList.contains('done'))return;card.classList.add('done');card.classList.remove('active');this.phase='checking';this.refresh();const t=this.epoch;
    const heard=await this.speak(this.round.word,t)&&await this.speak('say',t);
-   if(!this.alive(t))return;this.sayStage=true;this.$('[data-work]').innerHTML=`<div class="g3-say-picture">${art('word-'+this.round.word,'',this.round.word)}</div><p>Your turn. Say the word.</p><button type="button" data-checked>${art('button-microphone')}${this.role==='teacher'?'Teacher: heard the word':'I said the word'}</button>`;this.phase='listening';this.status(heard?'Say it with your learning friend.':'Audio is unavailable. Tap Listen again, or say the word with your teacher.');this.refresh();
+   if(!this.alive(t))return;this.sayStage=true;this.root.style.setProperty('--g3-scene-art','url(assets/speaking-play/say-stage.png)');els.gameStage.style.setProperty('--u3-bg','url(assets/speaking-play/say-stage.png)');this.$('[data-instruction]').textContent='Say it. Make it move!';this.$('[data-work]').innerHTML=`<div class="g3-say-picture">${SpeakingPlay.sprite('podium','sp-podium')}${visual(this.round.word)}</div><div data-word-turn></div>`;
+   this.wordTurn=new SpeakingPlay.WordTurn(this.$('[data-word-turn]'),{target:this.round.word,type:'gg-word',prompt:this.clip(this.round.word),onPlay:c=>LearningApp.isMuted()?Promise.resolve(true):this.actor.play(c.src,{cues:c.cues,state:'TALKING',endState:'LISTENING'}),onPhase:p=>{this.phase=p;this.refresh();},onWrong:()=>{this.errors++;this.roundWrong=true;},onUnclear:()=>{this.recognitionReviews=(this.recognitionReviews||0)+1;this.status('Let’s try together. Your points stay the same.');},onSuccess:async({teacher})=>{
+    const t=this.epoch;
+    if(!this.alive(t))return false;
+    if(!await this.speak(this.round.word,t)||!this.alive(t))return false;
+    await SpeakingPlay.action(this.round.word,this.$('.g3-say-picture img'),a=>this.wordAction=a);if(!this.alive(t))return false;
+    if(teacher)this.supported++;else{this.aiConfirmed=(this.aiConfirmed||0)+1;if(!this.roundWrong)this.independent++;}
+    LearningFeedback.play('correct',this.$('.g3-say-picture'));this.rewardPop();this.actor.setState('CELEBRATE');
+   }});this.wordTurn.state(heard?'listening':'idle',heard?'Say the word to make it move!':'Tap Listen again, or speak with your teacher.');this.refresh();
   }
   async reverse(){
    this.phase='asking';this.refresh();const t=this.epoch;if(!await this.speak('feedback/your_turn',t)){if(this.alive(t)){this.phase='listening';this.refresh();}return;}
@@ -254,13 +267,15 @@
   rewardPop(){this.root.querySelector('.g3-reward-pop')?.remove();const pop=document.createElement('div');pop.className='g3-reward-pop';pop.setAttribute('aria-hidden','true');pop.innerHTML=art('correct')+art('sparkle');this.$('.g3-friend').append(pop);pop.addEventListener('animationend',()=>pop.remove(),{once:true});}
   next(){if(this.phase!=='resolved')return;if(++this.index>=this.rounds.length)this.complete();else this.render();}
   complete(){
+   this.wordTurn?.destroy();this.wordTurn=null;
+   if(this.kind==='trace-say')LearningProgress.speakingReview('3/3/trace-say',{aiConfirmed:this.aiConfirmed||0,teacherConfirmed:this.supported||0,recognitionReviews:this.recognitionReviews||0});
    const stars=this.errors===0?3:this.errors<=Math.ceil(this.rounds.length/3)?2:1;this.phase='complete';this.refresh();this.root.classList.add('g3-complete');
    document.dispatchEvent(new CustomEvent('learning:activity-completed',{detail:{game:this.entry[1],stars}}));
    this.$('[data-result]').hidden=false;this.$('[data-result]').innerHTML=`<div class="g3-result" style="--g3-result-art:url(${ART}reward-stage.webp)">${art('trophy','g3-result-trophy')}<h2>Lovely learning!</h2><div class="g3-stars" aria-label="${stars} stars">${Array.from({length:stars},()=>art('catch-star')).join('')}</div><p>${this.rounds.length} rounds finished</p>${this.supported?`<p>${this.supported} ${this.role==='teacher'?'teacher-supported':'say-and-check practice'} rounds</p>`:''}<div><button type="button" data-complete="again">${art('button-replay')}Play again</button><button type="button" data-complete="next">${art('button-play')}${this.kind==='final-challenge'?'Choose activities':'Next activity'}</button><button type="button" data-complete="activities">Activities</button></div></div>`;
    this.status('Your stars are saved.');LearningFeedback?.play('reward',this.$('[data-result]'));this.speak('feedback/great_job');
   }
   completion(action){const mode=LearningApp.context()?.mode||'practice',next=E[E.findIndex(e=>e[0]===this.kind)+1];if(action==='again')enter(this.kind,this.level,this.role);else LearningApp.go('#/unit/3/lesson/3?mode='+mode+(action==='next'&&next?'&activity='+next[0]:''));}
-  dispose(){if(this.destroyed)return;this.destroyed=true;this.epoch++;delete this.root.dataset.chantBeat;delete this.root.dataset.mouthFrame;delete this.root.dataset.mouthPhase;this.root.querySelectorAll('[data-playing]').forEach(card=>delete card.dataset.playing);this.actor.destroy();this.dragEngine.destroy();document.removeEventListener('visibilitychange',this.hide);document.removeEventListener('toybuddy:enter',this.mute);this.root.removeEventListener('click',this.onClick);this.root.querySelectorAll('svg').forEach(s=>{s.onpointerdown=s.onpointermove=s.onpointerup=s.onpointercancel=null;});if(this.soundURL)URL.revokeObjectURL(this.soundURL);if(current===this)current=null;}
+  dispose(){if(this.destroyed)return;this.wordTurn?.destroy();this.wordAction?.cancel();this.destroyed=true;this.epoch++;delete this.root.dataset.chantBeat;delete this.root.dataset.mouthFrame;delete this.root.dataset.mouthPhase;this.root.querySelectorAll('[data-playing]').forEach(card=>delete card.dataset.playing);this.actor.destroy();this.dragEngine.destroy();document.removeEventListener('visibilitychange',this.hide);document.removeEventListener('toybuddy:enter',this.mute);this.root.removeEventListener('click',this.onClick);this.root.querySelectorAll('svg').forEach(s=>{s.onpointerdown=s.onpointermove=s.onpointerup=s.onpointercancel=null;});if(this.soundURL)URL.revokeObjectURL(this.soundURL);if(current===this)current=null;}
  }
  function enter(kind,level,role){current?.dispose();current=new GScene(kind,level,role);}
  E.forEach(([id,game,title])=>{games[game]={enter:()=>enter(id)};GAME_META[game]=['UNIT 3 · LESSON 3',title,'G g · girl · guitar'];});

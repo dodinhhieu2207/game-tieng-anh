@@ -33,6 +33,7 @@ const assert=require('node:assert/strict');
  const bounds=await page.locator('.l2-scene').boundingBox();assert(bounds.y+bounds.height<=768);
  await page.screenshot({path:'tests/toy-voice-teacher.png',fullPage:true});
  await page.evaluate(()=>{Unit3Lesson2.current().manualMode=false;});
+ await page.locator('.l2-speaking-extra summary').click();
  for(const type of ['name','name-question']){
   await page.selectOption('#l2SpeakingType',type);await page.waitForSelector('.l2-scene[data-phase="listening"]');
   assert.equal(await page.locator('#l2Question').textContent(),"What's this?");

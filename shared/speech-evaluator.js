@@ -3,14 +3,21 @@
  'use strict';
  const toys=Object.freeze(['plane','puppet','robot','balloon','teddy']);
  const school=Object.freeze(['desk','chair','pencil','crayon','notebook','egg','elephant','fish','farm']);
+ const phonics=Object.freeze(['girl','guitar']);
+ const questionTypes=Object.freeze(['yes-no','name','school-name','name-question','mystery-question','toy-word','gg-word']);
+ const vocabularyFor=type=>type==='school-name'?school:type==='gg-word'?phonics:toys;
  function normalize(text){return String(text||'').toLowerCase().replace(/[’‘ʼ`]/g,"'").replace(/[.,!?;:"()\[\]{}]/g,' ').replace(/\s+/g,' ').trim();}
  function evaluate(transcript,questionToy,displayedToy,questionType='yes-no'){
-  const vocabulary=questionType==='school-name'?school:toys;
+  const vocabulary=vocabularyFor(questionType);
   if(!vocabulary.includes(questionToy)||!vocabulary.includes(displayedToy))throw new Error('INVALID_TOY');
-  if(!['yes-no','name','school-name','name-question','mystery-question'].includes(questionType))throw new Error('INVALID_QUESTION_TYPE');
+  if(!questionTypes.includes(questionType))throw new Error('INVALID_QUESTION_TYPE');
   transcript=typeof transcript==='string'?transcript:'';
   // Only remove fillers and adjacent repeated words. Never invent missing grammar or toy names.
   const normalized=normalize(transcript).replace(/\b(?:um|uh|erm|er|hmm)\b/g,' ').replace(/\s+/g,' ').trim().split(' ').filter((w,i,a)=>i===0||w!==a[i-1]).join(' ');
+  if(questionType==='toy-word'||questionType==='gg-word'){
+   const word=vocabulary.includes(normalized);
+   return {transcript,normalized,result:word?(normalized===displayedToy?'CORRECT':'WRONG_LOGIC'):'UNCLEAR',answerType:word?'WORD':null};
+  }
   if(questionType==='mystery-question'){
    const match=normalized.match(/^is it a (plane|puppet|robot|balloon|teddy)$/);
    const partial=toys.includes(normalized)||/^is it(?: a)?$/.test(normalized)||/^(?:a|is it) (plane|puppet|robot|balloon|teddy)$/.test(normalized);
@@ -32,7 +39,7 @@
   const result=partial?'INCOMPLETE':!positive&&!negative?'UNCLEAR':positive===(questionToy===displayedToy)?'CORRECT':'WRONG_LOGIC';
   return {transcript,normalized,result,answerType};
  }
- const api=Object.freeze({toys,school,normalize,evaluate});
+ const api=Object.freeze({toys,school,phonics,questionTypes,vocabularyFor,normalize,evaluate});
  root.ToySpeechEvaluator=api;
  if(typeof module!=='undefined'&&module.exports)module.exports=api;
 })(globalThis);

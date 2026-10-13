@@ -37,8 +37,8 @@ export default {
   catch(e){return reply({error:e.message==='LARGE'?'AUDIO_TOO_LARGE':'INVALID_FORM'},e.message==='LARGE'?413:400);}
   const questionToy=form.get('questionToy'),displayedToy=form.get('displayedToy'),audio=form.get('audio');
   const questionType=form.get('questionType')||'yes-no';
-  if(!['yes-no','name','school-name','name-question','mystery-question'].includes(questionType))return reply({error:'INVALID_QUESTION_TYPE'},400);
-  const vocabulary=questionType==='school-name'?ToySpeechEvaluator.school:ToySpeechEvaluator.toys;
+  if(!ToySpeechEvaluator.questionTypes.includes(questionType))return reply({error:'INVALID_QUESTION_TYPE'},400);
+  const vocabulary=ToySpeechEvaluator.vocabularyFor(questionType);
   if(!vocabulary.includes(questionToy)||!vocabulary.includes(displayedToy))return reply({error:'INVALID_TOY'},400);
   // expectedAnswer is deliberately ignored: derive truth from the two validated toys.
   if(!audio||typeof audio.arrayBuffer!=='function'||!audio.size)return reply({error:'EMPTY_AUDIO'},400);
@@ -48,12 +48,27 @@ export default {
   try{
    // Short, quiet child utterances should not be discarded by a pre-transcription VAD.
    // Context includes the whole lesson vocabulary, never the expected answer.
-   const input={audio:Buffer.from(await audio.arrayBuffer()).toString('base64'),task:'transcribe',language:'en',vad_filter:false,initial_prompt:questionType==='school-name'?'English classroom speech. Vocabulary: '+vocabulary.join(', ')+'.':CONTEXT,condition_on_previous_text:false};
-   const output=await Promise.race([env.AI.run(MODEL,input),new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('TIMEOUT')),18000);})]);
+   const input={audio:Buffer.from(await audio.arrayBuffer()).toString('base64'),task:'transcribe',language:'en',vad_filter:false,initial_prompt:['school-name','gg-word'].includes(questionType)?'English classroom speech. Vocabulary: '+vocabulary.join(', ')+'.':CONTEXT,condition_on_previous_text:false};
+   const uncertain=output=>Array.isArray(output?.segments)&&output.segments.length&&output.segments.every(s=>Number.isFinite(s.avg_logprob)?s.avg_logprob< -1:s.no_speech_prob>=.6);
+   let expired=false;
+   const infer=async()=>{
+    const first=await env.AI.run(MODEL,input);
+    if(!expired&&['toy-word','gg-word'].includes(questionType)&&uncertain(first)&&vocabulary.includes(ToySpeechEvaluator.normalize(first?.text))){
+     // A second neutral pass may recover short words without suggesting the answer.
+     // Require agreement and a reliable second pass; two uncertain guesses never pass.
+     const second=await env.AI.run(MODEL,{...input,initial_prompt:''});
+     if(typeof second?.text==='string'&&second.segments?.some(s=>Number.isFinite(s.avg_logprob)&&s.avg_logprob>=-1)&&!uncertain(second)&&ToySpeechEvaluator.normalize(second.text)===ToySpeechEvaluator.normalize(first.text))return second;
+    }
+    return first;
+   };
+   const output=await Promise.race([infer(),new Promise((_,reject)=>{timer=setTimeout(()=>{expired=true;reject(new Error('TIMEOUT'));},18000);})]);
    if(!output||typeof output.text!=='string')return reply({error:'AI_UNAVAILABLE'},502);
    // Discard low-confidence/no-speech segments instead of interpreting a hallucinated answer.
    const segments=Array.isArray(output.segments)?output.segments:[];
-   const unreliable=segments.length&&segments.every(s=>s.no_speech_prob>=.6||s.avg_logprob< -1);
+   // Whisper's own transcription gate lets a reliable token score override a high
+   // no_speech probability, which often occurs on very short single-word clips.
+   // Low token confidence still needs review; missing scores cannot override silence.
+   const unreliable=segments.length&&segments.every(s=>Number.isFinite(s.avg_logprob)?s.avg_logprob< -1:s.no_speech_prob>=.6);
    const result=ToySpeechEvaluator.evaluate(output.text,questionToy,displayedToy,questionType);
    if(unreliable||result.result==='UNCLEAR')return reply({...result,result:'UNCLEAR',reason:unreliable?'recognition-uncertain':output.text.trim()?'sentence-unrecognized':'no-transcript'});
    return reply(result);

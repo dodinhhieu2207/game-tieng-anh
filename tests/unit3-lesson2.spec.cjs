@@ -20,6 +20,7 @@ const BASE='http://127.0.0.1:8765/index.html';
  await page.waitForFunction(()=>!!window.LearningApp);
  await page.evaluate(()=>localStorage.removeItem('learning.navigation.v1'));
  const enter=async(id,mode='practice')=>{await page.evaluate(({id,mode})=>LearningApp.go('#/unit/3/lesson/2?mode='+mode+'&activity='+id),{id,mode});await phase('listening');};
+ const shell=async name=>{const button=page.locator('[data-shell-action="'+name+'"]');if(!await button.isVisible())await page.locator('.app-game-more>summary').click();await button.click();};
  const phase=async value=>page.waitForFunction(v=>Unit3Lesson2.current()?.phase===v,value,{timeout:15000});
  const state=()=>page.evaluate(()=>{const s=Unit3Lesson2.current();return {round:s.round,index:s.index,count:s.rounds.length,first:s.firstCorrect,errors:s.errors,kind:s.kind,tokens:s.tokens,tiles:s.tiles};});
  const next=async()=>{await page.locator('#l2Next').click();await page.waitForFunction(()=>['listening','complete'].includes(Unit3Lesson2.current()?.phase));};
@@ -31,8 +32,8 @@ const BASE='http://127.0.0.1:8765/index.html';
  assert.equal(await page.locator('.l2-scene').getAttribute('data-phase'),'asking');assert(await page.locator('[data-choice="true"]').isDisabled());
  assert(await page.evaluate(()=>!Unit3Lesson2.current().buddy.root.classList.contains('tb-speaking')));
  await page.evaluate(()=>{qaRate=4;Unit3Lesson2.current().buddy.audio.play();});await phase('listening');
- await page.locator('[data-shell-action="fullscreen"]').click();assert(await page.evaluate(()=>!!document.fullscreenElement));
- await page.locator('[data-shell-action="fullscreen"]').click();assert(await page.evaluate(()=>!document.fullscreenElement));
+ await shell('fullscreen');assert(await page.evaluate(()=>!!document.fullscreenElement));
+ await shell('fullscreen');assert(await page.evaluate(()=>!document.fullscreenElement));
  // One persistent actor over eight balanced rounds; wrong choice models the full answer.
  const seen=new Set();let positives=0;
  await page.evaluate(()=>window.firstActor=Unit3Lesson2.current().buddy);
@@ -71,24 +72,24 @@ const BASE='http://127.0.0.1:8765/index.html';
  await enter('talk-to-toy-buddy');await page.locator('[data-teacher]').click();assert.match(await page.locator('.l2-manual-note').textContent(),/teacher/);
  assert.equal(await page.evaluate(()=>LearningProgress.get('3/2/talk-to-toy-buddy').completed),false);
  assert(await page.locator('#l2Teacher').isVisible());
- for(const [result,text] of [['partial','Good! Say the whole sentence.'],['logical','Look again. Try again.'],['unclear',"I couldn't hear you. Try again."]]){await page.evaluate(r=>Unit3Lesson2.current().gradeSpeech(r),result);await phase('listening');assert.equal(await page.locator('#l2Status').textContent(),text);assert(await page.locator('#l2Next').isDisabled());}
+ for(const [result,text] of [['partial','Good! Say the whole sentence.'],['logical','Look again. Try again.'],['unclear','Let’s check together. The computer could not confirm this answer. No mistake recorded.']]){await page.evaluate(r=>Unit3Lesson2.current().gradeSpeech(r),result);await phase('listening');assert.equal(await page.locator('#l2Status').textContent(),text);assert(await page.locator('#l2Next').isDisabled());}
  const speech=await page.evaluate(()=>['Yes, it is.','yes',"No, it isn't.",'mumble'].map(t=>Unit3Lesson2.evaluateSpeech(t,true)));assert.deepEqual(speech,['correct','partial','logical','unclear']);
  await page.locator('#l2Level').selectOption('practice');await phase('listening');assert.equal(await page.locator('.l2-speaking-support').textContent(),'YES / NO');
  await page.locator('#l2Level').selectOption('challenge');await phase('listening');assert.equal(await page.locator('.l2-speaking-support').textContent(),'Say your answer.');
  await page.screenshot({path:'tests/unit3-lesson2-desktop.png',fullPage:true});
- for(let i=0;i<10;i++){await page.locator('#l2Mic').click();await page.locator('[data-validate="correct"]').click();await page.waitForFunction(i=>Unit3Lesson2.current()?.index>i,i);await page.waitForFunction(()=>['listening','complete'].includes(Unit3Lesson2.current()?.phase));}
- assert.equal(await page.locator('[data-complete-action]').count(),3);assert.match(await page.locator('#l2Result').textContent(),/Lesson stars earned: 15 \/ 18/);
+ for(let i=0;i<6;i++){await page.locator('[data-teacher]').click();await page.locator('[data-validate="correct"]').click();await phase('resolved');await page.locator('#l2Next').click();await page.waitForFunction(i=>Unit3Lesson2.current()?.index>i,i);await page.waitForFunction(()=>['listening','complete'].includes(Unit3Lesson2.current()?.phase));}
+ assert.equal(await page.locator('[data-complete-action]').count(),3);assert.match(await page.locator('#l2Result').textContent(),/Lesson stars earned: 13 \/ 18/);
  await page.waitForFunction(()=>Unit3Lesson2.current().buddy.state==='CELEBRATE'&&Unit3Lesson2.current().buddy.audio===null);
  await page.screenshot({path:'tests/unit3-lesson2-complete.png',fullPage:true});
  await page.reload();assert(await page.evaluate(()=>LearningProgress.get('3/2/talk-to-toy-buddy').completed));
  console.log('PASS speaking: four evaluation cases, manual mode, support levels, completion and persisted stars');
  // Restart, sound toggles, actual route teardown, Class order, practice drawer and Browser Back.
- await enter('meet-pattern');await page.locator('#restartGame').click();await phase('listening');assert.equal((await state()).index,0);
- await page.locator('[data-shell-action="sound"]').click();await page.locator('#l2Replay').click();await page.waitForFunction(()=>Unit3Lesson2.current().buddy.audio?.currentTime>0);assert(await page.evaluate(()=>Unit3Lesson2.current().buddy.audio.muted));await phase('listening');
- await page.locator('[data-shell-action="sound"]').click();assert(!(await page.evaluate(()=>LearningApp.isMuted())));
+ await enter('meet-pattern');await shell('replay');await phase('listening');assert.equal((await state()).index,0);
+ await shell('sound');await page.locator('#l2Replay').click();await page.waitForFunction(()=>Unit3Lesson2.current().buddy.audio?.currentTime>0);assert(await page.evaluate(()=>Unit3Lesson2.current().buddy.audio.muted));await phase('listening');
+ await shell('sound');assert(!(await page.evaluate(()=>LearningApp.isMuted())));
  await enter('meet-pattern','class');
- for(const expected of ['question-detective','match-answer','build-sentence','listen-decide','talk-to-toy-buddy']){await page.evaluate(()=>{window.oldActor=Unit3Lesson2.current().buddy;});await page.locator('[data-shell-action="next"]').click();await phase('listening');assert.equal((await state()).kind,expected);assert(await page.evaluate(()=>oldActor.destroyed&&oldActor.audio===null));}
- await page.locator('[data-shell-action="drawer"]').click();await page.locator('[data-jump="build-sentence"]').click();await phase('listening');assert.equal((await state()).kind,'build-sentence');
+ for(const expected of ['question-detective','match-answer','build-sentence','listen-decide','talk-to-toy-buddy']){await page.evaluate(()=>{window.oldActor=Unit3Lesson2.current().buddy;});await shell('next');await phase('listening');assert.equal((await state()).kind,expected);assert(await page.evaluate(()=>oldActor.destroyed&&oldActor.audio===null));}
+ await shell('drawer');await page.locator('[data-jump="build-sentence"]').click();await phase('listening');assert.equal((await state()).kind,'build-sentence');
  await page.locator('[data-shell-action="back"]').click();assert.equal(await page.evaluate(()=>Unit3Lesson2.current()),null);await page.goBack();await phase('listening');
  await page.evaluate(()=>{for(let i=0;i<10;i++)restartCurrent();});await phase('listening');
  assert.deepEqual(await page.evaluate(()=>qaOverlaps),[],'Overlapping audible media');

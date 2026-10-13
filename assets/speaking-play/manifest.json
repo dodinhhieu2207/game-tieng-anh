@@ -1,0 +1,89 @@
+{
+  "source": "Built-in imagegen; new art generated for the requested speaking games; supplied word/toy illustrations unchanged",
+  "atlasGrid": {
+    "columns": 3,
+    "rows": 2,
+    "cellPixels": 512
+  },
+  "sprites": {
+    "closed": [
+      0,
+      0
+    ],
+    "open": [
+      1,
+      0
+    ],
+    "podium": [
+      2,
+      0
+    ],
+    "mic": [
+      0,
+      1
+    ],
+    "ask": [
+      1,
+      1
+    ],
+    "reward": [
+      2,
+      1
+    ]
+  },
+  "files": {
+    "mystery-garden.png": {
+      "sha256": "75e54973af68be45f5539bde9c751ed69438d83967874d152ab621f01042905e",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB"
+    },
+    "say-stage.png": {
+      "sha256": "5b632f25cba43d21767da1164046b6bd157f402e4ae753429dc19b2b6f2496f2",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB"
+    },
+    "speaking-atlas.png": {
+      "sha256": "b08629048fb3d8451275e74247eed012fd891e3d0d6f7205750dc328a05b94b6",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    "wave-atlas.png": {
+      "sha256": "51ef3888e75c1fbdc5f930ea8ddcedfe9fdb0288ad5b81091055eee815242e96",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGBA"
+    }
+  },
+  "waveAtlas": {
+    "columns": 4,
+    "rows": 2,
+    "girlRow": 0,
+    "teddyRow": 1,
+    "sourceReferences": [
+      "assets/unit3/lesson3/art/girl.webp",
+      "assets/unit3/toys/teddy.webp"
+    ],
+    "rowRegions": {
+      "girl": {
+        "y": 0,
+        "height": 490
+      },
+      "teddy": {
+        "y": 490,
+        "height": 397
+      }
+    },
+    "frameWidth": 443.5
+  }
+}

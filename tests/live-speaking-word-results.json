@@ -1,0 +1,61 @@
+{
+  "purpose": "Live public synthetic Higgs samples; does not measure child speech accuracy",
+  "endpoint": "https://toy-buddy-speech.hiei1121.workers.dev/api/speaking-check",
+  "results": [
+    {
+      "task": "gg-word",
+      "sample": "assets/unit3/lesson3/audio/girl.mp3",
+      "expected": "CORRECT",
+      "response": {
+        "transcript": "Girl.",
+        "normalized": "girl",
+        "result": "CORRECT",
+        "answerType": "WORD"
+      }
+    },
+    {
+      "task": "gg-word",
+      "sample": "assets/unit3/lesson3/audio/guitar.mp3",
+      "expected": "CORRECT",
+      "response": {
+        "transcript": "Guitar",
+        "normalized": "guitar",
+        "result": "CORRECT",
+        "answerType": "WORD"
+      }
+    },
+    {
+      "task": "toy-word",
+      "sample": "assets/unit3/audio/robot.mp3",
+      "expected": "CORRECT",
+      "response": {
+        "transcript": "Robot.",
+        "normalized": "robot",
+        "result": "CORRECT",
+        "answerType": "WORD"
+      }
+    },
+    {
+      "task": "name",
+      "sample": "assets/unit3/audio/robot.mp3",
+      "expected": "INCOMPLETE",
+      "response": {
+        "transcript": "Robot.",
+        "normalized": "robot",
+        "result": "INCOMPLETE",
+        "answerType": null
+      }
+    },
+    {
+      "task": "yes-no",
+      "sample": "assets/unit3/lesson2/audio/answers/yes_it_is.mp3",
+      "expected": "CORRECT",
+      "response": {
+        "transcript": "Yes, it is.",
+        "normalized": "yes it is",
+        "result": "CORRECT",
+        "answerType": "YES"
+      }
+    }
+  ]
+}

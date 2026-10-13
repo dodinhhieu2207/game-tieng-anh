@@ -41,4 +41,22 @@ assert.equal((await worker.fetch(new Request('https://worker.example/api/speakin
 // Oversize streaming body without Content-Length cannot bypass upload bounds.
 const stream=new ReadableStream({start(c){c.enqueue(new Uint8Array(1024*1024+16385));c.close();}});
 assert.equal((await worker.fetch(new Request('https://worker.example/api/speaking-check',{method:'POST',headers:{Origin:'http://127.0.0.1:8765','Content-Type':'multipart/form-data; boundary=test'},body:stream,duplex:'half'}),env)).status,413);
-console.log(`PASS Worker: ${cases} all-five-toy grammar/logic cases; neutral English/VAD model input, CORS, method, empty/type/size/stream limits, rate limit, AI failure and no-speech. AI binding mocked, not a live Whisper inference.`);
+for(const [type,vocab] of [['toy-word',E.toys],['gg-word',E.phonics]])for(const shown of vocab){
+ for(const word of vocab){const r=await (await request(word,shown,shown,{questionType:type})).json();assert.equal(r.result,word===shown?'CORRECT':'WRONG_LOGIC');assert.equal(r.answerType,'WORD');cases++;}
+ const filled=await (await request('um '+shown+' '+shown,shown,shown,{questionType:type})).json();assert.equal(filled.result,'CORRECT');
+ for(const text of ['',`It's a ${shown}.`,'yes it is','G','guh']){assert.equal((await (await request(text,shown,shown,{questionType:type})).json()).result,'UNCLEAR');cases++;}
+ const uncertain=await (await request(shown,shown,shown,{questionType:type,env:{...env,AI:{run:async()=>({text:shown,segments:[{no_speech_prob:.8}]})}}})).json();assert.equal(uncertain.result,'UNCLEAR');
+ assert.equal((await request(shown,'unknown',shown,{questionType:type})).status,400);
+}
+assert.equal((await request('girl','girl','guitar',{questionType:'toy-word'})).status,400);
+assert.equal((await request('robot','robot','robot',{questionType:'gg-word'})).status,400);
+assert.equal(E.evaluate('robot','robot','robot','name').result,'INCOMPLETE');assert.equal(E.evaluate('yes','robot','robot').result,'INCOMPLETE');
+const ggCalls=calls.filter(c=>c.input.initial_prompt.includes('girl'));assert(ggCalls.length);assert(ggCalls.every(c=>c.input.initial_prompt==='English classroom speech. Vocabulary: girl, guitar.'));
+for(const [segments,expected] of [[[{no_speech_prob:.9,avg_logprob:-.2}],'CORRECT'],[[{no_speech_prob:.9,avg_logprob:-1.5}],'UNCLEAR'],[[{no_speech_prob:.1,avg_logprob:-1.5}],'UNCLEAR'],[[{no_speech_prob:.9}],'UNCLEAR']]){
+ const r=await (await request('guitar','guitar','guitar',{questionType:'gg-word',env:{...env,AI:{run:async()=>({text:'guitar',segments})}}})).json();assert.equal(r.result,expected);
+}
+// A second pass must agree, have token-confidence evidence, and be bounded to word tasks.
+for(const [text,segments,expected] of [['guitar',[{avg_logprob:-.2,no_speech_prob:.1}],'CORRECT'],['girl',[{avg_logprob:-.2,no_speech_prob:.1}],'UNCLEAR'],['guitar',[{avg_logprob:-1.5,no_speech_prob:.1}],'UNCLEAR'],['guitar',undefined,'UNCLEAR']]){
+ let n=0;const r=await (await request('guitar','guitar','guitar',{questionType:'gg-word',env:{...env,AI:{run:async(model,input)=>{n++;if(n===1)return {text:'guitar',segments:[{avg_logprob:-1.5,no_speech_prob:.1}]};assert.equal(input.initial_prompt,'');return {text,segments};}}}})).json();assert.equal(r.result,expected);assert.equal(n,2);
+}
+console.log(`PASS Worker: ${cases} grammar/word cases; strict sentences preserved, both word vocabularies, no phoneme grading, neutral whole-vocabulary context, CORS/upload/rate limits and uncertain results. AI mocked, not live inference.`);
