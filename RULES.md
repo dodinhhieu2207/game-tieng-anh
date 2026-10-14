@@ -139,3 +139,20 @@ Unit 2 giữ đúng thứ tự người dùng đã cung cấp:
 - Không để hiệu ứng/âm thanh trang trí gây cản trở học hoặc thu âm.
 - Không nhầm xác nhận của giáo viên với thành tích độc lập.
 - Không xóa dữ liệu người học, tài nguyên hay bản phát hành cũ khi chưa được yêu cầu.
+
+
+## 13. Quy trình bắt buộc cho mỗi game mới hoặc nâng cấp lớn
+
+Yêu cầu người dùng ngày 2026-10-14: dựa vào repo/thư viện animation chuyên sâu, có rules/plan riêng, xác định skills và bám theo plan để người dùng không phải nhắc lại.
+
+- Trước khi đề xuất game, đọc tài liệu này và docs/GAME_WORKFLOW.md; xác định Lesson, mục tiêu học, hoạt động hiện có, route và khóa tiến trình cần giữ.
+- Mỗi đề xuất game mới phải đưa ra 2–3 phương án repo/stack thực sự phù hợp, có phương án được khuyến nghị. Nêu rõ vai trò, ví dụ/tài liệu tham khảo, giấy phép và đánh đổi. Hỏi người dùng chọn hướng bằng một câu hỏi gọn, cho phép người dùng giao lại việc chọn. Không đưa một danh sách thư viện để người dùng tự nghiên cứu.
+- Ghi lựa chọn vào docs/game-plans/<game>/PLAN.md cùng danh sách skills và vai trò của từng skill. Khi người dùng đã chọn, tiếp tục theo lựa chọn đó; không hỏi lại khi chỉ tiếp tục cùng game.
+- Tạo RULES.md và PLAN.md riêng cho game bằng mẫu trong docs/game-plans/TEMPLATE/. RULES riêng bổ sung ràng buộc cụ thể, không sao chép toàn bộ rules gốc.
+- Dùng repo/thư viện trưởng thành cho animation/rendering khi phù hợp. Kiểm tra source/tài liệu chính thức, phiên bản tương thích, giấy phép và vòng đời. Không tự viết lại animation engine/particle engine/renderer khi stack đã chọn cung cấp khả năng đó. Choreography, luật chơi và tích hợp app vẫn phải được thiết kế cho bài học cụ thể.
+- Không coi việc thêm GSAP/PixiJS hoặc cài skill là bằng chứng game đã hấp dẫn. Chất lượng được xét trên cảnh thực tế, thao tác trẻ, nhịp animation, tính rõ ràng và video trước/sau.
+- Asset phải có art direction và kế hoạch tách lớp trước khi tạo. Ưu tiên nét mềm, giảm độ bóng nhựa khi người dùng đã yêu cầu. Chuyển động cánh/lá/ong cần lớp riêng; không kéo giãn cả tấm hình thay cho chuyển động bộ phận.
+- Skills mặc định cần cân nhắc: frontend-design (giao diện), interaction-design (trạng thái/nhịp), imagegen (raster asset), design-critique (tự đánh giá). Dùng engineering:debug/testing-strategy/deploy-checklist khi phạm vi phù hợp; ghi rõ skill nào đã đọc và dùng, skill nào mới dự kiến. Tham khảo gsap-skills chính thức khi xây timeline; không tuyên bố skill bên ngoài đã cài nếu chưa cài.
+- Kế hoạch phải có trạng thái và bằng chứng cho: nội dung/audio, asset, scene/UI, animation/VFX/SFX, kiểm tra, self-review, triển khai. Cập nhật khi đổi scope hoặc phát hiện giới hạn.
+- Trước bàn giao, kiểm tra video chuyển động thực tế, ảnh ở năm độ rộng đã quy định, audio-ended gating, lỗi, mute, reduced motion, dừng khi rời game, tiến trình/sao và bản công khai. Không khẳng định độ mượt/performance nếu chưa đo; không khẳng định trẻ học tốt hơn từ kiểm tra kỹ thuật.
+- Khi báo cáo, nêu game nào đã được nâng cấp, repo/skills đã dùng, điều đã kiểm chứng và phần còn lại. Không tuyên bố áp dụng toàn bộ app khi chỉ đổi một hoạt động.
