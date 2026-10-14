@@ -61,4 +61,4 @@ Local QA: sound-garden.spec.cjs; sound-garden-failures.cjs; sound-garden-motion.
 
 Self-review: hoa mở cánh rõ quanh hình; ong/seed chuyển bên ngoài hình để không bị DOM che; căn ô đất/nhãn; hủy GSAP trước khi destroy Pixi; toast thành tích cũ đóng khi restart. Kiểm tra frame tại 1.2s/2.1s/3.1s và năm độ rộng.
 
-Public deploy: đang kiểm tra; chưa đánh dấu xong.
+Public deploy: source a78e754 + copy cleanup 3740831 đã push. Build Jekyll PASS, deploy run 38588109061 lỗi HTTP 500 từ GitHub Pages (create deployment). Đang retry; chưa đánh dấu public hoàn thành.
