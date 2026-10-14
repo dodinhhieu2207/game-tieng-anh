@@ -1,0 +1,16 @@
+{
+  "activity": "3/2/match-answer",
+  "art": "Original generated transparent 3x2 atlas; isolated alpha-bounds sprites. Vocabulary toy artwork remains unchanged.",
+  "sprites": [
+    "boat",
+    "yes-island",
+    "no-island",
+    "wake",
+    "pearl",
+    "lighthouse"
+  ],
+  "voice": "Approved Unit 3 Lesson 2 Higgs clips",
+  "progress": "Existing match-answer key and best score",
+  "sfx": "Original soft locally synthesized water/bubble cue; shared app click, success, retry and completion cues.",
+  "motion": "Directional ferry travel, bobbing boat, sprite water wake, wave drift and flying star-pearl collection; reduced motion supported."
+}

@@ -18,7 +18,7 @@
     2:{title:'Is it a ...?',status:'available',targetLanguage:['Is it a ...?','Yes, it is.',"No, it isn't."],activities:[
      activity('meet-pattern','u3pattern',{title:'Meet the Pattern',icon:'flashcards'}),
      activity('question-detective','u3detective',{title:'Question Detective',icon:'question'}),
-     activity('match-answer','u3answer',{title:'Match the Answer',icon:'matching'}),
+     activity('match-answer','u3answer',{title:'Answer Islands',icon:'matching'}),
      activity('build-sentence','u3sentence',{title:'Sentence Express',icon:'sentence'}),
      activity('listen-decide','u3decide',{title:'Listen & Decide',icon:'listening'}),
      activity('talk-to-toy-buddy','u3buddy',{title:'Talk to Toy Buddy'})]},

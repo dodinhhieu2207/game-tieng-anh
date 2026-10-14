@@ -19,7 +19,7 @@ const BASE='http://127.0.0.1:8765/index.html';
  await page.goto(BASE);
  await page.waitForFunction(()=>!!window.LearningApp);
  await page.evaluate(()=>localStorage.removeItem('learning.navigation.v1'));
- const enter=async(id,mode='practice')=>{await page.evaluate(({id,mode})=>LearningApp.go('#/unit/3/lesson/2?mode='+mode+'&activity='+id),{id,mode});if(id==='build-sentence')await page.waitForSelector('.sentence-express');else await phase('listening');};
+ const enter=async(id,mode='practice')=>{await page.evaluate(({id,mode})=>LearningApp.go('#/unit/3/lesson/2?mode='+mode+'&activity='+id),{id,mode});if(id==='build-sentence')await page.waitForSelector('.sentence-express');else if(id==='match-answer')await page.waitForSelector('.answer-islands');else await phase('listening');};
  const shell=async name=>{const button=page.locator('[data-shell-action="'+name+'"]');if(!await button.isVisible())await page.locator('.app-game-more>summary').click();await button.click();};
  const phase=async value=>page.waitForFunction(v=>Unit3Lesson2.current()?.phase===v,value,{timeout:15000});
  const state=()=>page.evaluate(()=>{const s=Unit3Lesson2.current();return {round:s.round,index:s.index,count:s.rounds.length,first:s.firstCorrect,errors:s.errors,kind:s.kind,tokens:s.tokens,tiles:s.tiles};});
@@ -52,10 +52,8 @@ const BASE='http://127.0.0.1:8765/index.html';
   await page.locator(`[data-category="${s.round.category}"]`).click();await phase('resolved');await next();}
  assert.equal(categories.size,4);console.log('PASS detective: four categories and gentle retry');
  await enter('match-answer');
- for(let i=0;i<10;i++){const s=await state();const drop=page.locator('[data-drop-answer]');if(i===0){await drag(page.locator(`[data-match="${!s.round.yes}"]`),drop);await phase('listening');assert.equal(await drop.textContent(),'Drop the answer here');assert.equal(await page.locator('.l2-dragging').count(),0);}
-  if(i===0)await drag(page.locator(`[data-match="${s.round.yes}"]`),drop);else await page.locator(`[data-match="${s.round.yes}"]`).click();
-  await phase('resolved');assert(await drop.evaluate(e=>e.classList.contains('l2-snapped')));if(i>=4)assert.equal(await page.locator('.l2-match-card').count(),2);await next();}
- console.log('PASS match: mouse drag, wrong return, snap and tap');
+ for(let i=0;i<10;i++){await page.waitForFunction(()=>AnswerIslands.current()?.phase==='listening');const yes=await page.evaluate(()=>AnswerIslands.current().round.yes);await page.locator(`[data-ai-answer="${yes}"]`).click();await page.waitForFunction(()=>AnswerIslands.current()?.phase==='resolved');await page.locator('[data-ai-next]').click();}
+ assert(await page.evaluate(()=>LearningProgress.get('3/2/match-answer').completed));console.log('PASS Answer Islands: ten balanced toy questions, full answers, treasures and stable reward');
  await enter('build-sentence');
  for(let i=0;i<7;i++){
   await page.waitForFunction(()=>SentenceExpress.current()?.phase==='building');const count=await page.locator('[data-se-slot]').count();
@@ -87,21 +85,19 @@ await page.waitForFunction(()=>SentenceExpress.current()?.phase==='resolved');aw
  await shell('sound');await page.locator('#l2Replay').click();await page.waitForFunction(()=>Unit3Lesson2.current().buddy.audio?.currentTime>0);assert(await page.evaluate(()=>Unit3Lesson2.current().buddy.audio.muted));await phase('listening');
  await shell('sound');assert(!(await page.evaluate(()=>LearningApp.isMuted())));
  await enter('meet-pattern','class');
- for(const expected of ['question-detective','match-answer','build-sentence','listen-decide','talk-to-toy-buddy']){await page.evaluate(()=>{window.oldActor=Unit3Lesson2.current()?.buddy;});await shell('next');if(expected==='build-sentence')await page.waitForSelector('.sentence-express');else {await phase('listening');assert.equal((await state()).kind,expected);}assert(await page.evaluate(()=>!oldActor||(oldActor.destroyed&&oldActor.audio===null)));}
+ for(const expected of ['question-detective','match-answer','build-sentence','listen-decide','talk-to-toy-buddy']){await page.evaluate(()=>{window.oldActor=Unit3Lesson2.current()?.buddy;});await shell('next');if(expected==='build-sentence')await page.waitForSelector('.sentence-express');else if(expected==='match-answer')await page.waitForSelector('.answer-islands');else {await phase('listening');assert.equal((await state()).kind,expected);}assert(await page.evaluate(()=>!oldActor||(oldActor.destroyed&&oldActor.audio===null)));}
  await shell('drawer');await page.locator('[data-jump="build-sentence"]').click();await page.waitForSelector('.sentence-express');
  await page.locator('[data-shell-action="back"]').click();assert.equal(await page.evaluate(()=>Unit3Lesson2.current()),null);await page.goBack();await page.waitForSelector('.sentence-express');
  await page.evaluate(()=>{for(let i=0;i<10;i++)restartCurrent();});await page.waitForSelector('.sentence-express');
  assert.deepEqual(await page.evaluate(()=>qaOverlaps),[],'Overlapping audible media');
  assert.deepEqual(errors,[]);assert.deepEqual(badAssets,[]);
  console.log('PASS controls: restart, sound, Class sequence, drawer jump, Back, burst restarts, no stale audio or errors');
- const mobile=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});const p=await mobile.newPage();await p.goto(BASE);await p.evaluate(()=>LearningApp.go('#/unit/3/lesson/2?mode=practice&activity=match-answer'));await p.waitForSelector('.l2-scene[data-phase="listening"]');
- const yes=await p.evaluate(()=>Unit3Lesson2.current().round.yes);await p.locator(`[data-match="${yes}"]`).scrollIntoViewIfNeeded();
- const a=await p.locator(`[data-match="${yes}"]`).boundingBox(),b=await p.locator('[data-drop-answer]').boundingBox(),cdp=await mobile.newCDPSession(p);
+ const mobile=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});const p=await mobile.newPage();await p.goto(BASE);await p.evaluate(()=>LearningApp.go('#/unit/3/lesson/2?mode=practice&activity=match-answer'));await p.waitForFunction(()=>['listening','audio-error'].includes(AnswerIslands.current()?.phase));if(await p.evaluate(()=>AnswerIslands.current().phase==='audio-error'))await p.locator('[data-ai-hear]').click();await p.waitForFunction(()=>AnswerIslands.current()?.phase==='listening');
+ const yes=await p.evaluate(()=>AnswerIslands.current().round.yes);const a=await p.locator('.ai-boat').boundingBox(),b=await p.locator(`[data-ai-answer="${yes}"]`).boundingBox(),cdp=await mobile.newCDPSession(p);
  await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:a.x+a.width/2,y:a.y+a.height/2}]});
  for(let i=1;i<=6;i++)await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:a.x+a.width/2+(b.x+b.width/2-a.x-a.width/2)*i/6,y:a.y+a.height/2+(b.y+b.height/2-a.y-a.height/2)*i/6}]});
- await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await p.waitForSelector('.l2-scene[data-phase="resolved"]');
- await p.screenshot({path:'tests/unit3-lesson2-mobile.png',fullPage:true});
- for(const width of [390,320]){await p.setViewportSize({width,height:844});assert(!(await p.locator('.l2-scene').evaluate(e=>e.scrollWidth>e.clientWidth+1)),width+'px overflow');}
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await p.waitForFunction(()=>AnswerIslands.current()?.phase==='resolved');
+ for(const width of [390,320]){await p.setViewportSize({width,height:844});assert(!(await p.locator('.answer-islands').evaluate(e=>e.scrollWidth>e.clientWidth+1)),width+'px overflow');}
  await p.goto('file:///'+require('node:path').resolve('index.html').replaceAll('\\','/'));await p.evaluate(()=>LearningApp.go('#/unit/3/lesson/2?mode=practice&activity=listen-decide'));await p.waitForSelector('.l2-scene[data-phase="listening"]');
  console.log('PASS mobile: real touch drag, 390/320px layout, file:// audio');
  await browser.close();

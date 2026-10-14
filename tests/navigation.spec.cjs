@@ -20,7 +20,7 @@ const assert=require('node:assert/strict');
  await page.evaluate(()=>LearningApp.go('#/unit/3/lesson/2?mode=practice'));
  assert.equal(await page.locator('#lessonApp [data-activity]').count(),6);
  const sequence=await page.evaluate(()=>LearningConfig.units.find(u=>u.id===3).lessons[1].activities.map(a=>a.title));
- assert.deepEqual(sequence,['Meet the Pattern','Question Detective','Match the Answer','Sentence Express','Listen & Decide','Talk to Toy Buddy']);
+ assert.deepEqual(sequence,['Meet the Pattern','Question Detective','Answer Islands','Sentence Express','Listen & Decide','Talk to Toy Buddy']);
  await page.locator('[data-start-class]').click();await page.waitForSelector('.l2-scene');
  await action('drawer');await page.locator('[data-jump="talk-to-toy-buddy"]').click();
  await page.waitForSelector('.toy-buddy[data-state="LISTENING"]');
