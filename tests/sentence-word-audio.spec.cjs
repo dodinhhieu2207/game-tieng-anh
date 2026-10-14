@@ -12,7 +12,7 @@ const assert=require('node:assert/strict');
  const first=page.locator('[data-se-tile="0"]'),box=await first.boundingBox();await page.mouse.move(box.x+box.width/2,box.y+box.height/2);await page.mouse.down();await page.waitForTimeout(230);await page.mouse.up();assert.equal(await page.evaluate(()=>wordEvents.filter(e=>e.text==='is').length),1);
  await page.locator('[data-se-slot="0"]').click();
  for(let i=1;i<4;i++){await page.locator(`[data-se-tile="${i}"]`).click();await page.locator(`[data-se-slot="${i}"]`).click();}
- await page.locator('[data-se-check]').click();await page.waitForFunction(()=>SentenceExpress.current()?.phase==='resolved');
+await page.waitForFunction(()=>SentenceExpress.current()?.phase==='resolved');
  assert.deepEqual(await page.evaluate(()=>wordEvents.map(e=>e.text).slice(0,3)),['is','it','a']);
  assert(await page.evaluate(()=>{const events=audioEvents,wordEnd=events.findLast(e=>e.kind==='end'&&/assets\/unit3\/audio\/(plane|puppet|robot|balloon|teddy)\.mp3/.test(e.src));const question=events.findLast(e=>e.kind==='start'&&/questions\/is_it_a_/.test(e.src));return !!(wordEnd&&question&&wordEnd.time<=question.time);}), 'Sentence must wait for the last word ended event');
  // Muted explicit word requests stay silent.

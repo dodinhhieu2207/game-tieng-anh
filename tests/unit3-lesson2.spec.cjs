@@ -58,9 +58,9 @@ const BASE='http://127.0.0.1:8765/index.html';
  console.log('PASS match: mouse drag, wrong return, snap and tap');
  await enter('build-sentence');
  for(let i=0;i<7;i++){
-  const count=await page.locator('[data-se-slot]').count();
+  await page.waitForFunction(()=>SentenceExpress.current()?.phase==='building');const count=await page.locator('[data-se-slot]').count();
   for(let j=0;j<count;j++){await page.locator(`[data-se-tile="${j}"]`).click();await page.locator(`[data-se-slot="${j}"]`).click();}
-  await page.locator('[data-se-check]').click();await page.waitForFunction(()=>SentenceExpress.current()?.phase==='resolved');await page.locator('[data-se-next]').click();
+await page.waitForFunction(()=>SentenceExpress.current()?.phase==='resolved');await page.locator('[data-se-next]').click();
  }
  assert(await page.evaluate(()=>LearningProgress.get('3/2/build-sentence').completed));
  console.log('PASS Sentence Express: all seven sentence forms and preserved completion key');

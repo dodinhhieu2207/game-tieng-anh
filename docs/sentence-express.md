@@ -2,7 +2,7 @@
 
 Replaces Build the Sentence at the same activity route and progress key `3/2/build-sentence`. Other Lesson 2 activities remain in place.
 
-Children place word tickets in numbered wagons, by drag or tap/keyboard selection. Selecting a ticket plays only that token. Contractions remain single tickets; punctuation travels with the word. A complete train requires an explicit Ready action. Wrong orders remain editable, with amber outlines and a spoken-free retry message.
+Children place word tickets in numbered wagons, by drag or tap/keyboard selection. Selecting a ticket plays only that token. Contractions remain single tickets; punctuation travels with the word. Each turn automatically plays its recorded prompt, without counting assistance. Placing the final ticket automatically checks the complete sentence; no Ready action is needed. Wrong orders remain editable, with amber outlines and a spoken-free retry message.
 
 The seven turns cover Is it a robot?, Is it a plane?, What's this?, It's a puppet., It's a balloon., Yes, it is., and No, it isn't. The answer turns show the relevant toy; Yes/No turns also offer the recorded question. Hear a model reveals and speaks the correct sentence, counted as assistance once per turn.
 
