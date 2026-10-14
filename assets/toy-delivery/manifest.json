@@ -55,5 +55,56 @@
     "pickup.wav",
     "landing.wav",
     "star-flight.wav"
-  ]
+  ],
+  "controlArt": {
+    "atlas": "controls/atlas.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "grid": [
+      3,
+      3
+    ],
+    "cell": [
+      418,
+      418
+    ],
+    "sprites": [
+      "up",
+      "down",
+      "takeoff",
+      "pause",
+      "resume",
+      "hint",
+      "next",
+      "replay",
+      "home"
+    ],
+    "provenance": "Generated original glossy toy button art with imagegen; individual sprites extracted losslessly."
+  },
+  "effectArt": {
+    "atlas": "vfx/atlas.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "grid": [
+      3,
+      2
+    ],
+    "cell": [
+      512,
+      512
+    ],
+    "sprites": [
+      "pickup-ring",
+      "wind",
+      "star",
+      "dust",
+      "confetti",
+      "bloom"
+    ],
+    "provenance": "Generated original transparent effect textures with imagegen; individual sprites extracted losslessly."
+  }
 }

@@ -30,3 +30,12 @@ Default interaction is now two-lane flight. Take off starts slow parcel movement
 Flight has propeller rotation, wind trails, moving cloud layers, cargo attachment, curved delivery with banking and touchdown, box arrival animation, approved toy action and a star traveling from the delivery to the exact progress slot. Four original stereo cues in assets/toy-delivery support takeoff (layered propeller/wind), pickup (rising chime), landing (soft impact/bell), and star-flight (ascending sparkle notes). These are original synthesized cues, not downloaded third-party recordings. Voice, effects and microphone rules remain shared with the app.
 
 Tests exercise interception, pause/resume, full five-toy completion, keyboard, hints, failure/retry, mute, navigation teardown, five viewports and reduced motion. A real-time keyboard flight and pause is also captured as tests/toy-pilot-demo.webm. This records the visible sequence; it is not a child usability test.
+
+
+## Button and VFX pack — 2026-10-14
+
+Nine new bitmap controls: up/down, takeoff, pause, resume, hint, next delivery, replay, activity home. Icons are imagegen art extracted from a transparent 3×3 atlas. Labels remain live text, accessible names and DOM buttons preserve input semantics, pressed/focus/disabled/hidden states. Skin changes use the existing flight state; no alternate scoring or steering implementation was added.
+
+Six new effect textures: pickup ring, wind, star, landing dust, confetti and opening bloom, extracted from a transparent 3×2 atlas. Textures have bounded size/opacity and animate only after actions; they do not change or cover word targets during selection. Cargo now grows into place on acquisition; pickup and touchdown trigger ring/dust textures, the correct toy reveal uses a short warm bloom, and a bitmap reward star travels into the round slot. Result confetti stays within the result panel. Effects use the existing cancellable animation registry, respect reduced motion and are removed after animation or navigation. Original Higgs clips, original toy artwork, steering and star rules are preserved.
+
+Review pack: assets/toy-delivery/catalog.html. Full integration tests remain tests/toy-delivery.spec.cjs and tests/toy-pilot-controls.spec.cjs; tests/toy-artfx.spec.cjs covers visible asset states, hit regions, transient effect rendering and cleanup.
