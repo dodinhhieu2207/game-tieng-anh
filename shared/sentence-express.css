@@ -11,3 +11,7 @@
 @media(max-width:650px){.se-station{padding-top:8px;padding-bottom:22px}.se-engine{width:86px;margin:0 auto -4px}.se-engine>img{height:76px}.se-slot{height:auto;aspect-ratio:492/350}.se-slot>b{top:31%;left:8%;right:8%}.se-slot>small{top:4px;left:7px}.se-ticket{min-height:58px;padding:10px 14px}.se-bank{min-height:72px}.se-mission>img{height:80px}.se-status{margin:6px 12px}.se-controls{padding:5px 8px 12px}.se-slot:after{display:none}}
 
 @media(min-width:651px) and (max-height:850px){.sentence-express{max-width:930px}.se-header{padding:10px 18px}.se-header h2{font-size:28px}.se-mission{padding:6px;gap:16px}.se-mission>img{width:85px;height:80px}.se-mission h3{font-size:24px}.se-mission p{font-size:18px}.se-station{padding:12px 14px 25px;min-height:195px}.se-engine{flex-basis:125px}.se-engine>img{height:130px}.se-bank{padding-top:10px;min-height:80px}.se-ticket{min-height:62px;font-size:25px}.se-status{margin:6px 12px}.se-controls{padding:5px 12px 12px}.se-control>span{width:49px;height:49px}}
+
+/* The right-facing locomotive leads the departure; word order stays left to right. */
+.se-engine{order:2}.se-wagons{order:1}
+@media(max-width:650px){.se-engine{margin-left:auto;margin-right:0}}
