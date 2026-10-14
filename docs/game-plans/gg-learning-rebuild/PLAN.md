@@ -1,6 +1,6 @@
 # Gg lesson rebuild — observed audit and plan
 
-Date 2026-10-14. Status: implementation and local validation complete; public release gate pending. Selected stack: GSAP + PixiJS + existing SVG writing. User explicitly chose this approach; do not ask again.
+Date 2026-10-14. Status: implemented and verified on GitHub Pages (functional release c9802a1); real-child classroom evaluation remains a follow-up. Selected stack: GSAP + PixiJS + existing SVG writing. User explicitly chose this approach; do not ask again.
 
 ## Observations verified
 
@@ -42,7 +42,7 @@ Skills used for this audit: design-critique, interaction-design. Planned impleme
 - [x] Rebuild recognition/pairing, then complete-word assembly/speech.
 - [x] Full writing/copy progression and final review.
 - [x] New layered art; real motion review; five widths and input/cleanup/audio/score regression.
-- [ ] Public deployment and source/asset/game verification.
+- [x] Public deployment and source/asset/game verification.
 
 Limits: this implementation has not tested real children or certified pronunciation. App evidence must state what task was performed; cannot guarantee retention or independent full-word writing from one session.
 
@@ -63,3 +63,9 @@ Formation references, consulted as guidance only; no publisher illustrations or 
 - Oxford Nelson formation: https://cdn.oxfordowl.co.uk/2016/03/18/16/30/27/611/NH_TB_letter_form_techniques_FM.pdf
 - Learning Without Tears: https://www.lwtears.com/letter-number-formation-charts
 The chosen print model is consistent within the app; it is not claimed to be the sole universal handwriting method.
+
+## Public delivery gate — 2026-10-15
+
+PASS functional release c9802a1, Pages run 38600915033 completed successfully. Public source parity passed for index and all changed client modules; all three WebP asset hashes match. The full gg-workshop suite also passed against the actual GitHub Pages URL: six complete activities, real pointer input, microphone capture with mocked ASR, uncertainty retry, whole-word slots, saved task evidence/stars, five widths, lifecycle cleanup, no page errors or missing resources. A prior public run encountered a transient failed response for unchanged toy-delivery.js; direct recheck returned 200 and the final full run passed without exclusions.
+
+Live Cloudflare adult name clips were tested separately (G correct, E rejected); full child ASR accuracy remains unmeasured. The public browser suite mocks transcription and does not establish real-child pronunciation acceptance. Writing checks validate ordered guided paths and copying, not unrestricted handwritten-text recognition. Desktop mirror synchronized with the release.
