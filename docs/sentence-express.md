@@ -6,7 +6,7 @@ Children place word tickets in numbered wagons, by drag or tap/keyboard selectio
 
 The seven turns cover Is it a robot?, Is it a plane?, What's this?, It's a puppet., It's a balloon., Yes, it is., and No, it isn't. The answer turns show the relevant toy; Yes/No turns also offer the recorded question. Hear a model reveals and speaks the correct sentence, counted as assistance once per turn.
 
-Correct sentences wait for the final token audio to end, then play the existing approved Higgs full-sentence clip. After its ended event, a shared correct cue, original train whistle, steam and departure motion play. Next train is manual. Failed sentence playback requires retry, without penalty or departure. Muted playback and reduced motion remain usable.
+Correct sentences wait for the final token audio to end, then play the existing approved Higgs full-sentence clip. After its ended event, a shared correct cue, real recorded steam-engine/whistle mix, independently turning wheels, steam, suspension motion and a 4.2-second accelerating departure play. Next train is manual. Failed sentence playback requires retry, without penalty or departure. Muted playback and reduced motion remain usable.
 
 New assets are in assets/sentence-express; manifest.json records original generated imagery, lossless object crop rectangles and original whistle. Vocabulary imagery, existing token recordings, full Higgs recordings, shared UI controls and reward system are reused.
 

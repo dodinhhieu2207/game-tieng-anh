@@ -1,0 +1,8 @@
+# Sentence Express train audio
+
+train-departure.wav is an edited 4.2-second mix of two real recordings:
+
+- Steam Engine by aradlaw / David Lawrence, recorded September 6, 2008. Public domain. Source: https://commons.wikimedia.org/wiki/File:Steam_engine.ogg
+- Steam Whistle, Work With Sounds, Konrad Gutkowski / Julian Blaschke. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/ . Source: https://commons.wikimedia.org/wiki/File:WWS_SteamWhistle.ogg
+
+Changes: extracted audio from the Ogg container, selected excerpts, gradual rate increase for engine, mixed whistle, resampled to 24 kHz, adjusted level and applied gentle fades. No endorsement is implied. Original source files remain in sources/ for provenance. The earlier original train-whistle.wav remains available but is no longer used for departure.
