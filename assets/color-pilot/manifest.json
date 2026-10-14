@@ -11,5 +11,27 @@
   "art": "Original imagegen color droplet atlas; same shapes, true alpha, lossless cell extraction",
   "sharedControls": "assets/toy-delivery/controls",
   "sharedEffects": "assets/toy-delivery/vfx",
-  "audio": "audio/manifest.json"
+  "audio": "audio/manifest.json",
+  "colorRewardVfx": {
+    "atlas": "vfx/atlas.png",
+    "grid": [
+      3,
+      2
+    ],
+    "cell": [
+      512,
+      512
+    ],
+    "sprites": [
+      "red",
+      "green",
+      "blue",
+      "black",
+      "white",
+      "sparkles"
+    ],
+    "provenance": "Original imagegen glossy paint splashes; lossless sprite extraction",
+    "sound": "vfx/paint-pop.wav",
+    "soundProvenance": "Original synthesized soft paint-pop cue"
+  }
 }

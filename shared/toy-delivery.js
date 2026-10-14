@@ -63,7 +63,7 @@
   position(){const world=this.$('.td-world');if(!world)return;const w=world.clientWidth,plane=this.$('.td-aircraft');plane.style.left='7%';plane.style.top=(this.planeY-plane.offsetHeight/2)+'px';plane.style.transform=`rotate(${Math.max(-9,Math.min(9,(this.aimY-this.planeY)/8))}deg)`;
    this.root.querySelectorAll('[data-lane]').forEach((b,i)=>{b.style.left=(w*.74+this.travel*(w*.07+plane.offsetWidth/2-w*.74)-b.offsetWidth/2)+'px';b.style.top=((i?355:235)-b.offsetHeight/2)+'px';});
   }
-  sound(name){if(LearningApp.isMuted()||!els.soundFx.checked||document.hidden)return;this.sounds??=new Set();const a=new Audio(base+name+'.wav');a.learningSfx=true;a.volume=.28;this.sounds.add(a);a.onended=a.onerror=()=>this.sounds.delete(a);a.play().catch(()=>this.sounds.delete(a));}
+  sound(name){if(LearningApp.isMuted()||!els.soundFx.checked||document.hidden)return;this.sounds??=new Set();const a=new Audio(this.config.sounds?.[name]||base+name+'.wav');a.learningSfx=true;a.volume=.28;this.sounds.add(a);a.onended=a.onerror=()=>this.sounds.delete(a);a.play().catch(()=>this.sounds.delete(a));}
   stopSounds(){this.sounds?.forEach(a=>{a.pause();a.dispatchEvent(new Event('ended'));});this.sounds?.clear();}
   status(text){this.$('[data-td-status]').textContent=text;}
   async hint(){if(!['choose','pilot','paused'].includes(this.phase))return;const t=this.turn;this.stopFlight();this.stopSounds();this.phase='hint';this.root.dataset.phase='paused';this.lock(true);if(!this.hinted){this.hinted=true;this.assisted++;}this.status('Listen, then fly.');
@@ -97,9 +97,10 @@
    this.root.innerHTML=`<div class="td-result">${sprite('reward')}<h2>${this.config.completeTitle||'All toys delivered!'}</h2><p class="td-result-stars" aria-label="${stars} of 3 stars">${'★'.repeat(stars)}${'☆'.repeat(3-stars)}</p><p>${this.rounds.length} happy deliveries</p>${this.assisted?'<p>You used listening hints.</p>':''}<button type="button" data-td-again>Play again</button><button type="button" data-td-library>Choose activities</button></div>`;this.root.dataset.phase='complete';
    this.$('[data-td-again]').onclick=()=>start(this.config);this.$('[data-td-library]').onclick=()=>LearningApp.go(this.config.back||'#/unit/3/lesson/1?mode=practice');
    this.skin(this.$('[data-td-again]'),'replay','Play again',true);this.skin(this.$('[data-td-library]'),'home','Choose activities',true);this.effect('confetti',this.$('.td-result h2'),{size:300,dy:80,duration:1200});
+   this.config.onComplete?.(this);
    document.dispatchEvent(new CustomEvent('learning:activity-completed',{detail:{game:this.game,stars}}));this.feedback('complete',this.root);
   }
-  dispose(){this.dead=true;this.turn++;this.stopFlight();this.stopSounds();this.stopVoice();this.animations.forEach(a=>a.cancel());this.animations.clear();}
+  dispose(){this.dead=true;this.turn++;this.stopFlight();this.stopSounds();this.stopVoice();this.animations.forEach(a=>a.cancel());this.animations.clear();this.root?.querySelectorAll('.td-fx').forEach(layer=>layer.replaceChildren());}
  }
  function start(config={}){warmArt();scene?.dispose();scene=new Delivery(config);}
  games.u3match={enter:()=>start()};GAME_META.u3match=['UNIT 3 · LESSON 1','Toy Delivery','Look · choose · deliver'];
