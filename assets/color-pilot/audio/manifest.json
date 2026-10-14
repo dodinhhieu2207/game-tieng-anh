@@ -1,0 +1,47 @@
+{
+  "engine": "Higgs V3 offline",
+  "voice": "Existing Unit 2 Belinda reference",
+  "referenceSha256": "8a6e483739144be6afa2735c41441d2970588fc089139685547a964c76510d07",
+  "clips": {
+    "red": {
+      "src": "assets/color-pilot/audio/red.mp3",
+      "text": "Red.",
+      "sha256": "9933c5936c5c494144007f90baab66295bfd72091ce42584ebb6c24b03abe944",
+      "qaTranscript": "Red",
+      "transcriptMatch": true,
+      "duration": 0.84
+    },
+    "green": {
+      "src": "assets/color-pilot/audio/green.mp3",
+      "text": "Green.",
+      "sha256": "82c0ccd5236863af1a11a5bd516defaf59cc33b51a3447c04f2349c71816c7a9",
+      "qaTranscript": "green",
+      "transcriptMatch": true,
+      "duration": 0.96
+    },
+    "blue": {
+      "src": "assets/color-pilot/audio/blue.mp3",
+      "text": "Blue.",
+      "sha256": "3780a80f75f0f45a240fc5b3ade1be63830b26f2b36cd48a5e770cab8ec637d9",
+      "qaTranscript": "blue",
+      "transcriptMatch": true,
+      "duration": 0.88
+    },
+    "black": {
+      "src": "assets/color-pilot/audio/black.mp3",
+      "text": "Black.",
+      "sha256": "c751822ed2e50cfa2c7c34df7774c5b601ad72801275a7302328aea1d465bcd6",
+      "qaTranscript": "Black.",
+      "transcriptMatch": true,
+      "duration": 0.84
+    },
+    "white": {
+      "src": "assets/color-pilot/audio/white.mp3",
+      "text": "White.",
+      "sha256": "b48e817b5f95227f9981dffffe11e5d317ab8b86f4013948019bf4357ea6d15a",
+      "qaTranscript": "White",
+      "transcriptMatch": true,
+      "duration": 0.84
+    }
+  }
+}

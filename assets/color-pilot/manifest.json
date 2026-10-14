@@ -1,0 +1,15 @@
+{
+  "activity": "2/1/colour",
+  "name": "Color Pilot",
+  "colors": [
+    "red",
+    "green",
+    "blue",
+    "black",
+    "white"
+  ],
+  "art": "Original imagegen color droplet atlas; same shapes, true alpha, lossless cell extraction",
+  "sharedControls": "assets/toy-delivery/controls",
+  "sharedEffects": "assets/toy-delivery/vfx",
+  "audio": "audio/manifest.json"
+}

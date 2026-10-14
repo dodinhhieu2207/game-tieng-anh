@@ -1,0 +1,3 @@
+.color-pilot .td-world{background-image:url('../assets/color-pilot/sky.webp')}.color-pilot .td-request>img{width:95px;height:88px;left:calc(50% - 47px);top:24px}.color-pilot .td-receiver>img{object-fit:contain}.color-pilot .td-request>.td-sign{filter:drop-shadow(0 4px 0 #fff5)}
+.color-pilot .td-delivered[data-open] .td-toy{filter:drop-shadow(0 0 12px var(--pilot-color))}.color-pilot .td-lane{border-color:#fff}.color-pilot .td-parcel>span:last-child{color:#164573;background:#fff9ec}.color-pilot .td-result{background:#edfbff}.color-pilot .td-request>span:last-child{white-space:nowrap}
+@media(max-width:600px){.color-pilot .td-request>img{width:80px;height:73px;left:calc(50% - 40px);top:27px}}
