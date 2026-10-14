@@ -6,10 +6,10 @@ const assert=require('node:assert/strict');
  const entries=await page.evaluate(()=>Unit3Lesson2.entries.map(e=>e[0]));
  for(const [width,height] of [[1920,1080],[1366,768],[1024,768]]){
   await page.setViewportSize({width,height});
-  for(const id of entries){await page.evaluate(id=>LearningApp.go('#/unit/3/lesson/2?mode=practice&activity='+id),id);await page.waitForSelector('.l2-scene[data-phase="listening"]');
+  for(const id of entries){await page.evaluate(id=>LearningApp.go('#/unit/3/lesson/2?mode=practice&activity='+id),id);await page.waitForSelector(id==='build-sentence'?'.sentence-express':'.l2-scene[data-phase="listening"]');
    if(id==='talk-to-toy-buddy')await page.locator('[data-teacher]').click();
    if(id==='match-answer'){await page.evaluate(()=>{const s=Unit3Lesson2.current();s.index=4;s.setRound();});await page.waitForSelector('.l2-scene[data-phase="listening"]');}
-   const size=await page.locator('.l2-scene').evaluate(e=>({bottom:e.getBoundingClientRect().bottom+scrollY,width:e.scrollWidth,client:e.clientWidth}));
+   const size=await page.locator(id==='build-sentence'?'.sentence-express':'.l2-scene').evaluate(e=>({bottom:e.getBoundingClientRect().bottom+scrollY,width:e.scrollWidth,client:e.clientWidth}));
    assert(size.width<=size.client+1,`${id} overflow at ${width}`);assert(size.bottom<=height+2,`${id} bottom ${size.bottom} exceeds ${height} at ${width}`);
    if(id==='talk-to-toy-buddy'||id==='match-answer')await page.screenshot({path:`tests/l2-${id}-${width}.png`,fullPage:true});
   }

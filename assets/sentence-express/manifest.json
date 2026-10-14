@@ -1,0 +1,61 @@
+{
+  "activity": "3/2/build-sentence",
+  "sprites": [
+    "locomotive",
+    "wagon",
+    "wagon-filled",
+    "ticket",
+    "sign",
+    "steam"
+  ],
+  "atlasSize": [
+    1536,
+    1024
+  ],
+  "cell": [
+    512,
+    512
+  ],
+  "art": "Original imagegen train objects and station background. Lossless sprite extraction.",
+  "voice": "Existing Higgs token recordings and Unit 3 Lesson 2 full sentences",
+  "controls": "Existing Toy Delivery original control art",
+  "cropRects": {
+    "locomotive": [
+      10,
+      50,
+      511,
+      495
+    ],
+    "wagon": [
+      523,
+      140,
+      1015,
+      490
+    ],
+    "wagon-filled": [
+      1033,
+      140,
+      1535,
+      490
+    ],
+    "ticket": [
+      10,
+      625,
+      511,
+      885
+    ],
+    "sign": [
+      535,
+      550,
+      1010,
+      960
+    ],
+    "steam": [
+      1040,
+      565,
+      1535,
+      970
+    ]
+  },
+  "sfx": "Original short two-note airy train whistle, generated locally; shared app click/place/reward cues. Whistle starts after the sentence and correct cue end."
+}

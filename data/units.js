@@ -19,7 +19,7 @@
      activity('meet-pattern','u3pattern',{title:'Meet the Pattern',icon:'flashcards'}),
      activity('question-detective','u3detective',{title:'Question Detective',icon:'question'}),
      activity('match-answer','u3answer',{title:'Match the Answer',icon:'matching'}),
-     activity('build-sentence','u3sentence',{title:'Build the Sentence',icon:'sentence'}),
+     activity('build-sentence','u3sentence',{title:'Sentence Express',icon:'sentence'}),
      activity('listen-decide','u3decide',{title:'Listen & Decide',icon:'listening'}),
      activity('talk-to-toy-buddy','u3buddy',{title:'Talk to Toy Buddy'})]},
     3:{title:'Sounds and letters: Gg',description:'Meet G and g. Listen, sort, trace and say girl and guitar.',status:'available',targetLanguage:['G g','girl','guitar'],activities:[
