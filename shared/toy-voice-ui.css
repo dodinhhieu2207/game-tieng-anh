@@ -39,3 +39,5 @@
 @media(prefers-reduced-motion:reduce){.toy-voice-panel .toy-voice-wave i{animation:none}}
 @media(max-width:650px){.l2-scene:has(.toy-voice-panel) .l2-task{display:contents}.l2-scene:has(.toy-voice-panel) .l2-friend{grid-column:1;grid-row:1}.l2-scene:has(.toy-voice-panel) .l2-picture{grid-column:2;grid-row:1}.l2-scene:has(.toy-voice-panel) #l2Interaction{grid-column:1/-1;text-align:center}.l2-scene:has(.toy-voice-panel) .toy-voice-teacher{max-width:230px;justify-self:center;width:100%}}
 .toy-voice-panel [hidden]{display:none!important}
+
+.toy-voice-panel .toy-voice-actions{grid-template-columns:1fr!important}

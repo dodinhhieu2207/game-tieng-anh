@@ -29,11 +29,11 @@
   async prompt(){if(this.destroyed||!['idle','listening','resolved'].includes(this.phase))return;const resolved=this.phase==='resolved';this.review?.destroy();this.review=null;const t=++this.epoch;this.state('asking','Listen to the model.');const ok=await this.onPlay?.(this.model);if(this.alive(t))this.state(resolved?'resolved':ok===false?'idle':'listening',resolved?'Great speaking! Tap Next.':ok===false?'Audio could not play. Tap Listen again.':'Your turn. Say one word.');}
   reviewLast(result={}){
    this.review?.destroy();const t=this.epoch;
-   this.review=SpeakingReview.mount(this.host,{audio:this.audio,transcript:result.transcript,reason:result.reason?'Recognition needs review. No mistake recorded.':'Teacher confirmation is recorded separately from AI recognition.',confirmLabel:'I heard the correct word',onConfirm:()=>{if(this.alive(t)&&this.phase==='listening')this.accept(true);}});
+   this.review=SpeakingReview.mount(this.host,{audio:this.audio,transcript:result.transcript,reason:result.reason?'Recognition needs review. No mistake recorded.':'Listen again, then tap the microphone to retry.',confirmLabel:'I heard the correct word',onConfirm:()=>{if(this.alive(t)&&this.phase==='listening')this.accept(true);}});
   }
   listen(){
    if(this.destroyed||this.phase!=='listening')return;
-   if(!Unit3Speech.available){this.reviewLast({reason:'microphone-unavailable'});this.review.panel.open=true;this.status.textContent='Say the word to your teacher.';return;}
+   if(!Unit3Speech.available){this.reviewLast({reason:'microphone-unavailable'});this.review.panel.open=true;this.status.textContent='Allow microphone access, then tap the microphone again.';return;}
    this.review?.destroy();this.review=null;this.audio=null;cancelVoice();LearningFeedback?.stopSounds();LearningClickSound?.stop();const t=++this.epoch;
    this.state('starting','Getting your microphone ready…');
    try{const h=Unit3Speech.start({questionToy:this.target,displayedToy:this.target,questionType:this.type,

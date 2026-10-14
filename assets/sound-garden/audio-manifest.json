@@ -1,0 +1,91 @@
+{
+  "engine": "Existing Letter Land clips, unchanged",
+  "audit": "A-D and vocabulary: original Letter Land audio; technical file/playback checks, no new child phonetic review. G sound: approved lesson take 1, not legacy assets/audio/sound-g.mp3.",
+  "clips": {
+    "assets/audio/letter-a.mp3": {
+      "bytes": 13967,
+      "sha256": "09329243afba201a563dcc275753c60a6470810471ec0c465f13ec998055dd85"
+    },
+    "assets/audio/sound-a.mp3": {
+      "bytes": 5284,
+      "sha256": "d1bb081d468db60ef88b77c2a311e66e840eccfbab26536de4f66ed7d0f43562"
+    },
+    "assets/audio/apple.mp3": {
+      "bytes": 10472,
+      "sha256": "429c40ae78df563914efcc4b614cc32c144a87489dad34d43fbea1c700fffdd8"
+    },
+    "assets/audio/annie.mp3": {
+      "bytes": 9429,
+      "sha256": "f985fbcc742a078116a56e587912955791ae1b8c3e61439a361d06f6332676c4"
+    },
+    "assets/audio/letter-b.mp3": {
+      "bytes": 13888,
+      "sha256": "c2773c80e2567e544134fa0bd1c9529b1693c50462f052ab960d07fe813fda70"
+    },
+    "assets/audio/sound-b.mp3": {
+      "bytes": 3016,
+      "sha256": "c212438407c108df1c2865c6e46cabb1306c460dc242bac48c363921fd490a83"
+    },
+    "assets/audio/boy.mp3": {
+      "bytes": 9846,
+      "sha256": "64ef7b73982c938fff45e2c01a88446b671da0655d9f85e62370777f9cb3d50b"
+    },
+    "assets/audio/bat.mp3": {
+      "bytes": 8801,
+      "sha256": "5f3f4cac84da97d01fa97892ec67a30c0abd20e5ca45eb757f53f0b7032f270b"
+    },
+    "assets/audio/letter-c.mp3": {
+      "bytes": 15242,
+      "sha256": "52e205d38551ecff0d546fa70d75ce0f87da5fce4b0a1e190b6cd183993b8227"
+    },
+    "assets/audio/sound-c.mp3": {
+      "bytes": 3277,
+      "sha256": "3fce579361504e20304cf71e27a3a56cf28f1feb079ff877355e431218112bc4"
+    },
+    "assets/audio/cat.mp3": {
+      "bytes": 8933,
+      "sha256": "4d4f72994773f527065e748fd75706efab3b2ff50108e7f9fbe7709bb5041057"
+    },
+    "assets/audio/car.mp3": {
+      "bytes": 10682,
+      "sha256": "ec8b89e81d2540a6fd9b1d8e4bcfa784c7b677683063f8372da4cde1d672586a"
+    },
+    "assets/audio/letter-d.mp3": {
+      "bytes": 13940,
+      "sha256": "65fedb8412d3a043c5eb0a39d19baf4162d93cbf7a4c5233aa90ef055b75ee62"
+    },
+    "assets/audio/sound-d.mp3": {
+      "bytes": 2989,
+      "sha256": "0a3274fd40cbf40449798efdb44cd7c70bb367dda138f7d143d68d71a810402d"
+    },
+    "assets/audio/dog.mp3": {
+      "bytes": 9821,
+      "sha256": "8257cdd1db4ab6eae8a093734cea83f83fc726a940555c8fc560da061697e802"
+    },
+    "assets/audio/duck.mp3": {
+      "bytes": 8410,
+      "sha256": "bd225e40c4b969f3601fc02a5199da008f7d645f49b895169605881ce9eb6f4e"
+    },
+    "assets/audio/letter-g.mp3": {
+      "bytes": 14305,
+      "sha256": "7b115ca87365e2c98204828d8381620d5587a5739cfb69ba7d244fdb4eae4514"
+    },
+    "assets/audio/sound-g.mp3": {
+      "bytes": 2937,
+      "sha256": "cde70165fdb0c185ac2261a7f439f4764e70de65eeeec5cb9eef95ed6c40a6c7"
+    },
+    "assets/audio/girl.mp3": {
+      "bytes": 9770,
+      "sha256": "4fac29d0d66579ba7e1350c366a710fd1b4e3694f6fb451e892500295e548420"
+    },
+    "assets/audio/guitar.mp3": {
+      "bytes": 12322,
+      "sha256": "76c3242e226f69e03238effefb88b6e8a3272c42df8cfa18e58292ff86f16a1c"
+    },
+    "assets/unit3/lesson3/audio/sound-g.mp3": {
+      "bytes": 9260,
+      "sha256": "5ab7c0b5e611820bf41a4677276c041eb4aefd5cccfc1ad44da9d4e1973c52dd",
+      "review": "hard-g-take-1, humanReviewed in Unit3Lesson3Clips"
+    }
+  }
+}

@@ -53,11 +53,15 @@ export default {
    let expired=false;
    const infer=async()=>{
     const first=await env.AI.run(MODEL,input);
-    if(!expired&&['toy-word','gg-word'].includes(questionType)&&uncertain(first)&&vocabulary.includes(ToySpeechEvaluator.normalize(first?.text))){
-     // A second neutral pass may recover short words without suggesting the answer.
-     // Require agreement and a reliable second pass; two uncertain guesses never pass.
+    const firstResult=ToySpeechEvaluator.evaluate(first?.text,questionToy,displayedToy,questionType);
+    if(!expired&&uncertain(first)&&firstResult.result!=='UNCLEAR'){
+     // A second neutral pass may recover child words or sentences without suggesting the answer.
+     // Require agreement and token evidence; two very weak guesses never pass.
      const second=await env.AI.run(MODEL,{...input,initial_prompt:''});
-     if(typeof second?.text==='string'&&second.segments?.some(s=>Number.isFinite(s.avg_logprob)&&s.avg_logprob>=-1)&&!uncertain(second)&&ToySpeechEvaluator.normalize(second.text)===ToySpeechEvaluator.normalize(first.text))return second;
+     const checked=ToySpeechEvaluator.evaluate(second?.text,questionToy,displayedToy,questionType);
+     // A moderate score can pass only with a second neutral, agreeing transcript.
+     // Missing scores and two very weak passes still ask for a retry.
+     if(typeof second?.text==='string'&&second.segments?.some(s=>Number.isFinite(s.avg_logprob)&&s.avg_logprob>=-1.35)&&checked.normalized===firstResult.normalized)return {...second,childAgreement:true};
     }
     return first;
    };
@@ -68,7 +72,7 @@ export default {
    // Whisper's own transcription gate lets a reliable token score override a high
    // no_speech probability, which often occurs on very short single-word clips.
    // Low token confidence still needs review; missing scores cannot override silence.
-   const unreliable=segments.length&&segments.every(s=>Number.isFinite(s.avg_logprob)?s.avg_logprob< -1:s.no_speech_prob>=.6);
+   const unreliable=segments.length&&segments.every(s=>Number.isFinite(s.avg_logprob)?s.avg_logprob< (output.childAgreement?-1.35:-1):s.no_speech_prob>=.6);
    const result=ToySpeechEvaluator.evaluate(output.text,questionToy,displayedToy,questionType);
    if(unreliable||result.result==='UNCLEAR')return reply({...result,result:'UNCLEAR',reason:unreliable?'recognition-uncertain':output.text.trim()?'sentence-unrecognized':'no-transcript'});
    return reply(result);

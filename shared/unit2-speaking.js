@@ -13,7 +13,7 @@
   this.stopRecognition();review?.destroy();review=null;lastAudio=null;cancelVoice();const token=epoch,target=this.speakTarget;
   this.setMicState('requesting','Starting microphone…','Wait for the blue microphone, then speak.');
   const mic=document.getElementById('ellieMic');mic.textContent='🎙';mic.setAttribute('aria-label','Start speaking');
-  const uncertain=(reason,transcript='')=>{if(!alive(token))return;this.evidence.speak.recognitionReviews=(this.evidence.speak.recognitionReviews||0)+1;recording=false;processing=false;handle=null;this.setMicState('error','Let’s check together','The computer could not confirm this answer. No mistake was recorded.');mic.textContent='🎙';showReview({reason,transcript});};
+  const uncertain=(reason,transcript='')=>{if(!alive(token))return;this.evidence.speak.recognitionReviews=(this.evidence.speak.recognitionReviews||0)+1;recording=false;processing=false;handle=null;this.setMicState('error','Let’s try again','The computer could not confirm this answer. No mistake was recorded.');mic.textContent='🎙';showReview({reason,transcript});};
   try{handle=Unit3Speech.start({questionToy:target,displayedToy:target,questionType:'school-name',
    onStart:()=>{if(!alive(token))return;recording=true;this.setMicState('listening','Listening…','You have up to 8 seconds. Tap Done when finished.');mic.textContent='Done ✓';mic.setAttribute('aria-label','Done speaking');},
    onRecording:audio=>{if(alive(token)){lastAudio=audio;this.evidence.speak.audioClips++;}},

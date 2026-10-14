@@ -6,6 +6,10 @@
  const phonics=Object.freeze(['girl','guitar']);
  const questionTypes=Object.freeze(['yes-no','name','school-name','name-question','mystery-question','toy-word','gg-word']);
  const vocabularyFor=type=>type==='school-name'?school:type==='gg-word'?phonics:toys;
+ // Bounded ASR spellings/homophones, independent of the displayed answer.
+ // Do not fuzzy-match short words such as cat/car, or add missing grammar.
+ const aliases=Object.freeze({'plain':'plane','airplane':'plane','aeroplane':'plane','ro bot':'robot','robo':'robot','baloon':'balloon','ballon':'balloon','tedi':'teddy','teddie':'teddy','gurl':'girl','guitah':'guitar','guiter':'guitar','pensil':'pencil','pencill':'pencil','cray on':'crayon','note book':'notebook','elefant':'elephant'});
+ function canonicalWords(text,type){const vocabulary=vocabularyFor(type);let value=text;for(const [heard,word] of Object.entries(aliases))if(vocabulary.includes(word))value=value.replace(new RegExp('\\b'+heard+'\\b','g'),word);return value;}
  function normalize(text){return String(text||'').toLowerCase().replace(/[’‘ʼ`]/g,"'").replace(/[.,!?;:"()\[\]{}]/g,' ').replace(/\s+/g,' ').trim();}
  function evaluate(transcript,questionToy,displayedToy,questionType='yes-no'){
   const vocabulary=vocabularyFor(questionType);
@@ -13,7 +17,7 @@
   if(!questionTypes.includes(questionType))throw new Error('INVALID_QUESTION_TYPE');
   transcript=typeof transcript==='string'?transcript:'';
   // Only remove fillers and adjacent repeated words. Never invent missing grammar or toy names.
-  const normalized=normalize(transcript).replace(/\b(?:um|uh|erm|er|hmm)\b/g,' ').replace(/\s+/g,' ').trim().split(' ').filter((w,i,a)=>i===0||w!==a[i-1]).join(' ');
+  const normalized=canonicalWords(normalize(transcript).replace(/\b(?:um|uh|erm|er|hmm)\b/g,' ').replace(/\s+/g,' ').trim().split(' ').filter((w,i,a)=>i===0||w!==a[i-1]).join(' '),questionType);
   if(questionType==='toy-word'||questionType==='gg-word'){
    const word=vocabulary.includes(normalized);
    return {transcript,normalized,result:word?(normalized===displayedToy?'CORRECT':'WRONG_LOGIC'):'UNCLEAR',answerType:word?'WORD':null};
@@ -39,7 +43,7 @@
   const result=partial?'INCOMPLETE':!positive&&!negative?'UNCLEAR':positive===(questionToy===displayedToy)?'CORRECT':'WRONG_LOGIC';
   return {transcript,normalized,result,answerType};
  }
- const api=Object.freeze({toys,school,phonics,questionTypes,vocabularyFor,normalize,evaluate});
+ const api=Object.freeze({toys,school,phonics,questionTypes,vocabularyFor,normalize,evaluate,canonicalWords});
  root.ToySpeechEvaluator=api;
  if(typeof module!=='undefined'&&module.exports)module.exports=api;
 })(globalThis);

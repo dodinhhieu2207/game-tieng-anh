@@ -1,0 +1,10 @@
+{
+  "viewport": 1024,
+  "renderer": "webgl",
+  "version": "8.22.0",
+  "medianRafMs": 5,
+  "maxRafMs": 5.199999999999818,
+  "tickerCap": 40,
+  "note": "Desktop Edge headless sample during bloom. RAF interval is not a mobile GPU/FPS guarantee.",
+  "renderPipeCount": 18
+}

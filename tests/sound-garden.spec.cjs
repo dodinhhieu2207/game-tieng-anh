@@ -1,0 +1,28 @@
+const {chromium}=require('C:/Users/Admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const BASE=process.env.GARDEN_BASE||'http://127.0.0.1:8770/index.html';
+(async()=>{
+ const browser=await chromium.launch({channel:'msedge',headless:true,args:['--autoplay-policy=no-user-gesture-required']});
+ const page=await browser.newPage({viewport:{width:1366,height:900}}),errors=[],bad=[];
+ page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)bad.push(r.url());});
+ await page.addInitScript(()=>{window.gardenAudio=[];window.failGardenVoice=false;const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){gardenAudio.push({src:this.src,event:'start',time:performance.now()});this.addEventListener('ended',()=>gardenAudio.push({src:this.src,event:'end',time:performance.now()}),{once:true});if(failGardenVoice&&!this.learningSfx)return Promise.reject(Error('QA voice error'));return play.call(this);};});
+ await page.goto(BASE);await page.waitForFunction(()=>window.LearningApp);await page.evaluate(()=>LearningApp.go('#/unit/3/lesson/3?mode=practice&activity=sound-detective'));
+ const phase=p=>page.waitForFunction(p=>SoundGarden.current()?.phase===p,p);
+ await phase('listening');assert.equal(await page.locator('.sg-canvas canvas').count(),1);assert.equal(await page.evaluate(()=>SoundGarden.current().app.renderer.name),'webgl');
+ const rounds=await page.evaluate(()=>SoundGarden.current().rounds);assert.equal(rounds.length,8);assert.deepEqual(rounds.slice(2).map(r=>r.letter),['A','B','C','D','G','G']);assert.deepEqual(rounds.slice(0,2).map(r=>r.mode),['word','word']);
+ assert(await page.evaluate(()=>SoundGarden.current().rounds.slice(2).every(r=>r.options.filter(o=>letterData[r.letter].words.some(w=>w.word===o.word)).length===1)));
+ const answer=()=>page.evaluate(()=>{const s=SoundGarden.current();return s.round.options.findIndex(x=>x.word===s.round.target.word);});
+ for(let i=0;i<8;i++){
+  await phase('listening');const correct=await answer();
+  if(i===0){await page.locator(`[data-sg-choice="${1-correct}"]`).click();await phase('listening');assert.equal(await page.evaluate(()=>SoundGarden.current().errors),1);assert.equal(await page.locator('.sg-progress .done').count(),0);}
+  if(i===1){await page.evaluate(()=>failGardenVoice=true);await page.locator(`[data-sg-choice="${correct}"]`).click();await phase('answer-error');assert.equal(await page.locator('.sg-progress .done').count(),1);assert.equal(await page.evaluate(()=>SoundGarden.current().errors),1);await page.evaluate(()=>failGardenVoice=false);await page.locator('[data-sg-hear]').click();}
+  else {await page.locator(`[data-sg-choice="${correct}"]`).focus();await page.keyboard.press('Enter');}
+  if(i===0){await phase('reading');await page.waitForFunction(()=>SoundGarden.current()?.audio?.currentTime>0);await page.evaluate(()=>SoundGarden.current().audio.pause());await page.waitForTimeout(450);assert.equal(await page.evaluate(()=>SoundGarden.current().phase),'reading');assert.equal(await page.locator('.sg-progress .done').count(),0);await page.evaluate(()=>SoundGarden.current().audio.play());await phase('blooming');await page.waitForTimeout(1100);await page.screenshot({path:'tests/sound-garden-bloom.png',fullPage:true});}
+  await phase('resolved');assert.equal(await page.locator('.sg-progress .done').count(),i+1);assert.equal(await page.locator('.sg-word').textContent(),(rounds[i].mode==='sound'?rounds[i].letter+' · ':'')+rounds[i].target.word);await page.locator('[data-sg-next]').click();
+ }
+ await phase('complete');assert.equal(await page.evaluate(()=>LearningProgress.get('3/3/sound-detective').stars),2);await page.screenshot({path:'tests/sound-garden-complete.png',fullPage:true});
+ await page.locator('[data-sg-again]').click();await phase('listening');for(const width of [320,390,768,1024,1366]){await page.setViewportSize({width,height:900});await page.waitForTimeout(150);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),width+' overflow');const boxes=await page.locator('.sg-choice').all();for(const b of boxes){const r=await b.boundingBox();assert(r.width>=48&&r.x>=0&&r.x+r.width<=width,width+' choice clipped');}await page.screenshot({path:`tests/sound-garden-${width}.png`,fullPage:true});}
+ await page.emulateMedia({reducedMotion:'reduce'});await page.evaluate(()=>document.querySelector('[data-shell-action="sound"]').click());const soundCount=await page.evaluate(()=>gardenAudio.length);for(let i=0;i<8;i++){await phase('listening');await page.locator(`[data-sg-choice="${await answer()}"]`).click();await phase('resolved');await page.locator('[data-sg-next]').click();}await phase('complete');assert.equal(await page.evaluate(()=>gardenAudio.length),soundCount);assert.equal(await page.evaluate(()=>LearningProgress.get('3/3/sound-detective').stars),3);
+ await page.locator('[data-sg-again]').click();await phase('listening');await page.evaluate(()=>{window.departingGarden=SoundGarden.current();LearningApp.go('#/');});assert(await page.evaluate(()=>departingGarden.dead&&departingGarden.audio===null&&SoundGarden.current()===null&&Object.keys(departingGarden.textures).length===0));assert.equal(await page.evaluate(()=>LearningMotion.activeCount()),0);
+ assert.deepEqual(errors,[]);assert.deepEqual(bad,[]);await browser.close();console.log('PASS Sound Garden: 8 rounds, A–D/G discrimination, unambiguous words, retry, audio error no penalty, real ended gate, bloom, persistence/best score, keyboard, 5 widths, mute/reduced motion, renderer/texture cleanup.');
+})().catch(e=>{console.error(e);process.exit(1);});

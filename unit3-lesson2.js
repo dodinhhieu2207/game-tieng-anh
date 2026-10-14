@@ -193,10 +193,10 @@
   }
   undo(){const slot=this.placed.findLastIndex(id=>id!==null);if(slot<0)return;const id=this.placed[slot];this.placed[slot]=null;const b=this.root.querySelector(`[data-slot="${slot}"]`);b.innerHTML=this.level==='easy'?`<span class="l2-ghost">${esc(this.tokens[slot])}</span>`:slot+1;b.classList.remove('l2-snapped');this.root.querySelector(`[data-tile="${id}"]`).hidden=false;}
   cancelDrag(){this.dragEngine?.cancel();}
-  teacherCheck(){this.stopRecognition();this.phase='listening';this.buddy.setState('LISTENING');this.manualMode=true;this.speakingControls();this.root.querySelector('#l2Teacher').hidden=false;this.status('Say your answer. Your teacher will check it.');this.refresh();}
+  teacherCheck(){this.stopRecognition();this.phase='listening';this.buddy.setState('LISTENING');this.manualMode=false;this.status('Tap the microphone to try again. No mistake recorded.');this.refresh();}
   reviewSpeech(result={}){
    this.speechReview?.destroy();const token=this.run,type=this.round.questionType;
-   this.speechReview=SpeakingReview.mount(this.root,{audio:this.lastRecording,transcript:result.transcript,reason:result.reason?`Review needed: ${result.reason}. No mistake was recorded.`:'Listen before confirming. Teacher confirmation is recorded separately.',onConfirm:type==='mystery-question'?null:()=>{if(!this.active(token)||this.phase!=='listening')return;this.teacherAssistedRound=true;this.teacherConfirmed=(this.teacherConfirmed||0)+1;this.gradeSpeech('correct');}});
+   this.speechReview=SpeakingReview.mount(this.root,{audio:this.lastRecording,transcript:result.transcript,reason:result.reason?`Review needed: ${result.reason}. No mistake was recorded.`:'Listen to your recording, then tap the microphone to retry.',onConfirm:type==='mystery-question'?null:()=>{if(!this.active(token)||this.phase!=='listening')return;this.teacherAssistedRound=true;this.teacherConfirmed=(this.teacherConfirmed||0)+1;this.gradeSpeech('correct');}});
   }
   listen(){
    if(this.phase!=='listening')return;
@@ -216,7 +216,7 @@
   }
   async gradeSpeech(result){
    if(this.phase!=='listening')return;this.stopRecognition();this.voiceFeedback=result;
-   if(result==='unclear'){this.recognitionReviews++;this.voiceFeedback=null;this.buddy.setState('LISTENING');this.status('Let’s check together. The computer could not confirm this answer. No mistake recorded.');this.refresh();return;}
+   if(result==='unclear'){this.recognitionReviews++;this.voiceFeedback=null;this.buddy.setState('LISTENING');this.status('Let’s try again. Tap the microphone and say it once more. Your points stay the same.');this.refresh();return;}
    if(result==='correct'){
     if(!this.teacherAssistedRound)this.aiConfirmed=(this.aiConfirmed||0)+1;
     this.phase='checking';this.attempts++;this.refresh();const token=this.run;this.buddy.setState('CORRECT');

@@ -156,3 +156,7 @@ Yêu cầu người dùng ngày 2026-10-14: dựa vào repo/thư viện animatio
 - Kế hoạch phải có trạng thái và bằng chứng cho: nội dung/audio, asset, scene/UI, animation/VFX/SFX, kiểm tra, self-review, triển khai. Cập nhật khi đổi scope hoặc phát hiện giới hạn.
 - Trước bàn giao, kiểm tra video chuyển động thực tế, ảnh ở năm độ rộng đã quy định, audio-ended gating, lỗi, mute, reduced motion, dừng khi rời game, tiến trình/sao và bản công khai. Không khẳng định độ mượt/performance nếu chưa đo; không khẳng định trẻ học tốt hơn từ kiểm tra kỹ thuật.
 - Khi báo cáo, nêu game nào đã được nâng cấp, repo/skills đã dùng, điều đã kiểm chứng và phần còn lại. Không tuyên bố áp dụng toàn bộ app khi chỉ đổi một hoạt động.
+
+## 14. Speaking tự đánh giá — cập nhật 2026-10-14
+
+Theo yêu cầu mới: speaking trên web dùng Cloudflare tự nhận diện/phản hồi; không đặt Teacher Check hoặc nút duyệt thủ công trong luồng trẻ. Bản ghi tạm vẫn nghe lại được. UNCLEAR/lỗi mic/mạng dẫn tới retry AI, không tính sai. Linh hoạt với biến thể ASR có ranh giới và lượt nhận diện trung lập; vẫn giữ đủ cấu trúc, polarity và đúng đồ vật. Không gọi đây là điểm phát âm, không dùng Whisper chấm âm đơn. Tham khảo docs/CHILD_SPEECH_AUTO.md; quy định này thay phần manual confirmation trong mục 7 cho luồng chơi hiện tại.
