@@ -9,3 +9,13 @@ Original art pack: cyan toy ferry, two palm islands with blank signs, water wake
 Score uses the existing first-try rule: 9–10/10 earns 3 stars, 7–8 earns 2, otherwise 1. App best-score persistence and learner separation remain authoritative. Reduced motion uses a static success state. Audio, pointer capture and animations are canceled on route exit; sound mute and visibility changes stop water playback.
 
 Validation: answer-islands.spec.cjs covers all ten rounds, balance/all toys, wrong retry, real answer ended/paused gating, playback failure recovery, mouse drag, keyboard, treasure collection, old progress key, best-score retention, five widths, mute, reduced motion and leaving during sailing. Existing Lesson 2 integration adds real touch dragging and verifies other five activities; navigation, classroom layout and shared rewards checks remain in scope. These checks validate game behavior, not child learning mastery.
+
+## Motion upgrade
+
+GSAP 3.15.0 core and MotionPathPlugin from the official greensock/GSAP repository are stored under shared/vendor/gsap. The package files are unchanged, with local license/provenance notes. No CDN is needed at runtime.
+
+The shared LearningMotion scene scope owns timelines, promises, visibility pauses and cancellation. Answer Islands now uses a coordinated timeline for gentle launch trim, a curved speed-eased ferry path, finite hull roll/settle, trailing foam that fades at docking, subtle water drift, and a curved pearl collection path. Repeating CSS bob/wake/radial wave loops have been replaced. Audio-ended gating and scoring remain outside the animation layer.
+
+References: https://github.com/greensock/GSAP ; https://gsap.com/docs/v3/GSAP/gsap.timeline()/ ; https://gsap.com/docs/v3/Plugins/MotionPathPlugin/ ; https://gsap.com/docs/v3/Eases/ . License: https://gsap.com/community/standard-license/ . These are API/choreography references; no third-party game artwork was copied.
+
+Additional validation: answer-islands-motion.spec.cjs checks the actual GSAP timeline, background pause/resume, removal of old CSS loops, route cancellation with no remaining tweens, and a reduced-motion preference change during travel.

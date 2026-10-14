@@ -1,0 +1,4 @@
+GSAP Standard No Charge License
+Copyright Webflow. Preserve original library copyright notices.
+Official license source: https://gsap.com/community/standard-license/
+A snapshot of the official license page is in LICENSE.html.
