@@ -21,3 +21,12 @@ Plane flight lasts 1.25 seconds, then the existing toy-specific motion plays. Re
 `tests/toy-delivery.spec.cjs`: real Higgs playback, no answer audio before choice, full five-toy run, wrong choice, keyboard activation, 320/390/768/1024/1366 widths, progress best-score updates, assistance, leaving during flight, reduced motion. Screenshots cover initial desktop/mobile and delivered state. These checks validate the interaction and playback, not children's learning outcomes.
 
 Manual follow-up: observe whether children understand the picture-to-word task without teacher explanation. Add steering or extra distractors only after this interaction is easy to use.
+
+
+## Pilot upgrade — 2026-10-14
+
+Default interaction is now two-lane flight. Take off starts slow parcel movement over a six-second approach. Drag the flight area, tap an on-screen up/down control or parcel lane, or use arrow keys. Steering eases the plane into the chosen lane with a bank angle. Collision is evaluated when parcels reach the plane. A motor miss or a late steering change loops the approach without adding a mistake. Choosing the wrong word pauses and invites another lane; there is no countdown, life loss or elimination. Pause freezes approach; hints pause movement and stop effects before speaking. Backgrounding also pauses flight. Reduced-motion mode retains direct word selection with no continuous flight.
+
+Flight has propeller rotation, wind trails, moving cloud layers, cargo attachment, curved delivery with banking and touchdown, box arrival animation, approved toy action and a star traveling from the delivery to the exact progress slot. Four original stereo cues in assets/toy-delivery support takeoff (layered propeller/wind), pickup (rising chime), landing (soft impact/bell), and star-flight (ascending sparkle notes). These are original synthesized cues, not downloaded third-party recordings. Voice, effects and microphone rules remain shared with the app.
+
+Tests exercise interception, pause/resume, full five-toy completion, keyboard, hints, failure/retry, mute, navigation teardown, five viewports and reduced motion. A real-time keyboard flight and pause is also captured as tests/toy-pilot-demo.webm. This records the visible sequence; it is not a child usability test.
