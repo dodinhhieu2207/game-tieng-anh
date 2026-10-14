@@ -1,4 +1,4 @@
-# Sentence Express — Unit 3 Lesson 2
+# Sentence Express â€” Unit 3 Lesson 2
 
 Replaces Build the Sentence at the same activity route and progress key `3/2/build-sentence`. Other Lesson 2 activities remain in place.
 
