@@ -16,6 +16,12 @@
    if(delta>0||!old.completed)document.dispatchEvent(new CustomEvent('learning:progress-updated',{detail:{key,previous:old,current:{...data[key]},delta,points:delta*100}}));
   },
   all(){return JSON.parse(JSON.stringify(data));},
+  taskEvidence(key,evidence){
+   if(typeof key!=='string'||!/^\d+\/(?:[1-6]|existing)\/[^/]+$/.test(key)||evidence?.version!==2||!Array.isArray(evidence.tasks)||evidence.tasks.length>80)return false;
+   const skills=['recognized','paired','name-spoken','picture-named','word-read','assembled','traced','copied'];
+   if(evidence.tasks.some(t=>!skills.includes(t.skill)||!['G','g','Gg','girl','guitar','Aa','Bb','Cc','Dd','Ee','Ff'].includes(t.target)||typeof t.assisted!=='boolean'))return false;
+   data[key]={...this.get(key),taskEvidence:{version:2,tasks:evidence.tasks.map(t=>({skill:t.skill,target:t.target,assisted:t.assisted}))}};save();return true;
+  },
   speakingReview(key,evidence){
    if(typeof key!=='string'||!/^\d+\/(?:[1-6]|existing)\/[^/]+$/.test(key))return;
    const fields=['aiConfirmed','teacherConfirmed','recognitionReviews'];

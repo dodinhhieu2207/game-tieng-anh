@@ -15,7 +15,7 @@
   constructor(host,{target,type,prompt,onPhase=()=>{},onSuccess=()=>{},onWrong=()=>{},onUnclear=()=>{},onPlay=null}){
    this.host=host;this.target=target;this.type=type;this.onPhase=onPhase;this.onSuccess=onSuccess;this.onWrong=onWrong;this.onUnclear=onUnclear;this.onPlay=onPlay;this.model=prompt;this.phase='idle';this.epoch=0;this.destroyed=false;
    if(['girl','teddy'].includes(target))warmWave();
-   host.innerHTML=ToyVoiceUI.html({support:type==='gg-word'?'Say the word.':'Say the toy name.',idPrefix:'word',adapter:Unit3Speech.available})+'<p class="sp-status" role="status" aria-live="polite"></p><button type="button" class="sp-replay" data-word-replay>Listen again</button>';
+   host.innerHTML=ToyVoiceUI.html({support:type==='gg-letter-name'?'Say the letter name.':type==='gg-word'?'Say the word.':'Say the toy name.',idPrefix:'word',adapter:Unit3Speech.available})+'<p class="sp-status" role="status" aria-live="polite"></p><button type="button" class="sp-replay" data-word-replay>Listen again</button>';
    host.querySelector('#wordTeacher').remove();host.querySelector('[data-teacher]').remove();
    host.querySelector('.toy-voice-note').textContent='Tap the microphone. Say one word. Tap Done.';
    this.status=host.querySelector('.sp-status');this.mic=host.querySelector('#wordMic');this.replay=host.querySelector('[data-word-replay]');
