@@ -10,4 +10,4 @@ Worker giữ model, origin/upload/rate/timeout/privacy. Với câu/từ đã có
 
 Tests: Worker 419 cases, child-friendly-speech (aliases/medium confidence/agreement/wrong/missing), child-speech-evaluator, speech-adapter, child-speaking (capture/retry Unit 2 + 3), speaking-play (Lessons 1–3). Live test dùng 5 clip Higgs đã có, không phải dữ liệu giọng trẻ thật; không cam kết mọi trẻ được nhận đúng hay điểm phát âm.
 
-Cloudflare deployed: 1d1e9611-82eb-483b-ba80-9badae469549, 2026-10-14, account hiei1121. Website build PASS; run 38588109061 deploy bị GitHub Pages HTTP 500, đang retry. Rollback: revert bounded source commit, deploy previous Worker if valid answers regress; no data migration.
+Cloudflare deployed: 1d1e9611-82eb-483b-ba80-9badae469549, 2026-10-14, account hiei1121. Website release c88e373; retry run 38589104338 SUCCESS; public source/asset parity và game/speaking smoke PASS. Lượt trước bị GitHub Pages HTTP 500. Rollback: revert bounded source commit, deploy previous Worker if valid answers regress; no data migration.

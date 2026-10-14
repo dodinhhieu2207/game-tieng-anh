@@ -1,6 +1,6 @@
 # Sound Garden — plan triển khai
 
-Trạng thái: gameplay/asset hoàn thành; local QA PASS, chờ xác nhận bản công khai.
+Trạng thái: hoàn thành; local QA và public smoke PASS.
 Ngày: 2026-10-14.
 Lựa chọn trực tiếp của người dùng: "GSAP + PixiJS — cảnh 2D nhiều lớp và hiệu ứng sâu hơn". Tiếp tục theo lựa chọn này, không hỏi lại stack.
 
@@ -47,7 +47,7 @@ Asset mới: nền, ô đất, stem/leaves, bud, cánh trước/sau, nhụy, ong
 - [x] Tám lượt, shuffle, no ambiguous answers, retry/errors và progress.
 - [x] Test thực tế năm độ rộng; audio-ended, input nhanh/touch/keyboard, lifecycle, performance được đo rõ.
 - [x] Quay tốc độ thật; self-review theo design-critique và sửa trước bàn giao.
-- [ ] Deploy và xác nhận bản công khai trong scope người dùng đã yêu cầu.
+- [x] Deploy và xác nhận bản công khai trong scope người dùng đã yêu cầu.
 
 ## Kết quả triển khai / giới hạn
 
@@ -61,4 +61,4 @@ Local QA: sound-garden.spec.cjs; sound-garden-failures.cjs; sound-garden-motion.
 
 Self-review: hoa mở cánh rõ quanh hình; ong/seed chuyển bên ngoài hình để không bị DOM che; căn ô đất/nhãn; hủy GSAP trước khi destroy Pixi; toast thành tích cũ đóng khi restart. Kiểm tra frame tại 1.2s/2.1s/3.1s và năm độ rộng.
 
-Public deploy: source a78e754 + copy cleanup 3740831 đã push. Build Jekyll PASS, deploy run 38588109061 lỗi HTTP 500 từ GitHub Pages (create deployment). Đang retry; chưa đánh dấu public hoàn thành.
+Public deploy: release c88e373, Pages run 38589104338 completed success. Run trước lỗi 500 từ GitHub, retry thành công. Public smoke PASS: source/asset parity, Pixi WebGL, trồng hoa thật, capture/mock automatic Gg alias, không Teacher Check hoặc manual fallback khi mic bị từ chối. Screenshot tests/sound-garden-public.png. Worker live checks dùng 18 clip adult Higgs, không phải bằng chứng accuracy với giọng trẻ thật.
