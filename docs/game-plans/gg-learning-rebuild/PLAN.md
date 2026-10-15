@@ -1,5 +1,9 @@
 # Gg lesson rebuild — observed audit and plan
 
+## Writing-only request - 2026-10-15
+
+User requested removing listening/speaking from Trace. Trace & Write keeps the trace-say route/key and eight G/g/girl/guitar trace/copy rounds, numbered formation and pen demo. Removes automatic voice cues, Hear again, microphone and speaking completion gates. All writing rounds, including final review, start without voice; separate speaking activities/rounds remain. Writing completion saves traced/copied evidence and stars without new speaking evidence. This targeted change does not yet replace the freehand input with the older fixed-mould mechanic discussed separately. Validation/public gate pending.
+
 Date 2026-10-14. Status: implemented and verified on GitHub Pages (functional release c9802a1); real-child classroom evaluation remains a follow-up. Selected stack: GSAP + PixiJS + existing SVG writing. User explicitly chose this approach; do not ask again.
 
 ## Observations verified

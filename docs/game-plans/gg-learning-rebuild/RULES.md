@@ -1,5 +1,7 @@
 # Gg learning rebuild — rules
 
+Update 2026-10-15: trace-say is writing only, named Trace & Write. No spoken prompts, Hear again, microphone or AI speaking gate in this activity. Writing rounds in final review also start without spoken prompts; separate speaking rounds remain. Numbered pen demonstration, writing evidence, best stars and existing routes remain.
+
 Scope: Unit 3 Lesson 3. User chose GSAP + PixiJS + existing SVG for writing on 2026-10-14. Read root RULES.md / docs/GAME_WORKFLOW.md. This dossier governs the implemented rebuild; see PLAN.md for validation and release status.
 
 - Preserve seven activity routes/IDs/progress keys and Sound Garden. Preserve approved girl/guitar art, Higgs voices and /g/ take 1. No framework rewrite.
