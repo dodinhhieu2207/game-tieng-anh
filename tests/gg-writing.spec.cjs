@@ -8,8 +8,8 @@ const {chromium}=require('C:/Users/Admin/.cache/codex-runtimes/codex-primary-run
   await p.evaluate(({text,mode})=>{qaPad.dispose();qaPad=GgWriting.mount(document.getElementById('writingQA'),{text,mode,onDone:e=>qaWrites.push(e)});},{text,mode});const n=await p.evaluate(()=>qaPad.refs.length);
   if(mode==='copy')assert(await p.locator('.gw-reference').first().evaluate(e=>getComputedStyle(e).opacity==='0'));
   for(let i=0;i<n;i++){await p.evaluate(()=>qaPad.host.querySelector('.gw-paper-scroll').scrollLeft=Number(qaPad.refs[qaPad.index].dataset.letter)*110);pts=await points();await p.mouse.move(pts[0].x,pts[0].y);await p.mouse.down();for(const q of pts.slice(1))await p.mouse.move(q.x,q.y);await p.mouse.up();assert.equal(await p.evaluate(()=>qaPad.index),i+1,text+' '+mode+' stroke '+i);}
-  const e=await p.evaluate(()=>qaWrites.at(-1));assert.equal(e.text,text);assert.equal(e.strokes.length,n);assert(e.strokes.every(s=>s.length>0));if(text==='g')assert.equal(n,1,'g circle-descender is continuous');if(text==='G')assert.equal(n,2,'G curve then internal bar');
+  const e=await p.evaluate(()=>qaWrites.at(-1));assert.equal(e.text,text);assert.equal(e.strokes.length,n);assert(e.strokes.every(s=>s.length>0));if(text==='g')assert.equal(n,2,'g bowl then separate descender');if(text==='G')assert.equal(n,2,'G curve-up then separate rightward bar');
   await p.screenshot({path:`tests/gg-writing-${text}-${mode}.png`,fullPage:true});
  }
- await p.evaluate(()=>qaPad.dispose());assert.deepEqual(errors,[]);await b.close();console.log('PASS actual pointer handwriting: G/g/girl/guitar/Gg trace+copy; correct continuous g / two-stroke G; actual ink; reverse/early-lift/jump rejected; all word strokes/dot; no handwriting mastery claim.');
+ await p.evaluate(()=>qaPad.dispose());assert.deepEqual(errors,[]);await b.close();console.log('PASS actual pointer handwriting: G/g/girl/guitar/Gg trace+copy; reference g bowl/descender and G around-up/across; actual ink; reverse/early-lift/jump rejected; all word strokes/dot; no handwriting mastery claim.');
 })().catch(e=>{console.error(e);process.exit(1);});

@@ -11,3 +11,6 @@ Scope: Unit 3 Lesson 3. User chose GSAP + PixiJS + existing SVG for writing on 2
 - Single-storey g consistently across teaching/tracing/letterbank. Introduce font variation only after familiarity; do not silently switch g shape.
 - Full girl/guitar writing starts with trace/copy, gradually remove models. Do not treat these full words as decodable solely from knowing Gg, or label traced/copying as independent spelling.
 - Pixi scenes + GSAP owned timelines; SVG paths/checking with touch/keyboard alternative. Meaningful finite feedback, one task per screen, no racing while writing.
+
+
+- Formation update 2026-10-15: user-supplied references supersede initial paths. G: continuous around/up (steps 1/2), lift, rightward bar (step 3). g: bowl, lift, down/left curl (steps 1/2). Demo, numbered arrows and actual validation use the same paths, including girl/guitar.
