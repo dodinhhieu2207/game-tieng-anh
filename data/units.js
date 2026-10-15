@@ -24,6 +24,13 @@
      activity('talk-to-toy-buddy','u3buddy',{title:'Talk to Toy Buddy'})]},
     3:{title:'Sounds and letters: Gg',description:'Meet G and g. Listen, sort, trace and say girl and guitar.',status:'available',targetLanguage:['G g','girl','guitar'],activities:[
      activity('meet-gg','u3ggmeet',{title:'Learn Gg',image:'assets/unit3/lesson3/art/sign-gg.webp',icon:'flashcards'}),activity('sound-detective','u3ggsound',{title:'Sound Garden',image:'assets/sound-garden/sprout.webp',icon:'listening'}),activity('catch-g','u3ggcatch',{title:'Find Gg',image:'assets/unit3/lesson3/art/bubble-capital.webp',icon:'question'}),activity('big-small','u3ggsort',{title:'Gg Maze Relay',image:'assets/gg-maze-relay/garden.webp',icon:'matching'}),activity('fix-word','u3ggfix',{title:'Build & Say',image:'assets/unit3/lesson3/art/missing-g.webp',icon:'sentence'}),activity('trace-say','u3ggtrace',{title:'Trace & Write',image:'assets/unit3/lesson3/art/trace-pencil.webp',icon:'book'}),activity('final-challenge','u3ggfinal',{title:'My Gg Check',image:'assets/unit3/lesson3/art/trophy.webp',icon:'question',final:true})]}
+    ,4:{title:'Numbers 7–8',description:'Count, read and say seven and eight. Review five and six.',status:'available',targetLanguage:['7 · seven','8 · eight'],activities:[
+     activity('number-parade','u3nparade',{title:'Number Parade',image:'assets/number-studio/parade/scene.webp',icon:'listening'}),
+     activity('toy-detective','u3ndetective',{title:'Toy Detective',image:'assets/number-studio/detective/part.webp',icon:'question'}),
+     activity('gift-workshop','u3ngift',{title:'Gift Workshop',image:'assets/number-studio/gift/prop.webp',icon:'matching'}),
+     activity('number-snap','u3nsnap',{title:'Number Snap',image:'assets/number-studio/snap/prop.webp',icon:'matching'}),
+     activity('say-open','u3nsay',{title:'Say & Open',image:'assets/number-studio/book/prop.webp',icon:'question'}),
+     activity('toy-relay','u3nrelay',{title:'Toy Town Relay',image:'assets/number-studio/relay/accent.webp',icon:'matching',final:true})]}
    }).map(lesson=>({...lesson,cardImage:`assets/shared-ui/unit3-navigation-lesson${lesson.id}.png`,cardAspect:'2 / 1',selectorLabel:['Toys','Grammar','Sounds and letters','Numbers','Review','Story'][lesson.id-1]}))}
   ],
   // The integrated Ellie lesson has no confirmed textbook lesson assignment.

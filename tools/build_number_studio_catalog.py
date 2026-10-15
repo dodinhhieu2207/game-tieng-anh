@@ -1,0 +1,8 @@
+from pathlib import Path
+import json, html
+root=Path(__file__).resolve().parents[1]/'assets/number-studio'
+items=json.loads((root/'asset-manifest.json').read_text())
+cards=''.join(f'<figure><a href="{html.escape(i["file"])}"><img src="{html.escape(i["file"])}" alt="{html.escape(i["file"])}"></a><figcaption>{html.escape(i["file"])}<small>{i["size"][0]} × {i["size"][1]}</small></figcaption></figure>' for i in items)
+doc='''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Number Play Studio · Asset collection</title><style>body{margin:0;padding:32px;background:#f6f0e0;color:#244958;font-family:system-ui,sans-serif}header{max-width:1000px;margin:0 auto 28px}h1{font-size:36px;margin:0 0 12px}p{font-size:18px;line-height:1.5}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;max-width:1300px;margin:auto}figure{margin:0;background:white;border:1px solid #b8c7bb;border-radius:18px;padding:14px}img{width:100%;height:180px;object-fit:contain;background:repeating-conic-gradient(#edf2ec 0 25%,#fff 0 50%) 0/18px 18px}figcaption{padding-top:10px;font-weight:bold}small{display:block;color:#59766d;font-weight:normal;margin-top:4px}</style><header><h1>Number Play Studio</h1><p>Unit 3 · Lesson 4 — 34 dedicated illustrated assets.<br>Six activity sets, six countable toys and a shared lesson UI kit. Text and exact quantities are rendered by the app.</p><p>Click any image to open the WebP asset. Source details and limits: README.md and asset-manifest.json.</p></header><main>'''+cards+'</main></html>'
+(root/'catalog.html').write_text(doc,encoding='utf8')
+print('Catalog: 34 assets')

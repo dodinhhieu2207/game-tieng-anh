@@ -4,8 +4,9 @@
  const toys=Object.freeze(['plane','puppet','robot','balloon','teddy']);
  const school=Object.freeze(['desk','chair','pencil','crayon','notebook','egg','elephant','fish','farm']);
  const phonics=Object.freeze(['girl','guitar']);
- const questionTypes=Object.freeze(['yes-no','name','school-name','name-question','mystery-question','toy-word','gg-word','gg-letter-name']);
- const vocabularyFor=type=>type==='gg-letter-name'?['G']:type==='school-name'?school:type==='gg-word'?phonics:toys;
+ const numbers=Object.freeze(['one','two','three','four','five','six','seven','eight']);
+ const questionTypes=Object.freeze(['yes-no','name','school-name','name-question','mystery-question','toy-word','gg-word','gg-letter-name','number-word']);
+ const vocabularyFor=type=>type==='number-word'?numbers:type==='gg-letter-name'?['G']:type==='school-name'?school:type==='gg-word'?phonics:toys;
  // Bounded ASR spellings/homophones, independent of the displayed answer.
  // Do not fuzzy-match short words such as cat/car, or add missing grammar.
  const aliases=Object.freeze({'plain':'plane','airplane':'plane','aeroplane':'plane','ro bot':'robot','robo':'robot','baloon':'balloon','ballon':'balloon','tedi':'teddy','teddie':'teddy','gurl':'girl','guitah':'guitar','guiter':'guitar','pensil':'pencil','pencill':'pencil','cray on':'crayon','note book':'notebook','elefant':'elephant'});
@@ -18,6 +19,11 @@
   transcript=typeof transcript==='string'?transcript:'';
   // Only remove fillers and adjacent repeated words. Never invent missing grammar or toy names.
   const normalized=canonicalWords(normalize(transcript).replace(/\b(?:um|uh|erm|er|hmm)\b/g,' ').replace(/\s+/g,' ').trim().split(' ').filter((w,i,a)=>i===0||w!==a[i-1]).join(' '),questionType);
+  if(questionType==='number-word'){
+   const value=/^[1-8]$/.test(normalized)?numbers[Number(normalized)-1]:normalized;
+   const known=numbers.includes(value);
+   return {transcript,normalized:value,result:known?(value===displayedToy?'CORRECT':'WRONG_LOGIC'):'UNCLEAR',answerType:known?'WORD':null};
+  }
   if(questionType==='gg-letter-name'){
    const named=['g','gee','letter g','the letter g','letter gee'].includes(normalized);
    const other=/^(?:letter |the letter )?[abcdefh-z]$/.test(normalized);

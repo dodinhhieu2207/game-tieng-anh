@@ -1,0 +1,614 @@
+[
+  {
+    "file": "parade/scene.webp",
+    "source": "exec-8241e74a-5b8a-4d67-b93a-baf986e08521.png",
+    "crop": [
+      0,
+      0,
+      880,
+      545
+    ],
+    "size": [
+      880,
+      545
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "parade/prop.webp",
+    "source": "exec-8241e74a-5b8a-4d67-b93a-baf986e08521.png",
+    "crop": [
+      900,
+      0,
+      1536,
+      550
+    ],
+    "size": [
+      500,
+      450
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "parade/part.webp",
+    "source": "exec-8241e74a-5b8a-4d67-b93a-baf986e08521.png",
+    "crop": [
+      0,
+      560,
+      960,
+      1024
+    ],
+    "size": [
+      650,
+      301
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "parade/accent.webp",
+    "source": "exec-8241e74a-5b8a-4d67-b93a-baf986e08521.png",
+    "crop": [
+      980,
+      560,
+      1536,
+      1024
+    ],
+    "size": [
+      457,
+      450
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "detective/scene.webp",
+    "source": "exec-19031c12-5730-4695-999c-f62a2a00ab68.png",
+    "crop": [
+      40,
+      10,
+      860,
+      505
+    ],
+    "size": [
+      820,
+      495
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "detective/prop.webp",
+    "source": "exec-19031c12-5730-4695-999c-f62a2a00ab68.png",
+    "crop": [
+      880,
+      80,
+      1536,
+      505
+    ],
+    "size": [
+      622,
+      417
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "detective/part.webp",
+    "source": "exec-19031c12-5730-4695-999c-f62a2a00ab68.png",
+    "crop": [
+      80,
+      510,
+      760,
+      1024
+    ],
+    "size": [
+      632,
+      450
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "detective/accent.webp",
+    "source": "exec-19031c12-5730-4695-999c-f62a2a00ab68.png",
+    "crop": [
+      1000,
+      530,
+      1510,
+      970
+    ],
+    "size": [
+      500,
+      411
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "gift/scene.webp",
+    "source": "exec-f602e8c6-3a95-40db-8218-8d444273d060.png",
+    "crop": [
+      20,
+      10,
+      810,
+      570
+    ],
+    "size": [
+      790,
+      560
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "gift/prop.webp",
+    "source": "exec-f602e8c6-3a95-40db-8218-8d444273d060.png",
+    "crop": [
+      850,
+      30,
+      1500,
+      575
+    ],
+    "size": [
+      543,
+      450
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "gift/part.webp",
+    "source": "exec-f602e8c6-3a95-40db-8218-8d444273d060.png",
+    "crop": [
+      40,
+      610,
+      810,
+      1000
+    ],
+    "size": [
+      650,
+      311
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "gift/accent.webp",
+    "source": "exec-f602e8c6-3a95-40db-8218-8d444273d060.png",
+    "crop": [
+      880,
+      590,
+      1490,
+      1024
+    ],
+    "size": [
+      591,
+      392
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "snap/scene.webp",
+    "source": "exec-43677335-7241-40d4-b730-ac4572c2a182.png",
+    "crop": [
+      0,
+      0,
+      770,
+      500
+    ],
+    "size": [
+      770,
+      500
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "snap/prop.webp",
+    "source": "exec-43677335-7241-40d4-b730-ac4572c2a182.png",
+    "crop": [
+      770,
+      0,
+      1536,
+      500
+    ],
+    "size": [
+      650,
+      432
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "snap/part.webp",
+    "source": "exec-43677335-7241-40d4-b730-ac4572c2a182.png",
+    "crop": [
+      0,
+      500,
+      770,
+      1024
+    ],
+    "size": [
+      650,
+      447
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "snap/accent.webp",
+    "source": "exec-43677335-7241-40d4-b730-ac4572c2a182.png",
+    "crop": [
+      770,
+      500,
+      1536,
+      1024
+    ],
+    "size": [
+      650,
+      424
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "book/scene.webp",
+    "source": "exec-e615cdb5-7305-4918-a180-a91c9e64417e.png",
+    "crop": [
+      0,
+      0,
+      770,
+      500
+    ],
+    "size": [
+      770,
+      500
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "book/prop.webp",
+    "source": "exec-e615cdb5-7305-4918-a180-a91c9e64417e.png",
+    "crop": [
+      770,
+      0,
+      1536,
+      500
+    ],
+    "size": [
+      650,
+      394
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "book/part.webp",
+    "source": "exec-e615cdb5-7305-4918-a180-a91c9e64417e.png",
+    "crop": [
+      0,
+      500,
+      770,
+      1024
+    ],
+    "size": [
+      632,
+      450
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "book/accent.webp",
+    "source": "exec-e615cdb5-7305-4918-a180-a91c9e64417e.png",
+    "crop": [
+      770,
+      500,
+      1536,
+      1024
+    ],
+    "size": [
+      650,
+      444
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "relay/scene.webp",
+    "source": "exec-9ca1ac7d-7168-4676-9ec6-6d0a3c873405.png",
+    "crop": [
+      0,
+      0,
+      766,
+      508
+    ],
+    "size": [
+      766,
+      508
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "relay/prop.webp",
+    "source": "exec-9ca1ac7d-7168-4676-9ec6-6d0a3c873405.png",
+    "crop": [
+      770,
+      0,
+      1536,
+      508
+    ],
+    "size": [
+      650,
+      431
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "relay/part.webp",
+    "source": "exec-9ca1ac7d-7168-4676-9ec6-6d0a3c873405.png",
+    "crop": [
+      0,
+      516,
+      766,
+      1024
+    ],
+    "size": [
+      650,
+      431
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "relay/accent.webp",
+    "source": "exec-9ca1ac7d-7168-4676-9ec6-6d0a3c873405.png",
+    "crop": [
+      770,
+      516,
+      1536,
+      1024
+    ],
+    "size": [
+      650,
+      431
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "toys/car.webp",
+    "source": "exec-a8f3f4e0-293d-4096-ac6a-6255c26e7ae3.png",
+    "crop": [
+      0,
+      0,
+      575,
+      510
+    ],
+    "size": [
+      240,
+      214
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "toys/balloon.webp",
+    "source": "exec-a8f3f4e0-293d-4096-ac6a-6255c26e7ae3.png",
+    "crop": [
+      590,
+      0,
+      1024,
+      510
+    ],
+    "size": [
+      225,
+      260
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "toys/robot.webp",
+    "source": "exec-a8f3f4e0-293d-4096-ac6a-6255c26e7ae3.png",
+    "crop": [
+      1040,
+      0,
+      1536,
+      510
+    ],
+    "size": [
+      240,
+      243
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "toys/teddy.webp",
+    "source": "exec-a8f3f4e0-293d-4096-ac6a-6255c26e7ae3.png",
+    "crop": [
+      0,
+      515,
+      510,
+      1024
+    ],
+    "size": [
+      240,
+      235
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "toys/plane.webp",
+    "source": "exec-a8f3f4e0-293d-4096-ac6a-6255c26e7ae3.png",
+    "crop": [
+      525,
+      515,
+      1035,
+      1024
+    ],
+    "size": [
+      240,
+      231
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "toys/puppet.webp",
+    "source": "exec-a8f3f4e0-293d-4096-ac6a-6255c26e7ae3.png",
+    "crop": [
+      1040,
+      515,
+      1536,
+      1024
+    ],
+    "size": [
+      240,
+      242
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "ui/primary.webp",
+    "source": "exec-0ffa7562-1797-4382-8b7d-fadb9f0553ab.png",
+    "crop": [
+      0,
+      100,
+      765,
+      420
+    ],
+    "size": [
+      700,
+      291
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "ui/secondary.webp",
+    "source": "exec-0ffa7562-1797-4382-8b7d-fadb9f0553ab.png",
+    "crop": [
+      775,
+      100,
+      1536,
+      420
+    ],
+    "size": [
+      700,
+      287
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "ui/plaque.webp",
+    "source": "exec-0ffa7562-1797-4382-8b7d-fadb9f0553ab.png",
+    "crop": [
+      50,
+      550,
+      940,
+      930
+    ],
+    "size": [
+      700,
+      293
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "ui/medal.webp",
+    "source": "exec-0ffa7562-1797-4382-8b7d-fadb9f0553ab.png",
+    "crop": [
+      960,
+      420,
+      1520,
+      1024
+    ],
+    "size": [
+      355,
+      400
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  }
+]
