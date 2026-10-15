@@ -20,7 +20,7 @@
      activity('question-detective','u3detective',{title:'Question Detective',icon:'question'}),
      activity('match-answer','u3answer',{title:'Answer Islands',icon:'matching'}),
      activity('build-sentence','u3sentence',{title:'Sentence Express',icon:'sentence'}),
-     activity('listen-decide','u3decide',{title:'Listen & Decide',icon:'listening'}),
+     activity('listen-decide','u3decide',{title:'Toy Machine',image:'assets/toy-machine/cabinet.webp',icon:'listening'}),
      activity('talk-to-toy-buddy','u3buddy',{title:'Talk to Toy Buddy'})]},
     3:{title:'Sounds and letters: Gg',description:'Meet G and g. Listen, sort, trace and say girl and guitar.',status:'available',targetLanguage:['G g','girl','guitar'],activities:[
      activity('meet-gg','u3ggmeet',{title:'Learn Gg',image:'assets/unit3/lesson3/art/sign-gg.webp',icon:'flashcards'}),activity('sound-detective','u3ggsound',{title:'Sound Garden',image:'assets/sound-garden/sprout.webp',icon:'listening'}),activity('catch-g','u3ggcatch',{title:'Find Gg',image:'assets/unit3/lesson3/art/bubble-capital.webp',icon:'question'}),activity('big-small','u3ggsort',{title:'Gg Maze Relay',image:'assets/gg-maze-relay/garden.webp',icon:'matching'}),activity('fix-word','u3ggfix',{title:'Build & Say',image:'assets/unit3/lesson3/art/missing-g.webp',icon:'sentence'}),activity('trace-say','u3ggtrace',{title:'Trace & Write',image:'assets/unit3/lesson3/art/trace-pencil.webp',icon:'book'}),activity('final-challenge','u3ggfinal',{title:'My Gg Check',image:'assets/unit3/lesson3/art/trophy.webp',icon:'question',final:true})]}
