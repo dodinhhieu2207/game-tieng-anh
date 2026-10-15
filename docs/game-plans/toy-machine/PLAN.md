@@ -1,5 +1,9 @@
 # Toy Machine - delivery plan and evidence
 
+## UI asset revision - 2026-10-15
+
+User found plain instruction, collection and Yes/No controls visually unfinished. Kept selected PixiJS + GSAP stack and all learning/scoring/audio behavior. Created dedicated transparent illustrated UI atlas: mint/honey mission frame, green Yes face, coral No face, collection pocket. Text remains accessible DOM, not baked lettering. Framed collection/points tray and large complete-sentence choices with check/cross symbols; no reliance on color alone. Five-width local full game regression and edge tests passed; reviewed question/collection/mobile screens. Corrected nine-slice corner area after visual review to prevent screw stretching. Skills read/applied for revision: imagegen, interaction-design, frontend-design, design-critique. Status: implemented, public verification follows deployment.
+
 2026-10-15. Status: implemented and verified on GitHub Pages, functional release 61f7c95. User explicitly chose A: PixiJS + GSAP, layered scene and sourced SFX. Approved placement replaces Listen & Decide, preserving route and progress.
 
 ## Implemented placement and objective
