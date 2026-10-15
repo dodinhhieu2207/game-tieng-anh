@@ -1,5 +1,7 @@
 # Gg lesson rebuild — observed audit and plan
 
+Activity 4 update 2026-10-15: Match G and g is now Gg Maze Relay. Same big-small route/u3ggsort/progress key, with the new two-team gate maze adapter loaded after the workshop. Its current rules, validation and delivery are in ../gg-maze-relay/RULES.md and PLAN.md; older pairing descriptions below are historical.
+
 ## Writing-only request - 2026-10-15
 
 Delivery PASS: functional release df7423d, Pages run 38660766602 success. Public source parity passed. Public gg-trace-writing-only.spec.cjs completed all eight trace/copy rounds with actual pointer input, no voice prompts/microphone/ASR requests, eight writing-only task records and three stars. Local six-activity regression/five widths also passed, including the separate speaking routes. Desktop mirror synchronized. This acceptance result supersedes the pending status below.

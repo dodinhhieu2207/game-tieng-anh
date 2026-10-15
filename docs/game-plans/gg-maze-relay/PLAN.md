@@ -1,6 +1,6 @@
 # Gg Maze Relay - implementation plan
 
-Date: 2026-10-15. Status: implemented and locally validated; public release gate pending.
+Date: 2026-10-15. Status: implemented and verified on GitHub Pages, functional release 4fd997b.
 
 ## Scope and chosen approach
 
@@ -27,9 +27,11 @@ Setup (Sun/Moon, first-team choice) -> mission -> choose (three reachable gates)
 - [x] Test correct/wrong/hint, both starting teams, ties, equal exposure, replay and old best stars.
 - [x] Audio-error/mute/rapid clicks/keyboard/hidden/exit/render fallback/reduced motion.
 - [x] Five widths, actual-speed motion recording and visual critique.
-- [ ] Public served-source/asset verification and complete live match.
+- [x] Public served-source/asset verification and complete live match.
 
 ## Evidence/limits
+
+Public gate PASS: Pages run 38690254914 completed successfully; gg-maze-public-assets.spec.cjs verified served index, Activity 4 metadata, both modules and both new WebP hashes. gg-maze-relay.spec.cjs passed against the live Pages URL: two full matches, both starting teams, score/hint/tie behavior, old best stars, five widths/visible gate bounds, reduced motion and cleanup. Desktop mirror synchronized. Final visual review used the shipped source; no claims of measured learning gains or device performance.
 
 Local tests PASS: gg-maze-relay.spec.cjs completed two matches (both starters), exact wrong/hint score and tie behavior, prior best stars, all five widths with visible 48px gates, reduced motion and cleanup. gg-maze-edges.spec.cjs covers blocked Pixi/static fallback, audio-error/retry/silent without penalty, audio-ended gating, mute, keyboard and rapid-click deduplication. Existing five Gg workshop activities regression passed. Visual critique found unequal letter sizes and clipped mobile board; both corrected and test asserts actual gate bounds. Main recordings in tests/gg-maze-video; six timestamped frames reviewed from actual-speed source via gg-maze-motion-review.cjs. watch-video was attempted but lacked ffprobe; browser video decoding used locally without transcription. Movement uses the approved still girl sprite along a GSAP path, not a skeletal walking animation. Shared practice stars do not measure individual reading or pronunciation.
 
