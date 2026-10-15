@@ -1,4 +1,4 @@
-# Toy Machine - proposed rules
+# Toy Machine - rules
 
 Scope: Unit 3 Lesson 2, Is it a ...? User accepted the three-reel lever concept and explicitly requires repository-backed animation/SFX and dedicated layered art. Read root RULES.md and docs/GAME_WORKFLOW.md. User selected PixiJS + GSAP, layered scene and sourced SFX; continue without re-asking.
 

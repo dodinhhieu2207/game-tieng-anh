@@ -1,8 +1,8 @@
-# Toy Machine - proposal and research checkpoint
+# Toy Machine - delivery plan and evidence
 
-2026-10-15. Status: implemented and locally validated; public gate pending. User explicitly chose A: PixiJS + GSAP, layered scene and sourced SFX. Approved placement replaces Listen & Decide, preserving route and progress.
+2026-10-15. Status: implemented and verified on GitHub Pages, functional release 61f7c95. User explicitly chose A: PixiJS + GSAP, layered scene and sourced SFX. Approved placement replaces Listen & Decide, preserving route and progress.
 
-## Proposed placement and objective
+## Implemented placement and objective
 
 Unit 3 Lesson 2: replace Listen & Decide (listen-decide/u3decide), keep stable route/progress and existing Talk to Toy Buddy. Three reels with a lever, toy collection and a short grammar decision. Matching reels open the challenge; correct Yes, it is / No, it isn't earns the learning points. Visual-choice evidence is separate from speaking evidence. Start with existing answer controls and approved voice; optional speaking must reuse existing Cloudflare contract without claiming pronunciation scoring.
 
@@ -14,7 +14,7 @@ B: GSAP + DOM/SVG reels with same sourced sound pack and art. Less rendering wor
 
 Official references checked: https://pixijs.com/7.x/examples/advanced/slots (legacy reel/mask example, reference only; needs v8 adaptation), https://github.com/pixijs/pixijs (MIT renderer), https://github.com/greensock/gsap-skills (official guidance; not installed/claimed as used yet), https://github.com/goldfire/howler.js (audio alternative inspected, not selected). GSAP uses the existing vendor license, not assumed MIT.
 
-Sound candidate libraries: https://kenney.nl/assets/interface-sounds and https://kenney.nl/assets/casino-audio , both CC0 as listed by publisher. These are candidates, not proof of suitable lever/reel clips. Audition actual files, supplement with a licensed mechanical source if needed, then record exact filename/URL/license and cue map. No audio files selected or downloaded at this checkpoint.
+Sound source libraries: https://kenney.nl/assets/interface-sounds and https://kenney.nl/assets/casino-audio , both CC0 as listed by publisher. Five original source files selected/copied and technically checked; exact filenames, URLs, license files, cue volumes and subjective ear-review limitation are recorded in assets/toy-machine/README.md. No new TTS generated: approved Higgs questions/answers reused.
 
 ## Asset/motion direction
 
@@ -31,7 +31,7 @@ Skills already read for this proposal: frontend-design and interaction-design. P
 - [x] User selected A: PixiJS + GSAP, layered scene and sourced SFX. Do not re-ask.
 - [x] Final storyboard, layered asset inventory, exact SFX decode/sample/credits. Subjective ear review remains the explicit follow-up below.
 - [x] Implement and verify learning/scoring/lifecycle/audio, including final full-scene rerun after pivot/filter cleanup.
-- [ ] Visual/motion/audio self-review, five widths, public deployment verification.
+- [x] Visual/motion/source-audio technical review, five widths and public deployment verification. Subjective ear preference remains a follow-up.
 
 ## Implementation checkpoint
 
@@ -42,3 +42,7 @@ Art: new cabinet, independent lever (with runtime silhouette mask), independent 
 SFX sources/filenames/licenses now recorded in assets/toy-machine/README.md. Five original CC0 OGG sources copied unchanged. Browser decoding/durations and actual playback requests verified. Dice-shake recording repurposed at low volume for the reel rattle; not represented as a real motor recording. Sample excerpt built/emitted, but audio input is unsupported by this model session: subjective timbre/mix approval is an explicit user review follow-up rather than a falsely claimed ear audition.
 
 Skills read/applied: imagegen, frontend-design, interaction-design, design-critique; official gsap-timeline guide read from the repository, not installed. Existing licenses retained. Local tests passed five-toy completion, wrong/correct scoring, balanced questions, no spin score, old best stars, bounded held reels, five widths, reduced motion, audio-ended/error/retry/text-continuation, mute, keyboard, actual lever drag, rapid-click guards, mid-spin exit and static fallback. Other five Lesson 2 scenes still navigate correctly. Final regression rerun follows pivot/filter cleanup changes. Video in tests/toy-machine-video; six timestamped decoded frames reviewed for masked blur, staggered stopping and held reels. Screenshots include ready/question/prize/result and all five widths. Visual findings fixed: lever/socket offset, exterior lever haze, disabled spin control clutter under question.
+
+## Public delivery - 2026-10-15
+
+PASS functional release 61f7c95. Pages run 38700254231 succeeded. toy-machine-public-assets.spec.cjs verified served index, metadata, JS/CSS, three WebP and five OGG hashes. toy-machine.spec.cjs passed against the actual Pages URL: complete five-toy collections with first/retry points, balanced polarity, held reels bounded to two spins, no points for matching alone, sourced SFX played, best prior stars, five widths, reduced motion and cleanup. Local edge suite additionally passed actual lever drag, blocked renderer/static fallback, audio-ended/error/retry/text mode, mute, keyboard and mid-spin departure; other five Lesson 2 activities navigated correctly. Desktop mirror synchronized. Source samples were browser-decoded and made available for playback; this session cannot provide subjective ear approval. No child-learning or device-performance certification is claimed.
