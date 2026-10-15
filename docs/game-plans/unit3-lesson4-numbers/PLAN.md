@@ -1,6 +1,12 @@
 # Unit 3 Lesson 4 - Number Play Studio
 
-Updated 2026-10-15. Stage: implemented and locally checked; website delivery pending. User explicitly selected A: GCompris + Sugarizer as educational references, existing PixiJS + GSAP for rendering. Do not re-ask. Lesson placement confirmed.
+Updated 2026-10-15. Stage: implemented and verified on GitHub Pages, release 186a632. User explicitly selected A: GCompris + Sugarizer as educational references, existing PixiJS + GSAP for rendering. Do not re-ask. Lesson placement confirmed.
+
+## Public delivery
+
+PASS. Functional release 186a632; Pages run 38750946294 succeeded. Public parity verified 57 source/config/art/audio files, including the 34-image catalog. Unit 3 -> Lesson 4 -> Gift Workshop navigation opened correctly with six activity cards. Full six-activity suite passed against actual GitHub Pages: complete rounds/progress, correct numeral-word-quantity logic, equal relay points, all six games at five widths, touch, undo/retry, reduced motion and cleanup. AI acceptance is mocked in that gameplay suite; separate live Cloudflare checks used generated adult Higgs seven/eight clips, accepted correct targets and rejected opposite targets. Worker deployed version 896d9328-0dc4-4713-aa3f-9ed26081279e. Desktop mirror synchronized.
+
+Number Parade's first two rounds additionally model one-to-one counting: independently reveal each toy, wait for the corresponding Higgs count word to finish, then allow the child's numeral/word choice. Subsequent activities practise the same quantities through different representations. No single score is presented as proof of general mastery. Subjective audio timbre review and real-child ASR/classroom effectiveness remain unclaimed.
 
 ## Implementation and evidence checkpoint
 
@@ -47,15 +53,15 @@ Every activity needs: layered background/midground/play surface/foreground, inde
 
 ## Learning and state logic
 
-Provisional stable activity IDs to confirm at integration: number-parade, toy-detective, gift-workshop, number-snap, say-open, toy-relay under /unit/3/lesson/4. No pre-existing Lesson 4 progress IDs were found in data/units.js.
+Registered stable activity IDs: number-parade, toy-detective, gift-workshop, number-snap, say-open, toy-relay under /unit/3/lesson/4. No pre-existing Lesson 4 progress IDs were replaced.
 
 Per round: entering -> instruction/audio -> ready -> selecting/manipulating or recording -> checking -> retry/unclear/error OR accepted -> finite outcome motion -> next. Each toy has a unique ID; move/undo updates the exact set, not an accumulated tap counter. Difficulty changes between rounds, not during child input. Colors/positions balanced; answer target separate from prompt display and input. AI errors do not consume a valid attempt. First practice uses position/count supports; later check removes exact target slot count and verifies actual cardinality. Never infer mastery from assist-driven success.
 
-Audio audit pending. Use approved Higgs identity for count names, number words, quantities, simple instructions and completion, review new takes before final audio acceptance. Keep existing Cloudflare path; no new provider or silent browser-voice substitution. SFX provenance to be selected per physical action; no reusing prior reel/train/plane cue bundle as this lesson's sound design.
+Eight Higgs number words and five sourced SFX are implemented; exact texts, hashes and technical checks in the asset README/manifest. Instructions remain accessible English text; this release does not claim a newly voiced full instruction/quantity-phrase bank. Same Cloudflare provider; no silent browser-voice substitution or reuse of previous reel/train/plane cue bundle. Ear-based acceptance remains a listening follow-up.
 
 ## Skills and responsibility
 
-Read/applied to proposal: product-brainstorming (earlier concept), frontend-design and interaction-design (art/input/state constraints). Planned, not yet executed: imagegen for all game-bound raster layers; design-critique for actual scenes and real-time recordings; testing/deploy skills as scope requires. No external skill installation performed. Read applicable full skill and official engine examples before implementation; record exact reference files actually used, not a list of package names alone.
+Read/applied: product-brainstorming (concept), frontend-design, interaction-design, imagegen and design-critique; backend contract skills listed in the implementation checkpoint. Native browser decoding reviewed eight timestamped frames from real-duration motion video. No external skill installation performed; do not label planned engineering plugins as used.
 
 ## Delivery checkpoints
 
@@ -69,6 +75,6 @@ Read/applied to proposal: product-brainstorming (earlier concept), frontend-desi
 - [x] Higgs transcript/decode and sourced SFX technical checks; number-only AI contract and failure cases. Subjective ear approval remains a follow-up; phrase speaking not shipped.
 - [x] Gameplay/progress/touch/capture/audio-ended/retry/fallback/cleanup checks.
 - [x] All six at five widths; real-duration motion capture, frame observations and visual critique fixes.
-- [ ] Public deployment only after implementation and checks; verify served source/assets and a real public playthrough.
+- [x] Public deployment, 57-file parity, navigation and full public playthrough suite.
 
-Public release is not confirmed until the delivery entry below records served parity and public gameplay checks. No general smoothness, child-ASR accuracy or educational effectiveness certification claimed.
+Public delivery evidence is recorded above. No general smoothness, child-ASR accuracy or educational effectiveness certification claimed.

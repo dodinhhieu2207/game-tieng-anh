@@ -13,4 +13,4 @@ Read root RULES.md and docs/GAME_WORKFLOW.md. User confirmed Unit 3 Lesson 4 fro
 - Proposed new route /unit/3/lesson/4; inspect registration before implementation. Lesson 4 currently has no activities. New stable IDs/progress keys must be documented and use existing app progress; preserve all existing routes and achievements.
 - Validate desktop/mobile/touch/keyboard, alpha/crops and pivots, numerical correctness, replay/exit, blocked audio/mic, offscreen lifecycle, five widths. Review real-time video and frame timings before any smoothness claim. Preserve source assets/prompts/provenance.
 
-Status: research and design specification only. No runtime change, asset generation or deployment claimed.
+Status: implemented; current delivery evidence and limits are in PLAN.md. Preserve registered IDs and approved assets during subsequent revisions.
