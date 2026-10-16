@@ -1,6 +1,6 @@
 # Toy Catch — plan
 
-Updated 2026-10-16. Status: implementation and local gates passed; public delivery pending.
+Updated 2026-10-16. Status: implementation, local and public delivery gates passed. Classroom engagement and subjective voice approval are not claimed.
 
 ## Decision and scope
 
@@ -36,7 +36,7 @@ Pause freezes active objects and spawning. Replay prompt pauses drive and resume
 - [x] Correct/mismatched/duplicate pickup and round check/progress; missed items recycle by scene bounds, no penalty.
 - [x] Input/touch/keyboard, pause/audio/mute/reduced motion/fallback/resize/exit tested.
 - [x] All five widths and real-duration motion capture; critique fixes.
-- [ ] Public source/asset parity, navigation and playable public checks.
+- [x] Public source/asset parity, navigation and playable public checks.
 
 ## Local validation checkpoint
 
@@ -46,5 +46,15 @@ Pause freezes active objects and spawning. Replay prompt pauses drive and resume
 - `tests/number-studio.spec.cjs`: six existing Numbers games regression passed after integration.
 - Critique fixes: preserve art aspect ratio; finish only after final pickup flight; resolve flight cleanup on resize/exit; clear stale shadow state; road accumulator freezes on pause; mobile collection uses two rows of four; native 60-frame cap via `fps.limit` (Phaser v3.90 TimeStep source); calm skip control prevents a forced mismatch.
 - Six Higgs instructions passed ASR text check. Browser playback/decode paths tested; subjective human listening approval is still unclaimed.
+
+## Public delivery checkpoint
+
+- Code/art release `d70350e209f564d1a5750f4b14691cb35d593711`, Pages build/deployment run `38835699878` completed successfully on 2026-10-16.
+- Play: https://dodinhhieu2207.github.io/game-tieng-anh/index.html?release=d70350e-catch#/unit/3/lesson/4?mode=practice&activity=toy-catch
+- Gallery: https://dodinhhieu2207.github.io/game-tieng-anh/assets/toy-catch/catalog.html?release=d70350e-catch
+- `TC_RELEASE=d70350e-catch tests/toy-catch-public.spec.cjs`: 37 served code/font/art/audio/license files matched local content; Lesson 4 shows seven cards; click-through loads Phaser 3.90.0 and the first natural moving pickup succeeds.
+- `TC_BASE=<public release URL> tests/toy-catch.spec.cjs`: six complete real-overlap rounds, points/progress, five widths, both modes, preserved old activity IDs and cleanup all passed against public files. Boundary tests use controlled spawn positions; separate natural-play capture above verifies actual pace/steering, and the public smoke verifies a natural first pickup.
+- Browser environment: headless Microsoft Edge, explicit autoplay allowance for playback tests; autoplay denial has a tested text/retry recovery path. No child recordings or classroom trial. Native frame limit is a configuration, not a claim of rendered 60 FPS on classroom hardware.
+- Bounded implementation files and reviewed previews synchronized to the user-named Desktop mirror; unrelated working files left intact.
 
 Do not mark complete until the public game and necessary gates pass. Technical checks do not establish child engagement, learning efficacy or device-wide FPS. No new speech-accuracy claim.
