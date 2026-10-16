@@ -1,3 +1,4 @@
+// New Detective room layout/motion lives in its dedicated suite.
 const {chromium}=require('C:/Users/Admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const assert=require('node:assert/strict');
 const BASE=process.env.NS_BASE||'http://127.0.0.1:8770/index.html';
@@ -26,7 +27,7 @@ const BASE=process.env.NS_BASE||'http://127.0.0.1:8770/index.html';
  await p.emulateMedia({reducedMotion:'reduce'});
  for(const width of [320,390,768,1024,1366]){
   await p.setViewportSize({width,height:1050});
-  for(const kind of ['gift-workshop','number-parade','toy-detective','number-snap','say-open','toy-relay']){
+  for(const kind of ['gift-workshop','number-parade','number-snap','say-open','toy-relay']){
    await go(kind);await p.waitForFunction(()=>[...document.querySelectorAll('.number-studio img')].every(i=>i.complete&&i.naturalWidth>0));
    const geometry=await p.evaluate(()=>{const s=document.querySelector('.ns-scene').getBoundingClientRect(),q=document.querySelector('.ns-prompt').getBoundingClientRect();return {overflow:document.documentElement.scrollWidth>innerWidth,prompt:q.left>=s.left-1&&q.right<=s.right+1,font:getComputedStyle(document.querySelector('.ns-prompt')).fontFamily,appFont:getComputedStyle(document.body).fontFamily};});
    assert(!geometry.overflow,kind+' overflow '+width);assert(geometry.prompt,kind+' prompt clipping '+width);assert.equal(geometry.font,geometry.appFont,'inherit actual app typeface');assert(geometry.font.includes('App Outfit'),'approved local Outfit family loaded');
@@ -34,5 +35,5 @@ const BASE=process.env.NS_BASE||'http://127.0.0.1:8770/index.html';
    await p.screenshot({path:`tests/number-polish-${kind}-${width}.png`,fullPage:true});
   }
  }
- assert.deepEqual(errors,[]);await ctx.close();await b.close();console.log('PASS persistent pickup/place/undo, pointer journey + exit, six game compositions at five widths, prompt bounds, font family, image decode and touch controls. This is not a child engagement or device-FPS study.');
+ assert.deepEqual(errors,[]);await ctx.close();await b.close();console.log('PASS persistent pickup/place/undo, pointer journey + exit, five unchanged game compositions at five widths, prompt bounds, font family, image decode and touch controls. This is not a child engagement or device-FPS study.');
 })().catch(e=>{console.error(e);process.exit(1);});

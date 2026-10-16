@@ -1,0 +1,168 @@
+[
+  {
+    "file": "room.webp",
+    "source": "exec-9f4ff448-8812-4e3d-bea3-9844fb5a9e06.png",
+    "crop": null,
+    "size": [
+      1536,
+      1024
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "c30d15171dfa59bf418a288682f9a9a01b9b0d9451231371902be5f16df24333"
+  },
+  {
+    "file": "cabinet.webp",
+    "source": "exec-c1b06d31-a7bc-423e-b5c7-7dd4b1b1f322.png",
+    "crop": [
+      0,
+      0,
+      768,
+      512
+    ],
+    "size": [
+      671,
+      477
+    ],
+    "alpha": [
+      0,
+      254
+    ],
+    "sha256": "14dc2420d5345d478c077dc68bfed81419f02ae0deed0f2699a6252bf15b013b"
+  },
+  {
+    "file": "door.webp",
+    "source": "exec-a3a1a169-a471-42fd-930d-ace4b18cad8e.png",
+    "crop": [
+      0,
+      0,
+      1665,
+      945
+    ],
+    "size": [
+      800,
+      350
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "abf0cefbb9551ad94540a267749edbe110bc8fada046fddbd0db3606467a3b28"
+  },
+  {
+    "file": "basket.webp",
+    "source": "exec-c1b06d31-a7bc-423e-b5c7-7dd4b1b1f322.png",
+    "crop": [
+      0,
+      532,
+      783,
+      1024
+    ],
+    "size": [
+      710,
+      427
+    ],
+    "alpha": [
+      0,
+      254
+    ],
+    "sha256": "979221253789f738dc5b1868da0e82ade4bacd55ecec55ba8f49e43d4c801d38"
+  },
+  {
+    "file": "lid.webp",
+    "source": "exec-c1b06d31-a7bc-423e-b5c7-7dd4b1b1f322.png",
+    "crop": [
+      799,
+      563,
+      1536,
+      1024
+    ],
+    "size": [
+      674,
+      268
+    ],
+    "alpha": [
+      0,
+      254
+    ],
+    "sha256": "df9fd636434940059b2d71adf9e87e9d400a833c9fb98579d70556e66095a07d"
+  },
+  {
+    "file": "alcove.webp",
+    "source": "exec-b967fe0e-9bdf-4a1b-b5d1-6c2163fac14a.png",
+    "crop": [
+      0,
+      0,
+      968,
+      645
+    ],
+    "size": [
+      715,
+      589
+    ],
+    "alpha": [
+      0,
+      254
+    ],
+    "sha256": "4326ba5fc185d647b874f81b523277c7f50489bf100e1183230702517154be82"
+  },
+  {
+    "file": "curtain.webp",
+    "source": "exec-b967fe0e-9bdf-4a1b-b5d1-6c2163fac14a.png",
+    "crop": [
+      968,
+      0,
+      1536,
+      645
+    ],
+    "size": [
+      403,
+      601
+    ],
+    "alpha": [
+      0,
+      254
+    ],
+    "sha256": "4b47ea540082283d5c1ba8d5e64b81fc17554db9886f1ca7903c98af960c3ba1"
+  },
+  {
+    "file": "tray.webp",
+    "source": "exec-b967fe0e-9bdf-4a1b-b5d1-6c2163fac14a.png",
+    "crop": [
+      0,
+      645,
+      1029,
+      1024
+    ],
+    "size": [
+      800,
+      249
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "d46292b79de497970c214235b82e2d5e45daa90725bb96da935a8fdcd58c8b4e"
+  },
+  {
+    "file": "badge.webp",
+    "source": "exec-b967fe0e-9bdf-4a1b-b5d1-6c2163fac14a.png",
+    "crop": [
+      1029,
+      645,
+      1536,
+      1024
+    ],
+    "size": [
+      346,
+      326
+    ],
+    "alpha": [
+      0,
+      254
+    ],
+    "sha256": "a9f2f5e0c4cd2a0567ab64492ea5b86a9292d8f42c2bfcae59869e4b005775ab"
+  }
+]
