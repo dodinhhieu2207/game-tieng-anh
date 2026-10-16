@@ -2,6 +2,8 @@
 
 Date: 2026-10-16. Scope: the six Number Studio activities only.
 
+Later checkpoint, same day: the user requested corrections and additional assets/effects across this group. The scoped visual revision is implemented and deployed as f2b66b5; see PLAN.md for exact changes and validation. The findings and target briefs below remain the original review, not a claim that every proposed new mechanic has shipped. User subjective acceptance remains open.
+
 ## Verdict
 
 The functional release remains delivered, but its visual and interaction quality has not been accepted by the user. Reopen the design checkpoint. Functional tests, asset counts and library integration do not establish engagement or finished motion quality.

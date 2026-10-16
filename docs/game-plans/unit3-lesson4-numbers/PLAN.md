@@ -12,7 +12,7 @@ Assets: 7 additions in assets/number-studio/v2, existing 34 preserved, gallery n
 
 Local evidence: full six-game playthrough/progress/five-width regression PASS; real capture with mocked AI unclear/forged/correct + audio/fallback/input edges PASS; new persistent-object, pointer journey/exit and all-six × five-width composition/font/image/touch suite PASS. Real-duration gift/book/puzzle capture PASS and browser-decoded frames inspected. Final book paper-surface adjustment and resolved-state spacing are presentation-only refinements; final capture/public verification is recorded in the delivery checkpoint when complete. Mock acceptance is not child-ASR evidence; headless observations do not certify classroom device FPS. User visual/engagement acceptance remains open; do not label this taste-approved merely because tests pass.
 
-Delivery checkpoint: local validated revision; public deployment pending at this entry.
+Public checkpoint: f2b66b5, GitHub Pages run 38827117983 succeeded. All 68 source/config/art/audio/font files matched public content. Full six-game gameplay/progress/five-width suite PASS on GitHub Pages, and the new persistent object/pointer/exit/all-six composition/font/touch suite PASS there too. Desktop copy synchronized. Subsequent cleanup removes invisible duplicate book sprites; the motion test now checks the actual seven visible DOM images and supports a public base URL. Local motion capture passed after that cleanup; final public parity/capture is recorded below when complete. Subjective user acceptance remains open.
 
 ## Design checkpoint reopened — 2026-10-16
 

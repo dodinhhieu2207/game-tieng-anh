@@ -116,8 +116,7 @@
     const puzzle=this.$('.ns-puzzle');await this.motion.run(tl=>tl.to(puzzle,{y:-10,duration:.2,ease:'power2.out'}).to(puzzle,{y:0,duration:.25,ease:'power2.inOut'}));
    }else if(this.kind==='say-open'){
     const pop=this.$('.ns-book-pop');pop.hidden=false;
-    // Keep the scene-owned collection for lifecycle/quantity checks; DOM paper rig is the visible hinged page.
-    if(this.popup){this.popup.visible=false;this.popup.removeChildren().forEach(c=>c.destroy({texture:false}));for(let i=0;i<this.row.n;i++){const toy=new PIXI.Sprite(this.textures['toy-'+this.row.toy]);this.popup.addChild(toy);}}
+    // The hinged DOM page owns its visible countable objects; no hidden duplicate sprites.
     await this.motion.run(tl=>tl.fromTo(pop,{rotationX:78,opacity:0,y:18},{rotationX:0,opacity:1,y:0,duration:.72,ease:'power2.inOut'}).fromTo(pop.querySelectorAll('img'),{opacity:0},{opacity:1,duration:.24,stagger:.025},'<.35'));pop.style.transform='';pop.style.opacity='';
    }else{
     const name=this.art==='relay'?'pennant':this.art==='detective'?'medal':'rosette';const el=document.createElement('div');el.className='ns-scene-prize';el.innerHTML=this.detail(name);work.append(el);await this.motion.run(tl=>tl.fromTo(el,{y:20,opacity:0,rotation:-8},{y:0,opacity:1,rotation:0,duration:.48,ease:'back.out(1.15)'}));
