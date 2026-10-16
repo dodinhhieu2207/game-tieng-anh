@@ -30,7 +30,8 @@
      activity('gift-workshop','u3ngift',{title:'Gift Workshop',image:'assets/number-studio/gift/prop.webp',icon:'matching'}),
      activity('number-snap','u3nsnap',{title:'Number Snap',image:'assets/number-studio/snap/prop.webp',icon:'matching'}),
      activity('say-open','u3nsay',{title:'Say & Open',image:'assets/number-studio/book/prop.webp',icon:'question'}),
-     activity('toy-relay','u3nrelay',{title:'Toy Town Relay',image:'assets/number-studio/relay/accent.webp',icon:'matching',final:true})]}
+     activity('toy-relay','u3nrelay',{title:'Toy Town Relay',image:'assets/number-studio/relay/accent.webp',icon:'matching',final:true}),
+     activity('toy-catch','u3toycatch',{title:'Toy Catch',image:'assets/toy-catch/buggy.webp',icon:'matching'})]}
    }).map(lesson=>({...lesson,cardImage:`assets/shared-ui/unit3-navigation-lesson${lesson.id}.png`,cardAspect:'2 / 1',selectorLabel:['Toys','Grammar','Sounds and letters','Numbers','Review','Story'][lesson.id-1]}))}
   ],
   // The integrated Ellie lesson has no confirmed textbook lesson assignment.

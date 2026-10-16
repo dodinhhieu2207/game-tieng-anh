@@ -1,0 +1,92 @@
+[
+  {
+    "file": "road.webp",
+    "source": "exec-774746db-2673-46f2-903b-5c6e7a0f6027.png",
+    "crop": null,
+    "size": [
+      1500,
+      1000
+    ],
+    "alphaExtrema": [
+      255,
+      255
+    ],
+    "sha256": "4f90c189e6ecf27814848f42c93834bcd13a9fb6b85431ec5f84f2cc477915de"
+  },
+  {
+    "file": "buggy.webp",
+    "source": "exec-a94b7603-c9d8-4c7f-91d6-82c310ccab37.png",
+    "crop": [
+      0,
+      0,
+      627,
+      765
+    ],
+    "size": [
+      470,
+      695
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "sha256": "3c15a19c07550babc81d89cc8bae58f599c437090ac78f330fc926fe191db76a"
+  },
+  {
+    "file": "tire.webp",
+    "source": "exec-a94b7603-c9d8-4c7f-91d6-82c310ccab37.png",
+    "crop": [
+      727,
+      0,
+      1254,
+      765
+    ],
+    "size": [
+      238,
+      542
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "sha256": "6f67505816a118120ce36bfc6bcb7ab1a3f12e2acfe02a4661c14fa386e19e6f"
+  },
+  {
+    "file": "tree.webp",
+    "source": "exec-a94b7603-c9d8-4c7f-91d6-82c310ccab37.png",
+    "crop": [
+      0,
+      777,
+      627,
+      1254
+    ],
+    "size": [
+      407,
+      388
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "sha256": "1525884e428536fa2fbbd54bc268096ab6a3145ed9cfa3a073ba2e21be8fafa0"
+  },
+  {
+    "file": "badge.webp",
+    "source": "exec-a94b7603-c9d8-4c7f-91d6-82c310ccab37.png",
+    "crop": [
+      690,
+      777,
+      1254,
+      1254
+    ],
+    "size": [
+      294,
+      298
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "sha256": "52f066beba090e0306053b3c482275aaae9a6c01deee61e7248e88041f8c6809"
+  }
+]

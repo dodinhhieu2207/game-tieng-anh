@@ -1,0 +1,62 @@
+{
+  "engine": "Higgs V3 offline",
+  "voice": "Existing Unit 3 Belinda reference",
+  "referenceSha256": "8a6e483739144be6afa2735c41441d2970588fc089139685547a964c76510d07",
+  "clips": {
+    "cars": {
+      "src": "assets/toy-catch/audio/cars.mp3",
+      "text": "Collect seven cars.",
+      "sha256": "eee5129ff7ba19f83c60a7bb026ff1ac968356a0940224196fb7bd3080a15c08",
+      "qaTranscript": "Collect 7 cars.",
+      "transcriptMatch": true,
+      "duration": 1.84,
+      "humanReviewed": false
+    },
+    "balloons": {
+      "src": "assets/toy-catch/audio/balloons.mp3",
+      "text": "Collect eight balloons.",
+      "sha256": "2c7539f3bc80a904d3dbc1a9dfd6d205a411eea5dff66255caf213f5e902f6e3",
+      "qaTranscript": "Collect eight balloons.",
+      "transcriptMatch": true,
+      "duration": 1.8,
+      "humanReviewed": false
+    },
+    "robots": {
+      "src": "assets/toy-catch/audio/robots.mp3",
+      "text": "Collect seven robots.",
+      "sha256": "4f3ae553bdb55fa31527f4f536236dd43fc32869e17da296af110d40896b77e0",
+      "qaTranscript": "Collect 7 robots.",
+      "transcriptMatch": true,
+      "duration": 1.96,
+      "humanReviewed": false
+    },
+    "teddies": {
+      "src": "assets/toy-catch/audio/teddies.mp3",
+      "text": "Collect eight teddies.",
+      "sha256": "338f99c76e6d32597b5f760546459ba078e9c4d6fa2a9f9ae37c11fd608a57ef",
+      "qaTranscript": "Collect 8 teddies.",
+      "transcriptMatch": true,
+      "duration": 1.8,
+      "humanReviewed": false
+    },
+    "planes": {
+      "src": "assets/toy-catch/audio/planes.mp3",
+      "text": "Collect five planes.",
+      "sha256": "7ee5a3aa5f01429fc32a90a4795c6e05a5e250ac5754bdee535334bab0fafe41",
+      "qaTranscript": "Collect five planes.",
+      "transcriptMatch": true,
+      "duration": 1.96,
+      "humanReviewed": false
+    },
+    "puppets": {
+      "src": "assets/toy-catch/audio/puppets.mp3",
+      "text": "Collect six puppets.",
+      "sha256": "5e92394d31734954584e4e84e700b67fa5f27a7b1a24596e6149a14ab274ebe3",
+      "qaTranscript": "Collect six puppets.",
+      "transcriptMatch": true,
+      "duration": 1.88,
+      "humanReviewed": false
+    }
+  },
+  "limits": "Transcript check only; subjective timbre and suitability require listening."
+}
