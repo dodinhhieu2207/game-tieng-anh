@@ -37,6 +37,10 @@ All are unchanged Kenney Interface Sounds OGG files, CC0; original license in sf
 | reward | confirmation_002.ogg |
 | paper | scroll_003.ogg |
 
+## Visual additions — 2026-10-16
+
+Seven additional generated assets and their actual prompt/source/crop information are documented in [v2/README.md](v2/README.md). Gallery now contains 41 images. All original 34 images remain preserved. Actual app typography uses the bundled App Outfit family; the visual revision inherits it. The active scene sheet is shared/number-studio-scene.css. Scope and current validation are in the Lesson 4 plan.
+
 ## AI boundary and limits
 
 New number-word task uses existing Cloudflare service, exact recognized word/digit 1-8, balanced allowed targets and an empty neutral initial prompt. Live audit revealed that enumerating number vocabulary in the recognition prompt could prime a whole counting sequence; empty prompt passed seven/eight positive and opposite-target negative generated-Higgs audits. Not child recordings. Teen numbers, multiple numbers, guessed homophones and toy phrases are not silently accepted as one number. Phrase speaking is not included in this release. UNCLEAR/mic/network failures do not consume an error or points. Existing 419-case Worker contract remains passing.

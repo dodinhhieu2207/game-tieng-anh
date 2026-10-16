@@ -1,5 +1,7 @@
 # Toy Town Relay - implementation checkpoint
 
+2026-10-16 visual revision: visible cumulative team markers and clearer team turn, scene-integrated choices, ordered entrance, quieter shared controls and actual app Outfit typography. Equal paired target turns and tie support retained. This is presentation/feedback refinement, not a new construction mechanic. Parent plan records delivery/QA and subjective acceptance limits.
+
 2026-10-15. Implemented locally; public delivery tracked in ../unit3-lesson4-numbers/PLAN.md.
 
 Route: /unit/3/lesson/4?mode=practice&activity=toy-relay. Game u3nrelay; progress key 3/4/toy-relay. Selected runtime: existing PixiJS 8.22.0 + GSAP 3.15.0. Education sources are references, not installed platforms.

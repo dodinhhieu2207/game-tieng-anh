@@ -1,5 +1,7 @@
 # Toy Detective - implementation checkpoint
 
+2026-10-16 visual revision: persistent toy controls/found markers replace whole-grid recreation on each tap; clearer room grouping, generated magnifier, scene-integrated choices, ordered entrance and actual shared Outfit type. Exact target/distractor rules and undo retained. This is presentation/feedback refinement; a fully authored room-search layout remains a separate design target. Parent plan records delivery/QA and subjective acceptance limits.
+
 2026-10-15. Implemented locally; public delivery tracked in ../unit3-lesson4-numbers/PLAN.md.
 
 Route: /unit/3/lesson/4?mode=practice&activity=toy-detective. Game u3ndetective; progress key 3/4/toy-detective. Selected runtime: existing PixiJS 8.22.0 + GSAP 3.15.0. Education sources are references, not installed platforms.

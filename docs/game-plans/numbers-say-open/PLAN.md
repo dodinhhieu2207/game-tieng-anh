@@ -1,5 +1,7 @@
 # Say & Open - implementation checkpoint
 
+2026-10-16 visual revision: existing paper asset now uses a bottom-hinged DOM perspective rig; toys fade into the page at unchanged proportions instead of stretching the entire group. Same number recognition, capture silence, model-audio-ended gate and retry policy. Shared actual Outfit type and scene-first layout. Parent plan records delivery/QA and subjective acceptance limits.
+
 2026-10-15. Implemented locally; public delivery tracked in ../unit3-lesson4-numbers/PLAN.md.
 
 Route: /unit/3/lesson/4?mode=practice&activity=say-open. Game u3nsay; progress key 3/4/say-open. Selected runtime: existing PixiJS 8.22.0 + GSAP 3.15.0. Education sources are references, not installed platforms.

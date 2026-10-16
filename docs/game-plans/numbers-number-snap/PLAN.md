@@ -1,5 +1,7 @@
 # Number Snap - implementation checkpoint
 
+2026-10-16 visual revision: chosen numeral, word and exact quantity travel into the corresponding persistent piece; each step waits for its placement before accepting the next. Completion uses the child's actual filled board. Shared scene-first layout and actual app Outfit typography applied. Parent plan records delivery/QA and subjective acceptance limits; learning rules and route/progress keys unchanged.
+
 2026-10-15. Implemented locally; public delivery tracked in ../unit3-lesson4-numbers/PLAN.md.
 
 Route: /unit/3/lesson/4?mode=practice&activity=number-snap. Game u3nsnap; progress key 3/4/number-snap. Selected runtime: existing PixiJS 8.22.0 + GSAP 3.15.0. Education sources are references, not installed platforms.

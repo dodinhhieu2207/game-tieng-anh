@@ -610,5 +610,126 @@
       0,
       255
     ]
+  },
+  {
+    "file": "v2/gift-open.webp",
+    "source": "exec-b1fdf740-35b5-477e-a16d-f9847c77bfa4.png",
+    "crop": [
+      0,
+      0,
+      627,
+      627
+    ],
+    "size": [
+      552,
+      459
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "v2/gift-lid.webp",
+    "source": "exec-b1fdf740-35b5-477e-a16d-f9847c77bfa4.png",
+    "crop": [
+      627,
+      0,
+      1254,
+      627
+    ],
+    "size": [
+      556,
+      432
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "v2/gift-bow.webp",
+    "source": "exec-b1fdf740-35b5-477e-a16d-f9847c77bfa4.png",
+    "crop": [
+      0,
+      627,
+      627,
+      1254
+    ],
+    "size": [
+      504,
+      382
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "v2/gift-wrapped.webp",
+    "source": "exec-b1fdf740-35b5-477e-a16d-f9847c77bfa4.png",
+    "crop": [
+      627,
+      627,
+      1254,
+      1254
+    ],
+    "size": [
+      558,
+      482
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "v2/gift-desk.webp",
+    "source": "exec-1a6e4203-acd3-4494-9b80-c60824411989.png",
+    "crop": null,
+    "size": [
+      1500,
+      857
+    ],
+    "alphaExtrema": [
+      255,
+      255
+    ]
+  },
+  {
+    "file": "v2/magnifier.webp",
+    "source": "exec-a83233c2-a570-4eed-b22d-ffa45d36236e.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "size": [
+      400,
+      393
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "v2/rosette.webp",
+    "source": "exec-8a2cf99a-3275-441e-b028-071b7793e473.png",
+    "crop": [
+      0,
+      0,
+      1289,
+      1220
+    ],
+    "size": [
+      379,
+      450
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ]
   }
 ]

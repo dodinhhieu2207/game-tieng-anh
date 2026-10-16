@@ -1,5 +1,23 @@
 # Unit 3 Lesson 4 - Number Play Studio
 
+## Visual revision implementation — 2026-10-16
+
+User requested skill-based review, correction and added assets/effects across this Numbers group. Existing PixiJS + GSAP choice retained. Read/applied frontend-design, interaction-design, design-critique and imagegen; checked official GSAP timeline/position-parameter documentation. No external skill installation or new engine.
+
+Implemented: one scene-first stylesheet for all six activities, replacing the former stacked cream/plaque treatment; question and choices within the scene; compact progress; app-consistent controls and type hierarchy; scoped ordered entrance sequence. The actual shared runtime font is bundled App Outfit 700/800, verified through computed browser styles. Initial Baloo declarations in index.html are overridden by shared/app-typography.css; the earlier conversational claim of active Baloo was corrected. No global font change.
+
+Gift Workshop: seven added generated assets include the quiet workbench, open box, lid, bow, wrapped gift, magnifier and award. Persistent source/inside slots replace wholesale DOM recreation. The same object moves through lift/travel/settle and undo, with pointer-following drag, tap/keyboard alternatives, front-wall occlusion, in-flight check guard, hinged lid and separate bow; subsequent rounds show completed gifts. Number Snap: chosen numeral/word/quantity visibly seats in its corresponding persistent piece. Say & Open: existing paper asset opens around its bottom hinge with DOM perspective; target toys retain their proportions. Detective: persistent found markers and new magnifier. Parade: stable count shelves and new award. Relay: visible cumulative team markers; original equal turns/scoring retained. The latter three are presentation/feedback refinements, not entirely new game mechanics or a completed room-search/construction redesign.
+
+Assets: 7 additions in assets/number-studio/v2, existing 34 preserved, gallery now 41. Built-in imagegen; source/prompt briefs and rejected atlas variants recorded in v2/README.md. Crop/export only; generated alpha preserved. Existing approved toys, Higgs clips, SFX, speech Worker, routes and progress keys unchanged. The old stylesheet is retained as source history but is not loaded by this release; the new sheet is not an override stack on it.
+
+Local evidence: full six-game playthrough/progress/five-width regression PASS; real capture with mocked AI unclear/forged/correct + audio/fallback/input edges PASS; new persistent-object, pointer journey/exit and all-six × five-width composition/font/image/touch suite PASS. Real-duration gift/book/puzzle capture PASS and browser-decoded frames inspected. Final book paper-surface adjustment and resolved-state spacing are presentation-only refinements; final capture/public verification is recorded in the delivery checkpoint when complete. Mock acceptance is not child-ASR evidence; headless observations do not certify classroom device FPS. User visual/engagement acceptance remains open; do not label this taste-approved merely because tests pass.
+
+Delivery checkpoint: local validated revision; public deployment pending at this entry.
+
+## Design checkpoint reopened — 2026-10-16
+
+The user reviewed all six games and finds the experience stiff, unfinished and insufficiently engaging. The previous functional delivery evidence below remains valid only for its stated checks; it does not establish visual/motion acceptance. See [the current design review](DESIGN_REVIEW_20261016.md) for screenshot/source findings, per-game revisions and the Gift Workshop reference brief. The existing PixiJS + GSAP choice stands; do not ask again. This review changes documentation only; the redesign is not yet implemented or deployed.
+
 Updated 2026-10-15. Stage: implemented and verified on GitHub Pages, release 186a632. User explicitly selected A: GCompris + Sugarizer as educational references, existing PixiJS + GSAP for rendering. Do not re-ask. Lesson placement confirmed.
 
 ## Public delivery
