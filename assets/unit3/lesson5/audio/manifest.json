@@ -127,6 +127,29 @@
         "ill",
         "insect"
       ]
+    },
+    "sound-h-vietnamese-cue": {
+      "src": "assets/unit3/lesson5/audio/sound-h-vietnamese-cue.mp3",
+      "status": "user-approved-2026-10-21-take-1",
+      "text": "H\u1edd.",
+      "kind": "teacher-requested Vietnamese teaching cue with vowel; not a bare English /h/",
+      "engine": "Higgs V3, existing Letter Land reference",
+      "seconds": 0.96,
+      "sha256": "ab76c1ffaf9fc29e80690b451c0d0843548451316b53e5b6af6e82c4038520da"
+    },
+    "chant-h-cue": {
+      "src": "assets/unit3/lesson5/audio/chant-h-cue.mp3",
+      "source": "User-approved Higgs sound cue + Higgs words with explicit pauses",
+      "soundKey": "sound-h-vietnamese-cue",
+      "sha256": "1a3dc309e5eb622402c5a4b37543a506b7323e0fdc4ae5cc16b5e3e4ed7159b1",
+      "words": [
+        "hat",
+        "horse"
+      ]
     }
+  },
+  "activeSound": {
+    "h": "sound-h-vietnamese-cue",
+    "i": "sound-i-v3-review"
   }
 }

@@ -29,3 +29,5 @@ Gates: generated art/source inspection; file/hash/audio QA; correct + wrong real
 ## Public delivery checkpoint
 
 Feature commit c104f7d, GitHub Pages run 39515487129 completed success. The full real-time game suite and edge suite both passed against https://dodinhhieu2207.github.io/game-tieng-anh/index.html?release=c104f7d-hi. All 45 selected visual/SFX/voice files matched SHA256 from the local manifests. Public suite includes five widths, both completed routes, approved sound recognition, ill repeated l, Learn H/I and Letter Land A–I, errors/retry/mute/hidden/touch/cleanup. Desktop mirror hash-verified for 57 release files; current QA reports and selected reviewed frames copied separately. No claim of classroom engagement, measured presented FPS, or AI pronunciation assessment.
+
+H sound revision 2026-10-21: teacher requested clear Vietnamese “hờ”, listened to two Higgs takes and approved take 1. Replace H Sound and H chant consistently in Learn, Letter Land and Pond sound tasks. Name H, I, hat/horse and all other clips unchanged. New filenames avoid stale cached audio; this is a teaching cue with a vowel, not a bare English /h/.
