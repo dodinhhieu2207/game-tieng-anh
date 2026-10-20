@@ -91,17 +91,17 @@
   },
   {
     "file": "words/insect.webp",
-    "sha256": "870c60d44a1f7aafcab0325565bd143b89783f0572ca917edff4bd866f29dcea",
-    "source": "exec-cbcca15d-fb6a-4c17-97b3-737ade466183.png",
+    "sha256": "1d0f2fbe1c998f6a7f96dceb7fe23129dd1708d05af959dcd10346ba3009194f",
+    "source": "exec-f69d89de-5e91-44cb-96ea-710da05f77c8.png",
     "crop": [
-      18,
-      80,
-      1214,
-      1214
+      31,
+      34,
+      1257,
+      1149
     ],
     "size": [
       760,
-      721
+      691
     ],
     "alpha": [
       0,
@@ -197,7 +197,7 @@
   },
   {
     "file": "cards/insect.svg",
-    "sha256": "c8f180a414b38a8be0c66ddbe6a30db3660f75db301ad42de290f8574551ce57",
+    "sha256": "e95d4e46893cbed0108474ef36c3dac8f0260c98d868ea47f88abdd3af8ec002",
     "kind": "native word card with embedded original image and bundled Outfit",
     "word": "insect"
   }

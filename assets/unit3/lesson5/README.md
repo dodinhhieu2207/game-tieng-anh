@@ -7,3 +7,5 @@ Asset checkpoint only, 2026-10-20. Hh: hat, horse. Ii: ill, insect.
 The export script crops, resizes and converts rasters while retaining their alpha. No generated background removal is applied. Native SVG glyphs and badges are recognition artwork, not handwriting stroke-order guides. Word cards embed the existing bundled Outfit Bold font and the matching vocabulary sprite. Vocabulary text is lowercase and exact; capital I has horizontal bars and lowercase i is dotted.
 
 Open catalog.html to inspect the full pack. The app exposes a static Lesson 5 preview with no playable activities, recording, TTS, scoring or lesson progress writes. Stop here before game implementation.
+
+Revision 2026-10-20: user requested a more child-friendly insect. Replaced the realistic beetle with a smiling rounded cartoon beetle, soft mint/teal colors, yellow spots and large friendly eyes. Rebuilt its word card and hashes; other selected artwork unchanged.

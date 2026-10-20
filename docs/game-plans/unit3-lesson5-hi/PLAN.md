@@ -30,3 +30,5 @@ No child engagement, speech accuracy, audio approval, or handwriting stroke-orde
 `node tests/lesson5-hi-assets.cjs` PASS: 20 manifest hashes, unchanged other lesson metadata, six-card navigation, exact four vocabulary words, five widths, loaded images, minimum 48px footer links, no preview progress writes or game controls, complete catalog. All selected raster outputs and desktop/mobile/catalog screenshots inspected. Footer spacing corrected for the fixed app dock. No game, audio or handwriting logic added.
 
 Public checkpoint: release 81e10e0, GitHub Pages run 39454557708 completed success. The same five-width browser suite passed against the public URL, with all 20 served visual SHA256 values matching the manifest. Desktop mirror copied and hash-verified for all 34 release files plus three review screenshots. No gameplay, voice, speaking AI or trace work started.
+
+Art revision 2026-10-20: replace insect with child-friendly cartoon beetle at user request; update vocabulary sprite, embedded word card, manifest, prompt provenance and cache versions. Asset-only stop remains in force.
