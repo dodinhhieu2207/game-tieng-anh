@@ -1,0 +1,35 @@
+{
+  "initial": [
+    {
+      "name": "background",
+      "transparent": false,
+      "prompt": "Finished background art for a premium children's phonics learning game, landscape 1536x1024. Soft hand-painted storybook illustration with matte painted wood/paper textures, cheerful sky-blue, teal, lavender, honey and cream, gentle natural daylight. A cozy open phonics garden/classroom pavilion, leafy borders at far left and right, rounded wood floor platform across lower quarter, small soft clouds and a calm bright middle. The middle 65 percent is EMPTY, quiet and low-detail, suitable for later large letter tiles and vocabulary sprites. No characters, no animals, no hats, no insects, no toys, no letters, no numerals, no word labels or interface. Crisp friendly forms, substantial visual depth but gentle colors, no shiny plastic and no generic gradient UI. This is a reusable empty game stage, not a screenshot."
+    },
+    {
+      "name": "lesson-card",
+      "transparent": false,
+      "prompt": "Create a finished wide landscape navigation card illustration for a children's English learning app, aspect about 2:1. Soft rounded lavender/sky-blue frame with subtle tactile painted-paper highlights, cream center, honey accents, cheerful and polished. Exact legible English text: small badges 'Unit 3' and 'Lesson 5' at top; main title 'Letters and Sounds' on two comfortably spaced lines; large clear 'Hh' and 'Ii' in separate friendly letter groups below/right. Capital I MUST have a top and bottom horizontal bar; lowercase i must have a clear dot. Small warm illustration accents of a yellow sunhat and friendly chestnut horse, plus a tiny green beetle at the edge. Keep text completely readable and unclipped, generous clear spacing. Do NOT write Review, ABC, Gg, other unit/lesson numbers, or any extra wording. This is a single navigation thumbnail, not the reusable background. Friendly matte storybook art, no brand, no watermark."
+    },
+    {
+      "name": "hat",
+      "transparent": true,
+      "prompt": "ONE independent isolated vocabulary game sprite of a cheerful yellow child's SUNHAT with a teal ribbon and softly curved brim, three-quarter front view. Soft hand-painted children's storybook illustration, matte fabric, subtle texture and restrained highlights, thick clear friendly silhouette, high quality edges. Entire hat fully visible centered with generous truly transparent padding. No person/head/face, no other objects, no floor or backdrop, no ground shadow, no letters, no words, no text, no watermark. Age5-7 educational vocabulary 'hat', simple unambiguous recognizable object, matching a teal/lavender/honey/cream phonics game art pack."
+    },
+    {
+      "name": "horse",
+      "transparent": true,
+      "prompt": "ONE independent isolated vocabulary game sprite: a friendly chestnut HORSE, full body three-quarter side view facing left, small cream muzzle, dark mane and tail, four correct legs/hooves all distinguishable, warm gentle eyes. Soft hand-painted children's storybook illustration, matte painted texture and clean rounded silhouette, restrained highlights, charming but clearly a horse, no saddle or rider. Entire animal from ears to hooves fully inside the frame, generous truly transparent padding. No scenery, no floor, no ground shadow, no other animal, no text, no numbers, no watermark. Age5-7 vocabulary, consistent with soft teal/lavender/honey/cream educational game assets."
+    },
+    {
+      "name": "ill",
+      "transparent": true,
+      "prompt": "ONE independent isolated educational vocabulary sprite illustrating the adjective 'ill': a fictional young child resting propped on one ivory pillow under a short teal blanket, looking mildly tired with half-open eyes and a small downturned mouth, one hand gently on forehead and a simple small thermometer held in the other hand, no markings on thermometer. Show upper body, pillow and blanket as one compact readable vignette on truly transparent background; no full room or large bed frame. Gentle reassuring children's storybook art, warm skin tone, soft matte fabric, yellow sleepwear, clean edges and rounded shapes. Mild common illness only, no injury, no blood, no needles, no emergency, no frightening distress or excessive sweat, no medical claim. This should clearly convey feeling unwell rather than sleeping happily. No words, letters, digits, logos or watermark. Whole vignette fully visible with padding."
+    },
+    {
+      "name": "insect",
+      "transparent": true,
+      "prompt": "ONE independent isolated educational vocabulary sprite of a friendly green INSECT, a simple rounded beetle seen from three-quarter front/top so anatomy is clear. EXACTLY SIX separate visible thin legs, THREE on each side, each leg attached to the thorax below the head; TWO antennae on the head; rounded green wing-case body with a simple center seam, small warm eyes, no extra limbs and no arms or shoes. Soft hand-painted children's storybook illustration, matte painted texture, clean readable silhouette, warm light and gentle expression. Entire beetle including all antennae/legs fully inside the frame with generous genuinely transparent padding. No plant, leaf, flowers, floor, scenery, ground shadow, other bug, text, digits, watermark or brand. An unambiguous six-legged insect for ages5-7, not a spider or worm."
+    }
+  ],
+  "insectCorrection": "Make one corrected isolated educational green beetle sprite on transparent background. Use a STRICT TOP-DOWN overhead symmetrical view, head at the bottom of the image, oval green wing-case body above. The head has two small friendly eyes and TWO curved antennae. EXACTLY SIX legs must be clearly visible with NO occlusion: THREE complete separate jointed legs projecting to the LEFT and THREE complete separate jointed legs projecting to the RIGHT, each with a visible gap from the others. Left back leg, left middle leg, left front leg; right back leg, right middle leg, right front leg. All six leg tips must be inside the image. No extra arms, claws, shoes, wings or limbs. Soft matte hand-painted storybook art, warm friendly green with restrained highlights, clean transparent edges and generous padding. No scenery, leaf, text, numerals, shadows or watermark. This image teaches the English word insect to children; prioritize clearly correct six-leg anatomy over perspective."
+}

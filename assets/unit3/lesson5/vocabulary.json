@@ -1,0 +1,33 @@
+{
+  "unit": 3,
+  "lesson": 5,
+  "title": "Letters and Sounds",
+  "phase": "assets-ready",
+  "words": [
+    {
+      "word": "hat",
+      "letter": "Hh",
+      "image": "words/hat.webp",
+      "card": "cards/hat.svg"
+    },
+    {
+      "word": "horse",
+      "letter": "Hh",
+      "image": "words/horse.webp",
+      "card": "cards/horse.svg"
+    },
+    {
+      "word": "ill",
+      "letter": "Ii",
+      "image": "words/ill.webp",
+      "card": "cards/ill.svg"
+    },
+    {
+      "word": "insect",
+      "letter": "Ii",
+      "image": "words/insect.webp",
+      "card": "cards/insect.svg"
+    }
+  ],
+  "playableActivities": 0
+}

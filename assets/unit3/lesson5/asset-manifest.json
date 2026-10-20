@@ -1,0 +1,204 @@
+[
+  {
+    "file": "background.webp",
+    "sha256": "a38f43ac84b8708eb7e4c9bf3667077b6ed923174769f9c9c7850ff6377a8cf6",
+    "source": "exec-35a7efb5-a1f1-4a6d-8be6-1a6587e4cc66.png",
+    "crop": null,
+    "size": [
+      1536,
+      1024
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "kind": "generated raster"
+  },
+  {
+    "file": "lesson-card.webp",
+    "sha256": "06abe9eccabf5906ccf40e5b2d0bc897d425efbfc77be5bd2cfc63543912276e",
+    "source": "exec-84110220-287e-4fba-9a1d-64d9f66d4a20.png",
+    "crop": null,
+    "size": [
+      1400,
+      700
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "kind": "generated raster"
+  },
+  {
+    "file": "words/hat.webp",
+    "sha256": "abc9b5ca8533022805232be5e917e5a121a93a441a2e95b2799e81935decd5c6",
+    "source": "exec-4d00af14-63c9-4196-840b-8867201f39a2.png",
+    "crop": [
+      47,
+      69,
+      1505,
+      943
+    ],
+    "size": [
+      760,
+      456
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "kind": "generated raster"
+  },
+  {
+    "file": "words/horse.webp",
+    "sha256": "018e049dec4252f368f0ddd7dd864114434bce851d20e572666de28d305c5405",
+    "source": "exec-b887e486-674d-43b3-8406-6f8b50e719fc.png",
+    "crop": [
+      31,
+      18,
+      1302,
+      1173
+    ],
+    "size": [
+      760,
+      691
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "kind": "generated raster"
+  },
+  {
+    "file": "words/ill.webp",
+    "sha256": "9f82d87d686dee7e0321d096670c59c08afa0e1a1c1a14528a76a93dae5e5542",
+    "source": "exec-cc139073-fef4-46bc-b074-b072c98a7f96.png",
+    "crop": [
+      28,
+      16,
+      1356,
+      1131
+    ],
+    "size": [
+      760,
+      638
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "kind": "generated raster"
+  },
+  {
+    "file": "words/insect.webp",
+    "sha256": "870c60d44a1f7aafcab0325565bd143b89783f0572ca917edff4bd866f29dcea",
+    "source": "exec-cbcca15d-fb6a-4c17-97b3-737ade466183.png",
+    "crop": [
+      18,
+      80,
+      1214,
+      1214
+    ],
+    "size": [
+      760,
+      721
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "kind": "generated raster"
+  },
+  {
+    "file": "letters/capital-h.svg",
+    "sha256": "f1f1e0d54083bf63c458f78fd2cc636bdfe1671cb1c72ab02b56764d6c817765",
+    "kind": "native recognition glyph",
+    "letter": "H",
+    "strokeOrderValidated": false
+  },
+  {
+    "file": "letters/capital-h-outline.svg",
+    "sha256": "caf564ed40f0310588a1472e4ec6814193d480d7f0b3414785b758126e1fcf41",
+    "kind": "native recognition outline",
+    "letter": "H",
+    "strokeOrderValidated": false
+  },
+  {
+    "file": "letters/lowercase-h.svg",
+    "sha256": "286a870405405728b211cc853810efd0da98921ae13e6a2d8cffdb2b09280a75",
+    "kind": "native recognition glyph",
+    "letter": "h",
+    "strokeOrderValidated": false
+  },
+  {
+    "file": "letters/lowercase-h-outline.svg",
+    "sha256": "b013771b90712d98702a3367a5200634e56cbc30338b1ea9349985d371604e4d",
+    "kind": "native recognition outline",
+    "letter": "h",
+    "strokeOrderValidated": false
+  },
+  {
+    "file": "letters/capital-i.svg",
+    "sha256": "d9d441a0bf2dba5c7bb2c92d1f4b130670474c88f7e7cafde7b9ced054edf00d",
+    "kind": "native recognition glyph",
+    "letter": "I",
+    "strokeOrderValidated": false
+  },
+  {
+    "file": "letters/capital-i-outline.svg",
+    "sha256": "2c15dc49cf226cbfd21bf50c3faf471eaeae07ffbe89d87e61adf168f0a34643",
+    "kind": "native recognition outline",
+    "letter": "I",
+    "strokeOrderValidated": false
+  },
+  {
+    "file": "letters/lowercase-i.svg",
+    "sha256": "3ee02fa598a667fe4c90313e509552ca635ee74638c3088cedb80b89a0fbf2b8",
+    "kind": "native recognition glyph",
+    "letter": "i",
+    "strokeOrderValidated": false
+  },
+  {
+    "file": "letters/lowercase-i-outline.svg",
+    "sha256": "eaa8be7836ab6f210402717df37f8f1b84be9d3f43a6ef8666b1f661cecfaeb4",
+    "kind": "native recognition outline",
+    "letter": "i",
+    "strokeOrderValidated": false
+  },
+  {
+    "file": "letters/hh-badge.svg",
+    "sha256": "71439dec5685fb9269bf86446503108b7bff627b1dcef2767c26d66d53f57e4e",
+    "kind": "native letter pair",
+    "letter": "Hh"
+  },
+  {
+    "file": "letters/ii-badge.svg",
+    "sha256": "58cbd483aa0e18be78cb44b75d827f36b4c674c7c441faf2d7b147c2ebc9d3f7",
+    "kind": "native letter pair",
+    "letter": "Ii"
+  },
+  {
+    "file": "cards/hat.svg",
+    "sha256": "53e37b76978e71b939b77e912cb8ecddd0309a32b4e5ea9079543243a66777bf",
+    "kind": "native word card with embedded original image and bundled Outfit",
+    "word": "hat"
+  },
+  {
+    "file": "cards/horse.svg",
+    "sha256": "b7bbc8de4d37c0b8e9f247afd7bf81fbb448871dee533f77552769d0cc30f66d",
+    "kind": "native word card with embedded original image and bundled Outfit",
+    "word": "horse"
+  },
+  {
+    "file": "cards/ill.svg",
+    "sha256": "031f0bb83fd835cceeb9fc9e1ab0b6b35d0ac0f7438af243495285c87db29c73",
+    "kind": "native word card with embedded original image and bundled Outfit",
+    "word": "ill"
+  },
+  {
+    "file": "cards/insect.svg",
+    "sha256": "c8f180a414b38a8be0c66ddbe6a30db3660f75db301ad42de290f8574551ce57",
+    "kind": "native word card with embedded original image and bundled Outfit",
+    "word": "insect"
+  }
+]
