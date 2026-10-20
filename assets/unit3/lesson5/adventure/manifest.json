@@ -1,0 +1,147 @@
+[
+  {
+    "file": "pond.webp",
+    "source": "exec-10b450c7-197e-421e-b5c7-3b5269352be2.png",
+    "sha256": "48b264fe5d4225851056ef4df044294bfac193d9d687aad911c58e69d732132f",
+    "size": [
+      1536,
+      1024
+    ],
+    "alpha": [
+      255,
+      255
+    ]
+  },
+  {
+    "file": "mine.webp",
+    "source": "exec-e9939a64-3a36-4eae-80cd-3990a43c84be.png",
+    "sha256": "86a3e7567e708c37143b1d5dec1844db487f7e16c99c8bd7ea489655efa752a5",
+    "size": [
+      1536,
+      1024
+    ],
+    "alpha": [
+      255,
+      255
+    ]
+  },
+  {
+    "file": "fish.webp",
+    "source": "exec-ee70342f-040f-43f2-9b2c-dd2edeb2d8c6.png",
+    "sha256": "23cd6f6400e9f42427036c968cadc9bb587f86d3aec3949fd22a93e1102245df",
+    "size": [
+      600,
+      404
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "basket.webp",
+    "source": "exec-67604f58-fabc-4cb3-9a30-4d0924fc9ee3.png",
+    "sha256": "788b32cd670374eb173fc34d750b0093b708fda9735211fc2bdb4aeb541c1814",
+    "size": [
+      600,
+      484
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "gem.webp",
+    "source": "exec-582dd3d1-313e-415b-9301-e7c0531f4d57.png",
+    "sha256": "98403533551958337750fb547a08e779394fd775d1d51cdeaf90033cc95ee915",
+    "size": [
+      600,
+      575
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "sfx/cast.ogg",
+    "source": "interface/Audio/scroll_001.ogg",
+    "license": "CC0",
+    "sha256": "320c6aafb2c7a503eae508dc443b72d7f7c0a317bfd16813157ed400cd04cf16"
+  },
+  {
+    "file": "sfx/retry.ogg",
+    "source": "interface/Audio/question_001.ogg",
+    "license": "CC0",
+    "sha256": "abb8f9e4eb2071491b0b15f84ee302386b1847609310c1b000ae174639a6cc5a"
+  },
+  {
+    "file": "sfx/snap.ogg",
+    "source": "impact/Audio/impactWood_light_001.ogg",
+    "license": "CC0",
+    "sha256": "4b76bf3ccc8e60d19188f3165b778a7817786faa6887c55d9049bcbeef3b425f"
+  },
+  {
+    "file": "sfx/splash.ogg",
+    "source": "rubberduck/water-splash-slime-sfx/splash_04.ogg",
+    "license": "CC0",
+    "sha256": "58dddea3843b89e9504e6f174ea49cd061b1002bb6ae8a94f358409fabb8340a",
+    "sourceUrl": "https://opengameart.org/content/40-cc0-water-splash-slime-sfx"
+  },
+  {
+    "file": "sfx/complete.ogg",
+    "source": "Kenney Music Jingles/Pizzicato jingles/jingles_PIZZI02.ogg",
+    "license": "CC0",
+    "sha256": "4967dc3cd31257716f455ef50f8980378726ce086954c7a5563c0c57ee129e3e",
+    "sourceUrl": "https://kenney.nl/assets/music-jingles"
+  },
+  {
+    "file": "vfx/spark.png",
+    "source": "particle/PNG (Transparent)/spark_01.png",
+    "license": "CC0",
+    "sha256": "5902da3a324cad0a4b5a88ce1e3c9cc18fee50922c358ce93d8c9f1ad7708f0a"
+  },
+  {
+    "file": "vfx/dust.png",
+    "source": "particle/PNG (Transparent)/dirt_01.png",
+    "license": "CC0",
+    "sha256": "6827a0a32a293ec9570fb98d63963b8dd6e6aaba9e1096afad932e93a378bea9"
+  },
+  {
+    "file": "sfx/contact.ogg",
+    "source": "impact/Audio/impactMining_001.ogg",
+    "license": "CC0",
+    "sha256": "61235a18de3f3d92118235398222dbf51d448f1be70b1c8bc962b10b86f2d9c6"
+  },
+  {
+    "file": "fish-body.webp",
+    "source": "exec-fd004fb1-31ae-4a36-b895-5f91c9620b81.png",
+    "sha256": "01f60b74770a660f7bf58dbb4ba3bc6826eb6c0c8c3a335eb4d85d1b4632352c",
+    "alpha": [
+      0,
+      255
+    ],
+    "crop": [
+      363,
+      19,
+      1483,
+      1022
+    ]
+  },
+  {
+    "file": "fish-tail.webp",
+    "source": "exec-79b4c23b-545f-49ed-b525-6df9b37771be.png",
+    "sha256": "a518ee2fd0f46c52829b27b1a32368e041a93e6d69462bcf43973cf248fb0f16",
+    "alpha": [
+      0,
+      255
+    ],
+    "crop": [
+      193,
+      19,
+      1205,
+      1094
+    ]
+  }
+]

@@ -11,3 +11,5 @@ Open catalog.html to inspect the full pack. The app exposes a static Lesson 5 pr
 Revision 2026-10-20: user requested a more child-friendly insect. Replaced the realistic beetle with a smiling rounded cartoon beetle, soft mint/teal colors, yellow spots and large friendly eyes. Rebuilt its word card and hashes; other selected artwork unchanged.
 
 Revision 2026-10-20: user chose a cute red ladybug with black spots for the insect picture. Retain the vocabulary label insect for Ii. Sprite, embedded word card, manifest and cache versions updated; no game or audio changes.
+
+Game phase approved and implemented 2026-10-21: see docs/game-plans/unit3-lesson5-hi/GAME-PLAN.md. Lesson now has Learn Hh/Ii, Letter Pond, Word Mine and existing A–I Word Builder. Original asset checkpoint remains documented above as history.

@@ -1,6 +1,6 @@
 # Unit 3 Lesson 5 — Letters and Sounds: Hh and Ii
 
-Updated 2026-10-20. Status: ASSETS READY — STOP before game implementation.
+Updated 2026-10-20. Phase 1: assets delivered. User subsequently authorized game implementation; current phase is recorded in GAME-PLAN.md.
 
 ## User scope and stop boundary
 

@@ -1,4 +1,6 @@
-# Unit 3 Lesson 5 — Hh / Ii, asset checkpoint
+# Unit 3 Lesson 5 — Hh / Ii
+
+Current phase 2026-10-21: user authorized games and GitHub deployment after the asset checkpoint. Apply GAME-RULES.md and GAME-PLAN.md for the active phase. The presentation-only stop below records the completed original phase and does not block the subsequently authorized games.
 
 User 2026-10-20: lesson taught today is Hh — hat, horse; Ii — ill, insect. Replace the old Review presentation, create the requested art set, then STOP before implementing games.
 

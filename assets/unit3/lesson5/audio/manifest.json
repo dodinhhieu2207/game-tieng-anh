@@ -1,0 +1,132 @@
+{
+  "engine": "Higgs Audio V3 offline",
+  "reference": "Existing Letter Land original voice reference",
+  "referenceSha256": "8c042247d53c672a8f75533cb3b28188f3871413b287d435330cb6522216d949",
+  "clips": {
+    "letter-h": {
+      "src": "assets/unit3/lesson5/audio/letter-h.mp3",
+      "text": "H.",
+      "sha256": "167597fbd4f407ea5c87c4ff76bfefa4e8ea9063c8447e763807aef8748abf2e",
+      "status": "word-transcript-checked; phoneme approval recorded separately",
+      "seconds": 1.04,
+      "qaTranscript": "H.",
+      "transcriptMatch": true
+    },
+    "letter-i": {
+      "src": "assets/unit3/lesson5/audio/letter-i.mp3",
+      "text": "I.",
+      "sha256": "5da5f1509c4c240b24830aeee666aceff2bad1222daf8db3cab71d8e92731699",
+      "status": "word-transcript-checked; phoneme approval recorded separately",
+      "seconds": 0.96,
+      "qaTranscript": "I...",
+      "transcriptMatch": true
+    },
+    "hat": {
+      "src": "assets/unit3/lesson5/audio/hat.mp3",
+      "text": "Hat.",
+      "sha256": "e36ed384ad9078216b190a1ded56b35014610e8048df641e1b1a55868a3a8bec",
+      "status": "word-transcript-checked; phoneme approval recorded separately",
+      "seconds": 1.08,
+      "qaTranscript": "Hat.",
+      "transcriptMatch": true
+    },
+    "horse": {
+      "src": "assets/unit3/lesson5/audio/horse.mp3",
+      "text": "Horse.",
+      "sha256": "1a1c6fe8a7373552def511720611df0f0d12a22225b3f05038471000b43a57fa",
+      "status": "word-transcript-checked; phoneme approval recorded separately",
+      "seconds": 1.2,
+      "qaTranscript": "Horse.",
+      "transcriptMatch": true
+    },
+    "ill": {
+      "src": "assets/unit3/lesson5/audio/ill.mp3",
+      "text": "Ill.",
+      "sha256": "a385c369ee549667037a1c274a1855c2947dc3f457c2845f3dcb389866d45e0f",
+      "status": "word-transcript-checked",
+      "seconds": 0.96,
+      "qaTranscript": "ill",
+      "transcriptMatch": true,
+      "seed": 22603
+    },
+    "insect": {
+      "src": "assets/unit3/lesson5/audio/insect.mp3",
+      "text": "Insect.",
+      "sha256": "dff13843a6690bce56387b085720041d5df7d81b1d262d7852f643840b6f17e1",
+      "status": "word-transcript-checked; phoneme approval recorded separately",
+      "seconds": 1.28,
+      "qaTranscript": "insect.",
+      "transcriptMatch": true
+    },
+    "sound-h-review": {
+      "text": "Hhh.",
+      "sha256": "df9c524c0782ea1f6a208710fc97e845fe43261b2931d57d6920d35c92c5e711",
+      "status": "rejected-by-user",
+      "seconds": 0.88,
+      "deployed": false,
+      "archiveFile": "sound-h-review.mp3"
+    },
+    "sound-i-review": {
+      "text": "Ih.",
+      "sha256": "f80a99606f46eaa8b2cf8d5ec60c85e358d9422a247c512eb3589e646ef10a9d",
+      "status": "rejected-by-user",
+      "seconds": 0.88,
+      "deployed": false,
+      "archiveFile": "sound-i-review.mp3"
+    },
+    "sound-h-v2-review": {
+      "text": "Hhhhh. Hhhhh. Hhhhh.",
+      "sha256": "8f033aea70fd823528c76e51c4a311a5ba58be0b70f7b4d119070e157323879c",
+      "status": "not-used-in-app; superseded-by-approved-v3",
+      "seconds": 15.72,
+      "deployed": false,
+      "archiveFile": "sound-h-v2-review.mp3"
+    },
+    "sound-i-v2-review": {
+      "text": "Ih. Ih. Ih.",
+      "sha256": "7f3e82265a9f4f1fd441c3ddba3323ef86758df5031f78839ccab2f65f9f3d05",
+      "status": "not-used-in-app; superseded-by-approved-v3",
+      "seconds": 2.96,
+      "deployed": false,
+      "archiveFile": "sound-i-v2-review.mp3"
+    },
+    "sound-h-v3-review": {
+      "src": "assets/unit3/lesson5/audio/sound-h-v3-review.mp3",
+      "status": "user-approved-2026-10-21",
+      "method": "Extracted initial segment from Higgs hat; no generated extra vowel",
+      "sourceRangeSeconds": [
+        0.08,
+        0.215
+      ],
+      "sha256": "124cf557c71d8ded968b18e8ec3d7c2f052cd5ce7202c62f3bb9f40dc150e982"
+    },
+    "sound-i-v3-review": {
+      "src": "assets/unit3/lesson5/audio/sound-i-v3-review.mp3",
+      "status": "user-approved-2026-10-21",
+      "method": "Extracted initial segment from Higgs ill; no generated extra vowel",
+      "sourceRangeSeconds": [
+        0.085,
+        0.25
+      ],
+      "sha256": "a197292e3a7967f469d3617fa3b7a6f87d1173c0d579842750f6e5209e9752d5"
+    },
+    "chant-h": {
+      "src": "assets/unit3/lesson5/audio/chant-h.mp3",
+      "source": "User-approved Higgs phoneme + Higgs words with explicit pauses",
+      "sha256": "dd427b1bfd5fcd9fc34ca7bf21eed3380c1f8ce321e81b06ac1fb4e299bec747",
+      "words": [
+        "hat",
+        "horse"
+      ]
+    },
+    "chant-i": {
+      "src": "assets/unit3/lesson5/audio/chant-i.mp3",
+      "source": "User-approved Higgs phoneme + Higgs words with explicit pauses",
+      "sha256": "52872ead404339e798014558d1f6365505d187134d5d5fb4cc2046179468a1e6",
+      "words": [
+        "ill",
+        "insect"
+      ]
+    }
+  }
+}
