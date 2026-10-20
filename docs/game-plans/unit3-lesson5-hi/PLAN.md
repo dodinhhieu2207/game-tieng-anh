@@ -32,3 +32,5 @@ No child engagement, speech accuracy, audio approval, or handwriting stroke-orde
 Public checkpoint: release 81e10e0, GitHub Pages run 39454557708 completed success. The same five-width browser suite passed against the public URL, with all 20 served visual SHA256 values matching the manifest. Desktop mirror copied and hash-verified for all 34 release files plus three review screenshots. No gameplay, voice, speaking AI or trace work started.
 
 Art revision 2026-10-20: replace insect with child-friendly cartoon beetle at user request; update vocabulary sprite, embedded word card, manifest, prompt provenance and cache versions. Asset-only stop remains in force.
+
+Revision 2026-10-20: user chose a cute red ladybug with black spots for the insect picture. Retain the vocabulary label insect for Ii. Sprite, embedded word card, manifest and cache versions updated; no game or audio changes.

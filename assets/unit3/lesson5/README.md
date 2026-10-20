@@ -9,3 +9,5 @@ The export script crops, resizes and converts rasters while retaining their alph
 Open catalog.html to inspect the full pack. The app exposes a static Lesson 5 preview with no playable activities, recording, TTS, scoring or lesson progress writes. Stop here before game implementation.
 
 Revision 2026-10-20: user requested a more child-friendly insect. Replaced the realistic beetle with a smiling rounded cartoon beetle, soft mint/teal colors, yellow spots and large friendly eyes. Rebuilt its word card and hashes; other selected artwork unchanged.
+
+Revision 2026-10-20: user chose a cute red ladybug with black spots for the insect picture. Retain the vocabulary label insect for Ii. Sprite, embedded word card, manifest and cache versions updated; no game or audio changes.

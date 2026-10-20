@@ -8,7 +8,7 @@ OUT=ROOT/'assets/unit3/lesson5';OUT.mkdir(parents=True,exist_ok=True)
 for d in ['words','letters','cards']:(OUT/d).mkdir(exist_ok=True)
 manifest=[]
 def entry(p,**kw):manifest.append(dict(file=p.relative_to(OUT).as_posix(),sha256=hashlib.sha256(p.read_bytes()).hexdigest(),**kw))
-sources={'background':'exec-35a7efb5-a1f1-4a6d-8be6-1a6587e4cc66.png','lesson-card':'exec-84110220-287e-4fba-9a1d-64d9f66d4a20.png','hat':'exec-4d00af14-63c9-4196-840b-8867201f39a2.png','horse':'exec-b887e486-674d-43b3-8406-6f8b50e719fc.png','ill':'exec-cc139073-fef4-46bc-b074-b072c98a7f96.png','insect':'exec-f69d89de-5e91-44cb-96ea-710da05f77c8.png'}
+sources={'background':'exec-35a7efb5-a1f1-4a6d-8be6-1a6587e4cc66.png','lesson-card':'exec-84110220-287e-4fba-9a1d-64d9f66d4a20.png','hat':'exec-4d00af14-63c9-4196-840b-8867201f39a2.png','horse':'exec-b887e486-674d-43b3-8406-6f8b50e719fc.png','ill':'exec-cc139073-fef4-46bc-b074-b072c98a7f96.png','insect':'exec-206319e9-8a40-4ca8-af50-47dd515aaa38.png'}
 for name,source in sources.items():
     im=Image.open(SRC/source).convert('RGBA');box=None
     if name not in ['background','lesson-card']:
@@ -39,6 +39,6 @@ for word in ['hat','horse','ill','insect']:
 (OUT/'vocabulary.json').write_text(json.dumps(dict(unit=3,lesson=5,title='Letters and Sounds',phase='assets-ready',words=words,playableActivities=0),indent=2),encoding='utf8')
 (OUT/'asset-manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf8')
 cards=''.join(f'<figure><img src="{x["file"]}" alt="{x.get("word",x.get("letter",x["file"]))}"><figcaption>{x["file"]}</figcaption></figure>' for x in manifest)
-cards=cards.replace('src="words/insect.webp"','src="words/insect.webp?v=20261020-cute"').replace('src="cards/insect.svg"','src="cards/insect.svg?v=20261020-cute"')
+cards=cards.replace('src="words/insect.webp"','src="words/insect.webp?v=20261020-ladybug"').replace('src="cards/insect.svg"','src="cards/insect.svg?v=20261020-ladybug"')
 (OUT/'catalog.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Unit 3 Lesson 5 — Hh and Ii art</title><style>@font-face{font-family:Outfit;src:url(../../fonts/Outfit-Bold.ttf)}body{font:20px Outfit,system-ui;background:#edf8fb;color:#164573;margin:25px}h1{font-size:34px}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}figure{margin:0;background:white;padding:15px;border-radius:20px}img{width:100%;height:230px;object-fit:contain;background:repeating-conic-gradient(#e9efee 0 25%,#fff 0 50%) 0/20px 20px}figcaption{font-size:16px;margin-top:10px;overflow-wrap:anywhere}</style><h1>Letters and Sounds · Hh / Ii</h1><p>hat · horse · ill · insect</p><p>Asset preview only. Recognition outlines are not stroke-order instructions.</p><main>'+cards+'</main></html>',encoding='utf8')
 print('Exported',len(manifest),'visual assets; six generated rasters, fourteen native vectors/cards.')
