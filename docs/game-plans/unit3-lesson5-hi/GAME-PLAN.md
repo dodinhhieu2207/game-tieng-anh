@@ -1,6 +1,6 @@
 # Hh / Ii — implementation plan
 
-Approved 2026-10-20: Phaser + GSAP, dedicated layered art, new sourced SFX/VFX, Higgs H/I and words, Letter Land A–I. Status: local gates passed; public deployment pending.
+Approved 2026-10-20: Phaser + GSAP, dedicated layered art, new sourced SFX/VFX, Higgs H/I and words, Letter Land A–I. Status: DELIVERED — local and public gates passed.
 
 Skills read: frontend-design (hierarchy/font/palette), interaction-design (trigger/rules/feedback and timing), design-systems (scoped consistent controls), design-critique (review actual scenes). Bitmap assets via imagegen. Phaser examples https://phaser.io/examples/v3/ and GSAP https://gsap.com/docs/v3/GSAP/Timeline/ used for scene lifecycle, particles, tween ownership. Existing pinned local engines reused.
 
@@ -24,3 +24,8 @@ Gates: generated art/source inspection; file/hash/audio QA; correct + wrong real
 - PASS tests/hi-edges.spec.cjs: reduced motion, failed audio/text continuation/retry, hidden/resume, real canvas touch, leave cleanup, Learn H/I five widths, missing art/retry, mute during paused voice.
 - PASS tests/hi-motion-review.cjs: real-duration catch/contact/retrieval/snap, final scene no orphan owned tweens. Video and contact/pull/landed frames inspected. rAF sample is only browser scheduling, not presented GPU FPS or child-device performance certification. No child usability/engagement claim.
 - Runtime art/SFX sources/licenses in assets/unit3/lesson5/adventure/CREDITS.md. Audio approval/provenance in audio/README.md. Models, rejected recordings and build cache remain outside deployable source.
+
+
+## Public delivery checkpoint
+
+Feature commit c104f7d, GitHub Pages run 39515487129 completed success. The full real-time game suite and edge suite both passed against https://dodinhhieu2207.github.io/game-tieng-anh/index.html?release=c104f7d-hi. All 45 selected visual/SFX/voice files matched SHA256 from the local manifests. Public suite includes five widths, both completed routes, approved sound recognition, ill repeated l, Learn H/I and Letter Land A–I, errors/retry/mute/hidden/touch/cleanup. Desktop mirror hash-verified for 57 release files; current QA reports and selected reviewed frames copied separately. No claim of classroom engagement, measured presented FPS, or AI pronunciation assessment.
