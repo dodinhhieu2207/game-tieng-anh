@@ -146,10 +146,17 @@
         "hat",
         "horse"
       ]
+    },
+    "sound-i-longer": {
+      "src": "assets/unit3/lesson5/audio/sound-i-longer.mp3",
+      "status": "duration-adjusted-at-user-request-2026-10-21",
+      "sourceKey": "sound-i-v3-review",
+      "method": "Pitch-preserving Rubber Band tempo 0.60 of user-approved Higgs I cue; 60ms tail padding, no new vowel or new voice",
+      "sha256": "3a15f8ea5c9525759df6d178252ee7f13bd2f692be5021f7828e3fb7e046ea20"
     }
   },
   "activeSound": {
     "h": "sound-h-vietnamese-cue",
-    "i": "sound-i-v3-review"
+    "i": "sound-i-longer"
   }
 }
