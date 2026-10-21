@@ -73,5 +73,34 @@
   {
     "file": "water-plop.ogg",
     "sha256": "7992a1a4637ea727b177b3edbc086ec280167d67a8fad010bb8fb58893b2e2f2"
+  },
+  {
+    "file": "boat-open.webp",
+    "source": "exec-7ac70552-3005-4bd7-ac1f-22f6a886c10a.png",
+    "size": [
+      900,
+      600
+    ],
+    "sha256": "30fde71fe3eca417581082ec84358716431e5fd130d897ca60c6d5539722a26a"
+  },
+  {
+    "file": "boat-blink.webp",
+    "source": "exec-2d2fe179-20d2-4aec-9346-c74b1bc6f6ea.png",
+    "size": [
+      900,
+      600
+    ],
+    "sha256": "665cd36a718c29882cdf156f5694a2204a7d81349e6bfe2eb3f78dd8e52d266a"
+  },
+  {
+    "file": "eye-patch.webp",
+    "source": "exec-2d2fe179-20d2-4aec-9346-c74b1bc6f6ea.png",
+    "crop": [
+      860,
+      235,
+      1060,
+      325
+    ],
+    "sha256": "a01a1b946459b0261a2f16b32e30cbf4b34c1636e4c3961b5dd782d280796857"
   }
 ]
