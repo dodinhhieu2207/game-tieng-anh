@@ -1,0 +1,59 @@
+[
+  {
+    "file": "claw-open.webp",
+    "source": "exec-65bb7b82-d8b2-4c3a-a078-dcfbed622c84.png",
+    "crop": [
+      15,
+      4,
+      1273,
+      1201
+    ],
+    "size": [
+      650,
+      618
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "650ba651320480c39e354ffc58d92238439bbb36464199891d905b8d6aca2e49"
+  },
+  {
+    "file": "claw-closed.webp",
+    "source": "exec-8f8d1865-3924-45c8-b3ed-e62529183490.png",
+    "crop": [
+      209,
+      3,
+      1081,
+      1153
+    ],
+    "size": [
+      493,
+      650
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "b8aae721b245d594cf72db09d84948d41810200cf722e119f4048daf0634a759"
+  },
+  {
+    "file": "winch.webp",
+    "source": "exec-1d9415aa-b78a-4780-832e-d69f2fb2f1db.png",
+    "crop": [
+      44,
+      93,
+      1303,
+      1070
+    ],
+    "size": [
+      650,
+      504
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "07ff58de5efd9ea2cbe43589ed13e737e4ccb24748889ea97f4333c1bf668615"
+  }
+]

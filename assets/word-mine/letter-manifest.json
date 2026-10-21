@@ -1,0 +1,169 @@
+[
+  {
+    "file": "glyphs/a.svg",
+    "sha256": "6e8941f0b394c960e9e29487e326d9ec0851177d05530266bb727bbc516199c7",
+    "kind": "outlined letter",
+    "letter": "a",
+    "font": "bundled Outfit Bold"
+  },
+  {
+    "file": "tiles/a.svg",
+    "sha256": "66720fad1254ad2578d5a7f77540210bd461081d3b8012cdf70b2fea1b35bdb5",
+    "kind": "reusable assembled gem and independent glyph",
+    "letter": "a"
+  },
+  {
+    "file": "glyphs/c.svg",
+    "sha256": "4243ec70ce338ab0853b6c10a7c97c945981143581780a9847df66afd499e396",
+    "kind": "outlined letter",
+    "letter": "c",
+    "font": "bundled Outfit Bold"
+  },
+  {
+    "file": "tiles/c.svg",
+    "sha256": "e0bb134bdf6401f0c8ee4a7241d2cad491242767fc26abf0ad3d01e22d1d88f8",
+    "kind": "reusable assembled gem and independent glyph",
+    "letter": "c"
+  },
+  {
+    "file": "glyphs/e.svg",
+    "sha256": "9ff174cb16fca0a4879ac1ed0af4afb8a7270d9bad28a26859f86deb691ddafd",
+    "kind": "outlined letter",
+    "letter": "e",
+    "font": "bundled Outfit Bold"
+  },
+  {
+    "file": "tiles/e.svg",
+    "sha256": "b178adc432bd8deae33bbeb77c0f7f0dea2a18d136acfef565e2c2bb0383f0ac",
+    "kind": "reusable assembled gem and independent glyph",
+    "letter": "e"
+  },
+  {
+    "file": "glyphs/h.svg",
+    "sha256": "136e36ae18a88c752089036fd8544c47bb41fc8154e4654dc4e96670b6d49923",
+    "kind": "outlined letter",
+    "letter": "h",
+    "font": "bundled Outfit Bold"
+  },
+  {
+    "file": "tiles/h.svg",
+    "sha256": "924678cd8af862f33f4e788ec38f72cc06e75c87c34fd7a9124898781b00c944",
+    "kind": "reusable assembled gem and independent glyph",
+    "letter": "h"
+  },
+  {
+    "file": "glyphs/i.svg",
+    "sha256": "00e8f425d8510b0cdd96473f5f8bc81fde4da7b77ba43746574aa344c3802a8a",
+    "kind": "outlined letter",
+    "letter": "i",
+    "font": "bundled Outfit Bold"
+  },
+  {
+    "file": "tiles/i.svg",
+    "sha256": "aec0010454f15f71bd38bdf092d4ed9b2dae8e40fbf9555aad80003f734f366a",
+    "kind": "reusable assembled gem and independent glyph",
+    "letter": "i"
+  },
+  {
+    "file": "glyphs/l.svg",
+    "sha256": "38875ed5d76e511c85dae34cc3254a4f39a16ed8d5f969bab6bfe8d706e0cb4c",
+    "kind": "outlined letter",
+    "letter": "l",
+    "font": "bundled Outfit Bold"
+  },
+  {
+    "file": "tiles/l.svg",
+    "sha256": "3f18e64b7090e180a04520f5114487911320fc916e38595c334e56a6be95b618",
+    "kind": "reusable assembled gem and independent glyph",
+    "letter": "l"
+  },
+  {
+    "file": "glyphs/n.svg",
+    "sha256": "a0e070ca1407e893b0bc048754e0da7050a3e450182a9c955741256c0606a008",
+    "kind": "outlined letter",
+    "letter": "n",
+    "font": "bundled Outfit Bold"
+  },
+  {
+    "file": "tiles/n.svg",
+    "sha256": "85c6239a6934cc2d9b43f8dcc5ef9336aad4d77c639e27f9f12096b819a7e702",
+    "kind": "reusable assembled gem and independent glyph",
+    "letter": "n"
+  },
+  {
+    "file": "glyphs/o.svg",
+    "sha256": "88853389e1a62e1d151b76ad38b9627c0161f6fcbb362804c0c9ec4012acebdb",
+    "kind": "outlined letter",
+    "letter": "o",
+    "font": "bundled Outfit Bold"
+  },
+  {
+    "file": "tiles/o.svg",
+    "sha256": "506ddcbe130f7687ca2c6072f4b4ea1adaa0c0c30cdbbc73e200313b989e6135",
+    "kind": "reusable assembled gem and independent glyph",
+    "letter": "o"
+  },
+  {
+    "file": "glyphs/r.svg",
+    "sha256": "80ca4757853233fb8778559114c3fcba17b6dcebe16839dab78d9a4e5819d7c2",
+    "kind": "outlined letter",
+    "letter": "r",
+    "font": "bundled Outfit Bold"
+  },
+  {
+    "file": "tiles/r.svg",
+    "sha256": "3fdecefe842ee177e1b6e2b34f8d2b1001548326529e36baa5b0af493b0f7b0c",
+    "kind": "reusable assembled gem and independent glyph",
+    "letter": "r"
+  },
+  {
+    "file": "glyphs/s.svg",
+    "sha256": "455c62bbf6d53efdb7879c3ae553b23e298270ab906eab770080364d5ec570e6",
+    "kind": "outlined letter",
+    "letter": "s",
+    "font": "bundled Outfit Bold"
+  },
+  {
+    "file": "tiles/s.svg",
+    "sha256": "f91bd1736be6c8dc608e7247fbe9ee62da63a255962a5944e36552aa2c4532e7",
+    "kind": "reusable assembled gem and independent glyph",
+    "letter": "s"
+  },
+  {
+    "file": "glyphs/t.svg",
+    "sha256": "f9fedb6e4219b38a944cff57e1746a30cc731a15da60a293eb903572769baf98",
+    "kind": "outlined letter",
+    "letter": "t",
+    "font": "bundled Outfit Bold"
+  },
+  {
+    "file": "tiles/t.svg",
+    "sha256": "2fbaf8ce4958e996621378f24d87d64dd0815939de674fc66b0809bb19cba8dd",
+    "kind": "reusable assembled gem and independent glyph",
+    "letter": "t"
+  },
+  {
+    "file": "words/hat.svg",
+    "sha256": "e348c6dce0c0a697fb3252664c07ae589dcab8689575bbe01f5eff31bd0b9fda",
+    "kind": "outlined whole word",
+    "word": "hat"
+  },
+  {
+    "file": "words/horse.svg",
+    "sha256": "2529223dc93d3a07a796f8c402f912874ef29c44e842c0624d39f182d7404e5d",
+    "kind": "outlined whole word",
+    "word": "horse"
+  },
+  {
+    "file": "words/ill.svg",
+    "sha256": "5c9c1717efb21b230994c063bf443575a4dc34b8cd81539f306027faa5cdbc01",
+    "kind": "outlined whole word",
+    "word": "ill"
+  },
+  {
+    "file": "words/insect.svg",
+    "sha256": "ad952776f8b0c62d74066520b6f0082d2ea1d83dac3d2c43388341fbfe1d8096",
+    "kind": "outlined whole word",
+    "word": "insect"
+  }
+]
