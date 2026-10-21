@@ -1,0 +1,26 @@
+[
+  {
+    "name": "mission-board",
+    "prompt": "A single wide horizontal blank mission panel, aspect about 5:1. Honey bamboo wood outer rim with soft teal enamel inner rim and tiny rope knots at far left/right corners only. Large perfectly flat warm ivory blank center occupying 85 percent of surface. Four gently rounded corners. NO icons, no letters, no text, no objects in blank center. Straight front view, symmetric, NOT perspective. This is a resizable nine-slice game interface panel so outer border uniform thin and center clean. Premium hand-painted 3D children's fishing adventure game UI asset, crisp alpha silhouette, transparent background, no exterior shadow or glow.",
+    "tool": "built-in imagegen",
+    "transparentBackground": true
+  },
+  {
+    "name": "picture-frame",
+    "prompt": "A single square vocabulary picture frame for children's fishing adventure educational game. Chunky honey bamboo wooden rim, small teal corner caps, subtle rope binding accents. Spacious blank warm cream center, no picture, no icons, NO letters or words. Straight front view perfectly square proportions, softly rounded outer corners. Crisp polished hand-painted cartoon 3D asset matching teal wooden boat and bamboo rod. Transparent background outside silhouette, no glow.",
+    "tool": "built-in imagegen",
+    "transparentBackground": true
+  },
+  {
+    "name": "word-plaque",
+    "prompt": "A single wide rectangular blank word plaque about 3:1 aspect, for children's fishing game. Smooth pale ivory writing center, rounded teal enamel border, thin warm brass edge, one small wood rivet at each end. Spacious clean center taking 80 percent width, NO text, NO letters, NO icons. Straight flat front view, symmetric, rounded corners, crisp polished hand-painted 3D cartoon UI style, transparent outside with no glow, designed as a nine-slice scalable word label.",
+    "tool": "built-in imagegen",
+    "transparentBackground": true
+  },
+  {
+    "name": "listen-button",
+    "prompt": "A single circular teal enamel speaker button for premium children's fishing education game. Rounded bamboo wood outer ring and tiny brass inset, glossy soft teal face with a clear large ivory speaker icon and two sound waves centered. No text, no letters. Front view, perfect circle, gently raised button, warm polished hand-painted cartoon 3D style, clean thick forms readable at 56px, transparent outside, no glow, no excessive exterior shadow.",
+    "tool": "built-in imagegen",
+    "transparentBackground": true
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "file": "mission-board.webp",
+    "source": "exec-e834f4e0-7d3c-407c-8fcb-e1e696988c71.png",
+    "crop": [
+      3,
+      107,
+      2169,
+      578
+    ],
+    "size": [
+      1200,
+      261
+    ],
+    "sha256": "f0d6ecd02ed2a191160bd7f794b67f9f0fd662775be9cd681940eba6ebe06d9f"
+  },
+  {
+    "file": "picture-frame.webp",
+    "source": "exec-0463857a-eb03-4d54-a0de-36eb3e71681f.png",
+    "crop": [
+      27,
+      38,
+      1228,
+      1199
+    ],
+    "size": [
+      724,
+      700
+    ],
+    "sha256": "b25b330c54152e10f71e0d0c5042228ce7e337029fcf2eac8152219719a0781c"
+  },
+  {
+    "file": "word-plaque.webp",
+    "source": "exec-3e44d9ab-2109-4804-8945-59dc0ebffb4f.png",
+    "crop": [
+      10,
+      109,
+      2162,
+      592
+    ],
+    "size": [
+      1200,
+      269
+    ],
+    "sha256": "847d28db28a600b448413baa51a61877406986f6f8e8596fb9b1df60bae638f5"
+  },
+  {
+    "file": "listen-button.webp",
+    "source": "exec-ba9e29c3-d41c-4404-923e-796b4f886095.png",
+    "crop": [
+      56,
+      58,
+      1196,
+      1191
+    ],
+    "size": [
+      704,
+      700
+    ],
+    "sha256": "220debc8325c59d8bd1a44e1e29c92c4fe3cd1bddea38bf1b6f2137c70555d77"
+  }
+]
