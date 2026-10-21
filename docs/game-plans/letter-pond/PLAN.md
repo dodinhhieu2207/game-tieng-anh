@@ -37,3 +37,5 @@ Dedicated UI public checkpoint: e81ace1 Pages succeeded. PASS public four-artwor
 
 ## I sound duration revision — 2026-10-21
 User finds I cue too short and asks a little longer. Added sound-i-longer.mp3 derived from user-approved Higgs sound-i-v3-review with pitch-preserving Rubber Band tempo 0.60 and 60ms tail; original retained. File duration approx 0.35 -> 0.66s; audible content itself is stretched, not only silence appended. No new phoneme or speaker generated. Lesson 5 Learn and Pond plus Letter Land standalone sound use same new cue. Letter name, word recordings and chants unchanged. New clip marked duration-adjusted-at-user-request, not falsely newly teacher-auditioned. Local actual playback/routing/duration and existing manifest/other lesson preservation gates pass. Public pending.
+
+I duration public checkpoint: 6d346ab Pages success; public browser PASS actual Ii Sound playback and shared Letter Land routing, measured old/new durations 0.347/0.660s. Desktop seven release files hash verified. Delivered; teacher listening preference remains reviewable, original source retained.
