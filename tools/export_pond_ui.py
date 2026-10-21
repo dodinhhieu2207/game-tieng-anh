@@ -6,4 +6,3 @@ sources={'mission-board':'exec-e834f4e0-7d3c-407c-8fcb-e1e696988c71.png','pictur
 for name,source in sources.items():
  im=Image.open(root/source).convert('RGBA');box=im.getchannel('A').point(lambda x:255 if x>35 else 0).getbbox();im=im.crop(box);im.thumbnail((1200,700));p=out/(name+'.webp');im.save(p,quality=94);rows.append({'file':p.name,'source':source,'crop':box,'size':im.size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
 (out/'manifest.json').write_text(json.dumps(rows,indent=2))
-
