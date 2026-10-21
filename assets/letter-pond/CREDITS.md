@@ -1,0 +1,4 @@
+# Letter Pond gear
+Dedicated imagegen sprite sheet: exec-6dc07ece-63a8-4fe7-95bc-a21181def31b.png. Prompt summary: three isolated transparent children's fishing game assets, bamboo rod with teal grip/brass reel, red/cream bobber and silver hook, turquoise splash crown; warm polished cartoon style. Native alpha crops/resizes only; no repainting. SHA256/crop bounds in manifest.json; regenerate exports using tools/export_pond_gear.py while original archive exists.
+
+Audio: rubberduck, 40 CC0 water / splash / slime SFX, https://opengameart.org/content/40-cc0-water-splash-slime-sfx . water-entry.ogg = splash_03.ogg, water-lift.ogg = splash_08.ogg, water-plop.ogg = bubble_02.ogg. Files copied without synthesis. Existing voice, fish/background and reward SFX remain unchanged. Phaser/GSAP ownership uses existing local MIT/GSAP distribution; original licenses in shared/vendor.

@@ -1,0 +1,77 @@
+[
+  {
+    "file": "rod.webp",
+    "sha256": "ccf62aa2fb1407fdf065e8583ce2ecfc568333f5f6c12cf5a79c06e9fbcc10a2",
+    "source": "exec-6dc07ece-63a8-4fe7-95bc-a21181def31b.png",
+    "sheetCrop": [
+      0,
+      0,
+      940,
+      724
+    ],
+    "alphaCrop": [
+      22,
+      19,
+      911,
+      701
+    ],
+    "size": [
+      700,
+      537
+    ]
+  },
+  {
+    "file": "bobber-hook.webp",
+    "sha256": "0fc0ecd74f0eca59b01ccb5c2427a85e38fd17977c6ad27f2593ab695ed9ee36",
+    "source": "exec-6dc07ece-63a8-4fe7-95bc-a21181def31b.png",
+    "sheetCrop": [
+      940,
+      0,
+      1320,
+      724
+    ],
+    "alphaCrop": [
+      18,
+      55,
+      296,
+      677
+    ],
+    "size": [
+      278,
+      622
+    ]
+  },
+  {
+    "file": "splash.webp",
+    "sha256": "0719cdbba6fc2ebdf9752aacf30b5f225b305d750be71ffe8fd2454d82ec8159",
+    "source": "exec-6dc07ece-63a8-4fe7-95bc-a21181def31b.png",
+    "sheetCrop": [
+      1320,
+      0,
+      2172,
+      724
+    ],
+    "alphaCrop": [
+      91,
+      154,
+      821,
+      667
+    ],
+    "size": [
+      700,
+      492
+    ]
+  },
+  {
+    "file": "water-entry.ogg",
+    "sha256": "ae2cff9a47934ece590dda45ff18acf89c5c98cb5497ce71c50b3a315b225a94"
+  },
+  {
+    "file": "water-lift.ogg",
+    "sha256": "fd4c9c8fbfe4ac7348644918a73b1d004b037bac3ef24a1303549b705624828a"
+  },
+  {
+    "file": "water-plop.ogg",
+    "sha256": "7992a1a4637ea727b177b3edbc086ec280167d67a8fad010bb8fb58893b2e2f2"
+  }
+]

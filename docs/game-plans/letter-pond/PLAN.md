@@ -1,0 +1,8 @@
+# Letter Pond gear and water upgrade
+Status: implementation. Stack: existing local Phaser + GSAP, inherited user approval from H/I game plan.
+Layers: approved pond/fish/basket; separate bamboo rod with reel, bobber/hook rig, line, splash crown, concentric water rings and falling drops. Sprite sheet is generated specifically for this game, exported into separate transparent files.
+Storyboard: rod anticipates -> rig arcs out -> splash and two expanding ripples on contact -> bobber dips -> correct fish lifts with water droplets and second water recording -> weighted arc into basket -> rod settles. Wrong fish flicks away, rig returns empty with a small plop. Reduced motion shortens travel and particle count. Every GSAP tween belongs to Adventure and pauses/disposes with its scene.
+Audio: rubberduck CC0 water-splash-slime pack, splash_03 entry, splash_08 lift, bubble_02 release. Source https://opengameart.org/content/40-cc0-water-splash-slime-sfx . No speech/audio changes. Test loaded/played events and mute separately; automated playback does not establish subjective quality.
+Gates pending: gear alpha/render inspection, correct/wrong actual inputs, water playback, pause/leave, five-width fit, Word Mine regression, public deployment and Desktop mirror.
+
+Local checkpoint: PASS tests/pond-gear.spec.cjs (12 rounds, wrong and correct, real entry/lift/plop playback promises, pause/resume, five widths). PASS pond-gear-edges (reduced motion, touch, mute, leave cleanup). PASS Word Mine asset/audio preservation and edge suite, hi-assets original manifest/other-lesson preservation. Inspected desktop/mobile/contact screenshots; lowered rod pivot 15px to avoid tip clipping during anticipation. Pending public gates. No device FPS or classroom preference claim.

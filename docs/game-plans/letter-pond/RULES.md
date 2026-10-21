@@ -1,0 +1,2 @@
+# Letter Pond rules
+User 2026-10-21: replace crude fishing gear with dedicated assets, show casting/reeling and audible water. Inherit approved Phaser + GSAP stack; no re-approval required. Preserve H/I names, sounds, words, fish, route, scoring and other games, especially Word Mine. Imagegen for raster gear; interaction-design for owned, interruptible casting/contact/pull/release feedback. No synthesized audio; sourced CC0 water recordings only. Respect mute/SFX and reduced motion.
