@@ -1,0 +1,28 @@
+{
+  "release": "87ca903",
+  "verified": [
+    "index.html",
+    "shared/story-stage.js",
+    "shared/story-stage.css",
+    "shared/story-stage-data.js",
+    "shared/speech-evaluator.js",
+    "unit3-speech.js",
+    "data/units.js",
+    "assets/unit3/lesson6/stage/curtain.webp",
+    "assets/unit3/lesson6/stage/medal.webp",
+    "assets/unit3/lesson6/stage/billy-present.mp3",
+    "assets/unit3/lesson6/stage/billy-robot.mp3",
+    "assets/unit3/lesson6/stage/no-first.mp3",
+    "assets/unit3/lesson6/stage/no-second.mp3",
+    "assets/unit3/lesson6/stage/open-it.mp3",
+    "assets/unit3/lesson6/stage/plane-question.mp3",
+    "assets/unit3/lesson6/stage/robot-name.mp3",
+    "assets/unit3/lesson6/stage/robot-question.mp3",
+    "assets/unit3/lesson6/stage/robot-voice.mp3",
+    "assets/unit3/lesson6/stage/teddy-cheer.mp3",
+    "assets/unit3/lesson6/stage/teddy-question.mp3",
+    "assets/unit3/lesson6/stage/yes-answer.mp3"
+  ],
+  "textComparison": "LF normalized",
+  "binaryComparison": "exact bytes"
+}
