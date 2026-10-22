@@ -1,0 +1,50 @@
+[
+  {
+    "scene": 1,
+    "type": "plate",
+    "prompt": "Create an animation clean background plate from this EXACT image. Remove ONLY the blond older boy kneeling at right AND the yellow gift with magenta ribbon in his hands, as ONE connected actor. Exclude the father's hand: keep father's hand in the background. Reconstruct the room/floor/sofa or gift behind the removed actor naturally. KEEP every other person and object exactly where it is, exact perspective, colors, linework, 1536x1024 full scene 3:2 unchanged camera. Do not add people. Do not shift or zoom the image. No text.",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-ea78d3a0-8c3d-4282-a36f-c0a04907b4b3.png"
+  },
+  {
+    "scene": 1,
+    "type": "actor",
+    "prompt": "Extract ONLY the blond older boy kneeling at right AND the yellow gift with magenta ribbon in his hands, as ONE connected actor. Exclude the father's hand: keep father's hand in the background from this exact image as a faithful clean transparent sprite for animation. Preserve exact pose, clothes, facial identity, proportions, clean original linework and colors. Exclude all background, floor, shadows outside actor and all other people. Do not redraw in a different style. Return the actor as a single transparent cutout, no extra objects, no text.",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-ba2bbf0e-0b56-4fb3-a89e-9944a15de908.png"
+  },
+  {
+    "scene": 2,
+    "type": "plate",
+    "prompt": "Create an animation clean background plate from this EXACT image. Remove ONLY the blond older boy kneeling at right AND the yellow/magenta gift in his hands as ONE actor. Reconstruct the room/floor/sofa or gift behind the removed actor naturally. KEEP every other person and object exactly where it is, exact perspective, colors, linework, 1536x1024 full scene 3:2 unchanged camera. Do not add people. Do not shift or zoom the image. No text.",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-9645f811-cffa-4d3a-bee1-46fa90e61d33.png"
+  },
+  {
+    "scene": 2,
+    "type": "actor",
+    "prompt": "Extract ONLY the blond older boy kneeling at right AND the yellow/magenta gift in his hands as ONE actor from this exact image as a faithful clean transparent sprite for animation. Preserve exact pose, clothes, facial identity, proportions, clean original linework and colors. Exclude all background, floor, shadows outside actor and all other people. Do not redraw in a different style. Return the actor as a single transparent cutout, no extra objects, no text.",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-7eb36cff-58b1-40b7-8701-c7dd1050c334.png"
+  },
+  {
+    "scene": 3,
+    "type": "plate",
+    "prompt": "Create an animation clean background plate from this EXACT image. Remove ONLY the little brown-haired toddler lying belly down on top of the yellow gift, including all his striped body, arms and raised legs, but EXCLUDE the gift itself. Reconstruct the room/floor/sofa or gift behind the removed actor naturally. KEEP every other person and object exactly where it is, exact perspective, colors, linework, 1536x1024 full scene 3:2 unchanged camera. Do not add people. Do not shift or zoom the image. No text.",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-9bc3ff02-a69b-404f-9639-5f2c6a06aed5.png"
+  },
+  {
+    "scene": 3,
+    "type": "actor",
+    "prompt": "Extract ONLY the little brown-haired toddler lying belly down on top of the yellow gift, including all his striped body, arms and raised legs, but EXCLUDE the gift itself from this exact image as a faithful clean transparent sprite for animation. Preserve exact pose, clothes, facial identity, proportions, clean original linework and colors. Exclude all background, floor, shadows outside actor and all other people. Do not redraw in a different style. Return the actor as a single transparent cutout, no extra objects, no text.",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-ba66f048-d324-4d86-b37f-df59ac3b5a0a.png"
+  },
+  {
+    "scene": 4,
+    "type": "plate",
+    "prompt": "Create an animation clean background plate from this EXACT image. Remove ONLY the blond boy kneeling holding the blue robot, INCLUDING the robot and boy and boy's hands/arms as ONE actor. Exclude all other people and the open box. Reconstruct the room/floor/sofa or gift behind the removed actor naturally. KEEP every other person and object exactly where it is, exact perspective, colors, linework, 1536x1024 full scene 3:2 unchanged camera. Do not add people. Do not shift or zoom the image. No text.",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-f427ccac-50b7-4aa8-b85f-31eeb2bc9f12.png"
+  },
+  {
+    "scene": 4,
+    "type": "actor",
+    "prompt": "Extract ONLY the blond boy kneeling holding the blue robot, INCLUDING the robot and boy and boy's hands/arms as ONE actor. Exclude all other people and the open box from this exact image as a faithful clean transparent sprite for animation. Preserve exact pose, clothes, facial identity, proportions, clean original linework and colors. Exclude all background, floor, shadows outside actor and all other people. Do not redraw in a different style. Return the actor as a single transparent cutout, no extra objects, no text.",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-c0ed7d81-edff-4101-92bb-b785c869e82a.png"
+  }
+]

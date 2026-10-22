@@ -1,0 +1,15 @@
+{
+  "source": "family and friends 1 -unit 3-is it a plane-lesson 6 story - YouTube.mp4",
+  "sha256": "7dd6c0c6edc848e7759547b9810c000c7ee962b91567ae49e5ef8000ea070d18",
+  "duration": 76.97415,
+  "referenceOnly": true,
+  "framesReviewedSeconds": [
+    14.423,
+    24.038,
+    33.654,
+    43.269,
+    52.885,
+    62.5
+  ],
+  "notes": "Native character animation inspected. New cutout motion inspired by reference; not extracted original video or lip-synced reconstruction."
+}
