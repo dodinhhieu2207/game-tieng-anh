@@ -22,7 +22,7 @@
  // Bounded ASR spellings/homophones, independent of the displayed answer.
  // Do not fuzzy-match short words such as cat/car, or add missing grammar.
  const aliases=Object.freeze({'plain':'plane','airplane':'plane','aeroplane':'plane','ro bot':'robot','robo':'robot','baloon':'balloon','ballon':'balloon','tedi':'teddy','teddie':'teddy','gurl':'girl','guitah':'guitar','guiter':'guitar','pensil':'pencil','pencill':'pencil','cray on':'crayon','note book':'notebook','elefant':'elephant'});
- function canonicalWords(text,type){const vocabulary=vocabularyFor(type);let value=text;for(const [heard,word] of Object.entries(aliases))if(vocabulary.includes(word))value=value.replace(new RegExp('\\b'+heard+'\\b','g'),word);return value;}
+ function canonicalWords(text,type){const vocabulary=type==='story-line'?toys:vocabularyFor(type);let value=text;for(const [heard,word] of Object.entries(aliases))if(vocabulary.includes(word))value=value.replace(new RegExp('\\b'+heard+'\\b','g'),word);return value;}
  function normalize(text){return String(text||'').toLowerCase().replace(/[’‘ʼ`]/g,"'").replace(/[.,!?;:"()\[\]{}]/g,' ').replace(/\s+/g,' ').trim();}
  function evaluate(transcript,questionToy,displayedToy,questionType='yes-no'){
   const vocabulary=vocabularyFor(questionType);
