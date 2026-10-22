@@ -9,3 +9,5 @@ Your Turn uses the existing Unit3Speech/Cloudflare endpoint and deterministic se
 All underlying textbook/audio rights remain with their respective owner; no CC0 claim for supplied source media. Existing local Phaser/GSAP provenance applies.
 
 Your Turn listening-control follow-up: dedicated storybook/speaker and speech-bubble/speaker button artwork, generated with imagegen. Exact prompts/sources in listen-generation.json; WebP hashes in manifest.json. Runtime live labels and existing audio actions retained.
+
+Story Mix-Up feedback follow-up: dedicated imagegen per-position check and X stamps, Check my story button and Try again button. Exact prompts/sources: feedback-generation.json; exported WebP hashes in manifest.json. Live labels and text equivalents remain in the DOM.

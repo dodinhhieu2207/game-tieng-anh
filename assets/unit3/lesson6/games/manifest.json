@@ -64,5 +64,49 @@
       311
     ],
     "sha256": "7458a8229ad4ed8dbecec2194e9ff56202b66a77c561a1106206a50c716c124d"
+  },
+  {
+    "name": "position-correct",
+    "prompt": "Dedicated CORRECT stamp icon for preschool story sequencing game: a bold clear dark teal check mark on warm ivory circular medallion with mint green rim. Polished soft matte 2D storybook illustration, thick readable symbol at tiny size, restrained depth, no ribbon, no stars, no glow. Transparent outside circle. No text, no letters, no numbers. Single isolated icon.",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-f0549942-5a59-4f8e-bbb5-23767943871d.png",
+    "file": "position-correct.webp",
+    "size": [
+      298,
+      300
+    ],
+    "sha256": "f37dfbfb40795f608e7b6b6ba37383c30429e14567f0f13f9b5c6412d20446cc"
+  },
+  {
+    "name": "position-retry",
+    "prompt": "Dedicated INCORRECT / TRY AGAIN stamp icon for preschool story sequencing game: a bold clear ivory X cross on soft coral red circular medallion with warm cream rim. Friendly gentle feedback, polished soft matte 2D storybook illustration, thick readable symbol at tiny size, restrained depth, no angry face, no ribbon, no stars, no glow. Transparent outside circle. No text, no letters, no numbers. Single isolated icon.",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-6895917f-e562-4e2f-9491-ccaad9aa1582.png",
+    "file": "position-retry.webp",
+    "size": [
+      300,
+      300
+    ],
+    "sha256": "2395e8c94387eb38c5281c6e15e1c880ce31ceb25af4cd142e184a10501f4740"
+  },
+  {
+    "name": "mix-check-button",
+    "prompt": "Dedicated Check story button asset for preschool story sequencing game. Wide horizontal 3.5:1 rounded rectangle. Warm ivory flat blank center/right for live text, mint teal raised rim with restrained coral accent. At FAR LEFT within left 22% only: a cute open storybook with small magnifying glass / check symbol. Right 72% completely blank ivory. Clean polished matte 2D storybook shading, crisp edges, restrained depth. Transparent exterior. No words, no text, no letters, no numbers. Single button.",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-47e64307-968a-43dc-bfdc-3b5973c73d3d.png",
+    "file": "mix-check-button.webp",
+    "size": [
+      1100,
+      316
+    ],
+    "sha256": "aba68f8d4381963e9dd0aba7eeda1b49214de1bc15bd1450e405c977f3ed07a7"
+  },
+  {
+    "name": "mix-retry-button",
+    "prompt": "Dedicated Try again button asset for preschool story sequencing game. Wide horizontal 3.5:1 rounded rectangle. Warm ivory flat blank center/right for live text, coral peach raised rim with restrained teal accent. At FAR LEFT within left 22% only: one clear curved teal retry arrow circling back. Right 72% completely blank ivory. Clean polished matte 2D storybook shading, crisp edges, restrained depth. Transparent exterior. No words, no text, no letters, no numbers. Single button.",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-24fd63cd-9578-4894-9d3b-8d52ce4b90c0.png",
+    "file": "mix-retry-button.webp",
+    "size": [
+      1100,
+      305
+    ],
+    "sha256": "17f8306670c04d1519fd1c4cf1a6f890d79704490226e5647f1a37411f126c3c"
   }
 ]
