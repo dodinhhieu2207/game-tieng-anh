@@ -28,12 +28,14 @@
    if(kind==='build-sentence')this.rounds=[...mix(WORDS).map(w=>({shown:w,asked:w,yes:true,form:'question'})),{shown:'robot',asked:'robot',yes:true,form:'positive'},{shown:'teddy',asked:'robot',yes:false,form:'negative'}];
    cancelVoice();document.dispatchEvent(new Event('toybuddy:enter'));
    els.gameStage.classList.add('u3-stage');els.gameScreen.classList.add('u3-on');els.gameStage.style.setProperty('--u3-bg','url(assets/unit3/bg/classroom.webp)');
-   setStage(`<section class="unit3-toytown l2-scene" aria-label="${this.entry[2]}">
+   setStage(`<section class="unit3-toytown l2-scene" data-l2-kind="${kind}" aria-label="${this.entry[2]}">
     <header class="l2-head"><h2>${this.entry[2]}</h2><label class="l2-level" ${['build-sentence','talk-to-toy-buddy'].includes(kind)?'':'hidden'}>Support <select id="l2Level" aria-label="Support level"><option value="easy">Easy</option><option value="practice">Practice</option><option value="challenge">Challenge</option></select></label><span id="l2Progress"></span></header>
     <div class="l2-playground"><div class="l2-friend"><div id="l2Bubble" class="l2-bubble"></div><div id="l2Actor"></div></div><div class="l2-task"><div class="l2-picture"><img id="l2Toy" alt=""><span id="l2Question"></span></div><p id="l2Instruction"></p><div id="l2Interaction"></div></div></div>
     <p id="l2Status" role="status" aria-live="polite"></p><div class="l2-round-controls"><button id="l2Replay" type="button">Replay Question</button><button id="l2Next" type="button" disabled>Next</button></div>
     <div id="l2Result" hidden></div></section>`);
-   this.root=els.gameStage.querySelector('.l2-scene');this.ui={};['Bubble','Progress','Toy','Question','Instruction','Interaction','Status','Replay','Next','Result','Level'].forEach(n=>this.ui[n]=this.root.querySelector('#l2'+n));
+   this.root=els.gameStage.querySelector('.l2-scene');if(['meet-pattern','talk-to-toy-buddy'].includes(kind)){this.root.classList.add('l2-open');this.polish=LearningMotion.create(this.root)}this.ui={};['Bubble','Progress','Toy','Question','Instruction','Interaction','Status','Replay','Next','Result','Level'].forEach(n=>this.ui[n]=this.root.querySelector('#l2'+n));
+   if(this.root.classList.contains('l2-open'))this.ui.Toy.dataset.motionOwned='true';
+   if(this.root.classList.contains('l2-open'))this.root.querySelector('.l2-task').append(this.ui.Status,this.root.querySelector('.l2-round-controls'));
    this.buddy=new ToyBuddy(this.root.querySelector('#l2Actor'),{onStateChange:state=>{this.root.dataset.state=state;},onAudioError:()=>{if(!this.destroyed){this.phase='audio-error';this.status('Audio could not play. Tap Replay Question to try again.');this.refresh();}}});
    this.ui.Replay.onclick=()=>this.prompt();this.ui.Next.onclick=()=>this.next();
    this.ui.Level.onchange=()=>{this.level=this.ui.Level.value;this.setRound(true);};
@@ -41,7 +43,7 @@
     this.rounds=mix(WORDS).slice(0,3).flatMap(shown=>[{shown,asked:shown,yes:true},{shown,asked:mix(WORDS.filter(w=>w!==shown))[0],yes:false}]);this.rounds=mix(this.rounds);
     const modes=document.createElement('div');modes.className='l2-speaking-modes';modes.innerHTML='<button type="button" data-speaking-mode="yes-no" aria-pressed="true"><span class="sp-sprite" data-sp-sprite="mic" aria-hidden="true"></span>Say & Play<br><small>Buddy asks. You answer.</small></button><button type="button" data-speaking-mode="mystery-question" aria-pressed="false"><span class="sp-sprite" data-sp-sprite="ask" aria-hidden="true"></span>Mystery Box<br><small>You ask. Buddy answers.</small></button>';this.root.querySelector('.l2-head').after(modes);
     const label=document.createElement('label');label.className='l2-level';label.innerHTML='Speaking <select id="l2SpeakingType" aria-label="Speaking practice"><option value="yes-no">Is it a toy? — Answer</option><option value="mystery-question">Mystery Toy — Ask</option><option value="name">What’s this? — Answer</option><option value="name-question">What’s this? — Ask</option></select>';
-    const extra=document.createElement('details');extra.className='l2-speaking-extra';extra.innerHTML='<summary>Teacher: more speaking practice</summary>';extra.append(label);modes.after(extra);this.ui.SpeakingType=label.querySelector('select');
+    const extra=document.createElement('details');extra.className='l2-speaking-extra';extra.innerHTML='<summary>Teacher: more speaking practice</summary>';extra.append(label);this.root.append(extra);this.ui.SpeakingType=label.querySelector('select');
     this.ui.SpeakingType.onchange=()=>{const type=this.ui.SpeakingType.value;this.index=0;this.errors=0;this.attempts=0;this.firstCorrect=0;this.teacherConfirmed=0;this.recognitionReviews=0;this.aiConfirmed=0;this.rounds=type==='yes-no'?mix(mix(WORDS).slice(0,3).flatMap(shown=>[{shown,asked:shown,yes:true},{shown,asked:mix(WORDS.filter(w=>w!==shown))[0],yes:false}])):mix(WORDS.map(shown=>({shown,asked:shown,questionType:type,guesses:[],choices:mix([shown,mix(WORDS.filter(w=>w!==shown))[0]]),text:type==='mystery-question'?'Mystery Box':"What's this?",clip:['mystery-question','name-question'].includes(type)?'feedback/your_turn':'questions/whats_this'})));this.setRound();};
     modes.querySelectorAll('button').forEach(b=>b.onclick=()=>{this.ui.SpeakingType.value=b.dataset.speakingMode;this.ui.SpeakingType.onchange();});
    }
@@ -69,6 +71,7 @@
     this.root.querySelector('[data-voice-title]').textContent=asks?'YOU ASK → TOY BUDDY ANSWERS':'TOY BUDDY ASKS → YOU ANSWER';
     this.root.querySelector('[data-voice-icon]').src=asks?'assets/shared-ui/student.png':'assets/shared-ui/question.png';
    }
+   if(this.root.classList.contains('l2-open')){const label=this.ui.Replay.querySelector('span');if(label)label.textContent=['mystery-question','name-question'].includes(this.round?.questionType)?'Hear cue':'Hear again';else this.ui.Replay.textContent='Hear again';const micLabel=this.root.querySelector('[data-voice-label]');if(micLabel)micLabel.textContent=this.phase==='recording'?'Done':this.phase==='starting'?'Starting…':this.phase==='processing'?'Checking…':this.phase==='asking'?'Listen':'Speak';}
    if(this.round?.questionType==='mystery-question')this.updateMystery();
   }
   clip(key){return window.Unit3Lesson2Clips?.clips[key];}
@@ -107,7 +110,7 @@
    else if(this.kind==='build-sentence')this.buildTiles();
    else if(this.kind==='talk-to-toy-buddy')this.speakingControls();
    else this.ui.Interaction.innerHTML='<div class="l2-yesno"><button type="button" data-choice="true">YES</button><button type="button" data-choice="false">NO</button></div><p id="l2Model" class="l2-model"></p>';
-   this.preload();this.refresh();this.prompt();
+   this.preload();this.refresh();if(this.polish){this.polish.dispose();this.polish=LearningMotion.create(this.root);this.polish.run(tl=>tl.fromTo(this.ui.Toy,{y:15,opacity:.25,scale:.92},{y:0,opacity:1,scale:1,duration:.45,ease:'power2.out'}));}this.prompt();
   }
   preload(){
    for(const r of [this.round,this.rounds[this.index+1]].filter(Boolean)){const im=new Image();im.src=toy(r.shown);const clip=this.clip(r.clip||'questions/is_it_a_'+r.asked);if(clip){const a=new Audio(clip.src);a.preload='auto';}}
@@ -176,7 +179,7 @@
    }else if(!await this.speak('feedback/excellent',token,{endState:'CELEBRATE'}))return;
    if(!await this.sfx('correct',token))return;
    if(!this.roundWrong&&!this.teacherAssistedRound)this.firstCorrect++;
-   this.buddy.setState('CORRECT');this.phase='resolved';this.status('Great job! '+(this.kind==='listen-decide'?`Accuracy: ${this.firstCorrect} / ${this.index+1} first tries. `:'')+'Tap Next.');this.refresh();
+   this.buddy.setState('CORRECT');if(this.polish)this.polish.run(tl=>tl.to(this.ui.Toy,{y:-12,rotation:3,duration:.2,ease:'power2.out'}).to(this.ui.Toy,{y:0,rotation:0,duration:.35,ease:'back.out(1.3)'}));this.phase='resolved';this.status('Great job! '+(this.kind==='listen-decide'?`Accuracy: ${this.firstCorrect} / ${this.index+1} first tries. `:'')+'Tap Next.');this.refresh();
   }
   placeAnswer(b){
    if(this.phase!=='listening')return;
@@ -278,7 +281,7 @@
    if(action==='unit')window.LearningApp.go('#/unit/3');
    if(action==='next'){const next=ENTRIES[ENTRIES.findIndex(e=>e[0]===this.kind)+1];if(next)window.LearningApp.go('#/unit/3/lesson/2?mode='+mode+'&activity='+next[0]);}
   }
-  dispose(){if(this.destroyed)return;this.resetAudio();this.destroyed=true;this.observer?.disconnect();document.removeEventListener('visibilitychange',this.hideListener);this.dragEngine?.destroy();this.buddy.destroy();if(scene===this)scene=null;}
+  dispose(){if(this.destroyed)return;this.polish?.dispose();this.resetAudio();this.destroyed=true;this.observer?.disconnect();document.removeEventListener('visibilitychange',this.hideListener);this.dragEngine?.destroy();this.buddy.destroy();if(scene===this)scene=null;}
  }
  function enter(kind){scene?.dispose();const current=new LessonScene(kind);scene=current;/* async audio promises settle after assignment */}
  ENTRIES.forEach(([id,game,title])=>{games[game]={enter:()=>enter(id)};GAME_META[game]=['UNIT 3 · LESSON 2',title,'Listen • look • answer'];});

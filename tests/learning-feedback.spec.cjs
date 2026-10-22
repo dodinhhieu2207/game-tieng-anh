@@ -15,7 +15,7 @@ const assert=require('node:assert/strict');
  await page.waitForFunction(()=>testVoice.paused||feedbackMedia.filter(a=>a.learningSfx).every(a=>a.paused||a.ended));
  const before=await page.evaluate(()=>feedbackMedia.length);await page.evaluate(()=>LearningFeedback.play('correct'));assert.equal(await page.evaluate(()=>feedbackMedia.length),before);await page.evaluate(()=>testVoice.pause());
  // Real Lesson 2 answer path still waits for audio ended, then resolves and offers Next.
- await page.evaluate(()=>LearningApp.go('#/unit/3/lesson/2?mode=practice&activity=listen-decide'));
+ await page.evaluate(()=>LearningApp.go('#/unit/3/lesson/2?mode=practice&activity=meet-pattern'));
  await page.waitForFunction(()=>Unit3Lesson2.current()?.phase==='listening',{timeout:15000});
  const yes=await page.evaluate(()=>Unit3Lesson2.current().round.yes);
  await page.locator(`[data-choice="${!yes}"]`).click();await page.waitForFunction(()=>Unit3Lesson2.current()?.phase==='listening',null,{timeout:15000});
@@ -24,7 +24,7 @@ const assert=require('node:assert/strict');
  assert(await page.evaluate(()=>feedbackMedia.some(a=>a.src.endsWith('/feedback/confirmation_002.wav'))));
  assert(await page.locator('#l2Next').isEnabled());
  // Rewards fly into the in-game HUD; a replay doesn't create extra stars.
- await page.evaluate(()=>LearningProgress.completed('3/2/listen-decide',3));await page.waitForSelector('.reward-toast:not([hidden])');
+ await page.evaluate(()=>LearningProgress.completed('3/2/meet-pattern',3));await page.waitForSelector('.reward-toast:not([hidden])');
  assert(await page.locator('.learning-fx-reward').count()>0);await page.screenshot({path:'tests/feedback-reward.png'});
  await page.evaluate(()=>{for(let i=0;i<20;i++)LearningFeedback.visual('reward',document.querySelector('#l2Toy'));});assert(await page.locator('.learning-fx-particle').count()<=40);
  await page.locator('.app-game-more>summary').click();await page.locator('[data-shell-action="sound"]').click();

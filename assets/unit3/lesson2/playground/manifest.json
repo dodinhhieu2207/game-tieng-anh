@@ -1,0 +1,66 @@
+[
+  {
+    "name": "yes",
+    "file": "yes.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-a23c0eae-3c1f-45a5-9c95-e29b62bc5784.png",
+    "bbox": [
+      40,
+      62,
+      2133,
+      651
+    ],
+    "size": [
+      1000,
+      281
+    ],
+    "sha256": "0679d9a9c74bb11b09cac521a7f09f80dd0444e78f51c064257811c32a620d86"
+  },
+  {
+    "name": "no",
+    "file": "no.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-3c81fe50-10f2-4294-974a-03e52017c17b.png",
+    "bbox": [
+      30,
+      61,
+      2141,
+      647
+    ],
+    "size": [
+      1000,
+      278
+    ],
+    "sha256": "f76c15aec5e81769a7f2426f966c5f90f6d8bb57e332791bdd07d2e0ffbdbfec"
+  },
+  {
+    "name": "action",
+    "file": "action.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-c2c3aea9-9682-4aac-9036-35a7848b05ac.png",
+    "bbox": [
+      47,
+      61,
+      2128,
+      619
+    ],
+    "size": [
+      1000,
+      268
+    ],
+    "sha256": "a6819c8a3932df66f049abdbc91e3476f82525ca96d8a2b03d48e710cb6ad41e"
+  },
+  {
+    "name": "frame",
+    "file": "frame.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-5c057584-ccc5-4f0d-9f6c-837aa68d5780.png",
+    "bbox": [
+      10,
+      44,
+      2163,
+      676
+    ],
+    "size": [
+      1000,
+      294
+    ],
+    "sha256": "ed85ecc21ef61d2256a84a14c8a55aa4259c38e77420fa8dcc261ca56680d261"
+  }
+]

@@ -52,7 +52,7 @@
   cards.forEach((card,i)=>run(card,[{opacity:.15},{opacity:1}],{duration:300,delay:i*32,easing:'ease-out'}));
   document.dispatchEvent(new CustomEvent('learning:presentation',{detail:{kind,game:typeof currentGame==='undefined'?null:currentGame}}));
  }
- function imageArrival(img){if(img.closest('.toy-buddy,[id="l2Actor"],.particle-layer,.learning-fx-layer')||img.getBoundingClientRect().width<45)return;
+ function imageArrival(img){if(img.closest('[data-motion-owned],.toy-buddy,[id="l2Actor"],.particle-layer,.learning-fx-layer')||img.getBoundingClientRect().width<45)return;
   const src=img.currentSrc||img.src;if(seenImages.get(img)===src)return;seenImages.set(img,src);img.dataset.feedbackArrival='picture';run(img,[{opacity:.2,transform:'scale(.92)'},{opacity:1,transform:'scale(1.025)',offset:.7},{opacity:1,transform:'scale(1)'}],{duration:430,easing:'cubic-bezier(.2,.8,.3,1)'});
  }
  function presentationAdapter(){
