@@ -82,5 +82,15 @@
   ],
   "sourceSha256": "5b378bb56e7f3ff53341627e3fa4e06218ff1b546a0bb0ae18b79723c9e78100",
   "referenceSha256": "ca0110a74c826fd6b35f7b0dee4e4be01609502630af37ae91ed92fda94b1111",
-  "licenseNote": "Textbook-adapted artwork: underlying textbook rights remain with its owner. Not represented as CC0. Dedicated UI images generated with imagegen. Kenney SFX license is separate."
+  "licenseNote": "Textbook-adapted artwork: underlying textbook rights remain with its owner. Not represented as CC0. Dedicated UI images generated with imagegen. Kenney SFX license is separate.",
+  "practiceAudio": [
+    {
+      "file": "assets/unit3/lesson2/audio/questions/is_it_a_teddy.mp3",
+      "sha256": "8709545cc35bd14ddfb92308f865ea93a1ed37760d953cd5874dd9bbf68e1abe"
+    },
+    {
+      "file": "assets/unit3/lesson2/audio/answers/yes_it_is.mp3",
+      "sha256": "3525ed23e345f4969f77699b915bb4401e1a56d37768f374e1fc21eda2237d85"
+    }
+  ]
 }
