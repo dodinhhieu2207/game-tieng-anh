@@ -16,3 +16,5 @@ Public release ecd1ce6: Pages succeeded. story-games.spec and story-games-recove
 User follow-up: replace the two plain underlined listening controls with dedicated generated raster button assets. Storybook+speaker for story cue; speech bubble+speaker for model line. Live text, existing data-sg actions/disabled states and audio logic retained. Pending asset export, five widths, real cue/model playback and public verification.
 
 Listening asset local gate: two dedicated imagegen button WebPs integrated; live labels and existing actions preserved. Five widths (320/390/768/1024/1366) passed image load, label bounds, 48px targets/no underline/no overflow. Keyboard story playback and model playback both succeeded with mutual audio locking. Phone screenshot visually reviewed. Public verification pending.
+
+Public release d65c106: Pages succeeded; dedicated listening assets test passed on public URL at five widths, including actual story/model audio playback and disabled controls during audio. Release files mirrored to Desktop with zero hash mismatches.
