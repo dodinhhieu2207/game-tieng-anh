@@ -1,0 +1,37 @@
+[
+  {
+    "name": "scene-01",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-6e17d0b5-d83d-40b8-b237-34c6810a0798.png",
+    "prompt": "Redraw and clean this exact textbook story scene for a children's English learning web app. Keep the same FOUR characters and identities, clothes, poses, interactions: brown-haired mother yellow top blue trousers seated on coral sofa left; brown-haired father green vest white shirt red trousers seated middle-left giving a CLOSED yellow present with magenta ribbon to the smiling blond older boy in light-blue and white shirt and green shorts kneeling right; little brown-haired toddler in blue/white striped romper crawling with brown teddy on floor foreground. Same green living-room wall, red curtain/window, lamp left, small gifts and blue-yellow ball. Adapt to LANDSCAPE 3:2 by extending the living room at left/right naturally, keep every person fully visible. Crisp professional 2D storybook illustration, warm soft painted shading and clean smooth linework, faithful to reference, NOT 3D/Pixar, not photorealistic. Remove page rim and green numbered badge, remove motion scribbles. No words, no text, no numbers. Do not reveal robot, do not add characters, do not change the key present's yellow/magenta colors. Preserve readable uncluttered composition and exact story action."
+  },
+  {
+    "name": "present",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-950f601f-d1e8-4b30-9766-299cff69c965.png",
+    "prompt": "Create a transparent isolated object sprite faithful to the large yellow gift box in the reference: upright yellow rectangular wrapped present with a wide magenta vertical and horizontal ribbon and large magenta bow at front upper middle. Closed gift, no toy visible. Front/very slight three-quarter view, polished clean 2D storybook style, warm shading, same proportions as reference. Object only, no hands, no people, no floor, no other gifts, no text. Thick rounded readable contours, crisp transparent edges."
+  },
+  {
+    "name": "story-frame",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-d97d2255-c418-4dfa-80f5-96d16469cd42.png",
+    "prompt": "Create a single wide rectangular EMPTY CENTER picture-frame overlay for a children's educational storybook game. Landscape 3:2. Thin warm ivory and soft coral outer rim, delicate teal inset, tiny folded ribbon accents at just two corners. Center must be FULLY TRANSPARENT so a separate story illustration is visible through it. Outside also transparent. Front view flat and symmetric, rounded corners, elegant polished 2D storybook UI asset with gentle dimensional edge shading. No scene, no people, no writing, no text, no icons. Frame rim only, about 3 percent of total width. Match a cozy family living room story about a yellow birthday gift with pink ribbon. Avoid bamboo, wood, jungle or nautical style."
+  },
+  {
+    "name": "speech-bubble",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-19185149-858e-42c0-8abe-99f0e2bffeb0.png",
+    "prompt": "One large horizontal rounded speech bubble, 3:1 aspect, warm ivory blank center with a thin coral rim and subtle mint offset edge, a small rounded speech tail at lower LEFT. Children's polished storybook game UI style. No letters, no words, no icon, blank clean center for live text. Transparent outside silhouette, straight front view. Border thin and clean, no heavy shadow, no surrounding scenery."
+  },
+  {
+    "name": "listen",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-185a4dd2-1d4f-4945-b237-fb6992c84196.png",
+    "prompt": "Single circular audio speaker button for a children's storybook education app. Soft teal raised face, warm ivory speaker icon with two sound waves, ivory rim with one small coral accent. Polished clean 2D illustrated storybook style with soft shading. No text, no letters. Front view, transparent outside, crisp icon readable at 56px. Not wooden, not nautical."
+  },
+  {
+    "name": "yes-button",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-5a103496-ca4f-449d-80b9-9fc07f8313d6.png",
+    "prompt": "Single rounded rectangular blank YES answer button asset for children's storybook game, aspect 2.4:1. Soft leaf-green enamel face, warm ivory thin raised rim, subtle dimension, a small clear ivory CHECK symbol placed at far LEFT only. Remaining center-right completely blank for live text. No letters, no words. Front view, transparent background outside, polished 2D storybook UI, friendly uncluttered shapes."
+  },
+  {
+    "name": "no-button",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-1a2615a3-b1c8-43ec-a44d-ff315054fea2.png",
+    "prompt": "Single rounded rectangular blank NO answer button asset for children's storybook game, aspect 2.4:1. Soft coral-red enamel face, warm ivory thin raised rim, subtle dimension, a small clear ivory CROSS symbol placed at far LEFT only. Remaining center-right completely blank for live text. No letters, no words. Front view, transparent background outside, polished 2D storybook UI, friendly uncluttered shapes."
+  }
+]
