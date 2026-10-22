@@ -1,0 +1,36 @@
+{
+  "sourceFile": "family and friends 1 -unit 3-is it a plane-lesson 6 story - YouTube.mp3",
+  "sourceSha256": "692e5dfd00a8d881229905fbd199eee6a7dd07a453eab52afbcf8a6874478645",
+  "clips": [
+    {
+      "file": "question-teddy.mp3",
+      "sourceStart": 16.7,
+      "sourceEnd": 19.3,
+      "sha256": "ef57e8159d3d9905ba31ba02122667b058c5420dcb073977d44573a55f52c91f"
+    },
+    {
+      "file": "question-plane.mp3",
+      "sourceStart": 30.45,
+      "sourceEnd": 31.75,
+      "sha256": "58f2a57e288fbfce9b5395cff18e7e338b28ce1a93d97616b400457cbbe355da"
+    },
+    {
+      "file": "question-robot.mp3",
+      "sourceStart": 47.35,
+      "sourceEnd": 48.7,
+      "sha256": "af9397bc459d08086f2433b00070ba0ac108bcfc03ea4fdecde3916f3449a897"
+    },
+    {
+      "file": "name-robot.mp3",
+      "sourceStart": 58.0,
+      "sourceEnd": 59.25,
+      "sha256": "48eba8fb3fcc8fb1fc6ec1f7672d27d356ff48a82d514662db3f83e69c7e9de7"
+    },
+    {
+      "file": "answer-yes.mp3",
+      "sourceStart": 55.8,
+      "sourceEnd": 57.95,
+      "sha256": "0f20662bf9f135fd17bb3452c5867e32ab1a63b2ceca84eae8b413e1587f8e47"
+    }
+  ]
+}

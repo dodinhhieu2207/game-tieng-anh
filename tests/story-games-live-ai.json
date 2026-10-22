@@ -1,0 +1,9 @@
+{
+  "source": "Supplied story answer clip, not a child recording",
+  "result": {
+    "transcript": "No, it isn't.",
+    "normalized": "no it isn't",
+    "result": "CORRECT",
+    "answerType": "NO"
+  }
+}
