@@ -42,5 +42,27 @@
       800
     ],
     "sha256": "ff94ba5b4e76e7456a4d51c83ab14a144502f4bf66028256c353a2ffdbaf44d8"
+  },
+  {
+    "name": "story-listen-button",
+    "prompt": "Create one dedicated illustrated button asset for a preschool English story game. Wide horizontal 3.5:1 rounded rectangle. Warm ivory flat BLANK center/right for live text, mint teal raised rim with a restrained coral edge. At FAR LEFT ONLY a clear cute open storybook with a small white speaker/sound-wave emblem, both fitted within left 22% of width. Keep right 72% completely blank and light ivory for text readability. Soft polished 2D storybook shading, crisp clean edges, warm matte material, not glossy plastic. Transparent exterior. No text, no letters, no words, no numbers. Single button only.",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-a0d60e00-5cd4-4925-a846-61da4de49fdb.png",
+    "file": "story-listen-button.webp",
+    "size": [
+      1100,
+      284
+    ],
+    "sha256": "0acf17c1816872fbfb540d0748c3eec4a70ef4ecb469311c0ec7f0e996a80eb3"
+  },
+  {
+    "name": "line-listen-button",
+    "prompt": "Create one dedicated illustrated button asset for a preschool English roleplay game. Wide horizontal 3.5:1 rounded rectangle. Warm ivory flat BLANK center/right for live text, soft coral peach raised rim with a restrained mint teal edge. At FAR LEFT ONLY a clear cute ivory speech bubble with a dark teal speaker/sound-wave emblem, fitted within left 22% of width. Keep right 72% completely blank and light ivory for text readability. Soft polished 2D storybook shading, crisp clean edges, warm matte material, not glossy plastic. Transparent exterior. No text, no letters, no words, no numbers. Single button only.",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-d8ce4c99-086f-4df9-b63e-590abd276a98.png",
+    "file": "line-listen-button.webp",
+    "size": [
+      1100,
+      311
+    ],
+    "sha256": "7458a8229ad4ed8dbecec2194e9ff56202b66a77c561a1106206a50c716c124d"
   }
 ]
