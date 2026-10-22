@@ -1,0 +1,6 @@
+# Imagegen prompts, 2026-10-22
+Built-in imagegen used, transparent_background=true. Original outputs retained at paths in asset-manifest.json; WebP native alpha/export only.
+
+Curtain: One production game UI asset: a wide theatrical proscenium frame for a premium children English story roleplay game. Transparent background, wide landscape 3:2 frame with a truly empty transparent central rectangular opening occupying 84% width and 78% height. Clean polished hand-painted 2D storybook illustration, coral red velvet curtains bunched only at extreme left/right edges and a slim softly curved top valance, warm gold piping and tiny mint star embroidery, small rounded wooden stage apron along bottom. Keep center fully transparent for existing story illustration. No text, people, backdrop in center, logos or harsh plastic shine. Legible at 320px, entire frame isolated with padding.
+
+Medal: One isolated participation medal for a children English story theatre game, transparent background. Warm gold five-point star with embossed ivory microphone symbol, coral and mint short ribbon tails. Clean hand-painted 2D storybook illustration, restrained soft depth, matching friendly family cartoon educational app. Chunky readable silhouette at80px, no words, letters, numbers, faces, background, photorealism or plastic gloss.

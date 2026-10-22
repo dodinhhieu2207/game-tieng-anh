@@ -1,0 +1,24 @@
+[
+  {
+    "name": "curtain",
+    "file": "curtain.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-0c6083c0-c1ce-40fe-bd27-0fe9da81316e.png",
+    "size": [
+      1400,
+      933
+    ],
+    "mode": "RGBA",
+    "sha256": "295907676879bc5d62e92e1b4c0b517183d71fdb6c0cbb9564669bfe944a256c"
+  },
+  {
+    "name": "medal",
+    "file": "medal.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-1c612505-f406-4f36-9e20-5b8e5c39c35f.png",
+    "size": [
+      360,
+      360
+    ],
+    "mode": "RGBA",
+    "sha256": "c6e1aa414179fee8b63bd36348eacc40d9f574a47d142b471c5bcc24ff709ed8"
+  }
+]

@@ -5,8 +5,20 @@
  const school=Object.freeze(['desk','chair','pencil','crayon','notebook','egg','elephant','fish','farm']);
  const phonics=Object.freeze(['girl','guitar']);
  const numbers=Object.freeze(['one','two','three','four','five','six','seven','eight']);
- const questionTypes=Object.freeze(['yes-no','name','school-name','name-question','mystery-question','toy-word','gg-word','gg-letter-name','number-word']);
- const vocabularyFor=type=>type==='number-word'?numbers:type==='gg-letter-name'?['G']:type==='school-name'?school:type==='gg-word'?phonics:toys;
+ const storyLines=Object.freeze({
+  'teddy-question':[/^is it a teddy(?: bear)?$/],
+  'plane-question':[/^is it a plane$/],
+  'robot-question':[/^is it a robot$/],
+  'no-answer':[/^no it (?:isn't|isnt|is not)$/],
+  'yes-answer':[/^yes it is$/],
+  'open-it':[/^open it$/],
+  'billy-present':[/^billy my present$/],
+  'robot-name':[/^(?:it's|its|it is) a robot$/],
+  'teddy-cheer':[/^teddy bear(?: teddy bear)?$/],
+  'billy-robot':[/^(?:i'm|im|i am) a robot$/]
+ });
+ const questionTypes=Object.freeze(['yes-no','name','school-name','name-question','mystery-question','toy-word','gg-word','gg-letter-name','number-word','story-line']);
+ const vocabularyFor=type=>type==='story-line'?Object.keys(storyLines):type==='number-word'?numbers:type==='gg-letter-name'?['G']:type==='school-name'?school:type==='gg-word'?phonics:toys;
  // Bounded ASR spellings/homophones, independent of the displayed answer.
  // Do not fuzzy-match short words such as cat/car, or add missing grammar.
  const aliases=Object.freeze({'plain':'plane','airplane':'plane','aeroplane':'plane','ro bot':'robot','robo':'robot','baloon':'balloon','ballon':'balloon','tedi':'teddy','teddie':'teddy','gurl':'girl','guitah':'guitar','guiter':'guitar','pensil':'pencil','pencill':'pencil','cray on':'crayon','note book':'notebook','elefant':'elephant'});
@@ -19,6 +31,12 @@
   transcript=typeof transcript==='string'?transcript:'';
   // Only remove fillers and adjacent repeated words. Never invent missing grammar or toy names.
   const normalized=canonicalWords(normalize(transcript).replace(/\b(?:um|uh|erm|er|hmm)\b/g,' ').replace(/\s+/g,' ').trim().split(' ').filter((w,i,a)=>i===0||w!==a[i-1]).join(' '),questionType);
+  if(questionType==='story-line'){
+   const matches=Object.entries(storyLines).filter(([,patterns])=>patterns.some(p=>p.test(normalized))).map(([id])=>id);
+   const correct=matches.includes(displayedToy);
+   const partial=['yes','no','robot','teddy','teddy bear','open','billy','my present',"i'm",'i am','is it'].includes(normalized);
+   return {transcript,normalized,result:correct?'CORRECT':matches.length?'WRONG_LOGIC':partial?'INCOMPLETE':'UNCLEAR',answerType:correct||matches.length?'NAME':null};
+  }
   if(questionType==='number-word'){
    const value=/^[1-8]$/.test(normalized)?numbers[Number(normalized)-1]:normalized;
    const known=numbers.includes(value);

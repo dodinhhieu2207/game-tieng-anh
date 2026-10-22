@@ -1,0 +1,30 @@
+{
+  "source": "User-supplied story voice cuts converted to WebM; not child recordings or pronunciation-accuracy measurement.",
+  "workerVersion": "f4996771-70ba-4d69-bd89-5ce32925cfdb",
+  "results": [
+    {
+      "id": "open-it",
+      "status": 200,
+      "transcript": "Open it.",
+      "normalized": "open it",
+      "result": "CORRECT",
+      "answerType": "NAME"
+    },
+    {
+      "id": "teddy-question",
+      "status": 200,
+      "transcript": "Is it a teddy bear?",
+      "normalized": "is it a teddy bear",
+      "result": "CORRECT",
+      "answerType": "NAME"
+    },
+    {
+      "id": "billy-robot",
+      "status": 200,
+      "transcript": "I'm a robot.",
+      "normalized": "i'm a robot",
+      "result": "CORRECT",
+      "answerType": "NAME"
+    }
+  ]
+}

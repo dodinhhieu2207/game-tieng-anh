@@ -1,0 +1,151 @@
+{
+  "source": "family and friends 1 -unit 3-is it a plane-lesson 6 story - YouTube.mp3",
+  "sourceSha256": "692e5dfd00a8d881229905fbd199eee6a7dd07a453eab52afbcf8a6874478645",
+  "method": "Native ffmpeg cuts only. Source untouched. Speaker mapping checked against supplied MP4.",
+  "beats": [
+    {
+      "id": "teddy-question",
+      "role": "Tim",
+      "scene": 0,
+      "start": 16.65,
+      "end": 19.35,
+      "line": "Is it a teddy bear?",
+      "act": "Hold your present. Ask Dad.",
+      "key": "teddy-question",
+      "file": "teddy-question.mp3",
+      "sha256": "2bd774b6c8d74a6f2646a1f6ca41c1e1e0f634ad2edfc10b11f7b1e36dbb1fd4"
+    },
+    {
+      "id": "no-first",
+      "role": "Dad",
+      "scene": 0,
+      "start": 19.5,
+      "end": 22.2,
+      "line": "No, it isn’t.",
+      "act": "Smile and shake your head.",
+      "key": "no-answer",
+      "file": "no-first.mp3",
+      "sha256": "497cfa5fbb134a46db8159b8a12690370071ed1957095b9577d1376dc0243e81"
+    },
+    {
+      "id": "teddy-cheer",
+      "role": "Billy",
+      "scene": 0,
+      "start": 22.45,
+      "end": 25.45,
+      "line": "Teddy bear! Teddy bear!",
+      "act": "Hug your teddy.",
+      "key": "teddy-cheer",
+      "file": "teddy-cheer.mp3",
+      "sha256": "2d121de50195adc374821bffc6da72a72caf4b630b2849938c13d5fd79ee523e"
+    },
+    {
+      "id": "plane-question",
+      "role": "Tim",
+      "scene": 1,
+      "start": 30.4,
+      "end": 31.9,
+      "line": "Is it a plane?",
+      "act": "Listen to your present. Ask Dad.",
+      "key": "plane-question",
+      "file": "plane-question.mp3",
+      "sha256": "867c5c88245e38dfecec25967e1366fbee801ad8d10481983fa7193a78b1280d"
+    },
+    {
+      "id": "no-second",
+      "role": "Dad",
+      "scene": 1,
+      "start": 31.95,
+      "end": 34.95,
+      "line": "No, it isn’t.",
+      "act": "Shake your head gently.",
+      "key": "no-answer",
+      "file": "no-second.mp3",
+      "sha256": "ddb90e9367e1ba66b1a39683c95a1d384944511776760a8e859e0a34c7ea4c66"
+    },
+    {
+      "id": "billy-present",
+      "role": "Tim",
+      "scene": 2,
+      "start": 38.7,
+      "end": 40.65,
+      "line": "Billy! My present!",
+      "act": "Point to your present.",
+      "key": "billy-present",
+      "file": "billy-present.mp3",
+      "sha256": "fcf271148b8a206651ab7e76f0bd2dab1ab45ecc3fabdd1bd0e65eb53d2ed43d"
+    },
+    {
+      "id": "robot-question",
+      "role": "Tim",
+      "scene": 3,
+      "start": 47.25,
+      "end": 48.75,
+      "line": "Is it a robot?",
+      "act": "Show your present. Ask Dad.",
+      "key": "robot-question",
+      "file": "robot-question.mp3",
+      "sha256": "b168c3c8c61a7c3e25ef41edc9d95a598ae1f94142b8ea7f680a549a1f137c63"
+    },
+    {
+      "id": "open-it",
+      "role": "Dad",
+      "scene": 3,
+      "start": 49.1,
+      "end": 50.5,
+      "line": "Open it.",
+      "act": "Invite Tim to open the present.",
+      "key": "open-it",
+      "file": "open-it.mp3",
+      "sha256": "b7bbb69e2a1e03cd8a8b1d1fc1145b5526f7b6c4ec7f0614739177a87edbcbc8"
+    },
+    {
+      "id": "yes-answer",
+      "role": "Tim",
+      "scene": 3,
+      "start": 55.8,
+      "end": 57.95,
+      "line": "Yes, it is.",
+      "act": "Open your present and smile.",
+      "key": "yes-answer",
+      "file": "yes-answer.mp3",
+      "sha256": "d7c226d2249667d7d58184e1288e5c140c38b1942d666b6a0f9c56f1ef5ea646"
+    },
+    {
+      "id": "robot-name",
+      "role": "Tim",
+      "scene": 3,
+      "start": 58.0,
+      "end": 59.35,
+      "line": "It’s a robot!",
+      "act": "Show everyone your robot.",
+      "key": "robot-name",
+      "file": "robot-name.mp3",
+      "sha256": "c07c602179ce336a42355bfdd8114c0c222eb5e3673dffe028f1e9c4e7012309"
+    },
+    {
+      "id": "robot-voice",
+      "role": "Robot",
+      "scene": 3,
+      "start": 60.7,
+      "end": 64.1,
+      "line": "Listen to the robot.",
+      "act": "Listen together.",
+      "key": null,
+      "file": "robot-voice.mp3",
+      "sha256": "7b89a831bd9d838ddf1e21ec10d5ed68d2c5207e159f79c977f4ade2ac08a74a"
+    },
+    {
+      "id": "billy-robot",
+      "role": "Billy",
+      "scene": 3,
+      "start": 64.6,
+      "end": 66.6,
+      "line": "I’m a robot!",
+      "act": "Move your arms like a robot.",
+      "key": "billy-robot",
+      "file": "billy-robot.mp3",
+      "sha256": "1e65c9d0bf434581e6fd95e90230d5a46f1631c399600bf2215c482fb241ef4e"
+    }
+  ]
+}

@@ -48,7 +48,7 @@ export default {
   try{
    // Short, quiet child utterances should not be discarded by a pre-transcription VAD.
    // Context includes the whole lesson vocabulary, never the expected answer.
-const input={audio:Buffer.from(await audio.arrayBuffer()).toString('base64'),task:'transcribe',language:'en',vad_filter:false,initial_prompt:questionType==='number-word'?'':questionType==='gg-letter-name'?'English alphabet letter names.': ['school-name','gg-word'].includes(questionType)?'English classroom speech. Vocabulary: '+vocabulary.join(', ')+'.':CONTEXT,condition_on_previous_text:false};
+const input={audio:Buffer.from(await audio.arrayBuffer()).toString('base64'),task:'transcribe',language:'en',vad_filter:false,initial_prompt:questionType==='story-line'?'English family story. Vocabulary: teddy, bear, plane, robot, present, Billy, open.':questionType==='number-word'?'':questionType==='gg-letter-name'?'English alphabet letter names.': ['school-name','gg-word'].includes(questionType)?'English classroom speech. Vocabulary: '+vocabulary.join(', ')+'.':CONTEXT,condition_on_previous_text:false};
    const uncertain=output=>Array.isArray(output?.segments)&&output.segments.length&&output.segments.every(s=>Number.isFinite(s.avg_logprob)?s.avg_logprob< -1:s.no_speech_prob>=.6);
    let expired=false;
    const infer=async()=>{
