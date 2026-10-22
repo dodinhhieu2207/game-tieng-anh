@@ -1,0 +1,329 @@
+[
+  {
+    "start": 16.939999999999998,
+    "end": 18.96,
+    "text": " Is it a teddy bear?",
+    "words": [
+      {
+        "start": 16.939999999999998,
+        "end": 17.9,
+        "word": " Is"
+      },
+      {
+        "start": 17.9,
+        "end": 18.16,
+        "word": " it"
+      },
+      {
+        "start": 18.16,
+        "end": 18.34,
+        "word": " a"
+      },
+      {
+        "start": 18.34,
+        "end": 18.66,
+        "word": " teddy"
+      },
+      {
+        "start": 18.66,
+        "end": 18.96,
+        "word": " bear?"
+      }
+    ]
+  },
+  {
+    "start": 19.8,
+    "end": 21.9,
+    "text": " No, it isn't.",
+    "words": [
+      {
+        "start": 19.8,
+        "end": 20.38,
+        "word": " No,"
+      },
+      {
+        "start": 20.84,
+        "end": 21.16,
+        "word": " it"
+      },
+      {
+        "start": 21.16,
+        "end": 21.9,
+        "word": " isn't."
+      }
+    ]
+  },
+  {
+    "start": 22.54,
+    "end": 25.16,
+    "text": " Teddy bear, teddy bear!",
+    "words": [
+      {
+        "start": 22.54,
+        "end": 23.26,
+        "word": " Teddy"
+      },
+      {
+        "start": 23.26,
+        "end": 23.7,
+        "word": " bear,"
+      },
+      {
+        "start": 24.22,
+        "end": 24.68,
+        "word": " teddy"
+      },
+      {
+        "start": 24.68,
+        "end": 25.16,
+        "word": " bear!"
+      }
+    ]
+  },
+  {
+    "start": 28.380000000000003,
+    "end": 31.46,
+    "text": " It's a plane, right? Is it a plane?",
+    "words": [
+      {
+        "start": 28.380000000000003,
+        "end": 29.18,
+        "word": " It's"
+      },
+      {
+        "start": 29.18,
+        "end": 29.24,
+        "word": " a"
+      },
+      {
+        "start": 29.24,
+        "end": 29.62,
+        "word": " plane,"
+      },
+      {
+        "start": 29.84,
+        "end": 30.0,
+        "word": " right?"
+      },
+      {
+        "start": 30.64,
+        "end": 30.9,
+        "word": " Is"
+      },
+      {
+        "start": 30.9,
+        "end": 31.06,
+        "word": " it"
+      },
+      {
+        "start": 31.06,
+        "end": 31.12,
+        "word": " a"
+      },
+      {
+        "start": 31.12,
+        "end": 31.46,
+        "word": " plane?"
+      }
+    ]
+  },
+  {
+    "start": 32.08,
+    "end": 34.54,
+    "text": " No. It isn't.",
+    "words": [
+      {
+        "start": 32.08,
+        "end": 32.8,
+        "word": " No."
+      },
+      {
+        "start": 33.5,
+        "end": 33.78,
+        "word": " It"
+      },
+      {
+        "start": 33.78,
+        "end": 34.54,
+        "word": " isn't."
+      }
+    ]
+  },
+  {
+    "start": 39.16,
+    "end": 40.3,
+    "text": " Billy, my present.",
+    "words": [
+      {
+        "start": 38.86,
+        "end": 39.26,
+        "word": " Billy,"
+      },
+      {
+        "start": 39.7,
+        "end": 39.78,
+        "word": " my"
+      },
+      {
+        "start": 39.78,
+        "end": 40.3,
+        "word": " present."
+      }
+    ]
+  },
+  {
+    "start": 42.440000000000005,
+    "end": 48.4,
+    "text": " Ah, is it a robot?",
+    "words": [
+      {
+        "start": 42.440000000000005,
+        "end": 43.24,
+        "word": " Ah,"
+      },
+      {
+        "start": 47.48,
+        "end": 47.78,
+        "word": " is"
+      },
+      {
+        "start": 47.78,
+        "end": 47.92,
+        "word": " it"
+      },
+      {
+        "start": 47.92,
+        "end": 48.0,
+        "word": " a"
+      },
+      {
+        "start": 48.0,
+        "end": 48.4,
+        "word": " robot?"
+      }
+    ]
+  },
+  {
+    "start": 49.24,
+    "end": 50.14,
+    "text": " Open it.",
+    "words": [
+      {
+        "start": 49.24,
+        "end": 49.88,
+        "word": " Open"
+      },
+      {
+        "start": 49.88,
+        "end": 50.14,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 56.019999999999996,
+    "end": 58.9,
+    "text": " Yes, it is. It's a robot.",
+    "words": [
+      {
+        "start": 56.019999999999996,
+        "end": 56.98,
+        "word": " Yes,"
+      },
+      {
+        "start": 56.98,
+        "end": 57.46,
+        "word": " it"
+      },
+      {
+        "start": 57.46,
+        "end": 57.74,
+        "word": " is."
+      },
+      {
+        "start": 58.14,
+        "end": 58.36,
+        "word": " It's"
+      },
+      {
+        "start": 58.36,
+        "end": 58.44,
+        "word": " a"
+      },
+      {
+        "start": 58.44,
+        "end": 58.9,
+        "word": " robot."
+      }
+    ]
+  },
+  {
+    "start": 61.04,
+    "end": 63.76,
+    "text": " I'm Zozo. I'm a robot.",
+    "words": [
+      {
+        "start": 61.04,
+        "end": 61.46,
+        "word": " I'm"
+      },
+      {
+        "start": 61.46,
+        "end": 61.82,
+        "word": " Zozo."
+      },
+      {
+        "start": 62.58,
+        "end": 63.08,
+        "word": " I'm"
+      },
+      {
+        "start": 63.08,
+        "end": 63.26,
+        "word": " a"
+      },
+      {
+        "start": 63.26,
+        "end": 63.76,
+        "word": " robot."
+      }
+    ]
+  },
+  {
+    "start": 64.78,
+    "end": 76.94,
+    "text": " I'm a robot. I'm a robot.",
+    "words": [
+      {
+        "start": 64.78,
+        "end": 65.74,
+        "word": " I'm"
+      },
+      {
+        "start": 65.74,
+        "end": 65.86,
+        "word": " a"
+      },
+      {
+        "start": 65.86,
+        "end": 66.26,
+        "word": " robot."
+      },
+      {
+        "start": 69.86,
+        "end": 70.82,
+        "word": " I'm"
+      },
+      {
+        "start": 70.82,
+        "end": 76.94,
+        "word": " a"
+      },
+      {
+        "start": 76.94,
+        "end": 76.94,
+        "word": " robot."
+      }
+    ]
+  }
+]

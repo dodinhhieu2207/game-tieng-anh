@@ -1,0 +1,50 @@
+{
+  "sourceFile": "family and friends 1 -unit 3-is it a plane-lesson 6 story - YouTube.mp3",
+  "sourceSha256": "692e5dfd00a8d881229905fbd199eee6a7dd07a453eab52afbcf8a6874478645",
+  "sourceDuration": 76.97415,
+  "note": "User-supplied audio; opening non-dialogue section skipped in scene playback. Native cuts, no TTS replacement. ASR timings are alignment aids, not independently verified full subtitles.",
+  "clips": [
+    {
+      "file": "scene-01.mp3",
+      "sourceStart": 15.8,
+      "sourceEnd": 26.8,
+      "sha256": "e1809e96c51f400817636114b2de444368967b5d268bc7e53cb3e2843294d929"
+    },
+    {
+      "file": "scene-02.mp3",
+      "sourceStart": 27.0,
+      "sourceEnd": 35.5,
+      "sha256": "d0745beb47cac72fc7db8f20d59d669ea27b8c58c761918f3ddf6f7ccf75c2e5"
+    },
+    {
+      "file": "scene-03.mp3",
+      "sourceStart": 35.5,
+      "sourceEnd": 45.5,
+      "sha256": "9ef9a4345a30cb65bcdf37c46a5f88f641b00648d8a1b9aeff1e805c77311e15"
+    },
+    {
+      "file": "scene-04.mp3",
+      "sourceStart": 45.5,
+      "sourceEnd": 76.97415,
+      "sha256": "353e0703c97eebe443b71e180a4cfafae0a6451fb44a36eaafbe41230abbcb8a"
+    },
+    {
+      "file": "answer-01.mp3",
+      "sourceStart": 19.5,
+      "sourceEnd": 22.2,
+      "sha256": "ed0a694fec03678eb147df4ff417cbd9f5e1c40caa5d9eb02fcb19675b6d3d7c"
+    },
+    {
+      "file": "answer-02.mp3",
+      "sourceStart": 31.9,
+      "sourceEnd": 34.9,
+      "sha256": "247037e4089f28d582434bed00f3f06ebc756ae014de29ad764e57d0c7ed1836"
+    },
+    {
+      "file": "answer-04.mp3",
+      "sourceStart": 55.8,
+      "sourceEnd": 59.3,
+      "sha256": "11ebcc15e870aa38da2520055d9ffadfaebfc2857f740a95ef7e74fb277867dc"
+    }
+  ]
+}

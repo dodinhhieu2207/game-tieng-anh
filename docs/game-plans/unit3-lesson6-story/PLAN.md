@@ -31,3 +31,13 @@ Release a5b6fc0 pushed; first-scene files mirrored to Desktop with zero hash mis
 ## Public review gate
 
 Public a5b6fc0 Story Studio test passed, including actual successful question and Yes-answer playback, first-scene touch flow, retry/reveal/reset, five widths, reduced motion, leave cleanup, image retry and audio failure. Public scene WebP byte parity checked. Sample boundary reached: stop for user visual feedback, not full Lesson 6 acceptance.
+
+## Four-scene story extension — authorized 2026-10-22
+User supplied 76.974-second MP3. Keep approved Phaser + GSAP and generated frame/buttons. Generate panels 2–4 using textbook panels plus first-scene style reference. Use native audio cuts with source hash/timestamps; do not replace with TTS. Keep route `story-preview`/key `u3storypreview` stable but rename card Story Studio.
+Scene flow: listen to source → listening-comprehension Yes/No in scenes 1,2,4 (answers No,No,Yes); scene 3 touch present → scene-specific focus/feedback → Continue. No hidden-object independent inference or ASR score. Correct reply uses the source answer clip. Complete final scene → replay story. The first 15.8 seconds are excluded from scene playback; complete original remains in user's Downloads.
+Transitions: scene crossfade, short focus ring, reward near target, response text, source answer, then explicit Continue. Scene 3 spotlight present; final scene robot spotlight. No claim that static character artwork has skeletal animation.
+Lifecycle gates: guarded async tokens, cancel audio/tweens on reset/leave, pause/hide, reduced motion, muted read/continue path, explicit audio retry. Five widths, actual audio success and ended gating, scene progression, final replay, double-tap prevention, image retry, voice failure.
+
+Implementation checkpoint: three generated panels inspected against source, including scene 3 toddler on closed gift and final blue robot/open gift. Four-scene native audio cuts and answer replay attached. Existing preview route/key preserved. First-scene script retained as historical source but no longer loaded; story-reader.js is the active implementation. Real-time playback/progression QA running.
+
+Local release gate: `tests/story-reader.spec.cjs` passed all four scene recordings and three answer clips at natural playback speed, using actual media-ended events before enabling choices/Continue. Recorded real-speed video in tests/story-reader-video. Scene feedback and five-width screenshots visually inspected. Pause held audio time stable; reset stopped owned audio; reduced motion and leave cleanup passed; missing panel retry and audio-error/blocked Continue passed. I-cue regression passed. No ASR or new progress reward introduced.

@@ -1,0 +1,35 @@
+[
+  {
+    "name": "scene-02",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-7ad4adcc-4091-48ef-9786-272aefb26133.png",
+    "prompt": "Father green vest white shirt red trousers seated left on coral sofa holds up one finger; blond older boy light-blue/white long sleeve top green shorts kneeling right, listening to CLOSED yellow present magenta bow held by his ear. Brown-haired toddler blue-white striped romper crawling foreground. Brown teddy floor. Keep mother absent as in panel. Same green wall and yellow/orange rug. All three people fully visible.",
+    "file": "scene-02.webp",
+    "size": [
+      1536,
+      1024
+    ],
+    "sha256": "ffa3c932a4ca19ff5ec2b40621c651cf9a56c9f34f8a25923cbb0b8d24676ac9"
+  },
+  {
+    "name": "scene-03",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-c4754a48-64aa-43d6-a9ce-aef3a067804a.png",
+    "prompt": "Only two characters: blond older boy in light-blue/white shirt green shorts kneeling beside the CLOSED yellow gift with magenta ribbon on floor; brown-haired toddler blue-white striped romper lying belly down on TOP of that gift, feet raised behind, smiling up at brother. Boy points amused toward toddler. Coral sofa left, green wall, yellow/orange rug. No robot. Preserve reference pose; gift is closed beneath toddler.",
+    "file": "scene-03.webp",
+    "size": [
+      1536,
+      1024
+    ],
+    "sha256": "517f3b40c9e49cfd06555d7a262c0ef0260c620e130d6f6627274c52baab3a62"
+  },
+  {
+    "name": "scene-04",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-e4352dbb-e213-407e-b1e1-67540f594e57.png",
+    "prompt": "Four family characters: mother yellow top blue trousers sitting left on coral sofa; father green vest white shirt red trousers sitting right; blond older boy light-blue/white shirt green shorts kneeling in front holding large toy robot; brown-haired toddler blue-white striped romper dancing happy left foreground. Robot exactly as reference: blue rectangular torso, silver/lavender dome head blue eyes yellow mouth and round yellow belly button, red segmented arms yellow claws, silver legs red feet. Open gift box on floor in front, yellow wrapping magenta ribbon. This is the reveal; all four people and robot fully visible.",
+    "file": "scene-04.webp",
+    "size": [
+      1536,
+      1024
+    ],
+    "sha256": "ddc6508ce0f3b47bb7fdf22212e8749baab4ea567ac98cc63e2a3b9b776f1a62"
+  }
+]
