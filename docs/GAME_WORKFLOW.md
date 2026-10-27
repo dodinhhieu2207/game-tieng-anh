@@ -14,6 +14,8 @@ Tạo docs/game-plans/<game>/RULES.md và PLAN.md theo TEMPLATE. PLAN phải ghi
 
 ## 3. Thiết kế trước khi tạo asset
 
+Yêu cầu bắt buộc 2026-10-27: mỗi game có bộ asset tương ứng đã tạo và gắn; font theo App Outfit/`var(--app-font)` của app; mọi voice mới dùng Higgs TTS, dùng lại clip Higgs đã duyệt khi phù hợp. Áp dụng chi tiết RULES.md mục 15. Banner Unit/Lesson không thay bộ asset tương tác bên trong game. Kiểm tra ba hạng mục riêng trước khi đánh dấu hoàn thành.
+
 Art direction phải có bảng màu, chất liệu/độ bóng, kích thước hình/chữ, vị trí nhiệm vụ và phản hồi. Storyboard gồm ít nhất: nghe, chờ chọn, đang chọn, đúng, thử lại, lỗi audio, kết thúc, reduced motion. Một màn hình có một nhiệm vụ chính.
 
 Lập asset inventory: hình từ vựng được duyệt, lớp cảnh, từng bộ phận chuyển động, UI controls, VFX và nguồn/giấy phép. Dùng imagegen cho raster mới; giữ asset trong repo, kiểm tra alpha, tỷ lệ, vùng trống và cắt sprite đúng. Không thay hình từ vựng đã học bằng hình AI mới.

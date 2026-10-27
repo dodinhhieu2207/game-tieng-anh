@@ -13,6 +13,9 @@ Repo/version/license/demo, vai trò từng thành phần, đánh đổi; skill n
 Cảnh, trạng thái, từng layer, controls, audio/VFX/SFX trigger. Chốt hướng nhìn/chuyển động và thời gian theo audio-ended.
 
 ## Các bước và bằng chứng
+- [ ] Bộ asset tương ứng game đã tạo, có manifest và gắn vào từng trạng thái; không chỉ banner/thẻ Lesson.
+- [ ] Font App Outfit/`var(--app-font)` đúng trên DOM/canvas, cỡ chữ đọc rõ trên mobile; mẫu chữ trace ngoại lệ đã ghi nếu có.
+- [ ] Mọi voice mới là Higgs TTS, đúng giọng/reference và script; clip dùng lại đã đối chiếu; manifest và kiểm tra phát thực tế.
 - [ ] Kiểm kê và audit nội dung/audio.
 - [ ] Art direction và storyboard.
 - [ ] Asset có lớp/alpha đúng; nguồn/giấy phép.

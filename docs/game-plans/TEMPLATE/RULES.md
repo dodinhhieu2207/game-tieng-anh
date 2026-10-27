@@ -6,6 +6,9 @@
 - Hoạt động, route, progress key cần giữ: <điền>.
 - Repo/stack người dùng đã chọn, nguồn trả lời/ngày: <điền>.
 - Asset/audio đã duyệt cần giữ: <điền>.
+- Bộ asset riêng bắt buộc tạo/gắn (cảnh, nhân vật/vật thể, lớp chuyển động, UI, trạng thái): <inventory + file + nơi dùng; N/A có lý do>.
+- Font bắt buộc: App Outfit local qua `var(--app-font)`; chữ canvas chờ font; ngoại lệ mẫu trace nếu có: <điền>.
+- Voice bắt buộc Higgs TTS; clip đã duyệt dùng lại / clip mới cần tạo, giọng/reference: <điền>. Không voice placeholder hoặc fallback dịch vụ khác.
 - Trạng thái input, audio, đúng/sai, lỗi, mute/reduced motion: <điền>.
 - Ràng buộc motion và vòng đời renderer: <điền>.
 - Những phần ngoài scope: <điền>.
