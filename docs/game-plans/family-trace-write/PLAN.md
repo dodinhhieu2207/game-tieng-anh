@@ -1,6 +1,6 @@
 # Trace & Write plan
 
-Implementation checkpoint: dedicated art, Higgs, gameplay and local validation complete. Shared detailed asset/voice/font/test/self-review record: ../family-classroom/ASSETS.md. All three are registered alongside the retained five activities (eight total); Parade remains absent. Full local functional suite PASS; touch/reduced-motion/replay/undo/export edges and final smoke PASS. Public deployment gate pending. Additional skills used: design-critique and engineering:deploy-checklist. No user approval is inferred from technical tests.
+Implementation checkpoint: dedicated art, Higgs, gameplay and local/public validation complete. Shared detailed asset/voice/font/test/self-review record: ../family-classroom/ASSETS.md. All three are registered alongside the retained five activities (eight total); Parade remains absent. Full functional suite, touch/reduced-motion/replay/undo/export edges and smoke PASS both locally and against GitHub Pages. Runtime895851e0cb64c293652bceed15785d678c773246 Pages workflow success; actual served JS SHA256 matches local. Additional skills used: design-critique and engineering:deploy-checklist. Original design-phase pending items below are superseded by this checkpoint. No user approval or measured child outcomes inferred from technical tests.
 
 2026-10-27 — design/assets in progress. Approved stack SVG + Pointer Events + GSAP; source: user “làm theo cả 3 hướng nhé” following the three-activity proposal. No further stack decision needed.
 
