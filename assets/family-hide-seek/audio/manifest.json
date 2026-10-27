@@ -1,0 +1,100 @@
+{
+  "version": "20261027-family-hide-seek1",
+  "engine": "Higgs Audio V3, cached local weights",
+  "voice": "Belinda reference from existing accepted Unit 3 recordings",
+  "referenceSha256": "8a6e483739144be6afa2735c41441d2970588fc089139685547a964c76510d07",
+  "normalization": "FFmpeg loudnorm I=-18, TP=-1.5, LRA=7",
+  "clips": {
+    "intro": {
+      "src": "assets/family-hide-seek/audio/intro.mp3",
+      "text": "Let's play hide and seek. Find your family!",
+      "duration": 3.719,
+      "sha256": "ab1849c9476f28fd17d212d59576f7f291e3125ca8f5fa548b3760e549ed3f33",
+      "qaTranscript": "Let's play hide and seek. Find your family.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "find-mum": {
+      "src": "assets/family-hide-seek/audio/find-mum.mp3",
+      "text": "Find mum!",
+      "duration": 1.268,
+      "sha256": "f4be00cc669990ed6ded95ff38a43c1b608f0f93af704d86bf516c21707c79a8",
+      "qaTranscript": "Find Mum",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "find-dad": {
+      "src": "assets/family-hide-seek/audio/find-dad.mp3",
+      "text": "Find dad!",
+      "duration": 1.177,
+      "sha256": "3e665e0873ef15901a66194d0141b9cbc7af7e7b2a85af475d79c5a2c36964c9",
+      "qaTranscript": "Find Dad.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "find-brother": {
+      "src": "assets/family-hide-seek/audio/find-brother.mp3",
+      "text": "Find brother!",
+      "duration": 1.356,
+      "sha256": "a1ffb5a03aba3b746d634e7ba21aeb62e3d3ab54da3405dca2444a34166f6ba0",
+      "qaTranscript": "Find Brother",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "find-sister": {
+      "src": "assets/family-hide-seek/audio/find-sister.mp3",
+      "text": "Find sister!",
+      "duration": 1.318,
+      "sha256": "1dfb402ddc248b37a5c93e49f7b9115d0f1895a72e4ddfa456d6dcd1603d6c71",
+      "qaTranscript": "Find Sister",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "find-grandpa": {
+      "src": "assets/family-hide-seek/audio/find-grandpa.mp3",
+      "text": "Find grandpa!",
+      "duration": 1.51,
+      "sha256": "0bf4e5dc72b9f006f50469dac6415a5cab238405a4eec99f84d6afd602844caf",
+      "qaTranscript": "Find Grandpa.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "find-grandma": {
+      "src": "assets/family-hide-seek/audio/find-grandma.mp3",
+      "text": "Find grandma!",
+      "duration": 1.789,
+      "sha256": "e1dfc16ae429096131e57c54226c7200329e622799a709107611da3577c53042",
+      "qaTranscript": "Find Grandma",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "retry": {
+      "src": "assets/family-hide-seek/audio/retry.mp3",
+      "text": "Try another hiding place.",
+      "duration": 2.038,
+      "sha256": "c8f5a8bf5378617606a81003f3a7606cd8681f7976dafa5d3aeef35b07d7f4b7",
+      "qaTranscript": "Try another hiding place.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "found": {
+      "src": "assets/family-hide-seek/audio/found.mp3",
+      "text": "There you are! Come with me.",
+      "duration": 2.105,
+      "sha256": "2cca251be4f4cb116711201f6adbe473b0e22cd201869ef5c809e68b3c34256c",
+      "qaTranscript": "There you are. Come with me. //",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "complete": {
+      "src": "assets/family-hide-seek/audio/complete.mp3",
+      "text": "You found your family! Let's have a picnic.",
+      "duration": 3.095,
+      "sha256": "d6bd3cd085c1db53b11221036f6974564f7a0bbd910fc2996ef66ecdf424f021",
+      "qaTranscript": "You found your family. Let's have a picnic.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    }
+  },
+  "limits": "Local Higgs V3 with prior accepted Belinda reference. Transcript QA only; humanReviewed remains false."
+}

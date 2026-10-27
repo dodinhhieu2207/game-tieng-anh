@@ -1,0 +1,22 @@
+const {chromium}=require('C:/Users/Admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const assert=require('node:assert/strict');
+(async()=>{
+ const browser=await chromium.launch({channel:'msedge',headless:true,args:['--autoplay-policy=no-user-gesture-required']});
+ const page=await browser.newPage({viewport:{width:1366,height:1000},recordVideo:{dir:'tests/family-hide-seek-video',size:{width:1366,height:1000}}});
+ const errors=[],missing=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)missing.push(r.url())});
+ await page.addInitScript(()=>{window.voiceCount=0;window.failVoice=false;const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){if(this.src?.includes('family-hide-seek/audio')){voiceCount++;if(failVoice)return Promise.reject(Error('QA audio failure'))}return play.call(this)}});
+ await page.goto((process.env.HIDE_BASE||'http://127.0.0.1:8770/index.html')+'?release=hide1#/unit/4/lesson/1?mode=practice&activity=family-hide-seek');
+ await page.waitForFunction(()=>window.FamilyHideSeek?.current()?.scene);
+ assert((await page.locator('.family-hide').evaluate(e=>getComputedStyle(e).fontFamily)).includes('App Outfit'));
+ await page.locator('[data-action="begin"]').click();await page.waitForFunction(()=>FamilyHideSeek.current().phase==='ready');await page.waitForTimeout(1700);
+ const before=await page.evaluate(()=>FamilyHideSeek.current().player.x);await page.keyboard.down('ArrowLeft');await page.waitForTimeout(350);await page.keyboard.up('ArrowLeft');assert(await page.evaluate(x=>FamilyHideSeek.current().player.x<x,before));
+ const dir=page.locator('[data-dir="right"]');await dir.hover();await page.mouse.down();await page.waitForTimeout(200);await page.mouse.up();
+ await page.locator('[data-action="pause"]').click();const pausedX=await page.evaluate(()=>FamilyHideSeek.current().player.x);await page.keyboard.down('ArrowLeft');await page.waitForTimeout(250);assert.equal(await page.evaluate(()=>FamilyHideSeek.current().player.x),pausedX);await page.keyboard.up('ArrowLeft');await page.locator('[data-action="pause"]').click();
+ const i=await page.evaluate(()=>{const a=FamilyHideSeek.current();return a.nodes.find(n=>n.word===a.target).i});await page.locator(`[data-place="${i}"]`).click();await page.waitForFunction(()=>FamilyHideSeek.current().phase==='revealing');await page.waitForTimeout(600);await page.screenshot({path:'tests/family-hide-seek-reveal.png',fullPage:true});await page.waitForFunction(()=>FamilyHideSeek.current().phase==='ready',{},{timeout:20000});
+ await page.keyboard.down('ArrowRight');await page.waitForTimeout(600);await page.keyboard.up('ArrowRight');await page.screenshot({path:'tests/family-hide-seek-party.png',fullPage:true});
+ await page.evaluate(()=>failVoice=true);await page.locator('[data-action="listen"]').click();await page.waitForFunction(()=>document.querySelector('.hs-status').textContent.includes('Tap Listen'));await page.evaluate(()=>failVoice=false);
+ await page.locator('.app-game-more>summary').click();await page.locator('[data-shell-action="sound"]').click();const count=await page.evaluate(()=>voiceCount);await page.locator('[data-action="listen"]').click();assert.equal(await page.evaluate(()=>voiceCount),count);await page.locator('.app-game-more>summary').click();
+ await page.emulateMedia({reducedMotion:'reduce'});const n=await page.evaluate(()=>{const a=FamilyHideSeek.current();return a.nodes.find(n=>n.word===a.target).i});await page.locator(`[data-place="${n}"]`).click();await page.waitForFunction(()=>FamilyHideSeek.current().found.length===2,{},{timeout:15000});assert.equal(await page.evaluate(n=>FamilyHideSeek.current().nodes[n].prop.angle,n),0);
+ await page.evaluate(()=>document.dispatchEvent(new Event('learning:leave-activity')));assert.equal(await page.evaluate(()=>FamilyHideSeek.current()),null);assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);
+ await browser.close();console.log('PASS: font, keyboard, D-pad, pause freeze, actual Higgs playback, audio failure, mute, reduced motion, cleanup, no missing resources');
+})().catch(e=>{console.error(e);process.exit(1)});
