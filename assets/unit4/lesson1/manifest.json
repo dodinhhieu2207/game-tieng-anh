@@ -2,7 +2,10 @@
   "source": "Family and Friends Starter 2nd Class Book PDF, Unit 4 Lesson 1, page 32 (PDF page 33)",
   "assets": [
     {"file":"family-picnic.webp","role":"approved source scene crop","sourceCrop":[65,670,1210,1465]},
-    {"file":"family-portraits.webp","role":"approved source portrait strip crop","sourceCrop":[70,290,1210,630]}
+    {"file":"family-portraits.webp","role":"approved source portrait strip crop","sourceCrop":[70,290,1210,630]},
+    {"file":"family-picnic-clean-v1.png","role":"imagegen precise edit target output; labels and sticker boxes removed","sha256":"f1e962661da49d18e473c7195a0cf4ddaf89fdee49933074fdfc9381201fe781"},
+    {"file":"family-picnic-clean-v1.webp","role":"web delivery export of the clean scene","sha256":"93d53a64af7a3fdae277a44161a15e469ba30c304669abccb61fc989ff1a2750"}
   ],
-  "derivedWith": "Poppler pdftoppm + deterministic crop/WebP export; no generative replacement"
+  "derivedWith": "Source crops: Poppler pdftoppm + deterministic crop/WebP. Clean scene: built-in imagegen precise-object-edit, then FFmpeg WebP export.",
+  "cleanScenePrompt": "Remove the six white vocabulary label/sticker boxes and printed words; reconstruct hidden sky, grass, trees, picnic blanket and clothing; preserve exactly the six family characters, their poses, the picnic objects, landscape composition and friendly children's-book illustration style; add no text, labels, boxes, icons or watermark."
 }

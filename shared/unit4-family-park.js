@@ -16,20 +16,21 @@
     {word:'grandpa',label:'Grandpa',role:'Grandpa',spot:'grandpa'},
     {word:'grandma',label:'Grandma',role:'Grandma',spot:'grandma'}
   ];
-  let scene=null, voiceToken=0, activeAudio=null;
+  let scene=null, voiceToken=0, activeAudio=null, activeResolve=null;
   const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const shuffled=a=>a.slice().sort(()=>Math.random()-.5);
-  const speak=(word,button)=>{
-    const token=++voiceToken;
-    if(activeAudio){try{activeAudio.pause()}catch{}activeAudio=null;}
-    const src=`assets/unit4/lesson1/audio/${word}.mp3`;
-    const audio=new Audio(src); activeAudio=audio; audio.preload='auto';
-    let fellBack=false;
-    const fallback=()=>{if(fellBack||token!==voiceToken)return;fellBack=true;try{window.speakText?.(word,{interrupt:true,button})}catch{}};
-    audio.onended=()=>{if(token===voiceToken)activeAudio=null}; audio.onerror=fallback;
-    const p=audio.play(); if(p?.catch)p.catch(fallback);
-  };
-  const stopVoice=()=>{voiceToken++;if(activeAudio){try{activeAudio.pause()}catch{}activeAudio=null;}try{window.cancelVoice?.()}catch{}};
+  const stopAudio=()=>{if(activeAudio){try{activeAudio.pause()}catch{}activeAudio=null}if(activeResolve){const done=activeResolve;activeResolve=null;done(false)}};
+  const stopVoice=()=>{voiceToken++;stopAudio();try{window.cancelVoice?.()}catch{}};
+  const playClip=(key,button,owner)=>new Promise(resolve=>{
+    if(owner!==voiceToken){resolve(false);return}
+    stopAudio();
+    const clip=window.Unit4FamilyClips?.clips?.[key];
+    if(!clip?.src){resolve(false);return}
+    const audio=new Audio(clip.src);activeAudio=audio;activeResolve=resolve;audio.preload='auto';
+    const settle=ok=>{if(activeAudio===audio)activeAudio=null;if(activeResolve===resolve)activeResolve=null;resolve(ok)};
+    audio.onended=()=>settle(owner===voiceToken);audio.onerror=()=>settle(false);
+    const pending=audio.play();if(pending?.catch)pending.catch(()=>settle(false));
+  });
   const feedback=(kind,el)=>{try{window.LearningFeedback?.play(kind,el,{visualize:true})}catch{}};
   const motion=(el,vars)=>{try{if(window.gsap&&el)return window.gsap.to(el,{duration:.5,ease:'back.out(1.6)',...vars})}catch{}return null};
   const person=(word)=>PEOPLE.find(p=>p.word===word)||PEOPLE[0];
@@ -64,33 +65,45 @@
       setStage(shell('Meet the Family','Listen, point and say the family words.','1 / 4',`<div class="u4-intro-strip">${PEOPLE.map(p=>`<button class="u4-word-ribbon" data-u4-word="${p.word}">${esc(p.word)}</button>`).join('')}</div>${world('intro',spots)}${base}${controls()}`));
       this.root=document.querySelector('[data-u4-family]');
       this.task('Touch a family member.'); this.status('Listen, point and repeat.'); this.target=PEOPLE[0];
+      setTimeout(()=>this.cue(['instruction/meet'],this.q('[data-u4-listen]'),'Touch a family member.'),220);
     }
     mountFind(base){
       this.order=shuffled(PEOPLE);this.target=this.order[0];
       setStage(shell('Family Finder','Find the person you hear.','1 / 6',`${world('find',PEOPLE.map(p=>hotspot(p,'find me')).join(''))}${base}${controls('<button class="u4-btn primary" data-u4-next>Next person</button>')}`));
       this.root=document.querySelector('[data-u4-family]');
-      this.task(`Find ${this.target.word}.`); this.status('Listen, then tap the matching person.'); setTimeout(()=>speak(this.target.word,this.q('[data-u4-listen]')),220);
+      this.task(`Find ${this.target.word}.`); this.status('Listen, then tap the matching person.'); setTimeout(()=>this.cue(['instruction/find',this.target.word],this.q('[data-u4-listen]'),'Now choose the matching person.'),220);
     }
     mountPack(base){
       this.tokens=shuffled(PEOPLE); this.target=this.tokens[0];
       setStage(shell('Pack the Picnic','Choose a word, then place it beside the right person.','1 / 6',`${world('pack',PEOPLE.map(p=>hotspot(p,'drop here')).join(''))}<div class="u4-token-bank" aria-label="Family word cards">${this.tokens.map((p,i)=>`<button class="u4-token" data-token="${p.word}" aria-pressed="false" style="--u4-i:${i}">${esc(p.word)}</button>`).join('')}</div>${base}${controls('<span class="u4-progress" data-u4-pack-count>0 / 6 packed</span>')}`));
       this.root=document.querySelector('[data-u4-family]');
       this.task('Pack a family picnic.'); this.status('Choose a word card, then tap its family member.');
+      setTimeout(()=>this.cue(['instruction/pack'],this.q('[data-u4-listen]'),'Choose a word card, then tap its family member.'),220);
     }
     mountRelay(base){
       this.order=shuffled(PEOPLE);this.target=this.order[0];
       const racers=`<div class="u4-parade"><div class="u4-path" aria-hidden="true"></div><span class="u4-racer" data-u4-racer aria-hidden="true">🧺</span><button class="u4-flag blue" data-team="blue" aria-label="Blue team">Blue <b data-score="blue">0</b></button><button class="u4-flag coral" data-team="coral" aria-label="Coral team">Coral <b data-score="coral">0</b></button></div>`;
       setStage(shell('Family Parade Relay','Take turns. Hear a word, then race to the right person.','1 / 6',`${world('relay',PEOPLE.map(p=>hotspot(p,'race here')).join(''),racers)}<div class="u4-teambar" role="group" aria-label="Choose a team"><button class="u4-team" data-team="blue" aria-pressed="true">Blue team</button><button class="u4-team" data-team="coral" aria-pressed="false">Coral team</button></div>${base}${controls('<button class="u4-btn primary" data-u4-next>Next turn</button>')}`));
       this.root=document.querySelector('[data-u4-family]');
-      this.task(`Blue team: find ${this.target.word}.`); this.status('Tap a team, then tap the family member.'); setTimeout(()=>speak(this.target.word,this.q('[data-u4-listen]')),220);
+      this.task(`Blue team: find ${this.target.word}.`); this.status('Tap a team, then tap the family member.'); setTimeout(()=>this.cue(['instruction/relay',this.target.word],this.q('[data-u4-listen]'),'Now choose the matching family member.'),220);
     }
     task(t){const n=this.q('[data-u4-task]');if(n)n.textContent=t}
     status(t){const n=this.q('[data-u4-status]');if(n)n.textContent=t}
+    async cue(keys,button,afterStatus=''){
+      stopVoice();const owner=voiceToken;this.listening=true;this.root.dataset.listening='true';this.root.dataset.audioError='false';
+      let ok=true;for(const key of keys){ok=await playClip(key,button,owner);if(!ok||owner!==voiceToken)break}
+      if(owner!==voiceToken)return false;this.listening=false;this.root.dataset.listening='false';
+      if(!ok){this.root.dataset.audioError='true';this.status('Audio could not play. Tap Listen again.');}
+      else if(afterStatus)this.status(afterStatus);
+      return ok;
+    }
     click(e){
-      const b=e.target.closest('button');if(!b||!this.alive)return;
-      if(b.dataset.u4Word){speak(b.dataset.u4Word,b);this.task(b.dataset.u4Word);this.status(`Say ${b.dataset.u4Word}.`);feedback('place',b);return;}
-      if(b.hasAttribute('data-u4-listen')){speak(this.target?.word||'family',b);return;}
+      const b=e.target.closest('button');if(!b)return;
       if(b.hasAttribute('data-u4-restart')){this.restart();return;}
+      if(!this.alive)return;
+      if(b.hasAttribute('data-u4-listen')){this.cue([this.target?.word||'instruction/meet'],b,this.kind==='meet'?`Now say ${this.target?.word||'mum'}.`:'Now choose the matching family member.');return;}
+      if(this.listening)return;
+      if(b.dataset.u4Word){this.target=person(b.dataset.u4Word);this.cue([b.dataset.u4Word],b,`Now say ${b.dataset.u4Word}.`);this.task(b.dataset.u4Word);this.status(`Say ${b.dataset.u4Word}.`);feedback('place',b);return;}
       if(b.hasAttribute('data-u4-next')){this.next();return;}
       if(b.dataset.team){this.team=b.dataset.team;this.qs('[data-team]').forEach(x=>x.setAttribute('aria-pressed',String(x===b||x.dataset.team===this.team)));if(this.kind==='relay')this.task(`${this.team==='blue'?'Blue':'Coral'} team: find ${this.target.word}.`);return;}
       if(b.dataset.token){this.selectToken(b);return;}
@@ -99,14 +112,14 @@
     selectToken(b){if(this.kind!=='pack')return;this.qs('.u4-token').forEach(t=>t.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');this.selected=b.dataset.token;this.status(`Now place ${this.selected}.`);motion(b,{y:-4});}
     choose(b){
       const word=b.dataset.word;
-      if(this.kind==='meet'){speak(word,b);this.task(word);this.status(`This is ${word}. Say it together.`);feedback('place',b);return;}
-      if(this.kind==='pack'){if(!this.selected){this.status('Choose a word card first.');feedback('retry',b);return;}if(word!==this.selected){this.errors++;b.dataset.state='wrong';this.status('That card belongs with another person. Try again.');feedback('retry',b);setTimeout(()=>{if(b)this.qs('[data-state="wrong"]').forEach(x=>delete x.dataset.state)},520);return;}const token=this.q(`[data-token="${this.selected}"]`);token.dataset.placed='true';token.classList.add('correct');b.dataset.state='correct';this.done++;this.status(`Packed ${word}!`);const count=this.q('[data-u4-pack-count]');if(count)count.textContent=`${this.done} / 6 packed`;feedback('correct',b);if(token&&b){motion(token,{x:b.offsetLeft-token.offsetLeft,y:b.offsetTop-token.offsetTop,opacity:.1})}this.selected=null;if(this.done===PEOPLE.length)this.complete();return;}
-      if(word!==this.target.word){this.errors++;b.dataset.state='wrong';this.status('Look again. Listen to the word once more.');feedback('retry',b);setTimeout(()=>{if(b)delete b.dataset.state},520);return;}
-      b.dataset.state='correct';b.dataset.active='false';this.done++;this.status(`Yes — ${word}!`);feedback('correct',b);motion(b,{scale:1.08,y:-8});if(this.kind==='relay'){this.scores[this.team]++;const score=this.q(`[data-score="${this.team}"]`);if(score)score.textContent=this.scores[this.team];const racer=this.q('[data-u4-racer]');if(racer)racer.style.left=`${Math.min(78,12+this.scores[this.team]*11)}%`;}if(this.done>=PEOPLE.length)this.complete();
+      if(this.kind==='meet'){this.target=person(word);this.cue([word],b,`Now say ${word}.`);this.task(word);this.status(`This is ${word}. Say it together.`);feedback('place',b);return;}
+      if(this.kind==='pack'){if(!this.selected){this.status('Choose a word card first.');feedback('retry',b);return;}if(word!==this.selected){this.errors++;b.dataset.state='wrong';this.status('That card belongs with another person. Try again.');feedback('retry',b);this.cue(['feedback/try-again'],null,'Choose the matching family member.');setTimeout(()=>{if(b)this.qs('[data-state="wrong"]').forEach(x=>delete x.dataset.state)},520);return;}const token=this.q(`[data-token="${this.selected}"]`);token.dataset.placed='true';token.classList.add('correct');b.dataset.state='correct';this.done++;this.status(`Packed ${word}!`);const count=this.q('[data-u4-pack-count]');if(count)count.textContent=`${this.done} / 6 packed`;feedback('correct',b);this.cue(['feedback/well-done'],null,`Packed ${word}!`);if(token&&b){motion(token,{x:b.offsetLeft-token.offsetLeft,y:b.offsetTop-token.offsetTop,opacity:.1})}this.selected=null;if(this.done===PEOPLE.length)this.complete();return;}
+      if(word!==this.target.word){this.errors++;b.dataset.state='wrong';this.status('Look again. Listen to the word once more.');feedback('retry',b);this.cue(['feedback/try-again',this.target.word],null,'Try again. Choose the matching family member.');setTimeout(()=>{if(b)delete b.dataset.state},520);return;}
+      b.dataset.state='correct';b.dataset.active='false';this.done++;this.status(`Yes — ${word}!`);feedback('correct',b);this.cue(['feedback/well-done'],null,'Well done! Tap Next.');motion(b,{scale:1.08,y:-8});if(this.kind==='relay'){this.scores[this.team]++;const score=this.q(`[data-score="${this.team}"]`);if(score)score.textContent=this.scores[this.team];const racer=this.q('[data-u4-racer]');if(racer)racer.style.left=`${Math.min(78,12+this.scores[this.team]*11)}%`;}if(this.done>=PEOPLE.length)this.complete();
     }
-    next(){if(this.done>=PEOPLE.length){this.complete();return}this.round++;this.target=(this.order||PEOPLE)[this.round%(this.order?.length||PEOPLE.length)];this.qs('[data-state]').forEach(x=>delete x.dataset.state);this.qs('[data-active]').forEach(x=>x.dataset.active='false');const target=this.q(`[data-word="${this.target.word}"]`);if(target)target.dataset.active='true';this.task(this.kind==='relay'?`${this.team==='blue'?'Blue':'Coral'} team: find ${this.target.word}.`:`Find ${this.target.word}.`);this.status('Listen, then choose.');speak(this.target.word,this.q('[data-u4-listen]'));const p=this.q('[data-u4-progress]');if(p)p.textContent=`${Math.min(this.round+1,PEOPLE.length)} / ${PEOPLE.length}`;}
-    complete(){if(!this.alive)return;this.alive=false;const stars=this.errors===0?3:this.errors<=2?2:1;const reward=this.q('[data-u4-reward]');if(reward){reward.hidden=false;return;}const world=this.q('.u4-world');if(world)world.insertAdjacentHTML('beforeend',`<div class="u4-reward" data-u4-reward><div><h3>Family team!</h3><div class="u4-stars" aria-label="${stars} stars">${'★'.repeat(stars)}${'☆'.repeat(3-stars)}</div><p>${this.kind==='relay'?'The parade reached the picnic!':'You found all six family words.'}</p><button class="u4-btn primary" data-u4-restart>Play again</button></div></div>`);document.dispatchEvent(new CustomEvent('learning:activity-completed',{detail:{game:KEY[this.kind],stars}}));feedback('complete',this.root);}
-    replay(){speak(this.target?.word||'family',this.q('[data-u4-listen]'));}
+    next(){if(this.done>=PEOPLE.length){this.complete();return}this.round++;this.target=(this.order||PEOPLE)[this.round%(this.order?.length||PEOPLE.length)];this.qs('[data-state]').forEach(x=>delete x.dataset.state);this.qs('[data-active]').forEach(x=>x.dataset.active='false');const target=this.q(`[data-word="${this.target.word}"]`);if(target)target.dataset.active='true';this.task(this.kind==='relay'?`${this.team==='blue'?'Blue':'Coral'} team: find ${this.target.word}.`:`Find ${this.target.word}.`);this.status('Listen, then choose.');this.cue([this.target.word],this.q('[data-u4-listen]'),'Now choose the matching family member.');const p=this.q('[data-u4-progress]');if(p)p.textContent=`${Math.min(this.round+1,PEOPLE.length)} / ${PEOPLE.length}`;}
+    complete(){if(!this.alive)return;this.alive=false;const stars=this.errors===0?3:this.errors<=2?2:1;const reward=this.q('[data-u4-reward]');if(reward){reward.hidden=false;return;}const world=this.q('.u4-world');if(world)world.insertAdjacentHTML('beforeend',`<div class="u4-reward" data-u4-reward><div><h3>Family team!</h3><div class="u4-stars" aria-label="${stars} stars">${'★'.repeat(stars)}${'☆'.repeat(3-stars)}</div><p>${this.kind==='relay'?'The parade reached the picnic!':'You found all six family words.'}</p><button class="u4-btn primary" data-u4-restart>Play again</button></div></div>`);document.dispatchEvent(new CustomEvent('learning:activity-completed',{detail:{game:KEY[this.kind],stars}}));feedback('complete',this.root);this.cue(['feedback/complete'],null,'You found all six family words.');}
+    replay(){this.cue([this.target?.word||'instruction/meet'],this.q('[data-u4-listen]'),'Now choose the matching family member.');}
     restart(){this.alive=false;setTimeout(()=>{if(scene){scene.alive=true;scene=new FamilyScene(this.kind)}},0)}
     dispose(){this.alive=false;stopVoice();matchMedia('(prefers-reduced-motion: reduce)').removeEventListener('change',this.reduce);els.gameScreen.classList.remove('u4-on');}
   }

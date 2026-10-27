@@ -1,0 +1,127 @@
+{
+  "version": "20261027-u4-family1",
+  "engine": "Higgs Audio V3, cached local weights",
+  "voice": "Belinda reference from existing accepted Unit 3 recordings",
+  "referenceSha256": "8a6e483739144be6afa2735c41441d2970588fc089139685547a964c76510d07",
+  "normalization": "FFmpeg loudnorm I=-18, TP=-1.5, LRA=7",
+  "clips": {
+    "mum": {
+      "src": "assets/unit4/lesson1/audio/mum.mp3",
+      "text": "Mum.",
+      "duration": 0.831,
+      "sha256": "26d9198b93d3e3c05cc929ab496f5293ad0a9cdad523e791424eda1c90edb0eb",
+      "qaTranscript": "Mom!",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "dad": {
+      "src": "assets/unit4/lesson1/audio/dad.mp3",
+      "text": "Dad.",
+      "duration": 0.747,
+      "sha256": "90614f525ecca3d1b4f0f65af0e0574591b9cdfb73b50176a5adb1fa1d220a38",
+      "qaTranscript": "Dad!",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "brother": {
+      "src": "assets/unit4/lesson1/audio/brother.mp3",
+      "text": "Brother.",
+      "duration": 0.835,
+      "sha256": "e6c32acfec36e2da747d236d028274288ba2fecca9670c590903a24ccfb9a97e",
+      "qaTranscript": "Brother",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "sister": {
+      "src": "assets/unit4/lesson1/audio/sister.mp3",
+      "text": "Sister.",
+      "duration": 0.979,
+      "sha256": "ba4841f7bd2d72ced097c24803248a5f284fdd1088279d24cc6e7c2a40446fc7",
+      "qaTranscript": "Sister",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "grandpa": {
+      "src": "assets/unit4/lesson1/audio/grandpa.mp3",
+      "text": "Grandpa.",
+      "duration": 1.006,
+      "sha256": "a9a96d67a539cd184d27de60a5e1a17d92c27e7141980a45872d888573d00666",
+      "qaTranscript": "Grandpa",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "grandma": {
+      "src": "assets/unit4/lesson1/audio/grandma.mp3",
+      "text": "Grandma.",
+      "duration": 0.902,
+      "sha256": "f80e58cc60d6f533af941c263f6043cd667b82d4440046d508b2d32b631cdde6",
+      "qaTranscript": "Grandma",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "instruction/meet": {
+      "src": "assets/unit4/lesson1/audio/instruction/meet.mp3",
+      "text": "Listen, point, and say.",
+      "duration": 2.855,
+      "sha256": "7afa9c44ee5a78ab05c99b9e3f49137b9610d87d4454f1864debc2c3abeb782e",
+      "qaTranscript": "Listen, point, and say.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "instruction/find": {
+      "src": "assets/unit4/lesson1/audio/instruction/find.mp3",
+      "text": "Listen. Find the family member.",
+      "duration": 2.681,
+      "sha256": "e48ea2a2790d7291f13082a61c56490d150885a54ff6530f80e6b2e5c94cd065",
+      "qaTranscript": "Listen, find the family member.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "instruction/pack": {
+      "src": "assets/unit4/lesson1/audio/instruction/pack.mp3",
+      "text": "Choose a word. Then choose the matching family member.",
+      "duration": 3.757,
+      "sha256": "a6af6fe36e60f9c5314f84daef4444ce652870701982ae28f219bc7c7fb8a7e8",
+      "qaTranscript": "Choose a word, then choose the matching family member.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "instruction/relay": {
+      "src": "assets/unit4/lesson1/audio/instruction/relay.mp3",
+      "text": "Take turns. Listen and find the family member.",
+      "duration": 4.081,
+      "sha256": "7ade7bb6045956435f7f79ef8085144fde66baa39e341b8588c28b29d6f665c2",
+      "qaTranscript": "Take turns, listen and find the family member.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "feedback/try-again": {
+      "src": "assets/unit4/lesson1/audio/feedback/try-again.mp3",
+      "text": "Try again.",
+      "duration": 1.181,
+      "sha256": "c26b08b58dfccc31654d725ad9ac7c3d6db10dd5afe4f7ac0defefc4f157717a",
+      "qaTranscript": "Try again.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "feedback/well-done": {
+      "src": "assets/unit4/lesson1/audio/feedback/well-done.mp3",
+      "text": "Well done!",
+      "duration": 1.297,
+      "sha256": "c10190c5ea78308cd4cb5e044f19c76a13f90c23974be8a8d495b45d7d819bfa",
+      "qaTranscript": "Well done.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "feedback/complete": {
+      "src": "assets/unit4/lesson1/audio/feedback/complete.mp3",
+      "text": "Great job! You found the family.",
+      "duration": 2.701,
+      "sha256": "6537207db9198d1c9b35b17fdd13cb3709d962fddf49901e27b9717329171d81",
+      "qaTranscript": "Great job, you found the family.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    }
+  },
+  "limits": "ASR verifies words only. Teacher listening review is still required before public classroom release."
+}

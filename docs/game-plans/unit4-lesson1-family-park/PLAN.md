@@ -1,6 +1,6 @@
 # Unit 4 Lesson 1 — Family Park plan
 
-Trạng thái: **bản playable đầu tiên đã triển khai local; đang hoàn thiện kiểm thử trước khi deploy**.
+Trạng thái: **bản playable thứ hai đã có nền sạch và catalogue Higgs; đang chờ nghe duyệt voice và gate trước deploy**.
 Ngày cập nhật: 2026-10-27. Người dùng đã chọn **A + B**: A cho hoạt động học chính, B cho relay/arcade.
 
 ## Scope và nội dung
@@ -34,6 +34,10 @@ Skills đã đọc/dùng để lập kế hoạch: `interaction-design`, `fronte
 - UI riêng: six word ribbons, Listen/Replay/Next, target spotlight, retry badge, team pennant, completion badge.
 - VFX/SFX: leaf sway, soft light cone, ribbon flight, snap/settle, step dust rất nhẹ, picnic chime; không che chữ/nhân vật.
 
+## Audio manifest
+
+`assets/unit4/lesson1/audio/` có 13 MP3 Higgs Audio V3 dùng lại giọng Belinda đã được chấp nhận ở Unit 3: sáu từ `mum`, `dad`, `brother`, `sister`, `grandpa`, `grandma`; bốn lời hướng dẫn cho Meet/Find/Pack/Relay; ba lời phản hồi nhẹ. Audio chạy theo `ended`, hủy clip cũ khi bấm lại/rời màn hình và không dùng browser TTS làm nguồn thay thế. Transcript QA đã đạt 13/13; `humanReviewed` vẫn là `false` cho tới khi người dùng nghe duyệt.
+
 ## Storyboard và state flow
 
 `intro → listening → waiting-for-touch → correct/retry → next-round → complete`.
@@ -45,6 +49,9 @@ Family Finder chỉ chuyển lượt khi voice kết thúc và trẻ chọn; Pac
 - [x] Kiểm kê trang sách và artwork nguồn; đã cắt deterministic hai vùng minh họa từ PDF được cung cấp.
 - [x] Chốt art direction và storyboard; Rive/Phaser giữ adapter seam, fallback không làm hỏng route.
 - [x] Tạo asset hỗ trợ có manifest/README nguồn; không thay tranh sách bằng nhân vật AI.
+- [x] Tạo nền `family-picnic-clean-v1` không còn sáu ô sticker/chữ; giữ source crop nguyên vẹn và ghi prompt/hash riêng.
+- [x] Bỏ các nhãn trắng phủ trên tranh; vùng chạm nhân vật giờ trong suốt và chỉ hiện vòng sáng khi focus/đúng/sai.
+- [x] Tạo và gắn catalogue Higgs V3 13 clip; transcript QA 13/13, còn chờ nghe duyệt cảm nhận giọng.
 - [x] Đăng ký route/progress key và dựng Family Park playable bằng DOM/SVG + GSAP-friendly motion.
 - [ ] Dựng adapter Phaser thật cho Family Parade Relay khi runtime arcade được nạp; hiện relay chạy fallback tương đương.
 - [x] Kiểm tra local: Meet, Finder (đúng/sai/hoàn tất), Pack (đúng/sai/đếm), Relay (đổi lượt/ghi điểm); còn cần gate viewport/reduced-motion trước deploy.
@@ -54,3 +61,5 @@ Family Finder chỉ chuyển lượt khi voice kết thúc và trẻ chọn; Pac
 ## Nhật ký quyết định
 
 - 2026-10-27: người dùng chọn A + B. A là renderer/choreography chính; B chỉ dành cho relay/arcade để tránh tải Phaser cho phần học từ vựng.
+- 2026-10-27: theo phản hồi người dùng, ngừng dùng crop sách có ô sticker làm background; chuyển app sang nền imagegen sạch có provenance và giữ bản nguồn không sửa. Voice chính chuyển sang catalogue Higgs V3 tĩnh giọng Belinda; không dùng browser speech fallback.
+- 2026-10-27: browser smoke xác nhận nền sạch, 13 clip được nạp, replay phục hồi sau autoplay block, Finder có retry/correct voice, Pack cập nhật tiến trình và Relay chờ hết chuỗi audio trước lượt chọn.
