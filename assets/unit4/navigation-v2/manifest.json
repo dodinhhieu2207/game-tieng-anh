@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-27",
+  "generator": "built-in imagegen",
+  "reference": "assets/shared-ui/unit3-navigation-card.png; unit3-navigation-lesson1.png; unit3-select-bg.png",
+  "assets": [
+    {
+      "name": "unit-card",
+      "prompt": "Use case: ui-mockup. Create a production raster asset for the SAME educational app as the provided style reference. Wide 3:1 UNIT navigation badge. Exact text: \"Unit 4\", huge \"Family Park\", white lower pill with book icon and \"6 lessons\". Six friendly family members (mum dad brother sister grandma grandpa) grouped at right. Cyan blue border and sunny park. Match reference Unit3 badge very closely. Same chunky rounded extruded typography, dark navy outlines, bright saturated polished 3D cartoon illustration, rounded double rim frame, stars/cloud decorations and compact balanced layout. No photorealism, no painterly texture, no mockup of a webpage. Single finished badge fills image, transparent outside rounded silhouette. Read all text accurately. Reference is style/layout guide, replace Unit3 subjects with Unit4 family topic.",
+      "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-421f7e1c-7f62-464e-b4c1-e639b9e6c862.png"
+    },
+    {
+      "name": "lesson1-card",
+      "prompt": "Use case: ui-mockup. Create a production raster asset for the SAME educational app as the provided style reference. Wide 2:1 LESSON navigation badge. Exact top pills \"Unit 4\" and \"Lesson 1\". Huge center title \"Family\". Subtitle pill \"Meet the family\". Subjects: mum dad brother sister grandma grandpa, friendly cartoon family portrait. Dominant cyan blue panel. Same chunky rounded extruded typography, dark navy outlines, bright saturated polished 3D cartoon illustration, rounded double rim frame, stars/cloud decorations and compact balanced layout. No photorealism, no painterly texture, no mockup of a webpage. Single finished badge fills image, transparent outside rounded silhouette. Read all text accurately. Reference is style/layout guide, replace Unit3 subjects with Unit4 family topic.",
+      "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-1a49ae9f-ca32-48bc-934b-490ee8556d27.png"
+    },
+    {
+      "name": "lesson2-card",
+      "prompt": "Use case: ui-mockup. Create a production raster asset for the SAME educational app as the provided style reference. Wide 2:1 LESSON navigation badge. Exact top pills \"Unit 4\" and \"Lesson 2\". Huge center title \"Grammar\". Subtitle pill \"This is my mum!\". Subjects: child pointing to mum, family portrait, question and speech bubble. Dominant gold orange panel. Same chunky rounded extruded typography, dark navy outlines, bright saturated polished 3D cartoon illustration, rounded double rim frame, stars/cloud decorations and compact balanced layout. No photorealism, no painterly texture, no mockup of a webpage. Single finished badge fills image, transparent outside rounded silhouette. Read all text accurately. Reference is style/layout guide, replace Unit3 subjects with Unit4 family topic.",
+      "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-340e795c-976f-4280-a703-383b430ce800.png"
+    },
+    {
+      "name": "lesson3-card",
+      "prompt": "Use case: ui-mockup. Create a production raster asset for the SAME educational app as the provided style reference. Wide 2:1 LESSON navigation badge. Exact top pills \"Unit 4\" and \"Lesson 3\". Huge center title \"Sounds and letters\". Subtitle pill \"Jj · jug · juice\". Subjects: large Jj, orange juice jug and glass. Dominant purple panel. Same chunky rounded extruded typography, dark navy outlines, bright saturated polished 3D cartoon illustration, rounded double rim frame, stars/cloud decorations and compact balanced layout. No photorealism, no painterly texture, no mockup of a webpage. Single finished badge fills image, transparent outside rounded silhouette. Read all text accurately. Reference is style/layout guide, replace Unit3 subjects with Unit4 family topic.",
+      "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-7d6559f6-7acf-4f3f-a7f3-732c9a47866e.png"
+    },
+    {
+      "name": "lesson4-card",
+      "prompt": "Use case: ui-mockup. Create a production raster asset for the SAME educational app as the provided style reference. Wide 2:1 LESSON navigation badge. Exact top pills \"Unit 4\" and \"Lesson 4\". Huge center title \"Numbers\". Subtitle pill \"9 · nine   10 · ten\". Subjects: large numerals 9 and 10, balloons and picnic fruit. Dominant green panel. Same chunky rounded extruded typography, dark navy outlines, bright saturated polished 3D cartoon illustration, rounded double rim frame, stars/cloud decorations and compact balanced layout. No photorealism, no painterly texture, no mockup of a webpage. Single finished badge fills image, transparent outside rounded silhouette. Read all text accurately. Reference is style/layout guide, replace Unit3 subjects with Unit4 family topic.",
+      "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-361aac04-c5f1-4818-a6ea-cbdd53084093.png"
+    },
+    {
+      "name": "lesson5-card",
+      "prompt": "Use case: ui-mockup. Create a production raster asset for the SAME educational app as the provided style reference. Wide 2:1 LESSON navigation badge. Exact top pills \"Unit 4\" and \"Lesson 5\". Huge center title \"Letters and Sounds\". Subtitle pill \"Kk · Ll\". Subjects: kangaroo, key, lion and lollipop, large Kk Ll. Dominant lavender panel. Same chunky rounded extruded typography, dark navy outlines, bright saturated polished 3D cartoon illustration, rounded double rim frame, stars/cloud decorations and compact balanced layout. No photorealism, no painterly texture, no mockup of a webpage. Single finished badge fills image, transparent outside rounded silhouette. Read all text accurately. Reference is style/layout guide, replace Unit3 subjects with Unit4 family topic.",
+      "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-7f96c29d-7224-4323-bb1c-f738d5e478b6.png"
+    },
+    {
+      "name": "lesson6-card",
+      "prompt": "Use case: ui-mockup. Create a production raster asset for the SAME educational app as the provided style reference. Wide 2:1 LESSON navigation badge. Exact top pills \"Unit 4\" and \"Lesson 6\". Huge center title \"Story\". Subtitle pill \"My brother!\". Subjects: two smiling brothers with mum and dad, family living room. Dominant coral orange panel. Same chunky rounded extruded typography, dark navy outlines, bright saturated polished 3D cartoon illustration, rounded double rim frame, stars/cloud decorations and compact balanced layout. No photorealism, no painterly texture, no mockup of a webpage. Single finished badge fills image, transparent outside rounded silhouette. Read all text accurately. Reference is style/layout guide, replace Unit3 subjects with Unit4 family topic.",
+      "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-00576bde-10e7-491e-9015-7a201d1cac46.png"
+    },
+    {
+      "name": "lesson1-background",
+      "prompt": "Use case: stylized-concept. Production full-bleed 16:9 BACKGROUND for Unit4 Lesson 1 of the same children's educational app as reference. Match reference's bright saturated polished 3D cartoon game environment, smooth rounded forms, cheerful sky blue, warm sunlight, crisp edges, charming toy-like rendering. Theme family picnic park, tiny family photo pennants, picnic basket and flowers at outer corners. Crucial: 70 percent center is calm empty softly lit space for app cards/text; all decorative subjects on outer left/right edges, no central focal object, no text, letters, digits, labels, title, frame, UI, watermark. Make usable beautiful background rather than standalone illustration. No painterly realism.",
+      "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-b246237b-53f8-4b8a-ad68-70d3ba3bbfc2.png"
+    },
+    {
+      "name": "lesson2-background",
+      "prompt": "Use case: stylized-concept. Production full-bleed 16:9 BACKGROUND for Unit4 Lesson 2 of the same children's educational app as reference. Match reference's bright saturated polished 3D cartoon game environment, smooth rounded forms, cheerful sky blue, warm sunlight, crisp edges, charming toy-like rendering. Theme family home with photo frames and friendly family portraits at outer corners. Crucial: 70 percent center is calm empty softly lit space for app cards/text; all decorative subjects on outer left/right edges, no central focal object, no text, letters, digits, labels, title, frame, UI, watermark. Make usable beautiful background rather than standalone illustration. No painterly realism.",
+      "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-e123bbeb-9463-4334-a187-322275d8db42.png"
+    },
+    {
+      "name": "lesson3-background",
+      "prompt": "Use case: stylized-concept. Production full-bleed 16:9 BACKGROUND for Unit4 Lesson 3 of the same children's educational app as reference. Match reference's bright saturated polished 3D cartoon game environment, smooth rounded forms, cheerful sky blue, warm sunlight, crisp edges, charming toy-like rendering. Theme family kitchen juice bar, jug and glass of orange juice at outer corners. Crucial: 70 percent center is calm empty softly lit space for app cards/text; all decorative subjects on outer left/right edges, no central focal object, no text, letters, digits, labels, title, frame, UI, watermark. Make usable beautiful background rather than standalone illustration. No painterly realism.",
+      "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-5cccdb69-202f-40db-b675-4491165d61bf.png"
+    },
+    {
+      "name": "lesson4-background",
+      "prompt": "Use case: stylized-concept. Production full-bleed 16:9 BACKGROUND for Unit4 Lesson 4 of the same children's educational app as reference. Match reference's bright saturated polished 3D cartoon game environment, smooth rounded forms, cheerful sky blue, warm sunlight, crisp edges, charming toy-like rendering. Theme family garden counting party, balloons and picnic fruit at outer corners. Crucial: 70 percent center is calm empty softly lit space for app cards/text; all decorative subjects on outer left/right edges, no central focal object, no text, letters, digits, labels, title, frame, UI, watermark. Make usable beautiful background rather than standalone illustration. No painterly realism.",
+      "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-76dc0b9a-286e-4409-b1c1-67b714f4bfff.png"
+    },
+    {
+      "name": "lesson5-background",
+      "prompt": "Use case: stylized-concept. Production full-bleed 16:9 BACKGROUND for Unit4 Lesson 5 of the same children's educational app as reference. Match reference's bright saturated polished 3D cartoon game environment, smooth rounded forms, cheerful sky blue, warm sunlight, crisp edges, charming toy-like rendering. Theme playful park reading corner, kangaroo, golden key, lion and lollipop at outer corners. Crucial: 70 percent center is calm empty softly lit space for app cards/text; all decorative subjects on outer left/right edges, no central focal object, no text, letters, digits, labels, title, frame, UI, watermark. Make usable beautiful background rather than standalone illustration. No painterly realism.",
+      "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-42d49818-cee9-466b-afb8-58f46821bd93.png"
+    },
+    {
+      "name": "lesson6-background",
+      "prompt": "Use case: stylized-concept. Production full-bleed 16:9 BACKGROUND for Unit4 Lesson 6 of the same children's educational app as reference. Match reference's bright saturated polished 3D cartoon game environment, smooth rounded forms, cheerful sky blue, warm sunlight, crisp edges, charming toy-like rendering. Theme family living room, sofa, family portraits, two toy trains at outer corners. Crucial: 70 percent center is calm empty softly lit space for app cards/text; all decorative subjects on outer left/right edges, no central focal object, no text, letters, digits, labels, title, frame, UI, watermark. Make usable beautiful background rather than standalone illustration. No painterly realism.",
+      "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-82fdc01e-bfbd-4779-a261-4b076026eb26.png"
+    }
+  ]
+}

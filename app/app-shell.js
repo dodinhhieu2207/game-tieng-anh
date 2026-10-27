@@ -40,12 +40,16 @@
   function hideLibraries(){document.querySelectorAll('.space-wrap>.space').forEach(space=>space.hidden=space!==pane);}
   function activeSidebar(space){document.querySelectorAll('.side-item').forEach(b=>b.classList.toggle('active',b.dataset.space===space));}
   function main(html,unit=null){
+   const familyRoute=router.parse(location.hash),familyLesson=unit?.id===4?unit.lessons.find(l=>l.id===familyRoute.lesson):null;
+   document.body.classList.toggle('family-art-library',unit?.id===4);
+   document.body.style.setProperty('--family-library-bg',unit?.id===4?`url("${new URL(familyLesson?.background||unit.selectorScene,document.baseURI).href}")`:'none');
    if(mounted||currentGame)stop();hideLibraries();pane.hidden=false;pane.classList.toggle('unit3-toytown',unit?.id===3);pane.innerHTML=html;
    pane.classList.toggle('shell-art-selector',html.includes('shell-lesson-grid'));pane.classList.toggle('shell-art-home',!unit&&html.includes('shell-unit-grid'));pane.style.backgroundImage=unit?.selectorScene&&html.includes('shell-lesson-grid')?`url("${unit.selectorScene}")`:'';
    activeSidebar(unit?.space||null);currentSpace=unit?.space||'home';window.scrollTo({top:0,behavior:'instant'});
   }
   function bread(unit,lesson){return `<div class="shell-breadcrumb"><a href="#/">Home</a>${unit?`<span>›</span><a href="#/unit/${unit.id}">Unit ${unit.id}</a>`:''}${lesson?`<span>›</span><span>Lesson ${lesson.id}</span>`:''}</div>`;}
   function hero(unit,lesson=null,selector=false){
+   if(unit.id===4&&lesson)return `<header class="u4-lesson-art-header"><img src="${lesson.cardImage}" alt="Unit 4 Lesson ${lesson.id}: ${esc(lesson.title)}"><div><h1>${esc(lesson.title)}</h1><p>${esc(lesson.description||'')}</p></div></header>`;
    if(selector&&unit.selectorBanner){const heading=heroes.get(unit.id)?.querySelector('h1')?.textContent||unit.title;return `<header class="shell-image-banner"><h1 class="shell-sr-only">${esc(heading)}</h1><img src="${unit.selectorBanner}" alt="${esc(heroes.get(unit.id)?.querySelector('.hero-copy')?.textContent.trim()||unit.title)}"></header>`;}
    const own=heroes.get(unit.id),h=(own||heroes.get(3)).cloneNode(true);
    if(!own){h.querySelector('.eyebrow').textContent='Family and Friends Starter · Unit '+unit.id;h.querySelector('h1').textContent=unit.title;h.querySelector('.hero-copy>p').textContent='Choose a lesson.';h.querySelector('.hero-scene').innerHTML=`<img src="${unit.thumbnail}" alt="">`;h.querySelector('.hero-badges')?.remove();}

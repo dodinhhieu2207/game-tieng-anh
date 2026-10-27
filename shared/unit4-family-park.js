@@ -54,10 +54,11 @@
       this.root=document.querySelector('[data-u4-family]');
       this.world=this.q('.u4-world');
       this.root?.addEventListener('click',e=>this.click(e));
-      this.root?.addEventListener('pointerdown',e=>{const t=e.target.closest('.u4-hotspot,.u4-token,.u4-btn,.u4-team');if(t)t.classList.add('is-pressed')});
+      this.root?.addEventListener('pointerdown',e=>{const t=e.target.closest('.u4-hotspot,.u4-token,.u4-btn,.u4-team');if(t)t.classList.add('is-pressed');if(t?.matches('.u4-token')&&!this.listening)this.beginDrag(e,t)});
       this.root?.addEventListener('pointerup',e=>{const t=e.target.closest('.is-pressed');if(t)t.classList.remove('is-pressed')});
       this.reduce=()=>this.root?.classList.toggle('u4-reduced',matchMedia('(prefers-reduced-motion: reduce)').matches);
       this.reduce(); matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',this.reduce);
+      this.root.addEventListener('pointermove',e=>this.moveDrag(e));this.root.addEventListener('pointerup',e=>this.endDrag(e));this.root.addEventListener('pointercancel',()=>this.cancelDrag());
       restartCurrent=()=>this.restart(); replayCurrent=()=>this.replay();
     }
     mountMeet(base){
@@ -98,20 +99,36 @@
       return ok;
     }
     click(e){
+      if(this.suppressClick)return;
       const b=e.target.closest('button');if(!b)return;
       if(b.hasAttribute('data-u4-restart')){this.restart();return;}
       if(!this.alive)return;
       if(b.hasAttribute('data-u4-listen')){this.cue([this.target?.word||'instruction/meet'],b,this.kind==='meet'?`Now say ${this.target?.word||'mum'}.`:'Now choose the matching family member.');return;}
-      if(this.listening)return;
+      if(this.listening||this.flying)return;
       if(b.dataset.u4Word){this.target=person(b.dataset.u4Word);this.cue([b.dataset.u4Word],b,`Now say ${b.dataset.u4Word}.`);this.task(b.dataset.u4Word);this.status(`Say ${b.dataset.u4Word}.`);feedback('place',b);return;}
       if(b.hasAttribute('data-u4-next')){this.next();return;}
       if(b.dataset.team){this.team=b.dataset.team;this.qs('[data-team]').forEach(x=>x.setAttribute('aria-pressed',String(x===b||x.dataset.team===this.team)));if(this.kind==='relay')this.task(`${this.team==='blue'?'Blue':'Coral'} team: find ${this.target.word}.`);return;}
       if(b.dataset.token){this.selectToken(b);return;}
       if(b.dataset.word){this.choose(b);}
     }
-    selectToken(b){if(this.kind!=='pack')return;this.qs('.u4-token').forEach(t=>t.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');this.selected=b.dataset.token;this.status(`Now place ${this.selected}.`);motion(b,{y:-4});}
+    selectToken(b){if(this.kind!=='pack'||b.dataset.placed==='true')return;this.qs('.u4-token').forEach(t=>t.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');this.selected=b.dataset.token;this.world.dataset.carrying='true';this.status(`Drag ${this.selected} to a space, or tap a space.`);}
+    beginDrag(e,b){if(this.kind!=='pack'||b.dataset.placed==='true'||!this.alive)return;this.drag={button:b,id:e.pointerId,startX:e.clientX,startY:e.clientY,x:e.clientX,y:e.clientY,moved:false};b.setPointerCapture(e.pointerId)}
+    moveDrag(e){const d=this.drag;if(!d||d.id!==e.pointerId)return;d.x=e.clientX;d.y=e.clientY;if(!d.moved&&Math.hypot(d.x-d.startX,d.y-d.startY)<7)return;if(!d.moved){d.moved=true;this.selectToken(d.button);d.ghost=d.button.cloneNode(true);d.ghost.removeAttribute('data-token');d.ghost.className='u4-token u4-flying-card';d.ghost.style.width=d.button.getBoundingClientRect().width+'px';document.body.append(d.ghost)}d.ghost.style.left=(d.x-d.ghost.offsetWidth/2)+'px';d.ghost.style.top=(d.y-25)+'px';this.qs('.u4-hotspot').forEach(b=>{const r=b.getBoundingClientRect();b.classList.toggle('drop-hover',d.x>=r.left&&d.x<=r.right&&d.y>=r.top&&d.y<=r.bottom)})}
+    endDrag(e){const d=this.drag;if(!d||d.id!==e.pointerId)return;this.drag=null;this.qs('.drop-hover').forEach(b=>b.classList.remove('drop-hover'));if(!d.moved)return;this.suppressClick=true;setTimeout(()=>this.suppressClick=false,0);const target=this.qs('.u4-hotspot').find(b=>{const r=b.getBoundingClientRect();return e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom});d.ghost?.remove();if(target)this.choose(target);else{this.status('Try a space beside a family member.');feedback('retry',d.button)}}
+    cancelDrag(){this.drag?.ghost?.remove();this.drag=null;this.qs('.drop-hover').forEach(b=>b.classList.remove('drop-hover'))}
+    showPerson(b,word){this.qs('.u4-person-caption').forEach(n=>n.remove());const label=document.createElement('span');label.className='u4-person-caption';label.textContent=word;b.append(label);motion(b,{scale:1.09,duration:.25,onComplete:()=>motion(b,{scale:1,duration:.3})})}
+    async placeCard(b,token,word){this.selected=null;delete this.world.dataset.carrying;token.dataset.placed='true';token.disabled=true;b.dataset.state='correct';b.classList.add('u4-filled');b.querySelector('.u4-hotspot-name').textContent=word;const from=token.getBoundingClientRect(),to=b.getBoundingClientRect();const flyer=token.cloneNode(true);flyer.removeAttribute('data-token');flyer.className='u4-token u4-flying-card';Object.assign(flyer.style,{left:from.left+'px',top:from.top+'px',width:from.width+'px'});document.body.append(flyer);this.flying=flyer;const finish=()=>{flyer.remove();if(this.flying===flyer)this.flying=null;};if(window.gsap&&!this.root.classList.contains('u4-reduced'))await new Promise(resolve=>window.gsap.to(flyer,{x:to.left+to.width/2-from.left-from.width/2,y:to.top+to.height/2-from.top-from.height/2,scale:.88,rotation:0,duration:.65,ease:'power2.inOut',onComplete:()=>{finish();resolve()}}));else finish();if(!this.alive)return;this.done++;this.status(`Packed ${word}!`);this.q('[data-u4-pack-count]').textContent=`${this.done} / 6 packed`;this.q('[data-u4-progress]').textContent=`${this.done} / 6`;feedback('correct',b);const ok=await this.cue([word,'feedback/well-done'],null,`Packed ${word}! Choose another card.`);if(this.alive&&this.done===PEOPLE.length)this.complete();}
     choose(b){
       const word=b.dataset.word;
+      if(this.kind==='pack'){
+        if(b.classList.contains('u4-filled'))return;
+        if(!this.selected){this.status('Choose a word card first.');feedback('retry',b);return;}
+        if(word!==this.selected){this.errors++;b.dataset.state='wrong';this.status('Try another space.');feedback('retry',b);this.cue(['feedback/try-again'],null,'Try another space for your card.');setTimeout(()=>{if(this.alive)delete b.dataset.state},650);return;}
+        const token=this.q(`[data-token="${this.selected}"]`);if(token)this.placeCard(b,token,word);return;
+      }
+      if(this.kind!=='meet'&&this.lastSolved===this.round)return;
+      if(this.kind==='meet'||word===this.target.word)this.showPerson(b,word);
+      if(this.kind!=='meet'&&word===this.target.word)this.lastSolved=this.round;
       if(this.kind==='meet'){this.target=person(word);this.cue([word],b,`Now say ${word}.`);this.task(word);this.status(`This is ${word}. Say it together.`);feedback('place',b);return;}
       if(this.kind==='pack'){if(!this.selected){this.status('Choose a word card first.');feedback('retry',b);return;}if(word!==this.selected){this.errors++;b.dataset.state='wrong';this.status('That card belongs with another person. Try again.');feedback('retry',b);this.cue(['feedback/try-again'],null,'Choose the matching family member.');setTimeout(()=>{if(b)this.qs('[data-state="wrong"]').forEach(x=>delete x.dataset.state)},520);return;}const token=this.q(`[data-token="${this.selected}"]`);token.dataset.placed='true';token.classList.add('correct');b.dataset.state='correct';this.done++;this.status(`Packed ${word}!`);const count=this.q('[data-u4-pack-count]');if(count)count.textContent=`${this.done} / 6 packed`;feedback('correct',b);this.cue(['feedback/well-done'],null,`Packed ${word}!`);if(token&&b){motion(token,{x:b.offsetLeft-token.offsetLeft,y:b.offsetTop-token.offsetTop,opacity:.1})}this.selected=null;if(this.done===PEOPLE.length)this.complete();return;}
       if(word!==this.target.word){this.errors++;b.dataset.state='wrong';this.status('Look again. Listen to the word once more.');feedback('retry',b);this.cue(['feedback/try-again',this.target.word],null,'Try again. Choose the matching family member.');setTimeout(()=>{if(b)delete b.dataset.state},520);return;}
@@ -120,8 +137,8 @@
     next(){if(this.done>=PEOPLE.length){this.complete();return}this.round++;this.target=(this.order||PEOPLE)[this.round%(this.order?.length||PEOPLE.length)];this.qs('[data-state]').forEach(x=>delete x.dataset.state);this.qs('[data-active]').forEach(x=>x.dataset.active='false');const target=this.q(`[data-word="${this.target.word}"]`);if(target)target.dataset.active='true';this.task(this.kind==='relay'?`${this.team==='blue'?'Blue':'Coral'} team: find ${this.target.word}.`:`Find ${this.target.word}.`);this.status('Listen, then choose.');this.cue([this.target.word],this.q('[data-u4-listen]'),'Now choose the matching family member.');const p=this.q('[data-u4-progress]');if(p)p.textContent=`${Math.min(this.round+1,PEOPLE.length)} / ${PEOPLE.length}`;}
     complete(){if(!this.alive)return;this.alive=false;const stars=this.errors===0?3:this.errors<=2?2:1;const reward=this.q('[data-u4-reward]');if(reward){reward.hidden=false;return;}const world=this.q('.u4-world');if(world)world.insertAdjacentHTML('beforeend',`<div class="u4-reward" data-u4-reward><div><h3>Family team!</h3><div class="u4-stars" aria-label="${stars} stars">${'★'.repeat(stars)}${'☆'.repeat(3-stars)}</div><p>${this.kind==='relay'?'The parade reached the picnic!':'You found all six family words.'}</p><button class="u4-btn primary" data-u4-restart>Play again</button></div></div>`);document.dispatchEvent(new CustomEvent('learning:activity-completed',{detail:{game:KEY[this.kind],stars}}));feedback('complete',this.root);this.cue(['feedback/complete'],null,'You found all six family words.');}
     replay(){this.cue([this.target?.word||'instruction/meet'],this.q('[data-u4-listen]'),'Now choose the matching family member.');}
-    restart(){this.alive=false;setTimeout(()=>{if(scene){scene.alive=true;scene=new FamilyScene(this.kind)}},0)}
-    dispose(){this.alive=false;stopVoice();matchMedia('(prefers-reduced-motion: reduce)').removeEventListener('change',this.reduce);els.gameScreen.classList.remove('u4-on');}
+    restart(){const kind=this.kind;this.dispose();scene=new FamilyScene(kind)}
+    dispose(){this.alive=false;this.cancelDrag();if(this.flying){window.gsap?.killTweensOf(this.flying);this.flying.remove()}stopVoice();matchMedia('(prefers-reduced-motion: reduce)').removeEventListener('change',this.reduce);els.gameScreen.classList.remove('u4-on');}
   }
   function start(kind){scene?.dispose();scene=new FamilyScene(kind);window.Unit4FamilyPark={current:()=>scene};}
   games.u4familymeet={enter:()=>start('meet')}; games.u4familyfind={enter:()=>start('find')}; games.u4familypack={enter:()=>start('pack')}; games.u4familyrelay={enter:()=>start('relay')};

@@ -14,3 +14,21 @@
 @keyframes u4Leaf{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(26px,14px) rotate(18deg)}}@keyframes u4TargetPulse{0%,100%{box-shadow:0 0 0 3px rgba(255,222,108,.25),0 5px 0 rgba(39,102,114,.22)}50%{box-shadow:0 0 0 9px rgba(255,222,108,.38),0 5px 0 rgba(39,102,114,.22)}}@keyframes u4Nudge{0%,100%{transform:translateX(0)}30%{transform:translateX(-7px)}65%{transform:translateX(6px)}}@keyframes u4Reveal{0%{opacity:0;transform:scale(.88) translateY(18px)}100%{opacity:1;transform:scale(1) translateY(0)}}
 @media(max-width:680px){.u4-family{padding:12px 7px 24px}.u4-head{align-items:flex-start}.u4-progress{font-size:14px;padding:7px 10px}.u4-world{min-height:340px;border-radius:20px}.u4-hotspot{min-width:44px;min-height:44px;padding:4px 6px;border-width:2px}.u4-hotspot .u4-hotspot-name{font-size:13px}.u4-hotspot small{font-size:10px}.u4-reward{inset:11% 4%;padding:13px}.u4-reward h3{font-size:30px}.u4-stars{font-size:35px}.u4-racer{bottom:26%}.u4-flag{font-size:15px;min-width:110px}.u4-taskbar{align-items:stretch}.u4-task,.u4-status{width:100%;text-align:center}.u4-token{font-size:18px;min-height:48px}}
 @media(prefers-reduced-motion:reduce){.u4-leaf,.u4-world:after,.u4-hotspot[data-active="true"],.u4-reward{animation:none!important}.u4-racer{transition:none!important}}
+.u4-world[data-mode="pack"] .u4-hotspot{width:clamp(78px,12vw,145px);height:clamp(48px,5vw,64px);border:3px dashed #247f8c;border-radius:16px;background:#fffbeded;box-shadow:0 4px 0 #174c7033;transform:none}
+.u4-world[data-mode="pack"] .u4-hotspot:after{content:'↓';font-size:30px;color:#368590}
+.u4-world[data-mode="pack"] .u4-hotspot-name{position:static;clip-path:none;width:auto;height:auto;overflow:visible;font-size:clamp(16px,2.2vw,26px)}
+.u4-world[data-mode="pack"] .u4-hotspot:not(.u4-filled) .u4-hotspot-name{display:none}
+.u4-world[data-mode="pack"] .u4-hotspot[data-person="mum"]{left:3%;top:28%}
+.u4-world[data-mode="pack"] .u4-hotspot[data-person="dad"]{left:3%;top:83%}
+.u4-world[data-mode="pack"] .u4-hotspot[data-person="grandpa"]{left:34%;top:42%}
+.u4-world[data-mode="pack"] .u4-hotspot[data-person="sister"]{left:30%;top:76%}
+.u4-world[data-mode="pack"] .u4-hotspot[data-person="grandma"]{right:2%;top:86%}
+.u4-world[data-mode="pack"] .u4-hotspot[data-person="brother"]{right:20%;top:83%}
+.u4-world[data-carrying="true"] .u4-hotspot:not(.u4-filled){border-color:#c68a19;background:#fff2bd;box-shadow:0 0 0 5px #fff0a866}
+.u4-world[data-mode="pack"] .u4-hotspot.drop-hover{background:#d9f8e3;border-style:solid;box-shadow:0 0 0 8px #6dcc9c66;transform:scale(1.06)}
+.u4-world[data-mode="pack"] .u4-hotspot.u4-filled{border:3px solid #398b62;background:#edffe9;color:#235f43;box-shadow:0 4px 0 #276f4b55}
+.u4-world[data-mode="pack"] .u4-hotspot.u4-filled:after{content:'✓';font-size:19px;margin-left:7px;color:#287b4d}
+.u4-token{touch-action:none}.u4-token[data-placed="true"]{visibility:hidden;opacity:0}.u4-flying-card{position:fixed;z-index:10000;pointer-events:none!important;visibility:visible!important;opacity:1!important;margin:0;box-shadow:0 12px 22px #174c7044;transform:rotate(-3deg)}
+.u4-person-caption{position:absolute;top:100%;left:50%;transform:translateX(-50%);border:3px solid #e4ad37;border-radius:14px;background:#fff8de;padding:5px 15px;font-size:clamp(20px,2.5vw,30px);box-shadow:0 5px 0 #174c7033;white-space:nowrap;animation:u4Reveal .25s ease}
+.u4-world[data-mode="pack"] .u4-hotspot[data-state="wrong"]:after{content:'↶';color:#a35038}.u4-world[data-mode="pack"] .u4-hotspot[data-state="wrong"]{background:#ffe5d5;border-color:#c77d5e}
+@media(max-width:680px){.u4-world[data-mode="pack"]{min-height:0;aspect-ratio:3/2}.u4-world[data-mode="pack"] .u4-hotspot{width:68px;height:48px;min-width:0;border-width:2px;font-size:15px}.u4-world[data-mode="pack"] .u4-hotspot-name{font-size:15px}.u4-world[data-mode="pack"] .u4-hotspot[data-person="dad"],.u4-world[data-mode="pack"] .u4-hotspot[data-person="grandma"],.u4-world[data-mode="pack"] .u4-hotspot[data-person="brother"]{top:auto;bottom:2%}.u4-world[data-mode="pack"] .u4-hotspot[data-person="sister"]{top:59%;left:29%}.u4-world[data-mode="pack"] .u4-hotspot[data-person="grandpa"]{top:30%;left:42%}.u4-world[data-mode="pack"] .u4-hotspot[data-person="mum"]{top:10%;left:2%}}

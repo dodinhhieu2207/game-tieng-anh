@@ -61,6 +61,10 @@ Family Finder chỉ chuyển lượt khi voice kết thúc và trẻ chọn; Pac
 
 ## Nhật ký quyết định
 
+- 2026-10-27: thay bộ navigation tranh minh họa lệch phong cách bằng `assets/unit4/navigation-v2/`: 1 banner Unit, 6 banner lesson có nhãn/chữ/khung đồng bộ trực tiếp mẫu Unit 3 và 6 background theo chủ đề sách. Gắn cardImage/background vào từng lesson; nền dùng trên màn thư viện hoạt động, giữ artwork sách trong gameplay. Prompt/source có trong manifest. Đây là asset navigation/background; bộ asset tương tác của 4 game vẫn là hạng mục riêng.
+
+- 2026-10-27: sửa thiếu affordance của Pack the Picnic: sáu ô thả rõ, pointer drag có thẻ theo tay, hover đích, GSAP bay thẻ, từ đúng giữ trong ô và dấu tick; sai có retry. Đã kiểm tra local tap-place mum và drag-place brother. Meet/Find/Relay có caption tại nhân vật và GSAP phản hồi; rig nhân vật/Rive và Phaser relay thật vẫn còn chưa hoàn thành, không coi đây là motion nhân vật hoàn chỉnh.
+
 - 2026-10-27: người dùng chọn A + B. A là renderer/choreography chính; B chỉ dành cho relay/arcade để tránh tải Phaser cho phần học từ vựng.
 - 2026-10-27: theo phản hồi người dùng, ngừng dùng crop sách có ô sticker làm background; chuyển app sang nền imagegen sạch có provenance và giữ bản nguồn không sửa. Voice chính chuyển sang catalogue Higgs V3 tĩnh giọng Belinda; không dùng browser speech fallback.
 - 2026-10-27: browser smoke xác nhận nền sạch, 13 clip được nạp, replay phục hồi sau autoplay block, Finder có retry/correct voice, Pack cập nhật tiến trình và Relay chờ hết chuỗi audio trước lượt chọn.
