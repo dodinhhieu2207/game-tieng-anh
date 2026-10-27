@@ -1,5 +1,7 @@
 # Unit 4 Lesson 1 — Family Park plan
 
+2026-10-27 retirement: user requested removing Family Parade Relay because it was not effective for their class. Removed family-relay/u4familyrelay from the Lesson1 activity catalogue; old source assets and stored learner progress retained. Family Hide & Seek is temporarily the last activity. Proposed replacement Family Memory House (word–picture memory behind animated windows), awaiting the required stack choice; replacement has not yet been implemented. Do not reintroduce Parade through later catalogue edits.
+
 Trạng thái: **bản playable thứ hai đã có nền sạch và catalogue Higgs; đang chờ nghe duyệt voice và gate trước deploy**.
 Ngày cập nhật: 2026-10-27. Người dùng đã chọn **A + B**: A cho hoạt động học chính, B cho relay/arcade.
 
