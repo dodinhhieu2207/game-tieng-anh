@@ -1,0 +1,16 @@
+{
+  "createdAt": "2026-10-27",
+  "purpose": "Unit 4 Family Park navigation and six lesson cards",
+  "sourceBook": "Family and Friends Starter, 2nd edition, Unit 4 pages 32-37",
+  "generator": "configured image-generation workflow",
+  "artDirection": "Warm child-friendly soft dimensional storybook clay-paint; landscape; no text, logos, stickers, worksheet boxes or watermarks.",
+  "assets": [
+    {"file": "unit4-family-park-cover.webp", "scope": "Unit 4 card and selector banner", "subject": "six family members having a picnic together in a sunny family park", "sha256": "db3a09cec61121e29a6ced761abdbc07c4a6fdeb51313c1456b7bc76ff6c7594"},
+    {"file": "lesson1-family-words.webp", "scope": "Lesson 1", "subject": "six family members at a picnic, each clearly recognisable", "sha256": "5395aebfe50e186c443668c39be259cb0e5bf5ed03e4e7ee7df7aee4b71a0451"},
+    {"file": "lesson2-family-album.webp", "scope": "Lesson 2", "subject": "child showing a family-photo album in a bright home", "sha256": "685df758c74a7460ffdc8717eaf293f8b1434175372bacdf32a5bbfcd3629f21"},
+    {"file": "lesson3-jug-juice.webp", "scope": "Lesson 3", "subject": "child pouring juice from a jug, playful juice splash companion", "sha256": "83e1a32fe596e8cdb1dee718a70dccb6a8334127f89942469cc7bf253f040ccb"},
+    {"file": "lesson4-nine-ten.webp", "scope": "Lesson 4", "subject": "exactly nine balloons and ten small people or toy figures as two distinct groups", "sha256": "4df9f0f9c1063f474bfd76c07781e0ee4f084e7981f5feefb7dd67bd14f5df56"},
+    {"file": "lesson5-kk-ll.webp", "scope": "Lesson 5", "subject": "one kangaroo, key, lion and lollipop in a cheerful outdoor scene", "sha256": "a4d29a4d87e2e82f1cae2f65cbcb9777596f68f9ffc9b31e342ce68d14fba899"},
+    {"file": "lesson6-my-brother.webp", "scope": "Lesson 6", "subject": "two brothers playing together with a train and teddy, parents supportive in the background", "sha256": "26f2d7d04eeabb4ac4f80de9ace45bebf580d8f5f30f1760476191e4a08f0112"}
+  ]
+}

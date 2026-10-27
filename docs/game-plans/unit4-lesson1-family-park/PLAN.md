@@ -53,6 +53,7 @@ Family Finder chỉ chuyển lượt khi voice kết thúc và trẻ chọn; Pac
 - [x] Bỏ các nhãn trắng phủ trên tranh; vùng chạm nhân vật giờ trong suốt và chỉ hiện vòng sáng khi focus/đúng/sai.
 - [x] Tạo và gắn catalogue Higgs V3 13 clip; transcript QA 13/13, còn chờ nghe duyệt cảm nhận giọng.
 - [x] Đăng ký route/progress key và dựng Family Park playable bằng DOM/SVG + GSAP-friendly motion.
+- [x] Chuẩn bị thẻ điều hướng Unit 4 và sáu thẻ lesson có artwork riêng, đối chiếu đúng mạch trang 32–37; manifest/provenance ở `assets/unit4/navigation/`. Các lesson chưa có game vẫn giữ trạng thái Coming soon, không tạo nội dung học giả định.
 - [ ] Dựng adapter Phaser thật cho Family Parade Relay khi runtime arcade được nạp; hiện relay chạy fallback tương đương.
 - [x] Kiểm tra local: Meet, Finder (đúng/sai/hoàn tất), Pack (đúng/sai/đếm), Relay (đổi lượt/ghi điểm); còn cần gate viewport/reduced-motion trước deploy.
 - [ ] Chụp năm viewport và quay motion ở tốc độ thật; review theo `design-critique`.
@@ -63,3 +64,4 @@ Family Finder chỉ chuyển lượt khi voice kết thúc và trẻ chọn; Pac
 - 2026-10-27: người dùng chọn A + B. A là renderer/choreography chính; B chỉ dành cho relay/arcade để tránh tải Phaser cho phần học từ vựng.
 - 2026-10-27: theo phản hồi người dùng, ngừng dùng crop sách có ô sticker làm background; chuyển app sang nền imagegen sạch có provenance và giữ bản nguồn không sửa. Voice chính chuyển sang catalogue Higgs V3 tĩnh giọng Belinda; không dùng browser speech fallback.
 - 2026-10-27: browser smoke xác nhận nền sạch, 13 clip được nạp, replay phục hồi sau autoplay block, Finder có retry/correct voice, Pack cập nhật tiến trình và Relay chờ hết chuỗi audio trước lượt chọn.
+- 2026-10-27: navigation Unit 4 dùng một bộ artwork Family Park độc lập gồm cover + 6 lesson cards; từng card chỉ minh hoạ trọng tâm sách (gia đình, grammar, Jj, 9–10, Kk/Ll, story), không dùng lại ảnh Lesson 1 cho mọi lesson và không thay artwork sách trong game.
