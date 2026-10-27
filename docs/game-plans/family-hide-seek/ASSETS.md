@@ -1,5 +1,7 @@
 # Integrated asset inventory
 
+2026-10-27 marker correction: search markers now use dedicated imagegen assets marker-search.webp and marker-found.webp, replacing the original CSS circle/text artwork. Exact prompt/source and deterministic two-cell crop recorded in markers-source.json and tools/export_family_hide_markers.py. Both foreground exports preserve alpha (0–255). Search = blue question mark on cream; found = cream check on emerald; both share cyan/gold/leaf frame. DOM labels remain accessible. Desktop hit area64px; mobile56px. Press/hover and found transition added; reduced motion disables transition animation. The original inventory statement about standard search shapes below is superseded by this correction.
+
 All 13 raster assets generated for this activity with imagegen, 2026-10-27. Exact prompts, reference files and original output locations: assets/family-hide-seek/sources.json. Original generated files retained. Export tool performs only resizing/format conversion; 2x2 sprite sheets are 1024 square, four 512-square frames. Alpha range 0–255 verified for all foreground assets; park is opaque.
 
 | Files under assets/family-hide-seek | Runtime role | Review |

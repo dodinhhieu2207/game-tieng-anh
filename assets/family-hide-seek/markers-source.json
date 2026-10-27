@@ -1,0 +1,9 @@
+{
+  "prompt": "Game UI sprite sheet, exactly two equal square cells side by side, transparent background. Left cell: a polished friendly rounded golden medallion search button, cyan beveled rim and two small green leaf flourishes, large very clear dark blue QUESTION MARK ? in the cream center. Right cell: the EXACT SAME button shape and scale, emerald green center and bold cream CHECK MARK instead of question mark. Children's educational park adventure matching bright cartoon app, soft dimensional highlights, clean bold silhouette, readable at 56 pixels. Each button entirely inside its own cell, ample transparent padding, no words, no extra symbols or props, no background. Total canvas 2:1 aspect. These are two final interactive button assets, not a mockup.",
+  "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-bdf14544-c3d0-4a4f-a0a6-7fcb06bdc7e4.png",
+  "outputs": [
+    "marker-search.webp",
+    "marker-found.webp"
+  ],
+  "processing": "Split two equal cells, trim transparent outer margins, resize each to 192 square with preserved alpha. Generated symbol art; accessible button labels remain DOM."
+}

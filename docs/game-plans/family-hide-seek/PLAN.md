@@ -1,5 +1,7 @@
 # Family Hide & Seek plan
 
+Marker follow-up: user correctly identified the six search markers still used CSS circles/text rather than dedicated raster assets. Created and integrated separate question and found-check artwork; no speech/game rules changed. tests/family-hide-markers.cjs PASS: both192px exports load, actual correct find changes asset, widths320/390/768/1024/1366 have56px+ targets and no overflow, reduced motion removes animation, no page exceptions. Reviewed mounted desktop/mobile captures. Dedicated total now15 raster files, including these two markers. Public verification follows deployment of this scoped correction.
+
 2026-10-27. Status: implemented, locally validated and public runtime verified. Stack: Phaser 3.90.0 + GSAP already present, accepted by user through request to begin the proposed game.
 
 Scene: sunny family park seen from raised side view, open grass paths. Six separate hiding props sit around an open central picnic gathering place. A friendly puppy guide is controlled by tap-to-walk, arrows or a 48px touch D-pad. Hear “Find mum!” with source portrait cue; reach a hiding place, open it, see a family character emerge. Correct character follows guide; wrong character waves and hides again. All six reunited triggers gathering/photo finish. One target at a time, no countdown.
