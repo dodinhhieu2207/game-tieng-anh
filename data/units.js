@@ -37,10 +37,11 @@
    }).map(lesson=>({...lesson,cardImage:lesson.cardImage||`assets/shared-ui/unit3-navigation-lesson${lesson.id}.png`,cardAspect:'2 / 1',selectorLabel:lesson.selectorLabel||['Toys','Grammar','Sounds and letters','Numbers','Review','Story'][lesson.id-1]}))},
    {id:4,title:'Family Park',space:'unit4',selectorBanner:'assets/unit4/navigation-v2/unit-card.webp',navigationCard:'assets/unit4/navigation-v2/unit-card.webp',selectorScene:'assets/unit4/navigation-v2/lesson1-background.webp',thumbnail:'assets/unit4/navigation-v2/unit-card.webp',lessons:six({
     1:{title:'This is my mum!',description:'Listen, point and say mum, dad, brother, sister, grandpa and grandma.',status:'available',targetLanguage:['mum','dad','brother','sister','grandpa','grandma'],activities:[
-      activity('family-meet','u4familymeet',{title:'Meet the Family',image:'assets/unit4/lesson1/family-picnic-clean-v1.webp',icon:'flashcards'}),
-      activity('family-find','u4familyfind',{title:'Family Finder',image:'assets/unit4/lesson1/family-picnic-clean-v1.webp',icon:'question'}),
-      activity('pack-picnic','u4familypack',{title:'Pack the Picnic',image:'assets/unit4/lesson1/family-picnic-clean-v1.webp',icon:'matching'}),
-      activity('family-relay','u4familyrelay',{title:'Family Parade Relay',image:'assets/unit4/lesson1/family-picnic-clean-v1.webp',icon:'matching',final:true})
+      activity('family-meet','u4familymeet',{title:'Meet the Family',image:'assets/unit4/lesson1/family-picnic-balanced-v2.webp',icon:'flashcards'}),
+      activity('family-find','u4familyfind',{title:'Family Finder',image:'assets/unit4/lesson1/family-picnic-balanced-v2.webp',icon:'question'}),
+      activity('family-links','u4familylinks',{title:'Family Links',image:'assets/unit4/lesson1/matching/grandma.webp',icon:'matching'}),
+      activity('pack-picnic','u4familypack',{title:'Pack the Picnic',image:'assets/unit4/lesson1/family-picnic-balanced-v2.webp',icon:'matching'}),
+      activity('family-relay','u4familyrelay',{title:'Family Parade Relay',image:'assets/unit4/lesson1/family-picnic-balanced-v2.webp',icon:'matching',final:true})
     ],cardImage:'assets/unit4/navigation/lesson1-family-words.webp',selectorLabel:'Family words'},
     2:{title:'This is my ...',description:'Listen, point, sing and say This is my mum, dad, brother, sister, grandpa and grandma.',targetLanguage:['This is my mum.','This is my dad.','This is my brother.','This is my sister.','This is my grandpa.','This is my grandma.'],cardImage:'assets/unit4/navigation/lesson2-family-album.webp',selectorLabel:'Grammar'},
     3:{title:'Sounds and letters: Jj',description:'Meet Jj and practise jug and juice.',targetLanguage:['Jj','jug','juice'],cardImage:'assets/unit4/navigation/lesson3-jug-juice.webp',selectorLabel:'Sounds and letters'},

@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-27",
+  "source": "family-picnic-clean-v1.webp",
+  "output": "family-picnic-balanced-v2.webp",
+  "sha256": "6c96f90cc6d94168a3205a97decec1ddc50147d969d6212e849bd92165e618bf",
+  "method": "built-in imagegen precise-object-edit, then FFmpeg WebP quality 94",
+  "prompt": "Correct only grandmother oversized blue-trousered lap/thigh/lower body at bottom right: natural smaller seated bent legs and hips proportional to torso; reconstruct yellow striped blanket. Preserve faces, clothing, boy, book, hands and remaining characters, objects, landscape composition and textbook linework. No text or new characters.",
+  "generatedSource": "exec-bcf8a924-3c36-4a7c-bb25-431bc3d1cbd8.png"
+}

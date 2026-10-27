@@ -1,0 +1,29 @@
+const {chromium}=require('C:/Users/Admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const assert=require('node:assert/strict');
+const BASE=process.env.FAMILY_BASE||'http://127.0.0.1:8770/index.html';
+(async()=>{
+ const browser=await chromium.launch({channel:'msedge',headless:true,args:['--autoplay-policy=no-user-gesture-required']});
+ const page=await browser.newPage({viewport:{width:1366,height:900},recordVideo:{dir:'tests/unit4-family-links-video/',size:{width:1366,height:900}}}),errors=[],missing=[];
+ page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)missing.push(r.url())});
+ await page.addInitScript(()=>{window.failFamilyAudio=false;window.familyVoiceStarts=0;const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){if(this.src?.includes('/unit4/lesson1/audio/')){familyVoiceStarts++;if(failFamilyAudio)return Promise.reject(Error('Test audio error'))}return play.call(this)}});
+ await page.goto(BASE+'?dev=family-links1#/unit/4/lesson/1?mode=practice&activity=family-links');
+ await page.waitForFunction(()=>window.Unit4FamilyLinks?.current()?.app?.renderer&&document.querySelector('.family-links')?.dataset.loading!=='true');
+ assert.equal(await page.locator('.fl-canvas canvas').count(),1);assert.equal(await page.locator('[data-fl-word]').count(),6);assert.equal(await page.locator('[data-fl-picture]').count(),6);
+ await page.evaluate(()=>{window.flCompletions=0;document.addEventListener('learning:activity-completed',e=>{if(e.detail.game==='u4familylinks')flCompletions++})});
+ const pair=await page.evaluate(()=>{const s=Unit4FamilyLinks.current();return {w:s.wordOrder[0],wrong:s.pictureOrder.find(w=>w!==s.wordOrder[0])}});
+ await page.locator(`[data-fl-word="${pair.w}"]`).click();await page.locator(`[data-fl-picture="${pair.wrong}"]`).click();
+ await page.waitForFunction(()=>!Unit4FamilyLinks.current().busy);assert.equal(await page.evaluate(()=>Unit4FamilyLinks.current().matches.size),0);assert.equal(await page.locator('.fl-result').isVisible(),false);
+ const w=page.locator(`[data-fl-word="${pair.w}"]`),p=page.locator(`[data-fl-picture="${pair.w}"]`);await w.dragTo(p);
+ await page.waitForFunction(()=>Unit4FamilyLinks.current().matches.size===1&&!Unit4FamilyLinks.current().busy);assert.equal(await page.locator('.fl-word.fl-matched').count(),1);await page.screenshot({path:'tests/unit4-family-links-one.png',fullPage:true});
+ await page.emulateMedia({reducedMotion:'reduce'});
+ for(const word of ['mum','dad','brother','sister','grandpa','grandma'].filter(x=>x!==pair.w)){await page.locator(`[data-fl-word="${word}"]`).focus();await page.keyboard.press('Enter');await page.locator(`[data-fl-picture="${word}"]`).click();await page.waitForFunction(()=>!Unit4FamilyLinks.current().busy)}
+ assert(await page.locator('.fl-result').isVisible());assert.equal(await page.evaluate(()=>flCompletions),1);assert.equal(await page.evaluate(()=>LearningProgress.get('4/1/family-links').stars),3);await page.screenshot({path:'tests/unit4-family-links-complete.png',fullPage:true});
+ if(await page.locator('[data-toast-close]').isVisible())await page.locator('[data-toast-close]').click();
+ await page.locator('.fl-result [data-fl-again]').click();await page.waitForFunction(()=>Unit4FamilyLinks.current()?.app?.renderer&&document.querySelector('.family-links')?.dataset.loading!=='true');assert.equal(await page.evaluate(()=>Unit4FamilyLinks.current().matches.size),0);
+ await page.evaluate(()=>failFamilyAudio=true);await page.locator('[data-fl-word="mum"]').click();await page.locator('[data-fl-picture="mum"]').click();await page.waitForFunction(()=>!Unit4FamilyLinks.current().busy);assert.equal(await page.evaluate(()=>Unit4FamilyLinks.current().matches.size),1);await page.evaluate(()=>failFamilyAudio=false);
+ await page.locator('.app-game-more>summary').click();await page.locator('[data-shell-action="sound"]').click();const voiceStarts=await page.evaluate(()=>familyVoiceStarts);await page.locator('[data-fl-word="dad"]').click();await page.locator('[data-fl-picture="dad"]').click();await page.waitForFunction(()=>!Unit4FamilyLinks.current().busy);assert.equal(await page.evaluate(()=>familyVoiceStarts),voiceStarts);await page.locator('.app-game-more>summary').click();await page.locator('[data-shell-action="sound"]').click();
+ await page.locator('.fl-controls [data-fl-again]').click();await page.waitForFunction(()=>Unit4FamilyLinks.current()?.app?.renderer&&document.querySelector('.family-links')?.dataset.loading!=='true');
+ for(const width of [320,390,768,1024,1366]){await page.setViewportSize({width,height:900});await page.waitForTimeout(120);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),width+' overflow');for(const b of await page.locator('[data-fl-word],[data-fl-picture]').all()){const r=await b.boundingBox();assert(r.width>=48&&r.height>=48&&r.x>=0&&r.x+r.width<=width,width+' clipped target')}await page.screenshot({path:`tests/unit4-family-links-${width}.png`,fullPage:true})}
+ await page.evaluate(()=>{window.oldLinks=Unit4FamilyLinks.current();LearningApp.go('#/unit/4/lesson/1?mode=practice&activity=family-meet')});await page.waitForSelector('.u4-world');assert(await page.evaluate(()=>oldLinks.dead&&oldLinks.app===null));assert((await page.locator('.u4-world').evaluate(e=>getComputedStyle(e).backgroundImage)).includes('balanced-v2'));await page.screenshot({path:'tests/unit4-balanced-scene.png',fullPage:true});
+ assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);await browser.close();console.log('PASS Family Links: real Pixi renderer, six source portraits, wrong retry, pointer drag, keyboard/tap, six pairs, completion once, stars, restart, five widths, reduced motion, leave cleanup, corrected scene.');
+})().catch(e=>{console.error(e);process.exit(1)});

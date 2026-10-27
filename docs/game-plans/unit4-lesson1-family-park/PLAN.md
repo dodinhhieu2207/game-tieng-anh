@@ -61,6 +61,8 @@ Family Finder chỉ chuyển lượt khi voice kết thúc và trẻ chọn; Pac
 
 ## Nhật ký quyết định
 
+- 2026-10-27: thêm Family Links ở vị trí 3 (key `u4familylinks`), người dùng chọn PixiJS + GSAP; sáu portrait source-book không có nhãn và nối trực tiếp/tap. Sửa tỷ lệ chân/ngồi của bà thành `family-picnic-balanced-v2.webp`; giữ identity và bố cục, cập nhật scene chung và thumbnail bốn game. Chi tiết tại plan `unit4-family-links`.
+
 - 2026-10-27: thay bộ navigation tranh minh họa lệch phong cách bằng `assets/unit4/navigation-v2/`: 1 banner Unit, 6 banner lesson có nhãn/chữ/khung đồng bộ trực tiếp mẫu Unit 3 và 6 background theo chủ đề sách. Gắn cardImage/background vào từng lesson; nền dùng trên màn thư viện hoạt động, giữ artwork sách trong gameplay. Prompt/source có trong manifest. Đây là asset navigation/background; bộ asset tương tác của 4 game vẫn là hạng mục riêng.
 
 - 2026-10-27: sửa thiếu affordance của Pack the Picnic: sáu ô thả rõ, pointer drag có thẻ theo tay, hover đích, GSAP bay thẻ, từ đúng giữ trong ô và dấu tick; sai có retry. Đã kiểm tra local tap-place mum và drag-place brother. Meet/Find/Relay có caption tại nhân vật và GSAP phản hồi; rig nhân vật/Rive và Phaser relay thật vẫn còn chưa hoàn thành, không coi đây là motion nhân vật hoàn chỉnh.
