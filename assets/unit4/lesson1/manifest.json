@@ -1,0 +1,8 @@
+{
+  "source": "Family and Friends Starter 2nd Class Book PDF, Unit 4 Lesson 1, page 32 (PDF page 33)",
+  "assets": [
+    {"file":"family-picnic.webp","role":"approved source scene crop","sourceCrop":[65,670,1210,1465]},
+    {"file":"family-portraits.webp","role":"approved source portrait strip crop","sourceCrop":[70,290,1210,630]}
+  ],
+  "derivedWith": "Poppler pdftoppm + deterministic crop/WebP export; no generative replacement"
+}

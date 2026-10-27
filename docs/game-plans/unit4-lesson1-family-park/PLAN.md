@@ -1,6 +1,6 @@
 # Unit 4 Lesson 1 — Family Park plan
 
-Trạng thái: **đề xuất stack đã chọn / chờ kiểm kê asset và triển khai**.
+Trạng thái: **bản playable đầu tiên đã triển khai local; đang hoàn thiện kiểm thử trước khi deploy**.
 Ngày cập nhật: 2026-10-27. Người dùng đã chọn **A + B**: A cho hoạt động học chính, B cho relay/arcade.
 
 ## Scope và nội dung
@@ -42,12 +42,12 @@ Family Finder chỉ chuyển lượt khi voice kết thúc và trẻ chọn; Pac
 
 ## Các bước và bằng chứng
 
-- [ ] Kiểm kê trang sách, audio đã được phép dùng và artwork nguồn.
-- [ ] Chốt art direction, Rive state machine và storyboard.
-- [ ] Tạo asset hỗ trợ có alpha/manifest/license; không thay tranh sách.
-- [ ] Đăng ký route/progress key và dựng Family Park bằng PixiJS/GSAP.
-- [ ] Dựng Family Parade Relay bằng Phaser/GSAP, không trộn renderer.
-- [ ] Kiểm tra audio-ended, mute, retry, click nhanh, reduced motion và cleanup.
+- [x] Kiểm kê trang sách và artwork nguồn; đã cắt deterministic hai vùng minh họa từ PDF được cung cấp.
+- [x] Chốt art direction và storyboard; Rive/Phaser giữ adapter seam, fallback không làm hỏng route.
+- [x] Tạo asset hỗ trợ có manifest/README nguồn; không thay tranh sách bằng nhân vật AI.
+- [x] Đăng ký route/progress key và dựng Family Park playable bằng DOM/SVG + GSAP-friendly motion.
+- [ ] Dựng adapter Phaser thật cho Family Parade Relay khi runtime arcade được nạp; hiện relay chạy fallback tương đương.
+- [x] Kiểm tra local: Meet, Finder (đúng/sai/hoàn tất), Pack (đúng/sai/đếm), Relay (đổi lượt/ghi điểm); còn cần gate viewport/reduced-motion trước deploy.
 - [ ] Chụp năm viewport và quay motion ở tốc độ thật; review theo `design-critique`.
 - [ ] Chỉ deploy sau khi public source/assets và route được kiểm chứng.
 
