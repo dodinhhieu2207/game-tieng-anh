@@ -41,7 +41,10 @@
       activity('family-find','u4familyfind',{title:'Family Finder',image:'assets/unit4/lesson1/family-picnic-balanced-v2.webp',icon:'question'}),
       activity('family-links','u4familylinks',{title:'Family Links',image:'assets/unit4/lesson1/matching/grandma.webp',icon:'matching'}),
       activity('pack-picnic','u4familypack',{title:'Pack the Picnic',image:'assets/unit4/lesson1/family-picnic-balanced-v2.webp',icon:'matching'}),
-      activity('family-hide-seek','u4familyhide',{title:'Family Hide & Seek',image:'assets/family-hide-seek/park.webp',icon:'matching',final:true})
+      activity('family-hide-seek','u4familyhide',{title:'Family Hide & Seek',image:'assets/family-hide-seek/park.webp',icon:'matching'}),
+      activity('family-switcheroo','u4familyswitch',{title:'Family Switcheroo',image:'assets/family-classroom/switch-stage.webp',icon:'question'}),
+      activity('family-trace-write','u4familywrite',{title:'Trace & Write',image:'assets/family-classroom/pencil.webp',icon:'trace'}),
+      activity('family-colour-studio','u4familycolour',{title:'Family Colour Studio',image:'assets/family-classroom/palette.webp',icon:'colour',final:true})
     ],cardImage:'assets/unit4/navigation/lesson1-family-words.webp',selectorLabel:'Family words'},
     2:{title:'This is my ...',description:'Listen, point, sing and say This is my mum, dad, brother, sister, grandpa and grandma.',targetLanguage:['This is my mum.','This is my dad.','This is my brother.','This is my sister.','This is my grandpa.','This is my grandma.'],cardImage:'assets/unit4/navigation/lesson2-family-album.webp',selectorLabel:'Grammar'},
     3:{title:'Sounds and letters: Jj',description:'Meet Jj and practise jug and juice.',targetLanguage:['Jj','jug','juice'],cardImage:'assets/unit4/navigation/lesson3-jug-juice.webp',selectorLabel:'Sounds and letters'},

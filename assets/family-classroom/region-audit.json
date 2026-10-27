@@ -1,0 +1,32 @@
+{
+  "line-mum": {
+    "regions": 19,
+    "fillablePixels": 52926,
+    "outsideExcluded": true
+  },
+  "line-dad": {
+    "regions": 26,
+    "fillablePixels": 48831,
+    "outsideExcluded": true
+  },
+  "line-brother": {
+    "regions": 35,
+    "fillablePixels": 54070,
+    "outsideExcluded": true
+  },
+  "line-sister": {
+    "regions": 24,
+    "fillablePixels": 62582,
+    "outsideExcluded": true
+  },
+  "line-grandpa": {
+    "regions": 49,
+    "fillablePixels": 62366,
+    "outsideExcluded": true
+  },
+  "line-grandma": {
+    "regions": 14,
+    "fillablePixels": 59105,
+    "outsideExcluded": true
+  }
+}

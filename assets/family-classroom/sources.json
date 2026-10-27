@@ -1,0 +1,128 @@
+[
+  {
+    "name": "switch-stage",
+    "alpha": false,
+    "prompt": "Children's educational game theater background, 16:9, bright softly dimensional cartoon matching cheerful family park. Big empty warm wooden floor occupies bottom 65 percent, pale sky blue back wall with small bunting and stars, gold arch trim. NO people, NO curtains, no props in central area, no text or symbols. Front-on stage, low perspective, readable simple shapes, soft rounded illustrated outlines. Leave stage fully empty for six separate family sprites.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-74075128-3557-4c1c-8d61-572e36e72b29.png"
+  },
+  {
+    "name": "curtain",
+    "alpha": true,
+    "prompt": "Single standalone closed theater curtain panel, coral red soft fabric with golden hem and small star fasteners along top, straight rectangle front-on. Children's polished rounded cartoon game asset. No theater, pole, people, lettering or background. Fully opaque cloth inside silhouette, transparent outside. Wide 3:2 panel, gentle folds. Will be duplicated mirrored as left/right halves, not a complete two-curtain scene.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-7c9b295c-6e1e-4ede-98a9-aa32d2a39a4b.png"
+  },
+  {
+    "name": "missing-spot",
+    "alpha": true,
+    "prompt": "One standalone children's game asset, empty round lavender stage spotlight pedestal with thick gold rim and large elegant dark-blue question mark standing in its middle, friendly soft outlined dimensional cartoon. Front view slight raised angle, fully contained, transparent background. No words, people, ground or other objects. Clear at 80 pixels.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-a0c593a1-c103-4745-9731-54d5c291d15d.png"
+  },
+  {
+    "name": "word-ribbon",
+    "alpha": true,
+    "prompt": "One blank wide cream fabric word ticket with sky-blue stitched border and softly curled gold ends, friendly children's illustrated game UI. 4:1 aspect, center empty for real text. Fully contained transparent background. No words, symbols or scene, rounded soft shading, not plastic.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-2c9ff4b4-efa2-47f1-a027-3ae6a726090e.png"
+  },
+  {
+    "name": "writing-desk",
+    "alpha": false,
+    "prompt": "A wide children's educational handwriting game background 16:9. Warm pastel turquoise writing desk seen from above, small pencil cup far upper left, tiny flower sticker far upper right, lower corners a closed crayon box and leaf. Center 85 percent entirely empty flat pale mint desk surface. Bright soft outlined cartoon consistent with children's family park game, no people no text no lettering no paper or UI in center.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-2627aa1d-34aa-4212-8cec-7f000d3dec44.png"
+  },
+  {
+    "name": "paper-frame",
+    "alpha": true,
+    "prompt": "One wide blank white handwriting paper sheet with subtle sky-blue stitched edging and rounded corners, small gold star sticker at upper left, 3:2 aspect. Children's educational cartoon game UI asset, front-on flat view, center entirely clean pure white, no rules no text no shadows inside. Transparent outside silhouette, gentle outline and slight dimensional folded corner lower right.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-69c9ec24-0e93-407c-b079-05f47bfd9667.png"
+  },
+  {
+    "name": "pencil",
+    "alpha": true,
+    "prompt": "One standalone friendly sky blue and yellow chunky triangular school pencil game tool icon, tip points lower left, rounded eraser upper right, clear dark graphite nib. Children's soft outlined cartoon. Large contained on transparent background with no shadow floor no letters no text no hands no other objects.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-bb300c7b-9519-4f3d-bb45-5ae82ea7038f.png"
+  },
+  {
+    "name": "colour-desk",
+    "alpha": false,
+    "prompt": "Wide 16:9 children's art studio tabletop background, pastel apricot and sky blue cheerful softly shaded cartoon. Large empty light warm desk center 85 percent, a small jar of clean brushes far top left and folded cloth far top right, tiny rainbow paper corners at lower edges. No people no drawings no text no letters, no canvas or paper occupying center. Child friendly illustrated app game consistent with rounded family park style.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-98f5d578-93e6-4b9f-b98f-d9f40bcf8333.png"
+  },
+  {
+    "name": "palette",
+    "alpha": true,
+    "prompt": "One standalone oval artist palette with six bright paint wells around edge, warm light wood and tiny turquoise heart sticker. Children's soft outlined cartoon game icon, transparent background, fully contained, no brush no hands no background no text.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-9568463a-83d4-4a73-8adb-95406ed66ac5.png"
+  },
+  {
+    "name": "eraser",
+    "alpha": true,
+    "prompt": "One standalone chunky coral and turquoise school eraser tool icon, soft rounded rectangular shape in three-quarter view, tiny embossed star only. Children's soft outlined cartoon game asset, transparent background, fully contained no words no background no hands.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-53173c8d-411a-43c8-915d-5239ceed62c1.png"
+  },
+  {
+    "name": "bucket",
+    "alpha": true,
+    "prompt": "One standalone small sky-blue paint bucket tipping a rounded drop of golden paint, children's soft outlined cartoon game tool icon on transparent background, fully contained, no lettering or scene or hands.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-72713cdc-3dfe-428a-b7e3-9d43103bc885.png"
+  },
+  {
+    "name": "brush",
+    "alpha": true,
+    "prompt": "One standalone friendly coral handle round paintbrush game tool icon diagonal lower-left tip, soft bristles dipped teal, children's soft outlined cartoon on transparent background. Fully contained no words hands extra objects or ground.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-e2f61521-4e95-4b93-b787-b534537dd93a.png"
+  },
+  {
+    "name": "gallery-frame",
+    "alpha": true,
+    "prompt": "Single blank family art gallery picture frame, wide 4:3, pastel teal wooden frame with gold rounded corner protectors and tiny leaves at two corners, transparent center and outside, children's soft outlined cartoon asset. No artwork, people, words, UI, lettering or background.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-67b829ce-8403-4768-937a-5ffdb71d5d64.png"
+  },
+  {
+    "name": "reward-sticker",
+    "alpha": true,
+    "prompt": "One standalone reward sticker of six small friendly colorful stars holding hands in a gentle semicircle above a golden heart, children's soft outlined cartoon educational game award. Fully contained transparent background, no written text, no numbers or other objects.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-76310ab1-b08d-49b8-8f16-3ff83a3dbc68.png"
+  },
+  {
+    "name": "line-mum",
+    "alpha": false,
+    "ref": "C:/Users/Admin/Documents/GitHub/game-tieng-anh/assets/unit4/lesson1/family-portraits.webp",
+    "prompt": "Use provided reference only for exact character identity. Create a FULL BODY child coloring page of ONLY the first woman, brown hair bun, collared blouse and long trousers. Front three-quarter standing relaxed, smiling, both feet visible, entire figure centered with 8 percent white margin. Match recognizable textbook face/hair, very simple clothing, natural proportions. Pure BLACK clean smooth thick closed outlines on PURE WHITE background, ZERO shading ZERO gray ZERO colors ZERO hatching ZERO texture. All clothing regions and face regions neatly closed and LARGE for easy tap fill. No lettering, words, floor, frame, background objects or other characters. Portrait 4:5 page. Keep eyes simple, avoid tiny decorative details.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-d94e5cb1-e463-4ab5-b374-0242c894695f.png"
+  },
+  {
+    "name": "line-dad",
+    "alpha": false,
+    "ref": "C:/Users/Admin/Documents/GitHub/game-tieng-anh/assets/unit4/lesson1/family-portraits.webp",
+    "prompt": "Use provided reference only for exact character identity. Create a FULL BODY child coloring page of ONLY the second man, square glasses, short brown hair, collared shirt and long trousers. Front three-quarter standing relaxed, smiling, both feet visible, entire figure centered with 8 percent white margin. Match recognizable textbook face/hair, very simple clothing, natural proportions. Pure BLACK clean smooth thick closed outlines on PURE WHITE background, ZERO shading ZERO gray ZERO colors ZERO hatching ZERO texture. All clothing regions and face regions neatly closed and LARGE for easy tap fill. No lettering, words, floor, frame, background objects or other characters. Portrait 4:5 page. Keep eyes simple, avoid tiny decorative details.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-a8df1c22-83fb-44e8-9840-82dafb5159c5.png"
+  },
+  {
+    "name": "line-brother",
+    "alpha": false,
+    "ref": "C:/Users/Admin/Documents/GitHub/game-tieng-anh/assets/unit4/lesson1/family-portraits.webp",
+    "prompt": "Use provided reference only for exact character identity. Create a FULL BODY child coloring page of ONLY the third young boy, curly hair, striped short sleeve shirt and shorts. Front three-quarter standing relaxed, smiling, both feet visible, entire figure centered with 8 percent white margin. Match recognizable textbook face/hair, very simple clothing, natural proportions. Pure BLACK clean smooth thick closed outlines on PURE WHITE background, ZERO shading ZERO gray ZERO colors ZERO hatching ZERO texture. All clothing regions and face regions neatly closed and LARGE for easy tap fill. No lettering, words, floor, frame, background objects or other characters. Portrait 4:5 page. Keep eyes simple, avoid tiny decorative details.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-89ce8f36-38d3-48d7-bca7-5c9d880672ec.png"
+  },
+  {
+    "name": "line-sister",
+    "alpha": false,
+    "ref": "C:/Users/Admin/Documents/GitHub/game-tieng-anh/assets/unit4/lesson1/family-portraits.webp",
+    "prompt": "Use provided reference only for exact character identity. Create a FULL BODY child coloring page of ONLY the fourth girl with headband and low pigtails, shirt and trousers. Front three-quarter standing relaxed, smiling, both feet visible, entire figure centered with 8 percent white margin. Match recognizable textbook face/hair, very simple clothing, natural proportions. Pure BLACK clean smooth thick closed outlines on PURE WHITE background, ZERO shading ZERO gray ZERO colors ZERO hatching ZERO texture. All clothing regions and face regions neatly closed and LARGE for easy tap fill. No lettering, words, floor, frame, background objects or other characters. Portrait 4:5 page. Keep eyes simple, avoid tiny decorative details.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-c5edcb93-3531-4372-823e-f66949633c78.png"
+  },
+  {
+    "name": "line-grandpa",
+    "alpha": false,
+    "ref": "C:/Users/Admin/Documents/GitHub/game-tieng-anh/assets/unit4/lesson1/family-portraits.webp",
+    "prompt": "Use provided reference only for exact character identity. Create a FULL BODY child coloring page of ONLY the fifth older man, glasses, white hair and moustache, collared striped shirt and trousers. Front three-quarter standing relaxed, smiling, both feet visible, entire figure centered with 8 percent white margin. Match recognizable textbook face/hair, very simple clothing, natural proportions. Pure BLACK clean smooth thick closed outlines on PURE WHITE background, ZERO shading ZERO gray ZERO colors ZERO hatching ZERO texture. All clothing regions and face regions neatly closed and LARGE for easy tap fill. No lettering, words, floor, frame, background objects or other characters. Portrait 4:5 page. Keep eyes simple, avoid tiny decorative details.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-3d936614-ca0e-45ac-82b6-db68788a1ea0.png"
+  },
+  {
+    "name": "line-grandma",
+    "alpha": false,
+    "ref": "C:/Users/Admin/Documents/GitHub/game-tieng-anh/assets/unit4/lesson1/family-portraits.webp",
+    "prompt": "Use provided reference only for exact character identity. Create a FULL BODY child coloring page of ONLY the sixth older woman, white bob hair, simple blouse and natural modest long trousers proportions. Front three-quarter standing relaxed, smiling, both feet visible, entire figure centered with 8 percent white margin. Match recognizable textbook face/hair, very simple clothing, natural proportions. Pure BLACK clean smooth thick closed outlines on PURE WHITE background, ZERO shading ZERO gray ZERO colors ZERO hatching ZERO texture. All clothing regions and face regions neatly closed and LARGE for easy tap fill. No lettering, words, floor, frame, background objects or other characters. Portrait 4:5 page. Keep eyes simple, avoid tiny decorative details.",
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-cd11aff5-eaea-4565-9388-0e5e3b4a9373.png"
+  }
+]
