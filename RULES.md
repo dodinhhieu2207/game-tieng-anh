@@ -5,6 +5,7 @@
 Yêu cầu mới nhất thay thế cách diễn giải đồ theo nét trước đây: chữ rỗng có viền, nằm trong ô; trẻ dùng bút tô kín lòng chữ như tô màu (fill). Đây là mặc định cho các bài tô/đồ chữ mới hoặc nâng cấp sau này, trừ khi người dùng yêu cầu riêng bài luyện quy trình viết.
 
 - Hiện trọn khuôn chữ với lòng nhạt, đủ rộng để tô. Không hiện nét đứt, chấm bắt đầu, mũi tên hay thứ tự nét trong chế độ tô chữ này.
+- Bề rộng đầu bút phải vừa bề ngang lòng chữ (cùng kích thước ở renderer và phép đo diện tích), để một lượt tô có thể phủ hết bề ngang nét chữ. Không dùng đầu bút nhỏ khiến trẻ phải quét nhiều lượt mới kín một nét.
 - Mực thực của trẻ bị giới hạn trong lòng chữ bằng mask/clip thật. Trẻ được bắt đầu bất kỳ vị trí, tô nhiều lượt, nhấc bút và tiếp tục, sửa bằng Undo/Clear.
 - Hoàn thành dựa trên diện tích lòng chữ thực sự được tô, không chấm hướng/thứ tự nét. Vẽ ngoài chữ không tăng diện tích; demo không tạo tiến trình. Mức phủ là phản hồi tham gia tô, không chứng nhận khả năng viết.
 - Trẻ chủ động bấm Next letter sau khi tô đủ; không đột ngột đổi chữ khi đang tô. Giữ chế độ tự viết riêng.
