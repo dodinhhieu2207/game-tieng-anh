@@ -74,6 +74,7 @@
    else {card=document.createElement('button');card.className='activity-card'+(unit.id===3?' u3':'');
     const image=legacy?.querySelector('img');card.innerHTML=`<span class="activity-card-copy"><small>${activity.final?'Final Mission':'Activity '+(index+1)}</small><b>${esc(activity.title||GAME_META[activity.game]?.[1]||'Activity')}</b><em>${esc(GAME_META[activity.game]?.[2]||'')}</em><span class="play-pill">PLAY</span></span>${activity.image?`<img src="${esc(activity.image)}" alt="">`:image?image.outerHTML:icon(activity.icon||'flashcards')}`;
    }
+   if(activity.coverImage){card.classList.add('shell-art-activity');card.innerHTML=`<span class="shell-activity-art"><img src="${esc(activity.coverImage)}" alt="" loading="eager" decoding="async"><small>Activity ${index+1}</small></span><span class="activity-card-copy"><b>${esc(activity.title||GAME_META[activity.game]?.[1]||'Activity')}</b><em>${esc(GAME_META[activity.game]?.[2]||'')}</em><span class="play-pill">PLAY ›</span></span>`;}
    card.type='button';card.removeAttribute('id');card.removeAttribute('data-game');card.dataset.activity=activity.id;card.classList.add('shell-activity');card.dataset.status=value.completed?'completed':value.played?'played':'normal';
    if(activity.title){const title=card.querySelector('b');if(title)title.textContent=activity.title;}
    if(!activity.game){card.classList.add('shell-planned');const pill=card.querySelector('.play-pill');if(pill)pill.textContent='COMING SOON';}

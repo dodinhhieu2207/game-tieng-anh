@@ -80,3 +80,19 @@
 @media(max-width:600px){#lessonApp.unit3-toytown .shell-lesson-grid{grid-template-columns:1fr}#lessonApp.shell-art-selector{background-size:auto 700px}#lessonApp .shell-image-banner{margin-bottom:16px}}
 .shell-game-controls [data-shell-action="sound"],.shell-game-controls [data-shell-action="replay"]{background:transparent;border:0;box-shadow:none;padding:4px;min-width:130px}
 .shell-game-controls [data-shell-action="sound"] img,.shell-game-controls [data-shell-action="replay"] img{width:125px;height:54px;object-fit:contain}
+
+/* Dedicated illustrated activity covers; other units and game scenes keep their layout. */
+#lessonApp .activity-card.shell-art-activity{display:flex;flex-direction:column;align-items:stretch;gap:0;min-height:0;padding:0 0 12px;border:0;background:#fff;box-shadow:0 5px 0 #b9dce9,0 12px 22px #17647b12;border-radius:30px;overflow:hidden;text-align:left;isolation:isolate}
+#lessonApp .shell-art-activity .shell-activity-art{display:block;position:relative;width:100%;aspect-ratio:2/1;overflow:hidden;border-radius:28px 28px 18px 18px;background:#d8f5eb}
+#lessonApp .shell-art-activity .shell-activity-art img{display:block;position:static;inset:auto;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;filter:none;transform:none;opacity:1}
+#lessonApp .shell-art-activity .shell-activity-art small{position:absolute;top:12px;left:12px;padding:6px 12px;background:#fff9dd;color:#174d70;border-radius:999px;font:800 14px var(--app-font);box-shadow:0 2px 5px #174d7026}
+#lessonApp .shell-art-activity .activity-card-copy{display:grid;position:static;inset:auto;grid-template-columns:1fr auto;gap:6px 10px;max-width:none;width:100%;padding:14px 16px 10px;box-sizing:border-box}
+#lessonApp .shell-art-activity .activity-card-copy b{grid-column:1/-1;font:800 25px/1.2 var(--app-font);color:#174d70;margin:0}
+#lessonApp .shell-art-activity .activity-card-copy em{font:700 16px/1.4 var(--app-font);font-style:normal;color:#52758b;margin:0;align-self:center}
+#lessonApp .shell-art-activity .play-pill{position:static;align-self:center;margin:0;padding:9px 13px;background:#148d9c;color:#fff;box-shadow:0 3px 0 #0a6372;white-space:nowrap}
+#lessonApp .shell-art-activity .shell-progress-badge{position:static;align-self:flex-start;margin:0 16px;padding:5px 10px;background:#eff8fc;color:#426e86;font-size:14px}
+#lessonApp .shell-art-activity:hover{transform:translateY(-3px);box-shadow:0 6px 0 #9ad2e5,0 15px 25px #17647b20}
+#lessonApp .shell-art-activity:focus-visible{outline:4px solid #f4b529;outline-offset:5px}
+#lessonApp .shell-art-activity:active{transform:translateY(2px)}
+@media(max-width:600px){#lessonApp .shell-art-activity .activity-card-copy b{font-size:23px}#lessonApp .shell-art-activity .activity-card-copy{padding:12px}#lessonApp .shell-art-activity .shell-progress-badge{margin-left:12px}}
+@media(prefers-reduced-motion:reduce){#lessonApp .shell-art-activity{transition:none;transform:none!important}}

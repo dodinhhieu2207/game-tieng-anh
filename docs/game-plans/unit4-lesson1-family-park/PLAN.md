@@ -1,5 +1,7 @@
 # Unit 4 Lesson 1 — Family Park plan
 
+2026-10-28 activity-cover scope: user requested original representative art for the first six activities shown in their screenshot, replacing tiny square corner thumbnails. Six separate built-in image_gen generations exported as1000x500 WebP in assets/unit4/lesson1/activity-covers; exact prompts and local originals in sources.json. Dedicated coverImage metadata uses additive shell-art-activity layout: full-width2:1 cover, clear local App Outfit title, Play and progress. Decorative navigation art only; existing in-game textbook people, Higgs,8 routes and stored progress preserved. Skill imagegen and frontend-design applied. Local family-activity-covers.cjs checks six covers, five widths, focus/reduced motion, six route launches and unchanged Unit3. Render inspection in progress; public gate pending.
+
 2026-10-27 retirement: user requested removing Family Parade Relay because it was not effective for their class. Removed family-relay/u4familyrelay from the Lesson1 activity catalogue; old source assets and stored learner progress retained. Family Hide & Seek is temporarily the last activity. Proposed replacement Family Memory House (word–picture memory behind animated windows), awaiting the required stack choice; replacement has not yet been implemented. Do not reintroduce Parade through later catalogue edits.
 
 Trạng thái: **bản playable thứ hai đã có nền sạch và catalogue Higgs; đang chờ nghe duyệt voice và gate trước deploy**.

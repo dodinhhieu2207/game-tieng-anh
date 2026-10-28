@@ -37,12 +37,12 @@
    }).map(lesson=>({...lesson,cardImage:lesson.cardImage||`assets/shared-ui/unit3-navigation-lesson${lesson.id}.png`,cardAspect:'2 / 1',selectorLabel:lesson.selectorLabel||['Toys','Grammar','Sounds and letters','Numbers','Review','Story'][lesson.id-1]}))},
    {id:4,title:'Family Park',space:'unit4',selectorBanner:'assets/unit4/navigation-v2/unit-card.webp',navigationCard:'assets/unit4/navigation-v2/unit-card.webp',selectorScene:'assets/unit4/navigation-v2/lesson1-background.webp',thumbnail:'assets/unit4/navigation-v2/unit-card.webp',lessons:six({
     1:{title:'This is my mum!',description:'Listen, point and say mum, dad, brother, sister, grandpa and grandma.',status:'available',targetLanguage:['mum','dad','brother','sister','grandpa','grandma'],activities:[
-      activity('family-meet','u4familymeet',{title:'Meet the Family',image:'assets/unit4/lesson1/family-picnic-balanced-v2.webp',icon:'flashcards'}),
-      activity('family-find','u4familyfind',{title:'Family Finder',image:'assets/unit4/lesson1/family-picnic-balanced-v2.webp',icon:'question'}),
-      activity('family-links','u4familylinks',{title:'Family Links',image:'assets/unit4/lesson1/matching/grandma.webp',icon:'matching'}),
-      activity('pack-picnic','u4familypack',{title:'Pack the Picnic',image:'assets/unit4/lesson1/family-picnic-balanced-v2.webp',icon:'matching'}),
-      activity('family-hide-seek','u4familyhide',{title:'Family Hide & Seek',image:'assets/family-hide-seek/park.webp',icon:'matching'}),
-      activity('family-switcheroo','u4familyswitch',{title:'Family Switcheroo',image:'assets/family-classroom/switch-stage.webp',icon:'question'}),
+      activity('family-meet','u4familymeet',{coverImage:'assets/unit4/lesson1/activity-covers/meet.webp',title:'Meet the Family',image:'assets/unit4/lesson1/family-picnic-balanced-v2.webp',icon:'flashcards'}),
+      activity('family-find','u4familyfind',{coverImage:'assets/unit4/lesson1/activity-covers/find.webp',title:'Family Finder',image:'assets/unit4/lesson1/family-picnic-balanced-v2.webp',icon:'question'}),
+      activity('family-links','u4familylinks',{coverImage:'assets/unit4/lesson1/activity-covers/links.webp',title:'Family Links',image:'assets/unit4/lesson1/matching/grandma.webp',icon:'matching'}),
+      activity('pack-picnic','u4familypack',{coverImage:'assets/unit4/lesson1/activity-covers/picnic.webp',title:'Pack the Picnic',image:'assets/unit4/lesson1/family-picnic-balanced-v2.webp',icon:'matching'}),
+      activity('family-hide-seek','u4familyhide',{coverImage:'assets/unit4/lesson1/activity-covers/hide.webp',title:'Family Hide & Seek',image:'assets/family-hide-seek/park.webp',icon:'matching'}),
+      activity('family-switcheroo','u4familyswitch',{coverImage:'assets/unit4/lesson1/activity-covers/switch.webp',title:'Family Switcheroo',image:'assets/family-classroom/switch-stage.webp',icon:'question'}),
       activity('family-trace-write','u4familywrite',{title:'Trace & Write',image:'assets/family-classroom/pencil.webp',icon:'trace'}),
       activity('family-colour-studio','u4familycolour',{title:'Family Colour Studio',image:'assets/family-classroom/palette.webp',icon:'colour',final:true})
     ],cardImage:'assets/unit4/navigation/lesson1-family-words.webp',selectorLabel:'Family words'},
