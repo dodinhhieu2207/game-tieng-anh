@@ -33,5 +33,7 @@
   s.points.push({x:p.x,y:p.y});return {ok:true}
  }
  function finish(s,p){const end=s.samples.at(-1),coverage=s.visited.reduce((a,b)=>a+b,0)/s.samples.length;return s.length<5?Math.hypot(p.x-end.x,p.y-end.y)<=6:s.at>=s.samples.length-3&&coverage>=.97&&Math.hypot(p.x-end.x,p.y-end.y)<=8&&s.travel>=s.length*.88&&s.travel<=s.length*1.28+10}
- const api={glyphs,cues,create,begin,advance,finish};globalThis.FamilyHandwriting=api;if(typeof module!=='undefined')module.exports=api;
+ let stencilId=0;
+ function stencilMarkup(paths,completed=0){const id='fc-stencil-'+(++stencilId),safe=paths.map(d=>{if(!/^[MmLlHhVvCcSsQqTtAaZz0-9.,\s+\-]+$/.test(d))throw Error('Invalid stroke data');return d});return `<defs><mask id="${id}" maskUnits="userSpaceOnUse" x="-20" y="0" width="180" height="220">${safe.map(d=>`<path d="${d}" fill="none" stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>`).join('')}</mask></defs><g class="fc-stencil-outline" aria-hidden="true">${safe.map(d=>`<path d="${d}"/>`).join('')}</g><g class="fc-stencil-body">${safe.map((d,i)=>`<path class="fc-model ${i<completed?'complete':''}" d="${d}"/>`).join('')}</g><g class="fc-stencil-center" aria-hidden="true">${safe.map(d=>`<path d="${d}"/>`).join('')}</g><g class="fc-stencil-paint" mask="url(#${id})"><g class="fc-demo-ink"></g><g class="fc-child-ink"></g></g>`}
+ const api={glyphs,cues,create,begin,advance,finish,stencilMarkup};globalThis.FamilyHandwriting=api;if(typeof module!=='undefined')module.exports=api;
 })();

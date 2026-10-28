@@ -1,5 +1,16 @@
 # Quy tắc phát triển web Family and Friends – Letter Land
 
+## Tiêu chuẩn đồ chữ bắt buộc — cập nhật 2026-10-28
+
+Yêu cầu trực tiếp của người dùng: dùng chữ có **khuôn liền rõ ràng để trẻ đồ bên trong**, theo cách trình bày của bài E/F; không dùng các chấm rời làm hình chữ chính. Áp dụng cho bài đồ chữ hiện tại và mọi bài đồ chữ mới/nâng cấp sau này.
+
+- Hiện toàn bộ hình chữ bằng một dải khuôn có viền, phần lòng nhạt đủ rộng để đặt bút. Vạch dẫn ở giữa chỉ là gợi ý phụ, không thay khuôn chữ.
+- Mực của trẻ và mực bút mẫu phải bị giới hạn trong lòng khuôn bằng mask/clip thật. Không chỉ đổi màu nền hoặc đặt một nét dày lên trên rồi gọi là đồ trong khuôn.
+- Khuôn, vạch dẫn, bút mẫu và phép kiểm tra phải dùng chung một dữ liệu hình chữ. Giữ đúng điểm đặt bút, chiều/thứ tự nét, phần đi lại trên nét và điểm nhấc bút. Không chấp nhận tô loạn, đi tắt hay tô kín hình bất kể thứ tự để hoàn thành nhiệm vụ đồ chữ.
+- Giữ mực thật của trẻ; demo không tạo tiến trình. Các chế độ tự viết/tô màu tự do phải được tách rõ khỏi đồ chữ có hướng dẫn.
+- Kiểm tra trực quan khuôn trước/khi/sau đồ, thử mực gần biên không vượt viền, cả chuột/cảm ứng và năm độ rộng chuẩn. Dùng lại renderer khuôn chung nếu phù hợp; không tự quay về mẫu chấm rời ở game tiếp theo.
+- Mẫu hiện thực: `FamilyHandwriting.stencilMarkup` trong `shared/family-handwriting-model.js`, tích hợp ở Family Trace & Write. Không đổi các bài cũ khác ngoài phạm vi được giao.
+
 Ngày tạo: 2026-10-07. Áp dụng cho giao diện, trò chơi, audio, Speaking AI và hệ thống tiến trình của dự án này.
 
 ## 1. Cách áp dụng

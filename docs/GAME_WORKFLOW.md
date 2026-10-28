@@ -14,6 +14,8 @@ Tạo docs/game-plans/<game>/RULES.md và PLAN.md theo TEMPLATE. PLAN phải ghi
 
 ## 3. Thiết kế trước khi tạo asset
 
+Đối với mọi bài đồ chữ mới/nâng cấp: bắt buộc lập mẫu **khuôn chữ liền có viền và lòng nhạt**, theo tiêu chuẩn đồ chữ trong RULES.md. Chấm/vạch giữa chỉ hỗ trợ hướng đi. Dữ liệu khuôn và dữ liệu kiểm tra/bút mẫu phải đồng nhất; mask/clip mực bên trong lòng khuôn. Bằng chứng phải có ảnh trước/đang/sau đồ, kiểm tra mực ở biên và giữ đúng thứ tự nét. Tham khảo renderer dùng chung FamilyHandwriting.stencilMarkup; không dùng đường chấm rời làm mẫu chính.
+
 Yêu cầu bắt buộc 2026-10-27: mỗi game có bộ asset tương ứng đã tạo và gắn; font theo App Outfit/`var(--app-font)` của app; mọi voice mới dùng Higgs TTS, dùng lại clip Higgs đã duyệt khi phù hợp. Áp dụng chi tiết RULES.md mục 15. Banner Unit/Lesson không thay bộ asset tương tác bên trong game. Kiểm tra ba hạng mục riêng trước khi đánh dấu hoàn thành.
 
 Art direction phải có bảng màu, chất liệu/độ bóng, kích thước hình/chữ, vị trí nhiệm vụ và phản hồi. Storyboard gồm ít nhất: nghe, chờ chọn, đang chọn, đúng, thử lại, lỗi audio, kết thúc, reduced motion. Một màn hình có một nhiệm vụ chính.
