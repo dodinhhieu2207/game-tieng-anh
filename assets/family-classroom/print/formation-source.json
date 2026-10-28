@@ -1,0 +1,12 @@
+{
+  "version": "20261028-formation1",
+  "scope": "Fifteen lowercase print letters used by six family words. One continuous pen-down movement for body letters; i dot and t cross are deliberate lifts.",
+  "references": [
+    {"url":"https://readinguniverse.org/skill-explainer/handwriting-spelling-typing/handwriting/how-to-teach-letter-formation","role":"Directional letter-formation descriptions and continuous manuscript movement, authored by Marion McBride. Consulted as a process reference; site diagrams and downloads are not copied."},
+    {"url":"https://home.oxfordowl.co.uk/english/primary-handwriting/","role":"Consistent start, direction and finish, matching the child's school print style."}
+  ],
+  "geometry": "Independently authored SVG centreline geometry implementing the referenced print movement. Not a digitized recording or a facsimile of a named person's handwriting.",
+  "userDecision": "User confirmed: follow the print-letter process being taught; no personal sample/video supplied.",
+  "ink": "Display actual child pointer trace; template animation draws separate ink and does not earn progress.",
+  "validation": "Chronological arc progress with forward direction at retraced stems, start/end corridor, continuity, reverse and excess-travel limits. Small motor variation permitted; not a handwriting diagnosis."
+}

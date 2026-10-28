@@ -1,5 +1,7 @@
 # Trace & Write rules
 
+2026-10-28 clarification: follow a coherent human print-letter formation process, not arbitrary tracing near letter outlines. User confirmed no personal sample/video; use the print-letter process being taught. Continuous bodies for m/n/h/r/a/b/d/g/p/u/o/e/s, deliberate lifts for i dot and t cross. Follow chronological start/direction/turns/end; intended retracing within the model is allowed, extra backtracking/scribbling is not. Demonstration must draw ink, show lifts/transit and never earn progress. Do not claim these independent SVGs are digitized from a real writer's recording.
+
 Follow root RULES.md and docs/GAME_WORKFLOW.md. User accepted all three proposed activities and stacks on 2026-10-27; do not re-ask. Unit4 Lesson1 only, six words mum/dad/brother/sister/grandpa/grandma. Retired Family Parade must remain absent.
 
 Six family words. Guided tracing one large lowercase letter at a time with start/direction/stroke checking. Demonstration never completes child work. Free-write mode keeps temporary handwritten work, undo/reset/export; no automatic correctness score for free handwriting. Single-storey a/g handwritten print model is an explicit font exception.
