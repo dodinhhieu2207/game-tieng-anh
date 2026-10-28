@@ -1,16 +1,15 @@
 # Quy tắc phát triển web Family and Friends – Letter Land
 
-## Tiêu chuẩn tô chữ trong ô — người dùng đính chính 2026-10-28
+## Tiêu chuẩn bài đồ chữ — mẫu E/F fish/farm, đính chính cuối 2026-10-28
 
-Yêu cầu mới nhất thay thế cách diễn giải đồ theo nét trước đây: chữ rỗng có viền, nằm trong ô; trẻ dùng bút tô kín lòng chữ như tô màu (fill). Đây là mặc định cho các bài tô/đồ chữ mới hoặc nâng cấp sau này, trừ khi người dùng yêu cầu riêng bài luyện quy trình viết.
+Yêu cầu mới nhất của người dùng: tự đối chiếu và làm giống bài E/F, fish, farm đã có. Mẫu chuẩn là Trace & Hatch / Trace & Swim (games.eetrace/fftrace), không tiếp tục diễn giải thành bài quét tô diện tích riêng.
 
-- Hiện trọn khuôn chữ với lòng nhạt, đủ rộng để tô. Không hiện nét đứt, chấm bắt đầu, mũi tên hay thứ tự nét trong chế độ tô chữ này.
-- Bề rộng đầu bút phải vừa bề ngang lòng chữ (cùng kích thước ở renderer và phép đo diện tích), để một lượt tô có thể phủ hết bề ngang nét chữ. Không dùng đầu bút nhỏ khiến trẻ phải quét nhiều lượt mới kín một nét.
-- Mực thực của trẻ bị giới hạn trong lòng chữ bằng mask/clip thật. Trẻ được bắt đầu bất kỳ vị trí, tô nhiều lượt, nhấc bút và tiếp tục, sửa bằng Undo/Clear.
-- Hoàn thành dựa trên diện tích lòng chữ thực sự được tô, không chấm hướng/thứ tự nét. Vẽ ngoài chữ không tăng diện tích; demo không tạo tiến trình. Mức phủ là phản hồi tham gia tô, không chứng nhận khả năng viết.
-- Trẻ chủ động bấm Next letter sau khi tô đủ; không đột ngột đổi chữ khi đang tô. Giữ chế độ tự viết riêng.
-- Dùng cùng hình học cho khuôn, mask và phép đo diện tích; kiểm tra chuột/cảm ứng, giữ mực khi nhấc tay, Undo, tô ngoài khuôn, demo, năm độ rộng và ảnh trước/sau.
-- Mẫu: FamilyHandwriting.stencilMarkup và Writer trong shared/family-classroom.js. Không tự sửa mọi game cũ ngoài phạm vi được giao.
+- Dùng lại traceCardHTML và bindTraceCard: cả từ xuất hiện, mỗi chữ nằm trong ô riêng, có ô đang làm rõ ràng; chữ hoàn thành giữ lại.
+- Khuôn nét liền nhạt; nét màu lấp đầy đúng bề ngang khuôn khi trẻ kéo theo mẫu. Guide và ink phải cùng độ rộng (18 đơn vị như mẫu hiện tại), không đầu bút nhỏ nằm giữa nét lớn.
+- Theo cùng phản hồi bắt đầu/tiến độ/nhấc tay/hoàn thành, tự chuyển ô sau khi xong chữ, Next word khi xong từ. Giữ dạng chữ/nét/chấm của mẫu gốc, không thay bằng bảng chữ khổng lồ đơn lẻ hay thêm lượt bấm Next letter.
+- Những chữ chưa có trong E/F dùng hình học đã duyệt nhưng cùng renderer và binder; viewBox/input phải khớp. Kiểm tra đủ từ bằng chuột/cảm ứng và năm độ rộng.
+- Giữ Higgs, ảnh gia đình, route và progress. Tự viết có vùng riêng, không tự chấm khả năng viết.
+- Nếu người dùng nói giống một bài cũ, mở/kiểm tra thực tế bài đó trước, dùng lại cơ chế đã có; không chỉ suy đoán từ câu mô tả. Tiêu chuẩn này thay thế các diễn giải đồ/tô đã ghi trước đó; không tự sửa game ngoài phạm vi.
 
 Ngày tạo: 2026-10-07. Áp dụng cho giao diện, trò chơi, audio, Speaking AI và hệ thống tiến trình của dự án này.
 

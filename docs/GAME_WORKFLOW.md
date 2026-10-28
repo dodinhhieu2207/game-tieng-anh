@@ -14,7 +14,7 @@ Tạo docs/game-plans/<game>/RULES.md và PLAN.md theo TEMPLATE. PLAN phải ghi
 
 ## 3. Thiết kế trước khi tạo asset
 
-Đối với bài tô/đồ chữ mới hoặc nâng cấp: dùng chữ rỗng có viền nằm trong ô; trẻ tô kín lòng chữ như tô màu. Không dùng nét đứt, chấm bắt đầu, mũi tên hoặc bắt thứ tự nét mặc định. Mask mực thực trong lòng chữ, đo diện tích đã tô từ cùng hình học; Undo/Clear/nhấc tay tiếp tục, demo không tiến trình, Next letter do trẻ bấm. Chỉ bật kiểm tra quy trình viết nếu người dùng yêu cầu riêng. Đính chính này thay thế tiêu chuẩn đồ theo nét đã ghi trước đó.
+Bài đồ chữ: mẫu chuẩn mới nhất là E/F fish/farm — Trace & Hatch / Trace & Swim. Phải mở và kiểm tra bài tham chiếu, dùng lại traceCardHTML/bindTraceCard: cả từ, mỗi chữ trong ô, active/done, nét màu đúng bề rộng khuôn, tự chuyển ô, Next word sau khi xong từ. Kế thừa thao tác/feedback thực tế, không diễn giải lại thành một game tô diện tích khác. Nội dung/hình học bổ sung phải hợp cùng viewBox/input; kiểm tra chuột/cảm ứng/five widths và ảnh so sánh. Xem RULES.md.
 
 Yêu cầu bắt buộc 2026-10-27: mỗi game có bộ asset tương ứng đã tạo và gắn; font theo App Outfit/`var(--app-font)` của app; mọi voice mới dùng Higgs TTS, dùng lại clip Higgs đã duyệt khi phù hợp. Áp dụng chi tiết RULES.md mục 15. Banner Unit/Lesson không thay bộ asset tương tác bên trong game. Kiểm tra ba hạng mục riêng trước khi đánh dấu hoàn thành.
 
