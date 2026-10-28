@@ -9,3 +9,5 @@ Follow root RULES.md and docs/GAME_WORKFLOW.md. User authorized proposed Phaser 
 - Arcade Physics owns movement/bounds and GSAP owns reveal/celebration. Six hiding places are close enough to explore without a large scrolling maze. Foreground objects cover hidden characters.
 - Pause stops physics, tweens and audio; return requires replay before interrupted prompt is treated as heard. Cleanup game, textures, listeners and tweens on leave. Reduced motion skips decorative sway/particles, keeps meaningful travel and static cue.
 - Common progress completion event once, 3 participation stars; do not claim mastery or phonetic scoring.
+
+2026-10-28 replay: every new board independently shuffles all6 family characters, all6 target prompts, and two each of bush/tree/tent. Compared with previous board in this browser tab, all6 characters must change hiding-slot, first prompt must differ, prop layout must differ. Keep positions stable during a running board, including wrong retry/pause/resize. Store only one prior board in sessionStorage with in-memory fallback if storage is unavailable. Never alter progress keys.
