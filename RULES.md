@@ -1,15 +1,15 @@
 # Quy tắc phát triển web Family and Friends – Letter Land
 
-## Tiêu chuẩn đồ chữ bắt buộc — cập nhật 2026-10-28
+## Tiêu chuẩn tô chữ trong ô — người dùng đính chính 2026-10-28
 
-Yêu cầu trực tiếp của người dùng: dùng chữ có **khuôn liền rõ ràng để trẻ đồ bên trong**, theo cách trình bày của bài E/F; không dùng các chấm rời làm hình chữ chính. Áp dụng cho bài đồ chữ hiện tại và mọi bài đồ chữ mới/nâng cấp sau này.
+Yêu cầu mới nhất thay thế cách diễn giải đồ theo nét trước đây: chữ rỗng có viền, nằm trong ô; trẻ dùng bút tô kín lòng chữ như tô màu (fill). Đây là mặc định cho các bài tô/đồ chữ mới hoặc nâng cấp sau này, trừ khi người dùng yêu cầu riêng bài luyện quy trình viết.
 
-- Hiện toàn bộ hình chữ bằng một dải khuôn có viền, phần lòng nhạt đủ rộng để đặt bút. Vạch dẫn ở giữa chỉ là gợi ý phụ, không thay khuôn chữ.
-- Mực của trẻ và mực bút mẫu phải bị giới hạn trong lòng khuôn bằng mask/clip thật. Không chỉ đổi màu nền hoặc đặt một nét dày lên trên rồi gọi là đồ trong khuôn.
-- Khuôn, vạch dẫn, bút mẫu và phép kiểm tra phải dùng chung một dữ liệu hình chữ. Giữ đúng điểm đặt bút, chiều/thứ tự nét, phần đi lại trên nét và điểm nhấc bút. Không chấp nhận tô loạn, đi tắt hay tô kín hình bất kể thứ tự để hoàn thành nhiệm vụ đồ chữ.
-- Giữ mực thật của trẻ; demo không tạo tiến trình. Các chế độ tự viết/tô màu tự do phải được tách rõ khỏi đồ chữ có hướng dẫn.
-- Kiểm tra trực quan khuôn trước/khi/sau đồ, thử mực gần biên không vượt viền, cả chuột/cảm ứng và năm độ rộng chuẩn. Dùng lại renderer khuôn chung nếu phù hợp; không tự quay về mẫu chấm rời ở game tiếp theo.
-- Mẫu hiện thực: `FamilyHandwriting.stencilMarkup` trong `shared/family-handwriting-model.js`, tích hợp ở Family Trace & Write. Không đổi các bài cũ khác ngoài phạm vi được giao.
+- Hiện trọn khuôn chữ với lòng nhạt, đủ rộng để tô. Không hiện nét đứt, chấm bắt đầu, mũi tên hay thứ tự nét trong chế độ tô chữ này.
+- Mực thực của trẻ bị giới hạn trong lòng chữ bằng mask/clip thật. Trẻ được bắt đầu bất kỳ vị trí, tô nhiều lượt, nhấc bút và tiếp tục, sửa bằng Undo/Clear.
+- Hoàn thành dựa trên diện tích lòng chữ thực sự được tô, không chấm hướng/thứ tự nét. Vẽ ngoài chữ không tăng diện tích; demo không tạo tiến trình. Mức phủ là phản hồi tham gia tô, không chứng nhận khả năng viết.
+- Trẻ chủ động bấm Next letter sau khi tô đủ; không đột ngột đổi chữ khi đang tô. Giữ chế độ tự viết riêng.
+- Dùng cùng hình học cho khuôn, mask và phép đo diện tích; kiểm tra chuột/cảm ứng, giữ mực khi nhấc tay, Undo, tô ngoài khuôn, demo, năm độ rộng và ảnh trước/sau.
+- Mẫu: FamilyHandwriting.stencilMarkup và Writer trong shared/family-classroom.js. Không tự sửa mọi game cũ ngoài phạm vi được giao.
 
 Ngày tạo: 2026-10-07. Áp dụng cho giao diện, trò chơi, audio, Speaking AI và hệ thống tiến trình của dự án này.
 
