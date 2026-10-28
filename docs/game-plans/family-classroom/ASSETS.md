@@ -1,5 +1,7 @@
 # Family classroom — asset and validation record
 
+2026-10-28 handwriting correction: original multi-piece geometric letter model superseded by coherent continuous print formation. New model is shared/family-handwriting-model.js; print SVG/JSON exports match it. Formation-source.json records human-authored educational process references and independent geometry provenance, not a digitized writer recording. Demo now draws ink with deliberate lift/transit and numbered start cues; validator rejects extra backwards/shortcut/scribble motion rather than accepting broad proximity. Existing pictures, UI font, freewrite and Higgs catalogue unchanged. Local and public validation checkpoint recorded in ../family-trace-write/PLAN.md, including the reproduced old acceptance failure and actual six-word pointer completion with the corrected model.
+
 Approved scope: Switcheroo, Trace & Write, Colour Studio. User accepted all three on2026-10-27. Family Parade remains retired. Existing five active Unit4 Lesson1 activities retain IDs/data; three new keys are u4familyswitch, u4familywrite, u4familycolour. Album art and writing are participation practice, not independently measured mastery.
 
 ## Integrated artwork
