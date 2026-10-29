@@ -1,0 +1,27 @@
+/* Original Family Park collection loop; vocabulary and source character identities retained. */
+.u4-picnic-collection{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px auto 8px;max-width:660px;flex-wrap:wrap}
+.u4-picnic-item{display:block;position:relative;flex:0 0 76px;height:76px;border-bottom:3px solid #b1d4cf;border-radius:16px;background:#e5f3ed}
+.u4-picnic-item i{position:absolute;inset:0;background-image:url('../assets/family-classroom/picnic/items-atlas.webp');background-size:300% 200%;background-position:var(--item-x) var(--item-y);opacity:0}
+.u4-picnic-item b{position:absolute;inset:0;display:grid;place-items:center;font-size:30px;color:#5b8790}
+.u4-picnic-item.collected{background:#fff4d4;border-color:#d5a447}
+.u4-picnic-item.collected i{opacity:1}.u4-picnic-item.collected b{display:none}
+.u4-discovery{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:16px auto 8px}
+.u4-discovery img{width:55px;height:65px;object-fit:contain;filter:grayscale(1);opacity:.25;border-bottom:3px solid transparent}
+.u4-discovery img.discovered{filter:none;opacity:1;border-color:#248b72}
+.fl-reunion{display:flex;justify-content:center;gap:9px;max-width:650px;margin:16px auto 4px}
+.fl-reunion span{width:70px;height:70px;background-size:200% 200%;background-position:0 0;background-repeat:no-repeat;filter:grayscale(1);opacity:.22}
+.fl-reunion .reunited{filter:none;opacity:1}
+.family-links .fl-word{background:transparent url('../assets/family-classroom/word-ribbon.webp') center/100% 100% no-repeat;border:0;box-shadow:none}
+.family-links .fl-picture{border-width:2px;background:#fffdf4e8;border-radius:40% 40% 22px 22px;box-shadow:0 4px 0 #9bd4d24d}
+.family-links .fl-picture.fl-retry:after{content:'×';position:absolute;right:-4px;top:-5px;width:27px;height:27px;background:#fff0df;color:#a44d2a;border:2px solid #c77c4c;border-radius:50%;font-size:23px;line-height:23px}
+@media(max-width:600px){.fl-reunion{gap:5px}.fl-reunion span{width:42px;height:48px}}
+.u4-world[data-mode=pack] .u4-hotspot{background:transparent url('../assets/family-classroom/word-ribbon.webp') center/100% 100% no-repeat;border:0;box-shadow:none;min-height:52px;padding:8px 15px}
+.u4-world[data-mode=pack] .u4-hotspot:not(.u4-filled):after{content:'+';font-size:25px;color:#398d9f}
+.u4-world[data-mode=pack] .u4-hotspot.u4-filled:after{content:'✓';position:absolute;right:4px;top:-6px;font-size:20px;color:#176b53;background:#e9ffee;border-radius:50%;border:2px solid #218767;width:27px;height:27px}
+.u4-world[data-mode=pack] .u4-hotspot.drop-hover{filter:drop-shadow(0 0 6px #ffc654);transform:scale(1.04)}
+.u4-world[data-mode=pack] .u4-hotspot[data-state=wrong]:after{content:'×';color:#a6502d}
+.u4-world[data-mode=pack] .u4-hotspot.u4-filled{filter:drop-shadow(0 3px 2px #478c6a55)}
+.u4-token-bank:has(.u4-token[data-placed=true]) .u4-token[data-placed=true]{display:none}
+.u4-family>.u4-reward{position:relative;inset:auto;margin:18px 0 8px;padding:18px;min-height:0;background:#fff7de;border:2px solid #e3be69;border-radius:24px}
+.u4-family>.u4-reward>div{padding:0}.u4-family>.u4-reward h3{margin:0;font-size:28px}
+@media(max-width:600px){.u4-picnic-collection{gap:7px;margin-top:12px}.u4-picnic-item{flex-basis:42px;height:46px;border-radius:10px}.u4-picnic-item b{font-size:23px}.u4-discovery{gap:7px}.u4-discovery img{width:37px;height:48px}.u4-world[data-mode=pack] .u4-hotspot{padding:5px 8px;min-height:48px}.u4-world[data-mode=pack] .u4-hotspot-name{font-size:16px}}

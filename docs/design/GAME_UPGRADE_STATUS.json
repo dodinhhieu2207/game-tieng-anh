@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-29",
+  "meaning": "Local validated targeted changes. Other activities remain pending individual redesign; no blanket completion.",
+  "shared": [
+    "original class-mode team pennants/manual turns, no learner-star writes",
+    "quieter owned feedback; no whole-scene fade on each interaction",
+    "Fredoka UI and short Luckiest Guy titles; tracing model untouched"
+  ],
+  "upgrades": {
+    "u4familymeet": {
+      "change": "Six voiced discoveries and exactly-once participation completion",
+      "test": "family-missions.cjs"
+    },
+    "u4familyfind": {
+      "change": "Solve-before-Next, discovery collection, audio-ended completion",
+      "test": "family-missions.cjs"
+    },
+    "u4familypack": {
+      "change": "Original six-item picnic atlas, persistent placed names, owned snap/return and scene collection",
+      "test": "family-missions.cjs"
+    },
+    "u4familylinks": {
+      "change": "Persistent links, reunion sprites, retry cross, anti-repeat first word and listener cleanup",
+      "test": "unit4-family-links.spec.cjs"
+    },
+    "bag": {
+      "change": "Original backpack and classroom stage, direct peek/show, full unobscured answer",
+      "test": "school-missions.cjs"
+    },
+    "reveal": {
+      "change": "Direct tile tapping/keyboard and original classroom stage",
+      "test": "school-missions.cjs"
+    },
+    "missing": {
+      "change": "Picture returns to actual hole, Higgs-ended advancement, hidden observation pause",
+      "test": "school-missions.cjs"
+    },
+    "match": {
+      "change": "Real picture-word drag plus tap, persistent lines and resize",
+      "test": "school-missions.cjs"
+    },
+    "u3nparade": {
+      "change": "Direct unique counting taps, varied balanced rounds",
+      "test": "number-count-play.cjs + number-studio.spec.cjs"
+    },
+    "u3ndetective": {
+      "change": "Actual room renderer shuffles original six quantity/toy pairs, zone contents and distinct distractors; exact target count preserved",
+      "test": "toy-detective.spec.cjs PASS all six rooms, actual PixiUI drag/collect/undo, exact quantities, five widths, reduced and leave"
+    },
+    "u3ngift": {
+      "change": "Varied balanced target quantities/toy order; existing object travel/undo/lid retained",
+      "test": "number-studio.spec.cjs + number-studio-edges.spec.cjs"
+    },
+    "u3nsnap": {
+      "change": "Varied balanced target quantities/toy order; existing three-part assembly retained",
+      "test": "number-studio.spec.cjs"
+    },
+    "u3nsay": {
+      "change": "Varied balanced prompts; existing neutral AI/audio recovery retained",
+      "test": "number-studio-edges.spec.cjs (mock ASR, not child accuracy)"
+    },
+    "u3nrelay": {
+      "change": "Random paired quantities with identical quantity and toy per team pair",
+      "test": "number-studio.spec.cjs"
+    },
+    "u3hipond": {
+      "change": "Shuffle within letter/sound/word/review blocks; casting/water/boat retained",
+      "test": "pond-gear.spec.cjs"
+    },
+    "u3himine": {
+      "change": "Shuffle four words with anti-repeat first, preserve true hook/ghost slots/duplicate l",
+      "test": "word-mine-direct.spec.cjs + word-mine-edges.spec.cjs"
+    },
+    "u3detective": {
+      "change": "Dedicated original4-category atlas and open scene; original category/voice/scoring retained",
+      "test": "question-detective-open.cjs real Higgs full rounds and five widths PASS"
+    }
+  }
+}

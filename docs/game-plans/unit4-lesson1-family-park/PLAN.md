@@ -77,3 +77,6 @@ Family Finder chỉ chuyển lượt khi voice kết thúc và trẻ chọn; Pac
 - 2026-10-27: theo phản hồi người dùng, ngừng dùng crop sách có ô sticker làm background; chuyển app sang nền imagegen sạch có provenance và giữ bản nguồn không sửa. Voice chính chuyển sang catalogue Higgs V3 tĩnh giọng Belinda; không dùng browser speech fallback.
 - 2026-10-27: browser smoke xác nhận nền sạch, 13 clip được nạp, replay phục hồi sau autoplay block, Finder có retry/correct voice, Pack cập nhật tiến trình và Relay chờ hết chuỗi audio trước lượt chọn.
 - 2026-10-27: navigation Unit 4 dùng một bộ artwork Family Park độc lập gồm cover + 6 lesson cards; từng card chỉ minh hoạ trọng tâm sách (gia đình, grammar, Jj, 9–10, Kk/Ll, story), không dùng lại ảnh Lesson 1 cho mọi lesson và không thay artwork sách trong game.
+
+
+2026-10-29 whole-app upgrade LOCAL checkpoint: Meet now records six voiced discoveries once; Finder blocks skipping unsolved targets and waits on Higgs; Picnic has generated six-item atlas and persistent placed names, snap/return, owned tweens and collection outcome outside scene. Real Higgs4x family-missions.cjs passed six finds/placements, wrong retry, reset, five widths and cleanup. Shared typography follows approved whole-app upgrade. No prior learner progress keys changed.

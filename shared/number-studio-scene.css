@@ -34,3 +34,7 @@
 .ns-book .ns-work{perspective:900px}.ns-book-pop{position:absolute;bottom:96px;left:0;right:0;margin:auto;width:min(72%,410px);height:284px;transform-origin:50% 100%;background:url('../assets/number-studio/book/part.webp') center/100% 100% no-repeat;filter:drop-shadow(0 9px 4px #473e2c2a);z-index:3}.ns-paper-face{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;padding:55px 62px 37px;height:100%;align-items:center}.ns-paper-face img{width:100%;height:60px;object-fit:contain;filter:drop-shadow(0 5px 2px #403c3122)}
 @media(max-width:520px){.game-stage:has(.number-studio){padding:8px}.ns-book-pop{width:85%;height:190px;bottom:103px}.ns-paper-face{padding:35px 34px 26px;gap:5px}.ns-paper-face img{height:43px}}
 @media(prefers-reduced-motion:reduce){.number-studio button{transition:none}.ns-choice:active{translate:none}}
+
+/* Direct one-to-one count play; original quantities and scene art retained. */
+.ns-parade button.ns-counted{padding:0;border:0;background:transparent;box-shadow:none;cursor:pointer;color:inherit;font:inherit}
+.ns-parade button.ns-counted.ns-tapped{outline:3px solid #e8bd46;outline-offset:3px;border-radius:18px}

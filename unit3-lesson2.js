@@ -33,7 +33,7 @@
     <div class="l2-playground"><div class="l2-friend"><div id="l2Bubble" class="l2-bubble"></div><div id="l2Actor"></div></div><div class="l2-task"><div class="l2-picture"><img id="l2Toy" alt=""><span id="l2Question"></span></div><p id="l2Instruction"></p><div id="l2Interaction"></div></div></div>
     <p id="l2Status" role="status" aria-live="polite"></p><div class="l2-round-controls"><button id="l2Replay" type="button">Replay Question</button><button id="l2Next" type="button" disabled>Next</button></div>
     <div id="l2Result" hidden></div></section>`);
-   this.root=els.gameStage.querySelector('.l2-scene');if(['meet-pattern','talk-to-toy-buddy'].includes(kind)){this.root.classList.add('l2-open');this.polish=LearningMotion.create(this.root)}this.ui={};['Bubble','Progress','Toy','Question','Instruction','Interaction','Status','Replay','Next','Result','Level'].forEach(n=>this.ui[n]=this.root.querySelector('#l2'+n));
+   this.root=els.gameStage.querySelector('.l2-scene');if(['meet-pattern','talk-to-toy-buddy','question-detective'].includes(kind)){this.root.classList.add('l2-open');this.polish=LearningMotion.create(this.root)}this.ui={};['Bubble','Progress','Toy','Question','Instruction','Interaction','Status','Replay','Next','Result','Level'].forEach(n=>this.ui[n]=this.root.querySelector('#l2'+n));
    if(this.root.classList.contains('l2-open'))this.ui.Toy.dataset.motionOwned='true';
    if(this.root.classList.contains('l2-open'))this.root.querySelector('.l2-task').append(this.ui.Status,this.root.querySelector('.l2-round-controls'));
    this.buddy=new ToyBuddy(this.root.querySelector('#l2Actor'),{onStateChange:state=>{this.root.dataset.state=state;},onAudioError:()=>{if(!this.destroyed){this.phase='audio-error';this.status('Audio could not play. Tap Replay Question to try again.');this.refresh();}}});
@@ -105,7 +105,7 @@
     if(asks)this.ui.Bubble.textContent='Ask me!';
     if(this.round.questionType==='mystery-question'){this.ui.Toy.hidden=true;this.ui.Toy.alt='Hidden mystery toy';this.root.querySelector('.l2-picture').insertAdjacentHTML('afterbegin',SpeakingPlay.sprite('closed','l2-new-box','Closed mystery box'));}
    }
-   if(this.kind==='question-detective')this.ui.Interaction.innerHTML=`<div class="l2-categories">${TYPES.map((t,i)=>`<button type="button" data-category="${t}">${i<2?`<img src="assets/shared-ui/${TYPE_ICONS[i]}.png" alt="">`:i===2?'<span class="l2-colors" aria-hidden="true">● ● ●</span>':'<span class="l2-number-icon" aria-hidden="true">1 2 3</span>'}<span>${t}</span></button>`).join('')}</div>`;
+   if(this.kind==='question-detective')this.ui.Interaction.innerHTML=`<div class="l2-categories">${TYPES.map((t,i)=>`<button type="button" data-category="${t}"><span class="l2-category-art" style="--category-x:${i%2*100}%;--category-y:${Math.floor(i/2)*100}%" aria-hidden="true"></span><b>${t}</b></button>`).join('')}</div>`;
    else if(this.kind==='match-answer')this.matchCards();
    else if(this.kind==='build-sentence')this.buildTiles();
    else if(this.kind==='talk-to-toy-buddy')this.speakingControls();

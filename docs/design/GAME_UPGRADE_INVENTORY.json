@@ -1,0 +1,778 @@
+{
+  "date": "2026-10-29",
+  "scope": "All existing games, including original Letter Land registry; not all individually upgraded",
+  "entries": [
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "spin",
+      "game": "spin",
+      "title": "spin",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=spin",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "listen",
+      "game": "listen",
+      "title": "listen",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=listen",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "bag",
+      "game": "bag",
+      "title": "bag",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=bag",
+      "upgrade": {
+        "change": "Original backpack and classroom stage, direct peek/show, full unobscured answer",
+        "test": "school-missions.cjs"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "reveal",
+      "game": "reveal",
+      "title": "reveal",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=reveal",
+      "upgrade": {
+        "change": "Direct tile tapping/keyboard and original classroom stage",
+        "test": "school-missions.cjs"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "missing",
+      "game": "missing",
+      "title": "missing",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=missing",
+      "upgrade": {
+        "change": "Picture returns to actual hole, Higgs-ended advancement, hidden observation pause",
+        "test": "school-missions.cjs"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "match",
+      "game": "match",
+      "title": "match",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=match",
+      "upgrade": {
+        "change": "Real picture-word drag plus tap, persistent lines and resize",
+        "test": "school-missions.cjs"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "puzzle",
+      "game": "puzzle",
+      "title": "puzzle",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=puzzle",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "colour",
+      "game": "colour",
+      "title": "colour",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=colour",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 2,
+      "id": "sentence",
+      "game": "sentence",
+      "title": "sentence",
+      "route": "#/unit/2/lesson/2?mode=practice&activity=sentence",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 2,
+      "id": "team",
+      "game": "team",
+      "title": "team",
+      "route": "#/unit/2/lesson/2?mode=practice&activity=team",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 2,
+      "id": "race",
+      "game": "race",
+      "title": "race",
+      "route": "#/unit/2/lesson/2?mode=practice&activity=race",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 3,
+      "id": "eeintro",
+      "game": "eeintro",
+      "title": "eeintro",
+      "route": "#/unit/2/lesson/3?mode=practice&activity=eeintro",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 3,
+      "id": "eefind",
+      "game": "eefind",
+      "title": "eefind",
+      "route": "#/unit/2/lesson/3?mode=practice&activity=eefind",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 3,
+      "id": "eetrace",
+      "game": "eetrace",
+      "title": "eetrace",
+      "route": "#/unit/2/lesson/3?mode=practice&activity=eetrace",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 3,
+      "id": "eecolour",
+      "game": "eecolour",
+      "title": "eecolour",
+      "route": "#/unit/2/lesson/3?mode=practice&activity=eecolour",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 4,
+      "id": "egglisten",
+      "game": "egglisten",
+      "title": "egglisten",
+      "route": "#/unit/2/lesson/4?mode=practice&activity=egglisten",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 4,
+      "id": "eggcount",
+      "game": "eggcount",
+      "title": "eggcount",
+      "route": "#/unit/2/lesson/4?mode=practice&activity=eggcount",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 4,
+      "id": "numberwords",
+      "game": "numberwords",
+      "title": "numberwords",
+      "route": "#/unit/2/lesson/4?mode=practice&activity=numberwords",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 4,
+      "id": "numberpaint",
+      "game": "numberpaint",
+      "title": "numberpaint",
+      "route": "#/unit/2/lesson/4?mode=practice&activity=numberpaint",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "ffintro",
+      "game": "ffintro",
+      "title": "ffintro",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=ffintro",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "ffsort",
+      "game": "ffsort",
+      "title": "ffsort",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=ffsort",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "fffeed",
+      "game": "fffeed",
+      "title": "fffeed",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=fffeed",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "ffpack",
+      "game": "ffpack",
+      "title": "ffpack",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=ffpack",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "ffbuild",
+      "game": "ffbuild",
+      "title": "ffbuild",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=ffbuild",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "ffmatch",
+      "game": "ffmatch",
+      "title": "ffmatch",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=ffmatch",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "fftrace",
+      "game": "fftrace",
+      "title": "fftrace",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=fftrace",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "ffcolour",
+      "game": "ffcolour",
+      "title": "ffcolour",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=ffcolour",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 1,
+      "id": "u3learn",
+      "game": "u3learn",
+      "title": "Say & Play",
+      "route": "#/unit/3/lesson/1?mode=practice&activity=u3learn",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 1,
+      "id": "u3catch",
+      "game": "u3catch",
+      "title": "u3catch",
+      "route": "#/unit/3/lesson/1?mode=practice&activity=u3catch",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 1,
+      "id": "u3mystery",
+      "game": "u3mystery",
+      "title": "Mystery Box",
+      "route": "#/unit/3/lesson/1?mode=practice&activity=u3mystery",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 1,
+      "id": "u3missing",
+      "game": "u3missing",
+      "title": "u3missing",
+      "route": "#/unit/3/lesson/1?mode=practice&activity=u3missing",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 1,
+      "id": "u3match",
+      "game": "u3match",
+      "title": "Toy Delivery",
+      "route": "#/unit/3/lesson/1?mode=practice&activity=u3match",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 1,
+      "id": "u3trace",
+      "game": "u3trace",
+      "title": "u3trace",
+      "route": "#/unit/3/lesson/1?mode=practice&activity=u3trace",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 1,
+      "id": "u3colour",
+      "game": "u3colour",
+      "title": "u3colour",
+      "route": "#/unit/3/lesson/1?mode=practice&activity=u3colour",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 2,
+      "id": "meet-pattern",
+      "game": "u3pattern",
+      "title": "Meet the Pattern",
+      "route": "#/unit/3/lesson/2?mode=practice&activity=meet-pattern",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 2,
+      "id": "question-detective",
+      "game": "u3detective",
+      "title": "Question Detective",
+      "route": "#/unit/3/lesson/2?mode=practice&activity=question-detective",
+      "upgrade": {
+        "change": "Dedicated original4-category atlas and open scene; original category/voice/scoring retained",
+        "test": "question-detective-open.cjs real Higgs full rounds and five widths PASS"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 3,
+      "lesson": 2,
+      "id": "match-answer",
+      "game": "u3answer",
+      "title": "Answer Islands",
+      "route": "#/unit/3/lesson/2?mode=practice&activity=match-answer",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 2,
+      "id": "build-sentence",
+      "game": "u3sentence",
+      "title": "Sentence Express",
+      "route": "#/unit/3/lesson/2?mode=practice&activity=build-sentence",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 2,
+      "id": "listen-decide",
+      "game": "u3decide",
+      "title": "Toy Machine",
+      "route": "#/unit/3/lesson/2?mode=practice&activity=listen-decide",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 2,
+      "id": "talk-to-toy-buddy",
+      "game": "u3buddy",
+      "title": "Talk to Toy Buddy",
+      "route": "#/unit/3/lesson/2?mode=practice&activity=talk-to-toy-buddy",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 3,
+      "id": "meet-gg",
+      "game": "u3ggmeet",
+      "title": "Learn Gg",
+      "route": "#/unit/3/lesson/3?mode=practice&activity=meet-gg",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 3,
+      "id": "sound-detective",
+      "game": "u3ggsound",
+      "title": "Sound Garden",
+      "route": "#/unit/3/lesson/3?mode=practice&activity=sound-detective",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 3,
+      "id": "catch-g",
+      "game": "u3ggcatch",
+      "title": "Find Gg",
+      "route": "#/unit/3/lesson/3?mode=practice&activity=catch-g",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 3,
+      "id": "big-small",
+      "game": "u3ggsort",
+      "title": "Gg Maze Relay",
+      "route": "#/unit/3/lesson/3?mode=practice&activity=big-small",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 3,
+      "id": "fix-word",
+      "game": "u3ggfix",
+      "title": "Build & Say",
+      "route": "#/unit/3/lesson/3?mode=practice&activity=fix-word",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 3,
+      "id": "trace-say",
+      "game": "u3ggtrace",
+      "title": "Trace & Write",
+      "route": "#/unit/3/lesson/3?mode=practice&activity=trace-say",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 3,
+      "id": "final-challenge",
+      "game": "u3ggfinal",
+      "title": "My Gg Check",
+      "route": "#/unit/3/lesson/3?mode=practice&activity=final-challenge",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 4,
+      "id": "number-parade",
+      "game": "u3nparade",
+      "title": "Number Parade",
+      "route": "#/unit/3/lesson/4?mode=practice&activity=number-parade",
+      "upgrade": {
+        "change": "Direct unique counting taps, varied balanced rounds",
+        "test": "number-count-play.cjs + number-studio.spec.cjs"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 3,
+      "lesson": 4,
+      "id": "toy-detective",
+      "game": "u3ndetective",
+      "title": "Toy Detective",
+      "route": "#/unit/3/lesson/4?mode=practice&activity=toy-detective",
+      "upgrade": {
+        "change": "Actual room renderer shuffles original six quantity/toy pairs, zone contents and distinct distractors; exact target count preserved",
+        "test": "toy-detective.spec.cjs PASS all six rooms, actual PixiUI drag/collect/undo, exact quantities, five widths, reduced and leave"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 3,
+      "lesson": 4,
+      "id": "gift-workshop",
+      "game": "u3ngift",
+      "title": "Gift Workshop",
+      "route": "#/unit/3/lesson/4?mode=practice&activity=gift-workshop",
+      "upgrade": {
+        "change": "Varied balanced target quantities/toy order; existing object travel/undo/lid retained",
+        "test": "number-studio.spec.cjs + number-studio-edges.spec.cjs"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 3,
+      "lesson": 4,
+      "id": "number-snap",
+      "game": "u3nsnap",
+      "title": "Number Snap",
+      "route": "#/unit/3/lesson/4?mode=practice&activity=number-snap",
+      "upgrade": {
+        "change": "Varied balanced target quantities/toy order; existing three-part assembly retained",
+        "test": "number-studio.spec.cjs"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 3,
+      "lesson": 4,
+      "id": "say-open",
+      "game": "u3nsay",
+      "title": "Say & Open",
+      "route": "#/unit/3/lesson/4?mode=practice&activity=say-open",
+      "upgrade": {
+        "change": "Varied balanced prompts; existing neutral AI/audio recovery retained",
+        "test": "number-studio-edges.spec.cjs (mock ASR, not child accuracy)"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 3,
+      "lesson": 4,
+      "id": "toy-relay",
+      "game": "u3nrelay",
+      "title": "Toy Town Relay",
+      "route": "#/unit/3/lesson/4?mode=practice&activity=toy-relay",
+      "upgrade": {
+        "change": "Random paired quantities with identical quantity and toy per team pair",
+        "test": "number-studio.spec.cjs"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 3,
+      "lesson": 4,
+      "id": "toy-catch",
+      "game": "u3toycatch",
+      "title": "Toy Catch",
+      "route": "#/unit/3/lesson/4?mode=practice&activity=toy-catch",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 5,
+      "id": "meet-hi",
+      "game": "u3himeet",
+      "title": "Learn Hh and Ii",
+      "route": "#/unit/3/lesson/5?mode=practice&activity=meet-hi",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 5,
+      "id": "letter-pond",
+      "game": "u3hipond",
+      "title": "Letter Pond",
+      "route": "#/unit/3/lesson/5?mode=practice&activity=letter-pond",
+      "upgrade": {
+        "change": "Shuffle within letter/sound/word/review blocks; casting/water/boat retained",
+        "test": "pond-gear.spec.cjs"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 3,
+      "lesson": 5,
+      "id": "word-mine",
+      "game": "u3himine",
+      "title": "Word Mine",
+      "route": "#/unit/3/lesson/5?mode=practice&activity=word-mine",
+      "upgrade": {
+        "change": "Shuffle four words with anti-repeat first, preserve true hook/ghost slots/duplicate l",
+        "test": "word-mine-direct.spec.cjs + word-mine-edges.spec.cjs"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 3,
+      "lesson": 5,
+      "id": "review-ai",
+      "game": "letterfly",
+      "title": "A–I Word Builder",
+      "route": "#/unit/3/lesson/5?mode=practice&activity=review-ai",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 6,
+      "id": "story-preview",
+      "game": "u3storypreview",
+      "title": "Story Studio",
+      "route": "#/unit/3/lesson/6?mode=practice&activity=story-preview",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 6,
+      "id": "your-turn",
+      "game": "u3storyturn",
+      "title": "Your Turn",
+      "route": "#/unit/3/lesson/6?mode=practice&activity=your-turn",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 6,
+      "id": "story-mix-up",
+      "game": "u3storymix",
+      "title": "Story Mix-Up",
+      "route": "#/unit/3/lesson/6?mode=practice&activity=story-mix-up",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 3,
+      "lesson": 6,
+      "id": "story-stage",
+      "game": "u3storystage",
+      "title": "Story Stage",
+      "route": "#/unit/3/lesson/6?mode=practice&activity=story-stage",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "family-meet",
+      "game": "u4familymeet",
+      "title": "Meet the Family",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=family-meet",
+      "upgrade": {
+        "change": "Six voiced discoveries and exactly-once participation completion",
+        "test": "family-missions.cjs"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "family-find",
+      "game": "u4familyfind",
+      "title": "Family Finder",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=family-find",
+      "upgrade": {
+        "change": "Solve-before-Next, discovery collection, audio-ended completion",
+        "test": "family-missions.cjs"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "family-links",
+      "game": "u4familylinks",
+      "title": "Family Links",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=family-links",
+      "upgrade": {
+        "change": "Persistent links, reunion sprites, retry cross, anti-repeat first word and listener cleanup",
+        "test": "unit4-family-links.spec.cjs"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "pack-picnic",
+      "game": "u4familypack",
+      "title": "Pack the Picnic",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=pack-picnic",
+      "upgrade": {
+        "change": "Original six-item picnic atlas, persistent placed names, owned snap/return and scene collection",
+        "test": "family-missions.cjs"
+      },
+      "status": "targeted changes locally validated"
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "family-hide-seek",
+      "game": "u4familyhide",
+      "title": "Family Hide & Seek",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=family-hide-seek",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "family-switcheroo",
+      "game": "u4familyswitch",
+      "title": "Family Switcheroo",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=family-switcheroo",
+      "upgrade": null,
+      "status": "pilot-local"
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "family-trace-write",
+      "game": "u4familywrite",
+      "title": "Trace & Write",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=family-trace-write",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "family-colour-studio",
+      "game": "u4familycolour",
+      "title": "Family Colour Studio",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=family-colour-studio",
+      "upgrade": null,
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "group": "Letter Land / independent",
+      "game": "letterfly",
+      "route": "#/letters/game/letterfly",
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "group": "Letter Land / independent",
+      "game": "abcflash",
+      "route": "#/letters/game/abcflash",
+      "status": "foundation-only; individual review pending"
+    },
+    {
+      "unit": 2,
+      "lesson": null,
+      "game": "elliejourney",
+      "group": "Ellie's Classroom Adventure",
+      "status": "mapping retained; individual review pending",
+      "reason": "Integrated vocabulary, counting and speaking; not confirmed as the textbook Story.",
+      "route": "#/unit/2/existing?group=Ellie's%20Classroom%20Adventure"
+    }
+  ]
+}

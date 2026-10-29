@@ -18,3 +18,6 @@ Evidence: tests/word-mine-direct.spec.cjs, word-mine-edges.spec.cjs, word-mine-a
 
 ## Public release — f40d47b
 GitHub Pages deployment succeeded. Public full four-word scene-input playthrough and touch/pause/resize/keyboard/leave/Pond regression passed. Initial deployment probe briefly saw incomplete CSS; repeated public tests after deployment and CDN readiness passed. All 29 published visual files match their manifests. Desktop mirror verified for the 44 release files. Route: index.html?release=f40d47b-mine#/unit/3/lesson/5?mode=practice&activity=word-mine. Status: delivered; classroom feel and physical-device performance remain for user review.
+
+
+2026-10-29 whole-app upgrade LOCAL checkpoint: Word order now shuffled across all four words; first word differs from prior play in same page. Required glyph order inside each word unchanged, true misses still do not snap or penalize. Direct-cast test updated to assert actual shuffled model, all four distinct words and separate i/l/l catches. Full direct and edge suites PASS.

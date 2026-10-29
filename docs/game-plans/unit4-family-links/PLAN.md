@@ -15,3 +15,6 @@ Skills used: frontend-design (layout/art alignment), interaction-design (previou
 Assets: six deterministic crops from supplied textbook `family-portraits.webp`, excluding labels; existing navigation-v2 lesson1 background. Corrected picnic scene in `family-picnic-balanced-v2.webp`, preserving characters and scene, used by existing family games.
 
 Status: implemented and local browser test passed. `tests/unit4-family-links.spec.cjs` confirms real Pixi renderer, six portraits, wrong retry, actual pointer drag, tap/keyboard, six matches, exactly one completion event, best-score persistence, restart, 320/390/768/1024/1366px, reduced motion, mute without voice starts, audio failure without lost matches, cleanup on leave and balanced-v2 scene. Screenshots and a browser video saved in tests. No classroom learning-outcome claim.
+
+
+2026-10-29 whole-app upgrade LOCAL checkpoint: Added original full-character reunion row using exact existing sprite-sheet cells, quiet word ribbons, explicit retry cross, anti-repeat replay first word, and pointer listener cleanup. Existing full Family Links suite PASS incl real Pixi, wrong/correct drag/tap/keyboard, six pairs/stars once, five widths, mute/errors/reduced/leave.

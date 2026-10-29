@@ -1,0 +1,12 @@
+/* Shared presentation foundation. Each game still owns geometry, input and scoring. */
+@font-face{font-family:'Learning Fredoka';src:url('../assets/fonts/Fredoka.ttf') format('truetype');font-weight:300 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Learning Display';src:url('../assets/fonts/LuckiestGuy.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+:root{--app-font:'Learning Fredoka','App Outfit','Trebuchet MS',sans-serif;--play-title:'Learning Display','App Outfit',sans-serif;--play-ink:#174d70;--play-sky:#87d7f1;--play-paper:#fff9e7;--play-teal:#1697a6;--play-focus:#7943b4;--play-press:90ms;--play-settle:200ms}
+/* Only activity names use display lettering; learning words and handwriting do not. */
+#gameScreen .current-game h1,#gameStage>section>header h2{font-family:var(--play-title);font-weight:400;letter-spacing:.025em;line-height:1.18}
+#gameScreen button:focus-visible,#lessonApp a:focus-visible,#lessonApp button:focus-visible{outline:4px solid var(--play-focus);outline-offset:3px}
+/* Independent translate composes with game-owned transform/GSAP properties. */
+#gameScreen button:not(:disabled){transition:translate var(--play-settle) ease,filter var(--play-settle) ease}
+#gameScreen button:not(:disabled):active{translate:0 2px;filter:brightness(.96);transition-duration:var(--play-press)}
+#gameScreen button:disabled{cursor:default}
+@media(prefers-reduced-motion:reduce){#gameScreen button:not(:disabled){transition:none}#gameScreen button:not(:disabled):active{translate:none}}

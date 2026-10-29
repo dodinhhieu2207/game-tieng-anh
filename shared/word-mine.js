@@ -2,12 +2,12 @@
 (()=>{
  'use strict';
  const KEY='u3himine',ROOT='assets/word-mine/',OLD='assets/unit3/lesson5/',WORDS=['hat','horse','ill','insect'],LETTERS=[...'acehilnorst'];
- let current,loading;
+ let current,loading,lastFirst;
  const glyph=ch=>ROOT+'glyphs/'+ch+'.svg';
  function phaser(){if(window.Phaser)return Promise.resolve();return loading||(loading=new Promise((yes,no)=>{const s=document.createElement('script');s.src='shared/vendor/phaser/phaser.min.js';s.onload=yes;s.onerror=()=>{loading=null;no(Error('engine'));};document.head.append(s);}));}
  class Mine{
   constructor(){
-   this.kind='mine';this.key=KEY;this.index=0;this.pos=0;this.errors=0;this.misses=0;this.epoch=0;this.dead=false;this.tweens=new Set();this.sounds=new Set();this.flights=new Set();this.calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+   this.wordOrder=shuffle(WORDS);if(this.wordOrder[0]===lastFirst)this.wordOrder.push(this.wordOrder.shift());lastFirst=this.wordOrder[0];this.kind='mine';this.key=KEY;this.index=0;this.pos=0;this.errors=0;this.misses=0;this.epoch=0;this.dead=false;this.tweens=new Set();this.sounds=new Set();this.flights=new Set();this.calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
    cancelVoice();document.dispatchEvent(new Event('toybuddy:enter'));this.mount();this.boot();
   }
   $(s){return this.root.querySelector(s);} $$(s){return [...this.root.querySelectorAll(s)];}
@@ -29,7 +29,7 @@
    catch{if(!this.dead){this.phaseTo('engine-error');this.panel('<h3>The mine could not load</h3><button data-wm="again">Try again</button>');}}
   }
   resize(){const small=this.wantSmall??this.$('.wm-canvas').clientWidth<650,w=small?540:900;if(this.width===w)return;this.width=w;this.height=small?760:620;this.game.scale.setGameSize(this.width,this.height);this.engine.arrange();}
-  beginWord(){this.epoch++;this.stopAudio();this.panel('');this.row={model:WORDS[this.index],audio:OLD+'audio/'+WORDS[this.index]+'.mp3'};this.$('.wm-count').textContent=`${this.index+1} / 4`;this.$('.wm-model').textContent=this.row.model;this.$('.wm-picture').src=OLD+'words/'+this.row.model+'.webp?v=20261020-ladybug';this.$('.wm-picture').alt=this.row.model;this.$('.wm-word-dock').innerHTML=[...this.row.model].map((ch,i)=>`<span class="wm-slot ${i===0?'active':''}" data-slot="${i}" aria-label="${ch}, not collected"><img src="${glyph(ch)}" alt="${ch}"></span>`).join('');this.populate();this.hear();}
+  beginWord(){this.epoch++;this.stopAudio();this.panel('');this.row={model:this.wordOrder[this.index],audio:OLD+'audio/'+this.wordOrder[this.index]+'.mp3'};this.$('.wm-count').textContent=`${this.index+1} / 4`;this.$('.wm-model').textContent=this.row.model;this.$('.wm-picture').src=OLD+'words/'+this.row.model+'.webp?v=20261020-ladybug';this.$('.wm-picture').alt=this.row.model;this.$('.wm-word-dock').innerHTML=[...this.row.model].map((ch,i)=>`<span class="wm-slot ${i===0?'active':''}" data-slot="${i}" aria-label="${ch}, not collected"><img src="${glyph(ch)}" alt="${ch}"></span>`).join('');this.populate();this.hear();}
   populate(){this.target=this.row.model[this.pos];this.options=shuffle([this.target,...shuffle(LETTERS.filter(c=>c!==this.target)).slice(0,2)]);this.resize();this.engine.arrange();this.phaseTo('ready');this.status(`Find ${this.target}. Touch the mine and release to drop.`);}
   aim(delta){if(this.phase!=='ready')return;this.engine.manual=true;this.engine.angle=Phaser.Math.Clamp(this.engine.angle+delta,-.88,.88);this.engine.preview();}
   animate(obj,vars){if(this.dead)return Promise.resolve(false);return new Promise(resolve=>{let tween,done=false;const end=ok=>{if(done)return;done=true;this.tweens.delete(tween);resolve(ok);};tween=gsap.to(obj,{...vars,duration:this.calm?Math.min(.13,vars.duration):vars.duration,onComplete:()=>end(true),onInterrupt:()=>end(false)});this.tweens.add(tween);});}

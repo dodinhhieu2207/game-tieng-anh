@@ -52,3 +52,7 @@ Owned epochs guard all promises. In-flight retrieval disables check and reserves
 - `tests/number-studio-polish.spec.cjs`: five unchanged compositions at all five widths, actual inherited font, image decode, touch size, Gift pointer/undo/exit regression PASS. Superseded Detective layout removed from this old layout suite and covered in its dedicated suite. Owned diff whitespace check clean; unmodified third-party distributions retain their original embedded shader/header whitespace and hashes.
 
 Do not mark complete from code/library installation or mock acceptance. No subjective voice approval, child engagement or device-wide FPS claim.
+
+2026-10-29 whole-app replay upgrade: actual registered room renderer retains original six quantity/toy combinations, but shuffles round order and hidden contents. Distractors drawn from other identities to preserve exactly n targets after randomization. Existing room assets, Higgs and owned motion retained. Revalidation in progress.
+
+Final local replay gate: toy-detective.spec.cjs PASS on actual registered room, all six shuffled rooms, PixiUI drag, wrong/duplicate/undo, quantity/digit/word, old key, five widths normal/reduced, disposal. Replay-audio assertion uses actual current number rather than assuming first room is seven.

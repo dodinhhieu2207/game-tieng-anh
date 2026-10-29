@@ -1,0 +1,7 @@
+.classroom-turns{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin:0 4px 14px;padding:8px 10px;border-bottom:2px solid #b9dce5;color:#174d70;font-family:var(--app-font)}
+.classroom-turns[hidden]{display:none!important}.ct-label{font-size:16px;margin-right:4px}.ct-teams,.ct-actions{display:flex;align-items:center;gap:8px}
+.classroom-turns button{display:flex;align-items:center;justify-content:center;gap:6px;min-height:48px;padding:5px 13px;background:#fffdf2;border:2px solid #b1d5db;border-radius:16px;color:#174d70;font:700 18px var(--app-font);cursor:pointer}
+.ct-teams button[aria-pressed=true]{border-color:#ddac3b;background:#fff0bd;box-shadow:0 3px 0 #dcb44c}.ct-teams b{font-size:23px;min-width:24px;text-align:center}
+.ct-flag{display:block;width:44px;height:44px;background:url('../assets/classroom-turns/team-flags.webp') left center/200% 100% no-repeat}.ct-flag.coral{background-position:right center}
+.ct-actions button{font-size:16px}.ct-status{font-size:16px}.classroom-turns button:focus-visible{outline:4px solid #7943b4;outline-offset:3px}
+@media(max-width:600px){.classroom-turns{gap:6px;padding:6px 0}.ct-label{width:100%;text-align:center}.ct-teams button{min-width:130px;padding:2px 8px}.ct-actions{gap:6px}.ct-actions button{font-size:14px;padding:6px 9px}.ct-status{width:100%;text-align:center;font-size:15px}.ct-flag{width:35px;height:35px}}

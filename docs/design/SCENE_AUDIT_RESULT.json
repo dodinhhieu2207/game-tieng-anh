@@ -1,0 +1,707 @@
+{
+  "date": "2026-10-29",
+  "meaning": "Mounted-scene captures and resource errors. Not individual full-playthrough acceptance.",
+  "rows": [
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "spin",
+      "game": "spin",
+      "title": "spin",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=spin",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "listen",
+      "game": "listen",
+      "title": "listen",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=listen",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "bag",
+      "game": "bag",
+      "title": "bag",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=bag",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "reveal",
+      "game": "reveal",
+      "title": "reveal",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=reveal",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "missing",
+      "game": "missing",
+      "title": "missing",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=missing",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "match",
+      "game": "match",
+      "title": "match",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=match",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "puzzle",
+      "game": "puzzle",
+      "title": "puzzle",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=puzzle",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 1,
+      "id": "colour",
+      "game": "colour",
+      "title": "colour",
+      "route": "#/unit/2/lesson/1?mode=practice&activity=colour",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 2,
+      "id": "sentence",
+      "game": "sentence",
+      "title": "sentence",
+      "route": "#/unit/2/lesson/2?mode=practice&activity=sentence",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 2,
+      "id": "team",
+      "game": "team",
+      "title": "team",
+      "route": "#/unit/2/lesson/2?mode=practice&activity=team",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 2,
+      "id": "race",
+      "game": "race",
+      "title": "race",
+      "route": "#/unit/2/lesson/2?mode=practice&activity=race",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 3,
+      "id": "eeintro",
+      "game": "eeintro",
+      "title": "eeintro",
+      "route": "#/unit/2/lesson/3?mode=practice&activity=eeintro",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 3,
+      "id": "eefind",
+      "game": "eefind",
+      "title": "eefind",
+      "route": "#/unit/2/lesson/3?mode=practice&activity=eefind",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 3,
+      "id": "eetrace",
+      "game": "eetrace",
+      "title": "eetrace",
+      "route": "#/unit/2/lesson/3?mode=practice&activity=eetrace",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 3,
+      "id": "eecolour",
+      "game": "eecolour",
+      "title": "eecolour",
+      "route": "#/unit/2/lesson/3?mode=practice&activity=eecolour",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 4,
+      "id": "egglisten",
+      "game": "egglisten",
+      "title": "egglisten",
+      "route": "#/unit/2/lesson/4?mode=practice&activity=egglisten",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 4,
+      "id": "eggcount",
+      "game": "eggcount",
+      "title": "eggcount",
+      "route": "#/unit/2/lesson/4?mode=practice&activity=eggcount",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 4,
+      "id": "numberwords",
+      "game": "numberwords",
+      "title": "numberwords",
+      "route": "#/unit/2/lesson/4?mode=practice&activity=numberwords",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 4,
+      "id": "numberpaint",
+      "game": "numberpaint",
+      "title": "numberpaint",
+      "route": "#/unit/2/lesson/4?mode=practice&activity=numberpaint",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "ffintro",
+      "game": "ffintro",
+      "title": "ffintro",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=ffintro",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "ffsort",
+      "game": "ffsort",
+      "title": "ffsort",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=ffsort",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "fffeed",
+      "game": "fffeed",
+      "title": "fffeed",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=fffeed",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "ffpack",
+      "game": "ffpack",
+      "title": "ffpack",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=ffpack",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "ffbuild",
+      "game": "ffbuild",
+      "title": "ffbuild",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=ffbuild",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "ffmatch",
+      "game": "ffmatch",
+      "title": "ffmatch",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=ffmatch",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "fftrace",
+      "game": "fftrace",
+      "title": "fftrace",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=fftrace",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 2,
+      "lesson": 5,
+      "id": "ffcolour",
+      "game": "ffcolour",
+      "title": "ffcolour",
+      "route": "#/unit/2/lesson/5?mode=practice&activity=ffcolour",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 1,
+      "id": "u3learn",
+      "game": "u3learn",
+      "title": "Say & Play",
+      "route": "#/unit/3/lesson/1?mode=practice&activity=u3learn",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 1,
+      "id": "u3catch",
+      "game": "u3catch",
+      "title": "u3catch",
+      "route": "#/unit/3/lesson/1?mode=practice&activity=u3catch",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 1,
+      "id": "u3mystery",
+      "game": "u3mystery",
+      "title": "Mystery Box",
+      "route": "#/unit/3/lesson/1?mode=practice&activity=u3mystery",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 1,
+      "id": "u3missing",
+      "game": "u3missing",
+      "title": "u3missing",
+      "route": "#/unit/3/lesson/1?mode=practice&activity=u3missing",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 1,
+      "id": "u3match",
+      "game": "u3match",
+      "title": "Toy Delivery",
+      "route": "#/unit/3/lesson/1?mode=practice&activity=u3match",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 1,
+      "id": "u3trace",
+      "game": "u3trace",
+      "title": "u3trace",
+      "route": "#/unit/3/lesson/1?mode=practice&activity=u3trace",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 1,
+      "id": "u3colour",
+      "game": "u3colour",
+      "title": "u3colour",
+      "route": "#/unit/3/lesson/1?mode=practice&activity=u3colour",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 2,
+      "id": "meet-pattern",
+      "game": "u3pattern",
+      "title": "Meet the Pattern",
+      "route": "#/unit/3/lesson/2?mode=practice&activity=meet-pattern",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 2,
+      "id": "question-detective",
+      "game": "u3detective",
+      "title": "Question Detective",
+      "route": "#/unit/3/lesson/2?mode=practice&activity=question-detective",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 2,
+      "id": "match-answer",
+      "game": "u3answer",
+      "title": "Answer Islands",
+      "route": "#/unit/3/lesson/2?mode=practice&activity=match-answer",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 2,
+      "id": "build-sentence",
+      "game": "u3sentence",
+      "title": "Sentence Express",
+      "route": "#/unit/3/lesson/2?mode=practice&activity=build-sentence",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 2,
+      "id": "listen-decide",
+      "game": "u3decide",
+      "title": "Toy Machine",
+      "route": "#/unit/3/lesson/2?mode=practice&activity=listen-decide",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 2,
+      "id": "talk-to-toy-buddy",
+      "game": "u3buddy",
+      "title": "Talk to Toy Buddy",
+      "route": "#/unit/3/lesson/2?mode=practice&activity=talk-to-toy-buddy",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 3,
+      "id": "meet-gg",
+      "game": "u3ggmeet",
+      "title": "Learn Gg",
+      "route": "#/unit/3/lesson/3?mode=practice&activity=meet-gg",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 3,
+      "id": "sound-detective",
+      "game": "u3ggsound",
+      "title": "Sound Garden",
+      "route": "#/unit/3/lesson/3?mode=practice&activity=sound-detective",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 3,
+      "id": "catch-g",
+      "game": "u3ggcatch",
+      "title": "Find Gg",
+      "route": "#/unit/3/lesson/3?mode=practice&activity=catch-g",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 3,
+      "id": "big-small",
+      "game": "u3ggsort",
+      "title": "Gg Maze Relay",
+      "route": "#/unit/3/lesson/3?mode=practice&activity=big-small",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 3,
+      "id": "fix-word",
+      "game": "u3ggfix",
+      "title": "Build & Say",
+      "route": "#/unit/3/lesson/3?mode=practice&activity=fix-word",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 3,
+      "id": "trace-say",
+      "game": "u3ggtrace",
+      "title": "Trace & Write",
+      "route": "#/unit/3/lesson/3?mode=practice&activity=trace-say",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 3,
+      "id": "final-challenge",
+      "game": "u3ggfinal",
+      "title": "My Gg Check",
+      "route": "#/unit/3/lesson/3?mode=practice&activity=final-challenge",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 4,
+      "id": "number-parade",
+      "game": "u3nparade",
+      "title": "Number Parade",
+      "route": "#/unit/3/lesson/4?mode=practice&activity=number-parade",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 4,
+      "id": "toy-detective",
+      "game": "u3ndetective",
+      "title": "Toy Detective",
+      "route": "#/unit/3/lesson/4?mode=practice&activity=toy-detective",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 4,
+      "id": "gift-workshop",
+      "game": "u3ngift",
+      "title": "Gift Workshop",
+      "route": "#/unit/3/lesson/4?mode=practice&activity=gift-workshop",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 4,
+      "id": "number-snap",
+      "game": "u3nsnap",
+      "title": "Number Snap",
+      "route": "#/unit/3/lesson/4?mode=practice&activity=number-snap",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 4,
+      "id": "say-open",
+      "game": "u3nsay",
+      "title": "Say & Open",
+      "route": "#/unit/3/lesson/4?mode=practice&activity=say-open",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 4,
+      "id": "toy-relay",
+      "game": "u3nrelay",
+      "title": "Toy Town Relay",
+      "route": "#/unit/3/lesson/4?mode=practice&activity=toy-relay",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 4,
+      "id": "toy-catch",
+      "game": "u3toycatch",
+      "title": "Toy Catch",
+      "route": "#/unit/3/lesson/4?mode=practice&activity=toy-catch",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 5,
+      "id": "meet-hi",
+      "game": "u3himeet",
+      "title": "Learn Hh and Ii",
+      "route": "#/unit/3/lesson/5?mode=practice&activity=meet-hi",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 5,
+      "id": "letter-pond",
+      "game": "u3hipond",
+      "title": "Letter Pond",
+      "route": "#/unit/3/lesson/5?mode=practice&activity=letter-pond",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 5,
+      "id": "word-mine",
+      "game": "u3himine",
+      "title": "Word Mine",
+      "route": "#/unit/3/lesson/5?mode=practice&activity=word-mine",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 5,
+      "id": "review-ai",
+      "game": "letterfly",
+      "title": "A–I Word Builder",
+      "route": "#/unit/3/lesson/5?mode=practice&activity=review-ai",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 6,
+      "id": "story-preview",
+      "game": "u3storypreview",
+      "title": "Story Studio",
+      "route": "#/unit/3/lesson/6?mode=practice&activity=story-preview",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 6,
+      "id": "your-turn",
+      "game": "u3storyturn",
+      "title": "Your Turn",
+      "route": "#/unit/3/lesson/6?mode=practice&activity=your-turn",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 6,
+      "id": "story-mix-up",
+      "game": "u3storymix",
+      "title": "Story Mix-Up",
+      "route": "#/unit/3/lesson/6?mode=practice&activity=story-mix-up",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 3,
+      "lesson": 6,
+      "id": "story-stage",
+      "game": "u3storystage",
+      "title": "Story Stage",
+      "route": "#/unit/3/lesson/6?mode=practice&activity=story-stage",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "family-meet",
+      "game": "u4familymeet",
+      "title": "Meet the Family",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=family-meet",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "family-find",
+      "game": "u4familyfind",
+      "title": "Family Finder",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=family-find",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "family-links",
+      "game": "u4familylinks",
+      "title": "Family Links",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=family-links",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "pack-picnic",
+      "game": "u4familypack",
+      "title": "Pack the Picnic",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=pack-picnic",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "family-hide-seek",
+      "game": "u4familyhide",
+      "title": "Family Hide & Seek",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=family-hide-seek",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "family-switcheroo",
+      "game": "u4familyswitch",
+      "title": "Family Switcheroo",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=family-switcheroo",
+      "status": "pilot-local",
+      "errors": []
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "family-trace-write",
+      "game": "u4familywrite",
+      "title": "Trace & Write",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=family-trace-write",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    },
+    {
+      "unit": 4,
+      "lesson": 1,
+      "id": "family-colour-studio",
+      "game": "u4familycolour",
+      "title": "Family Colour Studio",
+      "route": "#/unit/4/lesson/1?mode=practice&activity=family-colour-studio",
+      "status": "foundation-only; individual review pending",
+      "errors": []
+    }
+  ],
+  "missing": []
+}

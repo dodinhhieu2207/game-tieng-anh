@@ -98,3 +98,6 @@ Read/applied: product-brainstorming (concept), frontend-design, interaction-desi
 - [x] Public deployment, 57-file parity, navigation and full public playthrough suite.
 
 Public delivery evidence is recorded above. No general smoothness, child-ASR accuracy or educational effectiveness certification claimed.
+
+
+2026-10-29 whole-app upgrade LOCAL checkpoint: Replays vary target quantity/toy order while preserving two initial7/8 learning rounds and later5/6/7/8 mix. Relay pairs now share exactly the same quantity AND toy; pair order shuffled, equal turns kept. Parade allows direct unique-toy counting through existing Higgs clips, no duplicate count and answer still required for score. Complete five-game, polish and edges suites PASS; ASR success in automated tests remains simulated.

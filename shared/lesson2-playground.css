@@ -14,3 +14,9 @@
 
 @media(max-width:600px){.l2-open #l2Next{min-width:85px}.l2-open #l2Replay,.l2-open:has(.toy-voice-panel) .l2-round-controls #l2Replay{min-width:135px;font-size:18px;min-height:62px}.l2-open .toy-voice-mic [data-voice-label]{font-size:25px;line-height:1.1}.l2-open .toy-voice-actions{width:100%}}
 .tm-reward-flight,.l2-open #l2Toy{animation:none!important;transition:none!important}
+
+/* Question Detective: approved whole-app upgrade, own category atlas. */
+.l2-open[data-l2-kind=question-detective] .l2-categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.l2-open[data-l2-kind=question-detective] .l2-categories button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;min-height:140px;border:2px solid #85bec3;border-radius:24px;background:#fffdf0ec;font-size:22px;box-shadow:0 4px 0 #8bbfc55c;min-width:0}
+.l2-category-art{display:block;width:82px;height:82px;background:url('../assets/unit3/lesson2/detective/category-icons.webp') var(--category-x) var(--category-y)/200% 200% no-repeat}
+@media(max-width:600px){.l2-open[data-l2-kind=question-detective] .l2-categories{gap:9px}.l2-open[data-l2-kind=question-detective] .l2-categories button{min-height:110px;font-size:18px;padding:7px}.l2-category-art{width:60px;height:60px}}

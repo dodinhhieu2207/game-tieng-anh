@@ -1,0 +1,21 @@
+/* Family stage pilot: original scene layers, word ribbons and Higgs are retained. */
+.fc-switch-stage{max-width:1320px;padding:0 4px}
+.fc-switch-stage .fc-head{padding:8px 6px 12px;align-items:center}
+.fc-switch-stage .fc-head h2{font-family:var(--play-title,var(--app-font));font-weight:400;letter-spacing:.025em;font-size:clamp(28px,3.6vw,44px)}
+.fc-switch-stage .fc-head p{margin:4px 0;font-size:19px}
+.fc-switch-stage .fc-scene{height:clamp(370px,48vw,630px);border:0;border-radius:24px;box-shadow:0 7px 0 #acd5de}
+.fc-stage-cue{position:absolute;top:18px;left:50%;transform:translateX(-50%);background:#fffdf2ef;border:2px solid #edc268;border-radius:24px;padding:8px 24px;text-align:center;font-size:clamp(18px,2.2vw,26px);white-space:nowrap;pointer-events:none}
+.fc-switch-stage .fc-observe{position:absolute;top:72px;left:50%;transform:translateX(-50%);background:#fff9e9f2;padding:8px 16px;gap:10px;pointer-events:none}
+.fc-answer-mark{position:absolute;transform:translate(-50%,-100%);padding:8px 18px;border:3px solid #17836c;border-radius:20px;background:#f5fff3;color:#17644e;font-size:clamp(20px,3vw,30px);white-space:nowrap;box-shadow:0 4px 0 #acd8bc;pointer-events:none}
+.fc-switch-stage .fc-drop.fc-over{border-style:solid;box-shadow:0 0 0 7px #fff6a766;background:#fff5af99}
+.fc-switch-stage .fc-words{margin:18px auto 6px;gap:10px;max-width:1000px}
+.fc-switch-stage .fc-word{position:relative;touch-action:none;min-width:140px!important;min-height:62px;font-size:25px;padding:14px 24px!important}
+.fc-switch-stage .fc-word:disabled{opacity:.45}
+.fc-switch-stage .fc-word.fc-wrong:after{content:'×';position:absolute;right:3px;top:-5px;border-radius:50%;background:#fff6e9;border:2px solid #bc6b40;color:#9b4227;font-size:24px;width:27px;height:27px;line-height:24px}
+.fc-switch-stage .fc-word.fc-picked:after{content:'✓';position:absolute;right:3px;top:-5px;border-radius:50%;background:#e7ffe8;border:2px solid #17836c;color:#17644e;font-size:22px;width:27px;height:27px;line-height:24px}
+.fc-switch-stage .fc-word.fc-picked{opacity:1;filter:drop-shadow(0 3px 3px #16806e55)}
+.fc-switch-stage .fc-status{margin:6px 0;font-size:21px}
+.fc-switch-stage .fc-practice-note{margin:8px 0;font-size:17px;color:#53788a;text-align:center}
+.fc-switch-stage .fc-tools{margin:10px 0}
+.fc-switch-stage [data-fc=next]{font-size:23px;min-width:180px}
+@media(max-width:600px){.fc-switch-stage{padding:0}.fc-switch-stage .fc-scene{height:390px;border-radius:18px}.fc-switch-stage .fc-head{padding:4px 0 10px;gap:6px}.fc-switch-stage .fc-head h2{font-size:28px}.fc-switch-stage .fc-head p{font-size:17px}.fc-switch-stage .fc-count{font-size:16px;padding:8px}.fc-switch-stage .fc-word{min-width:0!important;flex:1 0 29%;font-size:20px;padding:12px 10px!important;min-height:56px}.fc-switch-stage .fc-words{gap:8px}.fc-stage-cue{top:12px;max-width:94%;width:max-content;white-space:normal;padding:7px 14px;font-size:18px}.fc-switch-stage .fc-observe{top:62px;padding:6px 10px;font-size:16px;gap:8px}.fc-switch-stage .fc-observe progress{width:65px}.fc-switch-stage .fc-status{font-size:18px}.fc-switch-stage .fc-practice-note{font-size:16px}}

@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-29",
+  "origin": "Original built-in imagegen; no external website assets copied",
+  "export": "FFmpeg/libwebp quality88, original dimensions and PNG sources retained",
+  "files": [
+    {
+      "path": "assets/school-missions/classroom-stage.webp",
+      "role": "Original shared classroom stage",
+      "game": "bag/reveal/missing/match",
+      "atlas": {
+        "cols": 1,
+        "rows": 1
+      },
+      "bytes": 75154,
+      "sha256": "ce5e9b2596c2c09ae08ff89f895963176a9a4f8bd6c9b3ad0c8e0b8de638beef"
+    },
+    {
+      "path": "assets/school-missions/mystery-backpack.webp",
+      "role": "Original open-mouth backpack",
+      "game": "bag",
+      "atlas": {
+        "cols": 1,
+        "rows": 1
+      },
+      "bytes": 254758,
+      "sha256": "84b52c36a6f7fa3673b30231a627139099d0e945963a2b2982ed1311c8083d25"
+    },
+    {
+      "path": "assets/family-classroom/picnic/items-atlas.webp",
+      "role": "Six independent picnic collection props",
+      "game": "u4familypack",
+      "atlas": {
+        "cols": 3,
+        "rows": 2
+      },
+      "bytes": 244726,
+      "sha256": "a97773ad822b02b759ea79220c5db41eeeba71516a15eb6452d5bbe9e7cc12d7"
+    },
+    {
+      "path": "assets/classroom-turns/team-flags.webp",
+      "role": "Two teacher team pennants",
+      "game": "class-mode shared controls",
+      "atlas": {
+        "cols": 2,
+        "rows": 1
+      },
+      "bytes": 167522,
+      "sha256": "c32e11dac2ac6735cb0b23712819343d6c0f29241ba5ee8972ea01dcdafda15b"
+    },
+    {
+      "path": "assets/unit3/lesson2/detective/category-icons.webp",
+      "role": "Four question-category icons",
+      "game": "u3detective",
+      "atlas": {
+        "cols": 2,
+        "rows": 2
+      },
+      "bytes": 216136,
+      "sha256": "fb9f45f14301eff07075053c08bbe1244595d238c5f6909e13c86a267f8ab410"
+    }
+  ]
+}
