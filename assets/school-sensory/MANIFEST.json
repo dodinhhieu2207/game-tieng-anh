@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-29",
+  "origin": "Original built-in imagegen",
+  "sources": {
+    "crank": "exec-8997ddec-1e5f-48be-b97d-2cac7b11ed2a.png",
+    "basket": "exec-f9e19b80-4d19-4226-8ae9-0396100cfeaa.png"
+  },
+  "export": "FFmpeg libwebp quality88, original source PNG retained, alpha preserved",
+  "files": [
+    {
+      "file": "crank-source.png",
+      "bytes": 1565098,
+      "sha256": "a402e56ee9616e0a66f28d47181e9f81414e1ffc76e106c0a47ac86424567be6"
+    },
+    {
+      "file": "crank.webp",
+      "bytes": 106382,
+      "sha256": "88028d2a3570505a653acfa0adb6e81e92146339deb9e807c59e6f9708013c7e"
+    },
+    {
+      "file": "basket-source.png",
+      "bytes": 2059260,
+      "sha256": "0451e9fc6d3596443e6c248d435b31fa7aa84f1e691654bbb9f45394f8459f3b"
+    },
+    {
+      "file": "basket.webp",
+      "bytes": 204594,
+      "sha256": "5ee03b104aefeb03cff634ce1eb45a16674a8a77e639cf54550f6748b82b595d"
+    }
+  ]
+}

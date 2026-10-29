@@ -1,0 +1,8 @@
+{
+  "environment": "Headless Edge1366x1000, Windows, with video recording; not mobile device performance",
+  "scene": "Spin & Say continuous reel timeline",
+  "sampleCount": 277,
+  "medianFrameIntervalMs": 5,
+  "p95FrameIntervalMs": 5.2000000000000455,
+  "interpretation": "Headless scheduler intervals while recording; not physical display refresh and must not be converted into a claimed device FPS."
+}

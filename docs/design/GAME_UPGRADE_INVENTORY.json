@@ -9,8 +9,11 @@
       "game": "spin",
       "title": "spin",
       "route": "#/unit/2/lesson/1?mode=practice&activity=spin",
-      "upgrade": null,
-      "status": "foundation-only; individual review pending"
+      "upgrade": {
+        "change": "Original crank, continuous GSAP reel strips/staggered stops, anti-repeat results, actual Higgs-ended unlock, resize/restart lifecycle",
+        "test": "school-sensory.cjs + playful-audio-edges.cjs"
+      },
+      "status": "targeted changes locally validated"
     },
     {
       "unit": 2,
@@ -19,8 +22,11 @@
       "game": "listen",
       "title": "listen",
       "route": "#/unit/2/lesson/1?mode=practice&activity=listen",
-      "upgrade": null,
-      "status": "foundation-only; individual review pending"
+      "upgrade": {
+        "change": "Original collection basket, real picture flight and owned shuffle, atomic score, Higgs-ended turn, hidden timer/collection protection and prompt error retry",
+        "test": "school-sensory.cjs + playful-audio-edges.cjs"
+      },
+      "status": "targeted changes locally validated"
     },
     {
       "unit": 2,
@@ -618,8 +624,11 @@
       "game": "letterfly",
       "title": "A–I Word Builder",
       "route": "#/unit/3/lesson/5?mode=practice&activity=review-ai",
-      "upgrade": null,
-      "status": "foundation-only; individual review pending"
+      "upgrade": {
+        "change": "Original workshop/tile assets, drag plus tap/keyboard, repeated-letter ownership, local snap/retry, audio-ended/replay gating and lifecycle cleanup; E/F tracing unchanged",
+        "test": "letter-workshop.cjs; local validation, no public deployment"
+      },
+      "status": "targeted changes locally validated"
     },
     {
       "unit": 3,
@@ -757,12 +766,17 @@
       "group": "Letter Land / independent",
       "game": "letterfly",
       "route": "#/letters/game/letterfly",
-      "status": "foundation-only; individual review pending"
+      "upgrade": {
+        "change": "Original workshop/tile assets, drag plus tap/keyboard, repeated-letter ownership, local snap/retry, audio-ended/replay gating and lifecycle cleanup; E/F tracing unchanged",
+        "test": "letter-workshop.cjs; local validation, no public deployment"
+      },
+      "status": "targeted changes locally validated"
     },
     {
       "group": "Letter Land / independent",
       "game": "abcflash",
       "route": "#/letters/game/abcflash",
+      "upgrade": null,
       "status": "foundation-only; individual review pending"
     },
     {

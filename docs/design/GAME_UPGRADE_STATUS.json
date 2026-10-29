@@ -4,7 +4,8 @@
   "shared": [
     "original class-mode team pennants/manual turns, no learner-star writes",
     "quieter owned feedback; no whole-scene fade on each interaction",
-    "Fredoka UI and short Luckiest Guy titles; tracing model untouched"
+    "Fredoka UI and short Luckiest Guy titles; tracing model untouched",
+    "Pinned local Howler2.2.4 sampled CC0 tactile SFX lane; common feedback and UI clicks, voice/recording priority and lifecycle cleanup"
   ],
   "upgrades": {
     "u4familymeet": {
@@ -78,6 +79,14 @@
     "letterfly": {
       "change": "Original workshop/tile assets, drag plus tap/keyboard, repeated-letter ownership, local snap/retry, audio-ended/replay gating and lifecycle cleanup; E/F tracing unchanged",
       "test": "letter-workshop.cjs; local validation, no public deployment"
+    },
+    "spin": {
+      "change": "Original crank, continuous GSAP reel strips/staggered stops, anti-repeat results, actual Higgs-ended unlock, resize/restart lifecycle",
+      "test": "school-sensory.cjs + playful-audio-edges.cjs"
+    },
+    "listen": {
+      "change": "Original collection basket, real picture flight and owned shuffle, atomic score, Higgs-ended turn, hidden timer/collection protection and prompt error retry",
+      "test": "school-sensory.cjs + playful-audio-edges.cjs"
     }
   }
 }

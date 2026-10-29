@@ -1,12 +1,12 @@
 /* Shared, event-driven toy feedback. Scoring remains owned by each game. */
 (()=>{
  'use strict';
- const base='assets/feedback/',clips={tap:'click_003',place:'pluck_001',correct:'confirmation_002',retry:'question_002',star:'pluck_001',complete:'maximize_003',badge:'confirmation_004',open:'open_001',reveal:'select_002'};
+ const base='assets/playful-foley/',clips={tap:'tap',place:'place',correct:'correct',retry:'retry',star:'star',complete:'complete',badge:'complete',open:'open',reveal:'reveal'};
  const motion=matchMedia('(prefers-reduced-motion: reduce)'),sounds=new Set(),animations=new Set();
  let layer,lastTarget,lastTap=0,lastEffect=0,lastCorrectSound=0,sceneSerial=0,deferred,lastSound;
  const busy=()=>window.SpeakingPlay?.recording||window.LearningApp?.isVoiceBusy?.()||['asking','recording','starting','processing'].includes(window.Unit3Lesson2?.current()?.phase)||window.speechSynthesis?.speaking;
  const enabled=()=>!window.LearningApp?.isMuted()&&document.querySelector('#soundFx')?.checked;
- function stopSounds(){sounds.forEach(a=>{a.pause();a.dispatchEvent(new Event('learning:sfx-cancel'));});sounds.clear();}
+ function stopSounds(){window.PlayfulAudio?.stop({keepUI:true});sounds.forEach(a=>{a.pause();a.dispatchEvent(new Event('learning:sfx-cancel'));});sounds.clear();}
  function clear(){deferred=null;lastSound=null;stopSounds();animations.forEach(a=>a.cancel());animations.clear();layer?.replaceChildren();}
  function run(el,frames,options){if(motion.matches||!el?.animate)return;const a=el.animate(frames,options);animations.add(a);a.finished.catch(()=>{}).finally(()=>animations.delete(a));return a;}
  function position(target){const r=target?.isConnected?target.getBoundingClientRect():document.querySelector('#gameStage')?.getBoundingClientRect();return {x:r?r.left+r.width/2:innerWidth/2,y:r?r.top+Math.min(r.height/2,320):innerHeight/2};}
@@ -38,7 +38,7 @@
   if(busy()){if(['correct','retry','complete','badge','star'].includes(kind))deferred={kind,target,scene:sceneSerial};return Promise.resolve(false);}
   if(kind==='correct'&&performance.now()-lastCorrectSound<200)return Promise.resolve(false);if(kind==='correct')lastCorrectSound=performance.now();
   lastSound={kind,target,scene:sceneSerial,time:performance.now()};
-  stopSounds();const a=new Audio(base+clips[kind]+'.wav');a.learningSfx=true;a.volume=kind==='tap'?.18:.38;sounds.add(a);
+  stopSounds();if(window.PlayfulAudio)return window.PlayfulAudio.play(kind,{target});const a=new Audio(base+clips[kind]+'.wav');a.learningSfx=true;a.volume=kind==='tap'?.18:.38;sounds.add(a);
   return new Promise(resolve=>{const done=()=>{sounds.delete(a);resolve(true);};a.addEventListener('ended',done,{once:true});a.addEventListener('error',done,{once:true});a.addEventListener('learning:sfx-cancel',done,{once:true});a.play().catch(done);});
  }
  // Observe authoritative game UI states. This adapter never decides whether an answer is correct.

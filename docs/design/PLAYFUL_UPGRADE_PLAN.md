@@ -50,3 +50,9 @@ Final local gate update: corrected Gg load guard passes blocked-model/retry and 
 ## Letter Land checkpoint —2026-10-29 local
 
 Build the Word (letterfly) upgraded individually: original blank wooden tile and workshop scene; live LetterFont glyphs and approved word pictures/audio retained. Direct drag plus tap/keyboard, atomic tile/slot reservation, settled-placement completion, audio-ended/replay gate, local retry and cleanup. All18 current words, Tricky/filter, five widths48px targets, mobile touch, reduced motion, audio failure and reset/leave tests PASS. Header now correctly says A–I. E/F tracing untouched. Detailed RULES/PLAN and asset manifest in docs/game-plans/letter-workshop/ and assets/letter-workshop/. No public deploy or all-games-complete claim.
+
+## Sampled sound and two classroom games —2026-10-29 local
+
+Shared feedback/click cues now use10 source-recorded Kenney RPG/Impact samples via local Howler core2.2.4 (MIT), distinct from prior interface-tone set. CC0 source OGG/license/export provenance retained. Voice/record/mute/hidden priority, failed-sample retry and bounded pooled cues tested. Higgs catalogue/provider unchanged.
+
+Spin & Say: original crank, real continuous GSAP reel strips/staggered stops, anti-repeat and voice-ended controls. Listen & Catch: original basket, picture travel/owned shuffle, atomic score, prompt recovery and hidden collection protection. Full scoped tests and regression gates recorded in docs/game-plans/school-sensory/PLAN.md.70 route mounting smoke is not70 redesigned or fully played games. No public publish.

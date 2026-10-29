@@ -1,0 +1,18 @@
+/* Sampled tactile SFX only. Approved Higgs speech remains on its existing lane. */
+(()=>{'use strict';
+ const base='assets/playful-foley/',names=['tap','place','retry','correct','complete','open','reveal','star','roll','latch'],clips=new Map(),playing=new Map();let epoch=0,last=-1000,lastKind='',voice=0;
+ const recording=()=>window.SpeakingPlay?.recording||['starting','recording','processing'].includes(window.Unit3Lesson2?.current()?.phase);
+ const enabled=()=>!document.hidden&&!recording()&&!window.LearningApp?.isMuted()&&document.querySelector('#soundFx')?.checked&&!(typeof letterAudio!=='undefined'&&['letterfly','abcflash'].includes(currentGame)&&!letterAudio.isOn());
+ const busy=()=>Boolean(window.LearningApp?.isVoiceBusy?LearningApp.isVoiceBusy():voice>0)||window.speechSynthesis?.speaking;
+ const emit=(event,detail)=>document.dispatchEvent(new CustomEvent('learning:foley',{detail:{event,...detail}}));
+ function stop({keepUI=false}={}){epoch++;for(const [key,item]of playing){if(keepUI&&item.ui)continue;item.sound.stop(item.id);item.finish(false)}}
+ function get(kind){if(clips.has(kind))return clips.get(kind);let resolve;const ready=new Promise(r=>resolve=r);const sound=new Howl({src:[base+kind+'.wav'],preload:true,volume:.26,pool:2,onload:()=>resolve(true),onloaderror:()=>{clips.delete(kind);emit('error',{kind});resolve(false)}});const item={sound,ready};clips.set(kind,item);return item}
+ async function play(kind,{target,ui=false}={}){const mapped={button:'tap',select:'place',next:'reveal',toggle:'latch',badge:'complete'}[kind]||kind;if(!enabled()||!names.includes(mapped)||(!ui&&busy())||!window.Howl)return false;const now=performance.now();if(now-last<75&&mapped===lastKind)return false;last=now;lastKind=mapped;stop();const token=epoch,{sound,ready}=get(mapped);if(!await ready||(token!==epoch&&(!ui||performance.now()-now>200))||!enabled()||(!ui&&busy()))return false;
+  return new Promise(resolve=>{const id=sound.play(),gain=ui?(busy()?.08:.22):({roll:.14,retry:.18,complete:.30,correct:.26}[mapped]||.24);sound.volume(gain,id);const key={};let ended=false;const finish=ok=>{if(ended)return;ended=true;sound.off('end',onEnd,id);sound.off('playerror',onError,id);sound.off('play',onPlay,id);playing.delete(key);emit(ok?'end':'cancel',{kind:mapped});resolve(ok)},onEnd=()=>finish(true),onError=()=>{sound.stop(id);emit('error',{kind:mapped});finish(false)},onPlay=()=>{emit('play',{kind:mapped,gain,webAudio:sound._webAudio,src:base+mapped+'.wav'});if(ui)document.dispatchEvent(new CustomEvent('learning:ui-sound',{detail:{kind,file:mapped+'.wav',duration:sound.duration(),gain}}))};playing.set(key,{sound,id,finish,ui});sound.once('end',onEnd,id);sound.once('playerror',onError,id);sound.once('play',onPlay,id);
+  })
+ }
+ document.addEventListener('learning:voice-start',()=>{voice++;for(const item of playing.values()){if(item.ui)item.sound.volume(.08,item.id)}stop({keepUI:true})});document.addEventListener('learning:voice-end',()=>voice=Math.max(0,voice-1));
+ document.addEventListener('learning:leave-activity',()=>{voice=0;stop({keepUI:true})});addEventListener('hashchange',()=>stop({keepUI:true}));document.addEventListener('visibilitychange',()=>{if(document.hidden)stop()});document.addEventListener('change',()=>{if(!enabled())stop()});
+ addEventListener('DOMContentLoaded',()=>{if(window.Howl)names.forEach(get);new MutationObserver(()=>{if(recording())stop()}).observe(document.querySelector('#gameStage'),{subtree:true,attributes:true,attributeFilter:['data-phase']})});
+ window.PlayfulAudio=Object.freeze({play,stop,enabled,state:()=>({playing:playing.size,loaded:clips.size,voice,epoch})});
+})();

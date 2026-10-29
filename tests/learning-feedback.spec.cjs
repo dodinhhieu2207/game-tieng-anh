@@ -1,14 +1,14 @@
 const {chromium}=require('C:/Users/Admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const assert=require('node:assert/strict');
 (async()=>{
- const browser=await chromium.launch({channel:'chrome',headless:true}),page=await browser.newPage({viewport:{width:1366,height:900}}),errors=[],missing=[];
+ const browser=await chromium.launch({channel:'msedge',headless:true}),page=await browser.newPage({viewport:{width:1366,height:900}}),errors=[],missing=[];
  page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)missing.push(r.url());});
- await page.addInitScript(()=>{window.feedbackMedia=[];const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){feedbackMedia.push(this);if(this.src.includes('/lesson2/')&&this!==window.testVoice)this.playbackRate=4;return play.call(this);};});
+ await page.addInitScript(()=>{window.feedbackMedia=[];window.foley=[];document.addEventListener('learning:foley',e=>foley.push(e.detail));const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){feedbackMedia.push(this);if(this.src.includes('/lesson2/')&&this!==window.testVoice)this.playbackRate=4;return play.call(this);};});
  await page.goto(process.env.FEEDBACK_TEST_BASE||'http://127.0.0.1:8765/index.html');await page.waitForFunction(()=>!!window.LearningFeedback&&!!window.LearningApp);
  await page.locator('[data-start-adventure]').click();await page.waitForSelector('#gameScreen.active');
  await page.evaluate(()=>LearningFeedback.play('correct',document.querySelector('.shell-game-nav')));await page.waitForTimeout(120);
  assert(await page.locator('.learning-fx-particle').count()>0);assert.equal(await page.locator('.learning-fx-layer').evaluate(e=>getComputedStyle(e).pointerEvents),'none');
- assert(await page.evaluate(()=>feedbackMedia.some(a=>a.src.endsWith('/feedback/confirmation_002.wav'))));
+ assert(await page.evaluate(()=>foley.some(e=>e.event==='play'&&e.kind==='correct')||feedbackMedia.some(a=>a.src.endsWith('/playful-foley/correct.wav'))));
  await page.screenshot({path:'tests/feedback-correct.png'});await page.waitForTimeout(1200);assert.equal(await page.locator('.learning-fx-particle').count(),0);
  // Voice owns audio: a real prerecorded voice cancels the currently playing effect.
  await page.evaluate(async()=>{LearningFeedback.play('badge');window.testVoice=new Audio('assets/unit3/lesson2/audio/questions/whats_this.mp3');await testVoice.play();});
@@ -21,7 +21,7 @@ const assert=require('node:assert/strict');
  await page.locator(`[data-choice="${!yes}"]`).click();await page.waitForFunction(()=>Unit3Lesson2.current()?.phase==='listening',null,{timeout:15000});
  assert.equal(await page.evaluate(()=>Unit3Lesson2.current().errors),1);
  await page.locator(`[data-choice="${yes}"]`).click();await page.waitForFunction(()=>Unit3Lesson2.current()?.phase==='resolved',null,{timeout:15000});
- assert(await page.evaluate(()=>feedbackMedia.some(a=>a.src.endsWith('/feedback/confirmation_002.wav'))));
+ assert(await page.evaluate(()=>foley.some(e=>e.event==='play'&&e.kind==='correct')||feedbackMedia.some(a=>a.src.endsWith('/playful-foley/correct.wav'))));
  assert(await page.locator('#l2Next').isEnabled());
  // Rewards fly into the in-game HUD; a replay doesn't create extra stars.
  await page.evaluate(()=>LearningProgress.completed('3/2/meet-pattern',3));await page.waitForSelector('.reward-toast:not([hidden])');
