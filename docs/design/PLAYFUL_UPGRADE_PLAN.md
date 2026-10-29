@@ -46,3 +46,7 @@ Full replays validated: family missions, Family Links, Question Detective, five 
 Still pending: individual redesign decisions and asset/motion refinements for remaining inventory rows, full sound-art pass, and public deployment. No blanket completion or public release claim.
 
 Final local gate update: corrected Gg load guard passes blocked-model/retry and full eight writing-only trace/copy rounds, no voice/mic/ASR gate. Final350 route/width smoke PASS:70 mounted routes, no empty stage, overflow or page errors. School Missing now also completed all three real-voice rounds and saved3stars through the unchanged legacy victory bridge. Current local preview version playful3; no public publish.
+
+## Letter Land checkpoint —2026-10-29 local
+
+Build the Word (letterfly) upgraded individually: original blank wooden tile and workshop scene; live LetterFont glyphs and approved word pictures/audio retained. Direct drag plus tap/keyboard, atomic tile/slot reservation, settled-placement completion, audio-ended/replay gate, local retry and cleanup. All18 current words, Tricky/filter, five widths48px targets, mobile touch, reduced motion, audio failure and reset/leave tests PASS. Header now correctly says A–I. E/F tracing untouched. Detailed RULES/PLAN and asset manifest in docs/game-plans/letter-workshop/ and assets/letter-workshop/. No public deploy or all-games-complete claim.

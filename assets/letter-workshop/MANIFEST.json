@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-29",
+  "origin": "Original built-in imagegen, no external game artwork copied",
+  "workbenchSource": "exec-f79be12f-8134-44b8-8181-d42e83273d79.png",
+  "tileSource": "exec-868c488e-75b3-46a5-8533-cda44eecc74e.png",
+  "roles": {
+    "workbench": "Clear scenery under live picture/slots/tiles",
+    "tile": "Transparent blank wooden tile under live LetterFont glyph"
+  },
+  "export": "FFmpeg libwebp quality88; original PNG retained; tile alpha preserved",
+  "files": [
+    {
+      "path": "assets/letter-workshop/workbench-source.png",
+      "bytes": 1908147,
+      "sha256": "711b921e2e94e384d546988b31d9c6020ec09d1e21e9c28eca4f66ba7cc98012"
+    },
+    {
+      "path": "assets/letter-workshop/workbench.webp",
+      "bytes": 96904,
+      "sha256": "804b35eb3a2dac290b238eafd9e5a88cc05a38079c80106ba1462887328ac60c"
+    },
+    {
+      "path": "assets/letter-workshop/tile-source.png",
+      "bytes": 1908395,
+      "sha256": "4bf0b86fb2a82d9849b4008af76cd3bee05fd6d1bd2dde46cb9a8f9b6134f812"
+    },
+    {
+      "path": "assets/letter-workshop/tile.webp",
+      "bytes": 140488,
+      "sha256": "3a2c5aa0389b7737a44bd9058b3c2fd482ddaeefc75ceacf28f0b4d481f9c247"
+    }
+  ]
+}

@@ -74,6 +74,10 @@
     "u3detective": {
       "change": "Dedicated original4-category atlas and open scene; original category/voice/scoring retained",
       "test": "question-detective-open.cjs real Higgs full rounds and five widths PASS"
+    },
+    "letterfly": {
+      "change": "Original workshop/tile assets, drag plus tap/keyboard, repeated-letter ownership, local snap/retry, audio-ended/replay gating and lifecycle cleanup; E/F tracing unchanged",
+      "test": "letter-workshop.cjs; local validation, no public deployment"
     }
   }
 }

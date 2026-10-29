@@ -1,0 +1,29 @@
+.letter-workshop .lf-field{padding:38px 20px 24px;min-height:620px;display:flex;flex-direction:column;gap:24px;justify-content:center;background:#fff6db url('../assets/letter-workshop/workbench.webp') center/cover;border:2px solid #8fcbd0;isolation:isolate}
+.letter-workshop .lf-center{width:100%;max-width:760px;gap:12px}
+.letter-workshop .lf-picture{width:160px;height:160px;background:rgba(255,255,255,.75);border:0;box-shadow:0 8px 18px #305d6c18;border-radius:34px}
+.letter-workshop .lf-hear{right:0;bottom:0;color:#126f80;background:#ffefb5;border-color:#d7ad45}
+.letter-workshop .lf-guide{font-size:clamp(30px,5vw,44px);border:0;background:transparent;line-height:1.2}
+.letter-workshop .lf-slots{max-width:740px;grid-template-columns:repeat(var(--n),minmax(0,64px));gap:6px}
+.letter-workshop .lf-slot{padding:0;position:relative;min-width:0;aspect-ratio:1/1.1;border:2px solid #8db8ba;border-radius:14px;background:#fffdf3;box-shadow:inset 0 4px 5px #426a6b1c;transition:background .16s,border-color .16s}
+.letter-workshop .lf-ghost,.letter-workshop .lf-placed{font-size:clamp(24px,5vw,44px)}
+.letter-workshop .lf-slot.filled{background:#e2f5dc;border-color:#5f9d66;animation:none;box-shadow:inset 0 2px 4px #426a6b12}
+.letter-workshop .lf-slot small{position:absolute;right:2px;top:0;color:#256937;font-size:13px}
+.letter-workshop .workshop-pending .lf-ghost{opacity:0}
+.letter-workshop .lf-slot.is-over{transform:none;background:#fff0b9;border-color:#d7a637;box-shadow:0 0 0 3px #e8bc5550}
+.letter-workshop .lf-slot.workshop-retry:after{content:'×';position:absolute;right:2px;top:-6px;font:700 24px var(--app-font);color:#ab4c38}
+.letter-workshop .lf-slot.workshop-retry{border-color:#c16c4e;background:#fff1e7}
+.workshop-tray{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:760px;padding:16px;border-radius:24px;background:#c9e5e5bb;border:2px solid #87b8bb;box-shadow:0 5px 0 #457d8426;z-index:3}
+.letter-workshop .lf-tile{position:relative!important;left:auto!important;top:auto!important;flex:0 0 60px;width:60px;height:60px}
+.letter-workshop .lf-tile span{animation:none;border:0;border-radius:16px;background:transparent url('../assets/letter-workshop/tile.webp') center/110% 110% no-repeat;color:#174d70;box-shadow:none;font-size:38px}
+.letter-workshop .lf-tile.dragging{z-index:10}.letter-workshop .lf-tile.dragging span{transform:none;box-shadow:0 12px 18px #19485635}
+.letter-workshop .lf-tile.snapping span{animation:none;transform:none}
+.letter-workshop .workshop-selected span{outline:3px solid #157f97;outline-offset:3px}
+.letter-workshop .lf-status{min-height:28px;margin:0;background:#fffdf0d9;padding:6px 14px;border-radius:14px;font-size:18px}
+.letter-workshop .lf-chip{min-height:48px;min-width:48px;padding:5px 10px;font-size:18px}
+.workshop-settings{min-width:0;max-width:100%}.workshop-settings summary{padding:12px 18px;min-height:48px;border:2px solid #8ebfc5;border-radius:16px;background:#fffdf1;cursor:pointer;font-weight:700;color:#174d70}
+.workshop-option-groups{display:flex;flex-wrap:wrap;gap:14px;padding:14px 4px}.letter-workshop .lf-head{align-items:flex-start}.letter-workshop .lf-progress{min-height:48px}
+.letter-workshop button:focus-visible{outline:3px solid #176cbb;outline-offset:4px}
+.workshop-done{z-index:5;display:grid;gap:10px;justify-items:center;width:100%;background:#fffdf0ed;border-radius:22px;padding:18px;border:2px solid #95bda1;color:#174d70}
+.workshop-done strong{font:800 34px var(--letter-font)}.workshop-done>div{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+@media(max-width:560px){.letter-workshop .lf-field{padding:30px 8px 18px;min-height:580px;gap:18px}.letter-workshop .lf-picture{width:136px;height:136px}.workshop-tray{padding:12px 8px;gap:10px}.letter-workshop .lf-tile{flex-basis:52px;width:52px;height:52px}.letter-workshop .lf-tile span{font-size:32px}.letter-workshop .lf-slots{gap:6px;grid-template-columns:repeat(var(--mobile-n),minmax(48px,58px))}.letter-workshop .lf-slot{border-radius:10px}.letter-workshop .lf-ghost,.letter-workshop .lf-placed{font-size:30px}}
+@media(prefers-reduced-motion:reduce){.letter-workshop *{animation:none!important;transition:none!important}}
