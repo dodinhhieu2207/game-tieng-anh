@@ -7,7 +7,7 @@
   const unitById=id=>config.units.find(unit=>unit.id===id),lessonById=(u,id)=>u.lessons.find(l=>l.id===id);
   const esc=window.escapeHTML;
   const asset=name=>'assets/shared-ui/'+name+'.png';
-  const icon=(name)=>['home','back','next','full-screen','sound-on','sound-off','replay'].includes(name)?`<img src="${asset('pack-'+name)}" alt="" aria-hidden="true">`:`<img src="${asset(name)}" alt="" aria-hidden="true">`;
+  const icon=(name)=>['home','back','star','teacher'].includes(name)?`<i class="nav-art nav-${name==='star'?'stars':name}" aria-hidden="true"></i>`:['home','back','next','full-screen','sound-on','sound-off','replay'].includes(name)?`<img src="${asset('pack-'+name)}" alt="" aria-hidden="true">`:`<img src="${asset(name)}" alt="" aria-hidden="true">`;
   const originals=new Map(),heroes=new Map();
   document.querySelectorAll('#homeScreen [data-game]').forEach(card=>{if(!originals.has(card.dataset.game))originals.set(card.dataset.game,card.cloneNode(true));});
   config.units.forEach(unit=>{const h=document.querySelector('#spaceUnit'+unit.id+' .hero');if(h)heroes.set(unit.id,h.cloneNode(true));});
@@ -47,7 +47,7 @@
    pane.classList.toggle('shell-art-selector',html.includes('shell-lesson-grid'));pane.classList.toggle('shell-art-home',!unit&&html.includes('shell-unit-grid'));pane.style.backgroundImage=unit?.selectorScene&&html.includes('shell-lesson-grid')?`url("${unit.selectorScene}")`:'';
    activeSidebar(unit?.space||null);currentSpace=unit?.space||'home';window.scrollTo({top:0,behavior:'instant'});
   }
-  function bread(unit,lesson){return `<div class="shell-breadcrumb"><a href="#/">Home</a>${unit?`<span>›</span><a href="#/unit/${unit.id}">Unit ${unit.id}</a>`:''}${lesson?`<span>›</span><span>Lesson ${lesson.id}</span>`:''}</div>`;}
+  function bread(unit,lesson){return `<nav class="shell-breadcrumb" aria-label="Breadcrumb"><a href="#/"><i class="nav-art nav-home" aria-hidden="true"></i>Home</a>${unit?`<span aria-hidden="true">›</span><a href="#/unit/${unit.id}" ${!lesson?'aria-current="page"':''}><i class="nav-art nav-lessons" aria-hidden="true"></i>Unit ${unit.id}</a>`:''}${lesson?`<span aria-hidden="true">›</span><span aria-current="page">Lesson ${lesson.id}</span>`:''}</nav>`;}
   function hero(unit,lesson=null,selector=false){
    if(unit.id===4&&lesson)return `<header class="u4-lesson-art-header"><img src="${lesson.cardImage}" alt="Unit 4 Lesson ${lesson.id}: ${esc(lesson.title)}"><div><h1>${esc(lesson.title)}</h1><p>${esc(lesson.description||'')}</p></div></header>`;
    if(selector&&unit.selectorBanner){const heading=heroes.get(unit.id)?.querySelector('h1')?.textContent||unit.title;return `<header class="shell-image-banner"><h1 class="shell-sr-only">${esc(heading)}</h1><img src="${unit.selectorBanner}" alt="${esc(heroes.get(unit.id)?.querySelector('.hero-copy')?.textContent.trim()||unit.title)}"></header>`;}
