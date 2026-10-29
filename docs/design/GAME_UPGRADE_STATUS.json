@@ -17,12 +17,12 @@
       "test": "family-missions.cjs"
     },
     "u4familypack": {
-      "change": "Original six-item picnic atlas, persistent placed names, owned snap/return and scene collection",
-      "test": "family-missions.cjs"
+      "change": "Live six sprite recipients, original blank name plaques and blanket, persistent recipient names/gifts, wave pose and compact finale",
+      "test": "family-picnic-pilot.cjs + family-missions.cjs"
     },
     "u4familylinks": {
-      "change": "Persistent links, reunion sprites, retry cross, anti-repeat first word and listener cleanup",
-      "test": "unit4-family-links.spec.cjs"
+      "change": "Original scrapbook, three optional help/word/listening practice modes, next-level challenge and persistent Pixi lines/reunion",
+      "test": "family-picnic-pilot.cjs + unit4-family-links.spec.cjs"
     },
     "bag": {
       "change": "Original backpack and classroom stage, direct peek/show, full unobscured answer",
@@ -87,6 +87,10 @@
     "listen": {
       "change": "Original collection basket, real picture flight and owned shuffle, atomic score, Higgs-ended turn, hidden timer/collection protection and prompt error retry",
       "test": "school-sensory.cjs + playful-audio-edges.cjs"
+    },
+    "u4familyhide": {
+      "change": "Original gathering blanket, found people travel to persistent picnic positions; existing random deals and controls retained; compact finale",
+      "test": "family-picnic-pilot.cjs + existing hide seek/random/audit regressions"
     }
   }
 }

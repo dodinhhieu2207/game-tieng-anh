@@ -80,3 +80,7 @@ Family Finder chỉ chuyển lượt khi voice kết thúc và trẻ chọn; Pac
 
 
 2026-10-29 whole-app upgrade LOCAL checkpoint: Meet now records six voiced discoveries once; Finder blocks skipping unsolved targets and waits on Higgs; Picnic has generated six-item atlas and persistent placed names, snap/return, owned tweens and collection outcome outside scene. Real Higgs4x family-missions.cjs passed six finds/placements, wrong retry, reset, five widths and cleanup. Shared typography follows approved whole-app upgrade. No prior learner progress keys changed.
+
+## 2026-10-29 cumulative picnic trial
+
+User approved three-activity Unit4 Lesson1 pilot. Details and scoped validation in PILOT_20261029.md. Local implementation only; existing routes, approved character art/Higgs and progress preserved.

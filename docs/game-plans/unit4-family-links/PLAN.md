@@ -18,3 +18,7 @@ Status: implemented and local browser test passed. `tests/unit4-family-links.spe
 
 
 2026-10-29 whole-app upgrade LOCAL checkpoint: Added original full-character reunion row using exact existing sprite-sheet cells, quiet word ribbons, explicit retry cross, anti-repeat replay first word, and pointer listener cleanup. Existing full Family Links suite PASS incl real Pixi, wrong/correct drag/tap/keyboard, six pairs/stars once, five widths, mute/errors/reduced/leave.
+
+## 2026-10-29 cumulative picnic trial
+
+User approved three-activity Unit4 Lesson1 pilot. Details and scoped validation in ../unit4-lesson1-family-park/PILOT_20261029.md. Local implementation only; existing routes, approved character art/Higgs and progress preserved.

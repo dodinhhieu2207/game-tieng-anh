@@ -704,8 +704,8 @@
       "title": "Family Links",
       "route": "#/unit/4/lesson/1?mode=practice&activity=family-links",
       "upgrade": {
-        "change": "Persistent links, reunion sprites, retry cross, anti-repeat first word and listener cleanup",
-        "test": "unit4-family-links.spec.cjs"
+        "change": "Original scrapbook, three optional help/word/listening practice modes, next-level challenge and persistent Pixi lines/reunion",
+        "test": "family-picnic-pilot.cjs + unit4-family-links.spec.cjs"
       },
       "status": "targeted changes locally validated"
     },
@@ -717,8 +717,8 @@
       "title": "Pack the Picnic",
       "route": "#/unit/4/lesson/1?mode=practice&activity=pack-picnic",
       "upgrade": {
-        "change": "Original six-item picnic atlas, persistent placed names, owned snap/return and scene collection",
-        "test": "family-missions.cjs"
+        "change": "Live six sprite recipients, original blank name plaques and blanket, persistent recipient names/gifts, wave pose and compact finale",
+        "test": "family-picnic-pilot.cjs + family-missions.cjs"
       },
       "status": "targeted changes locally validated"
     },
@@ -729,8 +729,11 @@
       "game": "u4familyhide",
       "title": "Family Hide & Seek",
       "route": "#/unit/4/lesson/1?mode=practice&activity=family-hide-seek",
-      "upgrade": null,
-      "status": "foundation-only; individual review pending"
+      "upgrade": {
+        "change": "Original gathering blanket, found people travel to persistent picnic positions; existing random deals and controls retained; compact finale",
+        "test": "family-picnic-pilot.cjs + existing hide seek/random/audit regressions"
+      },
+      "status": "targeted changes locally validated"
     },
     {
       "unit": 4,

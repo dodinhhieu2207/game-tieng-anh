@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-29",
+  "origin": "Original built-in imagegen",
+  "sources": {
+    "blanket": "exec-33c9b4be-16d1-4658-a5b0-c64c28d5d833.png",
+    "name-plaque": "exec-02656866-a94f-48f3-91e0-963fc1c8d77a.png",
+    "scrapbook": "exec-81b8c4c3-8f16-42a9-8011-6a067b39878c.png"
+  },
+  "export": "FFmpeg libwebp quality88, source PNG retained. No baked educational words.",
+  "files": [
+    {
+      "file": "blanket-source.png",
+      "size": [
+        2172,
+        724
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "bytes": 1645255,
+      "sha256": "dae1b045eabc71084a9bfc6f3f0eef494e58f2c366ea64042db3522d1b485526"
+    },
+    {
+      "file": "blanket.webp",
+      "size": [
+        2172,
+        724
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "bytes": 203646,
+      "sha256": "80d77018c23e8faf13ec60f7f1f294709a22f5624c869987405b796ec9fb45ab"
+    },
+    {
+      "file": "name-plaque-source.png",
+      "size": [
+        2172,
+        724
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "bytes": 1598622,
+      "sha256": "95a075c9bb1d62f98339fe9f04e8cc624a8ad31fabdefa83a80bdde23d8a0192"
+    },
+    {
+      "file": "name-plaque.webp",
+      "size": [
+        2172,
+        724
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "bytes": 145660,
+      "sha256": "6e48c3afeb3f785ebd2a424a2cdc1515ac39ba0e9f3118d7ac0a670493663c90"
+    },
+    {
+      "file": "scrapbook-source.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "alpha": [
+        255,
+        255
+      ],
+      "bytes": 1905397,
+      "sha256": "2b0e4389e578751b4658849467c9c8b4ce00a21e21c2b0fe994763ce59c9a714"
+    },
+    {
+      "file": "scrapbook.webp",
+      "size": [
+        1448,
+        1086
+      ],
+      "alpha": [
+        255,
+        255
+      ],
+      "bytes": 65788,
+      "sha256": "b1fff3c408a2c08f4a37816e25ced4df4edaac10801a81ada00caee0e1405b82"
+    }
+  ]
+}
