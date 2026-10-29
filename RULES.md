@@ -29,6 +29,8 @@ Ngày tạo: 2026-10-07. Áp dụng cho giao diện, trò chơi, audio, Speaking
 
 ## 3. Giao diện và điều hướng
 
+- Chuẩn thẻ danh mục mới nhất (2026-10-29): lấy trang sáu Lesson của Unit 3 làm mẫu cho các Unit khác và các thiết kế sau này. Dùng viền liền, nền sáng, bo góc và bóng nhẹ thống nhất; không bao thẻ Unit/Lesson/Activity hoặc khung trang bằng viền nét đứt. Bài chưa có hoạt động vẫn dùng cùng kiểu thẻ, ghi “Coming soon” và giữ trạng thái chưa mở; không tạo tiến trình giả. Căn đầu ảnh và nội dung thẻ nhất quán. Quy định này áp dụng cho danh mục/giao diện; không tự sửa vùng thả hoặc mẫu đồ chữ trong game đã duyệt.
+
 - Giữ hệ thống sidebar, Letter Land, các game, hình ảnh và phong cách đã được duyệt khi thay đổi một phần giao diện.
 - Luồng học chính: chọn Unit → chọn một trong sáu Lesson → chọn hoạt động → chơi → xem kết quả và tiếp tục.
 - Dùng trang Unit 3 Lesson 1 làm nền tảng bố cục Lesson tái sử dụng; thay dữ liệu nội dung thay vì sao chép nhiều giao diện riêng.

@@ -32,7 +32,7 @@
 #lessonApp .shell-final{border-color:#e9ba52}
 #lessonApp .shell-planned{background:linear-gradient(140deg,#f4f8ff,#e5f5fe)}
 #lessonApp .shell-group-links{display:flex;gap:12px;flex-wrap:wrap}
-#lessonApp .shell-empty{padding:30px;border:2px dashed #acd0e5;background:#f5fbff;border-radius:25px;font-weight:800}
+#lessonApp .shell-empty{padding:30px;border:2px solid #acd0e5;background:#f5fbff;border-radius:25px;font-weight:800}
 #lessonApp .shell-letter-link{margin:10px 0 30px}
 #gameScreen.app-managed .game-topbar #backHome,#gameScreen.app-managed #replayPrompt{display:none}
 .shell-game-nav{margin:0 0 20px;background:#f9fcff;border:2px solid #cde4f2;border-radius:24px;padding:14px}
