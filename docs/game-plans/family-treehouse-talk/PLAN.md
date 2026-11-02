@@ -1,6 +1,6 @@
 # Family Treehouse Talk plan
 
-Status: implemented locally, public Worker deployment and child-speech quality remain unmeasured.
+Status: batch speaking feedback deployed; final-transcript word slots implemented. Realtime transcription is not released. Child-speech quality remains unmeasured.
 
 ## Approved approach
 
@@ -18,7 +18,9 @@ Skills used: `frontend-design` for hierarchy/type/layout; `imagegen` for the two
 | Interaction states | done | orb ready/recording/processing/correct, transcript and retry states |
 | Result assets and choreography | done | dedicated correct/retry SVG badges, scene glow, portrait cheer/nudge, shared SFX/VFX |
 | Voice | reused Higgs | `assets/family-album/audio/clips.js`, exact six sentences and question |
-| Speaking contract | implemented locally | `family-introduction` evaluator + Worker source; public deployment not performed |
+| Speaking contract | deployed | `family-introduction` evaluator + Whisper Worker; public batch request verified with approved Higgs clip |
+| Word slots | implemented | final Cloudflare transcript fills `This / is / my / family word`; incomplete/wrong remain retry; UNCLEAR stays blank |
+| Realtime words | blocked at live transport QA | Nova-3 WebSocket accepted the connection but closed on the first PCM audio frame, including an approved Higgs clip. Worker rolled back to stable batch version `19353ad2-a483-4031-ba48-0fb7c90563ab`. No simulated interim words shipped. |
 | Progress | done | stable key `u4familytalk`, best-star event |
 | Five-width layout QA | pass | 320, 390, 768, 1024 and 1366; no horizontal overflow, visible controls at least 48px |
 | Video/public QA | pending | not yet measured |

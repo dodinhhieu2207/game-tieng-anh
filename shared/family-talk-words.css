@@ -1,0 +1,7 @@
+.u4-talk-words{position:absolute;z-index:6;left:50%;bottom:21%;transform:translateX(-50%);display:flex;gap:clamp(4px,1vw,12px);max-width:96%;padding:8px;border-radius:22px;background:#fff9ebed;box-shadow:0 8px 22px #173f5940}
+.u4-talk-word{display:grid;place-items:center;min-width:clamp(48px,10vw,112px);min-height:clamp(44px,5vw,64px);padding:4px 8px;border:3px solid #bfced0;border-radius:15px;background:#fff;color:#66818b;font:800 clamp(17px,2vw,26px) var(--app-font);white-space:nowrap}
+.u4-talk-word[data-state=provisional]{border-color:#e3b84b;background:#fff3cf;color:#18445c}
+.u4-talk-word[data-state=confirmed]{border-color:#329c6c;background:#def9e7;color:#145c3d}
+.u4-talk-word[data-state=heard]{border-color:#8caec1;color:#18445c}
+.u4-talk-word[data-state=mismatch]{border-color:#e48b87;background:#fff0ee;color:#6d3340}
+@media(max-width:620px){.u4-talk-words{bottom:23%;padding:4px;border-radius:12px}.u4-talk-word{min-width:42px;min-height:38px;border-width:2px;padding:2px 5px}}
