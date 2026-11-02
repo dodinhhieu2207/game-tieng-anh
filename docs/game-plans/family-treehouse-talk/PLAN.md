@@ -23,6 +23,6 @@ Skills used: `frontend-design` for hierarchy/type/layout; `imagegen` for the two
 | Realtime words | blocked at live transport QA | Nova-3 WebSocket accepted the connection but closed on the first PCM audio frame, including an approved Higgs clip. Worker rolled back to stable batch version `19353ad2-a483-4031-ba48-0fb7c90563ab`. No simulated interim words shipped. |
 | Progress | done | stable key `u4familytalk`, best-star event |
 | Five-width layout QA | pass | 320, 390, 768, 1024 and 1366; no horizontal overflow, visible controls at least 48px |
-| Video/public QA | pending | not yet measured |
+| Public QA | partial pass | GitHub Pages `da0a8cb` serves new files; mocked Cloudflare completion in Chromium passed at 320, 390, 768 and 1366 px with no horizontal overflow or page errors. Approved Higgs `grandma.mp3` returned CORRECT from deployed batch Worker. Child microphone speech remains unmeasured. |
 
 No pronunciation score is displayed. The final count is only the number of complete introductions accepted by the semantic evaluator.
