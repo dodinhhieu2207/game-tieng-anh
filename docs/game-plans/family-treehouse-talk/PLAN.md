@@ -16,6 +16,7 @@ Skills used: `frontend-design` for hierarchy/type/layout; `imagegen` for the two
 | Transparent frame | done | `assets/family-treehouse-talk/portrait-frame.webp` |
 | Character art | reused/approved | six `assets/unit4/lesson1/matching/*.webp` portraits |
 | Interaction states | done | orb ready/recording/processing/correct, transcript and retry states |
+| Result assets and choreography | done | dedicated correct/retry SVG badges, scene glow, portrait cheer/nudge, shared SFX/VFX |
 | Voice | reused Higgs | `assets/family-album/audio/clips.js`, exact six sentences and question |
 | Speaking contract | implemented locally | `family-introduction` evaluator + Worker source; public deployment not performed |
 | Progress | done | stable key `u4familytalk`, best-star event |

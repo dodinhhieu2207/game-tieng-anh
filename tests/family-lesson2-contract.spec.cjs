@@ -7,4 +7,6 @@ assert.equal(e.evaluate('This is my mom.','mum','mum','family-introduction').res
 const game=fs.readFileSync('shared/family-lesson2-games.js','utf8');
 for(const token of ['u4familytalk','u4familyrescue','family-introduction','learning:activity-completed'])assert(game.includes(token),token);
 for(const file of ['assets/family-treehouse-talk/background.webp','assets/family-treehouse-talk/portrait-frame.webp','assets/family-photo-rescue/background.webp'])assert(fs.statSync(file).size>1000,file);
+for(const file of ['assets/family-treehouse-talk/result-correct.svg','assets/family-treehouse-talk/result-retry.svg'])assert(fs.statSync(file).size>500,file);
+const feedback=fs.readFileSync('shared/family-talk-feedback.js','utf8');for(const token of ['result-correct','result-retry','FamilyTalkFeedback','LearningFeedback'])assert(feedback.includes(token),token);
 console.log('family lesson 2 contracts: pass');
