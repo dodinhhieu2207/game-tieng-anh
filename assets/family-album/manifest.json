@@ -1,0 +1,127 @@
+{
+  "generator": "Built-in image_gen",
+  "date": "2026-11-01",
+  "assets": [
+    {
+      "file": "book.webp",
+      "source": "book-source.png",
+      "job": "exec-f5c2ac1f-e27b-4364-839b-44863629bd28",
+      "prompt": "Blank open scrapbook, 3:2 landscape, teal cloth binding coral corners, warm blank cream pages, transparent outside, tactile illustrated paper.",
+      "role": "open spread",
+      "sha256": "26c7cce0b6b73f6e433e5a86b46c66a64985d26fe696dbe1a0e6876d3f43249b",
+      "size": [
+        1200,
+        800
+      ],
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "cover.webp",
+      "source": "cover-source.png",
+      "job": "exec-bb37f038-f8ff-42cb-bd23-b580a06906ce",
+      "prompt": "Closed teal cloth family album portrait 4:5, ivory blank oval label, three empty photo frames, coral binding, no lettering.",
+      "role": "interactive opening cover",
+      "sha256": "fbdbeb916179666a0fc3410748e7c18382c75868775501b42693251e7bf19d8a",
+      "size": [
+        960,
+        1200
+      ],
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "frame.webp",
+      "source": "frame-source.png",
+      "job": "exec-44be4177-f384-455d-a8b3-ef1e5a80d0a9",
+      "prompt": "Cream paper portrait frame, turquoise trim gold corners coral heart, transparent outer and empty center, no image or text.",
+      "role": "portrait surround",
+      "sha256": "4b703a20b796e2703e0fb51aaf1e3bc08947503d178fa729e4af73d14461d6fd",
+      "size": [
+        960,
+        1200
+      ],
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "flap.webp",
+      "source": "flap-source.png",
+      "job": "exec-f7fa2a10-6980-4ff0-9b58-a85b77227c25",
+      "prompt": "Coral mystery flap 4:5, top hinge, teal pull tab, cream embossed question mark, separate layer transparent outside.",
+      "role": "hinged/sliding mystery cover",
+      "sha256": "8dba505dd11dbcdb072d0b2c9d28e645dc3b7c630f888db04825f8acc5445ee9",
+      "size": [
+        960,
+        1200
+      ],
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "portraits.webp",
+      "source": "portraits-source.png",
+      "job": "exec-6ccb66cc-4fc7-42b6-9fbf-e0c0aee3b38c",
+      "prompt": "Reference approved family portrait strip. 4columns 3rows: mum open/closed dad open/closed; brother open/closed sister open/closed; grandpa open/closed grandma open/closed. Same clothing and identity; transparent equal cells.",
+      "role": "six two-pose blink sprites",
+      "sha256": "d6683491fe57d8cdeccc9ad972bd11541ec3bddf5e1c5a2abadbde7168da1c19",
+      "size": [
+        1448,
+        1086
+      ],
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "button.webp",
+      "source": "button-source.png",
+      "job": "exec-2d5c5067-4cfc-443a-95fc-eaac2c1b3950",
+      "prompt": "Blank horizontal 4:1 cream pill, teal cloth padded rim gold inset edge coral tab, transparent outside, tactile scrapbook no letters.",
+      "role": "navigation controls",
+      "sha256": "08a72218f89faa1c9d6f2130ee9575c88eaa762c0d77a9254ddd31361aeb390b",
+      "size": [
+        600,
+        200
+      ],
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "activity.webp",
+      "source": "activity-source.png",
+      "job": "exec-17959820-344c-41ed-821a-880cd497530e",
+      "role": "wide activity navigation card",
+      "prompt": "2:1 original family album activity banner, teal/coral scrapbook, exact My Family Album and Unit4 Lesson2 labels, three family photos, matching approved banner style.",
+      "size": [
+        1000,
+        500
+      ],
+      "sha256": "e2cda72c678319d0229b0f21e93df41b4a7e821b6fc43226322d74933defcd97"
+    }
+  ],
+  "reference": "assets/unit4/lesson1/family-portraits.webp, supplied book page32",
+  "music": {
+    "file": "music.mp3",
+    "source": "music-source.mp3",
+    "title": "Vaporware",
+    "creator": "The Cynic Project / cynicmusic.com / pixelsphere.org",
+    "license": "CC0-1.0",
+    "page": "https://opengameart.org/content/calm-piano-1-vaporware",
+    "download": "https://opengameart.org/sites/default/files/003_Vaporware_2.mp3",
+    "processing": "Entire164.95s source; loudnorm I=-26 TP=-6 LRA9,2s start fade, end fade from162.9s;96kMP3. Runtime gain .13,duck .025,stopped muted/hidden/leave.",
+    "sha256": "273e12a9a8e0bbdaa612b977daec4f3db15869dde423dd459f31239b4cc8cbd9"
+  },
+  "sfx": "Existing assets/playful-foley, Kenney CC0; no newly synthesized effects"
+}

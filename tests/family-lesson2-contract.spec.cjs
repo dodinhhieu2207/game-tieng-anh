@@ -1,0 +1,10 @@
+const assert=require('assert');const fs=require('fs');const vm=require('vm');
+const src=fs.readFileSync('shared/speech-evaluator.js','utf8');const context={globalThis:{}};vm.runInNewContext(src,context);const e=context.globalThis.ToySpeechEvaluator;
+assert.equal(e.evaluate('This is my grandma.','grandma','grandma','family-introduction').result,'CORRECT');
+assert.equal(e.evaluate('This is my mum.','grandma','grandma','family-introduction').result,'WRONG_LOGIC');
+assert.equal(e.evaluate('grandma','grandma','grandma','family-introduction').result,'INCOMPLETE');
+assert.equal(e.evaluate('This is my mom.','mum','mum','family-introduction').result,'CORRECT');
+const game=fs.readFileSync('shared/family-lesson2-games.js','utf8');
+for(const token of ['u4familytalk','u4familyrescue','family-introduction','learning:activity-completed'])assert(game.includes(token),token);
+for(const file of ['assets/family-treehouse-talk/background.webp','assets/family-treehouse-talk/portrait-frame.webp','assets/family-photo-rescue/background.webp'])assert(fs.statSync(file).size>1000,file);
+console.log('family lesson 2 contracts: pass');

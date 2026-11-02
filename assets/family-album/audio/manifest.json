@@ -1,0 +1,100 @@
+{
+  "version": "20261101-family-album1",
+  "engine": "Higgs Audio V3, cached local weights",
+  "voice": "Belinda reference from existing accepted Unit 3 recordings",
+  "referenceSha256": "8a6e483739144be6afa2735c41441d2970588fc089139685547a964c76510d07",
+  "normalization": "FFmpeg loudnorm I=-18, TP=-1.5, LRA=7",
+  "clips": {
+    "intro": {
+      "src": "assets/family-album/audio/intro.mp3",
+      "text": "Let's open my family album.",
+      "duration": 2.335,
+      "sha256": "1e57fd37c1a2f43286c375f51be83781b155be38ca50daac1e9d0f60c09ee9ac",
+      "qaTranscript": "Let's open my family album.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "question": {
+      "src": "assets/family-album/audio/question.mp3",
+      "text": "Who's this?",
+      "duration": 1.154,
+      "sha256": "60302f5914150f180c33bdd6f99fb4bcdbaac01b108a46c1834a736fd2c2270a",
+      "qaTranscript": "Who's this?",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "mum": {
+      "src": "assets/family-album/audio/mum.mp3",
+      "text": "This is my mum.",
+      "duration": 1.611,
+      "sha256": "ce13be46983593d350a290700aac9216f70ab4798e5de9fb270e8aa69f52787d",
+      "qaTranscript": "This is my mom.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "dad": {
+      "src": "assets/family-album/audio/dad.mp3",
+      "text": "This is my dad.",
+      "duration": 1.572,
+      "sha256": "df93921a00110d4f44df16169b75a93d78c37b83179832c5914167606ad4f25f",
+      "qaTranscript": "This is my dad.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "brother": {
+      "src": "assets/family-album/audio/brother.mp3",
+      "text": "This is my brother.",
+      "duration": 1.582,
+      "sha256": "44b95fc374028bbe2781baabddb5fb2fc4de95a9fb3312ae90afbca3a30de4e7",
+      "qaTranscript": "This is my brother.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "sister": {
+      "src": "assets/family-album/audio/sister.mp3",
+      "text": "This is my sister.",
+      "duration": 1.499,
+      "sha256": "8b47c49be8af0b9dfab2435259abb5ff20bd94183a3a604be45b92b11d3ce748",
+      "qaTranscript": "This is my sister.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "grandpa": {
+      "src": "assets/family-album/audio/grandpa.mp3",
+      "text": "This is my grandpa.",
+      "duration": 1.531,
+      "sha256": "85050571b523e79b12e28b7c8f49e71336bd1d7fceb483d823c37548a8c2c059",
+      "qaTranscript": "This is my grandpa.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "grandma": {
+      "src": "assets/family-album/audio/grandma.mp3",
+      "text": "This is my grandma.",
+      "duration": 1.741,
+      "sha256": "a755827eebd7f1811de3fe66685c8e72e5c7cc5ee6fc52bc6505c4adf8ec2dcb",
+      "qaTranscript": "This is my grandma.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "your-turn": {
+      "src": "assets/family-album/audio/your-turn.mp3",
+      "text": "Your turn. Introduce my family.",
+      "duration": 2.719,
+      "sha256": "8914fb37e51c9e139dfb8960a077c3eada9d3b23ccbfa71ea0395b7bf5ad0d46",
+      "qaTranscript": "Your turn. Introduce my family.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "complete": {
+      "src": "assets/family-album/audio/complete.mp3",
+      "text": "My family! Thank you for sharing my album.",
+      "duration": 3.295,
+      "sha256": "aeee9a8f2fb367804a923bdb588197f68c1fc44760146d3cfbd88a66347128eb",
+      "qaTranscript": "My family, thank you for sharing my album.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    }
+  },
+  "limits": "Transcript QA only, humanReviewed=false. Class repetition is not recognized or assessed."
+}

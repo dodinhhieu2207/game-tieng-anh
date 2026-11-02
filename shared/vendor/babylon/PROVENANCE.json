@@ -1,0 +1,21 @@
+{
+  "version": "9.33.1",
+  "license": "Apache-2.0",
+  "upstream": "https://github.com/BabylonJS/Babylon.js",
+  "download": "https://cdn.jsdelivr.net/npm/babylonjs@9.33.1/babylon.js and matching babylonjs-loaders/babylonjs-serializers",
+  "usage": "Core + loaders lazy-loaded by workshop only; serializers authoring only. No production CDN fetch.",
+  "files": {
+    "babylon.js": {
+      "bytes": 8844172,
+      "sha256": "9ccd901c99d56d52e55ebcffaf0401585dc42c8b487b5034e1fb77d5bebe8d40"
+    },
+    "loaders.js": {
+      "bytes": 880233,
+      "sha256": "08911bb87cd50387ccc07850dba1cba4530781c2a62bfd5f7b2aea2014cc203e"
+    },
+    "serializers.js": {
+      "bytes": 199379,
+      "sha256": "2bd81049bddc3ff88415b8ae4fc1100c2e94fa2859fa2f900e6fe3e23ac493b4"
+    }
+  }
+}

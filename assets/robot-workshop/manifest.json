@@ -1,0 +1,216 @@
+{
+  "date": "2026-11-02",
+  "engine": "Babylon.js9.33.1 (Apache2.0), local runtime",
+  "authoring": "Original mesh hierarchy and bevel geometry authored in tools/robot-asset-author.js using Babylon mesh builders/vertex data; exported with official GLTF2Export. Not external AI-generated3D; raster concept generated separately. Individual GLBs centered at origin; workshop retains assembly transforms.",
+  "models": [
+    {
+      "file": "models/accessory-bow.glb",
+      "bytes": 189092,
+      "sha256": "e1c3903d78b9ec655b813f5ce8643f91a97fe0caa5fce5d285121fe12c35df91",
+      "meshCount": 3,
+      "nodes": [
+        "accessory-bow"
+      ]
+    },
+    {
+      "file": "models/accessory-hat.glb",
+      "bytes": 29004,
+      "sha256": "3f5b1f8c34e218fff6975ce95db103b2a86f7a6a717872058ffb8d90f776120f",
+      "meshCount": 2,
+      "nodes": [
+        "accessory-hat"
+      ]
+    },
+    {
+      "file": "models/envelope.glb",
+      "bytes": 42632,
+      "sha256": "58666ca5474fc6c5f05d58ad5afc2f5cbba3446d004babcd8896bce5e0ed14e7",
+      "meshCount": 3,
+      "nodes": []
+    },
+    {
+      "file": "models/part-head.glb",
+      "bytes": 283388,
+      "sha256": "ca375f48dd23d6b7df6976c0df9e071ea6dd4395a21ee67a5a433a63c49032ec",
+      "meshCount": 10,
+      "nodes": [
+        "part-head"
+      ]
+    },
+    {
+      "file": "models/part-left-arm.glb",
+      "bytes": 237968,
+      "sha256": "40cd3c32c538d572d20c290fa7a0423e17c6f15f25daaab3c5bfa5d028cb9304",
+      "meshCount": 6,
+      "nodes": [
+        "part-left-arm"
+      ]
+    },
+    {
+      "file": "models/part-left-leg.glb",
+      "bytes": 166900,
+      "sha256": "d74082e0d9a5ae087a9229c14054b58e555389184620785e41ecbdda7b00f4d1",
+      "meshCount": 4,
+      "nodes": [
+        "part-left-leg"
+      ]
+    },
+    {
+      "file": "models/part-right-arm.glb",
+      "bytes": 237976,
+      "sha256": "8f2222c6426bacb0e7a8cb12ac426d59ee8fc2060f09318021247eec47037c52",
+      "meshCount": 6,
+      "nodes": [
+        "part-right-arm"
+      ]
+    },
+    {
+      "file": "models/part-right-leg.glb",
+      "bytes": 166904,
+      "sha256": "335c7cc1b6cbea62fdae785a37d63cc8cb5e09431ff680e48653c378795cb016",
+      "meshCount": 4,
+      "nodes": [
+        "part-right-leg"
+      ]
+    },
+    {
+      "file": "models/part-torso.glb",
+      "bytes": 102144,
+      "sha256": "0f1cabdb686deb83fd773d5bd92d1c58f543cbc4cd25675ca6d21b32a128c28b",
+      "meshCount": 5,
+      "nodes": [
+        "part-torso"
+      ]
+    },
+    {
+      "file": "models/workshop.glb",
+      "bytes": 2740236,
+      "sha256": "d203ed91aa79bb369d0f40e5f27b1da305af19f9b62762c2aeec6f625a4ff5b0",
+      "meshCount": 93,
+      "nodes": [
+        "part-torso",
+        "part-left-leg",
+        "part-left-arm",
+        "part-right-leg",
+        "part-right-arm",
+        "part-head",
+        "accessory-hat",
+        "accessory-bow"
+      ]
+    },
+    {
+      "file": "models/workstation.glb",
+      "bytes": 1291352,
+      "sha256": "869ea1f98c66e7aaa6dc3f6ad302a09d63eb306689984a79857c913ad10febf6",
+      "meshCount": 50,
+      "nodes": []
+    }
+  ],
+  "art": [
+    {
+      "file": "concept.webp",
+      "source": "concept-source.png",
+      "job": "exec-6d833b2d-56c5-4e75-a37e-d13d34a5529c",
+      "role": "art direction reference, not game background",
+      "promptBrief": "Original premium preschool3D workshop concept: mint ivory robot, navy face cyan eyes gold antenna, coral hands/shoes, cream pedestal, coral tray and letter, warm peach studio. No text.",
+      "size": [
+        1200,
+        800
+      ],
+      "mode": "RGB",
+      "sha256": "4b1efaab7ba5d0abb4d916c715bc3027b4b924c9d775370365b8ff28bae2b722"
+    },
+    {
+      "file": "control.webp",
+      "source": "control-source.png",
+      "job": "exec-aabda5d2-15e5-4754-ae75-7ebfde7a52e5",
+      "role": "word tiles and toolbar surface",
+      "promptBrief": "Blank4:1 ivory beveled button, thin mint edge amber tab coral accent, satin toy material, transparent outside; no lettering.",
+      "size": [
+        600,
+        240
+      ],
+      "mode": "RGBA",
+      "sha256": "b6e59fe32b8d0dd635efd9a0b9abc84a827f1b80dc07595c444c7c269436c8d7"
+    },
+    {
+      "file": "activity.webp",
+      "source": "activity-source.png",
+      "job": "exec-d58ef01f-6792-4b19-a7a6-6790c051fc97",
+      "role": "wide activity cover",
+      "promptBrief": "Use concept robot identity.2:1 Robot Workshop banner with exact Unit4 Lesson2 label and Build a sentence. Build a friend. subtitle; mint rim, warm workshop, matching robot and parts.",
+      "size": [
+        1000,
+        500
+      ],
+      "mode": "RGB",
+      "sha256": "e999bb7d6306b4f58868e0e3b924d72c2b8df4c70341e32af2d346628cc0c2cf"
+    }
+  ],
+  "reused": {
+    "portraits": "assets/unit4/lesson1/matching/*.webp, source-book identities retained",
+    "questionSentences": "assets/family-album/audio/manifest.json",
+    "nounAudio": "assets/unit4/lesson1/audio/manifest.json",
+    "music": "assets/family-album/music.mp3, Vaporware by The Cynic Project, CC0",
+    "sfx": "assets/playful-foley/manifest.json, Kenney CC0"
+  },
+  "newVoice": "audio/manifest.json, Higgs V3 accepted Belinda reference",
+  "limits": "Head/arms are transformed rigid mesh groups, no skeletal animation or physics simulation claimed. Browser technical checks are not child learning/pronunciation/FPS measurements.",
+  "currentPresentation": {
+    "date": "2026-11-02",
+    "mode": "Dedicated prerendered illustrations on Babylon texture planes; not freely rotating GLB artwork.",
+    "reason": "User rejected primitive authored3D visual quality; new cohesive complete art set replaces live scene.",
+    "assets": [
+      {
+        "file": "art/robot-parts.png",
+        "source": "exec-93cb9235-1d09-4a06-bce2-54be3c7703bc.png",
+        "tool": "built-in imagegen",
+        "sha256": "7dccaf8b2329181bd17df736764e1cdc3f4a55660e9e806de4c6201186670dc4",
+        "role": "Current original atlas: torso/socket, slim arms, head, legs, envelope, accessories. Actual 1254px dimensions are used by all texture UV crops; source pixel anchors calibrated separately for each socket.",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      {
+        "file": "art/workshop-source.png",
+        "source": "exec-55f1f991-d691-4c29-a8d5-3649f88c6c3c.png",
+        "tool": "built-in imagegen",
+        "sha256": "70338f5b125eaba1c08e8be35c9926a6e0f54d6c8493f6eac275bf5390a01c6d",
+        "role": "Original environment plate, matching palette; empty part tray and robot pedestal."
+      },
+      {
+        "file": "art/interface.png",
+        "source": "exec-eb7500d8-8834-4a23-8dfd-655f1af683f8.png",
+        "tool": "built-in imagegen",
+        "sha256": "f411a84eeaf6d577297f99449c10f48ba50923785bdcfc8f278fcb86ce6746ba",
+        "role": "Four alpha UI illustrations: portrait frame, word tile, success medallion, socket ring."
+      },
+      {
+        "file": "art/shoulder-cup-v2.png",
+        "source": "exec-56b1778e-a2f8-4701-acf0-42df5dfdb980.png",
+        "tool": "built-in imagegen edit referencing robot-parts.png",
+        "sha256": "c7eecce2af52d031ffca1b415c354ed57ff2438c47ad34855df018d6de8ca7a4",
+        "dimensions": [
+          1774,
+          887
+        ],
+        "role": "Replacement torso with fixed gold shoulder balls; separate arm with concave mint receiving cup and no duplicate gold ball. Mirrored counterpart at render time."
+      },
+      {
+        "file": "art/torso-concealed-v3.png",
+        "source": "exec-8a5ec540-2ec6-451a-b96d-5c63a6218bae.png",
+        "tool": "built-in imagegen edit referencing original robot-parts.png",
+        "sha256": "1471fa1da5a34a70827694163e2d19849f887a1124d9b6113657cc5c7a365fc2",
+        "role": "Retired sealed shoulder experiment; not loaded. Replaced by original matching socket/plug atlas."
+      }
+    ],
+    "rig": {
+      "source": "shared/robot-workshop.js: this.rig",
+      "type": "Source pixel anchors, uniform scale, torso seats, depth, entry axis",
+      "lastCorrection": "2026-11-02",
+      "evidence": "tests/robot-socket-render-result.json; tests/robot-socket-insertion-result.json; tests/robot-assembly-result.json"
+    },
+    "shoulderMode": "Original 1254x1254 atlas with calibrated source pixel anchors. Three ordered layers: dark socket interior (30), slim arm ball plug (40), torso rim with elliptical aperture (60). The real ball is visible through the socket opening; no empty-hole paint over the ball. Arm plugs [252,535]/[148,535] align to apertures [531.5,208]/[891.5,210]."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "source": "assets/robot-workshop/art/shoulder-cup-v2.png",
+  "method": "Least-squares circle fit to alpha>180 silhouette: torso left/right outer arcs at rows320..477step2; receiving inner arc at columns1420..1500step2, first opaque row150..279. Image analysis only; source unchanged.",
+  "leftBall": [
+    211.263679,
+    395.731504,
+    92.548126
+  ],
+  "rightBall": [
+    1047.077962,
+    395.524357,
+    92.14576
+  ],
+  "cup": [
+    1432.452317,
+    177.053444,
+    67.357785
+  ],
+  "bodyUnitsPerPixel": 0.002,
+  "leftCupUnitsPerPixel": 0.002747956,
+  "rightCupUnitsPerPixel": 0.002736009,
+  "note": "Uniform map around receiving arc; smooth mesh transition preserves compact forearm below cup. These are source fitted circles, not claims that drawn shaded curves are perfect geometric circles."
+}

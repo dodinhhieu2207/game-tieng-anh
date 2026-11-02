@@ -5,6 +5,7 @@
  const school=Object.freeze(['desk','chair','pencil','crayon','notebook','egg','elephant','fish','farm']);
  const phonics=Object.freeze(['girl','guitar']);
  const numbers=Object.freeze(['one','two','three','four','five','six','seven','eight']);
+ const family=Object.freeze(['mum','dad','brother','sister','grandpa','grandma']);
  const storyLines=Object.freeze({
   'teddy-question':[/^is it a teddy(?: bear)?$/],
   'plane-question':[/^is it a plane$/],
@@ -17,8 +18,8 @@
   'teddy-cheer':[/^teddy bear(?: teddy bear)?$/],
   'billy-robot':[/^(?:i'm|im|i am) a robot$/]
  });
- const questionTypes=Object.freeze(['yes-no','name','school-name','name-question','mystery-question','toy-word','gg-word','gg-letter-name','number-word','story-line']);
- const vocabularyFor=type=>type==='story-line'?Object.keys(storyLines):type==='number-word'?numbers:type==='gg-letter-name'?['G']:type==='school-name'?school:type==='gg-word'?phonics:toys;
+ const questionTypes=Object.freeze(['yes-no','name','school-name','name-question','mystery-question','toy-word','gg-word','gg-letter-name','number-word','story-line','family-introduction']);
+ const vocabularyFor=type=>type==='story-line'?Object.keys(storyLines):type==='family-introduction'?family:type==='number-word'?numbers:type==='gg-letter-name'?['G']:type==='school-name'?school:type==='gg-word'?phonics:toys;
  // Bounded ASR spellings/homophones, independent of the displayed answer.
  // Do not fuzzy-match short words such as cat/car, or add missing grammar.
  const aliases=Object.freeze({'plain':'plane','airplane':'plane','aeroplane':'plane','ro bot':'robot','robo':'robot','baloon':'balloon','ballon':'balloon','tedi':'teddy','teddie':'teddy','gurl':'girl','guitah':'guitar','guiter':'guitar','pensil':'pencil','pencill':'pencil','cray on':'crayon','note book':'notebook','elefant':'elephant'});
@@ -41,6 +42,12 @@
    const value=/^[1-8]$/.test(normalized)?numbers[Number(normalized)-1]:normalized;
    const known=numbers.includes(value);
    return {transcript,normalized:value,result:known?(value===displayedToy?'CORRECT':'WRONG_LOGIC'):'UNCLEAR',answerType:known?'WORD':null};
+  }
+  if(questionType==='family-introduction'){
+   const value=normalized.replace(/\bmom\b/g,'mum');
+   const match=value.match(/^this is my (mum|dad|brother|sister|grandpa|grandma)$/);
+   const partial=family.includes(value)||/^this(?: is)?(?: my)?$/.test(value)||new RegExp('^(?:this is |this is my )('+family.join('|')+')$').test(value);
+   return {transcript,normalized:value,result:match?(match[1]===displayedToy?'CORRECT':'WRONG_LOGIC'):partial?'INCOMPLETE':'UNCLEAR',answerType:match?'NAME':null};
   }
   if(questionType==='gg-letter-name'){
    const named=['g','gee','letter g','the letter g','letter gee'].includes(normalized);
@@ -72,7 +79,7 @@
   const result=partial?'INCOMPLETE':!positive&&!negative?'UNCLEAR':positive===(questionToy===displayedToy)?'CORRECT':'WRONG_LOGIC';
   return {transcript,normalized,result,answerType};
  }
- const api=Object.freeze({toys,school,phonics,questionTypes,vocabularyFor,normalize,evaluate,canonicalWords});
+ const api=Object.freeze({toys,school,phonics,numbers,family,questionTypes,vocabularyFor,normalize,evaluate,canonicalWords});
  root.ToySpeechEvaluator=api;
  if(typeof module!=='undefined'&&module.exports)module.exports=api;
 })(globalThis);
