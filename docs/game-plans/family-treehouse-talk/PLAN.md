@@ -24,6 +24,6 @@ Skills used: `frontend-design` for hierarchy/type/layout; `imagegen` for the two
 | Progress | done | stable key `u4familytalk`, best-star event |
 | Five-width layout QA | pass | 320, 390, 768, 1024 and 1366; no horizontal overflow, visible controls at least 48px |
 | Public QA | partial pass | GitHub Pages `da0a8cb` serves new files; mocked Cloudflare completion in Chromium passed at 320, 390, 768 and 1366 px with no horizontal overflow or page errors. Approved Higgs `grandma.mp3` returned CORRECT from deployed batch Worker. Child microphone speech remains unmeasured. |
-| Sharp-art QA | local pass | six dedicated portraits decoded in Pixi at 320, 390, 768 and 1366 px; no horizontal overflow or page errors. Scene screenshot reviewed with sharp background, oval mat, frame and grandma portrait. Public asset delivery pending. |
+| Sharp-art QA | public pass | six dedicated portraits decoded in Pixi at 320, 390, 768 and 1366 px locally; no horizontal overflow or page errors. Scene screenshot reviewed with sharp background, oval mat, frame and grandma portrait. GitHub Pages deployment `3d57e61` succeeded; new background, frame and portraits return HTTP 200, and public scene uses the new background without page errors. |
 
 No pronunciation score is displayed. The final count is only the number of complete introductions accepted by the semantic evaluator.
