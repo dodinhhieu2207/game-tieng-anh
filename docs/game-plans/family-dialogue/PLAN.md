@@ -42,3 +42,5 @@ User requested a separate speaking asset kit and a smaller arrow above the selec
 `tests/family-dialogue-art-qa.cjs`: 320, 390, 768, 1024 and 1366px passed arrow-above-character, centered arrow, bounded size, speaking artwork, no horizontal overflow and no page errors. Final 390/1366px rerun after control styling passed, including simulated recording → processing → correct state. Actual microphone inference contract was unchanged.
 
 GitHub Pages deployment `fef0334` succeeded. The same art/geometry flow passed against the public site at 390 and 1366px, including simulated recording feedback on desktop; the new speaking console URL returned HTTP 200. Microphone callbacks in this visual QA were simulated; live speech inference was not remeasured because its contract did not change.
+
+Overlap repair: the selected full-body character previously escaped the scene's stacking context and overlaid the negative-margin build panel. The room now isolates its own layers, and the build/speaking panels follow the scene with a 24px gap. Regression QA checks the panel remains below the room at all five widths.

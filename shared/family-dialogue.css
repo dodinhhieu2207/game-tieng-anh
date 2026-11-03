@@ -38,5 +38,7 @@
 .fd .fd-tile{border:0;border-radius:16px;background:transparent url('../assets/family-dialogue/word-tile.svg') center/100% 100% no-repeat;box-shadow:none;padding:8px 12px 13px;min-height:62px}
 .fd-slot{border:0;background:transparent url('../assets/family-dialogue/sentence-slot.svg') center/100% 100% no-repeat;border-radius:17px}
 .fd-slot.is-next{border:0;box-shadow:0 0 0 3px #efc86c}.fd-slot.is-filled{border:0;background:transparent url('../assets/family-dialogue/word-tile.svg') center/100% 100% no-repeat}
+.fd-room{isolation:isolate}
+.fd-panel,.fd-speak{margin:24px auto 0}
 @media(max-width:700px){.fd-speak{height:620px;min-height:620px}.fd-speak:has([data-help]:not(.fd-hidden)){height:720px;min-height:720px}}
 @media(prefers-reduced-motion:reduce){.fd-speak[data-state=recording] [data-done],.fd-speak[data-state=processing] .fd-transcript::before{animation:none}}

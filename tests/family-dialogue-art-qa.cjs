@@ -14,6 +14,9 @@ const {chromium}=require('C:/Users/Admin/.cache/codex-runtimes/codex-primary-run
   assert.ok(geometry.width<=40);
   assert.ok(Math.abs(geometry.cx-geometry.px)<2);
   await page.locator('.fd-panel:not(.fd-hidden)').waitFor();
+  await page.waitForTimeout(550);
+  const separation=await page.evaluate(()=>{const room=document.querySelector('.fd-room').getBoundingClientRect(),panel=document.querySelector('.fd-panel').getBoundingClientRect();return panel.top-room.bottom});
+  assert.ok(separation>=20,`Build panel overlaps scene at ${width}: ${separation}`);
   for(const tile of ['This','is','my','dad'])await page.locator(`.fd-tile[data-tile="${tile}"]`).click();
   await page.locator('.fd-speak:not(.fd-hidden)').waitFor();
   await page.waitForTimeout(1800);
