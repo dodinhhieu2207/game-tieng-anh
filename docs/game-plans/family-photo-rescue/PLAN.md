@@ -1,6 +1,6 @@
 # Family Photo Rescue plan
 
-Status: implemented locally; five-width/video/public QA remains pending.
+Status: historical. Replaced by Family Show in Unit 4 Lesson 2 Activity 4 on 2026-11-03; see `docs/game-plans/family-show/PLAN.md`. Route and progress key were retained.
 
 ## Approved approach
 
