@@ -18,8 +18,8 @@
   'teddy-cheer':[/^teddy bear(?: teddy bear)?$/],
   'billy-robot':[/^(?:i'm|im|i am) a robot$/]
  });
- const questionTypes=Object.freeze(['yes-no','name','school-name','name-question','mystery-question','toy-word','gg-word','gg-letter-name','number-word','story-line','family-introduction']);
- const vocabularyFor=type=>type==='story-line'?Object.keys(storyLines):type==='family-introduction'?family:type==='number-word'?numbers:type==='gg-letter-name'?['G']:type==='school-name'?school:type==='gg-word'?phonics:toys;
+ const questionTypes=Object.freeze(['yes-no','name','school-name','name-question','mystery-question','toy-word','gg-word','gg-letter-name','number-word','story-line','family-introduction','family-yes-no']);
+ const vocabularyFor=type=>type==='story-line'?Object.keys(storyLines):['family-introduction','family-yes-no'].includes(type)?family:type==='number-word'?numbers:type==='gg-letter-name'?['G']:type==='school-name'?school:type==='gg-word'?phonics:toys;
  // Bounded ASR spellings/homophones, independent of the displayed answer.
  // Do not fuzzy-match short words such as cat/car, or add missing grammar.
  const aliases=Object.freeze({'plain':'plane','airplane':'plane','aeroplane':'plane','ro bot':'robot','robo':'robot','baloon':'balloon','ballon':'balloon','tedi':'teddy','teddie':'teddy','gurl':'girl','guitah':'guitar','guiter':'guitar','pensil':'pencil','pencill':'pencil','cray on':'crayon','note book':'notebook','elefant':'elephant'});
@@ -48,6 +48,12 @@
    const match=value.match(/^this is my (mum|dad|brother|sister|grandpa|grandma)$/);
    const partial=family.includes(value)||/^this(?: is)?(?: my)?$/.test(value)||new RegExp('^(?:this is |this is my )('+family.join('|')+')$').test(value);
    return {transcript,normalized:value,result:match?(match[1]===displayedToy?'CORRECT':'WRONG_LOGIC'):partial?'INCOMPLETE':'UNCLEAR',answerType:match?'NAME':null};
+  }
+  if(questionType==='family-yes-no'){
+   const positive=normalized==='yes it is',negative=["no it isn't",'no it isnt','no it is not'].includes(normalized);
+   const partial=normalized==='yes'||normalized==='no'||normalized==='it is'||["it isn't",'it isnt'].includes(normalized);
+   const answerType=positive?'YES':negative?'NO':null;
+   return {transcript,normalized,result:partial?'INCOMPLETE':!answerType?'UNCLEAR':positive===(questionToy===displayedToy)?'CORRECT':'WRONG_LOGIC',answerType};
   }
   if(questionType==='gg-letter-name'){
    const named=['g','gee','letter g','the letter g','letter gee'].includes(normalized);
