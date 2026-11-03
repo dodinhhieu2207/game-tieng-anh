@@ -1,6 +1,6 @@
 # Family Dialogue Studio plan
 
-Status: implemented; initial GitHub Pages release verified, final motion polish awaiting deployment.
+Status: previous public release verified; dedicated speaking art and corrected arrow locally verified, awaiting deployment.
 
 ## Decision and stack
 
@@ -14,6 +14,8 @@ Route: `activity=family-dialogue`; progress key: `u4familydialogue`. Existing Fa
 |---|---|
 | Original large room | `assets/family-dialogue/room.png` |
 | Original point arrow | `assets/family-dialogue/spotlight-arrow.svg` |
+| Dedicated speaking console | `speaking-console.png` and `speaking-console-mobile.png`, original generated artwork with live question/portrait overlays |
+| Speaking and assembly UI | Original `answer-yes.svg`, `answer-no.svg`, `microphone.svg`, `listen.svg`, `word-tile.svg`, `sentence-slot.svg` |
 | Characters | Six approved full-body `assets/family-hide-seek/family-*.webp` sheets in the large scene; six approved transparent `assets/family-treehouse-talk/portraits/*.png` in the focused panels |
 | UI word tiles, slots, speech cards | App Outfit DOM/CSS in `shared/family-dialogue.css` |
 | Opening question, introductions, family words | Approved Higgs Family Album and Unit 4 clips |
@@ -32,3 +34,9 @@ Scene → point → automatic question → build sentence → hear sentence → 
 - GitHub Pages release `9daaa9e` completed successfully; the public 390px route loaded Family Dialogue Studio, six characters and the expected full-body sheet URL with no horizontal overflow. Public microphone use by a child remains unmeasured.
 - Motion checkpoint after that release: arrow lands before “Who’s this?” starts; build and speak panels rise into view; the oral answer must be selected before Speak appears. Local 390px browser check passed with no page errors or overflow.
 - Child speech quality and classroom learning effect are not measured.
+
+## Speaking asset correction
+
+User requested a separate speaking asset kit and a smaller arrow above the selected character. Created desktop and portrait console artwork, custom Yes/No button skins, microphone/listen icons, and matching word/slot art. Retained live text and approved portraits. The arrow now belongs to the character button and is positioned with `bottom:100%` plus a gap; its motion no longer overwrites percentage translation. It remains above the head under resize and reduced motion, and the selected character is kept bright.
+
+`tests/family-dialogue-art-qa.cjs`: 320, 390, 768, 1024 and 1366px passed arrow-above-character, centered arrow, bounded size, speaking artwork, no horizontal overflow and no page errors. Final 390/1366px rerun after control styling passed, including simulated recording → processing → correct state. Actual microphone inference contract was unchanged.

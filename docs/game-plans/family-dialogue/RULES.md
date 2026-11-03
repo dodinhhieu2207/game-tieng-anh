@@ -5,3 +5,4 @@
 - Follow the constructed sentence with “Is this your <person>?” where both true and false prompts occur. A spoken full answer is checked by the deployed Cloudflare Worker. Unclear and incomplete speech is retryable without lost progress.
 - The teacher fallback must be labeled as teacher practice, never as AI verified speech. Progress and stars describe activity completion only.
 - Preserve existing Unit 4 Lesson 2 activities, approved portraits, Higgs voice, routes, and progress.
+- The pointing arrow is a small child of the selected character button, anchored above its top edge; it must never cover the face/body or drift on resize. Use the dedicated desktop/mobile speaking console artwork and game-specific answer, microphone, listening, tile and slot assets.
