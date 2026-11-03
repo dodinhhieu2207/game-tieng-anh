@@ -1,6 +1,6 @@
 # Family Dialogue Studio plan
 
-Status: previous public release verified; dedicated speaking art and corrected arrow locally verified, awaiting deployment.
+Status: dedicated speaking art and corrected arrow deployed and verified publicly at release `fef0334`.
 
 ## Decision and stack
 
@@ -40,3 +40,5 @@ Scene → point → automatic question → build sentence → hear sentence → 
 User requested a separate speaking asset kit and a smaller arrow above the selected character. Created desktop and portrait console artwork, custom Yes/No button skins, microphone/listen icons, and matching word/slot art. Retained live text and approved portraits. The arrow now belongs to the character button and is positioned with `bottom:100%` plus a gap; its motion no longer overwrites percentage translation. It remains above the head under resize and reduced motion, and the selected character is kept bright.
 
 `tests/family-dialogue-art-qa.cjs`: 320, 390, 768, 1024 and 1366px passed arrow-above-character, centered arrow, bounded size, speaking artwork, no horizontal overflow and no page errors. Final 390/1366px rerun after control styling passed, including simulated recording → processing → correct state. Actual microphone inference contract was unchanged.
+
+GitHub Pages deployment `fef0334` succeeded. The same art/geometry flow passed against the public site at 390 and 1366px, including simulated recording feedback on desktop; the new speaking console URL returned HTTP 200. Microphone callbacks in this visual QA were simulated; live speech inference was not remeasured because its contract did not change.
