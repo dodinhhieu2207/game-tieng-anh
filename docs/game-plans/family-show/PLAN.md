@@ -33,4 +33,5 @@ Route remains `activity=family-photo-rescue`; game/progress key remains `u4famil
 - Local Chromium: Activity 4 route opens Family Show; select three guests, start, ask, retry one wrong sentence, reveal three correct sentences and see the group finale.
 - 390px mobile: no horizontal overflow; controls and finale remain visible. Desktop 1366px initial scene visually inspected.
 - `node --check shared/family-show.js` passed. Audio wiring uses approved Higgs files; a real microphone or pronunciation score is intentionally outside this classroom role play.
+- Curtain timing regression: at the Start click the secret portrait source is still empty and Ask is hidden; the portrait and Ask appear only after the curtain's close transition. The same close gate runs before each next guest.
 - Public GitHub Pages verification pending deployment.
