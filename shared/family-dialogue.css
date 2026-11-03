@@ -5,5 +5,8 @@
 .fd-speak-answers .fd-answer{color:#16496a;cursor:pointer;min-height:72px}
 .fd-answer.is-selected{background:#fff0b1;border-color:#e8b141;box-shadow:0 5px 0 #ca8d34}
 .fd-answer.is-wrong{animation:fd-shake .4s}
+.fd-panel:not(.fd-hidden),.fd-speak:not(.fd-hidden){animation:fd-rise .52s cubic-bezier(.18,1.18,.32,1) both}
+@keyframes fd-rise{from{opacity:0;transform:translateY(32px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
 @media(max-width:700px){.fd-room{height:300px;min-height:0;aspect-ratio:auto}.fd-person{width:24%;height:36%}.fd-person:nth-child(1){left:18%;top:34%}.fd-person:nth-child(2){left:50%;top:34%}.fd-person:nth-child(3){left:82%;top:34%}.fd-person:nth-child(4){left:18%;top:73%}.fd-person:nth-child(5){left:50%;top:73%}.fd-person:nth-child(6){left:82%;top:73%}}
 @media(max-width:360px){.fd-room{height:270px}}
+@media(prefers-reduced-motion:reduce){.fd-panel:not(.fd-hidden),.fd-speak:not(.fd-hidden){animation:none}}

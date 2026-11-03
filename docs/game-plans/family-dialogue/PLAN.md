@@ -1,6 +1,6 @@
 # Family Dialogue Studio plan
 
-Status: implemented and locally tested; GitHub Pages deployment pending.
+Status: implemented; initial GitHub Pages release verified, final motion polish awaiting deployment.
 
 ## Decision and stack
 
@@ -29,5 +29,6 @@ Scene → point → automatic question → build sentence → hear sentence → 
 - Source syntax, local evaluator and Worker contract tests passed. Existing number, G-name and Story Stage Worker contract tests also passed.
 - Local Chromium six-person flow passed with simulated microphone callbacks: three Yes and three No, family finale, no overflow at 390px. Initial scene had no horizontal overflow at 320, 390, 768 and 1366px; desktop and mobile visuals inspected.
 - Worker deployment version `5eabdfa8-b108-42d4-82f8-fa9f98349729` completed. Two real Worker calls using the generated Higgs Yes and No clips returned `CORRECT` with matching transcripts. These samples verify transport and grammar logic, not child speech accuracy.
-- Public asset/audio and gameplay QA pending GitHub Pages deployment.
+- GitHub Pages release `9daaa9e` completed successfully; the public 390px route loaded Family Dialogue Studio, six characters and the expected full-body sheet URL with no horizontal overflow. Public microphone use by a child remains unmeasured.
+- Motion checkpoint after that release: arrow lands before “Who’s this?” starts; build and speak panels rise into view; the oral answer must be selected before Speak appears. Local 390px browser check passed with no page errors or overflow.
 - Child speech quality and classroom learning effect are not measured.
