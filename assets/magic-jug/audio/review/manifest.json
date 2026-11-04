@@ -1,0 +1,47 @@
+{
+  "engine": "derived from existing Higgs Audio V3 words",
+  "letterNameIPA": "/d\u0292e\u026a/",
+  "targetSoundIPA": "/d\u0292/",
+  "notTarget": "/j/ (as in yes)",
+  "approved": false,
+  "clips": [
+    {
+      "take": 1,
+      "source": "assets/magic-jug/audio/jug.mp3",
+      "sourceSha256": "b4f8e483567e25c32e175634ccd9cb10e9f103f430c6b221790eb40ca71a5fae",
+      "startSeconds": 0.04,
+      "endSeconds": 0.205,
+      "phoneticTarget": "/d\u0292/",
+      "preview": "assets/magic-jug/audio/review/sound-j-take-1.wav",
+      "single": "assets/magic-jug/audio/review/sound-j-take-1-single.wav",
+      "context": "assets/magic-jug/audio/review/sound-j-take-1-context.wav",
+      "sha256": "ddc6849be19386fd44c9a12d1ffc150d4e3fb9f363c77337d50e108d0b1dc7b6",
+      "duration": 2.205,
+      "processing": "native 24kHz crop, max +3.52dB gain, 3ms end fade, silence padding; no time stretch/pitch change",
+      "humanReviewed": false,
+      "status": "awaiting-user-phonetics-listening",
+      "validation": "Source words Higgs V3, ASR text checked. Closure/voicing and high-frequency frication before vowel transition inspected as a trimming aid only; not a phonetic accuracy certification."
+    },
+    {
+      "take": 2,
+      "source": "assets/magic-jug/audio/juice.mp3",
+      "sourceSha256": "ecf7c8f9eedb6297eac1e860eaa492df5db3e7e57b9bb23e074af3d46509d678",
+      "startSeconds": 0.04,
+      "endSeconds": 0.225,
+      "phoneticTarget": "/d\u0292/",
+      "preview": "assets/magic-jug/audio/review/sound-j-take-2.wav",
+      "single": "assets/magic-jug/audio/review/sound-j-take-2-single.wav",
+      "context": "assets/magic-jug/audio/review/sound-j-take-2-context.wav",
+      "sha256": "4fbb4815dfe477f8969ee7205098d602ab2ecb8cf8a5e3fb284d5af813b93498",
+      "duration": 2.265,
+      "processing": "native 24kHz crop, max +3.52dB gain, 3ms end fade, silence padding; no time stretch/pitch change",
+      "humanReviewed": false,
+      "status": "awaiting-user-phonetics-listening",
+      "validation": "Source words Higgs V3, ASR text checked. Closure/voicing and high-frequency frication before vowel transition inspected as a trimming aid only; not a phonetic accuracy certification."
+    }
+  ],
+  "references": [
+    "https://dictionary.cambridge.org/pronunciation/english/jug",
+    "https://downloads.bbc.co.uk/worldservice/learningenglish/pronunciation/pdf/sounds/sounds_chart.pdf"
+  ]
+}

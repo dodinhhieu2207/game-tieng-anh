@@ -1,6 +1,11 @@
 {
-  "version": "20261104-jug1",
+  "version": "20261104-jjart3",
   "graphics": [
+    {
+      "file": "activity-cover.webp",
+      "bytes": 235462,
+      "sha256": "ef7117920d87d56e848b437f8b1fbc2ec86369e9d22d6a3b9b8b394e7cc784f3"
+    },
     {
       "file": "button.svg",
       "bytes": 445,
@@ -42,18 +47,24 @@
       "sha256": "2a39aa3d2a3a1d87c35f0929cbc31b51294623ff4c2ebf1e46e73276f7494026"
     },
     {
+      "file": "letter-lower.webp",
+      "bytes": 24552,
+      "sha256": "9fdc60aad6e8ed7ca2f997e55abc6ff5012aad1c1528596ed6c7eed11932b592"
+    },
+    {
+      "file": "letter-upper.webp",
+      "bytes": 34016,
+      "sha256": "571952c9fbd4f98fc147fb5efffef6e9d0aa2d98b48ff853db096d8e63ac0616"
+    },
+    {
       "file": "word-plaque.svg",
       "bytes": 332,
       "sha256": "3d771e6e012418eacfa5b214277c593f8ac09cc946d3f24158c745bfc61ca7f7"
-    },
-    {
-      "file": "activity-cover.webp",
-      "bytes": 235462,
-      "sha256": "ef7117920d87d56e848b437f8b1fbc2ec86369e9d22d6a3b9b8b394e7cc784f3"
     }
   ],
   "audioManifest": "audio/manifest.json",
   "soundCredit": "CREDITS.md",
   "sourceArt": "sources.json",
-  "limits": "Magic Jug first activity only. No standalone phoneme assessment. No child outcomes measured."
+  "limits": "Magic Jug first activity only. No standalone phoneme assessment. No child outcomes measured.",
+  "phonemeReview": "audio/review/manifest.json; awaiting user listening, not active in child route"
 }

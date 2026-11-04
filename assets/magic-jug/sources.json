@@ -60,5 +60,40 @@
     ],
     "method": "resize only",
     "generator": "built-in image_gen"
+  },
+  {
+    "file": "letter-upper.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-d10f0c8a-d042-4dc2-be86-58aedc6a18ca.png",
+    "sourceSha256": "20f17e592ecce6f57eb9bf1cb357554d4a720c3f42bed856bda5d1171278f3a0",
+    "crop": [
+      135,
+      23,
+      948,
+      1293
+    ],
+    "exportSize": [
+      410,
+      640
+    ],
+    "method": "native alpha crop and resize only",
+    "generator": "built-in image_gen"
+  },
+  {
+    "file": "letter-lower.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-4ff42cd8-265c-48a3-8327-9b6d37dff15b.png",
+    "sourceSha256": "061b147499a8124ef1b728cd065fad0e3d97e8fdabd2129bc472ed4c67afcba3",
+    "crop": [
+      143,
+      56,
+      723,
+      1525
+    ],
+    "exportSize": [
+      253,
+      640
+    ],
+    "method": "native alpha crop and resize only",
+    "generator": "built-in image_gen",
+    "reference": "exec-d10f0c8a-d042-4dc2-be86-58aedc6a18ca.png"
   }
 ]
