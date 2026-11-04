@@ -1,0 +1,64 @@
+[
+  {
+    "file": "garden.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-133ece24-e8fb-4c92-84ee-a00af7281759.png",
+    "sourceSha256": "3cca21db656cd2027ba09a0b70ae596d2e29e6f481a1ef7e00d78ff195158660",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "exportSize": [
+      1536,
+      1024
+    ],
+    "method": "native alpha crop and resize only",
+    "generator": "built-in image_gen"
+  },
+  {
+    "file": "jug.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-0524853c-76a7-4a41-917a-3eb6bd56d3e8.png",
+    "sourceSha256": "fed8f487b61b3ce3dff021fe95ddacc4ac213eb1b22ccb6cfd55bc3575785c0d",
+    "crop": [
+      16,
+      21,
+      1229,
+      1164
+    ],
+    "exportSize": [
+      800,
+      754
+    ],
+    "method": "native alpha crop (threshold 32 ignores invisible fringe), resize only",
+    "generator": "built-in image_gen"
+  },
+  {
+    "file": "glass.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-5a90191f-71c7-4ab8-9b01-f00bbebb372b.png",
+    "sourceSha256": "00c2d0668d573c26c9f3209173b54e40add960f5474c69e22bdc20b9dfeca1e8",
+    "crop": [
+      230,
+      95,
+      1097,
+      1157
+    ],
+    "exportSize": [
+      653,
+      800
+    ],
+    "method": "native alpha crop (threshold 32 ignores invisible fringe), resize only",
+    "generator": "built-in image_gen"
+  },
+  {
+    "file": "activity-cover.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-4d58713f-f411-43fb-b879-c3d6e8b44539.png",
+    "sourceSha256": "67dc1091f5a42416ae52bb3265f367dfe6430c208acba11d5a37d3934b7e8f61",
+    "exportSize": [
+      1200,
+      600
+    ],
+    "method": "resize only",
+    "generator": "built-in image_gen"
+  }
+]

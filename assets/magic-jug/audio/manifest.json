@@ -1,0 +1,64 @@
+{
+  "version": "20261104-magicjug1",
+  "engine": "Higgs Audio V3, cached local weights",
+  "voice": "Belinda reference from existing accepted Unit 3 recordings",
+  "referenceSha256": "8a6e483739144be6afa2735c41441d2970588fc089139685547a964c76510d07",
+  "normalization": "FFmpeg loudnorm I=-18, TP=-1.5, LRA=7",
+  "clips": {
+    "letter": {
+      "src": "assets/magic-jug/audio/letter.mp3",
+      "text": "J.",
+      "duration": 0.746,
+      "sha256": "b927f52016daf5d0f44038f33305ebab907ba1606f4351bc4736d96e64305f51",
+      "qaTranscript": "J",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "jug": {
+      "src": "assets/magic-jug/audio/jug.mp3",
+      "text": "Jug.",
+      "duration": 0.855,
+      "sha256": "b4f8e483567e25c32e175634ccd9cb10e9f103f430c6b221790eb40ca71a5fae",
+      "qaTranscript": "JUG",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "juice": {
+      "src": "assets/magic-jug/audio/juice.mp3",
+      "text": "Juice.",
+      "duration": 1.01,
+      "sha256": "ecf7c8f9eedb6297eac1e860eaa492df5db3e7e57b9bb23e074af3d46509d678",
+      "qaTranscript": "Juice.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "discover": {
+      "src": "assets/magic-jug/audio/discover.mp3",
+      "text": "Touch the letters and pictures. Listen and say.",
+      "duration": 3.771,
+      "sha256": "11dbc52241be53c459575a6c68c9834a7b70fba75cbd07702c2c04755f64df2e",
+      "qaTranscript": "Touch the letters and pictures, listen and say.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "pour": {
+      "src": "assets/magic-jug/audio/pour.mp3",
+      "text": "Tilt the jug. Pour the juice.",
+      "duration": 2.69,
+      "sha256": "675ec3ce3f983869bcae8732a9be6b6c26452540415f84b7de4c845541e213cd",
+      "qaTranscript": "Tilt the jug, pour the juice.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "complete": {
+      "src": "assets/magic-jug/audio/complete.mp3",
+      "text": "Well done! A jug of juice!",
+      "duration": 2.771,
+      "sha256": "6f21a57dcca4a987390ba188661aa76bcb427da942f68e34eb9e8d18c2651b60",
+      "qaTranscript": "Well done, a jug of juice.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    }
+  },
+  "limits": "ASR text check only, humanReviewed=false. J is the letter name, not a standalone phoneme. Child learning outcomes not measured."
+}

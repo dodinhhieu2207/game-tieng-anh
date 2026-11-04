@@ -1,0 +1,67 @@
+/* Magic Jug: a finite J/j/jug/juice discovery and direct pouring experience. */
+(()=>{'use strict';
+ if(typeof games==='undefined'||typeof setStage==='undefined')return;
+ const ROOT='assets/magic-jug/',MQ=matchMedia('(prefers-reduced-motion: reduce)');let current,pixiPromise;
+ const clips={J:'letter',j:'letter',jug:'jug',juice:'juice'};
+ const button=(id,text,icon=id)=>`<button type="button" data-mj="${id}"><img src="${ROOT}icon-${icon}.svg" alt=""><span>${text}</span></button>`;
+ function loadPixi(){if(window.PIXI)return Promise.resolve();return pixiPromise||=new Promise((resolve,reject)=>{const s=document.createElement('script');s.src='shared/vendor/pixi/pixi.min.js?v=8.22.0';s.onload=resolve;s.onerror=()=>{pixiPromise=null;reject(Error('renderer'))};document.head.append(s)})}
+ class MagicJug{
+  constructor(){this.dead=false;this.epoch=0;this.heard=new Set();this.fill=0;this.tilt=0;this.targetTilt=0;this.phase='discover';this.awarded=false;this.audio=null;this.drag=null;this.holding=false;this.tweens=new Set();this.mount();this.init()}
+  q(s){return this.root.querySelector(s)}
+  mount(){
+   setStage(`<section class="magic-jug"><header class="mj-head"><div><small>Unit 4 · Lesson 3</small><h2>Magic Jug</h2><p>Discover Jj in the juice garden.</p></div><span class="mj-count">0 / 4</span></header><div class="mj-scene"><div class="mj-canvas" aria-hidden="true"></div><div class="mj-letter-row"><button type="button" data-word="J" aria-label="Listen to capital J">J<span></span></button><button type="button" data-word="j" aria-label="Listen to lowercase j">j<span></span></button></div><div class="mj-caption" aria-live="polite">Touch. Listen. Say.</div><button type="button" class="mj-word mj-jug-word" data-word="jug">jug<span></span></button><button type="button" class="mj-word mj-juice-word" data-word="juice">juice<span></span></button><div class="mj-fallback" hidden><img src="${ROOT}jug.webp" alt="A jug"><div class="mj-fallback-glass"><div></div><img src="${ROOT}glass.webp" alt="A glass for juice"></div></div><div class="mj-celebrate" hidden><img src="${ROOT}icon-check.svg" alt=""><strong>A jug of juice!</strong></div></div><p class="mj-status" role="status" aria-live="polite">Touch each letter and word. Listen and say.</p><div class="mj-controls">${button('listen','Listen')}${button('pour','Hold to pour')}${button('restart','Start again')}</div><p class="mj-help">Drag the jug up and right to pour. Or hold the pour button.</p><details class="mj-notes"><summary>Learning notes</summary><p>J and j have the same letter name. Listen to jug and juice. This discovery game rewards listening and pouring; it does not assess pronunciation.</p><p>Water recording: <a href="https://opengameart.org/content/running-water" target="_blank" rel="noopener">Arthur, Running water</a>, CC BY-SA 3.0; excerpt and normalization.</p></details></section>`);
+   this.root=document.querySelector('.magic-jug');this.host=this.q('.mj-canvas');
+   this.root.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;if(b.dataset.word)this.discover(b.dataset.word);else if(b.dataset.mj==='listen')this.listen();else if(b.dataset.mj==='restart')this.restart()});
+   const pour=this.q('[data-mj=pour]');pour.addEventListener('pointerdown',e=>{e.preventDefault();pour.setPointerCapture(e.pointerId);this.hold(true)});for(const name of ['pointerup','pointercancel','lostpointercapture'])pour.addEventListener(name,()=>this.hold(false));
+   pour.addEventListener('keydown',e=>{if([' ','Enter'].includes(e.key)){e.preventDefault();this.hold(true)}});pour.addEventListener('keyup',e=>{if([' ','Enter'].includes(e.key)){e.preventDefault();this.hold(false)}});pour.addEventListener('blur',()=>this.hold(false));
+   this.hide=()=>{if(document.hidden){this.stopVoice();this.release();this.stopFoley()}};this.mute=()=>{if(window.LearningApp?.isMuted()){this.stopVoice();this.stopFoley()}if(document.getElementById('soundFx')?.checked===false)this.stopFoley()};
+   document.addEventListener('visibilitychange',this.hide);document.addEventListener('change',this.mute);document.addEventListener('toybuddy:enter',this.mute);this.onMotion=()=>{this.release();this.renderLiquid()};MQ.addEventListener('change',this.onMotion);
+   restartCurrent=()=>this.restart();replayCurrent=()=>this.listen();this.sync();
+  }
+  status(text){if(!this.dead)this.q('.mj-status').textContent=text}
+  async init(){const token=++this.epoch;try{
+   await Promise.all([loadPixi(),document.fonts.load('800 44px "App Outfit"')]);if(this.dead||token!==this.epoch)return;
+   const textures=await Promise.all(['jug.webp','glass.webp'].map(p=>PIXI.Assets.load(ROOT+p)));if(this.dead||token!==this.epoch)return;
+   this.textures=textures;const app=this.app=new PIXI.Application();await app.init({width:100,height:100,backgroundAlpha:0,antialias:true,resolution:Math.min(devicePixelRatio||1,2),autoDensity:true,sharedTicker:false});if(this.dead){app.destroy(true,{children:true,texture:false});return}
+   this.host.append(app.canvas);this.world=new PIXI.Container();app.stage.addChild(this.world);
+   this.shadow=new PIXI.Graphics();this.world.addChild(this.shadow);this.liquid=new PIXI.Graphics();this.world.addChild(this.liquid);
+   this.glass=new PIXI.Sprite(textures[1]);this.glass.anchor.set(.5,1);this.glass.width=226;this.glass.height=226*textures[1].height/textures[1].width;this.glass.position.set(695,625);this.glass.eventMode="static";this.glass.cursor="pointer";this.glass.on("pointertap",()=>this.discover("juice"));this.world.addChild(this.glass);
+   this.stream=new PIXI.Graphics();this.world.addChild(this.stream);
+   this.jug=new PIXI.Sprite(textures[0]);this.jug.width=355;this.jug.height=355*textures[0].height/textures[0].width;this.jug.pivot.set(textures[0].width*.23,textures[0].height*.42);this.jug.eventMode='static';this.jug.cursor='grab';this.world.addChild(this.jug);
+   this.jug.on('pointerdown',e=>this.beginDrag(e));app.stage.eventMode='static';app.stage.on('globalpointermove',e=>this.moveDrag(e));app.stage.on('pointerup',e=>this.endDrag(e));app.stage.on('pointerupoutside',e=>this.endDrag(e));
+   this.tick=t=>this.update(Math.min(t.deltaMS/1000,.05));app.ticker.add(this.tick);this.resizeObserver=new ResizeObserver(()=>this.layout());this.resizeObserver.observe(this.host);this.layout();this.sync();
+  }catch(e){if(this.dead)return;this.fallback=true;this.q('.mj-fallback').hidden=false;this.status('Touch the words, then hold the pour button.');this.timer=setInterval(()=>this.update(.04),40);this.sync()}}
+  layout(){if(this.dead||!this.app?.renderer)return;const w=this.host.clientWidth,h=this.host.clientHeight;if(!w||!h)return;this.app.renderer.resize(w,h);this.mobile=w<650;this.world.scale.set(w/1000);this.glass.y=625+(this.mobile?200:0);this.app.stage.hitArea=new PIXI.Rectangle(0,0,w,h);this.release();this.renderLiquid()}
+  sync(){if(this.dead)return;this.root.dataset.phase=this.phase;this.root.dataset.heard=String(this.heard.size);this.root.dataset.fill=this.fill.toFixed(3);this.q('.mj-count').textContent=`${this.heard.size} / 4`;this.root.querySelectorAll('[data-word]').forEach(b=>{const done=this.heard.has(b.dataset.word);b.classList.toggle('mj-heard',done);b.querySelector('span').textContent=done?'✓':''});this.q('[data-mj=pour]').disabled=this.phase!=='pour';this.q('.mj-help').hidden=this.phase!=='pour';this.q('.mj-caption').textContent=this.phase==='discover'?'Touch. Listen. Say.':this.phase==='pour'?'Tilt the jug. Pour the juice.':'Jj · jug · juice';this.q('.mj-celebrate').hidden=this.phase!=='complete';if(this.jug)this.jug.cursor=this.phase==='pour'?'grab':'pointer'}
+  async discover(word){if(this.dead||!clips[word])return;const token=this.epoch;this.status(`Listen: ${word}.`);const ok=await this.voice(clips[word]);if(this.dead||token!==this.epoch)return;if(ok||window.LearningApp?.isMuted()){this.heard.add(word);if(this.heard.size===4&&this.phase==='discover'){this.phase='pour';this.status('Now drag the jug up and right. Pour the juice!')}else if(this.phase==='discover')this.status('Good listening! Touch another letter or word.');this.sync()}else this.status('Sound could not play. Touch the word to try again.')}
+  beginDrag(e){if(this.phase!=='pour'){this.discover('jug');return}if(this.drag)return;const p=this.world.toLocal(e.global);this.drag={pointer:e.pointerId,x:p.x,y:p.y};this.stopVoice();try{this.app.canvas.setPointerCapture(e.pointerId)}catch{}}
+  moveDrag(e){if(!this.drag||this.drag.pointer!==e.pointerId)return;const p=this.world.toLocal(e.global);this.targetTilt=Math.max(0,Math.min(1,((p.x-this.drag.x)+(this.drag.y-p.y)) / 230))}
+  endDrag(e){if(!this.drag||this.drag.pointer!==e.pointerId)return;const tapped=this.targetTilt<.05;this.release();if(tapped)this.discover('jug')}
+  hold(on){if(on&&this.phase!=='pour')return;this.holding=on;if(on)this.stopVoice();this.targetTilt=on?1:0}
+  release(){if(this.drag){try{this.app?.canvas.releasePointerCapture(this.drag.pointer)}catch{}}this.drag=null;this.holding=false;this.targetTilt=0;this.stopFoley()}
+  update(dt){if(this.dead||document.hidden)return;this.tilt+=(this.targetTilt-this.tilt)*Math.min(1,dt*12);if(Math.abs(this.tilt-this.targetTilt)<.002)this.tilt=this.targetTilt;
+   const active=this.phase==='pour'&&(this.drag||this.holding)&&this.tilt>.42;
+   if(active){this.fill=Math.min(1,this.fill+dt*.19);this.startFoley()}else this.stopFoley();this.flowing=!!active;this.time=(this.time||0)+dt;this.renderLiquid();this.root.dataset.fill=this.fill.toFixed(3);
+   if(this.fill>=1&&this.phase==='pour')this.finish();
+  }
+  renderLiquid(){if(this.fallback){this.q('.mj-fallback-glass>div').style.height=(this.fill*72)+'%';return}if(!this.world)return;
+   const t=this.tilt,offset=this.mobile?200:0;this.jug.position.set(280+110*t,435-205*t+offset);this.jug.rotation=t*.78;
+   this.shadow.clear().ellipse(390,630+offset,135-35*t,15-7*t).fill({color:0x116d70,alpha:.14*(1-t*.5)}).ellipse(695,630+offset,90,12).fill({color:0x116d70,alpha:.13});
+   const bottom=593+offset,top=bottom-this.fill*198,frac=this.fill,cx=675,left=cx-(52+frac*28),right=cx+(52+frac*28);
+   this.liquid.clear();if(this.fill>0){this.liquid.moveTo(cx-52,bottom).lineTo(cx+52,bottom).lineTo(right,top).lineTo(left,top).closePath().fill({color:0xffb52d,alpha:.94});this.liquid.ellipse(cx,top,52+frac*28,10).fill({color:0xffdb70,alpha:1});this.liquid.ellipse(cx,top-1,40+frac*20,5).stroke({color:0xfff0b2,width:2,alpha:.7})}
+   this.stream.clear();if(this.flowing){const p=this.jug.toGlobal(new PIXI.Point(this.textures[0].width*.95,this.textures[0].height*.085)),local=this.world.toLocal(p),endY=Math.max(435+offset,top);
+    this.stream.moveTo(local.x,local.y).bezierCurveTo(local.x+4,local.y+30,local.x+8,endY-25,local.x+8,endY).stroke({color:0xffb52d,width:12,cap:'round'});this.stream.moveTo(local.x-2,local.y).lineTo(local.x+5,endY).stroke({color:0xffe29a,width:3,alpha:.8});
+    if(!MQ.matches){for(let i=0;i<3;i++){const a=this.time*5+i*2;this.stream.circle(local.x+8+Math.sin(a)*17,endY-5-Math.abs(Math.cos(a))*14,2.5).fill(0xffc14a)}}
+   }
+  }
+  async finish(){this.phase='complete';this.release();this.sync();this.status('A jug of juice! Listen and say it together.');if(!this.awarded){this.awarded=true;document.dispatchEvent(new CustomEvent('learning:activity-completed',{detail:{game:'u4magicjug',stars:3}}))}if(this.glass&&window.gsap&&!MQ.matches){const tween=gsap.fromTo(this.glass.scale,{x:this.glass.scale.x*.96,y:this.glass.scale.y*.96},{x:this.glass.scale.x,y:this.glass.scale.y,duration:.55,ease:'back.out(1.5)'});this.tweens.add(tween)}await this.voice('complete')}
+  listen(){return this.voice(this.phase==='discover'?'discover':this.phase==='complete'?'complete':'pour')}
+  voice(key){this.stopVoice();if(window.LearningApp?.isMuted())return Promise.resolve(true);this.stopFoley();return new Promise(resolve=>{const a=new Audio(ROOT+'audio/'+key+'.mp3');let settled=false;const finish=ok=>{if(settled)return;settled=true;clearTimeout(timeout);if(this.audio?.element===a)this.audio=null;resolve(ok)};const timeout=setTimeout(()=>{a.pause();finish(false)},15000);this.audio={element:a,finish};a.onended=()=>finish(true);a.onerror=()=>finish(false);a.play().catch(()=>finish(false))})}
+  stopVoice(){const a=this.audio;this.audio=null;if(a){a.element.pause();a.finish(false)}}
+  startFoley(){if(this.foley||this.audio||window.LearningApp?.isMuted()||document.getElementById('soundFx')?.checked===false)return;const a=this.foley=new Audio(ROOT+'pour.ogg');a.loop=true;a.volume=.28;a.learningSfx=true;a.play().catch(()=>{if(this.foley===a)this.foley=null})}
+  stopFoley(){this.foley?.pause();this.foley=null}
+  restart(){this.dispose();current=new MagicJug()}
+  dispose(){if(this.dead)return;this.dead=true;this.epoch++;this.release();this.stopVoice();clearInterval(this.timer);this.resizeObserver?.disconnect();for(const t of this.tweens)t.kill();document.removeEventListener('visibilitychange',this.hide);document.removeEventListener('change',this.mute);document.removeEventListener('toybuddy:enter',this.mute);MQ.removeEventListener('change',this.onMotion);if(this.app?.renderer){this.app.ticker.remove(this.tick);this.app.destroy(true,{children:true,texture:false,textureSource:false})}this.app=null}
+ }
+ games.u4magicjug={enter:()=>{current?.dispose();current=new MagicJug()}};GAME_META.u4magicjug=['UNIT 4 · LESSON 3','Magic Jug','Discover Jj, jug and juice.'];document.addEventListener('learning:leave-activity',()=>{current?.dispose();current=null});
+})();

@@ -1,0 +1,59 @@
+{
+  "version": "20261104-jug1",
+  "graphics": [
+    {
+      "file": "button.svg",
+      "bytes": 445,
+      "sha256": "5e07f4b6341d014c15fa15c80b9947f847d47bbe528b99f7ed483d901c9b108e"
+    },
+    {
+      "file": "garden.webp",
+      "bytes": 306126,
+      "sha256": "a88d5f2a2f61fb7c6508af59832988cda7645bfe5dfc72f16033d3384c465c1a"
+    },
+    {
+      "file": "glass.webp",
+      "bytes": 162998,
+      "sha256": "8efe0c839453a295a239588175baff14f66784698b2be28467ce2f3be6c7361a"
+    },
+    {
+      "file": "icon-check.svg",
+      "bytes": 211,
+      "sha256": "5fa97decee45b557101c96ab06171d6621a059a36653b9d31e663cd8f3649a68"
+    },
+    {
+      "file": "icon-listen.svg",
+      "bytes": 269,
+      "sha256": "70501f67c17cf099cd85c4a79f96bca0d6b1418195302e2d4d1f8a1df8955d6c"
+    },
+    {
+      "file": "icon-pour.svg",
+      "bytes": 234,
+      "sha256": "fbd02d57df9927ce14088beaf0ae26d55a2b80273f548e77c01fb9a602b6e9f0"
+    },
+    {
+      "file": "icon-restart.svg",
+      "bytes": 228,
+      "sha256": "2d94a746308289a65259ac6877ea765a26fdea45b4e77b04bd3db80cd6298700"
+    },
+    {
+      "file": "jug.webp",
+      "bytes": 161920,
+      "sha256": "2a39aa3d2a3a1d87c35f0929cbc31b51294623ff4c2ebf1e46e73276f7494026"
+    },
+    {
+      "file": "word-plaque.svg",
+      "bytes": 332,
+      "sha256": "3d771e6e012418eacfa5b214277c593f8ac09cc946d3f24158c745bfc61ca7f7"
+    },
+    {
+      "file": "activity-cover.webp",
+      "bytes": 235462,
+      "sha256": "ef7117920d87d56e848b437f8b1fbc2ec86369e9d22d6a3b9b8b394e7cc784f3"
+    }
+  ],
+  "audioManifest": "audio/manifest.json",
+  "soundCredit": "CREDITS.md",
+  "sourceArt": "sources.json",
+  "limits": "Magic Jug first activity only. No standalone phoneme assessment. No child outcomes measured."
+}
