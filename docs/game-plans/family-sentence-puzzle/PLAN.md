@@ -1,6 +1,6 @@
 # Family Sentence Puzzle plan
 
-Status: gameplay publicly verified at `f0164d5`; complete 26-graphic kit locally verified and awaiting deployment, 2026-11-04.
+Status: complete 26-graphic kit deployed and publicly verified at `690099f`, 2026-11-04.
 
 ## Approved decision
 
@@ -52,3 +52,5 @@ The first release had a new desk, shape and photo frame but generic control and 
 See `assets/family-sentence-puzzle/catalog.html` and its generated `manifest.json` for per-file roles and hashes. No new scene engine or speech contract was introduced.
 
 Full-kit local QA passed the existing real-canvas drag/tap/swap and six-sentence Higgs flow, correct/retry seals, colored pieces and trays, mute/leave cleanup, audio failure, keyboard fallback and layout at all five widths. Tests additionally confirm the raster title/primary-button skins and desktop/phone album selection; the catalogue loaded all 26 graphics without missing images. Initial, retry and completed album screenshots were inspected on desktop and phone; mobile subtitle was removed from the title plaque to avoid text touching its ornamented border, and finale captions use a consistent two-line sentence.
+
+GitHub Pages `690099f` deployment succeeded. Public catalogue QA loaded all 26 graphic previews. Public game QA at 390 and 1366px confirmed the new title/button assets, assembled a sentence, played the real Higgs clip, displayed the solved Next control with its custom icon, and had no page errors or horizontal overflow.
