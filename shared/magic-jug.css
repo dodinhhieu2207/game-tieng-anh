@@ -9,3 +9,18 @@
 @container(max-width:650px){.mj-caption{top:35%}}
 
 .magic-jug{container-type:inline-size}.mj-word,.mj-letter-row button{font-family:"App Outfit",sans-serif!important}@media(max-width:650px){.magic-jug{padding:12px 0}}
+
+.magic-jug[data-phase=question] .mj-letter-row:has(button:disabled){opacity:.7}
+.magic-jug .mj-letter-row button:disabled{cursor:default}
+.magic-jug .mj-picture-choice{color:transparent!important}
+.magic-jug .mj-picture-choice::after{content:'Tap';position:absolute;inset:0;display:grid;place-items:center;padding-bottom:10px;color:#174d65;font:800 clamp(1rem,2.6vw,1.6rem) "App Outfit",sans-serif}
+.mj-answer-mark{position:absolute;top:57%;transform:translate(-50%,-50%);width:66px;height:66px;background:#fffbea;border:4px solid #35a77d;color:#16805f;border-radius:50%;display:grid;place-items:center;box-shadow:0 5px 0 #17765f44;font:900 3rem "App Outfit",sans-serif;pointer-events:none}
+.mj-answer-mark[data-correct=false]{color:#b65b36;border-color:#e6a068}
+.magic-jug[data-level="3"] .mj-answer-mark{top:27%}
+.magic-jug[data-phase=question][data-level="3"] .mj-word{display:none}
+.magic-jug[data-phase=round-done] .mj-caption{visibility:visible}
+.mj-fallback.mj-swapped{flex-direction:row-reverse}
+.mj-wrong{animation:mj-retry .35s ease-in-out}
+@keyframes mj-retry{0%,100%{translate:0}30%{translate:-4px}70%{translate:4px}}
+@media(prefers-reduced-motion:reduce){.mj-wrong{animation:none}}
+@container(max-width:650px){.mj-answer-mark{width:48px;height:48px;font-size:2rem;border-width:3px}.magic-jug[data-level="3"] .mj-answer-mark{top:27%}}
