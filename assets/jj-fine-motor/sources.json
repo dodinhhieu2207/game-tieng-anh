@@ -34,5 +34,23 @@
     "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-d7d29294-6e2e-47f2-be0d-7415d0ec5805.png",
     "sha256": "ab1085776ba2a94d6e0ebd0031587e4b3c0c4bd45a2f85e9f1e641f744fa8935",
     "method": "built-in image_gen; resize/export only"
+  },
+  {
+    "file": "colour-jug.png",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-e47bf71a-bd4e-4da3-b745-84d4d9dc895f.png",
+    "sha256": "86d8ed8f062f1d5a2b28e23edfcce1f33abe87b5bc0c54db0249bbda3b114692",
+    "method": "built-in image_gen; alpha-bounds trim and resize/export only; white closed interiors, transparent outside; coloring regions read from PNG pixels at runtime"
+  },
+  {
+    "file": "colour-juice.png",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-cb89c3d0-338f-4d5e-b7b2-cd4afb984fea.png",
+    "sha256": "599e08741ec3e5174a1a04b18ce5f9c0ede71a5e93a158c316a3b1f34ecddc16",
+    "method": "built-in image_gen; alpha-bounds trim and resize/export only; white closed interiors, transparent outside; coloring regions read from PNG pixels at runtime"
+  },
+  {
+    "file": "artist-table-empty.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-5bd8af0b-db0c-4bcd-9649-2a0b37949dc8.png",
+    "sha256": "ae887655c793eb8af5673563e09ad44461e9c3bf78f62b22c7460184cbf38c04",
+    "method": "built-in image_gen edit of artist-table.webp; remove baked tray contents, preserve scene; resize/export only"
   }
 ]
