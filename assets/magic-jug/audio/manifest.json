@@ -1,5 +1,5 @@
 {
-  "version": "20261104-magicjug1",
+  "version": "20261104-jjsound4",
   "engine": "Higgs Audio V3, cached local weights",
   "voice": "Belinda reference from existing accepted Unit 3 recordings",
   "referenceSha256": "8a6e483739144be6afa2735c41441d2970588fc089139685547a964c76510d07",
@@ -58,7 +58,22 @@
       "qaTranscript": "Well done, a jug of juice.",
       "transcriptMatch": true,
       "humanReviewed": false
+    },
+    "sound-j": {
+      "src": "assets/magic-jug/audio/sound-j.wav",
+      "text": "/d\u0292/ repeated three times with silence gaps",
+      "kind": "phoneme",
+      "duration": 2.205,
+      "sha256": "ddc6849be19386fd44c9a12d1ffc150d4e3fb9f363c77337d50e108d0b1dc7b6",
+      "engine": "derived from existing Higgs V3 jug clip",
+      "source": "assets/magic-jug/audio/review/sound-j-take-1.wav",
+      "userApproved": true,
+      "approvalText": "v\u1eady ch\u1ecdn 1",
+      "approvedOn": "2026-11-04",
+      "humanReviewed": false,
+      "phoneticCertification": false,
+      "validation": "User selected take 1 for use; native-time /d\u0292/ crop before vowel, not name /d\u0292e\u026a/. No ASR phoneme certification."
     }
   },
-  "limits": "ASR text check only, humanReviewed=false. J is the letter name, not a standalone phoneme. Child learning outcomes not measured."
+  "limits": "Original words ASR text checked. Sound-j selected by user, not an independent phonetic certification. Letter-name and sound controls remain separate. Child outcomes not measured."
 }

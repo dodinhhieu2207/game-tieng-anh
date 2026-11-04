@@ -3,7 +3,7 @@
   "letterNameIPA": "/d\u0292e\u026a/",
   "targetSoundIPA": "/d\u0292/",
   "notTarget": "/j/ (as in yes)",
-  "approved": false,
+  "approved": true,
   "clips": [
     {
       "take": 1,
@@ -19,8 +19,9 @@
       "duration": 2.205,
       "processing": "native 24kHz crop, max +3.52dB gain, 3ms end fade, silence padding; no time stretch/pitch change",
       "humanReviewed": false,
-      "status": "awaiting-user-phonetics-listening",
-      "validation": "Source words Higgs V3, ASR text checked. Closure/voicing and high-frequency frication before vowel transition inspected as a trimming aid only; not a phonetic accuracy certification."
+      "status": "user-selected-for-use",
+      "validation": "Source words Higgs V3, ASR text checked. Closure/voicing and high-frequency frication before vowel transition inspected as a trimming aid only; not a phonetic accuracy certification.",
+      "userApproved": true
     },
     {
       "take": 2,
@@ -36,12 +37,16 @@
       "duration": 2.265,
       "processing": "native 24kHz crop, max +3.52dB gain, 3ms end fade, silence padding; no time stretch/pitch change",
       "humanReviewed": false,
-      "status": "awaiting-user-phonetics-listening",
+      "status": "not-selected",
       "validation": "Source words Higgs V3, ASR text checked. Closure/voicing and high-frequency frication before vowel transition inspected as a trimming aid only; not a phonetic accuracy certification."
     }
   ],
   "references": [
     "https://dictionary.cambridge.org/pronunciation/english/jug",
     "https://downloads.bbc.co.uk/worldservice/learningenglish/pronunciation/pdf/sounds/sounds_chart.pdf"
-  ]
+  ],
+  "selectedTake": 1,
+  "userApproval": "v\u1eady ch\u1ecdn 1",
+  "approvedOn": "2026-11-04",
+  "phoneticCertification": false
 }

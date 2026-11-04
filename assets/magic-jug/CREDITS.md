@@ -5,4 +5,6 @@ Pouring foley: “Running water” by Arthur, https://opengameart.org/content/ru
 PixiUI and Pixi Creation Templates: UI design references only, no copied implementation or additional runtime. Local PixiJS/GSAP retain their existing licenses.
 Higgs V3 new finite catalogue: audio/manifest.json. Letter clip is letter name J, not isolated phoneme /dʒ/.
 
-Dedicated uppercase J and lowercase j: built-in image_gen, native alpha crops. Lowercase regenerated edge cleanup source retained in sources.json. Consonant auditions are cropped from existing Higgs V3 jug/juice, with short edge fade/gain/silence padding; no external dictionary recordings copied. Status pending listening; not active in child route.
+Dedicated uppercase J and lowercase j: built-in image_gen, native alpha crops. Lowercase regenerated edge cleanup source retained in sources.json. Consonant auditions are cropped from existing Higgs V3 jug/juice, with short edge fade/gain/silence padding; no external dictionary recordings copied. Take 1 subsequently selected by user; exact selected preview is now active as sound-j.wav.
+
+2026-11-04 user selected take 1 (“vậy chọn 1”). audio/sound-j.wav is a byte-identical copy of the three-repetition take 1 preview, separate from letter.mp3. Name/Sound controls exist in discovery and completion only, to avoid cueing answers during listening challenges. userApproved=true records selection, not a new independent phonetic certification.

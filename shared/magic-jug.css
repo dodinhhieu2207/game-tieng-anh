@@ -34,3 +34,5 @@
 .magic-jug .mj-letter-row .mj-letter-art{width:132px;height:150px}
 @container(max-width:900px){.magic-jug .mj-letter-row .mj-letter-art{width:104px;height:112px}}
 @container(max-width:650px){.magic-jug .mj-letter-row .mj-letter-art{width:66px;height:70px}}
+
+.mj-phonics-controls{margin:0 0 10px}.mj-phonics-controls [data-mj=sound]{background-color:#def9ea;border-radius:35px}

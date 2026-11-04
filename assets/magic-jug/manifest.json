@@ -66,5 +66,5 @@
   "soundCredit": "CREDITS.md",
   "sourceArt": "sources.json",
   "limits": "Magic Jug first activity only. No standalone phoneme assessment. No child outcomes measured.",
-  "phonemeReview": "audio/review/manifest.json; awaiting user listening, not active in child route"
+  "phonemeReview": "Take 1 selected by user on 2026-11-04; active audio/sound-j.wav, distinct from name clip. Details audio/review/manifest.json"
 }

@@ -1,5 +1,5 @@
 # Magic Jug — Jolly Juice Garden
-Status: learning upgrade implemented, locally tested and publicly verified at 3d4b27e on 2026-11-04. Discovery-only baseline retained in history at 1bd0601.
+Status: take 1 selected by user; Name/Sound integration locally verified, public update pending.
 ## Approved scope
 User: “Vậy tiến hành làm” after recommendation to build one complete Magic Jug screen first. PixiJS 8.22.0 + existing GSAP. PixiUI https://github.com/pixijs/ui (MIT) and Pixi Creation https://github.com/pixijs/create-pixi consulted for skinned buttons and distinct pressed/disabled states; reference only, not new runtime dependencies. Skills frontend-design, interaction-design, imagegen.
 Route activity=magic-jug; game key u4magicjug. Unit 4 Lesson 3 becomes available with only this activity; preserve other planned lessons.
@@ -34,3 +34,8 @@ Created two audition-only native-time crops from existing Higgs jug/juice; retai
 Jj art/audition QA: existing full six-question game suite PASS after letter art integration, with two discovery assets loaded and zero art cues during distractor questions. All name/jug/juice source hashes unchanged. Both real WAV preview files play through ended, metadata/durations checked, starting one stops the other. Review manifest remains approved=false and no standalone sound is referenced by child route. Art deployment pending; phoneme activation pending user listening choice.
 
 Public Jj-art verification: GitHub Pages 5e0911d succeeded; hosted phone browser loaded both art sprites, played unchanged name clip, fetched no unapproved consonant preview in child route, loaded 12 catalogue graphics and played both review WAVs through ended. User asked which take is linguistically correct rather than approving a take. Recommendation: take 1 is the better isolation candidate because its crop ends before the source vowel onset; both source words share /dʒ/, so take 2 is not a different phoneme. Recommendation is acoustic-boundary inference, not completed perceptual phonetic validation. Phoneme review remains pending; no take is marked user-approved or activated.
+
+## User-selected sound activation
+User explicitly selected take 1 (“vậy chọn 1”). Copied exact triple preview bytes to audio/sound-j.wav; original name/jug/juice clips unchanged. Separate Letter name and Sound controls visible only in discovery/completion, so no extra cue in challenge rounds. Shared voice ownership, mute, leave cleanup and retry path. User-approved selection is stored independently of human phonetic certification (not claimed). Local QA/deployment pending.
+
+Sound activation QA: tests/magic-jug-sound.spec.cjs PASS actual 2.205s playback, exact selected bytes, distinct name, rapid interruption/no overlap, mute and no muted play, error/retry with no false discovery credit, cleanup on leave. The error-path check found an ended/error Audio element could keep paused=false; finish now pauses and clears handlers in all paths. Existing learning flow remains unchanged.
