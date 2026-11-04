@@ -1,0 +1,55 @@
+{
+  "version": "20261104-jjfine1",
+  "engine": "Higgs Audio V3, cached local weights",
+  "voice": "Belinda reference from existing accepted Unit 3 recordings",
+  "referenceSha256": "8a6e483739144be6afa2735c41441d2970588fc089139685547a964c76510d07",
+  "normalization": "FFmpeg loudnorm I=-18, TP=-1.5, LRA=7",
+  "clips": {
+    "trace-intro": {
+      "src": "assets/jj-fine-motor/audio/trace-intro.mp3",
+      "text": "Trace the letters. Follow the drop.",
+      "duration": 2.754,
+      "sha256": "88d49ed73133f0786df0dbebd1e4d30429f1c2fdde9fb0a5014e9fdda84e0ea6",
+      "qaTranscript": "Trace the letters, follow the drop.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "lab-intro": {
+      "src": "assets/jj-fine-motor/audio/lab-intro.mp3",
+      "text": "Build a path. Guide the juice to the jug.",
+      "duration": 3.212,
+      "sha256": "c945bacd7a89032a3e81646b033fbadc0aa5c56565e9e674d4ff880f3a388685",
+      "qaTranscript": "Build a path. Guide the juice to the jug.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "artist-intro": {
+      "src": "assets/jj-fine-motor/audio/artist-intro.mp3",
+      "text": "Choose a colour. Paint the jug and the juice.",
+      "duration": 3.403,
+      "sha256": "0e2285e9b27eecc3e8c64d5f742ebde0afb2980546a10b1711dfa52e69cd2749",
+      "qaTranscript": "Choose a color, paint the jug and the juice.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "trail-complete": {
+      "src": "assets/jj-fine-motor/audio/trail-complete.mp3",
+      "text": "Well done! You followed every letter!",
+      "duration": 3.048,
+      "sha256": "0dd28783e441895bac1b456a93cbff5382f3c0f7b69f0c0afe10388f23ed5c0f",
+      "qaTranscript": "Well done, you followed every letter.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "artist-complete": {
+      "src": "assets/jj-fine-motor/audio/artist-complete.mp3",
+      "text": "Your picture is ready! Beautiful work!",
+      "duration": 3.126,
+      "sha256": "aaf35da010680ed03a60392016563278bcf4c11fb0fae593a68150588ad19ed0",
+      "qaTranscript": "Your picture is ready. Beautiful work.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    }
+  },
+  "limits": "Instruction text QA only; no phonetic, motor or mastery assessment. Reuse user-selected /d\u0292/ take 1 separately."
+}

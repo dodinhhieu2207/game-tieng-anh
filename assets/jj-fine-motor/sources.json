@@ -1,0 +1,38 @@
+[
+  {
+    "file": "trail-garden.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-1fa1bb1d-c646-4e34-a7d8-33bee83c94ce.png",
+    "sha256": "f96b1ecb6bc5320ae500afe691beaab52cc5dad231bc8b55ec87a4c2d06bc34f",
+    "method": "resize/export only, built-in image_gen"
+  },
+  {
+    "file": "lab-workshop.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-4a401a21-0740-4113-9436-7ea90cc52a42.png",
+    "sha256": "03862cb5eec11e44270764d4572220a40ddc6230175c8e52415a7409a8da4cb6",
+    "method": "resize/export only, built-in image_gen"
+  },
+  {
+    "file": "artist-table.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-8df62590-d93c-4f88-a84a-13c9f8b1b635.png",
+    "sha256": "f579438cec54a670dc1fa0a228caca1c6b4a2f05c8c64d8acb88bcfa68c35d28",
+    "method": "resize/export only, built-in image_gen"
+  },
+  {
+    "file": "lab-cover.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-09404695-3c8f-4860-abce-d3695d41a16f.png",
+    "sha256": "f0b9c2c3bf60a4de44dc88bf354dc0bd57246e06a1b525f751d05c768ecc5033",
+    "method": "built-in image_gen; resize/export only"
+  },
+  {
+    "file": "trail-cover.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-fc1f0d87-c7d7-4af4-b4f9-91f53832b2ee.png",
+    "sha256": "05ded3945fcd2ec7f8077f0c982763b6535b3dab48acd0330a761554b4073391",
+    "method": "built-in image_gen; resize/export only"
+  },
+  {
+    "file": "artist-cover.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-d7d29294-6e2e-47f2-be0d-7415d0ec5805.png",
+    "sha256": "ab1085776ba2a94d6e0ebd0031587e4b3c0c4bd45a2f85e9f1e641f744fa8935",
+    "method": "built-in image_gen; resize/export only"
+  }
+]
