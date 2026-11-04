@@ -1,6 +1,6 @@
 # Family Sentence Puzzle plan
 
-Status: implemented and locally verified, public deployment pending, 2026-11-04.
+Status: implemented, deployed and publicly verified at release `f0164d5`, 2026-11-04.
 
 ## Approved decision
 
@@ -39,6 +39,8 @@ Loading → arrange → dragging/selecting → Check → partial-correct retry o
 - Renderer-load failure opens the equivalent word-button path; keyboard focus moves between word and position choices.
 - Real audio playback, shell mute, leaving the activity and retryable failed voice request.
 
-The SVG tab/notch curves use the same geometry and slot pitch so adjacent pieces interlock. Feedback marks use a layer above all pieces to remain visible at the joints. Desktop/mobile initial and retry scenes were inspected. Public release remains pending. No child learning or pronunciation measurement is claimed.
+The SVG tab/notch curves use the same geometry and slot pitch so adjacent pieces interlock. Feedback marks use a layer above all pieces to remain visible at the joints. Desktop/mobile initial and retry scenes were inspected. No child learning or pronunciation measurement is claimed.
 
 Portrait rendering uses game-owned, smoothly downsampled CanvasSource textures with mipmaps to avoid aliasing the approved high-resolution art at phone size. Source assets stay unchanged; derived textures are destroyed on exit.
+
+GitHub Pages `f0164d5` deployment succeeded. Public Chromium checks at 390 and 1366px loaded the Pixi canvas and puzzle assets, assembled a sentence, played the actual Higgs sentence through its end, reached solved state and collected its portrait; no horizontal overflow or page errors. These public checks used the real hosted assets/audio, not simulated audio completion.
