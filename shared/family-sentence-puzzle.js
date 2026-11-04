@@ -4,7 +4,9 @@
  const PEOPLE=['mum','dad','brother','sister','grandpa','grandma'];
  const ROOT='assets/family-sentence-puzzle/';
  const PORTRAIT=w=>`assets/family-treehouse-talk/portraits/${w}.png`;
+ const piecePath=word=>ROOT+({'This':'piece-this.svg','is':'piece-is.svg','my':'piece-my.svg'}[word]||'piece-family.svg');
  const MQ=matchMedia('(prefers-reduced-motion: reduce)');
+ const control=(action,label,options={})=>`<button type="button" data-fsp="${action}" ${options.primary?'class="fsp-primary"':''} ${options.hidden?'hidden':''} ${options.disabled?'disabled':''}><img src="${ROOT}icon-${action}.svg" alt=""><span>${label}</span></button>`;
  const shuffle=items=>{const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
  let current,loadingPixi;
  function loadPixi(){if(window.PIXI)return Promise.resolve();return loadingPixi||=(new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='shared/vendor/pixi/pixi.min.js?v=8.22.0';script.onload=resolve;script.onerror=()=>{loadingPixi=null;reject(new Error('renderer-load'))};document.head.append(script)}))}
@@ -19,7 +21,7 @@
   q(s){return this.root.querySelector(s)}
   status(text){if(!this.dead)this.q('.fsp-status').textContent=text}
   mount(){
-   setStage(`<section class="fsp" aria-label="Family Sentence Puzzle"><header class="fsp-head"><div><small>UNIT 4 · LESSON 2</small><h2>Family Sentence Puzzle</h2><p>Move the pieces. Build a family sentence.</p></div><b class="fsp-progress">1 / 6</b></header><div class="fsp-board" aria-label="Drag or tap the word pieces"><div class="fsp-loading" role="status">Opening the puzzle…</div></div><div class="fsp-fallback" hidden><img alt=""><strong>Build a sentence for this person.</strong></div><p class="fsp-status" role="status" aria-live="polite"></p><div class="fsp-controls"><button type="button" data-fsp="listen">♪ Listen</button><button type="button" data-fsp="hint">Show a hint</button><button type="button" data-fsp="check" class="fsp-primary" disabled>Check</button><button type="button" data-fsp="next" class="fsp-primary" hidden>Next person →</button><button type="button" data-fsp="restart">Start again</button></div><details class="fsp-alt"><summary>Use word buttons</summary><p>Choose a piece, then choose a position.</p><div class="fsp-word-buttons" aria-label="Word pieces"></div><div class="fsp-position-buttons" aria-label="Sentence positions"></div><button type="button" data-fsp="return">Return selected piece</button></details><div class="fsp-gallery" aria-label="Sentences built"></div><section class="fsp-finale" hidden><h3>Six family sentences!</h3><div class="fsp-family"></div><p>Say the sentences with a friend.</p><button type="button" data-fsp="restart" class="fsp-primary">Play again</button></section></section>`);
+   setStage(`<section class="fsp" aria-label="Family Sentence Puzzle"><header class="fsp-head"><div><small>UNIT 4 · LESSON 2</small><h2>Family Sentence Puzzle</h2><p>Move the pieces. Build a family sentence.</p></div><b class="fsp-progress">1 / 6</b></header><div class="fsp-board" aria-label="Drag or tap the word pieces"><div class="fsp-loading" role="status">Opening the puzzle…</div></div><div class="fsp-fallback" hidden><img alt=""><strong>Build a sentence for this person.</strong></div><p class="fsp-status" role="status" aria-live="polite"></p><div class="fsp-controls">${control('listen','Listen')}${control('hint','Show hint')}${control('check','Check',{primary:true,disabled:true})}${control('next','Next person',{primary:true,hidden:true})}${control('restart','Start again')}</div><details class="fsp-alt"><summary>Use word buttons</summary><p>Choose a piece, then choose a position.</p><div class="fsp-word-buttons" aria-label="Word pieces"></div><div class="fsp-position-buttons" aria-label="Sentence positions"></div>${control('return','Return selected piece')}</details><div class="fsp-gallery" aria-label="Sentences built"></div><section class="fsp-finale" hidden><h3>Six family sentences!</h3><div class="fsp-album-pages"><div class="fsp-family"></div></div><p>Say the sentences with a friend.</p>${control('restart','Play again',{primary:true})}</section></section>`);
    this.root=document.querySelector('.fsp');this.host=this.q('.fsp-board');
    this.root.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||!this.root.contains(b)||b.disabled)return;
     if(b.dataset.piece!==undefined){this.select(Number(b.dataset.piece));if(e.detail===0)this.q('.fsp-position-buttons button:not(:disabled)')?.focus()}
@@ -45,7 +47,7 @@
    const token=++this.epoch;
    try{
     await Promise.all([loadPixi(),document.fonts.load('800 40px "App Outfit"')]);if(!this.alive(token))return;
-    const paths=[ROOT+'desk.png',ROOT+'piece.svg',ROOT+'slot.svg',ROOT+'photo-frame.svg',...PEOPLE.map(PORTRAIT)];
+    const paths=[ROOT+'desk.png',ROOT+'piece-this.svg',ROOT+'piece-is.svg',ROOT+'piece-my.svg',ROOT+'piece-family.svg',ROOT+'slot.svg',ROOT+'photo-frame.svg',ROOT+'piece-tray.svg',ROOT+'correct-seal.svg',ROOT+'retry-seal.svg',...PEOPLE.map(PORTRAIT)];
     const textures=await Promise.all(paths.map(p=>PIXI.Assets.load(p)));if(!this.alive(token))return;
     this.textures=new Map(paths.map((p,i)=>[p,textures[i]]));
     const app=new PIXI.Application();this.app=app;
@@ -96,10 +98,13 @@
     this.slotNodes.push(group);this.world.addChild(group);
    });
    const last=this.slotPositions[3],period=this.text('.',this.mobile?48:45);period.anchor.set(.5);period.position.set(last.x+pw*.5+6,last.y+ph*.05);this.world.addChild(period);
-   this.homePositions=this.words.map((_,i)=>this.mobile?{x:i%2===0?165:435,y:755+Math.floor(i/2)*145,w:260,h:130}:{x:100+(800/Math.max(1,this.words.length-1))*i,y:535,w:this.words.length>4?180:200,h:106});
+   const rows=this.mobile?Math.ceil(this.words.length/2):1;
+   for(let row=0;row<rows;row++){const tray=this.sprite(ROOT+'piece-tray.svg');tray.width=this.mobile?560:950;tray.height=this.mobile?148:165;tray.position.set(W/2,this.mobile?755+row*145:535);this.world.addChild(tray)}
+   const inset=this.words.length>4?135:145;
+   this.homePositions=this.words.map((_,i)=>this.mobile?{x:this.words.length%2&&i===this.words.length-1?300:i%2===0?165:435,y:755+Math.floor(i/2)*145,w:260,h:130}:{x:inset+((W-2*inset)/Math.max(1,this.words.length-1))*i,y:535,w:this.words.length>4?180:200,h:106});
    this.tileLayer=new PIXI.Container();this.markLayer=new PIXI.Container();this.world.addChild(this.tileLayer,this.markLayer);this.tileNodes=[];
    this.words.forEach((word,id)=>{
-    const home=this.homePositions[id],group=new PIXI.Container(),art=this.sprite(ROOT+'piece.svg');art.width=home.w;art.height=home.h;group.addChild(art);group.art=art;
+    const home=this.homePositions[id],group=new PIXI.Container(),art=this.sprite(piecePath(word));art.width=home.w;art.height=home.h;group.addChild(art);group.art=art;
     const label=this.text(word,this.mobile?43:(word.length>5?32:38));label.anchor.set(.5);label.position.set(-home.w*.045,-3);group.addChild(label);group.label=label;
     const ring=new PIXI.Graphics().roundRect(-home.w*.44,-home.h*.42,home.w*.85,home.h*.82,17).stroke({color:0xf1b63b,width:5});ring.visible=false;group.addChild(ring);group.ring=ring;
     const mark=new PIXI.Container();this.markLayer.addChild(mark);group.mark=mark;
@@ -125,12 +130,11 @@
    if(!this.tileNodes)return;
    this.slotNodes.forEach((n,i)=>{n.ghost.alpha=this.guide&&this.placed[i]===null?.5:0;n.cursor=this.locked[i]?'default':'pointer'});
    this.tileNodes.forEach((n,id)=>{
-    n.ring.visible=this.selected===id&&!this.tileLocked(id);n.art.tint=this.tileLocked(id)?0xdcf6d2:0xffffff;
+    n.ring.visible=this.selected===id&&!this.tileLocked(id);n.art.tint=0xffffff;
     n.eventMode=this.tileLocked(id)||this.phase!=='arrange'?'none':'static';n.cursor='grab';n.mark.removeChildren().forEach(c=>c.destroy());
     const slot=this.tileSlot(id);if(slot<0||this.marks[slot]===null)return;
-    const good=this.marks[slot],p=this.slotPositions[slot],circle=new PIXI.Graphics().circle(0,0,19).fill(good?0x409b70:0xc77d69).stroke({color:0xfff9df,width:3});
-    const line=new PIXI.Graphics();if(good)line.moveTo(-9,0).lineTo(-2,7).lineTo(10,-8);else line.moveTo(-6,-6).lineTo(6,6).moveTo(6,-6).lineTo(-6,6);line.stroke({color:0xffffff,width:4,cap:'round',join:'round'});
-    n.mark.position.set(p.x+p.w*.27,p.y-p.h*.52);n.mark.addChild(circle,line);
+    const good=this.marks[slot],p=this.slotPositions[slot],seal=this.sprite(ROOT+(good?'correct-seal.svg':'retry-seal.svg'));seal.anchor.set(.5,.4);seal.width=49;seal.height=54;
+    n.mark.position.set(p.x+p.w*.27,p.y-p.h*.52);n.mark.addChild(seal);
    });
   }
   beginDrag(id,e){
@@ -165,10 +169,10 @@
    if(this.dead)return;this.root.dataset.phase=this.phase;
    this.q('[data-fsp=check]').disabled=this.phase!=='arrange'||this.placed.some(x=>x===null);
    this.q('[data-fsp=listen]').disabled=['loading','reading','complete'].includes(this.phase);
-   this.q('[data-fsp=next]').hidden=this.phase!=='solved';this.q('[data-fsp=next]').textContent=this.round===5?'See the family':'Next person →';
-   this.q('[data-fsp=hint]').disabled=this.phase!=='arrange';this.q('[data-fsp=hint]').textContent=this.guide?'Hide hint':'Show a hint';
+   this.q('[data-fsp=next]').hidden=this.phase!=='solved';this.q('[data-fsp=next] span').textContent=this.round===5?'See the family':'Next person';
+   this.q('[data-fsp=hint]').disabled=this.phase!=='arrange';this.q('[data-fsp=hint] span').textContent=this.guide?'Hide hint':'Show hint';
    this.q('[data-fsp=return]').disabled=this.phase!=='arrange'||this.selected===null;
-   this.q('.fsp-word-buttons').innerHTML=this.words.map((w,id)=>`<button type="button" data-piece="${id}" ${this.tileLocked(id)||this.phase!=='arrange'?'disabled':''} aria-pressed="${this.selected===id}">${w}</button>`).join('');
+   this.q('.fsp-word-buttons').innerHTML=this.words.map((w,id)=>`<button type="button" data-piece="${id}" style="background-image:url('${piecePath(w)}')" ${this.tileLocked(id)||this.phase!=='arrange'?'disabled':''} aria-pressed="${this.selected===id}">${w}</button>`).join('');
    this.q('.fsp-position-buttons').innerHTML=this.placed.map((id,i)=>`<button type="button" data-position="${i}" ${this.locked[i]||this.phase!=='arrange'?'disabled':''} aria-label="Position ${i+1}: ${id===null?'empty':this.words[id]}${this.locked[i]?', correct':''}">${i+1} · ${id===null?'empty':this.words[id]}${this.locked[i]?' ✓':''}</button>`).join('');
   }
   hint(){if(this.phase!=='arrange')return;this.guide=!this.guide;this.paint();this.sync();this.status(this.guide?'The faint words show one complete sentence.':'Try the order yourself.')}
@@ -194,7 +198,7 @@
   next(){if(this.phase!=='solved')return;this.stopVoice();this.stopEffect();this.round++;if(this.round>=6){this.complete();return}this.prepareRound();if(this.app?.renderer)this.layout(true)}
   complete(){
    this.phase='complete';this.killMotion();this.host.hidden=true;this.q('.fsp-controls').hidden=true;this.q('.fsp-alt').hidden=true;this.q('.fsp-fallback').hidden=true;this.q('.fsp-gallery').hidden=true;
-   this.q('.fsp-finale').hidden=false;this.q('.fsp-family').innerHTML=this.order.map(w=>`<figure><img src="${PORTRAIT(w)}" alt="${w}"><figcaption>This is my ${w}.</figcaption></figure>`).join('');
+   this.q('.fsp-finale').hidden=false;this.q('.fsp-family').innerHTML=this.order.map(w=>`<figure><img src="${PORTRAIT(w)}" alt="${w}"><figcaption>This is my<br>${w}.</figcaption></figure>`).join('');
    this.q('.fsp-progress').textContent='6 / 6';this.status('You built six family sentences!');
    if(!this.awarded){this.awarded=true;document.dispatchEvent(new CustomEvent('learning:activity-completed',{detail:{game:'u4familypuzzle',stars:3}}))}
    this.voice(window.FamilyAlbumClips?.clips?.complete?.src);

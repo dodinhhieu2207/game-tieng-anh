@@ -1,6 +1,6 @@
 # Family Sentence Puzzle plan
 
-Status: implemented, deployed and publicly verified at release `f0164d5`, 2026-11-04.
+Status: gameplay publicly verified at `f0164d5`; complete 26-graphic kit locally verified and awaiting deployment, 2026-11-04.
 
 ## Approved decision
 
@@ -44,3 +44,11 @@ The SVG tab/notch curves use the same geometry and slot pitch so adjacent pieces
 Portrait rendering uses game-owned, smoothly downsampled CanvasSource textures with mipmaps to avoid aliasing the approved high-resolution art at phone size. Source assets stay unchanged; derived textures are destroyed on exit.
 
 GitHub Pages `f0164d5` deployment succeeded. Public Chromium checks at 390 and 1366px loaded the Pixi canvas and puzzle assets, assembled a sentence, played the actual Higgs sentence through its end, reached solved state and collected its portrait; no horizontal overflow or page errors. These public checks used the real hosted assets/audio, not simulated audio completion.
+
+## Complete artwork kit correction
+
+The first release had a new desk, shape and photo frame but generic control and finale styling. User requested complete assets for the whole game. The revised inventory has 26 graphics: dedicated activity cover, title plaque, mint/gold raster button skins, four colored interlocking word pieces, slot/tray, six control icons, correct/retry seals, status/progress plaques, portrait/collection frames and desktop/phone finale albums. Live controls retain real App Outfit text. Approved character portraits, Higgs sentences and sourced Kenney sounds remain the media catalogue.
+
+See `assets/family-sentence-puzzle/catalog.html` and its generated `manifest.json` for per-file roles and hashes. No new scene engine or speech contract was introduced.
+
+Full-kit local QA passed the existing real-canvas drag/tap/swap and six-sentence Higgs flow, correct/retry seals, colored pieces and trays, mute/leave cleanup, audio failure, keyboard fallback and layout at all five widths. Tests additionally confirm the raster title/primary-button skins and desktop/phone album selection; the catalogue loaded all 26 graphics without missing images. Initial, retry and completed album screenshots were inspected on desktop and phone; mobile subtitle was removed from the title plaque to avoid text touching its ornamented border, and finale captions use a consistent two-line sentence.

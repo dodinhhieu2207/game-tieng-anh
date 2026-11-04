@@ -1,0 +1,203 @@
+{
+  "version": "20261104-full-kit1",
+  "game": "u4familypuzzle",
+  "graphics": [
+    {
+      "file": "activity-cover.webp",
+      "role": "Activity cover",
+      "kind": "original-generated-raster",
+      "bytes": 484944,
+      "sha256": "035d037c61cbe15395d4aa10257e411d086aa240c835024f5b02a9953cf19ff3"
+    },
+    {
+      "file": "button-gold.webp",
+      "role": "Primary button skin",
+      "kind": "original-generated-raster",
+      "bytes": 314006,
+      "sha256": "a0b5abdfe6a0e17424929841babd3983b317ebc658911d4534cd0bafa649227b"
+    },
+    {
+      "file": "button-mint.webp",
+      "role": "Secondary button skin",
+      "kind": "original-generated-raster",
+      "bytes": 191326,
+      "sha256": "e116ab08ff8db4db5bb3bbb15c9db2ced61f97277f8133f1b5f95831539f4dae"
+    },
+    {
+      "file": "collection-card.svg",
+      "role": "Collected family photo card",
+      "kind": "original-vector",
+      "bytes": 626,
+      "sha256": "86a40cd7c6f724c0dc4bf6c0da6286450d716a4fec74f21c46f8cb15f0f9253d"
+    },
+    {
+      "file": "correct-seal.svg",
+      "role": "Correct position seal",
+      "kind": "original-vector",
+      "bytes": 601,
+      "sha256": "8df34665df6d5252fab807b3503ddf7ec8ffb836a41f2b411996071b3000ec47"
+    },
+    {
+      "file": "desk.png",
+      "role": "Main puzzle desk",
+      "kind": "original-generated-raster",
+      "bytes": 1753551,
+      "sha256": "a4271de67169163567325ca90f180727f651942287e7ea56914ad79f6d6b26c8"
+    },
+    {
+      "file": "finale-album-mobile.webp",
+      "role": "Phone completion album",
+      "kind": "original-generated-raster",
+      "bytes": 187324,
+      "sha256": "1918278ca90f8d1d985e098042b5e618a640ab9b5ec87b9dc4c1be861a0f3ac8"
+    },
+    {
+      "file": "finale-album.webp",
+      "role": "Desktop completion album",
+      "kind": "original-generated-raster",
+      "bytes": 195662,
+      "sha256": "b59b22dfd905338965a9b134bb9c5c6f66218a884d19e447e5faae25dad06f07"
+    },
+    {
+      "file": "icon-check.svg",
+      "role": "Check control icon",
+      "kind": "original-vector",
+      "bytes": 369,
+      "sha256": "781f42354e9ad62c9a65b3a699deb9837198efb30a2d12043c77682e46557236"
+    },
+    {
+      "file": "icon-hint.svg",
+      "role": "Hint control icon",
+      "kind": "original-vector",
+      "bytes": 429,
+      "sha256": "15cc5bdacd578d456950ed505b3db494c4582471c404de88ed0c4e844dd069aa"
+    },
+    {
+      "file": "icon-listen.svg",
+      "role": "Listen control icon",
+      "kind": "original-vector",
+      "bytes": 319,
+      "sha256": "5ff1ce05446a91f27a5fbb3bd72c2ca18d22ec49572ca20f7aadcb8dcc9ddebb"
+    },
+    {
+      "file": "icon-next.svg",
+      "role": "Next control icon",
+      "kind": "original-vector",
+      "bytes": 344,
+      "sha256": "2de7a81a2a794b895b67b85ad995e1073d4907219b3abcdd9d64c0156a10cdfd"
+    },
+    {
+      "file": "icon-restart.svg",
+      "role": "Restart control icon",
+      "kind": "original-vector",
+      "bytes": 356,
+      "sha256": "c56b6633c51cf2f2c68aaf115d29c81f015fd9ed5d14c2901dbb2607fa1cbaaa"
+    },
+    {
+      "file": "icon-return.svg",
+      "role": "Return piece control icon",
+      "kind": "original-vector",
+      "bytes": 307,
+      "sha256": "5bde9eae3df1d5ed620a16a0af280195b46fa630849344892bf3d433843a69d2"
+    },
+    {
+      "file": "photo-frame.svg",
+      "role": "Target portrait frame",
+      "kind": "original-vector",
+      "bytes": 542,
+      "sha256": "716019c70e58a23f7bab666063b6ed96951f67d32167b72c63b8cc36fc5b8b1e"
+    },
+    {
+      "file": "piece-family.svg",
+      "role": "Family word piece",
+      "kind": "original-vector",
+      "bytes": 680,
+      "sha256": "be27d42040a6580f117a28f2966ba7f1e0a568044a764946cf109dc919615859"
+    },
+    {
+      "file": "piece-is.svg",
+      "role": "is word piece",
+      "kind": "original-vector",
+      "bytes": 680,
+      "sha256": "a04bcc7bdaee4c1ba7204d9834d955bbda54c8f29c9a1e318f508a802fa779ca"
+    },
+    {
+      "file": "piece-my.svg",
+      "role": "my word piece",
+      "kind": "original-vector",
+      "bytes": 680,
+      "sha256": "55455e1792ce9a2020625f7a7c210f9780c07f8e3db03ed2c5f4c9d50582c997"
+    },
+    {
+      "file": "piece-this.svg",
+      "role": "This word piece",
+      "kind": "original-vector",
+      "bytes": 680,
+      "sha256": "12101f3c6f1c2e9a65b162fa0d2e6daeb465b37854af6c663d21462fe85eb3bc"
+    },
+    {
+      "file": "piece-tray.svg",
+      "role": "Word piece tray",
+      "kind": "original-vector",
+      "bytes": 646,
+      "sha256": "36fb291d5dfff79122586d75330df51ed544494f5b5e79e2a1e436c070d6c08d"
+    },
+    {
+      "file": "piece.svg",
+      "role": "Master puzzle shape",
+      "kind": "original-vector",
+      "bytes": 680,
+      "sha256": "11de32765c030e8b5b88d669f861b7f36e56251ff5f769d9d653740aaf21e490"
+    },
+    {
+      "file": "progress-badge.svg",
+      "role": "Round progress badge",
+      "kind": "original-vector",
+      "bytes": 567,
+      "sha256": "50d0b217b6591c4e04e2887de8cb08f81064afe86e66e8bb0140ab6dc67b7b1c"
+    },
+    {
+      "file": "retry-seal.svg",
+      "role": "Retry position seal",
+      "kind": "original-vector",
+      "bytes": 582,
+      "sha256": "0b1b9bcb5e9e2fe0e0396337a78e6614c9cf774db99f38d3f94eb83b3836b469"
+    },
+    {
+      "file": "slot.svg",
+      "role": "Sentence position",
+      "kind": "original-vector",
+      "bytes": 497,
+      "sha256": "96a9cc654f7f40e77bbf22b1107a768674253b96dfdb1b931988b4b46626edd3"
+    },
+    {
+      "file": "status-plaque.svg",
+      "role": "Instruction and status plaque",
+      "kind": "original-vector",
+      "bytes": 476,
+      "sha256": "b00aed1229b9525dcf27f5c110a012a72fa88f3135a2ca02099815bca1fbdf24"
+    },
+    {
+      "file": "title-plaque.webp",
+      "role": "Game title plaque",
+      "kind": "original-generated-raster",
+      "bytes": 288052,
+      "sha256": "08442009bec10df805891295048307cc81ad2486218a01729adea70d528ecd01"
+    }
+  ],
+  "artDirection": "Mint painted wood/enamel, ivory paper, honey gold and coral; live App Outfit text.",
+  "rasterPreparation": "Imagegen originals; FFmpeg WebP quality 95 for new UI and album raster files. Original PNG sources retained under the Codex generated_images directory.",
+  "reused": {
+    "characters": "assets/family-treehouse-talk/portraits/{mum,dad,brother,sister,grandpa,grandma}.png",
+    "voiceManifest": "assets/family-album/audio/manifest.json",
+    "voiceProvider": "Higgs Audio V3, approved Belinda reference, six exact target sentences",
+    "font": "App Outfit from assets/fonts/Outfit-Bold.ttf and Outfit-ExtraBold.ttf",
+    "sfx": [
+      "assets/playful-foley/place.wav",
+      "assets/playful-foley/retry.wav",
+      "assets/playful-foley/correct.wav"
+    ],
+    "sfxLicense": "Kenney CC0; assets/playful-foley/README.md and retained source licenses"
+  },
+  "scope": "Complete graphic component kit for this activity; approved character identities and Higgs recordings are reused."
+}

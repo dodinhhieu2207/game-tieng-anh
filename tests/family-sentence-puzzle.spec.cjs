@@ -5,7 +5,7 @@ const BASE=process.env.FAMILY_PUZZLE_BASE||'http://127.0.0.1:8773';
 const URL=BASE+'/index.html?qa=family-puzzle#/unit/4/lesson/2?mode=practice&activity=family-sentence-puzzle';
 async function ready(page){await page.goto(URL);await page.locator('.fsp-board canvas').waitFor();await page.waitForTimeout(150)}
 async function words(page){return page.locator('.fsp-word-buttons button').allTextContents()}
-async function point(page,x,y){const box=await page.locator('.fsp-board').boundingBox();const virtual=box.width<650?600:1000;return {x:box.x+x*box.width/virtual,y:box.y+y*box.width/virtual}}
+async function point(page,x,y){await page.locator('.fsp-board').scrollIntoViewIfNeeded();const box=await page.locator('.fsp-board').boundingBox();const virtual=box.width<650?600:1000;return {x:box.x+x*box.width/virtual,y:box.y+y*box.width/virtual}}
 async function canvasDrag(page,from,to){const a=await point(page,...from),b=await point(page,...to);await page.mouse.move(a.x,a.y);await page.mouse.down();await page.mouse.move(b.x,b.y,{steps:12});await page.mouse.up();await page.waitForTimeout(300)}
 async function canvasTap(page,xy){const p=await point(page,...xy);if(await page.evaluate(()=>navigator.maxTouchPoints>0))await page.touchscreen.tap(p.x,p.y);else await page.mouse.click(p.x,p.y);await page.waitForTimeout(80)}
 async function placeButtons(page,word,slot){const w=await words(page),id=w.indexOf(word);assert.ok(id>=0);await page.locator(`[data-piece="${id}"]`).click();await page.locator(`[data-position="${slot}"]`).click()}
@@ -15,7 +15,10 @@ async function placeButtons(page,word,slot){const w=await words(page),id=w.index
  const page=await browser.newPage({viewport:{width:1366,height:900}}),errors=[],missing=[];
  page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400&&r.url().includes('family-sentence-puzzle'))missing.push(r.url())});
  await ready(page);const initial=await words(page),target=initial.find(w=>!['This','is','my'].includes(w));
- const home=id=>[100+800/3*id,535],slot=i=>[500+(i-1.5)*260*227/300,350];
+ assert.match(await page.locator('.fsp-head').evaluate(e=>getComputedStyle(e).backgroundImage),/title-plaque.webp/);
+ assert.match(await page.locator('[data-fsp=check]').evaluate(e=>getComputedStyle(e).backgroundImage),/button-gold.webp/);
+ assert.equal(await page.locator('[data-fsp=listen] img').getAttribute('src'),'assets/family-sentence-puzzle/icon-listen.svg');
+ const home=id=>[145+710/3*id,535],slot=i=>[500+(i-1.5)*260*227/300,350];
  await canvasDrag(page,home(initial.indexOf('This')),slot(0));
  assert.match(await page.locator('[data-position="0"]').textContent(),/This/);
  await canvasTap(page,home(initial.indexOf('is')));await canvasTap(page,slot(1));
@@ -46,6 +49,12 @@ async function placeButtons(page,word,slot){const w=await words(page),id=w.index
  await page.locator('[data-fsp=next]').click();assert.equal(await page.locator('.fsp-finale').isVisible(),true);
  assert.equal(await page.evaluate(()=>window.__puzzleEvents),1);
  assert.equal(await page.locator('.fsp-family figure').count(),6);
+ assert.match(await page.locator('.fsp-album-pages').evaluate(e=>getComputedStyle(e).backgroundImage),/finale-album.webp/);
+ await page.screenshot({path:'tests/family-puzzle-finale-1366.png',fullPage:true});
+ await page.setViewportSize({width:390,height:900});await page.waitForTimeout(200);
+ assert.match(await page.locator('.fsp-album-pages').evaluate(e=>getComputedStyle(e).backgroundImage),/finale-album-mobile.webp/);
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+ await page.screenshot({path:'tests/family-puzzle-finale-390.png',fullPage:true});
  assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);
  console.log('PASS six sentences, distractors, gallery and one completion event');
  await page.close();
@@ -92,5 +101,9 @@ async function placeButtons(page,word,slot){const w=await words(page),id=w.index
  assert.match(await failure.locator('.fsp-status').textContent(),/retry the sound/);
  assert.equal(await failure.locator('[data-fsp=next]').isVisible(),true);
  console.log('PASS audio failure is retryable without trapping the round');await failure.close();
+ const catalog=await browser.newPage();await catalog.goto(BASE+'/assets/family-sentence-puzzle/catalog.html');
+ await catalog.waitForFunction(()=>document.querySelectorAll('.card img').length===26&&[...document.querySelectorAll('.card img')].every(img=>img.complete&&img.naturalWidth>0));
+ assert.equal(await catalog.locator('.card').count(),26);
+ console.log('PASS complete 26-graphic asset catalogue');await catalog.close();
  await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});
