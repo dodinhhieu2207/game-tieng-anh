@@ -72,6 +72,13 @@
    this.app.stage.hitArea=new PIXI.Rectangle(0,0,width,height);this.drawScene();
   }
   text(value,size,color=0x174d65){return new PIXI.Text({text:value,style:{fontFamily:'App Outfit',fontWeight:'800',fontSize:size,fill:color,align:'center'}})}
+  fitPieceLabel(label,width,height){
+   // SVG body: safe text box x=60..220, y=40..104 in the 300x150 artwork.
+   // Exclude the left socket and right tab from both centering and text fitting.
+   label.scale.set(1);label.style.fontSize=Math.min(height*.36,44);
+   const scale=Math.min(1,(width*160/300)/Math.max(1,label.width),(height*64/150)/Math.max(1,label.height));
+   label.scale.set(scale);label.position.set(width*(140/300-.5),height*(72/150-.5));
+  }
   sprite(path){const s=new PIXI.Sprite(this.textures.get(path));s.anchor.set(.5);return s}
   portraitTexture(word){
    if(this.portraitTextures.has(word))return this.portraitTextures.get(word);
@@ -92,7 +99,7 @@
    this.slotNodes=[];
    this.slotPositions.forEach((p,i)=>{
     const group=new PIXI.Container();group.position.set(p.x,p.y);const art=this.sprite(ROOT+'slot.svg');art.width=p.w;art.height=p.h;group.addChild(art);
-    const ghost=this.text(this.expected[i],this.mobile?42:34,0x7e9c8d);ghost.anchor.set(.5);ghost.x=-p.w*.04;ghost.alpha=this.guide?.5:0;group.addChild(ghost);group.ghost=ghost;
+    const ghost=this.text(this.expected[i],this.mobile?42:34,0x7e9c8d);ghost.anchor.set(.5);this.fitPieceLabel(ghost,p.w,p.h);ghost.alpha=this.guide?.5:0;group.addChild(ghost);group.ghost=ghost;
     const number=this.text(String(i+1),this.mobile?24:20,0x5e8b8c);number.anchor.set(.5);number.position.set(0,-p.h/2-15);group.addChild(number);
     group.eventMode='static';group.cursor='pointer';group.hitArea=new PIXI.Rectangle(-p.w/2,-p.h/2,p.w,p.h);
     group.on('pointertap',()=>{if(this.phase!=='arrange')return;if(this.selected!==null)this.place(this.selected,i);else if(this.placed[i]!==null)this.select(this.placed[i])});
@@ -123,7 +130,7 @@
   }
   killMotion(){for(const t of this.tweens)t.kill();this.tweens.clear();this.targets.clear()}
   positionTile(id,animate=true){const node=this.tileNodes?.[id];if(!node)return;const p=this.targetPosition(id);if(!p)return;const home=this.homePositions[id],isSlot=this.tileSlot(id)>=0;const width=isSlot?p.w:home.w,height=isSlot?p.h:home.h;
-   node.art.width=width;node.art.height=height;node.selection.width=width*1.05;node.selection.height=height*1.05;node.label.style.fontSize=this.mobile?43:(this.words[id].length>5?Math.min(36,width*.17):Math.min(42,width*.21));node.label.x=-width*.045;
+   node.art.width=width;node.art.height=height;node.selection.width=width*1.05;node.selection.height=height*1.05;this.fitPieceLabel(node.label,width,height);
    if(animate){this.motion(node,{x:p.x,y:p.y,rotation:0,duration:.26,ease:'power3.out'});this.motion(node.scale,{x:1,y:1,duration:.22,ease:'power2.out'})}else{node.position.set(p.x,p.y);node.scale.set(1)}
   }
   paint(){
