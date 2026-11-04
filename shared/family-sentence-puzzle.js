@@ -1,0 +1,205 @@
+/* Standalone family sentence puzzle: PixiJS pieces, one shared input model. */
+(()=>{'use strict';
+ if(typeof games==='undefined'||typeof GAME_META==='undefined'||typeof setStage==='undefined')return;
+ const PEOPLE=['mum','dad','brother','sister','grandpa','grandma'];
+ const ROOT='assets/family-sentence-puzzle/';
+ const PORTRAIT=w=>`assets/family-treehouse-talk/portraits/${w}.png`;
+ const MQ=matchMedia('(prefers-reduced-motion: reduce)');
+ const shuffle=items=>{const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+ let current,loadingPixi;
+ function loadPixi(){if(window.PIXI)return Promise.resolve();return loadingPixi||=(new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='shared/vendor/pixi/pixi.min.js?v=8.22.0';script.onload=resolve;script.onerror=()=>{loadingPixi=null;reject(new Error('renderer-load'))};document.head.append(script)}))}
+
+ class FamilyPuzzle{
+  constructor(){
+   this.dead=false;this.phase='loading';this.round=0;this.order=shuffle(PEOPLE);this.collected=[];this.selected=null;
+   this.placed=[null,null,null,null];this.locked=[false,false,false,false];this.marks=[null,null,null,null];this.drag=null;
+   this.tweens=new Set();this.targets=new Map();this.audio=null;this.sfx=null;this.epoch=0;this.awarded=false;
+   this.mount();this.prepareRound();this.init();
+  }
+  q(s){return this.root.querySelector(s)}
+  status(text){if(!this.dead)this.q('.fsp-status').textContent=text}
+  mount(){
+   setStage(`<section class="fsp" aria-label="Family Sentence Puzzle"><header class="fsp-head"><div><small>UNIT 4 · LESSON 2</small><h2>Family Sentence Puzzle</h2><p>Move the pieces. Build a family sentence.</p></div><b class="fsp-progress">1 / 6</b></header><div class="fsp-board" aria-label="Drag or tap the word pieces"><div class="fsp-loading" role="status">Opening the puzzle…</div></div><div class="fsp-fallback" hidden><img alt=""><strong>Build a sentence for this person.</strong></div><p class="fsp-status" role="status" aria-live="polite"></p><div class="fsp-controls"><button type="button" data-fsp="listen">♪ Listen</button><button type="button" data-fsp="hint">Show a hint</button><button type="button" data-fsp="check" class="fsp-primary" disabled>Check</button><button type="button" data-fsp="next" class="fsp-primary" hidden>Next person →</button><button type="button" data-fsp="restart">Start again</button></div><details class="fsp-alt"><summary>Use word buttons</summary><p>Choose a piece, then choose a position.</p><div class="fsp-word-buttons" aria-label="Word pieces"></div><div class="fsp-position-buttons" aria-label="Sentence positions"></div><button type="button" data-fsp="return">Return selected piece</button></details><div class="fsp-gallery" aria-label="Sentences built"></div><section class="fsp-finale" hidden><h3>Six family sentences!</h3><div class="fsp-family"></div><p>Say the sentences with a friend.</p><button type="button" data-fsp="restart" class="fsp-primary">Play again</button></section></section>`);
+   this.root=document.querySelector('.fsp');this.host=this.q('.fsp-board');
+   this.root.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||!this.root.contains(b)||b.disabled)return;
+    if(b.dataset.piece!==undefined){this.select(Number(b.dataset.piece));if(e.detail===0)this.q('.fsp-position-buttons button:not(:disabled)')?.focus()}
+    else if(b.dataset.position!==undefined){this.place(this.selected,Number(b.dataset.position));if(e.detail===0)this.q('.fsp-word-buttons button:not(:disabled)')?.focus()}
+    else if(b.dataset.fsp==='check')this.check();else if(b.dataset.fsp==='next')this.next();
+    else if(b.dataset.fsp==='listen')this.listen();else if(b.dataset.fsp==='hint')this.hint();
+    else if(b.dataset.fsp==='return')this.returnSelected();else if(b.dataset.fsp==='restart')this.restart();
+   });
+   this.hidden=()=>{if(document.hidden){this.stopVoice();this.stopEffect();this.cancelDrag();for(const t of [...this.tweens])t.progress(1)}};
+   this.muted=()=>{if(window.LearningApp?.isMuted()){this.stopVoice();this.stopEffect()}};
+   this.changed=e=>{this.muted();if(e.target?.id==='soundFx'&&!e.target.checked)this.stopEffect()};
+   document.addEventListener('visibilitychange',this.hidden);document.addEventListener('toybuddy:enter',this.muted);document.addEventListener('change',this.changed);
+   restartCurrent=()=>this.restart();replayCurrent=()=>this.listen();
+  }
+  prepareRound(){
+   this.word=this.order[this.round];this.expected=['This','is','my',this.word];
+   this.words=shuffle(this.round<2?this.expected:[...this.expected,shuffle(PEOPLE.filter(x=>x!==this.word))[0]]);
+   this.placed=[null,null,null,null];this.locked=[false,false,false,false];this.marks=[null,null,null,null];this.selected=null;this.guide=this.round===0;
+   this.phase='arrange';this.q('.fsp-progress').textContent=`${this.round+1} / 6`;this.q('.fsp-fallback img').src=PORTRAIT(this.word);
+   this.status(this.round===0?'Follow the faint words, or try your own order.':'Look at the picture. Build: This is my …');this.sync();
+  }
+  async init(){
+   const token=++this.epoch;
+   try{
+    await Promise.all([loadPixi(),document.fonts.load('800 40px "App Outfit"')]);if(!this.alive(token))return;
+    const paths=[ROOT+'desk.png',ROOT+'piece.svg',ROOT+'slot.svg',ROOT+'photo-frame.svg',...PEOPLE.map(PORTRAIT)];
+    const textures=await Promise.all(paths.map(p=>PIXI.Assets.load(p)));if(!this.alive(token))return;
+    this.textures=new Map(paths.map((p,i)=>[p,textures[i]]));
+    const app=new PIXI.Application();this.app=app;
+    await app.init({width:100,height:100,backgroundAlpha:0,antialias:true,resolution:Math.min(devicePixelRatio||1,2),autoDensity:true,sharedTicker:false});
+    if(!this.alive(token)){try{app.destroy(true,{children:true,texture:false})}catch{}return}
+    app.canvas.setAttribute('aria-hidden','true');this.host.append(app.canvas);this.q('.fsp-loading').remove();
+    app.stage.eventMode='static';app.stage.on('globalpointermove',e=>this.moveDrag(e));app.stage.on('pointerup',e=>this.endDrag(e));app.stage.on('pointerupoutside',e=>this.endDrag(e));
+    this.resizeObserver=new ResizeObserver(()=>this.layout());this.resizeObserver.observe(this.host);this.layout(true);
+   }catch{
+    if(this.dead)return;this.host.hidden=true;this.q('.fsp-fallback').hidden=false;this.q('.fsp-alt').open=true;
+    this.status('Choose a word button, then a position to build the sentence.');
+   }
+  }
+  alive(token){return !this.dead&&token===this.epoch}
+  layout(force=false){
+   if(this.dead||!this.app?.renderer||!this.textures)return;
+   const width=this.host.clientWidth;if(!width||(!force&&this.lastWidth===width))return;this.lastWidth=width;
+   this.cancelDrag();this.killMotion();this.mobile=width<650;this.worldWidth=this.mobile?600:1000;
+   this.worldHeight=this.mobile?(this.words.length>4?1170:1020):650;
+   const height=Math.round(width*this.worldHeight/this.worldWidth);this.host.style.height=height+'px';this.app.renderer.resize(width,height);
+   this.app.stage.hitArea=new PIXI.Rectangle(0,0,width,height);this.drawScene();
+  }
+  text(value,size,color=0x174d65){return new PIXI.Text({text:value,style:{fontFamily:'App Outfit',fontWeight:'800',fontSize:size,fill:color,align:'center'}})}
+  sprite(path){const s=new PIXI.Sprite(this.textures.get(path));s.anchor.set(.5);return s}
+  drawScene(){
+   this.killMotion();if(this.world){this.app.stage.removeChild(this.world);this.world.destroy({children:true,texture:false,textureSource:false})}
+   const W=this.worldWidth,H=this.worldHeight;this.world=new PIXI.Container();this.world.scale.set(this.lastWidth/W);this.app.stage.addChild(this.world);
+   const bg=this.sprite(ROOT+'desk.png'),scale=Math.max(W/bg.texture.width,H/bg.texture.height);bg.scale.set(scale);bg.position.set(W/2,H/2);this.world.addChild(bg);
+   const photo=this.sprite(ROOT+'photo-frame.svg');photo.width=this.mobile?190:180;photo.height=this.mobile?205:195;photo.position.set(W/2,this.mobile?140:117);this.world.addChild(photo);
+   const person=this.sprite(PORTRAIT(this.word));const maxH=photo.height*.74,maxW=photo.width*.69;person.scale.set(Math.min(maxW/person.texture.width,maxH/person.texture.height));person.position.set(photo.x,photo.y-3);this.world.addChild(person);
+   const prompt=this.text('Build the sentence.',this.mobile?30:24);prompt.anchor.set(.5);prompt.position.set(W/2,this.mobile?270:240);this.world.addChild(prompt);
+   const pw=260,ph=130,step=pw*227/300;
+   this.slotPositions=Array.from({length:4},(_,i)=>({x:this.mobile?W/2+(i%2===0?-step/2:step/2):W/2+(i-1.5)*step,y:this.mobile?390+Math.floor(i/2)*145:350,w:pw,h:ph}));
+   this.slotNodes=[];
+   this.slotPositions.forEach((p,i)=>{
+    const group=new PIXI.Container();group.position.set(p.x,p.y);const art=this.sprite(ROOT+'slot.svg');art.width=p.w;art.height=p.h;group.addChild(art);
+    const ghost=this.text(this.expected[i],this.mobile?42:34,0x7e9c8d);ghost.anchor.set(.5);ghost.x=-p.w*.04;ghost.alpha=this.guide?.5:0;group.addChild(ghost);group.ghost=ghost;
+    const number=this.text(String(i+1),this.mobile?24:20,0x5e8b8c);number.anchor.set(.5);number.position.set(0,-p.h/2-15);group.addChild(number);
+    group.eventMode='static';group.cursor='pointer';group.hitArea=new PIXI.Rectangle(-p.w/2,-p.h/2,p.w,p.h);
+    group.on('pointertap',()=>{if(this.phase!=='arrange')return;if(this.selected!==null)this.place(this.selected,i);else if(this.placed[i]!==null)this.select(this.placed[i])});
+    this.slotNodes.push(group);this.world.addChild(group);
+   });
+   const last=this.slotPositions[3],period=this.text('.',this.mobile?48:45);period.anchor.set(.5);period.position.set(last.x+pw*.5+6,last.y+ph*.05);this.world.addChild(period);
+   this.homePositions=this.words.map((_,i)=>this.mobile?{x:i%2===0?165:435,y:755+Math.floor(i/2)*145,w:260,h:130}:{x:100+(800/Math.max(1,this.words.length-1))*i,y:535,w:this.words.length>4?180:200,h:106});
+   this.tileLayer=new PIXI.Container();this.markLayer=new PIXI.Container();this.world.addChild(this.tileLayer,this.markLayer);this.tileNodes=[];
+   this.words.forEach((word,id)=>{
+    const home=this.homePositions[id],group=new PIXI.Container(),art=this.sprite(ROOT+'piece.svg');art.width=home.w;art.height=home.h;group.addChild(art);group.art=art;
+    const label=this.text(word,this.mobile?43:(word.length>5?32:38));label.anchor.set(.5);label.position.set(-home.w*.045,-3);group.addChild(label);group.label=label;
+    const ring=new PIXI.Graphics().roundRect(-home.w*.44,-home.h*.42,home.w*.85,home.h*.82,17).stroke({color:0xf1b63b,width:5});ring.visible=false;group.addChild(ring);group.ring=ring;
+    const mark=new PIXI.Container();this.markLayer.addChild(mark);group.mark=mark;
+    group.eventMode='static';group.cursor='grab';group.hitArea=new PIXI.Rectangle(-home.w/2,-home.h/2,home.w,home.h);
+    group.on('pointerdown',e=>this.beginDrag(id,e));this.tileNodes.push(group);this.tileLayer.addChild(group);this.positionTile(id,false);
+   });
+   this.paint();
+  }
+  tileSlot(id){return this.placed.indexOf(id)}
+  tileLocked(id){const i=this.tileSlot(id);return i>=0&&this.locked[i]}
+  targetPosition(id){const i=this.tileSlot(id);return i>=0?this.slotPositions[i]:this.homePositions[id]}
+  motion(target,vars){
+   const previous=this.targets.get(target);if(previous){previous.kill();this.tweens.delete(previous);this.targets.delete(target)}
+   if(MQ.matches||!window.gsap){for(const [k,v] of Object.entries(vars))if(!['duration','ease','onComplete','delay'].includes(k))target[k]=v;vars.onComplete?.();return}
+   const tween=gsap.to(target,{...vars,onComplete:()=>{this.tweens.delete(tween);if(this.targets.get(target)===tween)this.targets.delete(target);vars.onComplete?.()}});this.tweens.add(tween);this.targets.set(target,tween);
+  }
+  killMotion(){for(const t of this.tweens)t.kill();this.tweens.clear();this.targets.clear()}
+  positionTile(id,animate=true){const node=this.tileNodes?.[id];if(!node)return;const p=this.targetPosition(id);if(!p)return;const home=this.homePositions[id],isSlot=this.tileSlot(id)>=0;const width=isSlot?p.w:home.w,height=isSlot?p.h:home.h;
+   node.art.width=width;node.art.height=height;node.label.style.fontSize=this.mobile?43:(this.words[id].length>5?Math.min(36,width*.17):Math.min(42,width*.21));node.label.x=-width*.045;
+   if(animate){this.motion(node,{x:p.x,y:p.y,rotation:0,duration:.26,ease:'power3.out'});this.motion(node.scale,{x:1,y:1,duration:.22,ease:'power2.out'})}else{node.position.set(p.x,p.y);node.scale.set(1)}
+  }
+  paint(){
+   if(!this.tileNodes)return;
+   this.slotNodes.forEach((n,i)=>{n.ghost.alpha=this.guide&&this.placed[i]===null?.5:0;n.cursor=this.locked[i]?'default':'pointer'});
+   this.tileNodes.forEach((n,id)=>{
+    n.ring.visible=this.selected===id&&!this.tileLocked(id);n.art.tint=this.tileLocked(id)?0xdcf6d2:0xffffff;
+    n.eventMode=this.tileLocked(id)||this.phase!=='arrange'?'none':'static';n.cursor='grab';n.mark.removeChildren().forEach(c=>c.destroy());
+    const slot=this.tileSlot(id);if(slot<0||this.marks[slot]===null)return;
+    const good=this.marks[slot],p=this.slotPositions[slot],circle=new PIXI.Graphics().circle(0,0,19).fill(good?0x409b70:0xc77d69).stroke({color:0xfff9df,width:3});
+    const line=new PIXI.Graphics();if(good)line.moveTo(-9,0).lineTo(-2,7).lineTo(10,-8);else line.moveTo(-6,-6).lineTo(6,6).moveTo(6,-6).lineTo(-6,6);line.stroke({color:0xffffff,width:4,cap:'round',join:'round'});
+    n.mark.position.set(p.x+p.w*.27,p.y-p.h*.52);n.mark.addChild(circle,line);
+   });
+  }
+  beginDrag(id,e){
+   if(this.phase!=='arrange'||this.tileLocked(id)||this.drag||e.button>0)return;e.stopPropagation();
+   this.select(id,false);const p=this.world.toLocal(e.global),n=this.tileNodes[id];this.drag={id,pointer:e.pointerId,x:p.x,y:p.y,dx:n.x-p.x,dy:n.y-p.y,moved:false};
+   this.tileLayer.setChildIndex(n,this.tileLayer.children.length-1);try{this.app.canvas.setPointerCapture(e.pointerId)}catch{}
+  }
+  moveDrag(e){
+   if(!this.drag||e.pointerId!==this.drag.pointer||this.phase!=='arrange')return;const p=this.world.toLocal(e.global),d=this.drag,n=this.tileNodes[d.id];
+   if(!d.moved&&Math.hypot(p.x-d.x,p.y-d.y)>8/this.world.scale.x){d.moved=true;this.motion(n.scale,{x:1.06,y:1.06,duration:.13,ease:'power2.out'})}
+   if(d.moved){const active=this.targets.get(n);if(active){active.kill();this.tweens.delete(active);this.targets.delete(n)}n.position.set(p.x+d.dx,p.y+d.dy)}
+  }
+  endDrag(e){
+   if(!this.drag||e.pointerId!==this.drag.pointer)return;const drag=this.drag;this.drag=null;try{this.app.canvas.releasePointerCapture(e.pointerId)}catch{}
+   if(!drag.moved){this.status(`${this.words[drag.id]} selected. Tap a position or drag the piece.`);this.sync();return}
+   const p=this.world.toLocal(e.global),slot=this.slotPositions.findIndex(s=>Math.abs(p.x-s.x)<s.w*.55&&Math.abs(p.y-s.y)<s.h*.7);
+   if(slot<0||!this.place(drag.id,slot)){this.positionTile(drag.id);this.paint()}
+  }
+  cancelDrag(){if(!this.drag)return;const d=this.drag;this.drag=null;try{this.app?.canvas?.releasePointerCapture(d.pointer)}catch{}this.positionTile(d.id,false)}
+  select(id,announce=true){if(this.phase!=='arrange'||!Number.isInteger(id)||id<0||id>=this.words.length||this.tileLocked(id))return;this.selected=id;this.paint();this.sync();if(announce)this.status(`${this.words[id]} selected. Choose a position.`)}
+  place(id,slot){
+   if(this.phase!=='arrange'||id===null||!Number.isInteger(id)||id<0||id>=this.words.length||!Number.isInteger(slot)||slot<0||slot>3||this.tileLocked(id))return false;
+   if(this.locked[slot]){this.status('This piece already fits. Choose another position.');return false}
+   const source=this.tileSlot(id),displaced=this.placed[slot];if(source===slot){this.positionTile(id);return true}
+   if(source>=0)this.placed[source]=null;this.placed[slot]=id;
+   if(displaced!==null&&displaced!==id){if(source>=0)this.placed[source]=displaced;this.positionTile(displaced)}
+   this.selected=null;this.marks=this.marks.map((x,i)=>this.locked[i]?true:null);this.positionTile(id);this.effect('place');this.paint();this.sync();
+   this.status(this.placed.every(x=>x!==null)?'Ready? Tap Check to test your sentence.':'Keep building. You can swap pieces.');return true;
+  }
+  returnSelected(){if(this.phase!=='arrange'||this.selected===null||this.tileLocked(this.selected))return;const id=this.selected,slot=this.tileSlot(id);if(slot>=0){this.placed[slot]=null;this.marks[slot]=null}this.selected=null;this.positionTile(id);this.paint();this.sync();this.status('Choose another piece or position.')}
+  sync(){
+   if(this.dead)return;this.root.dataset.phase=this.phase;
+   this.q('[data-fsp=check]').disabled=this.phase!=='arrange'||this.placed.some(x=>x===null);
+   this.q('[data-fsp=listen]').disabled=['loading','reading','complete'].includes(this.phase);
+   this.q('[data-fsp=next]').hidden=this.phase!=='solved';this.q('[data-fsp=next]').textContent=this.round===5?'See the family':'Next person →';
+   this.q('[data-fsp=hint]').disabled=this.phase!=='arrange';this.q('[data-fsp=hint]').textContent=this.guide?'Hide hint':'Show a hint';
+   this.q('[data-fsp=return]').disabled=this.phase!=='arrange'||this.selected===null;
+   this.q('.fsp-word-buttons').innerHTML=this.words.map((w,id)=>`<button type="button" data-piece="${id}" ${this.tileLocked(id)||this.phase!=='arrange'?'disabled':''} aria-pressed="${this.selected===id}">${w}</button>`).join('');
+   this.q('.fsp-position-buttons').innerHTML=this.placed.map((id,i)=>`<button type="button" data-position="${i}" ${this.locked[i]||this.phase!=='arrange'?'disabled':''} aria-label="Position ${i+1}: ${id===null?'empty':this.words[id]}${this.locked[i]?', correct':''}">${i+1} · ${id===null?'empty':this.words[id]}${this.locked[i]?' ✓':''}</button>`).join('');
+  }
+  hint(){if(this.phase!=='arrange')return;this.guide=!this.guide;this.paint();this.sync();this.status(this.guide?'The faint words show one complete sentence.':'Try the order yourself.')}
+  async check(){
+   if(this.phase!=='arrange'||this.placed.some(x=>x===null))return;
+   this.marks=this.placed.map((id,i)=>this.words[id]===this.expected[i]);this.locked=[...this.marks];this.selected=null;this.paint();
+   const correct=this.marks.filter(Boolean).length;
+   if(correct<4){this.effect('retry');this.sync();this.status(`${correct} ${correct===1?'piece fits':'pieces fit'}. Move the marked pieces and try again.`);return}
+   this.phase='reading';this.sync();this.paint();this.status('A complete sentence! Listen and say it.');this.effect('correct');
+   const token=this.epoch;await new Promise(resolve=>setTimeout(resolve,MQ.matches?0:220));if(!this.alive(token))return;
+   const heard=await this.voice(window.FamilyAlbumClips?.clips?.[this.word]?.src);if(!this.alive(token)||this.phase!=='reading')return;
+   this.phase='solved';if(!this.collected.includes(this.word)){this.collected.push(this.word);this.q('.fsp-gallery').insertAdjacentHTML('beforeend',`<figure><img src="${PORTRAIT(this.word)}" alt="${this.word}"><figcaption>${this.word}</figcaption></figure>`)}
+   this.sync();this.status(heard||window.LearningApp?.isMuted()?`This is my ${this.word}. Say it together!`:'Your sentence is complete. Tap Listen to retry the sound.');
+  }
+  async listen(){if(this.dead||['loading','reading','complete'].includes(this.phase))return;const token=this.epoch;const ok=await this.voice(window.FamilyAlbumClips?.clips?.[this.word]?.src);if(!this.alive(token))return;if(!ok&&!window.LearningApp?.isMuted())this.status('Sound could not play. Tap Listen to try again.')}
+  voice(src){
+   this.stopVoice();this.stopEffect();if(!src||window.LearningApp?.isMuted())return Promise.resolve(false);
+   return new Promise(resolve=>{const a=new Audio(src);let settled=false;const finish=ok=>{if(settled)return;settled=true;clearTimeout(timer);if(this.audio?.element===a)this.audio=null;resolve(ok)};const timer=setTimeout(()=>{a.pause();finish(false)},15000);this.audio={element:a,finish};a.onended=()=>finish(true);a.onerror=()=>finish(false);a.play().catch(()=>finish(false))});
+  }
+  stopVoice(){const audio=this.audio;this.audio=null;if(audio){audio.element.pause();audio.finish(false)}}
+  effect(kind){this.stopEffect();if(window.LearningApp?.isMuted()||document.getElementById('soundFx')?.checked===false)return;const paths={place:'assets/playful-foley/place.wav',retry:'assets/playful-foley/retry.wav',correct:'assets/playful-foley/correct.wav'};if(!paths[kind])return;const a=this.sfx=new Audio(paths[kind]);a.learningSfx=true;a.volume=.3;a.onended=()=>{if(this.sfx===a)this.sfx=null};a.play().catch(()=>{})}
+  stopEffect(){this.sfx?.pause();this.sfx=null}
+  next(){if(this.phase!=='solved')return;this.stopVoice();this.stopEffect();this.round++;if(this.round>=6){this.complete();return}this.prepareRound();if(this.app?.renderer)this.layout(true)}
+  complete(){
+   this.phase='complete';this.killMotion();this.host.hidden=true;this.q('.fsp-controls').hidden=true;this.q('.fsp-alt').hidden=true;this.q('.fsp-fallback').hidden=true;this.q('.fsp-gallery').hidden=true;
+   this.q('.fsp-finale').hidden=false;this.q('.fsp-family').innerHTML=this.order.map(w=>`<figure><img src="${PORTRAIT(w)}" alt="${w}"><figcaption>This is my ${w}.</figcaption></figure>`).join('');
+   this.q('.fsp-progress').textContent='6 / 6';this.status('You built six family sentences!');
+   if(!this.awarded){this.awarded=true;document.dispatchEvent(new CustomEvent('learning:activity-completed',{detail:{game:'u4familypuzzle',stars:3}}))}
+   this.voice(window.FamilyAlbumClips?.clips?.complete?.src);
+  }
+  restart(){this.dispose();current=new FamilyPuzzle()}
+  dispose(){
+   if(this.dead)return;this.dead=true;this.epoch++;this.stopVoice();this.stopEffect();this.cancelDrag();this.killMotion();this.resizeObserver?.disconnect();
+   document.removeEventListener('visibilitychange',this.hidden);document.removeEventListener('toybuddy:enter',this.muted);document.removeEventListener('change',this.changed);
+   if(this.app?.renderer){try{this.app.destroy(true,{children:true,texture:false,textureSource:false})}catch{}}this.app=null;
+  }
+ }
+ games.u4familypuzzle={enter:()=>{current?.dispose();current=new FamilyPuzzle()}};
+ GAME_META.u4familypuzzle=['UNIT 4 · LESSON 2','Family Sentence Puzzle','Arrange the pieces: This is my …'];
+ document.addEventListener('learning:leave-activity',()=>{current?.dispose();current=null});
+})();
