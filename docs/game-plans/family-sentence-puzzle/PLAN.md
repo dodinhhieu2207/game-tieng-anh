@@ -10,7 +10,7 @@ Route `activity=family-sentence-puzzle`, game/progress key `u4familypuzzle`; new
 
 ## Learning and interaction
 
-Six randomized portraits. Arrange This / is / my / family word in four slots. Round one gives faint guides; later rounds remove guides and add a family distractor. Pieces can be rearranged and swapped before Check. Correct positions receive a check and lock; incorrect ones receive a local X and remain movable. The finished sentence is read by the approved Higgs clip, and its portrait stays in the collected strip. Next round requires an explicit action. Six sentences complete the family album.
+Six randomized portraits. Arrange This / is / my / family word in four slots. Level 1 (sentences 1–2) gives faint word guides; Level 2 (3–4) uses four shuffled pieces without guides; Level 3 (5–6) also adds a family-word distractor. The hint toggle only exists at Level 1, while Listen stays available. Pieces can be rearranged and swapped before Check. Correct positions receive a check and lock; incorrect ones receive a local X and remain movable. The finished sentence is read by the approved Higgs clip, and its portrait stays in the collected strip. Next round requires an explicit action. Six sentences complete the family album.
 
 Mouse/touch: drag, or select piece and tap slot. Keyboard: equivalent word/position buttons in “Use word buttons”; same underlying placements/checks. Resize preserves progress. Mobile uses two rows for the sentence and a separate two-column piece tray to keep words readable.
 
@@ -54,3 +54,5 @@ See `assets/family-sentence-puzzle/catalog.html` and its generated `manifest.jso
 Full-kit local QA passed the existing real-canvas drag/tap/swap and six-sentence Higgs flow, correct/retry seals, colored pieces and trays, mute/leave cleanup, audio failure, keyboard fallback and layout at all five widths. Tests additionally confirm the raster title/primary-button skins and desktop/phone album selection; the catalogue loaded all 26 graphics without missing images. Initial, retry and completed album screenshots were inspected on desktop and phone; mobile subtitle was removed from the title plaque to avoid text touching its ornamented border, and finale captions use a consistent two-line sentence.
 
 GitHub Pages `690099f` deployment succeeded. Public catalogue QA loaded all 26 graphic previews. Public game QA at 390 and 1366px confirmed the new title/button assets, assembled a sentence, played the real Higgs clip, displayed the solved Next control with its custom icon, and had no page errors or horizontal overflow.
+
+Difficulty/selection correction: removed the rectangular orange selection border. A faint enlarged duplicate of the actual puzzle silhouette now shows selection, with teal keyboard focus on DOM controls. The six sentences follow the three levels above, shown by an explicit level caption. QA checks guide and hint visibility at every round and the distractor starts only at sentence 5.

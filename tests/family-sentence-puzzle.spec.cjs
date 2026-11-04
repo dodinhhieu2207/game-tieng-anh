@@ -15,13 +15,15 @@ async function placeButtons(page,word,slot){const w=await words(page),id=w.index
  const page=await browser.newPage({viewport:{width:1366,height:900}}),errors=[],missing=[];
  page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400&&r.url().includes('family-sentence-puzzle'))missing.push(r.url())});
  await ready(page);const initial=await words(page),target=initial.find(w=>!['This','is','my'].includes(w));
+ assert.equal(await page.locator('.fsp').getAttribute('data-level'),'1');
+ assert.equal(await page.locator('.fsp').getAttribute('data-guide'),'true');
  assert.match(await page.locator('.fsp-head').evaluate(e=>getComputedStyle(e).backgroundImage),/title-plaque.webp/);
  assert.match(await page.locator('[data-fsp=check]').evaluate(e=>getComputedStyle(e).backgroundImage),/button-gold.webp/);
  assert.equal(await page.locator('[data-fsp=listen] img').getAttribute('src'),'assets/family-sentence-puzzle/icon-listen.svg');
  const home=id=>[145+710/3*id,535],slot=i=>[500+(i-1.5)*260*227/300,350];
  await canvasDrag(page,home(initial.indexOf('This')),slot(0));
  assert.match(await page.locator('[data-position="0"]').textContent(),/This/);
- await canvasTap(page,home(initial.indexOf('is')));await canvasTap(page,slot(1));
+ await canvasTap(page,home(initial.indexOf('is')));await page.screenshot({path:'tests/family-puzzle-selection.png',fullPage:true});await canvasTap(page,slot(1));
  assert.match(await page.locator('[data-position="1"]').textContent(),/is/);
  await page.locator('.fsp-alt summary').click();
  await placeButtons(page,'my',2);await placeButtons(page,target,3);
@@ -41,9 +43,14 @@ async function placeButtons(page,word,slot){const w=await words(page),id=w.index
  await page.evaluate(()=>{window.__puzzleEvents=0;document.addEventListener('learning:activity-completed',e=>{if(e.detail.game==='u4familypuzzle')window.__puzzleEvents++})});
  for(let round=1;round<6;round++){
   await page.locator('[data-fsp=next]').click();const current=await words(page);
+  const level=round<2?1:round<4?2:3;
+  assert.equal(await page.locator('.fsp').getAttribute('data-level'),String(level));
+  assert.equal(await page.locator('.fsp').getAttribute('data-guide'),String(level===1));
+  assert.equal(await page.locator('[data-fsp=hint]').isVisible(),level===1);
+  if(round===1||round===2||round===4)await page.screenshot({path:`tests/family-puzzle-level-${round+1}.png`,fullPage:true});
   const src=await page.locator('.fsp-fallback img').getAttribute('src'),word=src.split('/').pop().replace('.png','');
   for(const [i,text]of ['This','is','my',word].entries())await placeButtons(page,text,i);
-  assert.equal(current.length,round<2?4:5);
+  assert.equal(current.length,round<4?4:5);
   await page.locator('[data-fsp=check]').click();await page.locator('.fsp[data-phase=solved]').waitFor();
  }
  await page.locator('[data-fsp=next]').click();assert.equal(await page.locator('.fsp-finale').isVisible(),true);

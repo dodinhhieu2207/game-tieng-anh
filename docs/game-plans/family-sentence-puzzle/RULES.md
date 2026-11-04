@@ -7,3 +7,4 @@
 - Audio must finish or report a playback issue before opening the solved state. Stop audio, drag listeners and tweens when leaving. Respect mute and reduced motion.
 - Completion stars reward building the six sentences; no pronunciation or mastery claim.
 - Graphic coverage includes the activity cover, title, control skins/icons, puzzle pieces/slots/tray, feedback seals, status/progress, collection cards and desktop/phone finale album. Do not substitute generic buttons or empty CSS cards for this kit. Keep live text and approved family identities.
+- Three difficulty levels: sentences 1–2 show faint word guides; 3–4 have four shuffled pieces with no background guides or hint button; 5–6 add one family-word distractor. Keep Listen available for the spoken model. Selection uses a subtle duplicate of the puzzle silhouette, never a rectangular orange outline.

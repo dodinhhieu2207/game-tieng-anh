@@ -26,3 +26,7 @@
 @media(max-width:700px){.fsp-head{padding:28px 45px 40px 45px;min-height:205px}.fsp-head h2{font-size:1.45rem}.fsp-head p{font-size:.82rem}}
 @media(max-width:360px){.fsp-head{padding:26px 34px 38px 38px}.fsp-head h2{font-size:1.25rem}.fsp-head p{font-size:.78rem}}
 @media(max-width:700px){.fsp-head p{display:none}}
+.fsp-level{text-align:center;font-size:1.05rem;font-weight:800;color:#517d77;margin:2px 0 16px}
+.fsp .fsp-word-buttons button[aria-pressed=true]{outline:none;background-color:transparent;filter:drop-shadow(0 3px 3px #6e9a8255);transform:translateY(-2px)}
+.fsp button:focus-visible,.fsp summary:focus-visible,.fsp .fsp-word-buttons button[aria-pressed=true]:focus-visible{outline:3px solid #2e8b88;outline-offset:4px}
+@media(max-width:700px){.fsp-level{font-size:.95rem}}
