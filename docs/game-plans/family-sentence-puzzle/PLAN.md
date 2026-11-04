@@ -40,3 +40,5 @@ Loading → arrange → dragging/selecting → Check → partial-correct retry o
 - Real audio playback, shell mute, leaving the activity and retryable failed voice request.
 
 The SVG tab/notch curves use the same geometry and slot pitch so adjacent pieces interlock. Feedback marks use a layer above all pieces to remain visible at the joints. Desktop/mobile initial and retry scenes were inspected. Public release remains pending. No child learning or pronunciation measurement is claimed.
+
+Portrait rendering uses game-owned, smoothly downsampled CanvasSource textures with mipmaps to avoid aliasing the approved high-resolution art at phone size. Source assets stay unchanged; derived textures are destroyed on exit.

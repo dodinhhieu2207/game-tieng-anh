@@ -13,7 +13,7 @@
   constructor(){
    this.dead=false;this.phase='loading';this.round=0;this.order=shuffle(PEOPLE);this.collected=[];this.selected=null;
    this.placed=[null,null,null,null];this.locked=[false,false,false,false];this.marks=[null,null,null,null];this.drag=null;
-   this.tweens=new Set();this.targets=new Map();this.audio=null;this.sfx=null;this.epoch=0;this.awarded=false;
+   this.tweens=new Set();this.targets=new Map();this.portraitTextures=new Map();this.audio=null;this.sfx=null;this.epoch=0;this.awarded=false;
    this.mount();this.prepareRound();this.init();
   }
   q(s){return this.root.querySelector(s)}
@@ -70,12 +70,19 @@
   }
   text(value,size,color=0x174d65){return new PIXI.Text({text:value,style:{fontFamily:'App Outfit',fontWeight:'800',fontSize:size,fill:color,align:'center'}})}
   sprite(path){const s=new PIXI.Sprite(this.textures.get(path));s.anchor.set(.5);return s}
+  portraitTexture(word){
+   if(this.portraitTextures.has(word))return this.portraitTextures.get(word);
+   const original=this.textures.get(PORTRAIT(word)),source=original.source,ratio=Math.min(1,512/Math.max(source.width,source.height));
+   const canvas=document.createElement('canvas');canvas.width=Math.round(source.width*ratio);canvas.height=Math.round(source.height*ratio);
+   const ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';ctx.drawImage(source.resource,0,0,canvas.width,canvas.height);
+   const texture=new PIXI.Texture({source:new PIXI.CanvasSource({resource:canvas,autoGenerateMipmaps:true,scaleMode:'linear'})});this.portraitTextures.set(word,texture);return texture;
+  }
   drawScene(){
    this.killMotion();if(this.world){this.app.stage.removeChild(this.world);this.world.destroy({children:true,texture:false,textureSource:false})}
    const W=this.worldWidth,H=this.worldHeight;this.world=new PIXI.Container();this.world.scale.set(this.lastWidth/W);this.app.stage.addChild(this.world);
    const bg=this.sprite(ROOT+'desk.png'),scale=Math.max(W/bg.texture.width,H/bg.texture.height);bg.scale.set(scale);bg.position.set(W/2,H/2);this.world.addChild(bg);
    const photo=this.sprite(ROOT+'photo-frame.svg');photo.width=this.mobile?190:180;photo.height=this.mobile?205:195;photo.position.set(W/2,this.mobile?140:117);this.world.addChild(photo);
-   const person=this.sprite(PORTRAIT(this.word));const maxH=photo.height*.74,maxW=photo.width*.69;person.scale.set(Math.min(maxW/person.texture.width,maxH/person.texture.height));person.position.set(photo.x,photo.y-3);this.world.addChild(person);
+   const person=new PIXI.Sprite(this.portraitTexture(this.word));person.anchor.set(.5);const maxH=photo.height*.74,maxW=photo.width*.69;person.scale.set(Math.min(maxW/person.texture.width,maxH/person.texture.height));person.position.set(photo.x,photo.y-3);this.world.addChild(person);
    const prompt=this.text('Build the sentence.',this.mobile?30:24);prompt.anchor.set(.5);prompt.position.set(W/2,this.mobile?270:240);this.world.addChild(prompt);
    const pw=260,ph=130,step=pw*227/300;
    this.slotPositions=Array.from({length:4},(_,i)=>({x:this.mobile?W/2+(i%2===0?-step/2:step/2):W/2+(i-1.5)*step,y:this.mobile?390+Math.floor(i/2)*145:350,w:pw,h:ph}));
@@ -196,7 +203,7 @@
   dispose(){
    if(this.dead)return;this.dead=true;this.epoch++;this.stopVoice();this.stopEffect();this.cancelDrag();this.killMotion();this.resizeObserver?.disconnect();
    document.removeEventListener('visibilitychange',this.hidden);document.removeEventListener('toybuddy:enter',this.muted);document.removeEventListener('change',this.changed);
-   if(this.app?.renderer){try{this.app.destroy(true,{children:true,texture:false,textureSource:false})}catch{}}this.app=null;
+   if(this.app?.renderer){try{this.app.destroy(true,{children:true,texture:false,textureSource:false})}catch{}}this.app=null;for(const texture of this.portraitTextures.values())texture.destroy(true);this.portraitTextures.clear();
   }
  }
  games.u4familypuzzle={enter:()=>{current?.dispose();current=new FamilyPuzzle()}};
