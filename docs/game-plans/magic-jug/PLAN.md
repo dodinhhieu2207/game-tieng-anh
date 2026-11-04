@@ -1,5 +1,5 @@
 # Magic Jug — Jolly Juice Garden
-Status: take 1 selected by user; Name/Sound integration locally verified, public update pending.
+Status: take 1 selected by user; separate Name/Sound controls locally and publicly verified at ee777e5 on 2026-11-04.
 ## Approved scope
 User: “Vậy tiến hành làm” after recommendation to build one complete Magic Jug screen first. PixiJS 8.22.0 + existing GSAP. PixiUI https://github.com/pixijs/ui (MIT) and Pixi Creation https://github.com/pixijs/create-pixi consulted for skinned buttons and distinct pressed/disabled states; reference only, not new runtime dependencies. Skills frontend-design, interaction-design, imagegen.
 Route activity=magic-jug; game key u4magicjug. Unit 4 Lesson 3 becomes available with only this activity; preserve other planned lessons.
@@ -39,3 +39,5 @@ Public Jj-art verification: GitHub Pages 5e0911d succeeded; hosted phone browser
 User explicitly selected take 1 (“vậy chọn 1”). Copied exact triple preview bytes to audio/sound-j.wav; original name/jug/juice clips unchanged. Separate Letter name and Sound controls visible only in discovery/completion, so no extra cue in challenge rounds. Shared voice ownership, mute, leave cleanup and retry path. User-approved selection is stored independently of human phonetic certification (not claimed). Local QA/deployment pending.
 
 Sound activation QA: tests/magic-jug-sound.spec.cjs PASS actual 2.205s playback, exact selected bytes, distinct name, rapid interruption/no overlap, mute and no muted play, error/retry with no false discovery credit, cleanup on leave. The error-path check found an ended/error Audio element could keep paused=false; finish now pauses and clears handlers in all paths. Existing learning flow remains unchanged.
+
+Public sound gate: Pages ee777e5 succeeded. Hosted sound test passed real 2.205s ended playback, distinct name, interruption, mute, failure/retry and leave cleanup. Downloaded public sound-j.wav SHA256 exactly matches the selected take-1 preview bytes. No pronunciation certification beyond recorded user selection is claimed.
