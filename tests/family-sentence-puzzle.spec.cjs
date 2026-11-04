@@ -33,9 +33,13 @@ async function placeButtons(page,word,slot){const w=await words(page),id=w.index
  await page.locator('[data-fsp=check]').click();
  assert.equal(await page.locator('[data-position="2"]').isDisabled(),true);
  assert.equal(await page.locator('[data-position="3"]').isDisabled(),true);
+ await page.locator('.fsp[data-phase=arrange]').waitFor();
  assert.equal(await page.locator('[data-position="0"]').isDisabled(),false);
  await page.screenshot({path:'tests/family-puzzle-retry.png',fullPage:true});
- await canvasDrag(page,slot(1),slot(0));
+ await page.locator('.fsp[data-phase=arrange]').waitFor();
+ assert.match(await page.locator('[data-position="0"]').textContent(),/empty/);
+ assert.match(await page.locator('[data-position="1"]').textContent(),/empty/);
+ await placeButtons(page,'This',0);await placeButtons(page,'is',1);
  await page.locator('[data-fsp=check]').click();await page.locator('.fsp[data-phase=solved]').waitFor();
  assert.equal(await page.locator('.fsp-gallery figure').count(),1);
  console.log('PASS canvas drag, tap, occupied swap, partial check, locked correct pieces, real Higgs completion');
@@ -87,8 +91,10 @@ async function placeButtons(page,word,slot){const w=await words(page),id=w.index
  console.log('PASS renderer fallback and keyboard focus');await fallback.close();
 
  const audio=await browser.newPage({viewport:{width:1024,height:900}});
- await audio.addInitScript(()=>{window.__puzzleAudio=[];const NativeAudio=window.Audio;window.Audio=function(src){const a=new NativeAudio(src);if(String(src).includes('family-album/audio/'))window.__puzzleAudio.push(a);return a}});
- await ready(audio);await audio.locator('[data-fsp=listen]').click();await audio.waitForTimeout(150);
+ await audio.addInitScript(()=>{window.__puzzleAudio=[];const NativeAudio=window.Audio;window.Audio=function(src){const a=new NativeAudio(src);if(/family-album\/audio|robot-workshop\/audio|unit4\/lesson1\/audio/.test(String(src)))window.__puzzleAudio.push(a);return a}});
+ await ready(audio);await audio.locator('.fsp-alt summary').click();await audio.locator('[data-piece="0"]').click();await audio.waitForTimeout(100);
+ assert.ok(await audio.evaluate(()=>window.__puzzleAudio.some(a=>/robot-workshop|unit4/.test(a.src))));
+ await audio.locator('[data-fsp=listen]').click();await audio.waitForTimeout(150);
  assert.ok(await audio.evaluate(()=>window.__puzzleAudio.some(a=>!a.paused)));
  await audio.locator('summary[aria-label="Game controls"]').click();await audio.locator('[data-shell-action=sound]').click();
  assert.ok(await audio.evaluate(()=>window.__puzzleAudio.every(a=>a.paused)));

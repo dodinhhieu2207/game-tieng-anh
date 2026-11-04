@@ -2,9 +2,11 @@
 
 - Unit 4 Lesson 2, standalone sentence assembly with six family members. Target: “This is my mum/dad/brother/sister/grandpa/grandma.”
 - User selected PixiJS + GSAP. Word pieces, slots and character portrait are rendered in Pixi. Support direct dragging and tap-a-piece then tap-a-slot; provide equivalent keyboard buttons.
-- Children may arrange pieces freely and swap them. Check marks each slot, locks correct pieces and leaves wrong pieces editable. Do not automatically force every piece into the correct place.
+- Children may arrange pieces freely and swap them. Check marks each slot, locks correct pieces and returns wrong pieces to the tray after a brief X feedback. Do not automatically force every piece into the correct place.
 - Use approved family portraits and existing exact Higgs Family Album sentences. Create original scene/puzzle artwork. Keep App Outfit for reading words, retain the app shell, routes and progress.
 - Audio must finish or report a playback issue before opening the solved state. Stop audio, drag listeners and tweens when leaving. Respect mute and reduced motion.
 - Completion stars reward building the six sentences; no pronunciation or mastery claim.
 - Graphic coverage includes the activity cover, title, control skins/icons, puzzle pieces/slots/tray, feedback seals, status/progress, collection cards and desktop/phone finale album. Do not substitute generic buttons or empty CSS cards for this kit. Keep live text and approved family identities.
 - Three difficulty levels: sentences 1–2 show faint word guides; 3–4 have four shuffled pieces with no background guides or hint button; 5–6 add one family-word distractor. Keep Listen available for the spoken model. Selection uses a subtle duplicate of the puzzle silhouette, never a rectangular orange outline.
+
+Word listening/retry update: touch or drag pickup reads the selected word using existing Higgs Robot Workshop function-word clips and Unit 4 Lesson 1 family-word clips. A new pickup interrupts the previous clip. Check keeps correct pieces locked, shows X briefly, and animates incorrect pieces back to the tray without supplying the answer. Retry input is gated; leaving cancels delayed changes through the epoch guard.

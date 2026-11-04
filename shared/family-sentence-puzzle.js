@@ -154,7 +154,7 @@
    if(slot<0||!this.place(drag.id,slot)){this.positionTile(drag.id);this.paint()}
   }
   cancelDrag(){if(!this.drag)return;const d=this.drag;this.drag=null;try{this.app?.canvas?.releasePointerCapture(d.pointer)}catch{}this.positionTile(d.id,false)}
-  select(id,announce=true){if(this.phase!=='arrange'||!Number.isInteger(id)||id<0||id>=this.words.length||this.tileLocked(id))return;this.selected=id;this.paint();this.sync();if(announce)this.status(`${this.words[id]} selected. Choose a position.`)}
+  select(id,announce=true){if(this.phase!=='arrange'||!Number.isInteger(id)||id<0||id>=this.words.length||this.tileLocked(id))return;this.selected=id;this.wordVoice(this.words[id]);this.paint();this.sync();if(announce)this.status(`${this.words[id]} selected. Choose a position.`)}
   place(id,slot){
    if(this.phase!=='arrange'||id===null||!Number.isInteger(id)||id<0||id>=this.words.length||!Number.isInteger(slot)||slot<0||slot>3||this.tileLocked(id))return false;
    if(this.locked[slot]){this.status('This piece already fits. Choose another position.');return false}
@@ -181,12 +181,21 @@
    if(this.phase!=='arrange'||this.placed.some(x=>x===null))return;
    this.marks=this.placed.map((id,i)=>this.words[id]===this.expected[i]);this.locked=[...this.marks];this.selected=null;this.paint();
    const correct=this.marks.filter(Boolean).length;
-   if(correct<4){this.effect('retry');this.sync();this.status(`${correct} ${correct===1?'piece fits':'pieces fit'}. Move the marked pieces and try again.`);return}
+   if(correct<4){
+    this.phase='retrying';this.stopVoice();this.effect('retry');this.sync();this.status('Keep the checked pieces. The marked pieces are coming back.');
+    const token=this.epoch;await new Promise(resolve=>setTimeout(resolve,MQ.matches?250:850));if(!this.alive(token))return;
+    const returned=[];this.placed.forEach((id,i)=>{if(!this.locked[i]){returned.push(id);this.placed[i]=null;this.marks[i]=null}});
+    returned.forEach(id=>this.positionTile(id));this.phase='arrange';this.paint();this.sync();this.status(`${correct} ${correct===1?'piece fits':'pieces fit'}. Try the pieces in the tray again.`);return;
+   }
    this.phase='reading';this.sync();this.paint();this.status('A complete sentence! Listen and say it.');this.effect('correct');
    const token=this.epoch;await new Promise(resolve=>setTimeout(resolve,MQ.matches?0:220));if(!this.alive(token))return;
    const heard=await this.voice(window.FamilyAlbumClips?.clips?.[this.word]?.src);if(!this.alive(token)||this.phase!=='reading')return;
    this.phase='solved';if(!this.collected.includes(this.word)){this.collected.push(this.word);this.q('.fsp-gallery').insertAdjacentHTML('beforeend',`<figure><img src="${PORTRAIT(this.word)}" alt="${this.word}"><figcaption>${this.word}</figcaption></figure>`)}
    this.sync();this.status(heard||window.LearningApp?.isMuted()?`This is my ${this.word}. Say it together!`:'Your sentence is complete. Tap Listen to retry the sound.');
+  }
+  wordVoice(word){
+   const src=['This','is','my'].includes(word)?`assets/robot-workshop/audio/${word.toLowerCase()}.mp3`:`assets/unit4/lesson1/audio/${word}.mp3`;
+   this.voice(src);
   }
   async listen(){if(this.dead||['loading','reading','complete'].includes(this.phase))return;const token=this.epoch;const ok=await this.voice(window.FamilyAlbumClips?.clips?.[this.word]?.src);if(!this.alive(token))return;if(!ok&&!window.LearningApp?.isMuted())this.status('Sound could not play. Tap Listen to try again.')}
   voice(src){
