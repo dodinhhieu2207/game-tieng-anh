@@ -1,5 +1,5 @@
 # Magic Jug — Jolly Juice Garden
-Status: implemented and locally verified; public deployment pending.
+Status: implemented, locally verified and publicly verified at code release 1bd0601 on 2026-11-04.
 ## Approved scope
 User: “Vậy tiến hành làm” after recommendation to build one complete Magic Jug screen first. PixiJS 8.22.0 + existing GSAP. PixiUI https://github.com/pixijs/ui (MIT) and Pixi Creation https://github.com/pixijs/create-pixi consulted for skinned buttons and distinct pressed/disabled states; reference only, not new runtime dependencies. Skills frontend-design, interaction-design, imagegen.
 Route activity=magic-jug; game key u4magicjug. Unit 4 Lesson 3 becomes available with only this activity; preserve other planned lessons.
@@ -17,3 +17,5 @@ Actual mouse drag, touch/keyboard equivalent, partial/release/full fill, discove
 Existing broad navigation.spec.cjs stops on an outdated expected Unit 3 activity label (Listen & Decide versus current Toy Machine), outside this change; no old game was renamed here. Scoped Unit 4 Lesson 3 navigation and existing lesson counts are checked independently.
 
 Final local QA passed again after proportional sprite geometry, cup touch-to-listen, and container responsive corrections. Scoped navigation/mute/unchanged Unit 2–3 lesson count checks also PASS. 10 graphics, 6 Higgs voice clips and one attributed adapted pouring sound are catalogued.
+
+Public verification: GitHub Pages deployment 1bd0601 succeeded. Hosted Chromium loaded the actual Pixi canvas, played all four discovery targets through audio ended, poured through held input, preserved fill after release, displayed the phone layout at 390px without horizontal overflow, and loaded all ten asset-catalogue graphics. No page errors. Public screenshot tests/magic-jug-public-390.png (local QA evidence, not shipped).
