@@ -1,5 +1,5 @@
 # Little Juice Artist
-Status: implemented; local functional and responsive checks passed; deployment pending.
+Status: implemented; local functional/responsive checks passed; deployed and public render verified.
 User approved all three activities after the tracing/pipe/art proposals, continuing existing stack; no re-ask. Repos: PixiJS MIT https://github.com/pixijs/pixijs for scene/input (lab), GSAP current bundled license for meaningful water/snap feedback; PixiUI/Create Pixi previously studied skinned-control state conventions only. Skills frontend-design, interaction-design, imagegen. No copied third-party scene or new framework.
 Route activity=little-juice-artist, game=u4juiceartist; new Unit 4 Lesson 3 activity after Magic Jug. Paint original jug/glass line art inside SVG region masks with wide brush, using real pointer strokes, not click flood. Two listening prompts identify jug versus juice; incorrect object does not meet prompt. Free palette and sticker placement afterward. Undo/clear/reset/download own art; no subjective colour correctness score. Completion requires actual painting both objects and explicit finish.
 Assets: original generated scene for this activity, shared original droplet/stickers/control skins and specific interactive SVG shapes. Per-file provenance in assets/jj-fine-motor/sources.json and catalogue. Higgs audio manifest in audio; approved Magic Jug noun/name/phoneme files reused without overwriting.
@@ -12,3 +12,5 @@ Evidence: tests/jj-fine-functional.cjs passes complete actual mouse trace J/j/ju
 Limitations: touch is browser emulation, not a physical classroom screen; child learning gains, physical fine-motor transfer and physical-device FPS NOT_MEASURED. Audio transcript matches are automated; no new pronunciation scoring.
 
 Audio failure gate: tests/jj-fine-audio.cjs passed aborted letter playback, retained completed trace, Next locked until actual successful Listen retry. Physical-device and child outcomes remain unmeasured.
+
+Release: code dd860f0 pushed to origin/main. GitHub Pages deploy job 41857555884 succeeded; public source guard verified, all three public activity screens and their inline images loaded without page errors (tests/jj-fine-public.cjs). Local assets total about 1.67 MB including five Higgs clips.
