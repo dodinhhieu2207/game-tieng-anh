@@ -4,3 +4,4 @@
 .ja-game .ja-leaf:disabled{opacity:1;cursor:default}
 .ja-mic-icon{width:28px;height:32px;object-fit:contain;vertical-align:middle;pointer-events:none}
 @media(max-width:500px){.ja-game .ja-leaf{width:24%}}
+.ja-game{--app-font:"App Outfit","Arial Rounded MT Bold","Trebuchet MS",sans-serif}
