@@ -1,0 +1,104 @@
+{
+  "phase": "after",
+  "source": "Higgs diagnostic fixtures, not user recording or child speech",
+  "falseAccepts": [],
+  "misses": [],
+  "results": [
+    {
+      "spoken": "jug",
+      "target": "jug",
+      "status": 200,
+      "transcript": "Jug.",
+      "normalized": "jug",
+      "result": "CORRECT",
+      "answerType": "WORD"
+    },
+    {
+      "spoken": "jug",
+      "target": "juice",
+      "status": 200,
+      "transcript": "Jug.",
+      "normalized": "jug",
+      "result": "WRONG_LOGIC",
+      "answerType": "WORD"
+    },
+    {
+      "spoken": "juice",
+      "target": "jug",
+      "status": 200,
+      "transcript": "Juice.",
+      "normalized": "juice",
+      "result": "WRONG_LOGIC",
+      "answerType": "WORD"
+    },
+    {
+      "spoken": "juice",
+      "target": "juice",
+      "status": 200,
+      "transcript": "Juice.",
+      "normalized": "juice",
+      "result": "CORRECT",
+      "answerType": "WORD"
+    },
+    {
+      "spoken": "jack",
+      "target": "jug",
+      "status": 200,
+      "transcript": "Jack.",
+      "normalized": "jack",
+      "result": "UNCLEAR",
+      "answerType": null,
+      "reason": "sentence-unrecognized"
+    },
+    {
+      "spoken": "jack",
+      "target": "juice",
+      "status": 200,
+      "transcript": "Jack.",
+      "normalized": "jack",
+      "result": "UNCLEAR",
+      "answerType": null,
+      "reason": "sentence-unrecognized"
+    },
+    {
+      "spoken": "jog",
+      "target": "jug",
+      "status": 200,
+      "transcript": "Jog.",
+      "normalized": "jog",
+      "result": "UNCLEAR",
+      "answerType": null,
+      "reason": "sentence-unrecognized"
+    },
+    {
+      "spoken": "jog",
+      "target": "juice",
+      "status": 200,
+      "transcript": "Jog.",
+      "normalized": "jog",
+      "result": "UNCLEAR",
+      "answerType": null,
+      "reason": "sentence-unrecognized"
+    },
+    {
+      "spoken": "jacket",
+      "target": "jug",
+      "status": 200,
+      "transcript": "Jacket.",
+      "normalized": "jacket",
+      "result": "UNCLEAR",
+      "answerType": null,
+      "reason": "sentence-unrecognized"
+    },
+    {
+      "spoken": "jacket",
+      "target": "juice",
+      "status": 200,
+      "transcript": "Jacket.",
+      "normalized": "jacket",
+      "result": "UNCLEAR",
+      "answerType": null,
+      "reason": "sentence-unrecognized"
+    }
+  ]
+}

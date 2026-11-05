@@ -1,0 +1,37 @@
+{
+  "version": "20261027-u4-family1",
+  "engine": "Higgs Audio V3, cached local weights",
+  "voice": "Belinda reference from existing accepted Unit 3 recordings",
+  "referenceSha256": "8a6e483739144be6afa2735c41441d2970588fc089139685547a964c76510d07",
+  "normalization": "FFmpeg loudnorm I=-18, TP=-1.5, LRA=7",
+  "clips": {
+    "jack": {
+      "src": "tests/fixtures/jj-asr/jack.mp3",
+      "text": "Jack.",
+      "duration": 0.801,
+      "sha256": "9edff7b8f1fff1e3beba401a40f866c8e305903465f3955b87c104ff088de1ee",
+      "qaTranscript": "Jack",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "jog": {
+      "src": "tests/fixtures/jj-asr/jog.mp3",
+      "text": "Jog.",
+      "duration": 0.807,
+      "sha256": "db068c7d4897f77f02a893e0194ac5bbf946d17f81d1f4e2a078f58fe2e01705",
+      "qaTranscript": "Jog",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "jacket": {
+      "src": "tests/fixtures/jj-asr/jacket.mp3",
+      "text": "Jacket.",
+      "duration": 0.965,
+      "sha256": "8c3a800502fa417f8133e1d8592fecf6425fdf2a4c0b422bbe633e0f167be50b",
+      "qaTranscript": "jacket",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    }
+  },
+  "limits": "ASR verifies words only. Teacher listening review is still required before public classroom release."
+}
