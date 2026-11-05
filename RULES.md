@@ -186,3 +186,5 @@ Theo yêu cầu mới: speaking trên web dùng Cloudflare tự nhận diện/ph
 - Với câu học mới hoặc phần câu được sửa từ nay: khi Higgs TTS đọc đến từ nào, từ đó phải có hiệu ứng sáng rõ tại đúng vị trí trong câu. Dùng mốc từng từ bám clip thực tế và Audio.currentTime; không chia đều tổng thời lượng hay dùng bộ đếm chạy độc lập.
 - Lưu mốc theo clip/version/hash; khi đổi audio cần căn lại. Dừng/tắt sáng khi pause, mute, kết thúc, lỗi hoặc rời hoạt động; reduced motion giữ sáng tĩnh. Không chớp liên tục hay che chữ.
 - Giữ giọng Higgs đã duyệt; ghi rõ phạm vi game đã tích hợp, không tuyên bố mọi game cũ đã có khi chưa kiểm tra.
+
+- Phạm vi đính chính của người dùng: áp dụng đồng bộ voice cho TOÀN BỘ hoạt động Unit 4 đang có (Lesson 1–3), không chỉ Sentence Puzzle. Dùng dịch vụ Unit4ReadAlong theo catalogue audio đã căn mốc. Màn DOM sáng từ tại chỗ khi có câu tương ứng; màn canvas có dải lời đọc đồng bộ. Không đồng bộ SFX/nhạc hoặc bản ghi của trẻ. Lesson chưa có game không tính đã triển khai.
