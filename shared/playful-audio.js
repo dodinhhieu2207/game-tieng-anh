@@ -1,9 +1,9 @@
 /* Sampled tactile SFX only. Approved Higgs speech remains on its existing lane. */
 (()=>{'use strict';
  const base='assets/playful-foley/',names=['tap','place','retry','correct','complete','open','reveal','star','roll','latch'],clips=new Map(),playing=new Map();let epoch=0,last=-1000,lastKind='',voice=0;
- const recording=()=>window.SpeakingPlay?.recording||['starting','recording','processing'].includes(window.Unit3Lesson2?.current()?.phase);
+ const recording=()=>window.JjAdventures?.recording||window.SpeakingPlay?.recording||['starting','recording','processing'].includes(window.Unit3Lesson2?.current()?.phase);
  const enabled=()=>!document.hidden&&!recording()&&!window.LearningApp?.isMuted()&&document.querySelector('#soundFx')?.checked&&!(typeof letterAudio!=='undefined'&&['letterfly','abcflash'].includes(currentGame)&&!letterAudio.isOn());
- const busy=()=>Boolean(window.LearningApp?.isVoiceBusy?LearningApp.isVoiceBusy():voice>0)||window.speechSynthesis?.speaking;
+ const busy=()=>Boolean(window.LearningApp?.isVoiceBusy?LearningApp.isVoiceBusy():voice>0)||window.JjAdventures?.voiceBusy||window.speechSynthesis?.speaking;
  const emit=(event,detail)=>document.dispatchEvent(new CustomEvent('learning:foley',{detail:{event,...detail}}));
  function stop({keepUI=false}={}){epoch++;for(const [key,item]of playing){if(keepUI&&item.ui)continue;item.sound.stop(item.id);item.finish(false)}}
  function get(kind){if(clips.has(kind))return clips.get(kind);let resolve;const ready=new Promise(r=>resolve=r);const sound=new Howl({src:[base+kind+'.wav'],preload:true,volume:.26,pool:2,onload:()=>resolve(true),onloaderror:()=>{clips.delete(kind);emit('error',{kind});resolve(false)}});const item={sound,ready};clips.set(kind,item);return item}

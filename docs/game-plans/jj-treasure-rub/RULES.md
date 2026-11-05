@@ -1,0 +1,3 @@
+# Jj Treasure Rub
+Unit 4 Lesson 3 Jj, jug, juice. Four shuffled reveals J,j,jug,juice. Real destination-out scratch on generated opaque frost, measured erased area; correct choices disabled until reveal threshold. Touch wipe or accessible keyboard wipe; retry local. Match exact visible glyph/picture; J/j never competing ambiguous sound-only choices.
+User approved all three 2026-11-05 with own assets, design, VFX/SFX and motion. Preserve existing activities/routes/progress/approved word art and Higgs sound-j take1. New voice Higgs only. App Outfit local font, solid borders, touch targets >=48px, keyboard and reduced motion. No pronunciation/mastery claims. No manual teacher approval or fake recognition.

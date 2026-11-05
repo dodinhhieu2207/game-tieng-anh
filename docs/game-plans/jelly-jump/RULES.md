@@ -1,0 +1,3 @@
+# Jelly Jump
+Unit 4 Lesson 3 Jj, jug, juice. Six listening rounds: jug/juice picture discrimination; one /dʒ/ word among familiar non-J pictures; J or j among H/I. Exactly one valid target per round. Hop through a visible arc, pad squash and water rings; mistakes retain progress and let child retry.
+User approved all three 2026-11-05 with own assets, design, VFX/SFX and motion. Preserve existing activities/routes/progress/approved word art and Higgs sound-j take1. New voice Higgs only. App Outfit local font, solid borders, touch targets >=48px, keyboard and reduced motion. No pronunciation/mastery claims. No manual teacher approval or fake recognition.

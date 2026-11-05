@@ -1,0 +1,3 @@
+# Juice Cafe
+Unit 4 Lesson 3 Jj, jug, juice. Four orders jug/juice, shuffled. Drag approved word picture to customer tray or tap then place. Correct delivery unlocks microphone, AI recognized WORD jug/juice completes order; unclear/mic/network retry without loss, wrong other known word prompts listen. AI is lexical recognition, never phonetic scoring. Completed orders stay visible.
+User approved all three 2026-11-05 with own assets, design, VFX/SFX and motion. Preserve existing activities/routes/progress/approved word art and Higgs sound-j take1. New voice Higgs only. App Outfit local font, solid borders, touch targets >=48px, keyboard and reduced motion. No pronunciation/mastery claims. No manual teacher approval or fake recognition.

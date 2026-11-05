@@ -4,6 +4,7 @@
  const toys=Object.freeze(['plane','puppet','robot','balloon','teddy']);
  const school=Object.freeze(['desk','chair','pencil','crayon','notebook','egg','elephant','fish','farm']);
  const phonics=Object.freeze(['girl','guitar']);
+ const jj=Object.freeze(['jug','juice']);
  const numbers=Object.freeze(['one','two','three','four','five','six','seven','eight']);
  const family=Object.freeze(['mum','dad','brother','sister','grandpa','grandma']);
  const storyLines=Object.freeze({
@@ -18,8 +19,8 @@
   'teddy-cheer':[/^teddy bear(?: teddy bear)?$/],
   'billy-robot':[/^(?:i'm|im|i am) a robot$/]
  });
- const questionTypes=Object.freeze(['yes-no','name','school-name','name-question','mystery-question','toy-word','gg-word','gg-letter-name','number-word','story-line','family-introduction','family-yes-no']);
- const vocabularyFor=type=>type==='story-line'?Object.keys(storyLines):['family-introduction','family-yes-no'].includes(type)?family:type==='number-word'?numbers:type==='gg-letter-name'?['G']:type==='school-name'?school:type==='gg-word'?phonics:toys;
+ const questionTypes=Object.freeze(['yes-no','name','school-name','name-question','mystery-question','toy-word','gg-word','jj-word','gg-letter-name','number-word','story-line','family-introduction','family-yes-no']);
+ const vocabularyFor=type=>type==='jj-word'?jj:type==='story-line'?Object.keys(storyLines):['family-introduction','family-yes-no'].includes(type)?family:type==='number-word'?numbers:type==='gg-letter-name'?['G']:type==='school-name'?school:type==='gg-word'?phonics:toys;
  // Bounded ASR spellings/homophones, independent of the displayed answer.
  // Do not fuzzy-match short words such as cat/car, or add missing grammar.
  const aliases=Object.freeze({'plain':'plane','airplane':'plane','aeroplane':'plane','ro bot':'robot','robo':'robot','baloon':'balloon','ballon':'balloon','tedi':'teddy','teddie':'teddy','gurl':'girl','guitah':'guitar','guiter':'guitar','pensil':'pencil','pencill':'pencil','cray on':'crayon','note book':'notebook','elefant':'elephant'});
@@ -60,7 +61,7 @@
    const other=/^(?:letter |the letter )?[abcdefh-z]$/.test(normalized);
    return {transcript,normalized,result:named?'CORRECT':other?'WRONG_LOGIC':'UNCLEAR',answerType:named||other?'NAME':null};
   }
-  if(questionType==='toy-word'||questionType==='gg-word'){
+  if(questionType==='toy-word'||questionType==='gg-word'||questionType==='jj-word'){
    const word=vocabulary.includes(normalized);
    return {transcript,normalized,result:word?(normalized===displayedToy?'CORRECT':'WRONG_LOGIC'):'UNCLEAR',answerType:word?'WORD':null};
   }

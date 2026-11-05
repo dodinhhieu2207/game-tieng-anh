@@ -1,0 +1,68 @@
+[
+  {
+    "file": "jump-scene.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-86bb6898-9350-4d3c-90a6-1770681844bb.png",
+    "sha256": "28400b9216563b670662ae905b9c8e6070db708ad9fca4b1ced9c5e756f016d3",
+    "method": "built-in image_gen; alpha bounds trim for sprites, resize/export only"
+  },
+  {
+    "file": "cafe-scene.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-3f453b53-1363-4f07-8a28-73acdc959ed4.png",
+    "sha256": "227b266108933a194a57ec8363ec1a63a7a239545d6c0fa6b3e8ac7a878c5bc2",
+    "method": "built-in image_gen; alpha bounds trim for sprites, resize/export only"
+  },
+  {
+    "file": "rub-scene.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-e0bfeb0c-c75c-4a66-8c52-651a9e4af6e6.png",
+    "sha256": "b79be6a8456d5b8bd4f98452edf107a551a0a6026f39b7d8c2d00c46e6d97d9e",
+    "method": "built-in image_gen; alpha bounds trim for sprites, resize/export only"
+  },
+  {
+    "file": "jump-drop.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-e9030460-52de-4aa5-8aa8-757692787af0.png",
+    "sha256": "cb1876628e98536c08bea7c46f28b95991e8adedde24da1ca938c646768cd3a0",
+    "method": "built-in image_gen; alpha bounds trim for sprites, resize/export only"
+  },
+  {
+    "file": "cafe-bunny.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-1fb16484-f2ce-45f2-8d35-f06a51e45cb9.png",
+    "sha256": "5601c03350547753f466ae7e58bb19a227472560abe0d5532077e338215d1d45",
+    "method": "built-in image_gen; alpha bounds trim for sprites, resize/export only"
+  },
+  {
+    "file": "lily-pad.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-ce223a96-031d-4139-b9d5-28782f4328f1.png",
+    "sha256": "6cc79a4624d3d6a99cb36c2dbaf72d64269e00f141e8b7fd3e8be6eb37fe11bf",
+    "method": "built-in image_gen; alpha bounds trim for sprites, resize/export only"
+  },
+  {
+    "file": "rub-cloth.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-21db30f2-fcf2-4300-b456-e05907eba21c.png",
+    "sha256": "22dddcb71fcb0cf2df71489b414ecdc1a2cbb97a8e09dc4b839b290cef540522",
+    "method": "built-in image_gen; alpha bounds trim for sprites, resize/export only"
+  },
+  {
+    "file": "frost.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-94d7529d-9516-45fa-9bab-70b3844321f2.png",
+    "sha256": "9841d12de9c27185676d424143792af0eab1b6eb58162d38c69f2640e5a72b03",
+    "method": "built-in image_gen; alpha bounds trim for sprites, resize/export only"
+  },
+  {
+    "file": "jump-cover.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-2357ea86-a1df-4961-88a6-8364b1859ea8.png",
+    "sha256": "ffdc1e16857e56c9897839d72a5af99e45709f2268e6ab455f6112cee949733a",
+    "method": "built-in image_gen; resize/export only"
+  },
+  {
+    "file": "cafe-cover.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-0d456824-0533-4b70-9923-cddc9c6ef25c.png",
+    "sha256": "277239ac8fb978b8c49ba8fb4a2d273333d84c75948d2279b3d5b1d771704d69",
+    "method": "built-in image_gen; resize/export only"
+  },
+  {
+    "file": "rub-cover.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-e596ba5b-24bc-413e-9213-6c77bb560eb7.png",
+    "sha256": "7f0f48d231903277d4a28d946608af2f8b3cc394aa3c4f388a3020e46dcde99b",
+    "method": "built-in image_gen; resize/export only"
+  }
+]

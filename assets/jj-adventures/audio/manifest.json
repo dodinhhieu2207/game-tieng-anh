@@ -1,0 +1,73 @@
+{
+  "version": "20261105-jjadventures1",
+  "engine": "Higgs Audio V3, cached local weights",
+  "voice": "Belinda reference from existing accepted Unit 3 recordings",
+  "referenceSha256": "8a6e483739144be6afa2735c41441d2970588fc089139685547a964c76510d07",
+  "normalization": "FFmpeg loudnorm I=-18, TP=-1.5, LRA=7",
+  "clips": {
+    "jump-intro": {
+      "src": "assets/jj-adventures/audio/jump-intro.mp3",
+      "text": "Listen. Choose a leaf. Let us jump!",
+      "duration": 3.396,
+      "sha256": "9cf54010c353cf2e58518b315da2dae8402f3f9a636735c2c66993d31adb9935",
+      "qaTranscript": "Listen. Choose a leaf. Let us jump.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "cafe-intro": {
+      "src": "assets/jj-adventures/audio/cafe-intro.mp3",
+      "text": "Listen to the order. Serve it, then say the word.",
+      "duration": 4.043,
+      "sha256": "77a9ca39e0a93a6d869734474e9311e9116ad77fc232952bafd120f9381ffbf3",
+      "qaTranscript": "Listen to the order, serve it, then say the word.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "rub-intro": {
+      "src": "assets/jj-adventures/audio/rub-intro.mp3",
+      "text": "Wipe the mist. Find the matching picture or letter.",
+      "duration": 4.016,
+      "sha256": "7376925b29e175cb9bb730ab714001a903c5fc56bde53fee4de4c6bdb3cc35d3",
+      "qaTranscript": "Wipe the mist, find the matching picture or letter.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "order-jug": {
+      "src": "assets/jj-adventures/audio/order-jug.mp3",
+      "text": "A jug, please.",
+      "duration": 1.5,
+      "sha256": "acec94e0f7c0085fc017fae3b23f32ff7c0f94751f2d2534ff09035ea79615ae",
+      "qaTranscript": "A jug, please.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "order-juice": {
+      "src": "assets/jj-adventures/audio/order-juice.mp3",
+      "text": "Juice, please.",
+      "duration": 1.368,
+      "sha256": "889317dc63aae942b7e218399436d29f419ff65b036e520d982213607f6396ad",
+      "qaTranscript": "Juice, please.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "speak": {
+      "src": "assets/jj-adventures/audio/speak.mp3",
+      "text": "Your turn. Say the word.",
+      "duration": 2.25,
+      "sha256": "63c58ee94f2e869145d0db611ba8b2d17587ca8397ac5943d6ba94df0a5da96b",
+      "qaTranscript": "Your turn. Say the word.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "finished": {
+      "src": "assets/jj-adventures/audio/finished.mp3",
+      "text": "Wonderful! You did it!",
+      "duration": 2.173,
+      "sha256": "3e797d1c43badcd8587414c265ade251def33ea2af2b2c2e5d8485b19b4ebf92",
+      "qaTranscript": "Wonderful, you did it!",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    }
+  },
+  "limits": "Finite script transcript QA only; not pronunciation certification."
+}

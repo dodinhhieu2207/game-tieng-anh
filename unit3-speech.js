@@ -19,7 +19,7 @@
    const result=await response.json();
    if(round.questionType==='mystery-question'&&result.result==='CORRECT'&&!window.ToySpeechEvaluator.toys.includes(result.guessedToy))throw new Error('invalid-response');
    if(typeof result.transcript!=='string'||typeof result.normalized!=='string'||!['CORRECT','INCOMPLETE','WRONG_LOGIC','UNCLEAR'].includes(result.result)||!['YES','NO','NAME','QUESTION','WORD',null].includes(result.answerType))throw new Error('invalid-response');
-   if(['toy-word','gg-word','gg-letter-name','number-word','story-line','family-introduction','family-yes-no'].includes(round.questionType)&&result.result==='CORRECT'){
+   if(['toy-word','gg-word','jj-word','gg-letter-name','number-word','story-line','family-introduction','family-yes-no'].includes(round.questionType)&&result.result==='CORRECT'){
     const checked=window.ToySpeechEvaluator.evaluate(result.transcript,round.questionToy,round.displayedToy,round.questionType);
     if(checked.result!=='CORRECT'||result.answerType!==(['gg-letter-name','story-line','family-introduction'].includes(round.questionType)?'NAME':round.questionType==='family-yes-no'?(round.questionToy===round.displayedToy?'YES':'NO'):'WORD'))throw new Error('invalid-response');
    }
