@@ -1,0 +1,31 @@
+[
+  {
+    "file": "scene.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-9744e192-b73d-4b97-aaa7-a15934509de0.png",
+    "sha256": "6c5a1e7b0c7a8768362f1a917cba227d520e1ae78059ae6288ccc61cc3714c7c",
+    "method": "built-in image_gen; alpha bounds trim and resize/export only"
+  },
+  {
+    "file": "cover.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-2ac933e1-5ecb-45c0-9508-b90deb98d6a3.png",
+    "sha256": "1997008ef4324ca7317e7fe8f8f8f5c2ff33effbd1503f0b5403ce61499a342e",
+    "method": "built-in image_gen; alpha bounds trim and resize/export only"
+  },
+  {
+    "file": "pump.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-0a4da653-3ecd-4acd-b352-c1c6d194763c.png",
+    "sha256": "5f901c28eaa17f757cfb208f657cf95c802322df85f30798e18b0d8392da4432",
+    "method": "built-in image_gen; alpha bounds trim and resize/export only"
+  },
+  {
+    "file": "jug.webp",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-09736b21-ca1f-4ae7-8909-27631f53c735.png",
+    "sha256": "28616d4a93b872d8fe47ccf3322bf70c9b4e3c28ee1249b5d2d074355eb1e686",
+    "method": "built-in image_gen; alpha bounds trim and resize/export only"
+  },
+  {
+    "file": "cover.webp",
+    "source": "Actual rebuilt game UI screenshot tests/pipe-lab-solved.png",
+    "reason": "Supported straight/elbow pieces and actual layout"
+  }
+]

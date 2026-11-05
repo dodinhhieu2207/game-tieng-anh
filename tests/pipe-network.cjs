@@ -1,0 +1,3 @@
+const assert=require('node:assert/strict'),N=require('../shared/pipe-network.js'),P=require('../assets/juice-pipe-lab/patterns.json');
+for(const p of P.patterns){assert(N.validatePattern(p.cells));const board=Array(9).fill(null);for(const t of N.piecesFor(p.cells))board[t.cell]=t;assert(N.trace(board).success);for(const t of N.piecesFor(p.cells)){const old=board[t.cell];board[t.cell]=null;assert(!N.trace(board).success);board[t.cell]={...old,rotation:(old.rotation+1)%4};assert(!N.trace(board).success);board[t.cell]=old}}
+assert(!N.validatePattern(null));assert(!N.validatePattern([[0,1],null,[1,2],[2,2]]));assert.equal(N.trace([]).reason,'empty');console.log('All 8 routes, every missing/rotated segment, malformed data: PASS');

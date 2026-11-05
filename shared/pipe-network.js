@@ -1,0 +1,11 @@
+/* Pipe graph is independent of picture layout, pattern hints and renderer. */
+(function(root){'use strict';
+const COLS=3,ROWS=3,ENTRY=3,EXIT=8,DELTA=[[0,-1],[1,0],[0,1],[-1,0]];
+const ports=(type,rotation=0)=>(type==='straight'?[1,3]:type==='elbow'?[0,1]:[]).map(p=>(p+rotation%4+4)%4);
+const index=(x,y)=>y*COLS+x;
+const direction=(a,b)=>b[0]>a[0]?1:b[0]<a[0]?3:b[1]>a[1]?2:0;
+function validatePattern(path){if(!Array.isArray(path)||path.length<4||path.length>9||!path.every(p=>Array.isArray(p)&&p.length===2))return false;if(index(...path[0])!==ENTRY||index(...path.at(-1))!==EXIT)return false;const seen=new Set();return path.every((p,i)=>{if(!Array.isArray(p)||p.length!==2||!p.every(Number.isInteger)||p[0]<0||p[0]>=COLS||p[1]<0||p[1]>=ROWS||seen.has(index(...p)))return false;seen.add(index(...p));return !i||Math.abs(p[0]-path[i-1][0])+Math.abs(p[1]-path[i-1][1])===1})}
+function piecesFor(path){if(!validatePattern(path))throw Error('Invalid pipe pattern');return path.map((cell,i)=>{const a=i?direction(cell,path[i-1]):3,b=i===path.length-1?1:direction(cell,path[i+1]);return{type:Math.abs(a-b)===2?'straight':'elbow',rotation:[0,1,2,3].find(r=>{const ps=ports(Math.abs(a-b)===2?'straight':'elbow',r);return ps.includes(a)&&ps.includes(b)}),cell:index(...cell)}})}
+function trace(board){let at=ENTRY,incoming=3;const visited=new Set(),steps=[];for(let n=0;n<10;n++){const p=board[at];if(!p)return{success:false,reason:'empty',cell:at,steps};const ps=ports(p.type,p.rotation);if(!ps.includes(incoming))return{success:false,reason:'mismatch',cell:at,steps};if(visited.has(at))return{success:false,reason:'loop',cell:at,steps};visited.add(at);const outgoing=ps.find(x=>x!==incoming);steps.push({cell:at,incoming,outgoing});const x=at%COLS,y=Math.floor(at/COLS),[dx,dy]=DELTA[outgoing],nx=x+dx,ny=y+dy;if(nx<0||nx>=COLS||ny<0||ny>=ROWS)return{success:at===EXIT&&outgoing===1,reason:at===EXIT&&outgoing===1?'connected':'open-end',cell:at,port:outgoing,steps};at=index(nx,ny);incoming=(outgoing+2)%4}return{success:false,reason:'loop',cell:at,steps}}
+const api=Object.freeze({COLS,ROWS,ENTRY,EXIT,DELTA,ports,index,direction,validatePattern,piecesFor,trace});root.PipeNetwork=api;if(typeof module!=='undefined'&&module.exports)module.exports=api;
+})(globalThis);
