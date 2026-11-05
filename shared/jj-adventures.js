@@ -62,7 +62,7 @@ class Rub extends Adventure{
  action(b){if(!b.dataset.answer||this.phase!=='input')return;if(b.dataset.answer!==this.target){this.badge(b,'retry');this.sfx('retry');this.status('Look at the clear window. Try another match.');return}this.state('animating');this.badge(b,'correct');this.sfx('correct');this.listen([['J','j'].includes(this.target)?'letter':this.target],()=>{this.state('done');this.status('✓ Treasure found! Tap Next.')})}
  cancelInput(){this.pointer=null}
 }
-function start(key){current?.dispose();current=new ({u4jellyjump:Jump,u4juicecafe:Cafe,u4jjrub:Rub}[key])()}
-for(const [k,title] of [['u4jellyjump','Jelly Jump'],['u4juicecafe','Juice Café'],['u4jjrub','Jj Treasure Rub']]){games[k]={enter:()=>start(k)};GAME_META[k]=['UNIT 4 · LESSON 3',title,'Listen, discover and practise Jj.']}
+function start(key){current?.dispose();current=new ({u4jellyjump:Jump,u4jjrub:Rub}[key])()}
+for(const [k,title] of [['u4jellyjump','Jelly Jump'],['u4jjrub','Jj Treasure Rub']]){games[k]={enter:()=>start(k)};GAME_META[k]=['UNIT 4 · LESSON 3',title,'Listen, discover and practise Jj.']}
 document.addEventListener('learning:leave-activity',()=>{current?.dispose();current=null});
 })();
