@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-05",
+  "webCode": "698f3a5489c2866162a2b234cb6199f84bc576e9",
+  "pagesRun": 41947923627,
+  "pagesConclusion": "success",
+  "workerVersion": "23625d9c-f6f4-4500-a121-2ed32780a6cb",
+  "local": [
+    "full mouse flows for 3 activities",
+    "five widths and explicit App Outfit",
+    "touch/reduced motion/audio failure retry",
+    "real browser capture with mocked correct/wrong/unclear/network responses",
+    "real browser fixture capture through live Cloudflare",
+    "419 worker regression cases and child confidence grammar guards"
+  ],
+  "public": [
+    "three routes and actual interaction",
+    "7 Higgs files and 3 covers HTTP200",
+    "App Outfit computed and loaded",
+    "source/CSS/index parity",
+    "no page errors"
+  ],
+  "liveSpeech": "four direct approved-Higgs word/target cases plus actual browser fixture capture; not real child speech",
+  "notMeasured": [
+    "child speech accuracy",
+    "learning gains",
+    "physical screen performance"
+  ]
+}
