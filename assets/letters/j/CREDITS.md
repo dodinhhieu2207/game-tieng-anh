@@ -1,0 +1,1 @@
+Letter Land Jj reuses approved Magic Jug uppercase/lowercase, jug and Higgs letter/name/word clips. Sound is user-selected take 1 sound-j.wav. Juice SVG packages the existing jj-adventures juice composite and approved Magic Jug glass sprite. Original provenance: assets/magic-jug/sources.json and audio/manifest.json. No approved source files overwritten.
