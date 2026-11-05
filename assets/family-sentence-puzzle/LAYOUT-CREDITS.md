@@ -1,0 +1,1 @@
+play-board.svg: original native SVG quiet gradient board, created for the 2026-11-05 layout correction. Existing portrait, puzzle, tray and audio assets retain their provenance. Decorative source art preserved but no longer used in active playing scene.

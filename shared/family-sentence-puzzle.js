@@ -48,7 +48,7 @@
    const token=++this.epoch;
    try{
     await Promise.all([loadPixi(),document.fonts.load('800 40px "App Outfit"')]);if(!this.alive(token))return;
-    const paths=[ROOT+'desk.png',ROOT+'piece-this.svg',ROOT+'piece-is.svg',ROOT+'piece-my.svg',ROOT+'piece-family.svg',ROOT+'slot.svg',ROOT+'photo-frame.svg',ROOT+'piece-tray.svg',ROOT+'correct-seal.svg',ROOT+'retry-seal.svg',...PEOPLE.map(PORTRAIT)];
+    const paths=[ROOT+'play-board.svg',ROOT+'piece-this.svg',ROOT+'piece-is.svg',ROOT+'piece-my.svg',ROOT+'piece-family.svg',ROOT+'slot.svg',ROOT+'photo-frame.svg',ROOT+'piece-tray.svg',ROOT+'correct-seal.svg',ROOT+'retry-seal.svg',...PEOPLE.map(PORTRAIT)];
     const textures=await Promise.all(paths.map(p=>PIXI.Assets.load(p)));if(!this.alive(token))return;
     this.textures=new Map(paths.map((p,i)=>[p,textures[i]]));
     const app=new PIXI.Application();this.app=app;
@@ -67,7 +67,7 @@
    if(this.dead||!this.app?.renderer||!this.textures)return;
    const width=this.host.clientWidth;if(!width||(!force&&this.lastWidth===width))return;this.lastWidth=width;
    this.cancelDrag();this.killMotion();this.mobile=width<650;this.worldWidth=this.mobile?600:1000;
-   this.worldHeight=this.mobile?(this.words.length>4?1170:1020):650;
+   this.worldHeight=this.mobile?(this.words.length>4?1280:1130):770;
    const height=Math.round(width*this.worldHeight/this.worldWidth);this.host.style.height=height+'px';this.app.renderer.resize(width,height);
    this.app.stage.hitArea=new PIXI.Rectangle(0,0,width,height);this.drawScene();
   }
@@ -90,12 +90,12 @@
   drawScene(){
    this.killMotion();if(this.world){this.app.stage.removeChild(this.world);this.world.destroy({children:true,texture:false,textureSource:false})}
    const W=this.worldWidth,H=this.worldHeight;this.world=new PIXI.Container();this.world.scale.set(this.lastWidth/W);this.app.stage.addChild(this.world);
-   const bg=this.sprite(ROOT+'desk.png'),scale=Math.max(W/bg.texture.width,H/bg.texture.height);bg.scale.set(scale);bg.position.set(W/2,H/2);this.world.addChild(bg);
-   const photo=this.sprite(ROOT+'photo-frame.svg');photo.width=this.mobile?190:180;photo.height=this.mobile?205:195;photo.position.set(W/2,this.mobile?140:117);this.world.addChild(photo);
-   const person=new PIXI.Sprite(this.portraitTexture(this.word));person.anchor.set(.5);const maxH=photo.height*.74,maxW=photo.width*.69;person.scale.set(Math.min(maxW/person.texture.width,maxH/person.texture.height));person.position.set(photo.x,photo.y-3);this.world.addChild(person);
-   const prompt=this.text('Build the sentence.',this.mobile?30:24);prompt.anchor.set(.5);prompt.position.set(W/2,this.mobile?270:240);this.world.addChild(prompt);
+   const bg=this.sprite(ROOT+'play-board.svg'),scale=Math.max(W/bg.texture.width,H/bg.texture.height);bg.scale.set(scale);bg.position.set(W/2,H/2);this.world.addChild(bg);
+   const photo=this.sprite(ROOT+'photo-frame.svg');photo.width=this.mobile?280:290;photo.height=this.mobile?300:310;photo.position.set(W/2,this.mobile?180:180);this.world.addChild(photo);
+   const person=new PIXI.Sprite(this.portraitTexture(this.word));person.anchor.set(.5);const maxH=photo.height*.82,maxW=photo.width*.77;person.scale.set(Math.min(maxW/person.texture.width,maxH/person.texture.height));person.position.set(photo.x,photo.y-3);this.world.addChild(person);
+   const prompt=this.text('Build the sentence.',this.mobile?30:24);prompt.anchor.set(.5);prompt.position.set(W/2,this.mobile?370:370);this.world.addChild(prompt);
    const pw=260,ph=130,step=pw*227/300;
-   this.slotPositions=Array.from({length:4},(_,i)=>({x:this.mobile?W/2+(i%2===0?-step/2:step/2):W/2+(i-1.5)*step,y:this.mobile?390+Math.floor(i/2)*145:350,w:pw,h:ph}));
+   this.slotPositions=Array.from({length:4},(_,i)=>({x:this.mobile?W/2+(i%2===0?-step/2:step/2):W/2+(i-1.5)*step,y:this.mobile?480+Math.floor(i/2)*145:475,w:pw,h:ph}));
    this.slotNodes=[];
    this.slotPositions.forEach((p,i)=>{
     const group=new PIXI.Container();group.position.set(p.x,p.y);const art=this.sprite(ROOT+'slot.svg');art.width=p.w;art.height=p.h;group.addChild(art);
@@ -107,9 +107,10 @@
    });
    const last=this.slotPositions[3],period=this.text('.',this.mobile?48:45);period.anchor.set(.5);period.position.set(last.x+pw*.5+6,last.y+ph*.05);this.world.addChild(period);
    const rows=this.mobile?Math.ceil(this.words.length/2):1;
-   for(let row=0;row<rows;row++){const tray=this.sprite(ROOT+'piece-tray.svg');tray.width=this.mobile?560:950;tray.height=this.mobile?148:165;tray.position.set(W/2,this.mobile?755+row*145:535);this.world.addChild(tray)}
+   const tray=this.sprite(ROOT+'piece-tray.svg');tray.width=this.mobile?560:950;tray.height=this.mobile?(rows*145+34):164;tray.position.set(W/2,this.mobile?850+(rows-1)*72.5:667);this.world.addChild(tray);
+   const trayLabel=this.text('Choose a word',this.mobile?27:23,0x517c79);trayLabel.anchor.set(.5);trayLabel.position.set(W/2,this.mobile?747:579);this.world.addChild(trayLabel);
    const inset=this.words.length>4?135:145;
-   this.homePositions=this.words.map((_,i)=>this.mobile?{x:this.words.length%2&&i===this.words.length-1?300:i%2===0?165:435,y:755+Math.floor(i/2)*145,w:260,h:130}:{x:inset+((W-2*inset)/Math.max(1,this.words.length-1))*i,y:535,w:this.words.length>4?180:200,h:106});
+   this.homePositions=this.words.map((_,i)=>this.mobile?{x:this.words.length%2&&i===this.words.length-1?300:i%2===0?165:435,y:850+Math.floor(i/2)*145,w:260,h:130}:{x:inset+((W-2*inset)/Math.max(1,this.words.length-1))*i,y:667,w:this.words.length>4?180:200,h:106});
    this.tileLayer=new PIXI.Container();this.markLayer=new PIXI.Container();this.world.addChild(this.tileLayer,this.markLayer);this.tileNodes=[];
    this.words.forEach((word,id)=>{
     const home=this.homePositions[id],group=new PIXI.Container(),selection=this.sprite(piecePath(word)),art=this.sprite(piecePath(word));selection.width=home.w*1.05;selection.height=home.h*1.05;selection.tint=0xf4edcd;selection.alpha=.4;selection.visible=false;group.addChild(selection);group.selection=selection;art.width=home.w;art.height=home.h;group.addChild(art);group.art=art;
