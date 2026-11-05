@@ -1,0 +1,1 @@
+Original native SVG precision kit. Shared 300x150 viewBox, anchor center(150,75), body x30..250, connector axis y75; identical piece/slot silhouette. Joined pitch220/300 of sprite width. Text center x140, safe x60..220. Transparent per-piece canvas. Mint/gold/coral palette from approved scene. Created for user-requested puzzle alignment correction, 2026-11-05.

@@ -17,10 +17,10 @@ async function placeButtons(page,word,slot){const w=await words(page),id=w.index
  await ready(page);const initial=await words(page),target=initial.find(w=>!['This','is','my'].includes(w));
  assert.equal(await page.locator('.fsp').getAttribute('data-level'),'1');
  assert.equal(await page.locator('.fsp').getAttribute('data-guide'),'true');
- assert.equal(await page.locator('.fsp-head').evaluate(e=>getComputedStyle(e).backgroundImage),'none');
+ assert.match(await page.locator('.fsp-head').evaluate(e=>getComputedStyle(e).backgroundImage),/title-plaque.webp/);
  assert.match(await page.locator('[data-fsp=check]').evaluate(e=>getComputedStyle(e).backgroundImage),/button-gold.webp/);
  assert.equal(await page.locator('[data-fsp=listen] img').getAttribute('src'),'assets/family-sentence-puzzle/icon-listen.svg');
- const home=id=>[145+710/3*id,667],slot=i=>[500+(i-1.5)*260*227/300,475];
+ const home=id=>[155+690/3*id,667],slot=i=>[500+(i-1.5)*260*220/300,475];
  await canvasDrag(page,home(initial.indexOf('This')),slot(0));
  assert.match(await page.locator('[data-position="0"]').textContent(),/This/);
  await canvasTap(page,home(initial.indexOf('is')));await page.screenshot({path:'tests/family-puzzle-selection.png',fullPage:true});await canvasTap(page,slot(1));
@@ -77,7 +77,7 @@ async function placeButtons(page,word,slot){const w=await words(page),id=w.index
   if(width===390||width===1366)await p.screenshot({path:`tests/family-puzzle-${width}.png`,fullPage:true});
   if(width===390){
    const list=await words(p);const start=[list.indexOf('This')%2===0?165:435,850+Math.floor(list.indexOf('This')/2)*145];
-   await canvasTap(p,start);await canvasTap(p,[300-260*227/600,480]);assert.match(await p.locator('[data-position="0"]').textContent(),/This/);
+   await canvasTap(p,start);await canvasTap(p,[300-260*220/600,480]);assert.match(await p.locator('[data-position="0"]').textContent(),/This/);
    await p.setViewportSize({width:1024,height:900});await p.waitForTimeout(200);assert.match(await p.locator('[data-position="0"]').textContent(),/This/);
   }
   console.log('PASS layout',width);await p.close();

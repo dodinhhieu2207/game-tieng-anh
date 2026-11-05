@@ -4,7 +4,8 @@
  const PEOPLE=['mum','dad','brother','sister','grandpa','grandma'];
  const ROOT='assets/family-sentence-puzzle/';
  const PORTRAIT=w=>`assets/family-treehouse-talk/portraits/${w}.png`;
- const piecePath=word=>ROOT+({'This':'piece-this.svg','is':'piece-is.svg','my':'piece-my.svg'}[word]||'piece-family.svg');
+ const KIT=ROOT+'precision/';
+ const piecePath=word=>KIT+({'This':'piece-this.svg','is':'piece-is.svg','my':'piece-my.svg'}[word]||'piece-family.svg');
  const MQ=matchMedia('(prefers-reduced-motion: reduce)');
  const control=(action,label,options={})=>`<button type="button" data-fsp="${action}" ${options.primary?'class="fsp-primary"':''} ${options.hidden?'hidden':''} ${options.disabled?'disabled':''}><img src="${ROOT}icon-${action}.svg" alt=""><span>${label}</span></button>`;
  const shuffle=items=>{const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
@@ -48,7 +49,7 @@
    const token=++this.epoch;
    try{
     await Promise.all([loadPixi(),document.fonts.load('800 40px "App Outfit"')]);if(!this.alive(token))return;
-    const paths=[ROOT+'play-board.svg',ROOT+'piece-this.svg',ROOT+'piece-is.svg',ROOT+'piece-my.svg',ROOT+'piece-family.svg',ROOT+'slot.svg',ROOT+'photo-frame.svg',ROOT+'piece-tray.svg',ROOT+'correct-seal.svg',ROOT+'retry-seal.svg',...PEOPLE.map(PORTRAIT)];
+    const paths=[ROOT+'desk.png',KIT+'piece-this.svg',KIT+'piece-is.svg',KIT+'piece-my.svg',KIT+'piece-family.svg',KIT+'slot.svg',ROOT+'photo-frame.svg',KIT+'tray.svg',ROOT+'correct-seal.svg',ROOT+'retry-seal.svg',...PEOPLE.map(PORTRAIT)];
     const textures=await Promise.all(paths.map(p=>PIXI.Assets.load(p)));if(!this.alive(token))return;
     this.textures=new Map(paths.map((p,i)=>[p,textures[i]]));
     const app=new PIXI.Application();this.app=app;
@@ -90,15 +91,15 @@
   drawScene(){
    this.killMotion();if(this.world){this.app.stage.removeChild(this.world);this.world.destroy({children:true,texture:false,textureSource:false})}
    const W=this.worldWidth,H=this.worldHeight;this.world=new PIXI.Container();this.world.scale.set(this.lastWidth/W);this.app.stage.addChild(this.world);
-   const bg=this.sprite(ROOT+'play-board.svg'),scale=Math.max(W/bg.texture.width,H/bg.texture.height);bg.scale.set(scale);bg.position.set(W/2,H/2);this.world.addChild(bg);
+   const bg=this.sprite(ROOT+'desk.png'),scale=Math.max(W/bg.texture.width,H/bg.texture.height);bg.scale.set(scale);bg.position.set(W/2,H/2);this.world.addChild(bg);
    const photo=this.sprite(ROOT+'photo-frame.svg');photo.width=this.mobile?280:290;photo.height=this.mobile?300:310;photo.position.set(W/2,this.mobile?180:180);this.world.addChild(photo);
    const person=new PIXI.Sprite(this.portraitTexture(this.word));person.anchor.set(.5);const maxH=photo.height*.82,maxW=photo.width*.77;person.scale.set(Math.min(maxW/person.texture.width,maxH/person.texture.height));person.position.set(photo.x,photo.y-3);this.world.addChild(person);
    const prompt=this.text('Build the sentence.',this.mobile?30:24);prompt.anchor.set(.5);prompt.position.set(W/2,this.mobile?370:370);this.world.addChild(prompt);
-   const pw=260,ph=130,step=pw*227/300;
+   const pw=260,ph=130,step=pw*220/300;
    this.slotPositions=Array.from({length:4},(_,i)=>({x:this.mobile?W/2+(i%2===0?-step/2:step/2):W/2+(i-1.5)*step,y:this.mobile?480+Math.floor(i/2)*145:475,w:pw,h:ph}));
    this.slotNodes=[];
    this.slotPositions.forEach((p,i)=>{
-    const group=new PIXI.Container();group.position.set(p.x,p.y);const art=this.sprite(ROOT+'slot.svg');art.width=p.w;art.height=p.h;group.addChild(art);
+    const group=new PIXI.Container();group.position.set(p.x,p.y);const art=this.sprite(KIT+'slot.svg');art.width=p.w;art.height=p.h;group.addChild(art);
     const ghost=this.text(this.expected[i],this.mobile?42:34,0x7e9c8d);ghost.anchor.set(.5);this.fitPieceLabel(ghost,p.w,p.h);ghost.alpha=this.guide?.5:0;group.addChild(ghost);group.ghost=ghost;
     const number=this.text(String(i+1),this.mobile?24:20,0x5e8b8c);number.anchor.set(.5);number.position.set(0,-p.h/2-15);group.addChild(number);
     group.eventMode='static';group.cursor='pointer';group.hitArea=new PIXI.Rectangle(-p.w/2,-p.h/2,p.w,p.h);
@@ -107,10 +108,10 @@
    });
    const last=this.slotPositions[3],period=this.text('.',this.mobile?48:45);period.anchor.set(.5);period.position.set(last.x+pw*.5+6,last.y+ph*.05);this.world.addChild(period);
    const rows=this.mobile?Math.ceil(this.words.length/2):1;
-   const tray=this.sprite(ROOT+'piece-tray.svg');tray.width=this.mobile?560:950;tray.height=this.mobile?(rows*145+34):164;tray.position.set(W/2,this.mobile?850+(rows-1)*72.5:667);this.world.addChild(tray);
+   const tray=this.sprite(KIT+'tray.svg');tray.width=this.mobile?560:950;tray.height=this.mobile?(rows*145+34):164;tray.position.set(W/2,this.mobile?850+(rows-1)*72.5:667);this.world.addChild(tray);
    const trayLabel=this.text('Choose a word',this.mobile?27:23,0x517c79);trayLabel.anchor.set(.5);trayLabel.position.set(W/2,this.mobile?747:579);this.world.addChild(trayLabel);
-   const inset=this.words.length>4?135:145;
-   this.homePositions=this.words.map((_,i)=>this.mobile?{x:this.words.length%2&&i===this.words.length-1?300:i%2===0?165:435,y:850+Math.floor(i/2)*145,w:260,h:130}:{x:inset+((W-2*inset)/Math.max(1,this.words.length-1))*i,y:667,w:this.words.length>4?180:200,h:106});
+   const inset=this.words.length>4?110:155;
+   this.homePositions=this.words.map((_,i)=>this.mobile?{x:this.words.length%2&&i===this.words.length-1?300:i%2===0?165:435,y:850+Math.floor(i/2)*145,w:260,h:130}:{x:inset+((W-2*inset)/Math.max(1,this.words.length-1))*i,y:667,w:this.words.length>4?196:220,h:this.words.length>4?98:110});
    this.tileLayer=new PIXI.Container();this.markLayer=new PIXI.Container();this.world.addChild(this.tileLayer,this.markLayer);this.tileNodes=[];
    this.words.forEach((word,id)=>{
     const home=this.homePositions[id],group=new PIXI.Container(),selection=this.sprite(piecePath(word)),art=this.sprite(piecePath(word));selection.width=home.w*1.05;selection.height=home.h*1.05;selection.tint=0xf4edcd;selection.alpha=.4;selection.visible=false;group.addChild(selection);group.selection=selection;art.width=home.w;art.height=home.h;group.addChild(art);group.art=art;

@@ -31,5 +31,5 @@
 .fsp button:focus-visible,.fsp summary:focus-visible,.fsp .fsp-word-buttons button[aria-pressed=true]:focus-visible{outline:3px solid #2e8b88;outline-offset:4px}
 @media(max-width:700px){.fsp-level{font-size:.95rem}}
 
-/* Quiet layout: the portrait and puzzle carry the visual hierarchy. */
-.fsp-head{background:none;padding:8px 0 12px;min-height:0}.fsp-head h2{font-size:clamp(1.7rem,3.2vw,2.5rem)}.fsp-head p{display:block;font-size:1rem}.fsp-board{box-shadow:0 5px 0 #bad7cc}.fsp-loading{background:#fffdf0}.fsp-status{background:none;padding:8px 10px;min-height:48px;margin:18px auto 10px}.fsp-alt{background:#f5faf4;border:1px solid #c4ddd4}.fsp-progress{width:82px;height:76px;padding-bottom:17px}@media(max-width:700px){.fsp-head{padding:6px 0 12px;min-height:0}.fsp-head h2{font-size:1.5rem}.fsp-head p{display:none}.fsp-progress{width:64px;height:65px}.fsp-level{margin-bottom:10px}.fsp-status{padding:8px;min-height:48px}}
+/* Restore approved illustrated shell; precision kit owns puzzle geometry. */
+.fsp-loading{background:#fff6e0 url('../assets/family-sentence-puzzle/desk.png') center/cover}
