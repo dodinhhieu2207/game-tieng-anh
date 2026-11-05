@@ -33,3 +33,5 @@
 
 /* Restore approved illustrated shell; precision kit owns puzzle geometry. */
 .fsp-loading{background:#fff6e0 url('../assets/family-sentence-puzzle/desk.png') center/cover}
+
+.fsp .fsp-word-buttons button.fsp-speaking{filter:drop-shadow(0 0 8px #ffcf4d);color:#006d86}

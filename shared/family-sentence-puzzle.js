@@ -49,7 +49,7 @@
    const token=++this.epoch;
    try{
     await Promise.all([loadPixi(),document.fonts.load('800 40px "App Outfit"')]);if(!this.alive(token))return;
-    const paths=[ROOT+'desk.png',KIT+'piece-this.svg',KIT+'piece-is.svg',KIT+'piece-my.svg',KIT+'piece-family.svg',KIT+'slot.svg',ROOT+'photo-frame.svg',KIT+'tray.svg',ROOT+'correct-seal.svg',ROOT+'retry-seal.svg',...PEOPLE.map(PORTRAIT)];
+    const paths=[ROOT+'desk.png',KIT+'piece-this.svg',KIT+'piece-is.svg',KIT+'piece-my.svg',KIT+'piece-family.svg',KIT+'slot.svg',ROOT+'photo-frame.svg',KIT+'tray.svg',KIT+'glow.svg',ROOT+'correct-seal.svg',ROOT+'retry-seal.svg',...PEOPLE.map(PORTRAIT)];
     const textures=await Promise.all(paths.map(p=>PIXI.Assets.load(p)));if(!this.alive(token))return;
     this.textures=new Map(paths.map((p,i)=>[p,textures[i]]));
     const app=new PIXI.Application();this.app=app;
@@ -114,7 +114,7 @@
    this.homePositions=this.words.map((_,i)=>this.mobile?{x:this.words.length%2&&i===this.words.length-1?300:i%2===0?165:435,y:850+Math.floor(i/2)*145,w:260,h:130}:{x:inset+((W-2*inset)/Math.max(1,this.words.length-1))*i,y:667,w:this.words.length>4?196:220,h:this.words.length>4?98:110});
    this.tileLayer=new PIXI.Container();this.markLayer=new PIXI.Container();this.world.addChild(this.tileLayer,this.markLayer);this.tileNodes=[];
    this.words.forEach((word,id)=>{
-    const home=this.homePositions[id],group=new PIXI.Container(),selection=this.sprite(piecePath(word)),art=this.sprite(piecePath(word));selection.width=home.w*1.05;selection.height=home.h*1.05;selection.tint=0xf4edcd;selection.alpha=.4;selection.visible=false;group.addChild(selection);group.selection=selection;art.width=home.w;art.height=home.h;group.addChild(art);group.art=art;
+    const home=this.homePositions[id],group=new PIXI.Container(),selection=this.sprite(piecePath(word)),art=this.sprite(piecePath(word));selection.width=home.w*1.05;selection.height=home.h*1.05;selection.tint=0xf4edcd;selection.alpha=.4;selection.visible=false;const glow=this.sprite(KIT+'glow.svg');glow.width=home.w*1.08;glow.height=home.h*1.08;glow.alpha=0;group.addChild(glow,selection);group.glow=glow;group.selection=selection;art.width=home.w;art.height=home.h;group.addChild(art);group.art=art;
     const label=this.text(word,this.mobile?43:(word.length>5?32:38));label.anchor.set(.5);label.position.set(-home.w*.045,-3);group.addChild(label);group.label=label;
     const mark=new PIXI.Container();this.markLayer.addChild(mark);group.mark=mark;
     group.eventMode='static';group.cursor='grab';group.hitArea=new PIXI.Rectangle(-home.w/2,-home.h/2,home.w,home.h);
@@ -132,7 +132,7 @@
   }
   killMotion(){for(const t of this.tweens)t.kill();this.tweens.clear();this.targets.clear()}
   positionTile(id,animate=true){const node=this.tileNodes?.[id];if(!node)return;const p=this.targetPosition(id);if(!p)return;const home=this.homePositions[id],isSlot=this.tileSlot(id)>=0;const width=isSlot?p.w:home.w,height=isSlot?p.h:home.h;
-   node.art.width=width;node.art.height=height;node.selection.width=width*1.05;node.selection.height=height*1.05;this.fitPieceLabel(node.label,width,height);
+   node.glow.width=width*1.08;node.glow.height=height*1.08;node.art.width=width;node.art.height=height;node.selection.width=width*1.05;node.selection.height=height*1.05;this.fitPieceLabel(node.label,width,height);
    if(animate){this.motion(node,{x:p.x,y:p.y,rotation:0,duration:.26,ease:'power3.out'});this.motion(node.scale,{x:1,y:1,duration:.22,ease:'power2.out'})}else{node.position.set(p.x,p.y);node.scale.set(1)}
   }
   paint(){
@@ -207,11 +207,22 @@
    this.voice(src);
   }
   async listen(){if(this.dead||['loading','reading','complete'].includes(this.phase))return;const token=this.epoch;const ok=await this.voice(window.FamilyAlbumClips?.clips?.[this.word]?.src);if(!this.alive(token))return;if(!ok&&!window.LearningApp?.isMuted())this.status('Sound could not play. Tap Listen to try again.')}
+  speechLight(word,time=0){
+   if(!this.root)return;this.root.dataset.speakingWord=word||'';
+   this.tileNodes?.forEach((node,id)=>{const on=!!word&&this.words[id].toLowerCase()===word.toLowerCase();node.glow.alpha=on?(MQ.matches?.85:.85+.15*Math.sin(time*10)):0;node.label.tint=on?0x006d86:0xffffff});
+   this.root.querySelectorAll('[data-piece]').forEach(b=>b.classList.toggle('fsp-speaking',!!word&&this.words[+b.dataset.piece]?.toLowerCase()===word.toLowerCase()));
+  }
+  followSpeech(audio,src){
+   cancelAnimationFrame(this.speechFrame);const sentence=src===window.FamilyAlbumClips?.clips?.[this.word]?.src;
+   const timings=sentence?window.FamilyPuzzleTiming?.[this.word]?.words:null;
+   const single=!sentence?this.words.find(w=>src.endsWith('/'+w.toLowerCase()+'.mp3')):null;
+   const tick=()=>{if(this.dead||this.audio?.element!==audio)return;const t=audio.currentTime;const word=!audio.paused&&!audio.ended?(timings?.find(w=>t>=w.start&&t<w.end)?.word||(!timings?single:null)):null;this.speechLight(word,t);this.speechFrame=requestAnimationFrame(tick)};tick();
+  }
   voice(src){
    this.stopVoice();this.stopEffect();if(!src||window.LearningApp?.isMuted())return Promise.resolve(false);
-   return new Promise(resolve=>{const a=new Audio(src);let settled=false;const finish=ok=>{if(settled)return;settled=true;clearTimeout(timer);if(this.audio?.element===a)this.audio=null;resolve(ok)};const timer=setTimeout(()=>{a.pause();finish(false)},15000);this.audio={element:a,finish};a.onended=()=>finish(true);a.onerror=()=>finish(false);a.play().catch(()=>finish(false))});
+   return new Promise(resolve=>{const a=new Audio(src);let settled=false;const finish=ok=>{if(settled)return;settled=true;clearTimeout(timer);cancelAnimationFrame(this.speechFrame);this.speechLight(null);if(this.audio?.element===a)this.audio=null;resolve(ok)};const timer=setTimeout(()=>{a.pause();finish(false)},15000);this.audio={element:a,finish};this.followSpeech(a,src);a.onended=()=>finish(true);a.onerror=()=>finish(false);a.play().catch(()=>finish(false))});
   }
-  stopVoice(){const audio=this.audio;this.audio=null;if(audio){audio.element.pause();audio.finish(false)}}
+  stopVoice(){cancelAnimationFrame(this.speechFrame);this.speechLight(null);const audio=this.audio;this.audio=null;if(audio){audio.element.pause();audio.finish(false)}}
   effect(kind){this.stopEffect();if(window.LearningApp?.isMuted()||document.getElementById('soundFx')?.checked===false)return;const paths={place:'assets/playful-foley/place.wav',retry:'assets/playful-foley/retry.wav',correct:'assets/playful-foley/correct.wav'};if(!paths[kind])return;const a=this.sfx=new Audio(paths[kind]);a.learningSfx=true;a.volume=.3;a.onended=()=>{if(this.sfx===a)this.sfx=null};a.play().catch(()=>{})}
   stopEffect(){this.sfx?.pause();this.sfx=null}
   next(){if(this.phase!=='solved')return;this.stopVoice();this.stopEffect();this.round++;if(this.round>=6){this.complete();return}this.prepareRound();if(this.app?.renderer)this.layout(true)}
