@@ -27,3 +27,5 @@ Final context narrows ASR prompt to actual cafe vocabulary jug/juice, still iden
 Final Worker 7710c053-4e06-49c0-b72b-a8bbd9de8a44 uses actual cafe vocabulary jug/juice only. Final LIVE after-cafe-context measurement passed the same 10 controlled cases: 2 positives, 2 cross-wrongs, 6 contrast rejections; false accepts 0 on these fixtures. UI public source 0010de6 verified; Not sure: Jack UI regression passes without Next/reward using mocked result. User-specific improvement remains unverified until their recording can be tested.
 
 2026-11-05 RETIRED by user: speaking is too difficult and not effective for class. Removed from Unit 4 Lesson 3 catalogue and runtime registration. Lesson now has six activities; native catalogue determines denominator/order. Existing saved progress/art/audio retained as historical data; no new replacement activity requested.
+
+2026-11-05 replacement approved and implemented separately: jj-sound-detective / u4jjsounddetective, same-initial listening review with original asset kit and no recording. Old Cafe remains unregistered.

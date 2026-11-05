@@ -2434,6 +2434,90 @@
       ],
       "sha256": "e36ed384ad9078216b190a1ded56b35014610e8048df641e1b1a55868a3a8bec",
       "source": "Approved transcript; forced word alignment with faster-whisper find_alignment"
+    },
+    "assets/unit3/lesson5/audio/ill.mp3": {
+      "text": "ill",
+      "words": [
+        {
+          "word": "ill",
+          "start": 0,
+          "end": 0.89
+        }
+      ],
+      "sha256": "a385c369ee549667037a1c274a1855c2947dc3f457c2845f3dcb389866d45e0f",
+      "source": "Existing approved Letter Land Higgs word reused for detective review"
+    },
+    "assets/audio/egg.mp3": {
+      "text": "egg",
+      "words": [
+        {
+          "word": "egg",
+          "start": 0,
+          "end": 0.84
+        }
+      ],
+      "sha256": "8f07a590a3831c3142f02cc427933bf65c992ee3608841bd5e521ec11aab0a9f",
+      "source": "Existing approved Letter Land Higgs word reused for detective review"
+    },
+    "assets/audio/elephant.mp3": {
+      "text": "elephant",
+      "words": [
+        {
+          "word": "elephant",
+          "start": 0,
+          "end": 1.12
+        }
+      ],
+      "sha256": "f769ea6079e5f0569cc3508da70b758039e2dce95bd19b7596279020c1ba1d3d",
+      "source": "Existing approved Letter Land Higgs word reused for detective review"
+    },
+    "assets/audio/fish.mp3": {
+      "text": "fish",
+      "words": [
+        {
+          "word": "fish",
+          "start": 0,
+          "end": 1.02
+        }
+      ],
+      "sha256": "9d3a4fe7bf08bf915a02cedb45c3172ff1212b036d7a5e1796fdaeb311f34a0d",
+      "source": "Existing approved Letter Land Higgs word reused for detective review"
+    },
+    "assets/audio/farm.mp3": {
+      "text": "farm",
+      "words": [
+        {
+          "word": "farm",
+          "start": 0,
+          "end": 0.99
+        }
+      ],
+      "sha256": "0336a3949f09e9d066dde2232eb12e6717f7705b2a24fa568ce847d7ab69b6b1",
+      "source": "Existing approved Letter Land Higgs word reused for detective review"
+    },
+    "assets/audio/girl.mp3": {
+      "text": "girl",
+      "words": [
+        {
+          "word": "girl",
+          "start": 0,
+          "end": 0.94
+        }
+      ],
+      "sha256": "4fac29d0d66579ba7e1350c366a710fd1b4e3694f6fb451e892500295e548420",
+      "source": "Existing approved Letter Land Higgs word reused for detective review"
+    },
+    "assets/audio/guitar.mp3": {
+      "text": "guitar",
+      "words": [
+        {
+          "word": "guitar",
+          "start": 0,
+          "end": 1.164
+        }
+      ],
+      "sha256": "76c3242e226f69e03238effefb88b6e8a3272c42df8cfa18e58292ff86f16a1c",
+      "source": "Existing approved Letter Land Higgs word reused for detective review"
     }
   },
   "issues": [],

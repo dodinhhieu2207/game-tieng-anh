@@ -1,0 +1,35 @@
+{
+  "version": "20261105-detective1",
+  "graphics": {
+    "card.svg": {
+      "bytes": 313,
+      "sha256": "e39c547a1837a17f8ef2562332c6e8cc3ad7bfafae6b842bb4b9f551ba1805b9"
+    },
+    "control.svg": {
+      "bytes": 474,
+      "sha256": "4db2e32c7a87715c89a5037f66a3afb16b97bb103fc16969306b6c7f4a66ad9c"
+    },
+    "cover.webp": {
+      "bytes": 81582,
+      "sha256": "04bc3907b6967a7b2fa1669cd980efb38070e9f4304c364f99c8955ac02fdaec"
+    },
+    "garden.webp": {
+      "bytes": 110352,
+      "sha256": "e63049e0c7288def7d98bc431330a62e315592723620ee718983295a9a6eebef"
+    },
+    "lens.svg": {
+      "bytes": 1209,
+      "sha256": "e3905cfe36fdb4710d1a66f483fd5207723d0463051e6a336cc3e7d957c53788"
+    },
+    "light.svg": {
+      "bytes": 427,
+      "sha256": "9b5519cf4906496571163109b60302ca0c41e096afb05db958c0f421243f9b19"
+    },
+    "notebook.svg": {
+      "bytes": 351,
+      "sha256": "709fa1e1f94b9349ab3f02c60e3d193313ce38df96110465f808944b993b1712"
+    }
+  },
+  "voice": "Existing approved Higgs files, no regeneration",
+  "input": "Pixi lens scene + DOM accessible picture choices, GSAP transitions"
+}

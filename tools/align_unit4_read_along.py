@@ -12,8 +12,8 @@ for folder in folders:
   for k,v in d['clips'].items():
    if v.get('src') and v.get('text'):clips[v['src']]={**v,'manifest':f.relative_to(ROOT).as_posix()}
 # Familiar distractor words played in Jj activities.
-for word in ['hat','horse','insect']:
- src=f'assets/unit3/lesson5/audio/{word}.mp3'
+for word in ['hat','horse','insect','ill','egg','elephant','fish','farm','girl','guitar']:
+ src=f'assets/unit3/lesson5/audio/{word}.mp3' if word in ['hat','horse','insect','ill'] else f'assets/audio/{word}.mp3'
  if (ROOT/src).exists():clips[src]={'text':word,'manifest':'assets/unit3/lesson5/audio'}
 model=WhisperModel('base.en',device='cpu',compute_type='int8',download_root='C:/Users/Admin/.cache/learning-higgs/whisper',local_files_only=True)
 result={};issues=[]
