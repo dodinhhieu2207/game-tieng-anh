@@ -3,7 +3,7 @@ from pathlib import Path
 import json,hashlib,re,difflib
 from faster_whisper import WhisperModel
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'assets/unit4/read-along';OUT.mkdir(exist_ok=True)
-folders=['unit4/lesson1','family-album','robot-workshop','family-dialogue','family-hide-seek','family-classroom','jj-adventures','jj-fine-motor','magic-jug']
+folders=['unit4/lesson1','family-album','robot-workshop','family-dialogue','family-hide-seek','family-classroom','jj-adventures','jj-fine-motor','magic-jug','unit4-numbers']
 clips={}
 for folder in folders:
  for f in (ROOT/'assets'/folder).rglob('manifest.json'):

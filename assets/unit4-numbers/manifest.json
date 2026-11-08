@@ -1,0 +1,159 @@
+{
+  "version": "20261108-numbers1",
+  "media": {
+    "belt-cover.webp": {
+      "bytes": 70656,
+      "sha256": "39c8025951b6e07dec0057d39270f56b2400832d59899f1d657ce63a8ea5ad26"
+    },
+    "belt-scene.webp": {
+      "bytes": 92166,
+      "sha256": "6fa473298fdfa642e63b1042ccaa3d2f4ed24f1521d109d034bcc3a275cafa05"
+    },
+    "belt.png": {
+      "bytes": 13958,
+      "sha256": "216c80626cfc7622f47bfac9ce8e8f0adb45aa9a84acaecb687ce119d70eb853"
+    },
+    "belt.svg": {
+      "bytes": 703,
+      "sha256": "17a172c0cbd7528ee540e5c38066719a6d31929f999e0d50f035f02d84690b50"
+    },
+    "cabin.png": {
+      "bytes": 64687,
+      "sha256": "329da656939d55fd3f8b9d32d4d15d0afc2e104659ec7612f12ebaaa3c6d0b92"
+    },
+    "cabin.svg": {
+      "bytes": 730,
+      "sha256": "abfa0138789f872c6cf640994ac40700ec653c069de45538b99fddb9a2b9b1c8"
+    },
+    "check.svg": {
+      "bytes": 675,
+      "sha256": "1fb76fc99779ae399d1d7653d42226296a1e931a5ef09256869862cd3fde5ce9"
+    },
+    "control.svg": {
+      "bytes": 737,
+      "sha256": "6969574de69b78e993142135c4477b73c972eb3526880912e6cc07e2fc9371eb"
+    },
+    "diverter.png": {
+      "bytes": 21326,
+      "sha256": "e3312a81b758a8561baa015006a4afd7d237a81204520c802a5692637419be09"
+    },
+    "diverter.svg": {
+      "bytes": 681,
+      "sha256": "2c70c2df91f549d8a747fba9c7c842f1ceb491868cbca4b3a213efd2c6c7d4fe"
+    },
+    "door.png": {
+      "bytes": 60172,
+      "sha256": "8562ed1fcdbb89b715087560e9d1803b96270e725fe54c70e4549dc1d7201fce"
+    },
+    "door.svg": {
+      "bytes": 701,
+      "sha256": "01dd3bdbc239814cf790e0e8a0451606891abd11caa5d4258cfdb3b73bd160bd"
+    },
+    "firefly-body.png": {
+      "bytes": 13470,
+      "sha256": "4d534d8b315c57a6d9bbf0503581f2e3c8f9bbfbb83cfc6be9f94b88b5c80ce7"
+    },
+    "firefly-body.svg": {
+      "bytes": 879,
+      "sha256": "b49cb0f6b9d6b168cf7457135bc133baae02528d6041d51f9f8ae9dbdb5d4227"
+    },
+    "firefly-cover.webp": {
+      "bytes": 75550,
+      "sha256": "49ea90d704821148d95ff94c5ce458fa9334c35a621ae08f39ec85cd3770759f"
+    },
+    "firefly-scene.webp": {
+      "bytes": 138016,
+      "sha256": "344a2bb1d884e9e7da02eb76450d5690d198742292e96b2b8163344352f4500c"
+    },
+    "firefly-wing.png": {
+      "bytes": 17259,
+      "sha256": "6a005dbb4ab93c8382995b4ef5a296017b907019c9291b5d8a30df2f5b2c8759"
+    },
+    "firefly-wing.svg": {
+      "bytes": 675,
+      "sha256": "da3b2206f84361515dffa7ebfb42436bc684615401e76c75cf5d4dabaecd0a6f"
+    },
+    "glow.png": {
+      "bytes": 193098,
+      "sha256": "88f21459f1f574db23ed56ebb7b533d25c1d25af46e8775a0ab47c119d9d7d1b"
+    },
+    "glow.svg": {
+      "bytes": 621,
+      "sha256": "c3ee95570dc204d47c45907c8917ce49b9489dedb2ce8e44ae219ad7ca617223"
+    },
+    "goal-plaque.svg": {
+      "bytes": 338,
+      "sha256": "b26c311c5fc8e31c6baa737ed80a4f98c08b71e6a3e0f68e3718fcf362336bcd"
+    },
+    "lamp-off.png": {
+      "bytes": 15008,
+      "sha256": "bc26dcd9acd69370a2c1e9d1283533ad03e936f60b79977a8a4396a862fab82e"
+    },
+    "lamp-off.svg": {
+      "bytes": 747,
+      "sha256": "f5a358cf98c824ab34b5d63b55a853a2255f96cb8d8302f363f81ba001d0689d"
+    },
+    "lantern.png": {
+      "bytes": 17872,
+      "sha256": "b1fe7ecd7981ce2b8fbee7296e2f908c6732fae99a63bfc6bcd08743783e467f"
+    },
+    "lantern.svg": {
+      "bytes": 838,
+      "sha256": "86eae8c38032220468d175f03b9d6b9ba59f84a45fbd2f2ec4a5ef69eb56f377"
+    },
+    "lever.png": {
+      "bytes": 15812,
+      "sha256": "6b5d76ba7befa7c4e72e0c2ee80d4cad437149a548a90d8fd57c758cc4403a5f"
+    },
+    "lever.svg": {
+      "bytes": 735,
+      "sha256": "a7835250f73ed9591d36536a2000c525f26da121e3e226cbf6f8b0f9de0c45eb"
+    },
+    "lift-cover.webp": {
+      "bytes": 41092,
+      "sha256": "291a3c97993a509f43b42a06da8a8f61c4cea674c02e6111e949c6631743472e"
+    },
+    "lift-scene.webp": {
+      "bytes": 51742,
+      "sha256": "b6b15ad1bb4a8a96e5d670331e252682b8a6358386f30c8b6e2d7d20467d5f6b"
+    },
+    "repair-cover.webp": {
+      "bytes": 92300,
+      "sha256": "b7e929c6a8268f5b614d15e24f158adb911736e2cd0f3b3571ab29401ced2506"
+    },
+    "repair-scene.webp": {
+      "bytes": 166198,
+      "sha256": "94b3ae7543939b0f1fc925c389cb54825d3874466090c0acc721c8a8d4a607fd"
+    },
+    "retry.svg": {
+      "bytes": 697,
+      "sha256": "b816160f5a9836f9a4c8570fe76b9701d39ccb5e5834f3096c585f6deaec87f6"
+    },
+    "ring.png": {
+      "bytes": 32449,
+      "sha256": "ca00dde51cb2beacfceb483d5b9cafd3135778598a0ddbc4847a9a33035e0cb2"
+    },
+    "ring.svg": {
+      "bytes": 668,
+      "sha256": "ad0ae400b7f9d8bf574ab6653f7b2ea6596a98a7a70a7b17c85e8dba65acf82f"
+    },
+    "roller.png": {
+      "bytes": 42088,
+      "sha256": "e432f32897d6ca64433d7cde8974bbcb3f8211924104075fb67a514d7975de91"
+    },
+    "roller.svg": {
+      "bytes": 715,
+      "sha256": "7524d848ef20f07d7ba6b2091e7c0ad83d9068aa6747d8009728b9ae0f93ec41"
+    },
+    "ten-slot.png": {
+      "bytes": 18226,
+      "sha256": "1b324ad91db56cb4190f29186828f61823facfec0a81ca24cb21e510c03676bc"
+    },
+    "ten-slot.svg": {
+      "bytes": 716,
+      "sha256": "a6bc1bcaf07d68436e5eb891e026f837e009970665ddf0771bcf823729ffe71d"
+    }
+  },
+  "audioManifest": "audio/manifest.json",
+  "nativeTextureExport": "tools/export_unit4_numbers_sprites.cjs"
+}

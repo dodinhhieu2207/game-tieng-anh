@@ -1,0 +1,29 @@
+{
+  "backgrounds": {
+    "firefly": {
+      "original": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-de594132-6a48-48ce-8aa6-a98b5f26f872.png",
+      "generator": "OpenAI image_gen",
+      "purpose": "Original separate clear game environment; dynamic objects not baked into background"
+    },
+    "lift": {
+      "original": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-35b575c2-ef95-4af1-b1ab-e04fa6a8f128.png",
+      "generator": "OpenAI image_gen",
+      "purpose": "Original separate clear game environment; dynamic objects not baked into background"
+    },
+    "belt": {
+      "original": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-0af6e6ce-57b9-44e5-8d6f-bbdab3c94ee1.png",
+      "generator": "OpenAI image_gen",
+      "purpose": "Original separate clear game environment; dynamic objects not baked into background"
+    },
+    "repair": {
+      "original": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-2118c1ae-e48c-4046-8cf0-e67767873af7.png",
+      "generator": "OpenAI image_gen",
+      "purpose": "Original separate clear game environment; dynamic objects not baked into background"
+    }
+  },
+  "native_svg": "Original authored layered SVG kit; shared centered part anchors. Transparent normalized PNG exports via tools/export_unit4_numbers_sprites.cjs for reliable Phaser/Pixi texture upload.",
+  "vocabulary": "Existing approved jug/hat/fish/guitar sprites",
+  "portraits": "Existing assets/family-treehouse-talk/portraits/*.png",
+  "audio": "Higgs V3 local model, unchanged approved Belinda reference, audio/manifest.json",
+  "sfx": "Existing Kenney CC0 project assets/playful-foley"
+}

@@ -2518,6 +2518,338 @@
       ],
       "sha256": "76c3242e226f69e03238effefb88b6e8a3272c42df8cfa18e58292ff86f16a1c",
       "source": "Existing approved Letter Land Higgs word reused for detective review"
+    },
+    "assets/unit4-numbers/audio/one.mp3": {
+      "text": "One.",
+      "words": [
+        {
+          "word": "One",
+          "start": 0,
+          "end": 0.763
+        }
+      ],
+      "sha256": "6cb10ab366262eb8d5685e64d5d63252f99f5c790b548de832803a3a8dfa0e62",
+      "source": "assets/unit4-numbers/audio/manifest.json"
+    },
+    "assets/unit4-numbers/audio/two.mp3": {
+      "text": "Two.",
+      "words": [
+        {
+          "word": "Two",
+          "start": 0,
+          "end": 0.68
+        }
+      ],
+      "sha256": "56e4ba7b89a6b994695a0cac3c6101ca0c2d4a70a0926844be61fc68366b7843",
+      "source": "assets/unit4-numbers/audio/manifest.json"
+    },
+    "assets/unit4-numbers/audio/three.mp3": {
+      "text": "Three.",
+      "words": [
+        {
+          "word": "Three",
+          "start": 0,
+          "end": 0.806
+        }
+      ],
+      "sha256": "a5da3c2e21ed791454a2b9a74fd6252816b9874e6e4e84d70d5599759d152686",
+      "source": "assets/unit4-numbers/audio/manifest.json"
+    },
+    "assets/unit4-numbers/audio/four.mp3": {
+      "text": "Four.",
+      "words": [
+        {
+          "word": "Four",
+          "start": 0,
+          "end": 0.782
+        }
+      ],
+      "sha256": "fa3f47299364d925299d8e9195c31fda525d2529959190c6331a8bd0331563f7",
+      "source": "assets/unit4-numbers/audio/manifest.json"
+    },
+    "assets/unit4-numbers/audio/five.mp3": {
+      "text": "Five.",
+      "words": [
+        {
+          "word": "Five",
+          "start": 0,
+          "end": 0.819
+        }
+      ],
+      "sha256": "865512c0fbe4485f25748219a14d47fe5f3ee6684983fdc8f9af84cad471bda7",
+      "source": "assets/unit4-numbers/audio/manifest.json"
+    },
+    "assets/unit4-numbers/audio/six.mp3": {
+      "text": "Six.",
+      "words": [
+        {
+          "word": "Six",
+          "start": 0,
+          "end": 0.923
+        }
+      ],
+      "sha256": "4f53130b6965ce6a00efd24bf005c512e93649052aa0b686f06127ae0f45530b",
+      "source": "assets/unit4-numbers/audio/manifest.json"
+    },
+    "assets/unit4-numbers/audio/seven.mp3": {
+      "text": "Seven.",
+      "words": [
+        {
+          "word": "Seven",
+          "start": 0,
+          "end": 0.856
+        }
+      ],
+      "sha256": "8467276b0d1d8780c302ea1f01c05900b6a7ce6cb07339234feaa90bbe99fd86",
+      "source": "assets/unit4-numbers/audio/manifest.json"
+    },
+    "assets/unit4-numbers/audio/eight.mp3": {
+      "text": "Eight.",
+      "words": [
+        {
+          "word": "Eight",
+          "start": 0,
+          "end": 0.701
+        }
+      ],
+      "sha256": "63f04e486c6276a3a73e1aba255059e1b64f2ec464c36f7302b77e859f3b7f34",
+      "source": "assets/unit4-numbers/audio/manifest.json"
+    },
+    "assets/unit4-numbers/audio/nine.mp3": {
+      "text": "Nine.",
+      "words": [
+        {
+          "word": "Nine",
+          "start": 0,
+          "end": 0.846
+        }
+      ],
+      "sha256": "8c941ac29e1a5ab2a49eb9f0f8cd95272231d0ab3346a350e99dccc2ed308955",
+      "source": "assets/unit4-numbers/audio/manifest.json"
+    },
+    "assets/unit4-numbers/audio/ten.mp3": {
+      "text": "Ten.",
+      "words": [
+        {
+          "word": "Ten",
+          "start": 0,
+          "end": 0.801
+        }
+      ],
+      "sha256": "7f35dbc591cb92ed16ee3048c80b4773fe466c3ee27903281e28996189c17b91",
+      "source": "assets/unit4-numbers/audio/manifest.json"
+    },
+    "assets/unit4-numbers/audio/firefly-intro.mp3": {
+      "text": "Listen to the number. Catch that many fireflies.",
+      "words": [
+        {
+          "word": "Listen",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "to",
+          "start": 0.36,
+          "end": 0.6
+        },
+        {
+          "word": "the",
+          "start": 0.6,
+          "end": 0.7
+        },
+        {
+          "word": "number",
+          "start": 0.7,
+          "end": 1.04
+        },
+        {
+          "word": "Catch",
+          "start": 1.64,
+          "end": 1.84
+        },
+        {
+          "word": "that",
+          "start": 1.82,
+          "end": 2.18
+        },
+        {
+          "word": "many",
+          "start": 2.18,
+          "end": 2.4
+        },
+        {
+          "word": "fireflies",
+          "start": 2.4,
+          "end": 3.28
+        }
+      ],
+      "sha256": "ea122086f0b39a3480f1fee0a0b9627b83109d58a56859b6c850e76066949c48",
+      "source": "assets/unit4-numbers/audio/manifest.json"
+    },
+    "assets/unit4-numbers/audio/lift-intro.mp3": {
+      "text": "Listen. Choose the floor. Then meet the family.",
+      "words": [
+        {
+          "word": "Listen",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "Choose",
+          "start": 1.04,
+          "end": 1.14
+        },
+        {
+          "word": "the",
+          "start": 1.14,
+          "end": 1.4
+        },
+        {
+          "word": "floor",
+          "start": 1.4,
+          "end": 1.68
+        },
+        {
+          "word": "Then",
+          "start": 2.44,
+          "end": 2.5
+        },
+        {
+          "word": "meet",
+          "start": 2.5,
+          "end": 2.86
+        },
+        {
+          "word": "the",
+          "start": 2.86,
+          "end": 3.02
+        },
+        {
+          "word": "family",
+          "start": 3.02,
+          "end": 3.46
+        }
+      ],
+      "sha256": "20daf681fd666e96eef39b0cd570f4e40f7a99bd80f9b38103f068a2868c0528",
+      "source": "assets/unit4-numbers/audio/manifest.json"
+    },
+    "assets/unit4-numbers/audio/belt-intro.mp3": {
+      "text": "Collect the jugs. Stop when you have enough.",
+      "words": [
+        {
+          "word": "Collect",
+          "start": 0.0,
+          "end": 0.3
+        },
+        {
+          "word": "the",
+          "start": 0.3,
+          "end": 0.6
+        },
+        {
+          "word": "jugs",
+          "start": 0.6,
+          "end": 1.06
+        },
+        {
+          "word": "Stop",
+          "start": 1.82,
+          "end": 1.92
+        },
+        {
+          "word": "when",
+          "start": 1.92,
+          "end": 2.24
+        },
+        {
+          "word": "you",
+          "start": 2.24,
+          "end": 2.38
+        },
+        {
+          "word": "have",
+          "start": 2.38,
+          "end": 2.6
+        },
+        {
+          "word": "enough",
+          "start": 2.6,
+          "end": 2.96
+        }
+      ],
+      "sha256": "9b98eb1e430481ca0ab4b100a8c8c68fc78156fad67ce9f7835036141b0210d9",
+      "source": "assets/unit4-numbers/audio/manifest.json"
+    },
+    "assets/unit4-numbers/audio/repair-intro.mp3": {
+      "text": "Listen. Fix the number of lights.",
+      "words": [
+        {
+          "word": "Listen",
+          "start": 0.0,
+          "end": 0.3
+        },
+        {
+          "word": "Fix",
+          "start": 0.9,
+          "end": 1.06
+        },
+        {
+          "word": "the",
+          "start": 1.06,
+          "end": 1.32
+        },
+        {
+          "word": "number",
+          "start": 1.32,
+          "end": 1.56
+        },
+        {
+          "word": "of",
+          "start": 1.56,
+          "end": 1.8
+        },
+        {
+          "word": "lights",
+          "start": 1.8,
+          "end": 2.04
+        }
+      ],
+      "sha256": "489d06769fabbafc3bcf13543930d59b9d7678dd72c8cfc62d7c268baeb12c1f",
+      "source": "assets/unit4-numbers/audio/manifest.json"
+    },
+    "assets/unit4-numbers/audio/nine-jugs.mp3": {
+      "text": "Nine jugs.",
+      "words": [
+        {
+          "word": "Nine",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "jugs",
+          "start": 0.24,
+          "end": 1.26
+        }
+      ],
+      "sha256": "15eba6bdd87684777fa6ddd69d37542c6c55d39f72517cd205873118b838b0c7",
+      "source": "assets/unit4-numbers/audio/manifest.json"
+    },
+    "assets/unit4-numbers/audio/ten-jugs.mp3": {
+      "text": "Ten jugs.",
+      "words": [
+        {
+          "word": "Ten",
+          "start": 0.0,
+          "end": 0.22
+        },
+        {
+          "word": "jugs",
+          "start": 0.22,
+          "end": 1.08
+        }
+      ],
+      "sha256": "87f710434449f1d106ebb89d03a5a38be8b4056429d23772c47fcf5be50e636a",
+      "source": "assets/unit4-numbers/audio/manifest.json"
     }
   },
   "issues": [],
