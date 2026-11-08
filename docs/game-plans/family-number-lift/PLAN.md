@@ -1,5 +1,5 @@
 # family-number-lift
-Status: implemented and locally verified; public deployment verification pending.
+Status: implemented, locally verified and publicly verified at runtime commit a3a4436.
 Approved stack: PixiJS + GSAP; user explicitly chose hybrid Phaser. No re-ask.
 Task: Listen nine/ten; identify floor numeral/word on10-floor panel; drag lift handle or use Go. Floor lamps1–10 light along trajectory. Doors open only after settled correct floor, then reveal approved family portrait, question and This is my... sentence role-play with choices; no microphone assessment.
 Sources: Phaser existing bundled MIT, PixiJS8.22 existing MIT, GSAP bundled project license. Skills read/applied: Game Studio web-game-foundations (state outside renderer), phaser-2d-game (thin scenes, real physics/input), game-ui-frontend (readable HUD), sprite-pipeline (shared anchors/scale for native parts, static kit does not require frame strip), game-playtest (actual input/screens/motion), frontend-design, imagegen for original separate backgrounds.
@@ -16,3 +16,5 @@ QA planned: correct/incorrect/correction flow per game, actual engine motion and
 - Tests: tests/unit4-number-state.cjs, unit4-numbers-functional.cjs, unit4-numbers-input-layout.cjs, unit4-numbers-edges.cjs; Jj review also unit4-numbers-review.cjs. Browser suites run serially because concurrent headless runs caused intermittent readiness/audio timeouts.
 - Bounded existing Kenney tactile SFX; no continuous background music over counting/voice. Review buttons use accepted Higgs clips.
 - Limits: physical touch device/speaker listening, hardware FPS and classroom learning impact NOT_MEASURED. Automated transcription is not a human pronunciation certification.
+
+Public checkpoint: GitHub Pages workflow for a3a4436 completed successfully. Serial Playwright verification completed a correct round in each of the four public routes with native engines/audio, unlocked Next, no JavaScript errors and no failed own media responses. Test: tests/unit4-numbers-public.cjs. Full four-round local loops rerun after Jj review addition: PASS all four.
