@@ -110,8 +110,8 @@
       "sha256": "a7835250f73ed9591d36536a2000c525f26da121e3e226cbf6f8b0f9de0c45eb"
     },
     "lift-cover.webp": {
-      "bytes": 20982,
-      "sha256": "0e9c700ce2b1eed5a2daa3e28500ac59301f7680a951f949c9bf7fe242cd94d1"
+      "bytes": 21046,
+      "sha256": "a80ddef4443d9af30c39ce7048e8ccc0a58cf8c3a0fd884395baf88cf17411e4"
     },
     "lift-scene.webp": {
       "bytes": 51742,
@@ -156,5 +156,6 @@
   },
   "audioManifest": "audio/manifest.json",
   "nativeTextureExport": "tools/export_unit4_numbers_sprites.cjs",
-  "interactionKit": "art-v2/manifest.json"
+  "interactionKit": "art-v2/manifest.json",
+  "liftMap": "lift-map/manifest.json"
 }

@@ -1,0 +1,25 @@
+{
+  "version": "20261110-liftmap",
+  "media": {
+    "floor-panel-source.png": {
+      "bytes": 2122668,
+      "sha256": "74f57daf41821d6b933a35dc8e6ccf18467e23ce12edcf7dccf7dbfe6aecc872"
+    },
+    "floor-panel.png": {
+      "bytes": 930052,
+      "sha256": "9ea98a94a9378bff18426050f2e647d5416da97b5579ae7abbe509543e219a67"
+    },
+    "floor-pip.png": {
+      "bytes": 2340,
+      "sha256": "1cebc7a37c49aed8467bac38f63248b0a6a34b269adbcb0b993a2f42e82a1ff8"
+    },
+    "lift-car-source.png": {
+      "bytes": 1421612,
+      "sha256": "9bb9e7cb0e536ff6fac111af54ec7bfe3a1f44f9a48b4bb7604f18ce161104af"
+    },
+    "lift-car.png": {
+      "bytes": 168185,
+      "sha256": "c9cb724e96bba7f08b992084b2ca1009a1702197de06176710f14d02d5e82627"
+    }
+  }
+}
