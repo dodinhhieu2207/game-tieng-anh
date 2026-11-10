@@ -1,0 +1,105 @@
+{
+  "version": "20261110-art2",
+  "media": {
+    "belt-sheet.png": {
+      "width": 1269,
+      "height": 1240,
+      "sha256": "da43cae09ea1dab9fe836a8b8a763c0acc5bda9e58d957f97cf9672cd6fe9d52"
+    },
+    "belt.png": {
+      "width": 1200,
+      "height": 400,
+      "sha256": "ec0e7ed58448ce1c755f9478c37954a6d1cfd0529ac2453a6ca52cbb6833774d"
+    },
+    "cabin.png": {
+      "width": 800,
+      "height": 1000,
+      "sha256": "6c6c9bec978b1ebb57cc4ffa0621c09c14d333538131078ac0d460dd999edcba"
+    },
+    "control.png": {
+      "width": 720,
+      "height": 300,
+      "sha256": "9626a3187a64bbff1e1b7d2a9455a7c64379647717c60abc070925bfbb66acaf"
+    },
+    "diverter.png": {
+      "width": 400,
+      "height": 400,
+      "sha256": "5883dbcacd0c370a92fcaea099f42f1090bd7831b6e524949a02a6f045ce899c"
+    },
+    "door.png": {
+      "width": 400,
+      "height": 800,
+      "sha256": "d190bee9dbcdad5c7adfee138264bb5af0d0901fef02dcca245afae7a5c886ad"
+    },
+    "firefly-body.png": {
+      "width": 400,
+      "height": 500,
+      "sha256": "be8e66ad7cca92367521cb03dbfcc13a16f6c9d22e3dcf8921c5e6e335b60de5"
+    },
+    "firefly-wing.png": {
+      "width": 400,
+      "height": 240,
+      "sha256": "1f7e587ae99e310e86425dd1d81f57f5ae5bbb442c64185e4efe478d95c7b75c"
+    },
+    "garden-sheet.png": {
+      "width": 1262,
+      "height": 1246,
+      "sha256": "c92aaf621f6537b039e4ce7f17fbbe3584c9e5ed83f21ed0ece241c2332183a9"
+    },
+    "goal-plaque.png": {
+      "width": 1000,
+      "height": 340,
+      "sha256": "0565cd09f81d774d7c0b0dc10be1abd99af405e9c9638e85199721798df7335c"
+    },
+    "indicator.png": {
+      "width": 400,
+      "height": 400,
+      "sha256": "03b77de62c3ca7a2fa432abbb19ec24cd79919fad792865fbf7c659184a3d76f"
+    },
+    "lamp-off.png": {
+      "width": 400,
+      "height": 500,
+      "sha256": "b0396fe00178ed1c8864f789c7c876ce242b1154f02f50866a7c35ae5795789e"
+    },
+    "lantern.png": {
+      "width": 400,
+      "height": 500,
+      "sha256": "d137830af6dae9ce75776004d876919f2769c0d5ee9f2bef35cbc75a351f21a5"
+    },
+    "lever.png": {
+      "width": 400,
+      "height": 500,
+      "sha256": "38db66430d4cd78692e59a288bf1e284f61d84f398e0b9bb24b050a6204a19d0"
+    },
+    "lift-sheet.png": {
+      "width": 1254,
+      "height": 1254,
+      "sha256": "9c7aa634c90c52d115ee33358e4b004b384917ab70c8ef5f9de61a3e77aeea8d"
+    },
+    "repair-sheet.png": {
+      "width": 1774,
+      "height": 887,
+      "sha256": "7f31514d7ef540e71e7f3fba0f164fde2cdea0f1668c19702d87fd68590ba145"
+    },
+    "repair-slot.png": {
+      "width": 400,
+      "height": 400,
+      "sha256": "8a0364f3cfd1b2500b8d3e43eccb8ecbd56dd8c453331a06ffbee7e365f2bffe"
+    },
+    "roller.png": {
+      "width": 400,
+      "height": 400,
+      "sha256": "f7b8e096def858a20b14c5e5325a83d657295ca0e3b3cacad4f9c4c7407fdbae"
+    },
+    "ten-slot.png": {
+      "width": 400,
+      "height": 400,
+      "sha256": "a84bf02aa178ccfa9f3c1bd2697aba7da2361318eeb19079cb7c560961b17e56"
+    },
+    "tray.png": {
+      "width": 600,
+      "height": 400,
+      "sha256": "8bbd13dc9413147b836b7ff8b6fb95e89423282f4412abf2b9e28d017b99c845"
+    }
+  }
+}

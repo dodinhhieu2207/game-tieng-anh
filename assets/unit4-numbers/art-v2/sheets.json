@@ -1,0 +1,18 @@
+{
+  "garden": {
+    "file": "garden-sheet.png",
+    "source": "OpenAI imagegen transparent kit; mint cream brass preschool objects, 2x2 isolated sprites; alpha cleanup on lift and repair"
+  },
+  "lift": {
+    "file": "lift-sheet.png",
+    "source": "OpenAI imagegen transparent kit; mint cream brass preschool objects, 2x2 isolated sprites; alpha cleanup on lift and repair"
+  },
+  "belt": {
+    "file": "belt-sheet.png",
+    "source": "OpenAI imagegen transparent kit; mint cream brass preschool objects, 2x2 isolated sprites; alpha cleanup on lift and repair"
+  },
+  "repair": {
+    "file": "repair-sheet.png",
+    "source": "OpenAI imagegen transparent kit; mint cream brass preschool objects, 2x2 isolated sprites; alpha cleanup on lift and repair"
+  }
+}

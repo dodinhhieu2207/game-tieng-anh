@@ -3,3 +3,13 @@
 .u4n-goal{background:transparent url('../assets/unit4-numbers/goal-plaque.svg') center/100% 100%;border:0;padding:15px 22px 20px}.u4n-floors small{font-size:16px}@media(max-width:600px){.u4n-floors small{font-size:15px}}
 
 .u4n-jj-review{display:flex;justify-content:center;gap:10px;max-width:540px;margin:14px auto}.u4n .u4n-jj-review button{flex:1;min-width:48px;min-height:86px;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 12px 18px}.u4n-jj-review img{height:52px;width:48px;object-fit:contain}.u4n-jj-review b{font-size:24px}@media(max-width:600px){.u4n .u4n-jj-review button{flex-direction:column;gap:2px;padding:8px 8px 15px}.u4n-jj-review img{height:42px;width:38px}.u4n-jj-review b{font-size:21px}}
+
+/* Painted raster interaction kit; collected objects stay legible during voice gates. */
+.u4n button{background-image:url('../assets/unit4-numbers/art-v2/control.png')}
+.u4n .u4n-ten button{background-image:url('../assets/unit4-numbers/art-v2/ten-slot.png');opacity:1}
+.u4n-ten button:disabled{opacity:1}.u4n-ten button:disabled img{opacity:1}
+.u4n-goal{background-image:url('../assets/unit4-numbers/art-v2/goal-plaque.png')}
+
+.u4n button{background:none;border:12px solid transparent;border-image:url('../assets/unit4-numbers/art-v2/control.png') 88 160 fill / 22px 35px;padding:6px 15px 10px}
+.u4n .u4n-ten button{border:0;background:transparent url('../assets/unit4-numbers/art-v2/ten-slot.png') center/100% 100%}
+.u4n-goal{border:14px solid transparent;border-image:url('../assets/unit4-numbers/art-v2/goal-plaque.png') 85 200 fill / 25px 55px;background:none;padding:6px 35px 10px}

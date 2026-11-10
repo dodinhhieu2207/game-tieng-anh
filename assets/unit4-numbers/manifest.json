@@ -2,8 +2,8 @@
   "version": "20261108-numbers1",
   "media": {
     "belt-cover.webp": {
-      "bytes": 70656,
-      "sha256": "39c8025951b6e07dec0057d39270f56b2400832d59899f1d657ce63a8ea5ad26"
+      "bytes": 34220,
+      "sha256": "6a03888b780a53d8b95e5556d4929e57b6e069526c7063af97531e83134e418c"
     },
     "belt-scene.webp": {
       "bytes": 92166,
@@ -58,8 +58,8 @@
       "sha256": "b49cb0f6b9d6b168cf7457135bc133baae02528d6041d51f9f8ae9dbdb5d4227"
     },
     "firefly-cover.webp": {
-      "bytes": 75550,
-      "sha256": "49ea90d704821148d95ff94c5ce458fa9334c35a621ae08f39ec85cd3770759f"
+      "bytes": 38974,
+      "sha256": "34cb8d20450708cf997cdee712bd4baccca65d956d9d95bbb5ebf8bdc6b215dc"
     },
     "firefly-scene.webp": {
       "bytes": 138016,
@@ -110,16 +110,16 @@
       "sha256": "a7835250f73ed9591d36536a2000c525f26da121e3e226cbf6f8b0f9de0c45eb"
     },
     "lift-cover.webp": {
-      "bytes": 41092,
-      "sha256": "291a3c97993a509f43b42a06da8a8f61c4cea674c02e6111e949c6631743472e"
+      "bytes": 20982,
+      "sha256": "0e9c700ce2b1eed5a2daa3e28500ac59301f7680a951f949c9bf7fe242cd94d1"
     },
     "lift-scene.webp": {
       "bytes": 51742,
       "sha256": "b6b15ad1bb4a8a96e5d670331e252682b8a6358386f30c8b6e2d7d20467d5f6b"
     },
     "repair-cover.webp": {
-      "bytes": 92300,
-      "sha256": "b7e929c6a8268f5b614d15e24f158adb911736e2cd0f3b3571ab29401ced2506"
+      "bytes": 49776,
+      "sha256": "5b5c2b585d0d48352f6650f57d26bb56c436e10fd3d2a74dbf4872189f674058"
     },
     "repair-scene.webp": {
       "bytes": 166198,
@@ -155,5 +155,6 @@
     }
   },
   "audioManifest": "audio/manifest.json",
-  "nativeTextureExport": "tools/export_unit4_numbers_sprites.cjs"
+  "nativeTextureExport": "tools/export_unit4_numbers_sprites.cjs",
+  "interactionKit": "art-v2/manifest.json"
 }
