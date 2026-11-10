@@ -1,0 +1,31 @@
+{
+  "source": "Kenney Sci-fi Sounds",
+  "sourceURL": "https://kenney.nl/assets/sci-fi-sounds",
+  "license": "CC0-1.0",
+  "clips": {
+    "depart": {
+      "sourceFile": "doorClose_000.ogg",
+      "processing": "atrim=duration=0.53,highpass=f=100,lowpass=f=4000,loudnorm=I=-21:TP=-4:LRA=7,afade=t=in:d=0.01,afade=t=out:st=0.45:d=0.08",
+      "duration": 0.5300226757369615,
+      "gain": 0.38,
+      "loop": false,
+      "sha256": "6e8cfef78ee6921f21d464a4985a73951cf3b71621947366f1b48621f78506ca"
+    },
+    "open": {
+      "sourceFile": "doorOpen_000.ogg",
+      "processing": "atempo=0.75,highpass=f=100,lowpass=f=3500,loudnorm=I=-21:TP=-4:LRA=7,afade=t=in:d=0.01,afade=t=out:st=0.63:d=0.08",
+      "duration": 0.6922448979591836,
+      "gain": 0.38,
+      "loop": false,
+      "sha256": "740abf7cb8a2ead38085522911a2a820760ccc340d07d22df114ce0f0193486d"
+    },
+    "motor": {
+      "sourceFile": "engineCircular_000.ogg",
+      "processing": "atrim=duration=5,highpass=f=90,lowpass=f=1800,loudnorm=I=-21:TP=-6:LRA=7,afade=t=in:d=0.05,afade=t=out:st=4.94:d=0.06",
+      "duration": 5.0,
+      "gain": 0.18,
+      "loop": true,
+      "sha256": "296b74ae22c115939f16abe5f3c4403595875b14dc72424e651c0f77acc87079"
+    }
+  }
+}

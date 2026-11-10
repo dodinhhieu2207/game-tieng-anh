@@ -5,3 +5,5 @@ Original OpenAI image_gen four environment scenes, prompts/source files in sourc
 Continuous lantern lighting: shared/number-lantern-light.js uses Pixi additive layers and pane masks with GSAP ignition. Original native radial VFX source/export and usage in vfx/README.md; approved painted unlit lantern stays unchanged. No new third-party artwork/audio dependency.
 
 Lift-map revision: original OpenAI imagegen panel and closed lift-car cutouts, source files and prompts summarized in lift-map/README.md; original native round pip and extraction/export in tools/build_lift_map_art.cjs. Replaces lantern markers and open mini doorway, preserves big cabin and approved family art/audio.
+
+Lift mechanical SFX: Kenney Sci-fi Sounds CC0, publisher https://kenney.nl/assets/sci-fi-sounds . Source OGGs, original license, filtered WAVs, gains and processing hashes in lift-audio/. SFX follow movement/door states and are excluded from Higgs read-along. No new speech voice.
