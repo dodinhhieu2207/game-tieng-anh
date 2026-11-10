@@ -13,3 +13,7 @@
 .u4n button{background:none;border:12px solid transparent;border-image:url('../assets/unit4-numbers/art-v2/control.png') 88 160 fill / 22px 35px;padding:6px 15px 10px}
 .u4n .u4n-ten button{border:0;background:transparent url('../assets/unit4-numbers/art-v2/ten-slot.png') center/100% 100%}
 .u4n-goal{border:14px solid transparent;border-image:url('../assets/unit4-numbers/art-v2/goal-plaque.png') 85 200 fill / 25px 55px;background:none;padding:6px 35px 10px}
+
+.u4n-repair .u4n-ten img{transition:filter 1s ease}
+.u4n-repair[data-lighting=warming] .u4n-ten img,.u4n-repair[data-lighting=lit] .u4n-ten img{filter:brightness(1.35) saturate(1.2) drop-shadow(0 0 8px #ffcf74)}
+@media(prefers-reduced-motion:reduce){.u4n-repair .u4n-ten img{transition:none}}

@@ -1,0 +1,1 @@
+Original procedural radial falloff VFX, authored for Number Repair Lab. SVG source exported to alpha PNG using tools/build_lantern_vfx.cjs. Used for additive glass bloom, warm spill and surface reflection; not a replacement lantern illustration. Existing painted unlit lantern remains the same texture throughout ignition.
