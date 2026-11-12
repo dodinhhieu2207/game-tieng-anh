@@ -1,0 +1,113 @@
+{
+  "created": "2026-11-12",
+  "tool": "OpenAI built-in image_gen",
+  "generation": {
+    "wide": "3451a69c-622f-40e9-891f-1450e8201ecd",
+    "bg": "79c6c565-893d-427b-b5a4-b4d8e515c2ff",
+    "kit": "468b120c-fd8e-424a-a612-a259270edf7c",
+    "rows": [
+      0,
+      0.381,
+      0.694,
+      1
+    ],
+    "names": [
+      "cart",
+      "station",
+      "platform",
+      "button",
+      "round-button",
+      "plaque",
+      "spark",
+      "arrow",
+      "badge"
+    ]
+  },
+  "processing": "Measured nine-cell crop, alpha trim and proportional downsize. No text generated; all button labels live App Outfit.",
+  "files": [
+    {
+      "file": "arrow.png",
+      "width": 402,
+      "height": 230,
+      "alpha": true,
+      "sha256": "d8e7f99cf2c7adfe81a4698b01d7b1783c2f084dc8c4bd39f9f9654893ae43b4"
+    },
+    {
+      "file": "background.webp",
+      "width": 1400,
+      "height": 933,
+      "alpha": false,
+      "sha256": "cf047e2b1f07bf700d8713ee42d9df8387cd084d0800bba8e7c169be378da747"
+    },
+    {
+      "file": "badge.png",
+      "width": 413,
+      "height": 289,
+      "alpha": true,
+      "sha256": "150dd486b9a68b787c57c6be72a95a1a2b0f3031443f6a62994807d6443fb4a7"
+    },
+    {
+      "file": "button.png",
+      "width": 505,
+      "height": 189,
+      "alpha": true,
+      "sha256": "16edef267088de7143dbf954722cc2d0b1a39b4a968c01d8131e40c4227b8cae"
+    },
+    {
+      "file": "cart.png",
+      "width": 403,
+      "height": 310,
+      "alpha": true,
+      "sha256": "91a3a7840ff7ed6ae43fd99b0b23643195fffc98aea698ebbd72d657677484bc"
+    },
+    {
+      "file": "cover.webp",
+      "width": 1000,
+      "height": 650,
+      "alpha": false,
+      "sha256": "abf9860f322b9292fe1128305e8399ad8980eb5f39a8c89167279dca8011c70d"
+    },
+    {
+      "file": "plaque.png",
+      "width": 485,
+      "height": 278,
+      "alpha": true,
+      "sha256": "827e97cd3fd746edf603dfc39ec9723b0bf45fef7afe29bbb8021e1552965701"
+    },
+    {
+      "file": "platform.png",
+      "width": 440,
+      "height": 192,
+      "alpha": true,
+      "sha256": "8d38acf5eb43c0b43c8e1fcb2e088f03ca5762b4e5a5671e350708790031b5e4"
+    },
+    {
+      "file": "round-button.png",
+      "width": 284,
+      "height": 283,
+      "alpha": true,
+      "sha256": "ba79626578d363be286172ea50242634e190c0b471ed211222e782ecd9099979"
+    },
+    {
+      "file": "spark.png",
+      "width": 331,
+      "height": 215,
+      "alpha": true,
+      "sha256": "5f5c2469431cfe45034c38bee38229a7c9dcf9125ee5425636d5bba65432a8b3"
+    },
+    {
+      "file": "station.png",
+      "width": 436,
+      "height": 372,
+      "alpha": true,
+      "sha256": "1116bab77327acae022fc63dedc924dcb72c35c9187eb262cc25a3695a1110ce"
+    },
+    {
+      "file": "wide-plaque.png",
+      "width": 1000,
+      "height": 138,
+      "alpha": true,
+      "sha256": "f74a4aa9bec4aabf2bf8b0ec053259cae18f564b8e78ef4ec8135ed2ad59e43e"
+    }
+  ]
+}

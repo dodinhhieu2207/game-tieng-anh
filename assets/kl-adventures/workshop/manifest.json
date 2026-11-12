@@ -1,0 +1,113 @@
+{
+  "created": "2026-11-12",
+  "tool": "OpenAI built-in image_gen",
+  "generation": {
+    "wide": "604eb42e-5360-4bc6-b0f0-92c02b1d1b3b",
+    "bg": "e553524b-c5f1-4b22-99a8-7053ac5ff661",
+    "kit": "1a72600f-7192-4a8b-aede-69dd42cb1a07",
+    "rows": [
+      0,
+      0.35,
+      0.642,
+      1
+    ],
+    "names": [
+      "paper",
+      "pencil",
+      "tile",
+      "button",
+      "round-button",
+      "plaque",
+      "spark",
+      "peg",
+      "badge"
+    ]
+  },
+  "processing": "Measured nine-cell crop, alpha trim and proportional downsize. No text generated; all button labels live App Outfit.",
+  "files": [
+    {
+      "file": "background.webp",
+      "width": 1400,
+      "height": 933,
+      "alpha": false,
+      "sha256": "e8ff6f55c3fb7f69ba42f0f875f0ab8c4faf6e71c2b31966ae0edf82c4e99c2d"
+    },
+    {
+      "file": "badge.png",
+      "width": 332,
+      "height": 399,
+      "alpha": true,
+      "sha256": "c24b3e25fb035761dbad83fc112a94890544a155bf772bb816a40216bbcf3310"
+    },
+    {
+      "file": "button.png",
+      "width": 430,
+      "height": 199,
+      "alpha": true,
+      "sha256": "6cdfb46e502d59b912dd45d0f3e6142576d733f859eedf87651937321a6f8fe1"
+    },
+    {
+      "file": "cover.webp",
+      "width": 1000,
+      "height": 650,
+      "alpha": false,
+      "sha256": "5df68b8159667a8eda0f46844c994bc406dabce0e68e4635e4fe394847af05c6"
+    },
+    {
+      "file": "paper.png",
+      "width": 382,
+      "height": 370,
+      "alpha": true,
+      "sha256": "53460671b49c1c3196adc097e10e09e44fb08b6bbef32e88ecb9687bbdba75de"
+    },
+    {
+      "file": "peg.png",
+      "width": 281,
+      "height": 375,
+      "alpha": true,
+      "sha256": "b2c41b7e0133b70d719dbaebbaf36bd65e321f9e50311276da7bed58bd54eb7f"
+    },
+    {
+      "file": "pencil.png",
+      "width": 347,
+      "height": 369,
+      "alpha": true,
+      "sha256": "5e0559c84f100130d6f7532317b2f8489f05844d3f407400ea997cd5811eb28e"
+    },
+    {
+      "file": "plaque.png",
+      "width": 440,
+      "height": 273,
+      "alpha": true,
+      "sha256": "77d85934f199a59d88361f8fa9bd5ddb14514830f5f64f1af7228ea4c68b36e7"
+    },
+    {
+      "file": "round-button.png",
+      "width": 320,
+      "height": 324,
+      "alpha": true,
+      "sha256": "d99f343bf95b3187bcb239da2fe67044cf5824f222cb18c0810cd5aa3d0a2855"
+    },
+    {
+      "file": "spark.png",
+      "width": 322,
+      "height": 381,
+      "alpha": true,
+      "sha256": "4e9975e02804ba8976d008caccdc7957c872cf271823886b16a1b23afdaceb0b"
+    },
+    {
+      "file": "tile.png",
+      "width": 356,
+      "height": 348,
+      "alpha": true,
+      "sha256": "249b97f307b8cdb7a6b8aee1e328ab3f90ddd43eb61cdf16d3ff94afe637f2cd"
+    },
+    {
+      "file": "wide-plaque.png",
+      "width": 1000,
+      "height": 154,
+      "alpha": true,
+      "sha256": "f4f04c3f463ed87c91e486d8ab710626c748783f79c8c8ae89adf96c1be3cec1"
+    }
+  ]
+}

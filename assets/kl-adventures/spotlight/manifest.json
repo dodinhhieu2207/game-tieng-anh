@@ -1,0 +1,120 @@
+{
+  "created": "2026-11-12",
+  "tool": "OpenAI built-in image_gen",
+  "generation": {
+    "wide": "07795c5a-0345-4ff8-8eff-2a9e19be96d2",
+    "bg": "783bc0e0-f1fa-472c-9a69-979c93683ac5",
+    "kit": "48ff838c-9702-4860-8a54-f6ce20ad3416",
+    "rows": [
+      0,
+      0.355,
+      0.64,
+      1
+    ],
+    "names": [
+      "curtain",
+      "lamp",
+      "beam",
+      "button",
+      "round-button",
+      "plaque",
+      "spark",
+      "ticket",
+      "lens"
+    ]
+  },
+  "processing": "Measured nine-cell crop, alpha trim and proportional downsize. No text generated; all button labels live App Outfit.",
+  "files": [
+    {
+      "file": "background.webp",
+      "width": 1400,
+      "height": 933,
+      "alpha": false,
+      "sha256": "886149a29c3d6530719b4c88805cb60ac2226f24efc6caeaf15bc3bfe478eae3"
+    },
+    {
+      "file": "beam.png",
+      "width": 372,
+      "height": 417,
+      "alpha": true,
+      "sha256": "fc4f416d4a1d3dc4955567cb7d6565cd085333ad3381b67d26e546b2d22f36e6"
+    },
+    {
+      "file": "button.png",
+      "width": 431,
+      "height": 185,
+      "alpha": true,
+      "sha256": "8b1eb50b0046ab45f61582821f70d063930a9ff2178d32c1eed2c778624bc356"
+    },
+    {
+      "file": "cover.webp",
+      "width": 1000,
+      "height": 650,
+      "alpha": false,
+      "sha256": "4b48f83873e9171e6ca27b175f1430bc97b629b95b367d0a0f97a71e7e60d2b0"
+    },
+    {
+      "file": "curtain.png",
+      "width": 387,
+      "height": 403,
+      "alpha": true,
+      "sha256": "6c3067bc51732121667977a4116b165c16ae0ced429c028a01bef65a7ab64741"
+    },
+    {
+      "file": "lamp.png",
+      "width": 279,
+      "height": 404,
+      "alpha": true,
+      "sha256": "b3dce093104d8e365006d9b9afcb94dad5211983c74757e3ac42d193448ecb97"
+    },
+    {
+      "file": "lens.png",
+      "width": 366,
+      "height": 371,
+      "alpha": true,
+      "sha256": "5950231f1cd5e3db63e70c45054e91934514b28c44c8582e8df1fe43123cfe77"
+    },
+    {
+      "file": "plaque.png",
+      "width": 435,
+      "height": 291,
+      "alpha": true,
+      "sha256": "bbe56e85cf182d5898d95a361278d80d86c215400ae9ffd1452b8724b77c00e1"
+    },
+    {
+      "file": "round-button.png",
+      "width": 300,
+      "height": 301,
+      "alpha": true,
+      "sha256": "4043586704fbee3c04b8ef44864d09da1172dd8a9f6c2dfbe427967751aca8d4"
+    },
+    {
+      "file": "spark.png",
+      "width": 316,
+      "height": 328,
+      "alpha": true,
+      "sha256": "2b256dba59fbbf974a912c40b16dff615ed9da95fed5e0f34fdeb9b4ee3a264f"
+    },
+    {
+      "file": "ticket.png",
+      "width": 421,
+      "height": 229,
+      "alpha": true,
+      "sha256": "1ed0c4d4406b6db7a80b7b941b3280f884b0d42638df982c441be18fd8e252f1"
+    },
+    {
+      "file": "veil.png",
+      "width": 116,
+      "height": 120,
+      "alpha": false,
+      "sha256": "0ae7c4159cdb9994d07a6912ccad710de630fce2cd5943901265986f4513f161"
+    },
+    {
+      "file": "wide-plaque.png",
+      "width": 1000,
+      "height": 139,
+      "alpha": true,
+      "sha256": "f7a4c149cbf394ab7e8776af9a834366bd65f1ee2de6bcaef1a9282907b6b8e4"
+    }
+  ]
+}
