@@ -1,0 +1,82 @@
+{
+  "created": "2026-11-12",
+  "tool": "OpenAI built-in image_gen",
+  "sources": {
+    "background": "exec-fddf2268-615b-4ccd-8b5b-459172a348fb.png",
+    "parts": "exec-131034af-22b7-4084-97b1-a8b7e6a4283a.png",
+    "rewards": "exec-4d6332c7-194e-45c4-b2eb-e58f20ae4f98.png"
+  },
+  "processing": "Fixed quadrant crops, transparent alpha trim, proportional downsize via Sharp. Originals retained. No generated text.",
+  "files": [
+    {
+      "file": "background.webp",
+      "width": 1400,
+      "height": 933,
+      "alpha": false,
+      "sha256": "1706ab8bf0694fd4cd8f3ffe87ce6bf6696a5e0be4abd83b3f2b277cef2479f6"
+    },
+    {
+      "file": "base.png",
+      "width": 600,
+      "height": 352,
+      "alpha": true,
+      "sha256": "667fe141e7d5d296cb6b17be86ada2a797b275a00e4e6c1e6e81f1365c37eae4"
+    },
+    {
+      "file": "cover.webp",
+      "width": 1000,
+      "height": 650,
+      "alpha": false,
+      "sha256": "de27f55734c3001c6809bd6b5e657f5e95a4ad80bb6e52fa5132b385fd4fe01b"
+    },
+    {
+      "file": "kangaroo.png",
+      "width": 502,
+      "height": 594,
+      "alpha": true,
+      "sha256": "1f0beaba7cc92ceb0d4e66b03df8c26a099c8e108fb7c6ac9be54cf6c66622c9"
+    },
+    {
+      "file": "key.png",
+      "width": 600,
+      "height": 324,
+      "alpha": true,
+      "sha256": "bad1a00ebe72c5ffe67e7dfaf9bc263ca9e1790e506829827e7ec734602d0ba5"
+    },
+    {
+      "file": "lid.png",
+      "width": 600,
+      "height": 264,
+      "alpha": true,
+      "sha256": "862b786c2e35ace357c0cca1365127b816e1d90d2a8cb5ce8dbb51ad42300561"
+    },
+    {
+      "file": "lion.png",
+      "width": 522,
+      "height": 590,
+      "alpha": true,
+      "sha256": "bdedadeff422935c6f94867630deb4d469745702f42a8c4344271c9eaa39f605"
+    },
+    {
+      "file": "lock.png",
+      "width": 407,
+      "height": 407,
+      "alpha": true,
+      "sha256": "f38cef865ccd2b16eff42b59e60bae6a0b44c1d6dfddd846853867d5ff74aefd"
+    },
+    {
+      "file": "lollipop.png",
+      "width": 376,
+      "height": 600,
+      "alpha": true,
+      "sha256": "0467bdec00876629639c5bf3b15576141eb552a2e3f32c11363dd07038def6b7"
+    },
+    {
+      "file": "treasure-key.png",
+      "width": 600,
+      "height": 328,
+      "alpha": true,
+      "sha256": "1606b3aea53789e42851a48eab1739fe1518e352d7776d859e81f4bea54df53b"
+    }
+  ]
+}

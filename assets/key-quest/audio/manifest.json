@@ -1,0 +1,73 @@
+{
+  "version": "20261112-keyquest",
+  "engine": "Higgs Audio V3, cached local weights",
+  "voice": "Belinda reference from existing accepted Unit 3 recordings",
+  "referenceSha256": "8a6e483739144be6afa2735c41441d2970588fc089139685547a964c76510d07",
+  "normalization": "FFmpeg loudnorm I=-18, TP=-1.5, LRA=7",
+  "clips": {
+    "kangaroo": {
+      "src": "assets/key-quest/audio/kangaroo.mp3",
+      "text": "Kangaroo.",
+      "duration": 1.133,
+      "sha256": "dca1b986e1001e1a9e8481c8e0b33c39d424aef6d57efde994566a02b84a7d49",
+      "qaTranscript": "Kangaroo",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "key": {
+      "src": "assets/key-quest/audio/key.mp3",
+      "text": "Key.",
+      "duration": 0.763,
+      "sha256": "513d4b3826581008ff4d697c55024f8b33da90247f7cb5a7febfa90792b6a747",
+      "qaTranscript": "Key",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "lion": {
+      "src": "assets/key-quest/audio/lion.mp3",
+      "text": "Lion.",
+      "duration": 0.954,
+      "sha256": "e9f7f5de442cd89fe152206c4e843baf9c238a9843954e0915238f2d0d8cdf47",
+      "qaTranscript": "Lion",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "lollipop": {
+      "src": "assets/key-quest/audio/lollipop.mp3",
+      "text": "Lollipop.",
+      "duration": 1.128,
+      "sha256": "d37354dc8abd336acce443ed3af1face69b79445272f3fb0c8b7588e501c822e",
+      "qaTranscript": "Lollipop",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "letter-k": {
+      "src": "assets/key-quest/audio/letter-k.mp3",
+      "text": "K.",
+      "duration": 0.726,
+      "sha256": "e60a67dcbed11ea880b2623032fbd733ea2fbf1258ca4960a76c3be9c309ef7d",
+      "qaTranscript": "K.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "letter-l": {
+      "src": "assets/key-quest/audio/letter-l.mp3",
+      "text": "L.",
+      "duration": 0.664,
+      "sha256": "4f07f271ec2d5c8c4735a5d8d91fddae5bf960a7448255e30ee050f97b1cb47e",
+      "qaTranscript": "L",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    },
+    "intro": {
+      "src": "assets/key-quest/audio/intro.mp3",
+      "text": "Listen. Choose a key. Open the treasure chest.",
+      "duration": 3.855,
+      "sha256": "d1a0d4c587f27d0a0aa936990d4aca213cd6c08b11674941d575658d598d1248",
+      "qaTranscript": "Listen. Choose a key. Open the treasure chest.",
+      "transcriptMatch": true,
+      "humanReviewed": false
+    }
+  },
+  "limits": "Transcript QA only; no human phonetic certification. Letter names and words, no synthetic IPA approximations."
+}

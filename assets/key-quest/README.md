@@ -1,0 +1,11 @@
+# Key Quest art and sound
+
+Own project artwork generated with OpenAI built-in image_gen on 2026-11-12. Source PNGs retained in `sources/`; source output identifiers and export hashes in `manifest.json`. `tools/build_key_quest_art.cjs` performs measured quadrant extraction, alpha trim and proportional exports. No textbook cutouts, remote hotlinks or replacement geometric character drawings.
+
+Prompts: (1) cozy tree-workshop, mint/honey/coral, empty workbench and four-place shelf, no text/chest; (2) transparent four-part sprite sheet, isolated chest base, matching lid, key and lock, no text, followed by transparent background cleanup edit; (3) transparent four-reward sheet kangaroo, golden key, lion, lollipop, clay storybook toy style, no text. Letter labels are live App Outfit, not generated lettering. Original source sheets retained, including their generated alpha; productions are cropped assets, not CSS windows into a full sheet.
+
+Higgs V3 audio only: local cached model and existing accepted Belinda reference. Script, ASR transcript, duration and hashes in `audio/manifest.json`, deterministic builder `tools/build_key_quest_audio.py`. All seven transcripts match. Automated transcript checks are not human phonetic approval. Runtime uses single words and letter names; it does not claim letter names are the phonemes /k/ or /l/. The intro clip is retained but not automatically played over a target word.
+
+SFX selected from existing Kenney CC0 kits: pickup/retry from `assets/playful-foley/` (retained original source licences/manifest); seat/unlock/open/discover from `assets/feedback/` (licences and manifest retained). No synthesized tones. Runtime cues at pickup, contact, unlock, hinge movement and discovery; gain .26, only one SFX at a time, stopped before voice. Files reused in place to avoid duplicating licensed sources.
+
+Runtime: existing local PixiJS 8.22 and GSAP 3.15. References considered: Hexi action/curve examples, KAPLAY game components, Pixi sound/filters, Howler audio control. Those additional engines/audio libraries are not installed or represented as runtime dependencies. Existing app Audio handles the finite clips. Each tween, pointer capture, audio and renderer is owned by this activity and cleaned on leave.
