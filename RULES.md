@@ -1,5 +1,12 @@
 # Quy tắc phát triển web Family and Friends – Letter Land
 
+## Bộ asset chữ cho bài letter mới — yêu cầu 2026-11-12
+
+- Tạo bộ chữ riêng như H/I/J: chữ hoa và chữ thường tách nền, bảng cặp chữ, thẻ từ minh họa và trạng thái sáng phù hợp. Không chỉ dùng font gõ lên vật thể rồi coi đó là bộ asset chữ.
+- Gắn hình chữ vào các vị trí học chữ trong game; giữ nhãn truy cập và chữ từ/câu thật để đọc rõ. Asset chữ trang trí không thay khuôn/nét viết chuẩn của bài đồ E/F.
+- Giữ hình từ vựng và Higgs đã được duyệt khi phù hợp. Tên chữ và âm chữ là hai loại riêng; không dùng clip tên chữ thay cho phoneme chưa được kiểm tra.
+- Không tự tạo lại các bộ H/I/J đã duyệt khi làm bộ mới; lưu source, manifest và kiểm tra chữ hoa–thường, alpha, cách gắn, voice/glow và kích thước hiển thị.
+
 ## Tiêu chuẩn bài đồ chữ — mẫu E/F fish/farm, đính chính cuối 2026-10-28
 
 Yêu cầu mới nhất của người dùng: tự đối chiếu và làm giống bài E/F, fish, farm đã có. Mẫu chuẩn là Trace & Hatch / Trace & Swim (games.eetrace/fftrace), không tiếp tục diễn giải thành bài quét tô diện tích riêng.

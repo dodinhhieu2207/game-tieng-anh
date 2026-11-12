@@ -1,0 +1,107 @@
+{
+  "created": "2026-11-12",
+  "tool": "OpenAI built-in image_gen",
+  "source": "exec-47e181af-66ad-4459-95e7-26720fa4bba3.png",
+  "processing": "Four measured cell crops, alpha trim/proportional exports, pair/card composites, alpha-derived padded blurred light VFX. Original saved.",
+  "voice": "Reuse accepted Higgs letter-k, letter-l and four Key Quest words. No new isolated phoneme claim.",
+  "files": [
+    {
+      "file": "card-kangaroo.png",
+      "width": 540,
+      "height": 440,
+      "alpha": true,
+      "sha256": "c1de3c2279715236b3d50ec695a22e1444a68c00385fe4552d84e75b920b4efe"
+    },
+    {
+      "file": "card-key.png",
+      "width": 540,
+      "height": 440,
+      "alpha": true,
+      "sha256": "478239d608f739b353f119353a4f4db984e12d3e082597666c92c4623609c63b"
+    },
+    {
+      "file": "card-lion.png",
+      "width": 540,
+      "height": 440,
+      "alpha": true,
+      "sha256": "aa00c9415436ab5cc92a917156b75ff8e8ee0b38754ca8950d3bd5ba2aa2c916"
+    },
+    {
+      "file": "card-lollipop.png",
+      "width": 540,
+      "height": 440,
+      "alpha": true,
+      "sha256": "2c41926871ba7d2b855699b01a85941015b4b4328e2d7a47820928819cd61746"
+    },
+    {
+      "file": "glow-lower-k.png",
+      "width": 476,
+      "height": 680,
+      "alpha": true,
+      "sha256": "c4a9e6bbfe1b05667a5cd8abdf79afcd85b2e4606ee709835851db60b5d856d5"
+    },
+    {
+      "file": "glow-lower-l.png",
+      "width": 353,
+      "height": 680,
+      "alpha": true,
+      "sha256": "9c7e215651cabcffcae0dfc6145b4969a8a1b1fa6efccd40facdbaa4d1468831"
+    },
+    {
+      "file": "glow-upper-k.png",
+      "width": 574,
+      "height": 680,
+      "alpha": true,
+      "sha256": "5f649b497ae861873b3ae71fd4bb559a9af90c28040e3c085b989df4243dce96"
+    },
+    {
+      "file": "glow-upper-l.png",
+      "width": 583,
+      "height": 680,
+      "alpha": true,
+      "sha256": "c1cfe649d632305f94c65fbe6feb806ffb2aca3426676b5d9347f7218d34db7f"
+    },
+    {
+      "file": "kk-badge.png",
+      "width": 480,
+      "height": 280,
+      "alpha": true,
+      "sha256": "54b01fa9aef2e88e378b6be13988047f5f0db3b9433c61bc29f4d0a19e16c413"
+    },
+    {
+      "file": "ll-badge.png",
+      "width": 480,
+      "height": 280,
+      "alpha": true,
+      "sha256": "cb10c776b78a73bf5825bdee0798890c9a47bd0458171d568f1f99834dfad845"
+    },
+    {
+      "file": "lower-k.png",
+      "width": 396,
+      "height": 600,
+      "alpha": true,
+      "sha256": "ce4a5841d91725215ed1c65099c8afbe324c603a84022cfe5f145fd3b96573c0"
+    },
+    {
+      "file": "lower-l.png",
+      "width": 273,
+      "height": 600,
+      "alpha": true,
+      "sha256": "30b0626fbd1f4d056a9bcc7cf09be5c333d567d8c2c3f164e6198202dd1a6642"
+    },
+    {
+      "file": "upper-k.png",
+      "width": 494,
+      "height": 600,
+      "alpha": true,
+      "sha256": "84c832e02522349c5c7c64bd711a9e4c5fec5420b1ffed7e2a2cfe404f7689e6"
+    },
+    {
+      "file": "upper-l.png",
+      "width": 503,
+      "height": 600,
+      "alpha": true,
+      "sha256": "c58c0f18fca470a8c9836b6530524be3adc5216afd8ec0cd27ff75b3639a15b0"
+    }
+  ]
+}
