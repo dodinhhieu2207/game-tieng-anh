@@ -17,6 +17,16 @@
   const soundFor = word => letterData[letterFor(word)].soundAudio;
   const foils = {key:'kangaroo',kangaroo:'key',lion:'lollipop',lollipop:'lion'};
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const effects = new Map();
+  function motionAsset(name) {
+    if (!effects.has(name)) {
+      effects.set(name,fetch(art+name+'.gif').then(response=>{
+        if (!response.ok) throw new Error('Cloud animation unavailable');
+        return response.blob();
+      }).catch(()=>{effects.delete(name);return null;}));
+    }
+    return effects.get(name);
+  }
   function buildRounds() {
     const k=shuffle(['key','kangaroo']), l=shuffle(['lion','lollipop']);
     return [...shuffle([k[0],l[0]]),...shuffle(words.slice()),...shuffle([k[1],l[1]])];
@@ -39,6 +49,7 @@
   function render(scene) {
     const stage = stageFor(scene.index);
     const chapter = chapters[stage];
+    if (!reduced.matches) motionAsset(chapter.effect);
     scene.root.dataset.chapter=stage;
     scene.cargo??=new Set();
     const world = scene.$('.td-world');
@@ -92,7 +103,11 @@
     animated.alt='';
     animated.style.left=(target.left+target.width/2-box.left)+'px';
     animated.style.top=(target.top+target.height/2-box.top)+'px';
-    animated.src=art+fx+(reduced.matches?'-end.webp':'.gif')+'?turn='+turn;
+    const blob = reduced.matches ? null : await motionAsset(fx);
+    if (!scene.alive(turn)) return;
+    const url = blob ? URL.createObjectURL(blob) : null;
+    animated.dataset.effect=fx;
+    animated.src=url||art+fx+'-end.webp';
     world.append(animated);
     cloud.style.visibility='hidden';
     const flight = reduced.matches ? 0 : Math.min(world.clientWidth*.45,410);
@@ -102,8 +117,10 @@
       {transform:`translate(${flight}px,-18px) rotate(0)`}
     ],790);
     scene.sound(stage);
-    await trail;
-    animated.remove();
+    try { await trail; } finally {
+      animated.remove();
+      if (url) URL.revokeObjectURL(url);
+    }
     if (!scene.alive(turn)) return;
     plane.style.transform = `translate(${flight}px,-18px)`;
     if(stage!=='listen'&&!scene.cargo.has(scene.target)){

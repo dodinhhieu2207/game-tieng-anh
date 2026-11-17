@@ -84,7 +84,7 @@ async function main() {
       if(i===0||i===2||i===6){
         await page.emulateMedia({reducedMotion:'no-preference'});
         await good.click();
-        await page.waitForFunction(name=>document.querySelector('.cpk-contact')?.src.includes(name+'.gif'),
+        await page.waitForFunction(name=>document.querySelector('.cpk-contact[data-effect='+name+']')?.src.startsWith('blob:'),
           {listen:'radio',picture:'cloud-split',compare:'cargo'}[chapter]);
       }else{
         await page.emulateMedia({reducedMotion:'reduce'});

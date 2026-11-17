@@ -30,10 +30,15 @@
   function enter(index = 0, order = rounds) {
     close?.();
     const round = order[index];
-    let dead = false, phase = 'ready', selected, drag, gif, gifUrl, app, ready = false, voice;
+    let dead = false, phase = 'ready', selected, drag, gifUrl, app, ready = false, voice;
     const timers = new Set();
     const sounds = new Set();
     const foley = 'assets/playful-foley/';
+    const loadMotion = () => fetch(art+round.gif).then(response => {
+      if (!response.ok) throw new Error('Motion unavailable');
+      return response.blob();
+    }).catch(() => null);
+    let motionReady = reduce.matches ? null : loadMotion();
     setStage(`<section class="sd-game" data-round="${index}" data-active-actor="${round.actor}">
       <header><h2>Scene Director</h2><strong>${index+1} / ${rounds.length}</strong><button type="button" data-hear>▶ Hear the cue</button></header>
       <div class="sd-scene">
@@ -108,6 +113,20 @@
       voice?.pause();
       q('[data-hear]').disabled = true;
       const from = prop.querySelector('img').getBoundingClientRect();
+      let gif;
+      if (!reduce.matches) {
+        status('Getting the scene ready…');
+        motionReady ??= loadMotion();
+        gif = await motionReady;
+        if (dead) return;
+        if (!gif) {
+          motionReady = null;
+          phase = 'ready';
+          q('[data-hear]').disabled = false;
+          status('The scene could not load. Give the prop again to retry.');
+          return;
+        }
+      }
       const to = sprite.getBoundingClientRect();
       const scene = q('.sd-scene').getBoundingClientRect();
       const scale = Math.min(to.width / 520, to.height / 480);
@@ -218,7 +237,6 @@
       document.removeEventListener('change',hush);
       close=null;
     };
-    fetch(art+round.gif).then(r=>{if(r.ok)return r.blob();}).then(blob=>{gif=blob;}).catch(()=>{});
     pixi().then(async()=>{
       if (dead) return;
       app=new PIXI.Application();
