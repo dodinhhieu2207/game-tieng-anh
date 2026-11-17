@@ -1,0 +1,32 @@
+.cloud-pilot .td-world{background:#bcecff url('../assets/color-pilot/sky.webp') center/cover no-repeat;overflow:hidden}
+.cloud-pilot .td-aircraft{width:clamp(112px,23vw,205px)}
+.cloud-pilot .td-aircraft>.td-plane{aspect-ratio:7/6;background:url('../assets/cloud-pilot/pilot-idle.webp') center/contain no-repeat;display:block}
+.cloud-pilot[data-phase=pilot] .td-aircraft>.td-plane,.cloud-pilot[data-phase=flying] .td-aircraft>.td-plane{background-image:url('../assets/cloud-pilot/pilot-flight.gif')}
+.cloud-pilot .td-aircraft>.td-propeller,.cloud-pilot .td-destination .td-pad,.cloud-pilot .td-destination .td-open{display:none}
+.cloud-pilot .td-parcel{width:clamp(127px,27vw,237px);height:92px}
+.cloud-pilot .td-parcel>.td-crate{background:url('../assets/cloud-pilot/cloud.webp') center/100% 100% no-repeat}
+.cloud-pilot .td-parcel>span:last-child{inset:0;display:grid;place-items:center;border:0;background:none;color:#123e55;text-shadow:0 1px #fff;font-size:clamp(17px,3vw,31px);padding:0}
+.cloud-pilot .td-parcel.td-aimed{filter:drop-shadow(0 0 7px #ffcd55)}
+.cloud-pilot .td-parcel[hidden],.cloud-pilot .td-pilot-controls[hidden],.cloud-pilot .cpk-lesson[hidden]{display:none!important}
+.cloud-pilot .td-destination{pointer-events:none}
+.cloud-pilot .td-delivered .td-toy{filter:drop-shadow(0 0 10px #fff4ab)}
+.cpk-lesson{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin:12px auto 0}
+.cpk-lesson span{min-width:88px;min-height:68px;display:grid;justify-items:center;align-items:center;padding:4px 11px;border:2px solid #bee0e3;border-radius:13px;background:#f0fbff;color:#174359}
+.cpk-lesson small{font-weight:750}
+.cpk-lesson b{font-size:clamp(20px,4vw,29px)}
+.cpk-lesson img{width:61px;height:37px;object-fit:contain}
+.cpk-lesson[data-active=letter] [data-step=letter],.cpk-lesson[data-active=sound] [data-step=sound],.cpk-lesson[data-active=word] [data-step=word]{background:#fff0ad;border-color:#e5b34e;box-shadow:0 0 8px #e5b34e88}
+@media(prefers-reduced-motion:reduce){.cloud-pilot[data-phase=pilot] .td-aircraft>.td-plane,.cloud-pilot[data-phase=flying] .td-aircraft>.td-plane{background-image:url('../assets/cloud-pilot/pilot-idle.webp')}}
+.cloud-pilot[data-phase=reading] .td-aircraft>.td-plane,.cloud-pilot[data-phase=resolved] .td-aircraft>.td-plane{background-image:url('../assets/cloud-pilot/pilot-cheer.webp')}
+
+.cpk-chapter{display:flex;align-items:center;gap:9px;margin:5px 0 9px;padding:5px 10px;border-radius:13px;background:#eefbff;color:#19465b}
+.cpk-chapter h3{margin:0;font-size:clamp(14px,2.8vw,22px);line-height:1.2}
+.cpk-chapter img{width:clamp(34px,7vw,57px);height:42px;object-fit:contain}
+.cpk-chapter span{margin-left:auto;white-space:nowrap;font-weight:800}
+.cpk-cargo{display:flex;justify-content:center;gap:8px;margin:8px auto}
+.cpk-cargo-slot{display:grid;place-items:center;width:clamp(48px,9vw,68px);height:48px;border:2px solid #c1e3e8;border-radius:12px;background:#f4fbfc}
+.cpk-cargo-slot img{width:89%;height:41px;object-fit:contain}
+.cpk-contact{position:absolute;z-index:8;translate:-50% -50%;width:clamp(85px,25%,205px);height:auto;pointer-events:none}
+.cpk-flying-cargo{position:fixed;width:62px;height:62px;object-fit:contain;z-index:99;pointer-events:none}
+.cloud-pilot .td-request>span:last-child{bottom:12px}
+@media(max-width:520px){.cloud-pilot .td-progress span{display:none}.cloud-pilot .td-request>span:last-child{font-size:14px}}

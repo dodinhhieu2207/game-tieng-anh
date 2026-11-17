@@ -1,0 +1,1 @@
+Follow root RULES and GAME_WORKFLOW. Use the approved HTML + Web Animations approach. Every word requires a spoken attempt and guided tracing. Speech recognition checks the target word only. A teacher can confirm an attempted response. Reuse the existing E/F trace renderer and pointer binder, with one active letter per word.

@@ -1,0 +1,48 @@
+.mk-game{max-width:1000px;margin:auto;padding:clamp(10px,2vw,24px);color:#173c50;background:#fffcf2;border-radius:22px}
+.mk-game [hidden]{display:none!important}
+.mk-game header,.mk-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.mk-game h2{margin:0 0 10px;font-size:clamp(1.35rem,4vw,2.5rem)}
+.mk-progress{padding:.3em .75em;background:#ffdfa4;border-radius:100px;font-weight:800}
+.mk-scene{position:relative;overflow:hidden;isolation:isolate;border-radius:18px;aspect-ratio:16/9}
+.mk-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:fill}
+.mk-radio{position:absolute;top:4%;left:50%;transform:translateX(-50%);display:grid;justify-items:center;min-width:42%;padding:.25em .7em .4em;border:3px solid #e7ae5d;border-radius:14px;background:#fff9e8;box-shadow:0 4px 0 #8b5827;color:#153748;text-align:center}
+.mk-radiolabel{font-size:clamp(.7rem,1.5vw,1rem);font-weight:700}
+.mk-word{font-size:clamp(1.35rem,5vw,3.2rem);line-height:1.1}
+.mk-signal{position:absolute;left:20.5%;top:51.5%;width:1.1%;aspect-ratio:1;border-radius:100%}
+.mk-listening .mk-signal{background:#faffbd;box-shadow:0 0 12px 5px #ffee73}
+.mk-reveal{position:absolute;inset:24% 0 4%;display:flex;align-items:end;justify-content:center;pointer-events:none}
+.mk-reveal img{height:82%;width:27%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 7px 6px #32190066)}
+.mk-game[data-target=key] .mk-reveal{justify-content:flex-start;padding-left:9%}
+.mk-game[data-target=lollipop] .mk-reveal{justify-content:flex-end;padding-right:9%}
+.mk-finale .mk-reveal{justify-content:center!important;padding:0!important;gap:1%}
+.mk-finale .mk-reveal img{width:17%}
+.mk-actions{justify-content:center}
+.mk-game button{background:#fff1cf;border:2px solid #d7a45c;border-radius:12px;padding:8px 16px;min-height:48px;font:inherit;font-weight:750;color:#173c50;cursor:pointer}
+.mk-game button:first-child,.mk-slip button{background:#17665d;border-color:#145449;color:#fff}
+.mk-game button:focus-visible,.mk-game input:focus-visible{outline:3px solid #196fa0;outline-offset:3px}
+.mk-status{text-align:center;font-weight:650;margin:.65em auto}
+.mk-slip{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:#fff1d0;border:2px solid #d7a45c;border-radius:14px;padding:12px;margin:12px auto}
+.mk-slip label{font-weight:800}
+.mk-slip input{min-height:48px;max-width:100%;width:13ch;font:inherit;font-size:1.15rem;border:2px solid #17665d;border-radius:9px;padding:0 8px}
+.mk-slip input[aria-invalid=true]{border-color:#ab3729}
+.mk-teacher{margin:12px auto 0;width:fit-content;font-size:.92em;color:#46555c}
+.mk-gate{position:absolute;left:35.05%;top:27%;width:29.9%;height:38.5%;display:flex;overflow:hidden;visibility:hidden;background:linear-gradient(#59482f,#8f724c);clip-path:polygon(0 16%,20% 14%,37% 0,50% 4%,63% 0,80% 14%,100% 16%,100% 100%,0 100%)}
+.mk-gate i{display:block;width:50%;background:url('../assets/missing-key/parade.webp') no-repeat;background-size:669% 260%}
+.mk-gate i:first-child{background-position:41.2% 43.9%}
+.mk-gate i:last-child{background-position:58.8% 43.9%}
+.mk-gate-open .mk-gate{visibility:visible}
+.mk-gate-open .mk-gate i:first-child{animation:mk-door-left 440ms ease-in-out both}
+.mk-gate-open .mk-gate i:last-child{animation:mk-door-right 440ms ease-in-out both}
+@keyframes mk-door-left{to{transform:translateX(-100%)}}
+@keyframes mk-door-right{to{transform:translateX(100%)}}
+@media(prefers-reduced-motion:reduce){.mk-gate-open .mk-gate i{visibility:hidden;animation:none!important}}
+.mk-ribbon{position:absolute;top:4%;width:clamp(5px,1vw,10px);height:clamp(9px,1.8vw,18px);border-radius:2px;pointer-events:none;box-shadow:0 1px 2px #56310f44}
+.mk-camera{position:absolute;inset:0}
+.mk-slip{display:block;text-align:center}
+.mk-slip h3{margin:0 0 10px}
+.mk-trace-row{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.mk-trace-row .trace-card{flex:0 0 clamp(61px,9vw,102px);min-width:0;padding:4px;border:2px solid #95c7ba;border-radius:12px;background:#fffefa}
+.mk-trace-row .trace-card.active{border-color:#2c9c93;box-shadow:0 0 0 3px #69cbb239}
+.mk-trace-row .trace-card.done{background:#e4f5dc}
+.mk-trace-row .trace-card svg{display:block;width:100%;height:auto;touch-action:none}
+.mk-trace-row .trace-guide,.mk-trace-row .trace-ink{stroke-width:18}

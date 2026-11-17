@@ -1,0 +1,1 @@
+Follow project RULES and GAME_WORKFLOW. User chose PixiJS + GIF. Preserve lesson routes and progress. Use Higgs for spoken instructions. Provide drag and tap/keyboard interaction and a reduced-motion path.

@@ -1,0 +1,1 @@
+Follow root RULES and GAME_WORKFLOW. Current variation is a direct manipulation turntable with layered HTML and Web Animations. Keep vocabulary labels and existing Higgs audio. Support pointer, buttons and reduced motion. Preserve route and progress.

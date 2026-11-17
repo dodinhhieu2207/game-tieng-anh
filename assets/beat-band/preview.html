@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Beat Band · Lion</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100svh;display:grid;place-items:center;padding:18px;background:#17142b;color:#fff4d8;font:700 18px system-ui}
+main{text-align:center;width:min(100%,680px)}
+h1{margin:0 0 16px;font-size:clamp(26px,6vw,44px)}
+button{position:relative;display:block;width:100%;border:2px solid #b9804d;border-radius:24px;padding:0;overflow:hidden;background:radial-gradient(ellipse at 54% 26%,#655378,#302545 57%,#1e1933);color:inherit;cursor:pointer}
+button:focus-visible{outline:3px solid #ffce73;outline-offset:5px}
+img{display:block;width:100%;aspect-ratio:500/500;object-fit:contain;max-height:65svh}
+span{display:block;padding:10px 0 16px;font-size:23px}
+p{min-height:1.5em;margin:14px 0}
+</style>
+<main>
+<h1>Beat Band</h1>
+<button type="button" aria-label="Play the lion’s drum" disabled><img src="lion-idle-v3.png" alt=""><span>Play the drum</span></button>
+<p role="status">Loading…</p>
+</main>
+<script>
+const button = document.querySelector('button');
+const image = button.querySelector('img');
+const status = document.querySelector('p');
+let context, clip, gif, currentUrl;
+const contacts = [.16, .32, .48, .64, .80, .96];
+const duration = 1280;
+async function prepare() {
+  try {
+    const results = await Promise.all(['lion-drum-v3.gif','drum-hit.mp3'].map(async name => {
+      const response = await fetch(name);
+      if (!response.ok) throw new Error(name);
+      return response;
+    }));
+    gif = await results[0].blob();
+    context = new AudioContext();
+    clip = await context.decodeAudioData(await results[1].arrayBuffer());
+    status.textContent = '';
+    button.disabled = false;
+  } catch { status.textContent = 'The demo could not load. Reload to retry.'; }
+}
+button.addEventListener('click', async () => {
+  button.disabled = true;
+  try {
+    await context.resume();
+    currentUrl = URL.createObjectURL(gif);
+    image.src = currentUrl;
+    await image.decode();
+    const started = context.currentTime;
+    contacts.forEach((offset, index) => {
+      const hit = context.createBufferSource();
+      hit.buffer = clip;
+      const level = context.createGain();
+      level.gain.value = index % 2 ? .41 : .52;
+      hit.connect(level).connect(context.destination);
+      hit.start(started + offset);
+      hit.stop(started + offset + .15);
+    });
+    setTimeout(() => { button.disabled = false; }, duration);
+  } catch {
+    image.src = 'lion-idle-v3.png';
+    button.disabled = false;
+    status.textContent = 'Tap to try again.';
+  } finally {
+    if (currentUrl) URL.revokeObjectURL(currentUrl);
+    currentUrl = null;
+  }
+});
+prepare();
+</script>
+</html>

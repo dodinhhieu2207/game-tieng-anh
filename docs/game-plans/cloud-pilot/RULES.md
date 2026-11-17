@@ -1,0 +1,1 @@
+Follow root RULES and GAME_WORKFLOW. User delegated selection of a prior engine; reuse the Toy Delivery controller as used in Color Pilot. Scope its extensions to this config. Use established letter/sound audio with provenance and verified Higgs for example words. Use a separate GIF for pilot pose motion.

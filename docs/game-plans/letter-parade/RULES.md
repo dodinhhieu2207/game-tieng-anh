@@ -1,0 +1,1 @@
+Follow project RULES and GAME_WORKFLOW. Approved PixiJS + GIF. Keep existing Lesson 5 activities and progress. Whole character poses in GIFs. Use approved Higgs clips for letter names and vocabulary. No timed failure. Support pointer, tap and keyboard and reduced motion.

@@ -97,5 +97,5 @@ class Spotlight extends Base{
 }
 function start(kind){current?.dispose();current=new({doors:Doors,express:Express,workshop:Workshop,spotlight:Spotlight}[kind])()}
 for(const[k,s]of Object.entries(SPEC)){games[s.key]={enter:()=>start(k)};GAME_META[s.key]=['UNIT 4 · LESSON 5',s.title,'Learn Kk and Ll']}
-window.KLAdventures={current:()=>current,start,specs:SPEC};document.addEventListener('learning:leave-activity',()=>{current?.dispose();current=null});
+window.KLAdventures={tracePaths:letter=>GLYPHS[letter],current:()=>current,start,specs:SPEC};document.addEventListener('learning:leave-activity',()=>{current?.dispose();current=null});
 })();

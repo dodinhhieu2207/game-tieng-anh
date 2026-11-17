@@ -1,5 +1,12 @@
 # Quy tắc phát triển web Family and Friends – Letter Land
 
+## Chuẩn asset motion dạng GIF — 2026-11-17
+
+- Khi tạo motion mới cho game, tạo asset GIF riêng theo mẫu Lion đánh trống hai tay đã duyệt trong Beat Band. Dùng các tư thế hoàn chỉnh để tay, thân, dụng cụ và vật bị tác động ăn khớp tại điểm chạm. Tham chiếu `assets/beat-band/lion-drum-v3.gif`.
+- Ghép ảnh tĩnh chờ và GIF trên cùng kích thước khung, cùng điểm neo. Xuất nền trong suốt cho sprite cần ráp vào cảnh. GIF phát theo hành động của trẻ, có thể phát lại từ đầu và trở về tư thế chờ.
+- Ghi mốc các khung va chạm và đồng bộ file âm thanh riêng theo từng mốc. Kiểm tra ở tốc độ chơi thực tế, gồm điểm tiếp xúc, độ khớp tiếng, phát lại và chế độ giảm chuyển động.
+
+
 ## Bộ asset chữ cho bài letter mới — yêu cầu 2026-11-12
 
 - Tạo bộ chữ riêng như H/I/J: chữ hoa và chữ thường tách nền, bảng cặp chữ, thẻ từ minh họa và trạng thái sáng phù hợp. Không chỉ dùng font gõ lên vật thể rồi coi đó là bộ asset chữ.
