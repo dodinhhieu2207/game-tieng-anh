@@ -59,6 +59,19 @@ async function main() {
     for (const width of [320,390,768,1024,1366]) {
       await page.setViewportSize({width,height:900});
       assert.equal(await cloud.evaluate(el=>el.scrollWidth>el.clientWidth),false);
+      await page.waitForFunction(() => {
+        const sky=document.querySelector('.cloud-pilot .td-world');
+        const box=sky.getBoundingClientRect();
+        const [top,bottom]=[...sky.querySelectorAll('[data-lane]')].map(el=>el.getBoundingClientRect());
+        const guides=[...sky.querySelectorAll('.td-lane')];
+        const topCenter=top.top-box.top+top.height/2;
+        const bottomCenter=bottom.top-box.top+bottom.height/2;
+        return box.height>=478 && top.height>=116 && bottom.top>=top.bottom &&
+          Math.abs(topCenter/box.height-.28)<.03 && Math.abs(bottomCenter/box.height-.72)<.03 &&
+          guides.every(guide=>getComputedStyle(guide).display==='none') &&
+          [top,bottom].every(cloud=>cloud.left>=box.left-1 && cloud.right<=box.right+1 &&
+            cloud.top>=box.top && cloud.bottom<=box.bottom);
+      });
     }
     await page.setViewportSize({width:390,height:900});
     for(let i=0;i<8;i++){

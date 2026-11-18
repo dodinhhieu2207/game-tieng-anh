@@ -1,11 +1,14 @@
-.cloud-pilot .td-world{background:#bcecff url('../assets/color-pilot/sky.webp') center/cover no-repeat;overflow:hidden}
+.cloud-pilot.toy-delivery{max-width:1220px}
+.cloud-pilot .td-world{--sky-height:clamp(478px,65vh,680px);height:var(--sky-height);container-type:inline-size;--cloud-height:clamp(116px,19cqw,min(188px,calc(var(--sky-height) * .33)));background:#bcecff url('../assets/color-pilot/sky.webp') center/cover no-repeat;overflow:hidden}
 .cloud-pilot .td-aircraft{width:clamp(112px,23vw,205px)}
 .cloud-pilot .td-aircraft>.td-plane{aspect-ratio:7/6;background:url('../assets/cloud-pilot/pilot-idle.webp') center/contain no-repeat;display:block}
 .cloud-pilot[data-phase=pilot] .td-aircraft>.td-plane,.cloud-pilot[data-phase=flying] .td-aircraft>.td-plane{background-image:url('../assets/cloud-pilot/pilot-flight.gif')}
 .cloud-pilot .td-aircraft>.td-propeller,.cloud-pilot .td-destination .td-pad,.cloud-pilot .td-destination .td-open{display:none}
-.cloud-pilot .td-parcel{width:clamp(127px,27vw,237px);height:92px}
+.cloud-pilot .td-parcel{width:clamp(133px,51cqw,405px);height:var(--cloud-height)}
+/* The clouds are the destinations, not decoration for invisible flight lanes. */
+.cloud-pilot .td-lane{display:none}
 .cloud-pilot .td-parcel>.td-crate{background:url('../assets/cloud-pilot/cloud.webp') center/100% 100% no-repeat}
-.cloud-pilot .td-parcel>span:last-child{inset:0;display:grid;place-items:center;border:0;background:none;color:#123e55;text-shadow:0 1px #fff;font-size:clamp(17px,3vw,31px);padding:0}
+.cloud-pilot .td-parcel>span:last-child{inset:0;display:grid;place-items:center;border:0;background:none;color:#123e55;text-shadow:0 1px #fff;font-size:clamp(20px,5.1cqw,48px);padding:.18em .35em 0;line-height:1}
 .cloud-pilot .td-parcel.td-aimed{filter:drop-shadow(0 0 7px #ffcd55)}
 .cloud-pilot .td-parcel[hidden],.cloud-pilot .td-pilot-controls[hidden],.cloud-pilot .cpk-lesson[hidden]{display:none!important}
 .cloud-pilot .td-destination{pointer-events:none}
@@ -26,7 +29,7 @@
 .cpk-cargo{display:flex;justify-content:center;gap:8px;margin:8px auto}
 .cpk-cargo-slot{display:grid;place-items:center;width:clamp(48px,9vw,68px);height:48px;border:2px solid #c1e3e8;border-radius:12px;background:#f4fbfc}
 .cpk-cargo-slot img{width:89%;height:41px;object-fit:contain}
-.cpk-contact{position:absolute;z-index:8;translate:-50% -50%;width:clamp(85px,25%,205px);height:auto;pointer-events:none}
+.cpk-contact{position:absolute;z-index:8;translate:-50% -50%;width:clamp(105px,35%,290px);height:auto;pointer-events:none}
 .cpk-flying-cargo{position:fixed;width:62px;height:62px;object-fit:contain;z-index:99;pointer-events:none}
 .cloud-pilot .td-request>span:last-child{bottom:12px}
 @media(max-width:520px){.cloud-pilot .td-progress span{display:none}.cloud-pilot .td-request>span:last-child{font-size:14px}}

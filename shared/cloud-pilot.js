@@ -179,7 +179,7 @@
       }
     },
     distractor:(word,index)=>stageFor(index)==='compare'?foils[word]:(word[0]==='k'?'lion':'key'),
-    flightSeconds:3.3,
+    flightSeconds:3.3, laneFractions:[.28,.72],
     completeTitle:'Cargo ready!',
     resultCount:scene=>scene.cargo.size+' / 4 cargo items found',
     onComplete(scene){

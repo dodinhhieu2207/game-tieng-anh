@@ -39,6 +39,7 @@
    </section>`);
    this.root=document.querySelector('.toy-delivery');
    this.config.onRender?.(this);
+   if(this.config.laneFractions)this.planeY=this.aimY=(this.laneY(0)+this.laneY(1))/2;
    this.skinControls();
    this.root.querySelectorAll('[data-word]').forEach(b=>b.onclick=()=>this.choose(b));
    this.$('[data-td-hint]').onclick=()=>this.hint();this.$('[data-td-next]').onclick=()=>this.next();this.$('[data-td-retry]').onclick=()=>this.finishDelivery(t);
@@ -48,21 +49,33 @@
    this.position();this.$('[data-td-flight]').focus({preventScroll:true});
    restartCurrent=()=>start(this.config);replayCurrent=()=>['choose','pilot','paused'].includes(this.phase)?this.hint():this.phase==='resolved'?this.voice(this.target):null;
   }
-  drag(e){const y=e.clientY-this.$('.td-world').getBoundingClientRect().top;if(y<170)return;this.steer(y<290?0:1);}
+  laneY(lane){
+   const fractions=this.config.laneFractions;
+   return fractions?this.$('.td-world').clientHeight*fractions[lane]:lane?355:235;
+  }
+  drag(e){
+   const y=e.clientY-this.$('.td-world').getBoundingClientRect().top;
+   const top=this.laneY(0),bottom=this.laneY(1);
+   if(y<(this.config.laneFractions?top-(bottom-top)*.45:170))return;
+   this.steer(y<(this.config.laneFractions?(top+bottom)/2:290)?0:1);
+  }
   cueReady(){if(!this.config.requireHint?.(this)||this.hintHeard)return true;this.status('Hear the sound before flying.');this.$('[data-td-hint]').focus({preventScroll:true});return false;}
-  steer(lane){if(!this.cueReady()||!['choose','pilot','paused'].includes(this.phase))return;if(matchMedia('(prefers-reduced-motion: reduce)').matches){this.phase='choose';this.choose(this.$(`[data-lane="${lane}"]`),true);return;}this.lane=lane;this.aimY=lane?355:235;this.root.dataset.lane=lane;this.root.querySelectorAll('[data-lane]').forEach(b=>b.classList.toggle('td-aimed',Number(b.dataset.lane)===lane));if(this.phase==='choose')this.launch();else if(this.phase==='paused'){this.planeY=this.aimY;this.position();this.launch();}}
+  steer(lane){if(!this.cueReady()||!['choose','pilot','paused'].includes(this.phase))return;if(matchMedia('(prefers-reduced-motion: reduce)').matches){this.phase='choose';this.choose(this.$(`[data-lane="${lane}"]`),true);return;}this.lane=lane;this.aimY=this.laneY(lane);this.root.dataset.lane=lane;this.root.querySelectorAll('[data-lane]').forEach(b=>b.classList.toggle('td-aimed',Number(b.dataset.lane)===lane));if(this.phase==='choose')this.launch();else if(this.phase==='paused'){this.planeY=this.aimY;this.position();this.launch();}}
   toggleFlight(){if(this.phase==='pilot'){this.pause();return;}if(['choose','paused'].includes(this.phase))this.launch();}
   pause(){if(this.phase!=='pilot')return;this.stopFlight();this.phase='paused';this.root.dataset.phase='paused';this.flightSkin('resume','Keep flying');this.status('Choose a lane, then keep flying.');}
   launch(){if(!this.cueReady()||!['choose','paused'].includes(this.phase))return;const first=this.phase==='choose';this.phase='pilot';this.root.dataset.phase='pilot';this.flightSkin('pause','Pause');this.status('Up or down? Fly to its word.');if(first){this.sound('takeoff');this.effect('wind',this.$('.td-aircraft'),{size:140,dx:-100,dy:0});}this.lastFrame=performance.now();this.raf=requestAnimationFrame(now=>this.tick(now));}
   stopFlight(){cancelAnimationFrame(this.raf);this.raf=null;}
   tick(now){if(this.dead||this.phase!=='pilot')return;const dt=Math.min((now-this.lastFrame)/1000,.05);this.lastFrame=now;if(document.hidden){this.pause();return;}
    this.planeY+=(this.aimY-this.planeY)*Math.min(1,dt*10);this.travel+=dt/(this.config.flightSeconds||this.flightSeconds||6);this.position();
-   if(this.travel>=1){this.stopFlight();const lane=Math.abs(this.planeY-235)<44?0:Math.abs(this.planeY-355)<44?1:-1;if(lane<0||(this.lane>=0&&lane!==this.lane)){this.travel=0;this.status('Go around! Pick a lane.');this.lastFrame=now;this.raf=requestAnimationFrame(n=>this.tick(n));return;}
+   if(this.travel>=1){this.stopFlight();const lane=Math.abs(this.planeY-this.laneY(0))<44?0:Math.abs(this.planeY-this.laneY(1))<44?1:-1;if(lane<0||(this.lane>=0&&lane!==this.lane)){this.travel=0;this.status('Go around! Pick a lane.');this.lastFrame=now;this.raf=requestAnimationFrame(n=>this.tick(n));return;}
     this.phase='choose';this.choose(this.$(`[data-lane="${lane}"]`),true);return;
    }this.raf=requestAnimationFrame(n=>this.tick(n));
   }
   position(){const world=this.$('.td-world');if(!world)return;const w=world.clientWidth,plane=this.$('.td-aircraft');plane.style.left='7%';plane.style.top=(this.planeY-plane.offsetHeight/2)+'px';plane.style.transform=`rotate(${Math.max(-9,Math.min(9,(this.aimY-this.planeY)/8))}deg)`;
-   this.root.querySelectorAll('[data-lane]').forEach((b,i)=>{b.style.left=(w*.74+this.travel*(w*.07+plane.offsetWidth/2-w*.74)-b.offsetWidth/2)+'px';b.style.top=((i?355:235)-b.offsetHeight/2)+'px';});
+   this.root.querySelectorAll('[data-lane]').forEach((b,i)=>{b.style.left=(w*.74+this.travel*(w*.07+plane.offsetWidth/2-w*.74)-b.offsetWidth/2)+'px';b.style.top=(this.laneY(i)-b.offsetHeight/2)+'px';});
+   if(this.config.laneFractions)this.root.querySelectorAll('.td-lane').forEach((guide,i)=>{
+    guide.style.top=(this.laneY(i)-guide.offsetHeight/2)+'px';
+   });
   }
   sound(name){if(LearningApp.isMuted()||!els.soundFx.checked||document.hidden)return;this.sounds??=new Set();const a=new Audio(this.config.sounds?.[name]||base+name+'.wav');a.learningSfx=true;a.volume=.28;this.sounds.add(a);a.onended=a.onerror=()=>this.sounds.delete(a);a.play().catch(()=>this.sounds.delete(a));}
   stopSounds(){this.sounds?.forEach(a=>{a.pause();a.dispatchEvent(new Event('ended'));});this.sounds?.clear();}
@@ -111,5 +124,12 @@
  document.addEventListener('toybuddy:enter',()=>{scene?.stopVoice(LearningApp.isMuted());scene?.stopSounds();});
  document.addEventListener('visibilitychange',()=>{if(document.hidden){scene?.pause();scene?.stopVoice();scene?.stopSounds();}});
  matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',()=>scene?.pause());
- addEventListener('resize',()=>{if(scene&&['choose','pilot','paused'].includes(scene.phase))scene.position();});
+ addEventListener('resize',()=>{
+  if(!scene||!['choose','pilot','paused'].includes(scene.phase))return;
+  if(scene.config.laneFractions){
+   scene.aimY=scene.lane<0?(scene.laneY(0)+scene.laneY(1))/2:scene.laneY(scene.lane);
+   if(scene.phase!=='pilot')scene.planeY=scene.aimY;
+  }
+  scene.position();
+ });
 })();
