@@ -1,5 +1,7 @@
 # Picture Clue Challenge
 
+Listen & Find marker refinement: align the nine markers to character torsos in the original panels. A 34 px visible badge sits inside a 48 px hit area.
+
 Lesson 6 web integration: Picture Clue Challenge now plays the matching introductions from the teacher-supplied MP3. It shares the original scans, native audio controls and playback lifecycle with three separate activities: Listen & Find, Story Order & Tell and Roleplay Stage. The existing DOM/CSS stack, activity catalogue and app progress events are used. Learners can tap picture options, place story cards by drag or tap, and take the introduction role with a line/model on request. Motion uses the existing picture reveal and short highlight states. This integration presents the four original story panels and uses no character GIF. Refer to the audio source and cut manifest for alignment evidence.
 
 Artwork revision: extracted the embedded 1536 × 1936 scan directly from the source PDF. Cropped each panel, resampled with Lanczos, applied mild luminance sharpening, and exported lossless WebP. The character artwork uses the source scan pixels with no generative redraw.
