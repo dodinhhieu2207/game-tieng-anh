@@ -1,0 +1,55 @@
+.story-clues{--sc-ink:#214b48;--sc-cream:#fff9e9;--sc-mint:#92c1aa;max-width:1200px;margin:auto;font-family:var(--app-font,sans-serif);color:var(--sc-ink)}
+.story-clues [hidden]{display:none!important}
+.story-clues *{box-sizing:border-box}
+.sc-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 8px}
+.sc-header p{margin:0 0 3px;font-size:14px;font-weight:800;color:#577b71}
+.sc-header h2{margin:0;font-size:clamp(30px,3vw,42px);line-height:1.15}
+.sc-header>b{padding:10px 17px;border:2px solid #e9af46;border-radius:25px;background:#ffe5a0;font-size:20px;white-space:nowrap}
+.sc-chapters{display:flex;justify-content:center;gap:10px;margin:10px auto 14px}
+.sc-chapters>span{display:grid;place-items:center;width:36px;height:36px;border:2px solid #d8e6d9;border-radius:50%;background:#f4f8f0;font-weight:800}
+.sc-chapters .is-current{border-color:#397c70;background:#dcf0e4}
+.sc-chapters .is-collected{border-color:#dab053;background:#fff2bb}
+.sc-chapters img{width:35px;height:35px;object-fit:contain}
+.sc-board{background:#fff4d9 url('../assets/unit4/lesson6/story-clues/listening-corner.webp') center/100% 100%;border-radius:26px;padding:clamp(26px,5vw,65px) clamp(18px,5.2vw,64px) clamp(28px,4vw,50px);overflow:hidden;isolation:isolate}
+.sc-prompt{text-align:center}
+.sc-level{display:block;color:#5b796b;font-size:clamp(16px,1.8vw,19px);font-weight:800}
+.sc-prompt h3{font-size:clamp(25px,3vw,36px);line-height:1.2;margin:5px 0 8px}
+.story-clues .sc-control{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:60px;min-width:145px;border:0;border-radius:22px;padding:7px 22px;background:transparent url('../assets/unit4/lesson6/story-clues/button-plaque.webp') center/100% 100%;font:800 20px var(--app-font,sans-serif);color:var(--sc-ink);cursor:pointer;vertical-align:middle}
+.sc-control>img{width:43px;height:43px;object-fit:contain;flex:none}
+.story-clues button:disabled{cursor:default}
+.story-clues button{-webkit-tap-highlight-color:transparent}
+.sc-control:disabled{opacity:.6}
+.story-clues button:focus-visible{outline:4px solid #0d6965;outline-offset:4px}
+.sc-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:clamp(10px,2vw,22px);margin:20px auto 0}
+.sc-options[data-count="2"]{grid-template-columns:repeat(2,minmax(0,1fr));max-width:860px}
+.story-clues .sc-card{position:relative;min-width:0;border:3px solid #e4d1a0;border-radius:15px;padding:7px 7px 9px;background:var(--sc-cream);box-shadow:0 5px 0 #bfa67860;cursor:pointer;font-family:inherit;color:var(--sc-ink)}
+.sc-photo{display:block;aspect-ratio:1.02;overflow:hidden;border-radius:9px;transform-origin:center}
+.sc-photo>img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.sc-picture-label{display:block;padding-top:8px;font-size:18px;font-weight:800}
+.sc-card:not(:disabled):hover{border-color:#398573;box-shadow:0 6px 0 #bfa67880}
+.sc-card:disabled:not(.is-correct):not(.is-tried){cursor:default}
+.sc-card.is-tried{opacity:.55;box-shadow:none}
+.sc-card.is-tried .sc-picture-label::after{content:' · Try another';font-size:15px}
+.sc-card.is-other{opacity:.35}
+.sc-card.is-correct{border-color:#38846b;box-shadow:0 5px 0 #2b76573d}
+.sc-card.is-hinted{outline:4px solid #d9a531;outline-offset:3px}
+.sc-halo{position:absolute;inset:-5%;width:110%;height:110%;object-fit:fill;pointer-events:none;z-index:1}
+.sc-correct{position:absolute;top:-15px;right:-15px;width:clamp(42px,6vw,65px);height:clamp(42px,6vw,65px);object-fit:contain;pointer-events:none;z-index:2}
+.sc-reveal{text-align:center;margin-top:18px}
+.sc-sentence{font-size:clamp(24px,2.8vw,34px);line-height:1.6;margin:0;font-weight:800}
+.sc-sentence span{padding:2px 3px;border-radius:6px}
+.sc-sentence .is-speaking{background:#ffdf81;box-shadow:0 0 14px #ffd765;color:#173e37}
+.sc-status{text-align:center;font-size:18px;font-weight:700;min-height:27px;margin:16px 0 8px;line-height:1.45}
+.sc-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.sc-finish{background:#fff5dc url('../assets/unit4/lesson6/story-clues/listening-corner.webp') center/100% 100%;padding:clamp(32px,6vw,70px) clamp(20px,6vw,70px);border-radius:26px;text-align:center}
+.sc-finish>img{width:100px;height:100px;object-fit:contain}
+.sc-finish h2{font-size:clamp(30px,3vw,42px);margin:5px 0 10px}
+.sc-finish p{font-size:20px}
+.sc-album{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:22px 0}
+.sc-album figure{margin:0;padding:7px;background:#fff9e9;border:2px solid #e1c994;border-radius:12px}
+.sc-album img{width:100%;aspect-ratio:1.02;object-fit:contain;display:block}
+.sc-album figcaption{font-size:20px;font-weight:800;margin:8px 0}
+.sc-finish .sc-result-note{font-size:17px;color:#516f64}
+@media(max-width:600px){.sc-board{padding:27px 18px 30px}.sc-options{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 10px;margin-top:17px}.sc-options[data-count="3"] .sc-card:last-child{grid-column:1/-1;width:calc(50% - 5px);justify-self:center}.sc-picture-label{font-size:16px}.sc-level{font-size:16px}.sc-photo{aspect-ratio:.94}.sc-correct{top:-10px;right:-8px}.sc-sentence{font-size:24px}.sc-status{font-size:18px}.sc-album{grid-template-columns:1fr;max-width:300px;margin:18px auto}.sc-finish{padding:35px 25px}.sc-finish .sc-control{margin:4px 0}}
+@media(prefers-reduced-motion:reduce){.story-clues *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+@media(max-width:430px){.sc-board{background-size:cover;padding-top:70px;padding-bottom:65px}.sc-options,.sc-options[data-count="2"]{grid-template-columns:1fr;max-width:320px}.sc-options[data-count="3"] .sc-card:last-child{grid-column:auto;width:100%}.sc-photo{aspect-ratio:1.14}.sc-picture-label{font-size:18px}}
