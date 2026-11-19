@@ -1,6 +1,6 @@
 # Story Clues — Unit 4 Lesson 6
 
-Updated: 2026-11-19. Status: published and verified on GitHub Pages; game release 1cf16ec.
+Updated: 2026-11-19. Status: published and verified on GitHub Pages; latest game release bbb5f8b.
 
 ## Scope and learning goal
 
@@ -86,4 +86,6 @@ Classroom learning outcomes remain unmeasured.
 
 ## Follow-up: listening-to-speaking handoff
 
-2026-11-19 continuation: add a clear next step on the completed Story Clues collection: "Now introduce the family" / "Your turn to speak". It navigates through LearningApp to the existing roleplay-stage activity (Your Turn). Microphone capture remains user-initiated via Speak there. Listening stars remain under 4/6/story-clues; navigation does not award speaking completion. The button reuses the approved assets/unit4/lesson6/your-turn/microphone.webp and current Story Clues button plaque; this is a small flow improvement, not new character artwork or a new renderer. Play again and Lesson 6 remain available. Browser test extended for finish layout at five widths, actual route handoff at 390px, ready/non-recording speech state and separate award ownership. tests/story-clues.cjs passed locally, including all existing six-round/media checks. Completion screenshots at 320/390/1366 were reviewed; phone background now preserves its proportions. Local evidence: %TEMP%/story-clues-handoff-local/. Public verification is pending release of this follow-up; scripts/styles use cache version 20261119-clues2.
+2026-11-19 continuation: add a clear next step on the completed Story Clues collection: "Now introduce the family" / "Your turn to speak". It navigates through LearningApp to the existing roleplay-stage activity (Your Turn). Microphone capture remains user-initiated via Speak there. Listening stars remain under 4/6/story-clues; navigation does not award speaking completion. The button reuses the approved assets/unit4/lesson6/your-turn/microphone.webp and current Story Clues button plaque; this is a small flow improvement, not new character artwork or a new renderer. Play again and Lesson 6 remain available. Browser test extended for finish layout at five widths, actual route handoff at 390px, ready/non-recording speech state and separate award ownership. tests/story-clues.cjs passed locally and on GitHub Pages, including all existing six-round/media checks. Completion screenshots at 320/390/1366 were reviewed; phone background now preserves its proportions. Evidence: %TEMP%/story-clues-handoff-local/ and %TEMP%/story-clues-handoff-public/. Public index/controller/style/microphone artwork matched commit bbb5f8bb72d9f2c8383c7347d94b20b8f24531dc byte-for-byte. Scripts/styles use cache version 20261119-clues2. Pages run 44476810665 completed successfully. The documentation-only verification commit does not alter runtime files.
+
+Latest game: https://dodinhhieu2207.github.io/game-tieng-anh/index.html?release=bbb5f8b-listen-speak#/unit/4/lesson/6?mode=practice&activity=story-clues
