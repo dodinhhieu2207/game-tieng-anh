@@ -1,6 +1,6 @@
 # Story Clues — Unit 4 Lesson 6
 
-Updated: 2026-11-19. Status: local implementation verified; scoped release preparation.
+Updated: 2026-11-19. Status: published and verified on GitHub Pages; game release 1cf16ec.
 
 ## Scope and learning goal
 
@@ -64,13 +64,19 @@ Reduced motion: static highlight, no camera movement. Keyboard: focusable real b
 - [x] Browser visual review at 320, 390, 768, 1024 and 1366 px; no horizontal overflow. Phone <=430px now stacks readable large panels and preserves backdrop proportions. Touch input also exercised in Chrome mobile emulation.
 - [x] Motion recording and design critique: tests/story-clues-motion.cjs passed at native playback speed. Frame samples show scale changing from 1.0068 to 1.035; sentence word glow, authentic reply and subsequent CC0 SFX verified. Reduced-motion branch and cancelled owner checked. Seeded restart test produces varied panel permutations.
 - [x] Existing tests/unit4-story-release.cjs passed for the four preserved activities, source audio and leave cleanup.
-- [ ] Publication: proceeding after the user's continuation request on 2026-11-19. Scope is this new game and its catalogue entry. Verify the clean staged snapshot before push, then the served GitHub Pages source and actual public game. Do not include unrelated Number Repair or other game work.
+- [x] Publication after the user's continuation request on 2026-11-19: scoped game commit 1cf16ec7465c7697db30c4a8bfabc3ecad6e37d3 pushed to origin/main. GitHub Pages run 44472509338 completed successfully. Public runtime tests and source verification passed; unrelated Number Repair and other game work remain uncommitted.
 
 ## Release boundary
 
 Baseline: main at 21b9a3c (published Your Turn). Expected changes: new story-clues controller/style, its artwork/provenance, two focused browser tests, game plan, catalogue entry and two script/style includes plus catalogue cache version. Existing supplied story pictures/audio, app routing and speech backend are reused. No database or backend change. Rollback, if a reproducible critical gameplay failure appears, must revert only this game's release commit; preserve unrelated local work and learner progress. Browser media/API failures require diagnosis, not a silent replacement voice.
 
 Pre-release checkpoint: exported the staged Git index to an isolated local snapshot, retaining the published Number Repair versions in that snapshot. tests/story-clues.cjs passed against port 8769 (six real-media rounds, five widths, input/error/lifecycle/progress checks); tests/unit4-story-release.cjs also passed there for preserved activities. The new tests accept an explicit base URL and evidence output folder so the same checks can run against GitHub Pages. Public build and public runtime remain pending at commit time.
+
+Post-release checkpoint: compared 24 served files byte-for-byte with game commit 1cf16ec, including index, catalogue, controller/style, new artwork and nine original audio clips. Both tests/story-clues.cjs and tests/story-clues-motion.cjs passed against the public URL below. The first verifies all six native-audio rounds, missing-audio retry, bounded hints, five widths, keyboard, mute/hidden/leave, persisted progress, one completion event and replay. The second verifies source audio at native speed, changing focus transforms, measured word glow, reply-before-SFX ordering, reduced motion and seeded replay permutations. Evidence folders: `%TEMP%/story-clues-public-1cf16ec/` and `%TEMP%/story-clues-public-motion-1cf16ec/`. No real-child learning or pronunciation effectiveness measurement is claimed. The follow-up verification documentation commit does not change runtime files.
+
+Public game: https://dodinhhieu2207.github.io/game-tieng-anh/index.html?release=1cf16ec-storyclues#/unit/4/lesson/6?mode=practice&activity=story-clues
+
+Build evidence: https://github.com/dodinhhieu2207/game-tieng-anh/actions/runs/44472509338
 
 ## Local review evidence
 
