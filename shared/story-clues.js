@@ -227,9 +227,12 @@
         <p>You matched all six listening clues.</p>
         <div class="sc-album">${people.map(person=>`<figure><img src="${base}clues/scene-${person.scene}.webp?v=source-sharp" alt="${person.name} story"><figcaption>${person.name}</figcaption></figure>`).join('')}</div>
         <p class="sc-result-note">${independent} / 6 matched on the first listen and first choice.</p>
+        <div class="sc-next-step"><p>Now introduce the family.</p>
+          <button class="sc-control" data-clue-speak><img src="${base}your-turn/microphone.webp" alt=""><span>Your turn to speak</span></button></div>
         <button class="sc-control" data-clue-again>${icon('listen-again')}<span>Play again</span></button>
         <button class="sc-control" data-clue-home>${icon('next-arrow')}<span>Lesson 6</span></button></div>`;
       this.$('h2').focus();
+      this.$('[data-clue-speak]').onclick=()=>LearningApp.go('#/unit/4/lesson/6?mode=practice&activity=roleplay-stage');
       this.$('[data-clue-again]').onclick=start;
       this.$('[data-clue-home]').onclick=()=>LearningApp.go('#/unit/4/lesson/6?mode=practice');
       document.dispatchEvent(new CustomEvent('learning:activity-completed',{detail:{game:key,stars:3}}));

@@ -95,7 +95,23 @@ async function run(){
     }),{completed:true,stars:3});
     assert.match(await root.locator('.sc-result-note').innerText(),/^4 \/ 6/);
     await page.screenshot({path:path.join(output,'complete-1366.png'),fullPage:true});
-    await root.locator('[data-clue-again]').click();
+    assert.ok(await root.locator('[data-clue-again]').isVisible());
+    for(const width of [320,390,768,1024,1366]){
+      await page.setViewportSize({width,height:1000});
+      assert.equal(await root.evaluate(el=>el.scrollWidth>el.clientWidth),false);
+      if(width===320||width===390)await page.screenshot({path:path.join(output,'complete-'+width+'.png'),fullPage:true});
+    }
+    await page.setViewportSize({width:390,height:1000});
+    await root.locator('[data-clue-speak]').click();
+    await page.locator('.story-speaking').waitFor();
+    assert.match(page.url(),/activity=roleplay-stage/);
+    assert.equal(await page.locator('.story-speaking').getAttribute('data-phase'),'ready');
+    assert.ok(await page.locator('[data-say=speak]').isVisible());
+    assert.ok(await page.locator('[data-say=done]').isHidden(),'Microphone does not start on navigation');
+    assert.deepEqual(await page.evaluate(()=>clueQA.awards),['u4storyclues'],'Listening completion does not award speaking credit');
+    await page.getByRole('button',{name:'Back to lesson',exact:true}).click();
+    await page.getByText('Story Clues',{exact:true}).first().click();
+    await page.setViewportSize({width:1366,height:1000});
     assert.equal(await root.locator('.sc-card:enabled').count(),0);
 
     // Interruptions never authorize an unheard answer. Actual Audio object is stopped.
@@ -132,7 +148,7 @@ async function run(){
     await page.keyboard.press('Enter');
     await phase('resolved');
     assert.deepEqual(errors,[]);
-    console.log('PASS Story Clues: catalogue, six native-audio rounds, bounded hints, missing-audio retry, keyboard, five widths, mute/hidden/leave, single completion, replay. Screenshots: '+output);
+    console.log('PASS Story Clues: catalogue, six native-audio rounds, bounded hints, missing-audio retry, keyboard, five widths, mute/hidden/leave, single completion, re-entry and Your Turn handoff without automatic microphone capture or speaking credit. Screenshots: '+output);
     await context.close();
   }finally{await browser.close();}
 }

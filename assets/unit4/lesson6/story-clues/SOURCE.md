@@ -19,3 +19,5 @@ Production extraction starts with exact 512 x 512 sheet cells, then crops the pa
 Assets are connected in shared/story-clues.js and shared/story-clues.css using the approved HTML + GSAP approach. Browser visual review found and corrected oversized transparent gutters and small phone panels. Native media and responsive interaction checks are recorded in the game plan.
 
 `activity-cover.webp` is an original local browser capture of this game's display board, composing the generated backdrop/controls with the preserved textbook panels. It contains no learner information. `audio-manifest.json` records the exact reused clips, SHA-256 hashes, measured model-word onsets and CC0 Kenney confirmation SFX. No new synthetic voice was generated.
+
+The completion-screen handoff to Your Turn reuses `../your-turn/microphone.webp`, from the previously approved Your Turn UI artwork (provenance in that folder's SOURCE.md), inside the Story Clues plaque button. It introduces no replacement character artwork or new voice.
