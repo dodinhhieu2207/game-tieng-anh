@@ -19,3 +19,4 @@ The assets are excerpts from the supplied recording. Source dialogue and scene t
 | meet-grandpa.mp3 | 32.10–36.55 | Roleplay reply |
 | meet-mum.mp3 | 41.15–44.85 | Roleplay reply |
 | hello-billy.mp3 | 57.68–59.02 | Roleplay reply |
+| scene-3-4.mp3 | 46.22–59.02 | Disguise question and brother reveal, picture changes at 8.98 seconds |

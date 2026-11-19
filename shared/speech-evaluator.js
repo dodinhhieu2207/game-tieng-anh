@@ -45,7 +45,7 @@
    return {transcript,normalized:value,result:known?(value===displayedToy?'CORRECT':'WRONG_LOGIC'):'UNCLEAR',answerType:known?'WORD':null};
   }
   if(questionType==='family-introduction'){
-   const value=normalized.replace(/\bmom\b/g,'mum');
+   const value=normalized.replace(/\bmom\b/g,'mum').replace(/^this is my brother billy$/,'this is my brother');
    const match=value.match(/^this is my (mum|dad|brother|sister|grandpa|grandma)$/);
    const partial=family.includes(value)||/^this(?: is)?(?: my)?$/.test(value)||new RegExp('^(?:this is |this is my )('+family.join('|')+')$').test(value);
    return {transcript,normalized:value,result:match?(match[1]===displayedToy?'CORRECT':'WRONG_LOGIC'):partial?'INCOMPLETE':'UNCLEAR',answerType:match?'NAME':null};

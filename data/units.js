@@ -54,7 +54,7 @@
       activity('listen-and-find','u4storyfind',{title:'Listen & Find',image:'assets/unit4/lesson6/clues/scene-1.webp',icon:'listen'}),
       activity('picture-clue','u4pictureclue',{title:'Picture Clue Challenge',image:'assets/unit4/lesson6/clues/scene-3.webp',icon:'speaking'}),
       activity('story-order','u4storyorder',{title:'Story Order & Tell',image:'assets/unit4/lesson6/clues/scene-2.webp',icon:'matching'}),
-      activity('roleplay-stage','u4storyrole',{title:'Roleplay Stage',image:'assets/unit4/lesson6/clues/scene-4.webp',icon:'speaking'})
+      activity('roleplay-stage','u4storyrole',{title:'Your Turn',image:'assets/unit4/lesson6/clues/scene-4.webp',icon:'speaking'})
     ],cardImage:'assets/unit4/navigation/lesson6-my-brother.webp',selectorLabel:'Story'}
    }).map(lesson=>({...lesson,cardImage:`assets/unit4/navigation-v2/lesson${lesson.id}-card.webp`,background:`assets/unit4/navigation-v2/lesson${lesson.id}-background.webp`,cardAspect:'2 / 1',selectorLabel:lesson.selectorLabel||['Family words','Grammar','Sounds and letters','Numbers','Letters and Sounds','Story'][lesson.id-1]}))}
   ],

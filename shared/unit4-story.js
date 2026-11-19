@@ -15,7 +15,6 @@
     {number: 3},
     {number: 4, person: 'brother', correct: 1}
   ];
-  const roles = [scenes[0],scenes[1],scenes[3]];
   let activeAudio;
 
   function stopAudio() {
@@ -146,49 +145,6 @@
     restartCurrent = listenAndFind;
   }
 
-  function roleplay() {
-    const title = 'Roleplay Stage';
-    let index = 0;
-    function render() {
-      const scene = roles[index];
-      const root = mount(title,`${index+1} / 3`,storyFrame(scene,`
-        <h3 tabindex="-1">Your turn to speak</h3>
-        <p>Play the girl who introduces her family.</p>
-        <p class="u4-story-line" data-story-line hidden>${lines[scene.person].text}</p>
-        ${scene.number===4 ? '<button data-story-question>Hear the question</button>' : ''}
-        <button data-story-hint>Show my line</button>
-        <button data-story-model>Hear my line</button>
-        <button data-story-continue>I said my line</button>
-        <button data-story-next hidden>${index===2 ? 'Finish' : 'Next scene'}</button>`));
-      const status = root.querySelector('[role=status]');
-      const line = root.querySelector('[data-story-line]');
-      const hint = root.querySelector('[data-story-hint]');
-      const example = root.querySelector('[data-story-model]');
-      const next = root.querySelector('[data-story-next]');
-      const question = root.querySelector('[data-story-question]');
-      const continuation = root.querySelector('[data-story-continue]');
-      hint.onclick = () => {line.hidden=!line.hidden;hint.textContent=line.hidden?'Show my line':'Hide my line';};
-      example.onclick = () => {
-        line.hidden=false;
-        hint.textContent='Hide my line';
-        model(scene.person,example,status,line);
-      };
-      if (question) question.onclick = () => play('question',question,status);
-      continuation.onclick = () => {
-        next.hidden=false;
-        continuation.textContent = 'Hear the reply again';
-        const reply = scene.number===1?'meet-grandpa':scene.number===2?'meet-mum':'hello-billy';
-        play(reply,continuation,status);
-      };
-      next.onclick = () => {
-        if (++index === roles.length) finish(title,'u4storyrole',roleplay);
-        else {render();document.querySelector('.u4-story h3').focus();}
-      };
-    }
-    render();
-    restartCurrent = roleplay;
-  }
-
   function orderAndTell() {
     const title = 'Story Order & Tell';
     const order = shuffle([1,2,3,4]);
@@ -279,8 +235,7 @@
 
   for (const [key,title,enter] of [
     ['u4storyfind','Listen & Find',listenAndFind],
-    ['u4storyorder','Story Order & Tell',orderAndTell],
-    ['u4storyrole','Roleplay Stage',roleplay]
+    ['u4storyorder','Story Order & Tell',orderAndTell]
   ]) {
     games[key]={enter};
     GAME_META[key]=['UNIT 4 · LESSON 6',title,'My brother!'];

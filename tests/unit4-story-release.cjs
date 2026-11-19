@@ -85,25 +85,15 @@ async function run() {
     await page.locator('[data-order-finish]').click();
     assert.ok(await page.getByText('Well done!',{exact:true}).isVisible());
 
-    await start('roleplay-stage','Roleplay Stage');
-    await widths('.u4-story');
-    assert.ok(await page.locator('[data-story-line]').isHidden());
-    await page.locator('[data-story-hint]').click();
-    assert.match(await page.locator('[data-story-line]').innerText(),/grandpa/);
-    for (const [person,reply] of [['grandpa','meet-grandpa'],['mum','meet-mum'],['brother','hello-billy']]) {
-      if (person==='brother') await hear('question.mp3',page.locator('[data-story-question]'));
-      await hear(person+'.mp3',page.locator('[data-story-model]'));
-      await hear(reply+'.mp3',page.locator('[data-story-continue]'));
-      await page.locator('[data-story-next]').click();
-    }
-    assert.ok(await page.getByText('Well done!',{exact:true}).isVisible());
-    assert.deepEqual(await page.evaluate(()=>storyQA.awards),['u4storyfind','u4storyorder','u4storyrole']);
-    await page.locator('[data-story-again]').click();
-    await hear('grandpa.mp3',page.locator('[data-story-model]'),false);
+    await start('roleplay-stage','Your Turn');
+    await widths('.story-speaking');
+    assert.match(await page.locator('.sspeak-line').innerText(),/grandpa/);
+    assert.deepEqual(await page.evaluate(()=>storyQA.awards),['u4storyfind','u4storyorder']);
+    await hear('grandpa.mp3',page.locator('[data-say=model]'),false);
     await page.getByRole('button',{name:'Back to lesson'}).click();
     assert.ok(await page.evaluate(()=>storyQA.audio.paused));
     assert.deepEqual(errors,[]);
-    console.log('PASS: four activities, five widths, native audio, roleplay, story order, awards and audio cleanup');
+    console.log('PASS: four activity entries, five widths, native audio, story order, awards and speaking entry audio cleanup');
   } finally {
     await browser.close();
   }
