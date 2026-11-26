@@ -8,7 +8,7 @@
  const PROPS={hungry:'sandwich',thirsty:'water',hot:'fan',cold:'blanket'};
  const DEFINITIONS={
   house:{key:'u5feelingshouse',route:'feelings-house',title:'The Feelings House',subtitle:'Tap, listen and discover.',world:'house'},
-  camera:{key:'u5feelingscamera',route:'feelings-camera',title:'Feelings Camera',subtitle:'Listen. Find the person. Take a photo.',world:'house'},
+  camera:{key:'u5feelingscamera',route:'feelings-camera',title:'Feelings Camera',subtitle:'Listen. Find the person. Take a photo.',world:'camera'},
   helping:{key:'u5helpinghands',route:'helping-hands',title:'Helping Hands',subtitle:'Listen, then help the child.',world:'helping'},
   workshop:{key:'u5feelingsworkshop',route:'feelings-workshop',title:'Feelings Photo Workshop',subtitle:'Give each photo its word.',world:'workshop'},
   reporter:{key:'u5littlereporter',route:'little-reporter',title:'Little Reporter',subtitle:'Look at the picture. Say the whole sentence.',world:'reporter'}
@@ -89,7 +89,7 @@
   setPhase(phase,text){this.phase=phase;this.root.dataset.phase=phase;if(text)this.status(text);this.updateControls();}
   mount(){
    setStage(`<section class="u5-game" data-mode="${this.mode}" data-phase="loading"><header class="u5-top"><div><h2>${this.def.title}</h2><p>${this.def.subtitle}</p></div><span class="u5-count" aria-label="Progress">0 / ${this.order.length}</span></header>
-    <div class="u5-stage" style="background-image:url('${BASE}backgrounds/${this.def.world}.webp')"><div class="u5-phaser" aria-hidden="true"></div><div class="u5-world"></div><div class="u5-ready-overlay"><p>Getting the room ready…</p></div></div>
+    <div class="u5-stage" style="background-image:url('${BASE}backgrounds/v2/${this.def.world}.webp')"><div class="u5-phaser" aria-hidden="true"></div><div class="u5-world"></div><div class="u5-ready-overlay"><p>Getting the room ready…</p></div></div>
     <div class="u5-controls"></div><p class="u5-status" role="status" aria-live="polite"></p><div class="u5-extras"></div><div class="u5-album" aria-label="Collected photos"></div></section>`);
    this.root=document.querySelector('.u5-game');this.stage=this.$('.u5-stage');
    this.root.onclick=e=>this.click(e);this.root.onpointerdown=e=>this.pointerDown(e);
@@ -99,8 +99,9 @@
   async boot(){
    const e=this.epoch,controller=this.bootAbort=new AbortController();const bootTimeout=setTimeout(()=>controller.abort(),18000);
    try{
+    const backdrop=async()=>{const response=await fetch(BASE+`backgrounds/v2/${this.def.world}.webp`,{signal:controller.signal});if(!response.ok)throw Error('background-asset');const url=URL.createObjectURL(await response.blob());try{const im=new Image();im.src=url;await im.decode();}finally{URL.revokeObjectURL(url);}};
     const motions=[...WORDS.map(w=>({word:w,key:w,file:w+'-once.gif'})),...(this.mode==='helping'?Object.keys(PROPS).map(w=>({word:w,key:w+'-help',file:'reaction.gif'})):[])];
-    const [P]=await Promise.all([loadPhaser(),document.fonts.load('700 24px "App Outfit"'),...motions.map(async item=>{const response=await fetch(BASE+`actors/${item.word}/${item.file}`,{signal:controller.signal});if(!response.ok)throw Error('motion-asset');const blob=await response.blob();const url=URL.createObjectURL(blob);try{await new Promise((resolve,reject)=>{const im=new Image();im.onload=resolve;im.onerror=reject;im.src=url;});this.motionBlobs[item.key]=blob;}finally{URL.revokeObjectURL(url);}})]);
+    const [P]=await Promise.all([loadPhaser(),backdrop(),document.fonts.load('700 24px "App Outfit"'),...motions.map(async item=>{const response=await fetch(BASE+`actors/${item.word}/${item.file}`,{signal:controller.signal});if(!response.ok)throw Error('motion-asset');const blob=await response.blob();const url=URL.createObjectURL(blob);try{await new Promise((resolve,reject)=>{const im=new Image();im.onload=resolve;im.onerror=reject;im.src=url;});this.motionBlobs[item.key]=blob;}finally{URL.revokeObjectURL(url);}})]);
     if(!this.alive(e))return;this.scene=new FeelingsScene(this,P);await Promise.race([this.scene.ready,new Promise((_,reject)=>controller.signal.addEventListener('abort',()=>reject(Error('scene-timeout')),{once:true}))]);if(!this.alive(e))return;
     this.loaded=true;this.$('.u5-ready-overlay').hidden=true;this.renderRound();
    }catch(error){if(!this.alive(e))return;this.scene?.dispose();this.scene=null;this.setPhase('error','Some game pictures could not load. Please try again.');this.$('.u5-ready-overlay').innerHTML=`<p>The room could not load.</p>${button('retry-load','Try again','replay')}`;}finally{clearTimeout(bootTimeout);controller.abort();if(this.bootAbort===controller)this.bootAbort=null;}

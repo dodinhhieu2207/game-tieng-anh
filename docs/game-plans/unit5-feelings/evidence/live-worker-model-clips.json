@@ -1,0 +1,129 @@
+{
+  "checkedAt": "2026-11-26T08:41:29.388Z",
+  "endpoint": "https://toy-buddy-speech.hiei1121.workers.dev/api/speaking-check",
+  "source": "Generated approved Higgs model recordings; no student audio",
+  "scope": "Sample-level live recognition and strict feedback; student accuracy and pronunciation NOT_MEASURED",
+  "passed": true,
+  "results": [
+    {
+      "clip": "sentences/he-happy.mp3",
+      "target": "he-happy",
+      "expected": "CORRECT",
+      "sha256": "84c8283c5965c521dc443459a4714d0dd465602d4ee718659a0fc42f0481b206",
+      "status": 200,
+      "elapsedMs": 1273,
+      "response": {
+        "transcript": "He's happy.",
+        "normalized": "he's happy",
+        "result": "CORRECT",
+        "answerType": "NAME"
+      },
+      "passed": true
+    },
+    {
+      "clip": "sentences/he-sad.mp3",
+      "target": "he-sad",
+      "expected": "CORRECT",
+      "sha256": "f371730cc539ee6c14ca6e482ce66e5771a7d156f57909f058bd719d3e4e1cd5",
+      "status": 200,
+      "elapsedMs": 1693,
+      "response": {
+        "transcript": "He's sad.",
+        "normalized": "he's sad",
+        "result": "CORRECT",
+        "answerType": "NAME"
+      },
+      "passed": true
+    },
+    {
+      "clip": "sentences/he-hungry.mp3",
+      "target": "he-hungry",
+      "expected": "CORRECT",
+      "sha256": "ee65564765d7781f7a5030d63958549642010cb050c0f099847af71c5fcc8633",
+      "status": 200,
+      "elapsedMs": 1766,
+      "response": {
+        "transcript": "He's hungry.",
+        "normalized": "he's hungry",
+        "result": "CORRECT",
+        "answerType": "NAME"
+      },
+      "passed": true
+    },
+    {
+      "clip": "sentences/he-thirsty.mp3",
+      "target": "he-thirsty",
+      "expected": "CORRECT",
+      "sha256": "3b96bab480fd6b50f166e2ba9df9a73876cf156caab84f819c87dd50e812471d",
+      "status": 200,
+      "elapsedMs": 3548,
+      "response": {
+        "transcript": "He's thirsty.",
+        "normalized": "he's thirsty",
+        "result": "CORRECT",
+        "answerType": "NAME"
+      },
+      "passed": true
+    },
+    {
+      "clip": "sentences/he-hot.mp3",
+      "target": "he-hot",
+      "expected": "CORRECT",
+      "sha256": "c53265f5b2e1adae5e438c36902ac267fa540c02adcd0167cf48fabeaddfa4fa",
+      "status": 200,
+      "elapsedMs": 1271,
+      "response": {
+        "transcript": "He's hot.",
+        "normalized": "he's hot",
+        "result": "CORRECT",
+        "answerType": "NAME"
+      },
+      "passed": true
+    },
+    {
+      "clip": "sentences/he-cold.mp3",
+      "target": "he-cold",
+      "expected": "CORRECT",
+      "sha256": "de1a851fc6e6734357c89e840063c6eca0c3271536de257ac3216be1f704aa2f",
+      "status": 200,
+      "elapsedMs": 1380,
+      "response": {
+        "transcript": "He's cold.",
+        "normalized": "he's cold",
+        "result": "CORRECT",
+        "answerType": "NAME"
+      },
+      "passed": true
+    },
+    {
+      "clip": "sentences/he-happy.mp3",
+      "target": "she-happy",
+      "expected": "WRONG_LOGIC",
+      "sha256": "84c8283c5965c521dc443459a4714d0dd465602d4ee718659a0fc42f0481b206",
+      "status": 200,
+      "elapsedMs": 2133,
+      "response": {
+        "transcript": "He's happy.",
+        "normalized": "he's happy",
+        "result": "WRONG_LOGIC",
+        "answerType": "NAME"
+      },
+      "passed": true
+    },
+    {
+      "clip": "words/happy.mp3",
+      "target": "he-happy",
+      "expected": "INCOMPLETE",
+      "sha256": "d58271dfe064275224ff3881635d268c52f3516c88a0f4620170ce7ef06b864a",
+      "status": 200,
+      "elapsedMs": 807,
+      "response": {
+        "transcript": "Happy.",
+        "normalized": "happy",
+        "result": "INCOMPLETE",
+        "answerType": null
+      },
+      "passed": true
+    }
+  ]
+}

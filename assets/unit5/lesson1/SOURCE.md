@@ -2,6 +2,8 @@
 
 Created 2026-11-26 for the user's complete Feelings lesson asset request.
 
+Background continuation: six additional original scene plates were generated with built-in imagegen for the activity menu and each playable activity. Native 1536x1024 PNG sources are retained in `sources/backgrounds-v2/`; runtime WebP encodings are in `backgrounds/v2/`. `sources/backgrounds-v2.json` records generation IDs and normalized prompt briefs. These are new original backgrounds, with the old approved files preserved. Export utility: `tools/export_unit5_backgrounds_v2.py`; it only copies and encodes the original images, without repainting or changing actors.
+
 ## Original illustration
 
 New backgrounds, supplementary actors and props were generated with the built-in imagegen tool. Original full-resolution files are in `sources/`. `generations.json` and `alpha-cleanup.json` retain the generator execution filenames and local source locations. Production exports are retained here so no app reference depends on the generation cache.

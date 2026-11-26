@@ -1,0 +1,44 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-11-26",
+  "promptFormat": "Normalized production prompt briefs; generation IDs bind original tool outputs.",
+  "commonPromptBrief": "Landscape 3:2 full-bleed preschool English mobile game background. Beautiful matte hand-painted gouache with fine paper grain, rounded furniture, sage mint, warm pale cream, peach and honey accents, restrained dark teal detailing. Soft daylight and coherent front-facing child-eye-level perspective. Keep central 70 percent spacious and light for independently rendered actors and controls; decoration at outer edges, floor in bottom 35-38 percent. No people, animals, text, letters, numbers, logos, watermark, interface, cards or buttons. Original production illustration, not a screenshot or mockup.",
+  "scenes": {
+    "house": {
+      "generation": "exec-7fb78a88-a716-4abe-8ee0-86dbb8dbb128",
+      "promptBrief": "Discovery living room: arched garden window and sofa at left, mint shelf at right, cream wall, timber floor, woven rug, quiet center.",
+      "source": "sources/backgrounds-v2/house.png",
+      "runtime": "backgrounds/v2/house.webp"
+    },
+    "camera": {
+      "generation": "exec-321ece1f-a625-4832-82a2-a06ab8f2b845",
+      "promptBrief": "Photo corner: pale mint seamless fabric backdrop, coral camera and wooden tripod at left, albums, plant and studio lamp at right, empty photo clips near outer top edges.",
+      "source": "sources/backgrounds-v2/camera.png",
+      "runtime": "backgrounds/v2/camera.webp"
+    },
+    "helping": {
+      "generation": "exec-b68021e4-2a39-4d0d-8d88-dcf580159b68",
+      "promptBrief": "Kindness corner: peach canopy and mint towel cabinet at left, low rounded shelf, cup and plant at right, light sage woven rug, open standing area.",
+      "source": "sources/backgrounds-v2/helping.png",
+      "runtime": "backgrounds/v2/helping.webp"
+    },
+    "workshop": {
+      "generation": "exec-6640c46f-5dda-44fc-9ed6-a0a399132d3e",
+      "promptBrief": "Photo and word workshop: clean pale cream wall, art tools and rolled paper at left, craft cabinet and albums at right, blank clipped paper at outer edges, cloth rug.",
+      "source": "sources/backgrounds-v2/workshop.png",
+      "runtime": "backgrounds/v2/workshop.webp"
+    },
+    "reporter": {
+      "generation": "exec-a5d4d2b8-997d-4f2e-9580-1435680791f2",
+      "promptBrief": "Friendly recording nook: pale apricot painted sun behind standing area, headphones and camera at far left, coral microphone tripod and bookshelf at far right, mint rug. No theater or stage.",
+      "source": "sources/backgrounds-v2/reporter.png",
+      "runtime": "backgrounds/v2/reporter.webp"
+    },
+    "menu": {
+      "generation": "exec-6f0c69a1-0611-4fce-b129-996ac40478fe",
+      "promptBrief": "Feelings Playhouse garden: sage and peach cottages at far edges, leaf branches in upper corners, daisy beds in lower corners, cream stone path, quiet pale garden and sky in central 75 percent.",
+      "source": "sources/backgrounds-v2/menu.png",
+      "runtime": "backgrounds/v2/menu.webp"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Unit 5 Lesson 1 — Present and four games
 
-Updated 2026-11-26. Status: frontend implementation and scoped technical QA complete locally. Real feeling-sentence AI checking is pending authenticated Worker deployment; not claimed live.
+Updated 2026-11-26. Status: initial frontend publicly verified. Existing Worker updated for feeling-sentence and eight actual generated-model recognition checks passed. New six-scene background set is being integrated and checked; student accuracy remains unmeasured.
 
 ## Scope / authorization / stack
 
@@ -40,7 +40,7 @@ Backend delta: only feeling-sentence allowlisted task with 12 pronoun/adjective 
 - [x] 25 route/width layouts (320/390/768/1024/1366), source-aligned word light, screenshots and motion video; teacher/classroom review remains unmeasured.
 - [x] Relevant speech regressions and new Unit5 navigation/touch suite pass. Original navigation.spec.cjs stops at an existing stale Unit3 expected title (Listen & Decide versus Toy Machine); HEAD already contains Toy Machine. No unrelated lesson/test assertion was rewritten.
 - [x] Actual in-app browser demo opened at feelings-house and hungry exploration clicked; local games are reviewable.
-- [ ] Authenticated Worker update and live feeling-sentence recognition validation. Current CLI reports unauthenticated; existing live endpoint returns HTTP400 INVALID_QUESTION_TYPE for the new task. No student recording used for that preflight.
+- [x] Authenticated Worker update and live feeling-sentence recognition validation. Version b4636235 deployed; eight model-clip requests and eight native recording UI requests returned the expected results. Source audio is approved generated Higgs, not student recordings; student accuracy remains unmeasured. Historical unsupported-task preflight is retained.
 
 Publishing frontend is not requested by this turn; do not push unrelated files. Existing speech Worker may be updated only with this bounded task after contract checks, with current authentication; do not claim deployed/live inference if unavailable or untested. Child outcomes/human voice approval remain unmeasured.
 
@@ -60,10 +60,18 @@ Worker deployment remains pending account authentication: Wrangler whoami is una
 
 ## Evidence / remaining handoff
 
+### Background and live AI continuation — 2026-11-26
+
+The user requested completion of AI and a dedicated background for Unit5 Lesson1 and its activities. Keep the approved Phaser + native GIF stack and all teaching/progress IDs; no stack question is repeated. Create six original matte-gouache scene plates using built-in imagegen: garden activity menu, discovery house, camera corner, kindness room, photo/word workshop and reporter nook. Cream/mint/peach palette, edge furnishings, quiet central actor area, no baked characters/words/buttons. Sources and WebP exports live alongside the approved old versions, with generation IDs and normalized prompt briefs in sources/backgrounds-v2.json. The Camera receives its own scene rather than reusing House. Scope shell scenery to Unit5 and clear it on exit; preserve older units.
+
+Wrangler authentication completed with the account-limited Workers Scripts Write scope on hiei1121. Existing toy-buddy-speech deployed as version b4636235-9d08-4e56-b4ce-af18921c5bd4. All eight first live model-clip checks returned HTTP200 with the expected result: six full He’s sentences CORRECT, wrong-pronoun target WRONG_LOGIC, isolated word INCOMPLETE. See evidence/live-worker-model-clips.json. No student recordings or mocked inference were used for those requests. Actual browser recording/feedback verification and background responsive review follow below when complete.
+
 Local app: http://127.0.0.1:8765/index.html?dev=u5feelings1#/unit/5/lesson/1?mode=practice . App code: shared/unit5-feelings.js/css; config data/units.js; registration and scoped cache tags in index.html. No app/progress rewrite or unrelated Unit4 changes overwritten.
 
 Reports: evidence/gameplay.json (five complete activity flows, simulated-ASR distinction, 25 layouts, video path); evidence/navigation.json (class/back/reload/native touch and three old routes); evidence/edge-cases.json (four exact reaction GIF hashes with visible changing frames, delayed source loading, long-word model/scroll, recording/music cancellation, no remaining blob URLs and renderer retry); evidence/live-worker-preflight.json (current unsupported live task).
 
 Asset additions: sources/reactions.json plus original sheets and 400x520 six-frame GIF/final-pose exports. Production utility tools/export_unit5_feelings_reactions.py; every source/derived file is in the existing asset manifest, now 412 records including source frames/variants. tools/audit_unit5_feelings_assets.py verifies all hashes and the ten actor/state/action GIFs. The SOURCE.md prompt/provenance set is extended. Actual input/route/audio errors are retryable; UNCLEAR never earns a pass or adds a mistake.
 
-Worker source, allowlisted task, neutral whole-vocabulary context and dry-run bundle are prepared. CORS, rate limit, upload bounds, timeout, no persistent child audio/transcript and current provider are preserved. Authentication must be completed by the account owner; do not deploy a temporary Worker/account or substitute another recognizer to get around this step. After authentication, deploy only this bounded Worker delta, check real model clips and wrong/incomplete cases, and update status before claiming live AI availability.
+Worker deployment and actual inference checks are now complete for the bounded feeling-sentence task. CORS, rate limit, upload bounds, timeout, no persistent child audio/transcript and current provider are preserved. Evidence includes live-worker-model-clips.json, live-ui.json and worker-deployment.json; no temporary account/provider was used. Classroom/student accuracy and pronunciation assessment remain unmeasured.
+
+Background technical review: all six generated sources and runtime files are hash-registered (424 manifest records total). Thirty local layouts across 320/390/768/1024/1366 widths pass, with native image decoding, separate Camera scenery, readable dark lesson title, no horizontal overflow, missing-background retry and no background leakage into Unit4. Four native action GIFs, microphone/music cancellation, renderer recovery and Unit5 navigation/legacy-route checks also pass. See evidence/backgrounds-v2/report.json. Public verification of this new scenery set is recorded after publication below.

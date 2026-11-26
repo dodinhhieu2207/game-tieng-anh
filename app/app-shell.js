@@ -44,7 +44,8 @@
    document.body.classList.toggle('family-art-library',unit?.id===4);
    document.body.style.setProperty('--family-library-bg',unit?.id===4?`url("${new URL(familyLesson?.background||unit.selectorScene,document.baseURI).href}")`:'none');
    if(mounted||currentGame)stop();hideLibraries();pane.hidden=false;pane.classList.toggle('unit3-toytown',unit?.id===3);pane.innerHTML=html;
-   pane.classList.toggle('shell-art-selector',html.includes('shell-lesson-grid'));pane.classList.toggle('shell-art-home',!unit&&html.includes('shell-unit-grid'));pane.style.backgroundImage=unit?.selectorScene&&html.includes('shell-lesson-grid')?`url("${unit.selectorScene}")`:'';
+   pane.classList.toggle('u5-feelings-library',unit?.id===5);
+   pane.classList.toggle('shell-art-selector',html.includes('shell-lesson-grid'));pane.classList.toggle('shell-art-home',!unit&&html.includes('shell-unit-grid'));pane.style.backgroundImage=unit?.selectorScene&&(unit.id===5||html.includes('shell-lesson-grid'))?`url("${unit.selectorScene}")`:'';
    activeSidebar(unit?.space||null);currentSpace=unit?.space||'home';window.scrollTo({top:0,behavior:'instant'});
   }
   function bread(unit,lesson){return `<nav class="shell-breadcrumb" aria-label="Breadcrumb"><a href="#/"><i class="nav-art nav-home" aria-hidden="true"></i>Home</a>${unit?`<span aria-hidden="true">›</span><a href="#/unit/${unit.id}" ${!lesson?'aria-current="page"':''}><i class="nav-art nav-lessons" aria-hidden="true"></i>Unit ${unit.id}</a>`:''}${lesson?`<span aria-hidden="true">›</span><span aria-current="page">Lesson ${lesson.id}</span>`:''}</nav>`;}

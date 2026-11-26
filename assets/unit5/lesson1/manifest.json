@@ -3944,6 +3944,102 @@
       "loop": false,
       "width": 400,
       "height": 520
+    },
+    {
+      "file": "sources/backgrounds-v2/house.png",
+      "role": "imagegen original background v2",
+      "sha256": "a305e8fdc40a365a30f91ec602c427d506b1d67e6b19925132642a0ef4d420c6",
+      "generation": "exec-7fb78a88-a716-4abe-8ee0-86dbb8dbb128",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/v2/house.webp",
+      "role": "runtime background v2, WebP encoding only",
+      "sha256": "4d35b0341fbb444abfd91033191268090410a9a3d97024022b17ee26d04c6624",
+      "generation": "exec-7fb78a88-a716-4abe-8ee0-86dbb8dbb128",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/backgrounds-v2/camera.png",
+      "role": "imagegen original background v2",
+      "sha256": "87ad9bc80a92673b3c0fa7bab5c228c5ceb2a177b21deab9a10192a9653e6763",
+      "generation": "exec-321ece1f-a625-4832-82a2-a06ab8f2b845",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/v2/camera.webp",
+      "role": "runtime background v2, WebP encoding only",
+      "sha256": "ce5f2ec6730085e7e974e0d59c96da9fe30474c9aa46242d40293cbd0836ebd9",
+      "generation": "exec-321ece1f-a625-4832-82a2-a06ab8f2b845",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/backgrounds-v2/helping.png",
+      "role": "imagegen original background v2",
+      "sha256": "6a0bcbe69d269b00e94c34e9ecbfceffb80c3e4e34c8e536d72fd770d4f35f90",
+      "generation": "exec-b68021e4-2a39-4d0d-8d88-dcf580159b68",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/v2/helping.webp",
+      "role": "runtime background v2, WebP encoding only",
+      "sha256": "f8c2d1bf9f6a7f892fd34e2a3814fbfd0b02a0e68881e7e945790a4e26e7593b",
+      "generation": "exec-b68021e4-2a39-4d0d-8d88-dcf580159b68",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/backgrounds-v2/workshop.png",
+      "role": "imagegen original background v2",
+      "sha256": "258a5532fc80a91491a6b2161920390bb9a33cb68fb375f2dc6971528bb73344",
+      "generation": "exec-6640c46f-5dda-44fc-9ed6-a0a399132d3e",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/v2/workshop.webp",
+      "role": "runtime background v2, WebP encoding only",
+      "sha256": "b32b5865cf76369117024f9d4c636bfb6a02bf7ca6af052924ea4f478c852973",
+      "generation": "exec-6640c46f-5dda-44fc-9ed6-a0a399132d3e",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/backgrounds-v2/reporter.png",
+      "role": "imagegen original background v2",
+      "sha256": "e8dabcb2246e74ae0fdc54d16caa85439ef857a49d55bcf4f32302e478be79c6",
+      "generation": "exec-a5d4d2b8-997d-4f2e-9580-1435680791f2",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/v2/reporter.webp",
+      "role": "runtime background v2, WebP encoding only",
+      "sha256": "c3dd4bc4729f48971881fb1d769ce3fc86124a07c72519652cd3cc89549fa474",
+      "generation": "exec-a5d4d2b8-997d-4f2e-9580-1435680791f2",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/backgrounds-v2/menu.png",
+      "role": "imagegen original background v2",
+      "sha256": "d3b4d6c035a0099a7c9ee2c505cde4f952ca01263121f74155c080780b314d6e",
+      "generation": "exec-6f0c69a1-0611-4fce-b129-996ac40478fe",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/v2/menu.webp",
+      "role": "runtime background v2, WebP encoding only",
+      "sha256": "9866b129ea2aeed3509ac4f1360603444c45ccaa4e9f879ea04fc27b877202dc",
+      "generation": "exec-6f0c69a1-0611-4fce-b129-996ac40478fe",
+      "width": 1536,
+      "height": 1024
     }
   ],
   "actors": {
@@ -4809,5 +4905,13 @@
         520
       ]
     }
+  },
+  "backgroundsV2": {
+    "house": "backgrounds/v2/house.webp",
+    "camera": "backgrounds/v2/camera.webp",
+    "helping": "backgrounds/v2/helping.webp",
+    "workshop": "backgrounds/v2/workshop.webp",
+    "reporter": "backgrounds/v2/reporter.webp",
+    "menu": "backgrounds/v2/menu.webp"
   }
 }

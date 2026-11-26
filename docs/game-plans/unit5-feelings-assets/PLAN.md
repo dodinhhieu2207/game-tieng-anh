@@ -52,3 +52,6 @@ Preview is an asset inspector, with scene selector, actual native media playback
 Human voice approval, child learning outcomes, app integration and public deployment are not measured by this pack.
 
 Subsequent checkpoint: the user then authorized game implementation. See ../unit5-feelings/PLAN.md for the five local activity flows and the outstanding authenticated Worker deployment. Four additional helping-action GIFs are now part of the asset pack; current manifest has 412 records. Original 376-record asset-preparation evidence above is retained as historical evidence, not rewritten as a test of the later games.
+
+
+2026-11-26 background continuation: six additional original imagegen scene plates are now in sources/backgrounds-v2 and backgrounds/v2, with generation provenance and normalized prompt briefs. The current manifest has 424 hash-bound records. Old sources/artwork remain. All six are integrated in Unit5 menus and the five games; 30 responsive layouts and missing-background retry are verified by tests/unit5-backgrounds.spec.cjs. Actual Worker deployment and native UI live-model checks are documented in ../unit5-feelings/PLAN.md; these do not establish child accuracy.

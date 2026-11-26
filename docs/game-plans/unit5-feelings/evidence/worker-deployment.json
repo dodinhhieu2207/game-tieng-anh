@@ -1,0 +1,13 @@
+{
+  "observedAt": "2026-11-26T08:52:25.937Z",
+  "service": "toy-buddy-speech",
+  "version": "b4636235-9d08-4e56-b4ce-af18921c5bd4",
+  "endpoint": "https://toy-buddy-speech.hiei1121.workers.dev/api/speaking-check",
+  "sourceHashes": {
+    "worker": "ce4f418c022fe8b3482cf03167532b3e158ba09ad6a3edd139e9912bfc609580",
+    "evaluator": "e6361f93d161f02e1b7aac5ccc5c0396a58d9c5da892e29dd1ed214cbcced4d2"
+  },
+  "firstModelClipCheck": "live-worker-model-clips.json",
+  "nativeRecordingUICheck": "live-ui.json",
+  "limits": "Generated approved Higgs models only; no student accuracy or pronunciation score measured"
+}
