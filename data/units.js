@@ -64,7 +64,7 @@
      activity('feelings-camera','u5feelingscamera',{title:'Feelings Camera',coverImage:'assets/unit5/lesson1/covers/camera.webp',icon:'listening'}),
      activity('helping-hands','u5helpinghands',{title:'Helping Hands',coverImage:'assets/unit5/lesson1/covers/helping.webp',icon:'matching'}),
      activity('feelings-workshop','u5feelingsworkshop',{title:'Feelings Photo Workshop',coverImage:'assets/unit5/lesson1/covers/workshop.webp',icon:'matching'}),
-     activity('little-reporter','u5littlereporter',{title:'Little Reporter',coverImage:'assets/unit5/lesson1/covers/reporter.webp',icon:'speaking',final:true})
+     activity('little-reporter','u5littlereporter',{title:'Little Reporter',coverImage:'assets/unit5/lesson1/covers/reporter.webp',image:'assets/unit5/lesson1/covers/reporter.webp',icon:'speaking',final:true})
     ]}
    }).map(l=>l.id===1?l:{...l,locked:true})}
   ],
