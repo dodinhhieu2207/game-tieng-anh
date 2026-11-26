@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-11-26T10:37:23.386Z",
+  "runtime": "b838461",
+  "records": [
+    {
+      "file": "backgrounds/v3/menu.webp",
+      "sha256": "03e82f101a60768cd43c5c42e67e9c9fc355e01614424a5faa6855a5b72c591e",
+      "status": 200
+    },
+    {
+      "file": "backgrounds/v3/house.webp",
+      "sha256": "c4c7d149fa2e25c7a490261e2a3de50b33d3cb50590c1c24ffd2bc89d92945d7",
+      "status": 200
+    },
+    {
+      "file": "backgrounds/v3/camera.webp",
+      "sha256": "0902211b68f5c9a3c2ccfe1f53a5ae6c9c7e88c97c01658b01c511c2dab614c0",
+      "status": 200
+    },
+    {
+      "file": "backgrounds/v3/helping.webp",
+      "sha256": "91572328802b53f91e205faff2d5fabd799f234c2a1f756ab22de09bb5774d86",
+      "status": 200
+    },
+    {
+      "file": "backgrounds/v3/workshop.webp",
+      "sha256": "6f750c58d69ad70344959fbda48401aa61e924619eaf391e8cd224c09362c3a3",
+      "status": 200
+    },
+    {
+      "file": "backgrounds/v3/reporter.webp",
+      "sha256": "debc68d7d67992a2a2ef398cab7700e73f2e4f6face07d2abd38e0ee6512253f",
+      "status": 200
+    }
+  ]
+}
