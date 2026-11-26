@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-26T09:13:57.812Z",
+  "letters": 12,
+  "taughtThrough": "L",
+  "words": {
+    "K": [
+      "key",
+      "kangaroo"
+    ],
+    "L": [
+      "lion",
+      "lollipop"
+    ]
+  },
+  "nativeLetterSoundAndWords": true,
+  "existingJAssets": true,
+  "buildWordFilter": true,
+  "mobileNoOverflow": true,
+  "errors": [],
+  "missing": []
+}
