@@ -1,0 +1,37 @@
+{
+  "revision": "99649e0",
+  "checkedAt": "2026-11-26T04:21:55.049Z",
+  "publicBase": "https://dodinhhieu2207.github.io/game-tieng-anh/",
+  "checks": [
+    {
+      "route": "feelings-house",
+      "canvas": 1,
+      "broken": 0
+    },
+    {
+      "route": "feelings-camera",
+      "canvas": 1,
+      "broken": 0
+    },
+    {
+      "route": "helping-hands",
+      "canvas": 1,
+      "broken": 0
+    },
+    {
+      "route": "feelings-workshop",
+      "canvas": 1,
+      "broken": 0
+    },
+    {
+      "route": "little-reporter",
+      "canvas": 1,
+      "broken": 0
+    }
+  ],
+  "actualHiggsHouseCameraReporter": true,
+  "cameraCapture": true,
+  "errors": [],
+  "missing": [],
+  "liveAI": "Pending authenticated Worker deployment; no inference simulated in this public check"
+}

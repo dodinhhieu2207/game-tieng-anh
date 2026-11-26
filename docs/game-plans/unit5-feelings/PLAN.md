@@ -50,6 +50,14 @@ The user subsequently requested “đẩy lên đi, còn chức năng AI thì l�
 
 Publication base: 2e3fa65. Roll back the scoped release if required runtime assets fail publicly, existing routes regress or sentence safeguards fail; do not reset unrelated local work. Frontend push, public serving and live AI recognition are separate evidence gates.
 
+### Published frontend verification — 2026-11-26
+
+Published 8e1db4a to origin/main, followed by 99649e0 fixing the activity-card construction request for a nonexistent shared speaking icon. Reporter now supplies its own approved cover in both the image and coverImage fields, so the existing shell does not briefly request the missing icon. Only the Unit5 configuration/cache tag was changed; unrelated Unit4 index versions remain local.
+
+GitHub Pages serves the updated index and all five routes. A fresh public browser context verified one Phaser canvas per route, no broken game images, no page errors or HTTP resource errors, actual Higgs House exploration, Camera audio-ended selection and capture, and Reporter model playback. See evidence/public-release.json and five public screenshots. This is frontend/media evidence, not live speech recognition.
+
+Worker deployment remains pending account authentication: Wrangler whoami is unauthenticated and the OAuth attempt expired without an authorization callback. The new backend contract is committed and its tests pass, but it has not been deployed. tools/check_unit5_feelings_live.mjs is ready to test six generated Higgs sentences, a wrong-pronoun target and an incomplete word after deployment; it records sample results without claiming student accuracy. Existing live-worker-preflight.json still records the actual unsupported-task response. No simulated success is presented as live AI.
+
 ## Evidence / remaining handoff
 
 Local app: http://127.0.0.1:8765/index.html?dev=u5feelings1#/unit/5/lesson/1?mode=practice . App code: shared/unit5-feelings.js/css; config data/units.js; registration and scoped cache tags in index.html. No app/progress rewrite or unrelated Unit4 changes overwritten.
