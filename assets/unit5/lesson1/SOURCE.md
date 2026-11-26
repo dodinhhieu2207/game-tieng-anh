@@ -2,6 +2,8 @@
 
 Created 2026-11-26 for the user's complete Feelings lesson asset request.
 
+Latest user style correction: active backgrounds are v3. Built-in imagegen edited each v2 scene with direct older-unit reference images: Unit3 selector and Unit4 garden for the world/menu, Family Dialogue room for the five interiors. `sources/backgrounds-v3.json` binds each output to its exact input hashes and normalized prompt brief. Native PNGs are in `sources/backgrounds-v3/`, runtime WebP encodings in `backgrounds/v3/`. `tools/export_unit5_backgrounds_v3.py` only copies/encodes those imagegen outputs. Previous art, all actors/GIFs and audio are preserved.
+
 Background continuation: six additional original scene plates were generated with built-in imagegen for the activity menu and each playable activity. Native 1536x1024 PNG sources are retained in `sources/backgrounds-v2/`; runtime WebP encodings are in `backgrounds/v2/`. `sources/backgrounds-v2.json` records generation IDs and normalized prompt briefs. These are new original backgrounds, with the old approved files preserved. Export utility: `tools/export_unit5_backgrounds_v2.py`; it only copies and encodes the original images, without repainting or changing actors.
 
 ## Original illustration

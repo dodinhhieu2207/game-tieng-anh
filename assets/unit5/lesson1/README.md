@@ -4,7 +4,7 @@ Bộ tài nguyên đã tạo ngày 2026-11-26 cho sáu từ: **happy, sad, hungr
 
 Mở trang xem thử: http://127.0.0.1:8775/assets/unit5/lesson1/preview.html . Server local dùng thư mục gốc repo; file vào trực tiếp là `preview.html`.
 
-- `backgrounds/v2/`: sáu tranh nền mới 1536×1024 cho vườn chọn hoạt động, phòng khám phá, góc chụp ảnh, Helping Hands, xưởng ghép từ và Little Reporter. PNG gốc, mã lần tạo và brief prompt nằm ở `sources/backgrounds-v2/` và `sources/backgrounds-v2.json`. Bốn nền trước vẫn được giữ trong `backgrounds/`.
+- `backgrounds/v3/`: sáu nền 1536×1024 đang dùng, đã sửa theo ảnh tham chiếu trực tiếp của Unit 3–4: màu tươi, bề mặt rõ và tạo khối nhẹ. Gồm vườn Unit5, phòng khám phá, góc chụp ảnh, Helping Hands, xưởng ghép từ và Little Reporter. PNG gốc và mã/hash ảnh tham chiếu nằm trong `sources/backgrounds-v3/` và `sources/backgrounds-v3.json`. Các phiên bản trước vẫn được giữ để đối chiếu.
 - `actors/`: sáu nhân vật, mỗi nhân vật có still, GIF lặp, GIF một lần và sáu frame căn cùng đường tiếp đất. Bổ sung bốn GIF hành động nhận bánh/ăn, uống nước, dùng quạt và quấn chăn, kèm tư thế cuối.
 - `props/`: 12 vật thể riêng, gồm đồ ăn, nước, quạt, chăn, máy ảnh, micro, kẹp, kệ, khay, khung, sao và album.
 - `glyphs/`, `letters/`, `words/`: 15 chữ thường cần dùng; thẻ chữ rời, nền mảnh, ô nhận, sáu nhãn từ đầy đủ và hai tiền tố câu. Các vị trí ghép nằm trong `manifest.json` → `buildWords`.

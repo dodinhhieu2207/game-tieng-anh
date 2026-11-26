@@ -55,3 +55,6 @@ Subsequent checkpoint: the user then authorized game implementation. See ../unit
 
 
 2026-11-26 background continuation: six additional original imagegen scene plates are now in sources/backgrounds-v2 and backgrounds/v2, with generation provenance and normalized prompt briefs. The current manifest has 424 hash-bound records. Old sources/artwork remain. All six are integrated in Unit5 menus and the five games; 30 responsive layouts and missing-background retry are verified by tests/unit5-backgrounds.spec.cjs. Actual Worker deployment and native UI live-model checks are documented in ../unit5-feelings/PLAN.md; these do not establish child accuracy.
+
+
+Latest 2026-11-26 user correction: backgrounds must match established older-unit artwork. Six v3 images were edited with the v2 layouts as targets and actual Unit3/4 images as style references. The revised background rule supersedes the faded gouache direction; existing actors/voices remain. Exact input hashes and generation IDs are in sources/backgrounds-v3.json. Current manifest has 436 records; native/source old versions remain. Local 35-layout, scene decoding and lifecycle checks pass; see ../unit5-feelings/PLAN.md for current publication evidence.

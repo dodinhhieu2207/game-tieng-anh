@@ -1,0 +1,108 @@
+{
+  "tool": "built-in image_gen, referenced-image edit",
+  "date": "2026-11-26",
+  "promptFormat": "Normalized prompt briefs, with original output generation IDs and exact input hashes.",
+  "commonPromptBrief": "Restyle FIRST image (Unit5 v2 edit target) using other reference images only for older-unit rendering style. Crisp bright polished 2.5D educational game art, modeled rounded shapes, azure/turquoise/green/coral/yellow and honey wood, clear sunlight. Remove faded gouache/paper grain/sage wash. Preserve large quiet center and edge-only furnishings. No people, words, letters, numbers, UI or watermark. One 1536x1024 scene.",
+  "scenes": {
+    "menu": {
+      "generation": "exec-7a1d511f-9e2a-4f0d-8a8c-15c19bab77bc",
+      "promptBrief": "Bright azure sky, puffy white clouds, rich green garden, warm playhouse exteriors at edges, open center; match older Unit3/4 selector art.",
+      "editTarget": {
+        "file": "assets/unit5/lesson1/sources/backgrounds-v2/menu.png",
+        "sha256": "d3b4d6c035a0099a7c9ee2c505cde4f952ca01263121f74155c080780b314d6e"
+      },
+      "styleReferences": [
+        {
+          "file": "assets/unit4/navigation-v2/lesson1-background.webp",
+          "sha256": "ae7029c076130788ee083ee53b445aea4efe69189c6f5bfa376a9110a936afdb"
+        },
+        {
+          "file": "assets/shared-ui/unit3-select-bg.png",
+          "sha256": "aabf89677143761775ebfb8c29fe4eb92ea3fa4449acc4909d49503273596c9f"
+        }
+      ],
+      "source": "sources/backgrounds-v3/menu.png",
+      "runtime": "backgrounds/v3/menu.webp"
+    },
+    "house": {
+      "generation": "exec-af110cf6-086d-4d24-881c-68b5080ac389",
+      "promptBrief": "Clean warm peach living room, honey wood, turquoise sofa, colorful shelf props, cream/blue rug; match Family Dialogue rendering.",
+      "editTarget": {
+        "file": "assets/unit5/lesson1/sources/backgrounds-v2/house.png",
+        "sha256": "a305e8fdc40a365a30f91ec602c427d506b1d67e6b19925132642a0ef4d420c6"
+      },
+      "styleReferences": [
+        {
+          "file": "assets/family-dialogue/room.png",
+          "sha256": "82b7c32617c4eb1bb388961091cc8928cbd7cc46b20224d88fcc2471f6b18d34"
+        }
+      ],
+      "source": "sources/backgrounds-v3/house.png",
+      "runtime": "backgrounds/v3/house.webp"
+    },
+    "camera": {
+      "generation": "exec-e5b22a74-c036-483c-b3c9-fbfda0dae4a5",
+      "promptBrief": "Light sky-blue seamless photo backdrop, coral camera, golden tripod, turquoise studio light, warm wood cabinet at edges.",
+      "editTarget": {
+        "file": "assets/unit5/lesson1/sources/backgrounds-v2/camera.png",
+        "sha256": "87ad9bc80a92673b3c0fa7bab5c228c5ceb2a177b21deab9a10192a9653e6763"
+      },
+      "styleReferences": [
+        {
+          "file": "assets/family-dialogue/room.png",
+          "sha256": "82b7c32617c4eb1bb388961091cc8928cbd7cc46b20224d88fcc2471f6b18d34"
+        }
+      ],
+      "source": "sources/backgrounds-v3/camera.png",
+      "runtime": "backgrounds/v3/camera.webp"
+    },
+    "helping": {
+      "generation": "exec-9866da61-3444-4f8c-a77b-f7459f1cb75a",
+      "promptBrief": "Bright kindness room, coral canopy, turquoise cabinet, colorful folded towels, honey wood, green plant; center clear of answer props.",
+      "editTarget": {
+        "file": "assets/unit5/lesson1/sources/backgrounds-v2/helping.png",
+        "sha256": "6a0bcbe69d269b00e94c34e9ecbfceffb80c3e4e34c8e536d72fd770d4f35f90"
+      },
+      "styleReferences": [
+        {
+          "file": "assets/family-dialogue/room.png",
+          "sha256": "82b7c32617c4eb1bb388961091cc8928cbd7cc46b20224d88fcc2471f6b18d34"
+        }
+      ],
+      "source": "sources/backgrounds-v3/helping.png",
+      "runtime": "backgrounds/v3/helping.webp"
+    },
+    "workshop": {
+      "generation": "exec-527cc0f3-e927-4acf-aeac-77387dbdaa89",
+      "promptBrief": "Clean light blue art room, golden shelves, turquoise cabinet, colorful paper and tools at edges, no baked labels or receivers.",
+      "editTarget": {
+        "file": "assets/unit5/lesson1/sources/backgrounds-v2/workshop.png",
+        "sha256": "258a5532fc80a91491a6b2161920390bb9a33cb68fb375f2dc6971528bb73344"
+      },
+      "styleReferences": [
+        {
+          "file": "assets/family-dialogue/room.png",
+          "sha256": "82b7c32617c4eb1bb388961091cc8928cbd7cc46b20224d88fcc2471f6b18d34"
+        }
+      ],
+      "source": "sources/backgrounds-v3/workshop.png",
+      "runtime": "backgrounds/v3/workshop.webp"
+    },
+    "reporter": {
+      "generation": "exec-0517699e-16b3-47dd-8609-e3d0be877f8e",
+      "promptBrief": "Light blue recording nook with pale golden sun disk, coral microphone and headphones at outer edges, honey wood and turquoise rug border; no theater.",
+      "editTarget": {
+        "file": "assets/unit5/lesson1/sources/backgrounds-v2/reporter.png",
+        "sha256": "e8dabcb2246e74ae0fdc54d16caa85439ef857a49d55bcf4f32302e478be79c6"
+      },
+      "styleReferences": [
+        {
+          "file": "assets/family-dialogue/room.png",
+          "sha256": "82b7c32617c4eb1bb388961091cc8928cbd7cc46b20224d88fcc2471f6b18d34"
+        }
+      ],
+      "source": "sources/backgrounds-v3/reporter.png",
+      "runtime": "backgrounds/v3/reporter.webp"
+    }
+  }
+}

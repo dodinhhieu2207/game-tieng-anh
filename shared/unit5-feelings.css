@@ -8,15 +8,15 @@
 @media(max-width:650px){.u5-game[data-mode=helping] .u5-stage{aspect-ratio:1/1.38}.u5-help-world>.u5-actor{top:17%;height:59%}.u5-help-world .u5-dock{height:22%}.u5-photo-mat{left:13%;top:17%;width:74%;height:63%}.u5-photo-world>.u5-actor{top:17%;height:60%;left:18%;width:64%}.u5-letter-targets{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding:5px;scrollbar-width:thin}.u5-letter-slot{flex:0 0 48px}}
 
 /* Dedicated lesson scenery; the shell removes this class when leaving Unit 5. */
-body.u5-feelings-world:not([data-learning-screen="game"]),body.u5-feelings-world[data-learning-screen="game"]{background:#f4f2dc var(--u5-world-bg) center bottom/cover fixed no-repeat!important;min-height:100vh}
-body.u5-feelings-world .shell-game-nav{background:#fffbedf2;border-color:#c4d2aa}
-body.u5-feelings-world #gameScreen{background:#fffdf7f5}
+body.u5-feelings-world:not([data-learning-screen="game"]),body.u5-feelings-world[data-learning-screen="game"]{background:#dff4ff var(--u5-world-bg) center bottom/cover fixed no-repeat!important;min-height:100vh}
+body.u5-feelings-world .shell-game-nav{background:#fffffff2;border-color:#b4dbe9}
+body.u5-feelings-world #gameScreen{background:#fafffff5}
 #lessonApp.u5-feelings-library{background-color:transparent;border-radius:28px;padding:clamp(12px,2.2vw,30px);isolation:isolate}
-#lessonApp.u5-feelings-library .hero{background:#fffbeded;border:1px solid #d7dfb6;box-shadow:0 5px 0 #c4d2aa66}
+#lessonApp.u5-feelings-library .hero{background:#ffffffed;border:1px solid #b8deeb;box-shadow:0 5px 0 #8cc7df66}
 #lessonApp.u5-feelings-library .hero-scene{display:none}
 #lessonApp.u5-feelings-library .hero-copy{max-width:820px}
 #lessonApp.u5-feelings-library .hero h1,#lessonApp.u5-feelings-library .hero .hero-copy>p{color:#174e62!important;text-shadow:none!important}
-#lessonApp.u5-feelings-library .learning-zone{background:#fffdf1e8;border:1px solid #dce4c3;border-radius:26px;padding:clamp(12px,2vw,24px)}
+#lessonApp.u5-feelings-library .learning-zone{background:#fffffff0;border:1px solid #b5dce8;border-radius:26px;padding:clamp(12px,2vw,24px)}
 #lessonApp.u5-feelings-library .shell-mode-hint{color:#335e59}
-#lessonApp.u5-feelings-library .app-journey-heading{background:#fffdf1ed;border-radius:24px;padding:18px}
+#lessonApp.u5-feelings-library .app-journey-heading{background:#ffffffed;border-radius:24px;padding:18px}
 @media(max-width:650px){#lessonApp.u5-feelings-library{background-size:auto 100%;border-radius:20px}#lessonApp.u5-feelings-library .learning-zone{padding:12px 8px}#lessonApp.u5-feelings-library .hero{padding:20px 16px}}

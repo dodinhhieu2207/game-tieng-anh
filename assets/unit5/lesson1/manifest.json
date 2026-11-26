@@ -4040,6 +4040,102 @@
       "generation": "exec-6f0c69a1-0611-4fce-b129-996ac40478fe",
       "width": 1536,
       "height": 1024
+    },
+    {
+      "file": "sources/backgrounds-v3/menu.png",
+      "role": "imagegen reference-restyled background v3",
+      "sha256": "1b9f4269a3dd2208f2ec20d2955a5f9c8386ab1678f39437de289f6f82c8ff1e",
+      "generation": "exec-7a1d511f-9e2a-4f0d-8a8c-15c19bab77bc",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/v3/menu.webp",
+      "role": "runtime reference-restyled background v3, WebP encoding only",
+      "sha256": "03e82f101a60768cd43c5c42e67e9c9fc355e01614424a5faa6855a5b72c591e",
+      "generation": "exec-7a1d511f-9e2a-4f0d-8a8c-15c19bab77bc",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/backgrounds-v3/house.png",
+      "role": "imagegen reference-restyled background v3",
+      "sha256": "85b4003a542639b4bb1a60031673e6eb4301b68a77f0b469ee9deed7ef672623",
+      "generation": "exec-af110cf6-086d-4d24-881c-68b5080ac389",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/v3/house.webp",
+      "role": "runtime reference-restyled background v3, WebP encoding only",
+      "sha256": "c4c7d149fa2e25c7a490261e2a3de50b33d3cb50590c1c24ffd2bc89d92945d7",
+      "generation": "exec-af110cf6-086d-4d24-881c-68b5080ac389",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/backgrounds-v3/camera.png",
+      "role": "imagegen reference-restyled background v3",
+      "sha256": "8be3fb3cb12c8cf4996f2f9d4acdf47441afb985584cb83e7c55cf8e2f736039",
+      "generation": "exec-e5b22a74-c036-483c-b3c9-fbfda0dae4a5",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/v3/camera.webp",
+      "role": "runtime reference-restyled background v3, WebP encoding only",
+      "sha256": "0902211b68f5c9a3c2ccfe1f53a5ae6c9c7e88c97c01658b01c511c2dab614c0",
+      "generation": "exec-e5b22a74-c036-483c-b3c9-fbfda0dae4a5",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/backgrounds-v3/helping.png",
+      "role": "imagegen reference-restyled background v3",
+      "sha256": "fa3e76bbbaa2511146e23556334623911e3c4dc5d89da06ff0cf3bb4ee72caa7",
+      "generation": "exec-9866da61-3444-4f8c-a77b-f7459f1cb75a",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/v3/helping.webp",
+      "role": "runtime reference-restyled background v3, WebP encoding only",
+      "sha256": "91572328802b53f91e205faff2d5fabd799f234c2a1f756ab22de09bb5774d86",
+      "generation": "exec-9866da61-3444-4f8c-a77b-f7459f1cb75a",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/backgrounds-v3/workshop.png",
+      "role": "imagegen reference-restyled background v3",
+      "sha256": "f2738cfca51eadbbf20f53d4bc369d33e59a3c5543b2c2d210ee11631e307bb4",
+      "generation": "exec-527cc0f3-e927-4acf-aeac-77387dbdaa89",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/v3/workshop.webp",
+      "role": "runtime reference-restyled background v3, WebP encoding only",
+      "sha256": "6f750c58d69ad70344959fbda48401aa61e924619eaf391e8cd224c09362c3a3",
+      "generation": "exec-527cc0f3-e927-4acf-aeac-77387dbdaa89",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/backgrounds-v3/reporter.png",
+      "role": "imagegen reference-restyled background v3",
+      "sha256": "d09dcae96814f1e29c15befaabe950d1568f70083dc1536bc5d66e3b01ab1166",
+      "generation": "exec-0517699e-16b3-47dd-8609-e3d0be877f8e",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/v3/reporter.webp",
+      "role": "runtime reference-restyled background v3, WebP encoding only",
+      "sha256": "debc68d7d67992a2a2ef398cab7700e73f2e4f6face07d2abd38e0ee6512253f",
+      "generation": "exec-0517699e-16b3-47dd-8609-e3d0be877f8e",
+      "width": 1536,
+      "height": 1024
     }
   ],
   "actors": {
@@ -4913,5 +5009,13 @@
     "workshop": "backgrounds/v2/workshop.webp",
     "reporter": "backgrounds/v2/reporter.webp",
     "menu": "backgrounds/v2/menu.webp"
+  },
+  "backgroundsV3": {
+    "menu": "backgrounds/v3/menu.webp",
+    "house": "backgrounds/v3/house.webp",
+    "camera": "backgrounds/v3/camera.webp",
+    "helping": "backgrounds/v3/helping.webp",
+    "workshop": "backgrounds/v3/workshop.webp",
+    "reporter": "backgrounds/v3/reporter.webp"
   }
 }

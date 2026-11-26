@@ -1,6 +1,6 @@
 # Unit 5 Lesson 1 — Present and four games
 
-Updated 2026-11-26. Status: initial frontend publicly verified. Existing Worker updated for feeling-sentence and eight actual generated-model recognition checks passed. New six-scene background set is being integrated and checked; student accuracy remains unmeasured.
+Updated 2026-11-26. Status: existing Worker and frontend are publicly verified. Current visual correction uses six v3 backgrounds restyled against actual older-unit reference images; local 35-layout and lifecycle/navigation checks pass. Student accuracy remains unmeasured.
 
 ## Scope / authorization / stack
 
@@ -79,6 +79,12 @@ Background technical review: all six generated sources and runtime files are has
 ### Public scenery and speaking verification — complete
 
 ### Whole-page background clarification — 2026-11-26
+
+### Match older-unit artwork — latest user correction
+
+The user rejected the faded gouache background direction and requested continuity with older units. Inspect actual files before restyling: assets/shared-ui/unit3-select-bg.png, assets/unit4/navigation-v2/lesson1-background.webp and assets/family-dialogue/room.png. Use these as direct imagegen style-reference inputs, with the v2 backgrounds as edit targets; do not merely describe a guessed style. The six v3 scene plates retain each game composition and open interaction area, while using bright blue/green/coral/yellow, clean modeled furniture and coherent daylight. White/blue shell surfaces replace the newly introduced pale-sage/cream panel treatment. Existing actor/GIF, glyph, voice, sound, routes, progress, AI service and game logic are retained.
+
+Active sources: sources/backgrounds-v3 with six native PNGs, runtime backgrounds/v3 with six WebPs; generation IDs, exact edit/style-reference hashes and normalized prompt briefs in sources/backgrounds-v3.json. Asset manifest now contains 436 records including archived versions and source files. Local 35 layouts pass at five widths, including full-page Unit5, lesson activity menu, each game and SPA exit to Letter Land/Unit4. Native four action GIFs, missing-scene/renderer retry, microphone cleanup and three legacy navigation checks pass. Public verification follows publication of this visual-only update.
 
 The user clarified both the Unit5 world background and Lesson1 game backgrounds. The first scenery release applied the garden inside lessonApp while the outer body retained the generic older-unit sky. Correct that scope: headerState now owns a Unit5-only body class and background variable on every Unit5 route, including direct game links, and clears both when leaving. The garden paints the full viewport behind the unit selector, lesson selector and game frame; the inner panel is transparent so it does not repeat the garden. Each activity retains its distinct v2 scene. Game content, voices, speech endpoint and progress are unchanged.
 
