@@ -9,3 +9,5 @@ The inline letter-data block references tools/build_letter_data.mjs and tools/le
 Local native browser checks pass: twelve default letters, M absent, J/K/L images decode, K/L names/sounds and all four words play through actual audio-ended events, K Build a Word queue contains key/kangaroo, Ll detail fits 390px, and no page/resource errors. Evidence: evidence/local.json and four screenshots. This does not newly certify phonetic correctness or learning outcomes.
 
 Publish only index.html's taught-data/cache changes, app/app-shell.js labels and this record. Preserve unrelated local Unit4 version changes in index.html. Public serving is checked separately after push.
+
+Public verification passed on GitHub Pages for release 8c9d38b: twelve A-L cards, updated header range, decoded K/L images and native Higgs letter-name playback; no page/resource errors. See evidence/public.json and public-K/L.png.
