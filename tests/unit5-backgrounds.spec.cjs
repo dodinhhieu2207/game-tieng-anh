@@ -3,7 +3,7 @@ const fs=require('fs'),path=require('path'),assert=require('assert');
 const origin=process.env.U5_QA_ORIGIN||'http://127.0.0.1:8765';
 const routes={'feelings-house':'house','feelings-camera':'camera','helping-hands':'helping','feelings-workshop':'workshop','little-reporter':'reporter'};
 (async()=>{
- const dir=path.resolve('docs/game-plans/unit5-feelings/evidence/backgrounds-v2');fs.mkdirSync(dir,{recursive:true});
+ const dir=path.resolve('docs/game-plans/unit5-feelings/evidence/backgrounds-v2'+(new URL(origin).protocol==='https:'?'-public':''));fs.mkdirSync(dir,{recursive:true});
  const b=await chromium.launch({channel:'msedge',headless:true});const p=await b.newPage(),errors=[],missing=[],layouts=[];
  p.on('pageerror',e=>errors.push(e.message));p.on('response',r=>{if(r.status()>=400&&!r.url().endsWith('/favicon.ico'))missing.push(r.url())});
  try{

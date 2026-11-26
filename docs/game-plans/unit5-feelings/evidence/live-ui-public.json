@@ -1,0 +1,110 @@
+{
+  "checkedAt": "2026-11-26T08:56:25.791Z",
+  "origin": "https://dodinhhieu2207.github.io/game-tieng-anh",
+  "endpoint": "https://toy-buddy-speech.hiei1121.workers.dev/api/speaking-check",
+  "source": "Approved generated Higgs clips at transport boundary; native fake-device recording UI, actual Cloudflare inference",
+  "limits": "Child accuracy and pronunciation NOT_MEASURED",
+  "responses": [
+    {
+      "target": "she-hungry",
+      "clip": "words/hungry.mp3",
+      "outcome": "incomplete",
+      "status": 200,
+      "body": {
+        "transcript": "Hungry.",
+        "normalized": "hungry",
+        "result": "INCOMPLETE",
+        "answerType": null
+      }
+    },
+    {
+      "target": "she-hungry",
+      "clip": "sentences/he-hungry.mp3",
+      "outcome": "wrong",
+      "status": 200,
+      "body": {
+        "transcript": "He's hungry.",
+        "normalized": "he's hungry",
+        "result": "WRONG_LOGIC",
+        "answerType": "NAME"
+      }
+    },
+    {
+      "target": "she-hungry",
+      "clip": "sentences/she-hungry.mp3",
+      "outcome": "correct",
+      "status": 200,
+      "body": {
+        "transcript": "She's hungry.",
+        "normalized": "she's hungry",
+        "result": "CORRECT",
+        "answerType": "NAME"
+      }
+    },
+    {
+      "target": "he-sad",
+      "clip": "sentences/he-sad.mp3",
+      "outcome": "correct",
+      "status": 200,
+      "body": {
+        "transcript": "He's sad.",
+        "normalized": "he's sad",
+        "result": "CORRECT",
+        "answerType": "NAME"
+      }
+    },
+    {
+      "target": "she-thirsty",
+      "clip": "sentences/she-thirsty.mp3",
+      "outcome": "correct",
+      "status": 200,
+      "body": {
+        "transcript": "She's thirsty.",
+        "normalized": "she's thirsty",
+        "result": "CORRECT",
+        "answerType": "NAME"
+      }
+    },
+    {
+      "target": "he-hot",
+      "clip": "sentences/he-hot.mp3",
+      "outcome": "correct",
+      "status": 200,
+      "body": {
+        "transcript": "He's hot.",
+        "normalized": "he's hot",
+        "result": "CORRECT",
+        "answerType": "NAME"
+      }
+    },
+    {
+      "target": "she-cold",
+      "clip": "sentences/she-cold.mp3",
+      "outcome": "correct",
+      "status": 200,
+      "body": {
+        "transcript": "She's cold.",
+        "normalized": "she's cold",
+        "result": "CORRECT",
+        "answerType": "NAME"
+      }
+    },
+    {
+      "target": "he-happy",
+      "clip": "sentences/he-happy.mp3",
+      "outcome": "correct",
+      "status": 200,
+      "body": {
+        "transcript": "He's happy.",
+        "normalized": "he's happy",
+        "result": "CORRECT",
+        "answerType": "NAME"
+      }
+    }
+  ],
+  "nativeRecordDone": true,
+  "incompleteRetry": true,
+  "wrongPronounRetry": true,
+  "correctFeedback": true,
+  "sixRoundsCompleted": true
+}
