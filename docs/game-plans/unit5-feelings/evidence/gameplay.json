@@ -1,0 +1,285 @@
+{
+  "scope": "Native frontend gameplay with simulated ASR responses; no real student accuracy measured",
+  "present": {
+    "explored": 6,
+    "completed": true
+  },
+  "camera": {
+    "rounds": 6,
+    "randomReplay": true,
+    "noTextLeak": true,
+    "audioEndedGated": true
+  },
+  "helping": {
+    "deliveries": 8,
+    "physicalDrag": true,
+    "wrongRetry": true
+  },
+  "workshop": {
+    "matches": 6,
+    "physicalDrag": true,
+    "supportedLetters": true,
+    "keyboard": true
+  },
+  "reporter": {
+    "sentencesRecognizedInSimulatedASR": 6,
+    "realAdapterAndFakeHardware": true,
+    "speechRequests": 9,
+    "incompleteRetry": true,
+    "wrongPronounRetry": true,
+    "unclearNotScored": true
+  },
+  "progress": [
+    {
+      "route": "feelings-house",
+      "played": true,
+      "completed": true,
+      "stars": 3
+    },
+    {
+      "route": "feelings-camera",
+      "played": true,
+      "completed": true,
+      "stars": 3
+    },
+    {
+      "route": "helping-hands",
+      "played": true,
+      "completed": true,
+      "stars": 3
+    },
+    {
+      "route": "feelings-workshop",
+      "played": true,
+      "completed": true,
+      "stars": 3
+    },
+    {
+      "route": "little-reporter",
+      "played": true,
+      "completed": true,
+      "stars": 3
+    }
+  ],
+  "learnerSeparation": true,
+  "layouts": [
+    {
+      "route": "feelings-house",
+      "width": 320,
+      "scroll": 320,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "feelings-camera",
+      "width": 320,
+      "scroll": 320,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "helping-hands",
+      "width": 320,
+      "scroll": 320,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "feelings-workshop",
+      "width": 320,
+      "scroll": 320,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "little-reporter",
+      "width": 320,
+      "scroll": 320,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "feelings-house",
+      "width": 390,
+      "scroll": 390,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "feelings-camera",
+      "width": 390,
+      "scroll": 390,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "helping-hands",
+      "width": 390,
+      "scroll": 390,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "feelings-workshop",
+      "width": 390,
+      "scroll": 390,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "little-reporter",
+      "width": 390,
+      "scroll": 390,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "feelings-house",
+      "width": 768,
+      "scroll": 768,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "feelings-camera",
+      "width": 768,
+      "scroll": 768,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "helping-hands",
+      "width": 768,
+      "scroll": 768,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "feelings-workshop",
+      "width": 768,
+      "scroll": 768,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "little-reporter",
+      "width": 768,
+      "scroll": 768,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "feelings-house",
+      "width": 1024,
+      "scroll": 1024,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "feelings-camera",
+      "width": 1024,
+      "scroll": 1024,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "helping-hands",
+      "width": 1024,
+      "scroll": 1024,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "feelings-workshop",
+      "width": 1024,
+      "scroll": 1024,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "little-reporter",
+      "width": 1024,
+      "scroll": 1024,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "feelings-house",
+      "width": 1366,
+      "scroll": 1366,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "feelings-camera",
+      "width": 1366,
+      "scroll": 1366,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "helping-hands",
+      "width": 1366,
+      "scroll": 1366,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "feelings-workshop",
+      "width": 1366,
+      "scroll": 1366,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    },
+    {
+      "route": "little-reporter",
+      "width": 1366,
+      "scroll": 1366,
+      "font": "\"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "canvas": 1,
+      "badImages": 0
+    }
+  ],
+  "completionCounts": {
+    "u5feelingshouse": 1,
+    "u5feelingscamera": 1,
+    "u5helpinghands": 1,
+    "u5feelingsworkshop": 1,
+    "u5littlereporter": 1
+  },
+  "lifecycle": {
+    "muteStopsAudio": true,
+    "leaveDestroysScene": true,
+    "reducedMotionStill": true,
+    "audioFailureBlocksListeningTask": true
+  },
+  "errors": [],
+  "missing": [],
+  "liveWorkerDeployed": false,
+  "childOutcomes": "NOT_MEASURED",
+  "video": "C:\\Users\\Admin\\Documents\\GitHub\\game-tieng-anh\\docs\\game-plans\\unit5-feelings\\evidence\\video\\page@83337223e393329dd999b4f6495113e0.webm"
+}

@@ -15,13 +15,16 @@
    form.append('expectedAnswer',round.questionToy===round.displayedToy?'yes':'no');
    if(round.questionType)form.append('questionType',round.questionType);
    const response=await fetch(url,{method:'POST',body:form,signal,credentials:'omit',cache:'no-store',referrerPolicy:'no-referrer'});
-   if(!response.ok)throw new Error('service-unavailable');
+   if(!response.ok){
+    if(round.questionType==='feeling-sentence'&&response.status===400){const error=await response.json().catch(()=>null);if(error?.error==='INVALID_QUESTION_TYPE')throw new Error('lesson-unavailable');}
+    throw new Error('service-unavailable');
+   }
    const result=await response.json();
    if(round.questionType==='mystery-question'&&result.result==='CORRECT'&&!window.ToySpeechEvaluator.toys.includes(result.guessedToy))throw new Error('invalid-response');
    if(typeof result.transcript!=='string'||typeof result.normalized!=='string'||!['CORRECT','INCOMPLETE','WRONG_LOGIC','UNCLEAR'].includes(result.result)||!['YES','NO','NAME','QUESTION','WORD',null].includes(result.answerType))throw new Error('invalid-response');
-   if(['toy-word','gg-word','jj-word','gg-letter-name','number-word','story-line','family-introduction','family-yes-no'].includes(round.questionType)&&result.result==='CORRECT'){
+   if(['toy-word','gg-word','jj-word','gg-letter-name','number-word','story-line','family-introduction','family-yes-no','feeling-sentence'].includes(round.questionType)&&result.result==='CORRECT'){
     const checked=window.ToySpeechEvaluator.evaluate(result.transcript,round.questionToy,round.displayedToy,round.questionType);
-    if(checked.result!=='CORRECT'||result.answerType!==(['gg-letter-name','story-line','family-introduction'].includes(round.questionType)?'NAME':round.questionType==='family-yes-no'?(round.questionToy===round.displayedToy?'YES':'NO'):'WORD'))throw new Error('invalid-response');
+    if(checked.result!=='CORRECT'||result.answerType!==(['gg-letter-name','story-line','family-introduction','feeling-sentence'].includes(round.questionType)?'NAME':round.questionType==='family-yes-no'?(round.questionToy===round.displayedToy?'YES':'NO'):'WORD'))throw new Error('invalid-response');
    }
    return result;
   },

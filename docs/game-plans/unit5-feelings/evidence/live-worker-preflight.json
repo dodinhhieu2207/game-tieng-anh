@@ -1,0 +1,8 @@
+{
+  "status": 400,
+  "body": {
+    "error": "INVALID_QUESTION_TYPE"
+  },
+  "source": "Generated Higgs model recording, no student audio",
+  "scope": "Live endpoint task support check, not recognition quality"
+}

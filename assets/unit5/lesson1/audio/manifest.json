@@ -1,0 +1,807 @@
+{
+  "clips": {
+    "words/happy": {
+      "text": "Happy.",
+      "src": "assets/unit5/lesson1/audio/words/happy.mp3",
+      "duration": 0.812,
+      "sha256": "d58271dfe064275224ff3881635d268c52f3516c88a0f4620170ce7ef06b864a",
+      "qaTranscript": "Happy",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Happy",
+          "start": 0.0,
+          "end": 0.18
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19710
+    },
+    "words/sad": {
+      "text": "Sad.",
+      "src": "assets/unit5/lesson1/audio/words/sad.mp3",
+      "duration": 0.894,
+      "sha256": "6f7c702d0717479061eba0d8133dbf4a4abb6cc361796e6a93a3632ba8af81e0",
+      "qaTranscript": "Sad.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Sad",
+          "start": 0.0,
+          "end": 0.34
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19723
+    },
+    "words/hungry": {
+      "text": "Hungry.",
+      "src": "assets/unit5/lesson1/audio/words/hungry.mp3",
+      "duration": 0.893,
+      "sha256": "dd79057d18345e0080430633aeb262e7e6d881fe1458d4dd705315b680ccd173",
+      "qaTranscript": "Hungry",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Hungry",
+          "start": 0.0,
+          "end": 0.2
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19736
+    },
+    "words/thirsty": {
+      "text": "Thirsty.",
+      "src": "assets/unit5/lesson1/audio/words/thirsty.mp3",
+      "duration": 1.004,
+      "sha256": "68d3deb9cc1fb9d61ef1e2b646aa88d0047e9a7594f289b76e7aecb86167ecca",
+      "qaTranscript": "Thirsty",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Thirsty",
+          "start": 0.0,
+          "end": 0.98
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19749
+    },
+    "words/hot": {
+      "text": "Hot.",
+      "src": "assets/unit5/lesson1/audio/words/hot.mp3",
+      "duration": 0.818,
+      "sha256": "dd5ad43567a3c6aad113bc6947c1a789aa4d7d3f176a33db1b796937abc85640",
+      "qaTranscript": "Hot.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Hot",
+          "start": 0.0,
+          "end": 0.14
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19762
+    },
+    "words/cold": {
+      "text": "Cold.",
+      "src": "assets/unit5/lesson1/audio/words/cold.mp3",
+      "duration": 0.83,
+      "sha256": "18f5427b067888b6f1adfeaf978d1a4926621c16a4ba786269536a8da124b2a4",
+      "qaTranscript": "Cold.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Cold",
+          "start": 0.0,
+          "end": 0.26
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19775
+    },
+    "sentences/he-happy": {
+      "text": "He's happy.",
+      "src": "assets/unit5/lesson1/audio/sentences/he-happy.mp3",
+      "duration": 1.126,
+      "sha256": "84c8283c5965c521dc443459a4714d0dd465602d4ee718659a0fc42f0481b206",
+      "qaTranscript": "He's happy.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "He's",
+          "start": 0.0,
+          "end": 0.32
+        },
+        {
+          "word": "happy",
+          "start": 0.32,
+          "end": 0.58
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19788
+    },
+    "sentences/she-happy": {
+      "text": "She's happy.",
+      "src": "assets/unit5/lesson1/audio/sentences/she-happy.mp3",
+      "duration": 1.141,
+      "sha256": "2a82e31dfd6f8951940d8c94c88198ff0ee116eb059b68cd75e481ac130ed72d",
+      "qaTranscript": "She's happy.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "She's",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "happy",
+          "start": 0.36,
+          "end": 0.54
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19801
+    },
+    "sentences/he-sad": {
+      "text": "He's sad.",
+      "src": "assets/unit5/lesson1/audio/sentences/he-sad.mp3",
+      "duration": 1.07,
+      "sha256": "f371730cc539ee6c14ca6e482ce66e5771a7d156f57909f058bd719d3e4e1cd5",
+      "qaTranscript": "He's sad.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "He's",
+          "start": 0.0,
+          "end": 0.32
+        },
+        {
+          "word": "sad",
+          "start": 0.32,
+          "end": 0.56
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19814
+    },
+    "sentences/she-sad": {
+      "text": "She's sad.",
+      "src": "assets/unit5/lesson1/audio/sentences/she-sad.mp3",
+      "duration": 1.172,
+      "sha256": "8b432669ef938a388e5b6a46dfdaf18b05f46c58a8a53313099e66c9a8bc754b",
+      "qaTranscript": "She's sad.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "She's",
+          "start": 0.0,
+          "end": 0.42
+        },
+        {
+          "word": "sad",
+          "start": 0.42,
+          "end": 0.74
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19827
+    },
+    "sentences/he-hungry": {
+      "text": "He's hungry.",
+      "src": "assets/unit5/lesson1/audio/sentences/he-hungry.mp3",
+      "duration": 1.189,
+      "sha256": "ee65564765d7781f7a5030d63958549642010cb050c0f099847af71c5fcc8633",
+      "qaTranscript": "He's hungry.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "He's",
+          "start": 0.0,
+          "end": 0.26
+        },
+        {
+          "word": "hungry",
+          "start": 0.26,
+          "end": 0.5
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19840
+    },
+    "sentences/she-hungry": {
+      "text": "She's hungry.",
+      "src": "assets/unit5/lesson1/audio/sentences/she-hungry.mp3",
+      "duration": 1.274,
+      "sha256": "ddbc56339b769f33d9ecc1a6fd0b9af7124c186b38cf4bf22359e8690200ace5",
+      "qaTranscript": "She's hungry.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "She's",
+          "start": 0.0,
+          "end": 0.44
+        },
+        {
+          "word": "hungry",
+          "start": 0.44,
+          "end": 0.66
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19853
+    },
+    "sentences/he-thirsty": {
+      "text": "He's thirsty.",
+      "src": "assets/unit5/lesson1/audio/sentences/he-thirsty.mp3",
+      "duration": 1.289,
+      "sha256": "3b96bab480fd6b50f166e2ba9df9a73876cf156caab84f819c87dd50e812471d",
+      "qaTranscript": "He's thirsty.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "He's",
+          "start": 0.0,
+          "end": 0.48
+        },
+        {
+          "word": "thirsty",
+          "start": 0.48,
+          "end": 0.6
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19866
+    },
+    "sentences/she-thirsty": {
+      "text": "She's thirsty.",
+      "src": "assets/unit5/lesson1/audio/sentences/she-thirsty.mp3",
+      "duration": 1.321,
+      "sha256": "e8646c503f1ef5f8fcaf574b3c8ab02465a112b19094893a82be3374cbcaa388",
+      "qaTranscript": "She's thirsty.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "She's",
+          "start": 0.0,
+          "end": 0.44
+        },
+        {
+          "word": "thirsty",
+          "start": 0.44,
+          "end": 0.64
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19879
+    },
+    "sentences/he-hot": {
+      "text": "He's hot.",
+      "src": "assets/unit5/lesson1/audio/sentences/he-hot.mp3",
+      "duration": 1.085,
+      "sha256": "c53265f5b2e1adae5e438c36902ac267fa540c02adcd0167cf48fabeaddfa4fa",
+      "qaTranscript": "He's hot.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "He's",
+          "start": 0.0,
+          "end": 0.34
+        },
+        {
+          "word": "hot",
+          "start": 0.34,
+          "end": 0.62
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19892
+    },
+    "sentences/she-hot": {
+      "text": "She's hot.",
+      "src": "assets/unit5/lesson1/audio/sentences/she-hot.mp3",
+      "duration": 1.2,
+      "sha256": "996ebcdc3342fc82064cb799faf536e5524375c7c436ac8092bed598a05c2b3a",
+      "qaTranscript": "She's hot.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "She's",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "hot",
+          "start": 0.38,
+          "end": 0.66
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19905
+    },
+    "sentences/he-cold": {
+      "text": "He's cold.",
+      "src": "assets/unit5/lesson1/audio/sentences/he-cold.mp3",
+      "duration": 1.121,
+      "sha256": "de1a851fc6e6734357c89e840063c6eca0c3271536de257ac3216be1f704aa2f",
+      "qaTranscript": "He's cold.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "He's",
+          "start": 0.0,
+          "end": 0.28
+        },
+        {
+          "word": "cold",
+          "start": 0.28,
+          "end": 0.56
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19918
+    },
+    "sentences/she-cold": {
+      "text": "She's cold.",
+      "src": "assets/unit5/lesson1/audio/sentences/she-cold.mp3",
+      "duration": 1.257,
+      "sha256": "72beaab1bfc99c205489cac112e7ba0c5f5f0912a8351b1dc2715bbc027ab62d",
+      "qaTranscript": "She's cold.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "She's",
+          "start": 0.0,
+          "end": 0.42
+        },
+        {
+          "word": "cold",
+          "start": 0.42,
+          "end": 0.62
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19931
+    },
+    "instructions/present": {
+      "text": "Listen, point, and say.",
+      "src": "assets/unit5/lesson1/audio/instructions/present.mp3",
+      "duration": 2.441,
+      "sha256": "6ea947b735079c1ce345ac006aadaa6a0b8ffd1e926a5d481ed60c8e3f8325fa",
+      "qaTranscript": "Listen, point, and say.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Listen",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "point",
+          "start": 0.76,
+          "end": 1.04
+        },
+        {
+          "word": "and",
+          "start": 1.6,
+          "end": 1.7
+        },
+        {
+          "word": "say",
+          "start": 1.7,
+          "end": 2.0
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19944
+    },
+    "instructions/camera": {
+      "text": "Listen. Find the person.",
+      "src": "assets/unit5/lesson1/audio/instructions/camera.mp3",
+      "duration": 2.257,
+      "sha256": "22008f848294ce264d6528d5e23c8920aa2e4d9898e7a1e61a0fd1acf522156c",
+      "qaTranscript": "Listen, find the person.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Listen",
+          "start": 0.0,
+          "end": 0.26
+        },
+        {
+          "word": "Find",
+          "start": 0.86,
+          "end": 1.14
+        },
+        {
+          "word": "the",
+          "start": 1.14,
+          "end": 1.38
+        },
+        {
+          "word": "person",
+          "start": 1.38,
+          "end": 1.84
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19957
+    },
+    "instructions/help": {
+      "text": "Look. What does she need?",
+      "src": "assets/unit5/lesson1/audio/instructions/help.mp3",
+      "duration": 2.059,
+      "sha256": "71bfd5f2e5bca0ec86aa78e114cd69a72c3a231d43fafd428f4a124c0b8ce753",
+      "qaTranscript": "Look, what does she need?",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Look",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "What",
+          "start": 0.7,
+          "end": 0.98
+        },
+        {
+          "word": "does",
+          "start": 0.98,
+          "end": 1.16
+        },
+        {
+          "word": "she",
+          "start": 1.16,
+          "end": 1.36
+        },
+        {
+          "word": "need",
+          "start": 1.36,
+          "end": 1.58
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19970
+    },
+    "instructions/help-he": {
+      "text": "Look. What does he need?",
+      "src": "assets/unit5/lesson1/audio/instructions/help-he.mp3",
+      "duration": 2.134,
+      "sha256": "5391feeae594d93504df79c371290b693ed2bd76c29c5de9a3e6704aa1cb6a40",
+      "qaTranscript": "Look, what does he need?",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Look",
+          "start": 0.0,
+          "end": 0.26
+        },
+        {
+          "word": "What",
+          "start": 0.7,
+          "end": 1.0
+        },
+        {
+          "word": "does",
+          "start": 1.0,
+          "end": 1.2
+        },
+        {
+          "word": "he",
+          "start": 1.2,
+          "end": 1.36
+        },
+        {
+          "word": "need",
+          "start": 1.36,
+          "end": 1.6
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19983
+    },
+    "instructions/match": {
+      "text": "Listen. Match the word to the picture.",
+      "src": "assets/unit5/lesson1/audio/instructions/match.mp3",
+      "duration": 2.859,
+      "sha256": "15459ae53573c714d2ee2b4fe7138df7d51ac198e510fb60da413acc5296b375",
+      "qaTranscript": "Listen, match the word to the picture.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Listen",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "Match",
+          "start": 0.84,
+          "end": 1.16
+        },
+        {
+          "word": "the",
+          "start": 1.22,
+          "end": 1.44
+        },
+        {
+          "word": "word",
+          "start": 1.44,
+          "end": 1.7
+        },
+        {
+          "word": "to",
+          "start": 1.7,
+          "end": 1.92
+        },
+        {
+          "word": "the",
+          "start": 1.92,
+          "end": 2.02
+        },
+        {
+          "word": "picture",
+          "start": 2.02,
+          "end": 2.42
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 19996
+    },
+    "instructions/build": {
+      "text": "Look at the word. Put the letters together.",
+      "src": "assets/unit5/lesson1/audio/instructions/build.mp3",
+      "duration": 2.815,
+      "sha256": "26ba91e6b836bfd20ac8355032966cb89742d7996c981271f68ca62b3b1d7f91",
+      "qaTranscript": "Look at the word, put the letters together.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Look",
+          "start": 0.0,
+          "end": 0.2
+        },
+        {
+          "word": "at",
+          "start": 0.2,
+          "end": 0.34
+        },
+        {
+          "word": "the",
+          "start": 0.34,
+          "end": 0.46
+        },
+        {
+          "word": "word",
+          "start": 0.46,
+          "end": 0.74
+        },
+        {
+          "word": "Put",
+          "start": 1.26,
+          "end": 1.36
+        },
+        {
+          "word": "the",
+          "start": 1.36,
+          "end": 1.54
+        },
+        {
+          "word": "letters",
+          "start": 1.54,
+          "end": 1.76
+        },
+        {
+          "word": "together",
+          "start": 1.76,
+          "end": 2.46
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 20009
+    },
+    "instructions/speak": {
+      "text": "Look at the picture. Your turn to speak.",
+      "src": "assets/unit5/lesson1/audio/instructions/speak.mp3",
+      "duration": 2.704,
+      "sha256": "477b187d7096ad41867e31c6b5489e77478ce649e5290351e6f292ba88feffe8",
+      "qaTranscript": "Look at the picture, your turn to speak.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Look",
+          "start": 0.0,
+          "end": 0.2
+        },
+        {
+          "word": "at",
+          "start": 0.2,
+          "end": 0.32
+        },
+        {
+          "word": "the",
+          "start": 0.32,
+          "end": 0.42
+        },
+        {
+          "word": "picture",
+          "start": 0.42,
+          "end": 0.76
+        },
+        {
+          "word": "Your",
+          "start": 1.32,
+          "end": 1.46
+        },
+        {
+          "word": "turn",
+          "start": 1.46,
+          "end": 1.74
+        },
+        {
+          "word": "to",
+          "start": 1.74,
+          "end": 1.92
+        },
+        {
+          "word": "speak",
+          "start": 1.92,
+          "end": 2.18
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 20022
+    },
+    "feedback/try-again": {
+      "text": "Try again.",
+      "src": "assets/unit5/lesson1/audio/feedback/try-again.mp3",
+      "duration": 1.033,
+      "sha256": "f495ed84f86653f3cda6c1fd8309633ba8c3d352b5511a7a6ce05d92954b9738",
+      "qaTranscript": "Try again.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Try",
+          "start": 0.0,
+          "end": 0.14
+        },
+        {
+          "word": "again",
+          "start": 0.14,
+          "end": 0.54
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 20035
+    },
+    "feedback/correct": {
+      "text": "Well done!",
+      "src": "assets/unit5/lesson1/audio/feedback/correct.mp3",
+      "duration": 1.128,
+      "sha256": "0ef158485b2e418c37f4e5f6eefe0d662981fddef907a283e7806db4b10dc26a",
+      "qaTranscript": "Well done.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Well",
+          "start": 0.0,
+          "end": 0.16
+        },
+        {
+          "word": "done",
+          "start": 0.16,
+          "end": 0.54
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 20048
+    },
+    "feedback/complete": {
+      "text": "Great job! Look at your photos!",
+      "src": "assets/unit5/lesson1/audio/feedback/complete.mp3",
+      "duration": 2.662,
+      "sha256": "e4f5ac3870024397acf03c9da5feb6f49979d0472e717680b5ffc2da3c89c1a0",
+      "qaTranscript": "Great job. Look at your photos.",
+      "transcriptMatch": true,
+      "humanReviewed": false,
+      "words": [
+        {
+          "word": "Great",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "job",
+          "start": 0.24,
+          "end": 0.56
+        },
+        {
+          "word": "Look",
+          "start": 1.3,
+          "end": 1.36
+        },
+        {
+          "word": "at",
+          "start": 1.36,
+          "end": 1.48
+        },
+        {
+          "word": "your",
+          "start": 1.48,
+          "end": 1.62
+        },
+        {
+          "word": "photos",
+          "start": 1.62,
+          "end": 2.04
+        }
+      ],
+      "alignmentValid": true,
+      "alignmentMethod": "Whisper acoustic alignment against exact recorded script",
+      "seed": 20061
+    }
+  },
+  "version": "20261126-unit5-feelings-v1",
+  "engine": "Higgs Audio V3 local cached weights",
+  "voice": "Approved Unit 3 Belinda reference; original pitch, no pitch shift",
+  "referenceSha256": "8a6e483739144be6afa2735c41441d2970588fc089139685547a964c76510d07",
+  "humanReviewed": false,
+  "limits": "Automated transcript and alignment QA only. Listening approval and child outcomes are not measured."
+}

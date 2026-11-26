@@ -1,0 +1,244 @@
+{
+  "scope": "Standalone asset preview, not integrated game",
+  "assetsVerified": 376,
+  "layouts": [
+    {
+      "viewport": 320,
+      "body": 320,
+      "images": 66,
+      "font": true,
+      "badImages": 0
+    },
+    {
+      "viewport": 390,
+      "body": 390,
+      "images": 66,
+      "font": true,
+      "badImages": 0
+    },
+    {
+      "viewport": 768,
+      "body": 768,
+      "images": 66,
+      "font": true,
+      "badImages": 0
+    },
+    {
+      "viewport": 1024,
+      "body": 1024,
+      "images": 66,
+      "font": true,
+      "badImages": 0
+    },
+    {
+      "viewport": 1366,
+      "body": 1366,
+      "images": 66,
+      "font": true,
+      "badImages": 0
+    }
+  ],
+  "models": [
+    {
+      "word": "happy",
+      "nativeGifChanges": true,
+      "wordLights": [
+        "He’s",
+        "happy."
+      ]
+    },
+    {
+      "word": "sad",
+      "nativeGifChanges": true,
+      "wordLights": [
+        "He’s",
+        "sad."
+      ]
+    },
+    {
+      "word": "hungry",
+      "nativeGifChanges": true,
+      "wordLights": [
+        "She’s",
+        "hungry."
+      ]
+    },
+    {
+      "word": "thirsty",
+      "nativeGifChanges": true,
+      "wordLights": [
+        "She’s",
+        "thirsty."
+      ]
+    },
+    {
+      "word": "hot",
+      "nativeGifChanges": true,
+      "wordLights": [
+        "He’s",
+        "hot."
+      ]
+    },
+    {
+      "word": "cold",
+      "nativeGifChanges": true,
+      "wordLights": [
+        "She’s",
+        "cold."
+      ]
+    }
+  ],
+  "nativeAudio": [
+    {
+      "key": "words/happy",
+      "played": true,
+      "duration": 0.811958
+    },
+    {
+      "key": "words/sad",
+      "played": true,
+      "duration": 0.893792
+    },
+    {
+      "key": "words/hungry",
+      "played": true,
+      "duration": 0.893125
+    },
+    {
+      "key": "words/thirsty",
+      "played": true,
+      "duration": 1.003875
+    },
+    {
+      "key": "words/hot",
+      "played": true,
+      "duration": 0.817708
+    },
+    {
+      "key": "words/cold",
+      "played": true,
+      "duration": 0.830417
+    },
+    {
+      "key": "sentences/he-happy",
+      "played": true,
+      "duration": 1.126333
+    },
+    {
+      "key": "sentences/she-happy",
+      "played": true,
+      "duration": 1.141042
+    },
+    {
+      "key": "sentences/he-sad",
+      "played": true,
+      "duration": 1.070333
+    },
+    {
+      "key": "sentences/she-sad",
+      "played": true,
+      "duration": 1.171833
+    },
+    {
+      "key": "sentences/he-hungry",
+      "played": true,
+      "duration": 1.188917
+    },
+    {
+      "key": "sentences/she-hungry",
+      "played": true,
+      "duration": 1.274417
+    },
+    {
+      "key": "sentences/he-thirsty",
+      "played": true,
+      "duration": 1.289042
+    },
+    {
+      "key": "sentences/she-thirsty",
+      "played": true,
+      "duration": 1.321208
+    },
+    {
+      "key": "sentences/he-hot",
+      "played": true,
+      "duration": 1.084667
+    },
+    {
+      "key": "sentences/she-hot",
+      "played": true,
+      "duration": 1.199667
+    },
+    {
+      "key": "sentences/he-cold",
+      "played": true,
+      "duration": 1.12075
+    },
+    {
+      "key": "sentences/she-cold",
+      "played": true,
+      "duration": 1.25725
+    },
+    {
+      "key": "instructions/present",
+      "played": true,
+      "duration": 2.44125
+    },
+    {
+      "key": "instructions/camera",
+      "played": true,
+      "duration": 2.257417
+    },
+    {
+      "key": "instructions/help",
+      "played": true,
+      "duration": 2.058875
+    },
+    {
+      "key": "instructions/help-he",
+      "played": true,
+      "duration": 2.133708
+    },
+    {
+      "key": "instructions/match",
+      "played": true,
+      "duration": 2.858875
+    },
+    {
+      "key": "instructions/build",
+      "played": true,
+      "duration": 2.814708
+    },
+    {
+      "key": "instructions/speak",
+      "played": true,
+      "duration": 2.703542
+    },
+    {
+      "key": "feedback/try-again",
+      "played": true,
+      "duration": 1.032875
+    },
+    {
+      "key": "feedback/correct",
+      "played": true,
+      "duration": 1.128375
+    },
+    {
+      "key": "feedback/complete",
+      "played": true,
+      "duration": 2.6615
+    }
+  ],
+  "nativeAudioCount": 28,
+  "muteStopsAudio": true,
+  "suspendStopsAudio": true,
+  "reducedMotionStill": true,
+  "audioFailureVisible": true,
+  "errors": [],
+  "missing": [],
+  "humanListeningReview": false,
+  "classroomOutcomes": "NOT_MEASURED",
+  "publicDeployment": false,
+  "video": "C:\\Users\\Admin\\Documents\\GitHub\\game-tieng-anh\\docs\\game-plans\\unit5-feelings-assets\\evidence\\video\\page@27da108ef1e302788fd1fb4f8ef5422c.webm"
+}

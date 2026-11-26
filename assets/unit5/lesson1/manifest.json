@@ -1,0 +1,4813 @@
+{
+  "version": "20261126-feelings-assets-v1",
+  "scope": "Renderer-independent assets, not app integration",
+  "words": [
+    "happy",
+    "sad",
+    "hungry",
+    "thirsty",
+    "hot",
+    "cold"
+  ],
+  "font": "App Outfit Bold, local project font",
+  "assets": [
+    {
+      "file": "sources/bg-house.png",
+      "role": "imagegen original",
+      "sha256": "9f1f7bc3cb85ca581968c080a205b9cdf86b360d9c28d21bb9d31953c8ca900d",
+      "generation": "exec-8569185d-4ab7-4f1d-8ec1-2713e200e263",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/house.webp",
+      "role": "empty scene plate",
+      "sha256": "3f4c42f87770213771c53bf3a01ea047975f5542c4d065cd7a498c102c7ad6ad",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/happy.png",
+      "role": "imagegen original",
+      "sha256": "b9479e64af2307eb1d58f1dac98efe0e820d0834539ebe96efcf1823b4dbb139",
+      "generation": "exec-f0eb2ccf-612a-4bf5-ab6e-f89d8891a0f1",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/happy/frame-01.png",
+      "role": "registered animation frame",
+      "sha256": "7aa394fa2ef2b0f277f916c5b8745713e785146ad28304dda13e545700796dc5",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/happy/frame-02.png",
+      "role": "registered animation frame",
+      "sha256": "bd7dbe64e6dc122e7546c7af08017143ca0c5981e95236118d75eccfc5bb6fd8",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/happy/frame-03.png",
+      "role": "registered animation frame",
+      "sha256": "ccacef3a703c96d653de34c66fd39d76006013cce3502096d4b9816414963c8c",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/happy/frame-04.png",
+      "role": "registered animation frame",
+      "sha256": "8d323eb53dc8b315bf6a0ae5693106d2a63360476bb63803118f0211ff73fceb",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/happy/frame-05.png",
+      "role": "registered animation frame",
+      "sha256": "b4f257bf32267f6c9b5bd668d26cedb1f02892ead035c2c357c80085be7a5f59",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/happy/frame-06.png",
+      "role": "registered animation frame",
+      "sha256": "8d209782cce3f733dac35c7c64522c20be762186d367acc1fcc0223605378633",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/happy/idle.webp",
+      "role": "static actor / reduced motion",
+      "sha256": "1e250d735b0fd0dab119971d10e7a37012360133e9fe5c87ce4f88c0676f0d5a",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/happy/happy.gif",
+      "role": "authored-pose motion",
+      "sha256": "a588dcf479a4d85474ff0fd348616e70d2a92a4c0429cf9789c0606da79d2d4b",
+      "frames": 6,
+      "durationMs": 1280,
+      "loop": true,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/happy/happy-once.gif",
+      "role": "authored-pose motion",
+      "sha256": "7e3312a404dca2050653c59fc78bd4963c8bc4362fbbf6cf9958c8bcde90734a",
+      "frames": 6,
+      "durationMs": 1280,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/sad.png",
+      "role": "imagegen original",
+      "sha256": "e6595075fd775c4725ac430c01cf80a8db51fe9b4c6cadce2f419e023cadfb90",
+      "generation": "exec-5186ab93-d041-4027-99ed-04968889b5e5",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/sad/frame-01.png",
+      "role": "registered animation frame",
+      "sha256": "60477ab329044ad99fb6d435648c0ef17dedac15a42f82d28949a71580737b2a",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/sad/frame-02.png",
+      "role": "registered animation frame",
+      "sha256": "80ce9a1df28f4094ff51e9034d27645540b8dd5592d4273c5561a00cae7a818b",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/sad/frame-03.png",
+      "role": "registered animation frame",
+      "sha256": "10f8c92a6a22f3adcb0ed36cf758c6a24ad81e884dd0e28ee14d749f4a93f1f6",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/sad/frame-04.png",
+      "role": "registered animation frame",
+      "sha256": "e55e8042ee549397235056520762cb876313f672ea2720589ba4e2049fecac52",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/sad/frame-05.png",
+      "role": "registered animation frame",
+      "sha256": "d21fbad1d43783494110f627e17f01082dbb48659d1b403318dbbee4557b2e60",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/sad/frame-06.png",
+      "role": "registered animation frame",
+      "sha256": "fbe4ae782da223329d15396bfd7a7c83abb08f824ea822bd54347b89267a3e9f",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/sad/idle.webp",
+      "role": "static actor / reduced motion",
+      "sha256": "89d11a94c3733f28c452693a469428ffda82543ec9dd71c3c8e41e4452e19d8c",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/sad/sad.gif",
+      "role": "authored-pose motion",
+      "sha256": "4bcddd3e6bc6684f5d85d3118afc199f673f5e9b020eef363cca78eb4146e853",
+      "frames": 6,
+      "durationMs": 1280,
+      "loop": true,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/sad/sad-once.gif",
+      "role": "authored-pose motion",
+      "sha256": "3135b8ee4260b174fbf0a5a79f48b3e7edb863b5e6fb2410c81b40f6a6f6d5df",
+      "frames": 6,
+      "durationMs": 1280,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/hungry.png",
+      "role": "imagegen original",
+      "sha256": "90e5ab8ed686c68c6c226438c082faa9b5bb29a5c2898e4731934861195bddb8",
+      "generation": "exec-fb5b3ca7-3096-4583-a89f-360d548a1aa6",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/hungry-alpha-clean.png",
+      "role": "imagegen alpha-cleaned variant",
+      "sha256": "d5bc6547f5f333b1ae133ef6a0a96781ca9787a727f3c89a4efcf363d8b900ba",
+      "generation": "exec-648e6fd5-5b39-45fe-bd82-8792bd27b7cb",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/hungry/frame-01.png",
+      "role": "registered animation frame",
+      "sha256": "bcec01cc6a48e53de4a4037731dee3fdb9754a1996937050ed995390920a7db6",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/frame-02.png",
+      "role": "registered animation frame",
+      "sha256": "d2e886486f59691e9ed42edd1aec6f5eb97df3d3cdcbb1ec043238dbab4843e7",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/frame-03.png",
+      "role": "registered animation frame",
+      "sha256": "87bfc107651e445883d3556ed68b9ce3d6f998f7b3347c3e4eaed3a6315d4d57",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/frame-04.png",
+      "role": "registered animation frame",
+      "sha256": "54facbdd1bdcb908c8601e9c2d2c235af4cce9b6ab55547f685cab34cd3e94a2",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/frame-05.png",
+      "role": "registered animation frame",
+      "sha256": "cd853a8b9433249ab02989884e0c3b5e38a5b90f91136454025200245e97aeed",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/frame-06.png",
+      "role": "registered animation frame",
+      "sha256": "4cd9eee3bcc419c563ce25d0d7ec7a56c71921a4f1ae4b0160fb104d5a0a30ec",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/idle.webp",
+      "role": "static actor / reduced motion",
+      "sha256": "0064688c49a647a88a0e11c8ce70aacde976f224c78c0c65b44e9b478eba6e22",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/hungry.gif",
+      "role": "authored-pose motion",
+      "sha256": "471f316026cee19dbdc764710c95a8dfa0480a9ba0f2755a3f039a830bc0dfdd",
+      "frames": 6,
+      "durationMs": 1280,
+      "loop": true,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/hungry-once.gif",
+      "role": "authored-pose motion",
+      "sha256": "041680f8e4ca95a2135b88fe5e7bce7af23f2cbc2e74dc06b0d630f5954d421a",
+      "frames": 6,
+      "durationMs": 1280,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/thirsty.png",
+      "role": "imagegen original",
+      "sha256": "a926931ff79fc19c4b7413713138bb05ff1f36d1599ad624c9e9d048c0ad2aff",
+      "generation": "exec-e919bafb-2fa6-4b73-b5b4-decb98d30ff7",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/thirsty/frame-01.png",
+      "role": "registered animation frame",
+      "sha256": "71b8536990a202131bae352eabc4232d2c406b7d651a34e10dce4c7116fd2806",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/frame-02.png",
+      "role": "registered animation frame",
+      "sha256": "c0dbfdd0b1d485cb221008312e52070b54e2a92b5d1753f073d84d79f3420a93",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/frame-03.png",
+      "role": "registered animation frame",
+      "sha256": "499ef9c5fe1a715d79c78ec2ab44f30638561ad773b4372f8d8b729844fd5745",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/frame-04.png",
+      "role": "registered animation frame",
+      "sha256": "c5b3aac5580b9d679756d9d558dc8e87cac963e7210a5e84812640bc282a7bf9",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/frame-05.png",
+      "role": "registered animation frame",
+      "sha256": "f201065a9718a8cd3398a59ca23f05f105e984409d15d54fdca5a356359a89f5",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/frame-06.png",
+      "role": "registered animation frame",
+      "sha256": "041544c2843844c627c021906b0bef5f6ea825885fc434658e075dc2b48c2c86",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/idle.webp",
+      "role": "static actor / reduced motion",
+      "sha256": "90e8cd68498125fb2bfec68454734cc060e69a19bb89193f2dd05ee44aa9ed6c",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/thirsty.gif",
+      "role": "authored-pose motion",
+      "sha256": "fc47c4974907a6391911b858c78a069a35d8bccbbf8fa767286f29f7f940fac5",
+      "frames": 6,
+      "durationMs": 1280,
+      "loop": true,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/thirsty-once.gif",
+      "role": "authored-pose motion",
+      "sha256": "c93f58f2a75fd48ba1d6657522b06342028526612342745b84dcb7a7c63aa95e",
+      "frames": 6,
+      "durationMs": 1280,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/hot.png",
+      "role": "imagegen original",
+      "sha256": "0c65f6045a1debdf41ec0497dc95b098f4c3f48a256bd80ffa6b68b98451cea1",
+      "generation": "exec-ee89c50d-e92c-4f27-9c6f-4d0ab6600e6a",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/hot-alpha-clean.png",
+      "role": "imagegen alpha-cleaned variant",
+      "sha256": "00f6cfe05463abf31d493090657379306a758800b00394b08591ccbadc9efe9f",
+      "generation": "exec-3d9efbdf-8900-422a-943c-b5abbca4ffe4",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/hot/frame-01.png",
+      "role": "registered animation frame",
+      "sha256": "13a5733c8c83d2b3fea94a1ee9a79b834687ac5b1153cb7c7d6d7e6643bc5e4b",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/frame-02.png",
+      "role": "registered animation frame",
+      "sha256": "881cf3b2ddcf85509f5c196708d1cb1f8bbfcc7bde5781609d9117c2b86316e7",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/frame-03.png",
+      "role": "registered animation frame",
+      "sha256": "1234e145965d9652b499e36b419bf8354a45bea2d0d376b9e1bf89f8d76c52d2",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/frame-04.png",
+      "role": "registered animation frame",
+      "sha256": "23131c555bfddf4f061e5281fea01a0d05308f9e9b9a2c6aff031a024d9a0ceb",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/frame-05.png",
+      "role": "registered animation frame",
+      "sha256": "e1e8e48a907f0a7ea256e1c2a8a165d4464082a00c378124f97937feba882f03",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/frame-06.png",
+      "role": "registered animation frame",
+      "sha256": "4cb6bb8f53da96204c60867f69793463f99e4c5cb1471871f2275d8387b35978",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/idle.webp",
+      "role": "static actor / reduced motion",
+      "sha256": "35e2f2722153354625266c3d805d19550f8f9d9aaa2df67b3717573b8053f0c9",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/hot.gif",
+      "role": "authored-pose motion",
+      "sha256": "3db2fff0a2b610515026076df25a91360cbbf4c630e84e10d2e9b42d96d048ec",
+      "frames": 6,
+      "durationMs": 1280,
+      "loop": true,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/hot-once.gif",
+      "role": "authored-pose motion",
+      "sha256": "55a356b8bb68c93dde8ffe62970f1fd4fc83778454c13a14589c0438f581ee69",
+      "frames": 6,
+      "durationMs": 1280,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/cold.png",
+      "role": "imagegen original",
+      "sha256": "9997c29f410502faa30430efe2b797319c6b05362596a2afde2aa17527a0618f",
+      "generation": "exec-3422e86d-1619-4d98-9bbc-1d3d8d3f7050",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/cold/frame-01.png",
+      "role": "registered animation frame",
+      "sha256": "2f97eee8e89e9e2d7c44a9a63230a53fd1352ec4aeadf0c733e2d1b2eed09358",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/frame-02.png",
+      "role": "registered animation frame",
+      "sha256": "7f27d96c466523ccc94253c07f33cb2b99576b125718e8a25ee7d496b81e81fd",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/frame-03.png",
+      "role": "registered animation frame",
+      "sha256": "547ca47233a06d8df68513010560631c22a259825c55b2d22ab96aa9a86b9532",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/frame-04.png",
+      "role": "registered animation frame",
+      "sha256": "70b130558d05d506777736cd5e960be99e13af5fb709f9a0d32539c79641d4b1",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/frame-05.png",
+      "role": "registered animation frame",
+      "sha256": "e743821526fba576e71f6d3481a5977f1ed9c3d7ecc7292f259a51abf6a23098",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/frame-06.png",
+      "role": "registered animation frame",
+      "sha256": "42cfa9ef87391c1756ece09f3dd88769810134a7d98469d52bd9caf25af019a9",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/idle.webp",
+      "role": "static actor / reduced motion",
+      "sha256": "cfd7a303ae92d8684b7ae140de20e05f172cd92d8334540756f121d7800bb26d",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/cold.gif",
+      "role": "authored-pose motion",
+      "sha256": "28aa0cc7181179257a4c86982b52bcbabaa5e01c14f408f734bf3c063ffff799",
+      "frames": 6,
+      "durationMs": 1280,
+      "loop": true,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/cold-once.gif",
+      "role": "authored-pose motion",
+      "sha256": "40fe68ef1b08bc95a6aa6e71526e2db1a1145db56ca17ee8b2c10919c2b3cfce",
+      "frames": 6,
+      "durationMs": 1280,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/bg-workshop.png",
+      "role": "imagegen original",
+      "sha256": "3d5331fd42a282d2dd3096ce60964179f092b1e6e9af96eb80671e2e0cc36e89",
+      "generation": "exec-908ce2de-f151-413b-aba4-eb2b8f0230c0",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/workshop.webp",
+      "role": "empty scene plate",
+      "sha256": "460d25ee45a1fe653ab0f5c82e2e9f282282c4e4aa67787b9679bb2bd39e0f89",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/bg-helping.png",
+      "role": "imagegen original",
+      "sha256": "3f9742ffa138ea692cdfe9496b0864bf5e2506d00a0f9c57c85b68a3b2800547",
+      "generation": "exec-39d279ea-68f8-4779-aee6-0ecdfa45c426",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/helping.webp",
+      "role": "empty scene plate",
+      "sha256": "906fed936e26f2a4681fad880e04087a35e87fb017227ce96ff59c472bebb7fd",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/bg-reporter.png",
+      "role": "imagegen original",
+      "sha256": "88c67bc22bb1f7e01bfe878a96be2938923a9343af0309f4d67bba11126cac61",
+      "generation": "exec-3118dd54-4ac3-4d72-a552-d92ba6d4473f",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "backgrounds/reporter.webp",
+      "role": "empty scene plate",
+      "sha256": "037e5bb93630bade847f929cba0f2f88b662981b0b0d6ea7b1e4ca3b68d676cf",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/props.png",
+      "role": "imagegen original",
+      "sha256": "5092e14a16cfd6009648927c550797e5156d01d02a4d3d91f577bbe3cf85894e",
+      "generation": "exec-9acdb7b7-0865-4379-ab82-19b6759721e8",
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "file": "sources/props-alpha-clean.png",
+      "role": "imagegen alpha-cleaned variant",
+      "sha256": "93561a7276e7276be3e9e1b1af95c5365cb09e7718aafe9b55e90188a0a8f0f5",
+      "generation": "exec-4cbafa4f-9ff6-4ff0-a608-37a513447c4e",
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "file": "props/sandwich.webp",
+      "role": "interactive prop",
+      "sha256": "db07b0b48cc2e5888f0ea3e3b5c210f75530f8bdc3f8b1c02650c3870f39dcd5",
+      "sourceCell": 0,
+      "sourceBounds": [
+        7,
+        17,
+        358,
+        326
+      ],
+      "sourceSheetCrop": [
+        2,
+        20,
+        369,
+        355
+      ],
+      "width": 351,
+      "height": 309
+    },
+    {
+      "file": "props/water.webp",
+      "role": "interactive prop",
+      "sha256": "9eb4864768051d5cd69eaf787a6f3ef1cd24903b9ec91cb58814a0e87c1bdb84",
+      "sourceCell": 1,
+      "sourceBounds": [
+        24,
+        14,
+        261,
+        323
+      ],
+      "sourceSheetCrop": [
+        400,
+        20,
+        683,
+        355
+      ],
+      "width": 237,
+      "height": 309
+    },
+    {
+      "file": "props/fan.webp",
+      "role": "interactive prop",
+      "sha256": "e71088dac302f15e12f3b0d69f068388ee3f7cc3fda62f169d1f0fb7a260d62b",
+      "sourceCell": 2,
+      "sourceBounds": [
+        14,
+        25,
+        401,
+        303
+      ],
+      "sourceSheetCrop": [
+        692,
+        26,
+        1095,
+        350
+      ],
+      "width": 387,
+      "height": 278
+    },
+    {
+      "file": "props/blanket.webp",
+      "role": "interactive prop",
+      "sha256": "2bb8682ee355a6cf1762a7aea77605134913ad03ac4826777eb8c75200bbd375",
+      "sourceCell": 3,
+      "sourceBounds": [
+        0,
+        32,
+        346,
+        309
+      ],
+      "sourceSheetCrop": [
+        1091,
+        26,
+        1448,
+        355
+      ],
+      "width": 346,
+      "height": 277
+    },
+    {
+      "file": "props/camera.webp",
+      "role": "interactive prop",
+      "sha256": "c5dba81801e04d687ec7704c2fbbc6e43290e29775f29c9499c9c2946f910bf7",
+      "sourceCell": 4,
+      "sourceBounds": [
+        13,
+        26,
+        339,
+        317
+      ],
+      "sourceSheetCrop": [
+        4,
+        374,
+        365,
+        711
+      ],
+      "width": 326,
+      "height": 291
+    },
+    {
+      "file": "props/microphone.webp",
+      "role": "interactive prop",
+      "sha256": "385c27847ff6abf89f7b8f22731544496d04e64a27f2036b855d3d34cee5f47c",
+      "sourceCell": 5,
+      "sourceBounds": [
+        25,
+        9,
+        261,
+        335
+      ],
+      "sourceSheetCrop": [
+        400,
+        373,
+        689,
+        712
+      ],
+      "width": 236,
+      "height": 326
+    },
+    {
+      "file": "props/photo-clip.webp",
+      "role": "interactive prop",
+      "sha256": "192bea68f61586fc67e5674eea11e5688611aea32963872ee0163791292a4cbc",
+      "sourceCell": 6,
+      "sourceBounds": [
+        17,
+        17,
+        356,
+        285
+      ],
+      "sourceSheetCrop": [
+        704,
+        389,
+        1075,
+        712
+      ],
+      "width": 339,
+      "height": 268
+    },
+    {
+      "file": "props/shelf.webp",
+      "role": "interactive prop",
+      "sha256": "ad6e35adbc7b49d21a51e3b63ce93c3786db4e1570b0d7f255baf0409f40cf2d",
+      "sourceCell": 7,
+      "sourceBounds": [
+        11,
+        24,
+        368,
+        164
+      ],
+      "sourceSheetCrop": [
+        1077,
+        456,
+        1448,
+        654
+      ],
+      "width": 357,
+      "height": 140
+    },
+    {
+      "file": "props/word-tray.webp",
+      "role": "interactive prop",
+      "sha256": "79c7f0295a7e7670d3b49b75c8e956d7af4c60d46299e64125105db46443549b",
+      "sourceCell": 8,
+      "sourceBounds": [
+        3,
+        23,
+        362,
+        271
+      ],
+      "sourceSheetCrop": [
+        0,
+        765,
+        368,
+        1054
+      ],
+      "width": 359,
+      "height": 248
+    },
+    {
+      "file": "props/photo-frame.webp",
+      "role": "interactive prop",
+      "sha256": "473d2c5ddbd82fc43d1a9a5cf4bce4256e6d7a98e1564710d5120b10628bc002",
+      "sourceCell": 9,
+      "sourceBounds": [
+        13,
+        14,
+        297,
+        327
+      ],
+      "sourceSheetCrop": [
+        388,
+        730,
+        700,
+        1080
+      ],
+      "width": 284,
+      "height": 313
+    },
+    {
+      "file": "props/reward-star.webp",
+      "role": "interactive prop",
+      "sha256": "6c3f5799d03cb86e0d33cb814927d5b0c5ff9902379f4142d04f791b24c0eabd",
+      "sourceCell": 10,
+      "sourceBounds": [
+        17,
+        14,
+        312,
+        289
+      ],
+      "sourceSheetCrop": [
+        735,
+        745,
+        1080,
+        1080
+      ],
+      "width": 295,
+      "height": 275
+    },
+    {
+      "file": "props/photo-album.webp",
+      "role": "interactive prop",
+      "sha256": "77b3737d307aaaad163e1466595a88d7a45287d21d8c0248447385bb6001219d",
+      "sourceCell": 11,
+      "sourceBounds": [
+        19,
+        15,
+        337,
+        326
+      ],
+      "sourceSheetCrop": [
+        1090,
+        731,
+        1448,
+        1080
+      ],
+      "width": 318,
+      "height": 311
+    },
+    {
+      "file": "letters/a-base.svg",
+      "role": "individual letter tile",
+      "sha256": "035a4b653be40daa80ca9228ff865679fc59a5734a0b041b3edba91903f4925c",
+      "width": 120,
+      "height": 128,
+      "letter": "a",
+      "state": "base",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/a-selected.svg",
+      "role": "individual letter tile",
+      "sha256": "40aaf0089d39c6b8da7a26bf006698ffae97569840e453c0ff6906a52aba625b",
+      "width": 120,
+      "height": 128,
+      "letter": "a",
+      "state": "selected",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/a-correct.svg",
+      "role": "individual letter tile",
+      "sha256": "97ab7c5fa2302699ea101b8a5dcdc28e9d5b2212f10bd0830c1c081b98fe2060",
+      "width": 120,
+      "height": 128,
+      "letter": "a",
+      "state": "correct",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/a-hint.svg",
+      "role": "individual letter tile",
+      "sha256": "1eaa08c5a7dcd646f929987be645563b6dfb3f245a55f67647e75d58e07c5c07",
+      "width": 120,
+      "height": 128,
+      "letter": "a",
+      "state": "hint",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "glyphs/a.svg",
+      "role": "bare letter outline",
+      "sha256": "577f22cc1d2242fcfd780b5d0fd681b2419c0ca683393aa72de189157c270c39",
+      "width": 100,
+      "height": 112,
+      "letter": "a",
+      "baseline": 88
+    },
+    {
+      "file": "letters/c-base.svg",
+      "role": "individual letter tile",
+      "sha256": "8d0378e1f5890f87f6b5aa7ab8eeb6697506f5bba5ec20eccb9f02514e469357",
+      "width": 120,
+      "height": 128,
+      "letter": "c",
+      "state": "base",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/c-selected.svg",
+      "role": "individual letter tile",
+      "sha256": "c80c0021a3062ef47668d8c2839a445d33601367e73428258fc51964717493c1",
+      "width": 120,
+      "height": 128,
+      "letter": "c",
+      "state": "selected",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/c-correct.svg",
+      "role": "individual letter tile",
+      "sha256": "08912ee2676212b061f42d1fac6eae57d53664db4acfffb83d29bca37ac90a0f",
+      "width": 120,
+      "height": 128,
+      "letter": "c",
+      "state": "correct",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/c-hint.svg",
+      "role": "individual letter tile",
+      "sha256": "6b21a61b130c94746ba5f516e7fc91f84bad71ce5e2ce99fc82e78785559400b",
+      "width": 120,
+      "height": 128,
+      "letter": "c",
+      "state": "hint",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "glyphs/c.svg",
+      "role": "bare letter outline",
+      "sha256": "0b05fff4475fd398dfcea362124e1784f4c9c7efac66f396366bc5d867e44c88",
+      "width": 100,
+      "height": 112,
+      "letter": "c",
+      "baseline": 88
+    },
+    {
+      "file": "letters/d-base.svg",
+      "role": "individual letter tile",
+      "sha256": "aec0b99984071eba42832cd23137b125ce9c6fa31597637db39c4c4dcf1aeb8b",
+      "width": 120,
+      "height": 128,
+      "letter": "d",
+      "state": "base",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/d-selected.svg",
+      "role": "individual letter tile",
+      "sha256": "25c9d4f488e77c470c24996f7aeec5dfc9bd25ef529e4a91f3d4aa90358e82d5",
+      "width": 120,
+      "height": 128,
+      "letter": "d",
+      "state": "selected",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/d-correct.svg",
+      "role": "individual letter tile",
+      "sha256": "7b1cef07c04332c449e8524882d2aed0153c75ed818cd38b664c3f7179a77900",
+      "width": 120,
+      "height": 128,
+      "letter": "d",
+      "state": "correct",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/d-hint.svg",
+      "role": "individual letter tile",
+      "sha256": "59096012e1742e01117a47ed5d0180e0d196953007ae8a858285f2dc84afd52e",
+      "width": 120,
+      "height": 128,
+      "letter": "d",
+      "state": "hint",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "glyphs/d.svg",
+      "role": "bare letter outline",
+      "sha256": "ac7a28193c3b232e7bc42d62d4e72b372eb8ddf06b3a298759126e855e5048ec",
+      "width": 100,
+      "height": 112,
+      "letter": "d",
+      "baseline": 88
+    },
+    {
+      "file": "letters/g-base.svg",
+      "role": "individual letter tile",
+      "sha256": "19b50769eabed1eb259db0fcae2915c52e3e12a777939a872f36403eaaef0255",
+      "width": 120,
+      "height": 128,
+      "letter": "g",
+      "state": "base",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/g-selected.svg",
+      "role": "individual letter tile",
+      "sha256": "c6c767d9e418443ce71148c2ed204b7a747b4beb7abc4e3bded2f52a167bc467",
+      "width": 120,
+      "height": 128,
+      "letter": "g",
+      "state": "selected",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/g-correct.svg",
+      "role": "individual letter tile",
+      "sha256": "0a1ce963958af76e800b702153d8df011a2b2271ec467171e1487cc5750d26b2",
+      "width": 120,
+      "height": 128,
+      "letter": "g",
+      "state": "correct",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/g-hint.svg",
+      "role": "individual letter tile",
+      "sha256": "538c55f034f65a9a14c5ab622f3008667fa2e0041dd88040c006e9b8a0661384",
+      "width": 120,
+      "height": 128,
+      "letter": "g",
+      "state": "hint",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "glyphs/g.svg",
+      "role": "bare letter outline",
+      "sha256": "4776ef62d0d99b47a1dcc7a8140e5f35ebc94daa0c98a4ae64380659278a7c03",
+      "width": 100,
+      "height": 112,
+      "letter": "g",
+      "baseline": 88
+    },
+    {
+      "file": "letters/h-base.svg",
+      "role": "individual letter tile",
+      "sha256": "589d5dd47176aa1abe6bb21ad96fd276c587898ed04d200f0132e9967138f7a1",
+      "width": 120,
+      "height": 128,
+      "letter": "h",
+      "state": "base",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/h-selected.svg",
+      "role": "individual letter tile",
+      "sha256": "9afb9885408af79a4171497f740681406086e422bb740617f9d60a2e522bdee3",
+      "width": 120,
+      "height": 128,
+      "letter": "h",
+      "state": "selected",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/h-correct.svg",
+      "role": "individual letter tile",
+      "sha256": "993232b80c62a9d9d2a905a9fcf0d0941f60ea111b51a3640067820774e24c13",
+      "width": 120,
+      "height": 128,
+      "letter": "h",
+      "state": "correct",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/h-hint.svg",
+      "role": "individual letter tile",
+      "sha256": "1ca910df1a9db8cc29a0928fa8af06214e3806393541adcb8a68328f7dd621c8",
+      "width": 120,
+      "height": 128,
+      "letter": "h",
+      "state": "hint",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "glyphs/h.svg",
+      "role": "bare letter outline",
+      "sha256": "da59eaee3af1459f52454ae8bad87ddf8c1ebcd8c1b2a3fee3ea8f3f587d9a07",
+      "width": 100,
+      "height": 112,
+      "letter": "h",
+      "baseline": 88
+    },
+    {
+      "file": "letters/i-base.svg",
+      "role": "individual letter tile",
+      "sha256": "16f22d7a1a041d166c082a1fcc99baf80f27bc1514d34a7841bfead2db707d74",
+      "width": 120,
+      "height": 128,
+      "letter": "i",
+      "state": "base",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/i-selected.svg",
+      "role": "individual letter tile",
+      "sha256": "15dce52933a2e5b6a299baca11bcf66e9d741f97932a842df7d5e532776d0992",
+      "width": 120,
+      "height": 128,
+      "letter": "i",
+      "state": "selected",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/i-correct.svg",
+      "role": "individual letter tile",
+      "sha256": "ec13fafe7a4063f3db292f4993b631dc4bfa8596f7de37f82af007f9d63f05e3",
+      "width": 120,
+      "height": 128,
+      "letter": "i",
+      "state": "correct",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/i-hint.svg",
+      "role": "individual letter tile",
+      "sha256": "b439aa9728f422035a84f0271edee4d556fc82528ad7bf2b8a605a98145c7683",
+      "width": 120,
+      "height": 128,
+      "letter": "i",
+      "state": "hint",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "glyphs/i.svg",
+      "role": "bare letter outline",
+      "sha256": "35657d356f4a7408309bdda77298f56244a73fd59b78ddcf141365d95e30f2e0",
+      "width": 100,
+      "height": 112,
+      "letter": "i",
+      "baseline": 88
+    },
+    {
+      "file": "letters/l-base.svg",
+      "role": "individual letter tile",
+      "sha256": "8cae17e149f0d1cde3e44f9ad10a7eeb3ce4027e10b89076ac5ec146f74f8b6a",
+      "width": 120,
+      "height": 128,
+      "letter": "l",
+      "state": "base",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/l-selected.svg",
+      "role": "individual letter tile",
+      "sha256": "5f7782afd7eed4fbfb332597fc0b6fc82fe2cd14388f9c8b8f6100e6b2fdbb5a",
+      "width": 120,
+      "height": 128,
+      "letter": "l",
+      "state": "selected",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/l-correct.svg",
+      "role": "individual letter tile",
+      "sha256": "2e82eac0a3a1465cda496ae4ba4c10c22c355e6c77d64d365c15716904262d01",
+      "width": 120,
+      "height": 128,
+      "letter": "l",
+      "state": "correct",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/l-hint.svg",
+      "role": "individual letter tile",
+      "sha256": "ee04f5a710460a4110355e90db0558a12e117264a5e6a8b7d86874d15c7db134",
+      "width": 120,
+      "height": 128,
+      "letter": "l",
+      "state": "hint",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "glyphs/l.svg",
+      "role": "bare letter outline",
+      "sha256": "8ef3b4aab10ec02336028569ac0a01273992d73f228a8b46ee1a257179b3fe06",
+      "width": 100,
+      "height": 112,
+      "letter": "l",
+      "baseline": 88
+    },
+    {
+      "file": "letters/n-base.svg",
+      "role": "individual letter tile",
+      "sha256": "8fc47fdb3f8ec4ebbb6551e3613ca2866d17af52cde74c28a58bba2dfa83eef4",
+      "width": 120,
+      "height": 128,
+      "letter": "n",
+      "state": "base",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/n-selected.svg",
+      "role": "individual letter tile",
+      "sha256": "40c0348396b3f4536a6e7f8a721527ac7840cc78db47e79894dd414e919af4f7",
+      "width": 120,
+      "height": 128,
+      "letter": "n",
+      "state": "selected",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/n-correct.svg",
+      "role": "individual letter tile",
+      "sha256": "a5a5cd36fd98cfcdc3ee2ec3616c82c911d4f374c5b1a7f9735cbfb13dfdabeb",
+      "width": 120,
+      "height": 128,
+      "letter": "n",
+      "state": "correct",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/n-hint.svg",
+      "role": "individual letter tile",
+      "sha256": "0bb3a2a75b3b966f6eea3a50eaa11479f6349dd00b02062f3156a3cb5bf63cb6",
+      "width": 120,
+      "height": 128,
+      "letter": "n",
+      "state": "hint",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "glyphs/n.svg",
+      "role": "bare letter outline",
+      "sha256": "27d9019df860d7132954dd0b291591c31690af4d6c3b3ae6a1a2d7819e33fe3f",
+      "width": 100,
+      "height": 112,
+      "letter": "n",
+      "baseline": 88
+    },
+    {
+      "file": "letters/o-base.svg",
+      "role": "individual letter tile",
+      "sha256": "726e806d9035dacb9a7d96b74c54286e4a5f73552f727ec309e2d17552c1b708",
+      "width": 120,
+      "height": 128,
+      "letter": "o",
+      "state": "base",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/o-selected.svg",
+      "role": "individual letter tile",
+      "sha256": "b438ada7b5f83781bbad5ab66cc15cfd72a0418277a296de479471f62bf1db92",
+      "width": 120,
+      "height": 128,
+      "letter": "o",
+      "state": "selected",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/o-correct.svg",
+      "role": "individual letter tile",
+      "sha256": "b1e77a5b5ba1a56a7390c4705de737f1f91a34040045e670da063b04a70c7c85",
+      "width": 120,
+      "height": 128,
+      "letter": "o",
+      "state": "correct",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/o-hint.svg",
+      "role": "individual letter tile",
+      "sha256": "52ab64387112fddc865c88a409cd38a91ec5340596362a59ffea1287bbd1ce48",
+      "width": 120,
+      "height": 128,
+      "letter": "o",
+      "state": "hint",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "glyphs/o.svg",
+      "role": "bare letter outline",
+      "sha256": "a07c39e3fd49528aa7d3a98fb9245522bfe9ea2d4afd8a6806ecf37cdeefd2c6",
+      "width": 100,
+      "height": 112,
+      "letter": "o",
+      "baseline": 88
+    },
+    {
+      "file": "letters/p-base.svg",
+      "role": "individual letter tile",
+      "sha256": "4aa08bcececd32fffb72b0bf4dfcb2661c44000a2f2e6e131064f64c28605a31",
+      "width": 120,
+      "height": 128,
+      "letter": "p",
+      "state": "base",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/p-selected.svg",
+      "role": "individual letter tile",
+      "sha256": "0b760446196740d749926914c5c3e4665a8f46b589df118956036697af00ff30",
+      "width": 120,
+      "height": 128,
+      "letter": "p",
+      "state": "selected",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/p-correct.svg",
+      "role": "individual letter tile",
+      "sha256": "28bf9255c774aa43f1f3645ce014d07d5346a53ccddf7dea90bd3b2a99a61d6e",
+      "width": 120,
+      "height": 128,
+      "letter": "p",
+      "state": "correct",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/p-hint.svg",
+      "role": "individual letter tile",
+      "sha256": "cefede7fabb02ee38e430eb0f8a04cc72ec5884090dba8688721cee079aec33e",
+      "width": 120,
+      "height": 128,
+      "letter": "p",
+      "state": "hint",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "glyphs/p.svg",
+      "role": "bare letter outline",
+      "sha256": "b411abb11b74d432b67a3a7fd8d538b792199c651e2b27f71d4614fcea6e6891",
+      "width": 100,
+      "height": 112,
+      "letter": "p",
+      "baseline": 88
+    },
+    {
+      "file": "letters/r-base.svg",
+      "role": "individual letter tile",
+      "sha256": "dfcebb56c7275bf4628adb15af95a3118c0a5bb4bb72ecd1ac1605e9af44735a",
+      "width": 120,
+      "height": 128,
+      "letter": "r",
+      "state": "base",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/r-selected.svg",
+      "role": "individual letter tile",
+      "sha256": "f8a5dcaf0d6d66a8b45af7d4aecf8ec69bc6b17fbdc294edab7b2fca148ebc73",
+      "width": 120,
+      "height": 128,
+      "letter": "r",
+      "state": "selected",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/r-correct.svg",
+      "role": "individual letter tile",
+      "sha256": "95ec0cad38fcd960fa65fdd71b92bb2cebb75cd33e4089e34c04654bf51d29ba",
+      "width": 120,
+      "height": 128,
+      "letter": "r",
+      "state": "correct",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/r-hint.svg",
+      "role": "individual letter tile",
+      "sha256": "8803ff172b7480ff350f1aeeb0208b7d64bf621e837bcca96d3a8c9802ed6569",
+      "width": 120,
+      "height": 128,
+      "letter": "r",
+      "state": "hint",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "glyphs/r.svg",
+      "role": "bare letter outline",
+      "sha256": "ae70a367e7cc041da7fcceab6e404ffcfb9ef62a0c275fe61505de25b7f5e68c",
+      "width": 100,
+      "height": 112,
+      "letter": "r",
+      "baseline": 88
+    },
+    {
+      "file": "letters/s-base.svg",
+      "role": "individual letter tile",
+      "sha256": "8200c51ad4089e6c0b7e48ba03029995aeef2dd09d9f3d9f821b91542e9af250",
+      "width": 120,
+      "height": 128,
+      "letter": "s",
+      "state": "base",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/s-selected.svg",
+      "role": "individual letter tile",
+      "sha256": "501d4bba53b79aaf53bfbbe0b9e41aca3c01143136f46244ce21119276cf4906",
+      "width": 120,
+      "height": 128,
+      "letter": "s",
+      "state": "selected",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/s-correct.svg",
+      "role": "individual letter tile",
+      "sha256": "d8f1bab6018601ab24c3f908f038a4afd3aa87c9d2f85269bdb9d1527ef69448",
+      "width": 120,
+      "height": 128,
+      "letter": "s",
+      "state": "correct",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/s-hint.svg",
+      "role": "individual letter tile",
+      "sha256": "545e80eeaab643fb2b6dc7fde5314b4362bdb93cb8df755d1ca580be9d93395d",
+      "width": 120,
+      "height": 128,
+      "letter": "s",
+      "state": "hint",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "glyphs/s.svg",
+      "role": "bare letter outline",
+      "sha256": "8ef5f65c42eb7989c1d0e12e2a469e52f9b44ca91f3998a078dea0bcc9097a5d",
+      "width": 100,
+      "height": 112,
+      "letter": "s",
+      "baseline": 88
+    },
+    {
+      "file": "letters/t-base.svg",
+      "role": "individual letter tile",
+      "sha256": "a88e92927a0820e5eff88411ef2a108780216850306bf8d7a81bea527a5e5275",
+      "width": 120,
+      "height": 128,
+      "letter": "t",
+      "state": "base",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/t-selected.svg",
+      "role": "individual letter tile",
+      "sha256": "568f97743f2a473aaef8301b547d5eb59d563dd7f4b87906c265e875750fcb4a",
+      "width": 120,
+      "height": 128,
+      "letter": "t",
+      "state": "selected",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/t-correct.svg",
+      "role": "individual letter tile",
+      "sha256": "887aa66af105ae7aea58c2500cde7c5860511cc2c3483843b0c0467b4f3c80f8",
+      "width": 120,
+      "height": 128,
+      "letter": "t",
+      "state": "correct",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/t-hint.svg",
+      "role": "individual letter tile",
+      "sha256": "f2abd072c516d7e7d9a626e2e5351be5ae849870a75701e980256824566c8730",
+      "width": 120,
+      "height": 128,
+      "letter": "t",
+      "state": "hint",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "glyphs/t.svg",
+      "role": "bare letter outline",
+      "sha256": "c61d49964cf548795cf58dfa57044087249347229c4ec6d677acf97135073b18",
+      "width": 100,
+      "height": 112,
+      "letter": "t",
+      "baseline": 88
+    },
+    {
+      "file": "letters/u-base.svg",
+      "role": "individual letter tile",
+      "sha256": "bd8b76974b84df806dee0bf8a71702ffbd692e88e4bd3f4b24fc04921fa73059",
+      "width": 120,
+      "height": 128,
+      "letter": "u",
+      "state": "base",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/u-selected.svg",
+      "role": "individual letter tile",
+      "sha256": "973dda8f2102cbdbb1e295c35dde92a94933aaa42e2132bb407f79f9c74b2729",
+      "width": 120,
+      "height": 128,
+      "letter": "u",
+      "state": "selected",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/u-correct.svg",
+      "role": "individual letter tile",
+      "sha256": "cd7cab76d7eaf7222dd27e62f23cec776fa2706decb918a5f7124ed5faef95e2",
+      "width": 120,
+      "height": 128,
+      "letter": "u",
+      "state": "correct",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/u-hint.svg",
+      "role": "individual letter tile",
+      "sha256": "c8df5de8198fe149aee0e9f1514a92f1bb1155ed762b5f473af1886424176b1e",
+      "width": 120,
+      "height": 128,
+      "letter": "u",
+      "state": "hint",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "glyphs/u.svg",
+      "role": "bare letter outline",
+      "sha256": "97578c8a1e032fdf40cf9fe75371e5c32d3e84aa9a2fb787f61e698c97686b37",
+      "width": 100,
+      "height": 112,
+      "letter": "u",
+      "baseline": 88
+    },
+    {
+      "file": "letters/y-base.svg",
+      "role": "individual letter tile",
+      "sha256": "e9ae3695f2f5b2e172759677186449b51141ce8e9058aa20f204a7eaab52f87e",
+      "width": 120,
+      "height": 128,
+      "letter": "y",
+      "state": "base",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/y-selected.svg",
+      "role": "individual letter tile",
+      "sha256": "0fc344fbdbd41bb255b51838d12a1424c1d9ad27aaf4a5e74e3c85018776dc4b",
+      "width": 120,
+      "height": 128,
+      "letter": "y",
+      "state": "selected",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/y-correct.svg",
+      "role": "individual letter tile",
+      "sha256": "2067969ee9bc2d6c80a9012c5032dd157ccf461372cc8345ce48ae2306118232",
+      "width": 120,
+      "height": 128,
+      "letter": "y",
+      "state": "correct",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "letters/y-hint.svg",
+      "role": "individual letter tile",
+      "sha256": "7e795bbff8da8d92e449b1b9d65ae0fb3176a848b2e5e6595c8dffa06c37da46",
+      "width": 120,
+      "height": 128,
+      "letter": "y",
+      "state": "hint",
+      "baseline": 91,
+      "advance": 120
+    },
+    {
+      "file": "glyphs/y.svg",
+      "role": "bare letter outline",
+      "sha256": "387d002e5d6cbc58c64d1f9acfefe9f1e2d9ebab9e059b4fd9644eef992d2ddf",
+      "width": 100,
+      "height": 112,
+      "letter": "y",
+      "baseline": 88
+    },
+    {
+      "file": "letters/tile-start.svg",
+      "role": "composable tile substrate",
+      "sha256": "145aa038e6dfa45efc8d4dc348e92228e12a590f9fef584fe78a784b91f3a558",
+      "width": 120,
+      "height": 128,
+      "advance": 120,
+      "baseline": 91
+    },
+    {
+      "file": "letters/tile-middle.svg",
+      "role": "composable tile substrate",
+      "sha256": "145aa038e6dfa45efc8d4dc348e92228e12a590f9fef584fe78a784b91f3a558",
+      "width": 120,
+      "height": 128,
+      "advance": 120,
+      "baseline": 91
+    },
+    {
+      "file": "letters/tile-end.svg",
+      "role": "composable tile substrate",
+      "sha256": "145aa038e6dfa45efc8d4dc348e92228e12a590f9fef584fe78a784b91f3a558",
+      "width": 120,
+      "height": 128,
+      "advance": 120,
+      "baseline": 91
+    },
+    {
+      "file": "letters/receiver.svg",
+      "role": "empty letter receiver",
+      "sha256": "08e9c5f1fea2c9358aea0bd84b5dfab4c24c0b9b39ffbe4412b56dedef38caee",
+      "width": 120,
+      "height": 128
+    },
+    {
+      "file": "words/happy-base.svg",
+      "role": "whole word label",
+      "sha256": "514b847a06b27553fa514f3970183710d9f7d8c6cb8e257c0b82426fa7d95192",
+      "width": 260,
+      "height": 116,
+      "word": "happy",
+      "state": "base",
+      "baseline": 77
+    },
+    {
+      "file": "words/happy-selected.svg",
+      "role": "whole word label",
+      "sha256": "f3b4a272cdf4df2c6a681719e2abc1d08ca4a40e617a2fa37b996a7b5806fd9a",
+      "width": 260,
+      "height": 116,
+      "word": "happy",
+      "state": "selected",
+      "baseline": 77
+    },
+    {
+      "file": "words/happy-correct.svg",
+      "role": "whole word label",
+      "sha256": "a49454a0bd937e4939156347805fbbeb076708f22f4cd9a5ca88e176805bdf26",
+      "width": 260,
+      "height": 116,
+      "word": "happy",
+      "state": "correct",
+      "baseline": 77
+    },
+    {
+      "file": "words/happy-hint.svg",
+      "role": "whole word label",
+      "sha256": "67da605f0a5476391b10d16b929b22197f1270c80d4dd13ba073216baed297d2",
+      "width": 260,
+      "height": 116,
+      "word": "happy",
+      "state": "hint",
+      "baseline": 77
+    },
+    {
+      "file": "words/happy.png",
+      "role": "whole word label raster",
+      "sha256": "e00b8c403896a40e1d0e0613503244a2ef5fc09120fa39079f826b8e6dd8e2a4",
+      "word": "happy",
+      "width": 520,
+      "height": 232
+    },
+    {
+      "file": "words/sad-base.svg",
+      "role": "whole word label",
+      "sha256": "1c9bfc8b710737c34a77fa6a514a7e39a5f2de4bd35fc846e44d48bdfcc3ff15",
+      "width": 230,
+      "height": 116,
+      "word": "sad",
+      "state": "base",
+      "baseline": 77
+    },
+    {
+      "file": "words/sad-selected.svg",
+      "role": "whole word label",
+      "sha256": "8e0430282d02be085275ca6ecdcddd58db5287b80c349469f84784af9e4712a7",
+      "width": 230,
+      "height": 116,
+      "word": "sad",
+      "state": "selected",
+      "baseline": 77
+    },
+    {
+      "file": "words/sad-correct.svg",
+      "role": "whole word label",
+      "sha256": "378564584e435052ea91a765cdd096c51b6bf2ec654e30801818e43032a1e1c2",
+      "width": 230,
+      "height": 116,
+      "word": "sad",
+      "state": "correct",
+      "baseline": 77
+    },
+    {
+      "file": "words/sad-hint.svg",
+      "role": "whole word label",
+      "sha256": "c7a00f70598a6b75ed54cd5b2307f80a195883cd3392572f75784f90c83057a4",
+      "width": 230,
+      "height": 116,
+      "word": "sad",
+      "state": "hint",
+      "baseline": 77
+    },
+    {
+      "file": "words/sad.png",
+      "role": "whole word label raster",
+      "sha256": "8f7b3fa2b3fee8746e6df41af050741224983a8478539df7dc717ede68052429",
+      "word": "sad",
+      "width": 460,
+      "height": 232
+    },
+    {
+      "file": "words/hungry-base.svg",
+      "role": "whole word label",
+      "sha256": "f1e2101f753a86191fa118e3afe0200c8e1b44a060e7970c5b6a5adb4a7248b4",
+      "width": 282,
+      "height": 116,
+      "word": "hungry",
+      "state": "base",
+      "baseline": 77
+    },
+    {
+      "file": "words/hungry-selected.svg",
+      "role": "whole word label",
+      "sha256": "474a4568d4aa2736a642e4db86a91d44653c12d0273c2b908235b48a68d0983f",
+      "width": 282,
+      "height": 116,
+      "word": "hungry",
+      "state": "selected",
+      "baseline": 77
+    },
+    {
+      "file": "words/hungry-correct.svg",
+      "role": "whole word label",
+      "sha256": "2cc2b03dfc8ea67d17797c82f678add817c3d59d13d4c4aac105963b6479fb16",
+      "width": 282,
+      "height": 116,
+      "word": "hungry",
+      "state": "correct",
+      "baseline": 77
+    },
+    {
+      "file": "words/hungry-hint.svg",
+      "role": "whole word label",
+      "sha256": "fb9a8bf512888c3e7cca5cd568f9ff9918f7ea05a84004ff8d7ef3c3155be512",
+      "width": 282,
+      "height": 116,
+      "word": "hungry",
+      "state": "hint",
+      "baseline": 77
+    },
+    {
+      "file": "words/hungry.png",
+      "role": "whole word label raster",
+      "sha256": "b1340024393426fecc8d91652604944da19e0a4c0432edb1c481b4363c260595",
+      "word": "hungry",
+      "width": 564,
+      "height": 232
+    },
+    {
+      "file": "words/thirsty-base.svg",
+      "role": "whole word label",
+      "sha256": "26b9e29ed9d98b4300f7676326ba9d74dacb6fff8eb706088be5a0c7232f6eb8",
+      "width": 272,
+      "height": 116,
+      "word": "thirsty",
+      "state": "base",
+      "baseline": 77
+    },
+    {
+      "file": "words/thirsty-selected.svg",
+      "role": "whole word label",
+      "sha256": "d6cf8c3186055f33422aff2a996bc7fbb3cacc9a92760322db39a69f11c7c77b",
+      "width": 272,
+      "height": 116,
+      "word": "thirsty",
+      "state": "selected",
+      "baseline": 77
+    },
+    {
+      "file": "words/thirsty-correct.svg",
+      "role": "whole word label",
+      "sha256": "4d6f4dd1f2217fa62b6f224b2a0b566bf32f2a16d80679620c5a87c5ed987d0b",
+      "width": 272,
+      "height": 116,
+      "word": "thirsty",
+      "state": "correct",
+      "baseline": 77
+    },
+    {
+      "file": "words/thirsty-hint.svg",
+      "role": "whole word label",
+      "sha256": "60e46bbee6df71ccd7bf07ad0c82bf52ea4cdf40028cd15ab8ba1b1545354851",
+      "width": 272,
+      "height": 116,
+      "word": "thirsty",
+      "state": "hint",
+      "baseline": 77
+    },
+    {
+      "file": "words/thirsty.png",
+      "role": "whole word label raster",
+      "sha256": "4efe190d9a459de270dca9f4ed4068e26758cbf350f633bbcb0a59281d3fc236",
+      "word": "thirsty",
+      "width": 544,
+      "height": 232
+    },
+    {
+      "file": "words/hot-base.svg",
+      "role": "whole word label",
+      "sha256": "c19865305908c23820151745400ed8a0bb4222f0ac7dda9474cd26680a29a06a",
+      "width": 230,
+      "height": 116,
+      "word": "hot",
+      "state": "base",
+      "baseline": 77
+    },
+    {
+      "file": "words/hot-selected.svg",
+      "role": "whole word label",
+      "sha256": "ed2127e27c72a45dcfa9db6899f29591081d88e0642002171c9076fefce5ecdf",
+      "width": 230,
+      "height": 116,
+      "word": "hot",
+      "state": "selected",
+      "baseline": 77
+    },
+    {
+      "file": "words/hot-correct.svg",
+      "role": "whole word label",
+      "sha256": "3ed2fcb7a832ac6a4cd31317b0903cb2522f1f1adc3da3992078376358298190",
+      "width": 230,
+      "height": 116,
+      "word": "hot",
+      "state": "correct",
+      "baseline": 77
+    },
+    {
+      "file": "words/hot-hint.svg",
+      "role": "whole word label",
+      "sha256": "2fd1e4ae9962d051379a7623698936fa0509f5fa1564ff716262ba00da4447ea",
+      "width": 230,
+      "height": 116,
+      "word": "hot",
+      "state": "hint",
+      "baseline": 77
+    },
+    {
+      "file": "words/hot.png",
+      "role": "whole word label raster",
+      "sha256": "1d1284cb00f8113d12cc1b7f36cd6ac15c92bd2b916ef34a324be33af5fb1575",
+      "word": "hot",
+      "width": 460,
+      "height": 232
+    },
+    {
+      "file": "words/cold-base.svg",
+      "role": "whole word label",
+      "sha256": "2dc00abdc36a8b137dee0ced0d35126c0637490f28f6e2cc10d5f2d1662f64ac",
+      "width": 230,
+      "height": 116,
+      "word": "cold",
+      "state": "base",
+      "baseline": 77
+    },
+    {
+      "file": "words/cold-selected.svg",
+      "role": "whole word label",
+      "sha256": "9b509db77a0150796efa12e321b4c9d6891562c0318daeaa27c6bf762656abd3",
+      "width": 230,
+      "height": 116,
+      "word": "cold",
+      "state": "selected",
+      "baseline": 77
+    },
+    {
+      "file": "words/cold-correct.svg",
+      "role": "whole word label",
+      "sha256": "261e44aad242b6ee0fd14a74bd0ba8bd850f2eff3b2ba524e4aef73e272d105d",
+      "width": 230,
+      "height": 116,
+      "word": "cold",
+      "state": "correct",
+      "baseline": 77
+    },
+    {
+      "file": "words/cold-hint.svg",
+      "role": "whole word label",
+      "sha256": "f3d492c2e2f9a9e7836d6ca546485cd8a8aa161dd4a43b6a98c723ec9f5be92a",
+      "width": 230,
+      "height": 116,
+      "word": "cold",
+      "state": "hint",
+      "baseline": 77
+    },
+    {
+      "file": "words/cold.png",
+      "role": "whole word label raster",
+      "sha256": "d68a693f83797b787ca9b0d5db6ceb1362469b6319b56a307d5251227e882ed4",
+      "word": "cold",
+      "width": 460,
+      "height": 232
+    },
+    {
+      "file": "words/hes.svg",
+      "role": "sentence prefix outline",
+      "sha256": "768cd94a681eadec7ff136d173ff28c84a2403f1c423826e3e646179eb3b8857",
+      "width": 240,
+      "height": 116
+    },
+    {
+      "file": "words/shes.svg",
+      "role": "sentence prefix outline",
+      "sha256": "80a50273679e1a7e2e169106fe80bb87a0b6e9e52b510940828adc107a73dbb5",
+      "width": 240,
+      "height": 116
+    },
+    {
+      "file": "audio/sfx/tap.wav",
+      "role": "licensed real sampled Foley",
+      "sha256": "0f7b26d60cce4655e28b3662cc006ed8d3eddea3c71fb64603cf2355add3745f",
+      "source": "assets/playful-foley/tap.wav",
+      "license": "CC0-1.0",
+      "creator": "Kenney"
+    },
+    {
+      "file": "audio/sfx/pick-up.wav",
+      "role": "licensed real sampled Foley",
+      "sha256": "fec54e47494ea267801768e22daf81a555ef547b6570b2bdc3c10f7677e93098",
+      "source": "assets/playful-foley/roll.wav",
+      "license": "CC0-1.0",
+      "creator": "Kenney"
+    },
+    {
+      "file": "audio/sfx/tile-snap.wav",
+      "role": "licensed real sampled Foley",
+      "sha256": "12027eaa32f2d195f18fd5c4ee145859d0491c9ff72becfc1c081c327e9b80a1",
+      "source": "assets/playful-foley/place.wav",
+      "license": "CC0-1.0",
+      "creator": "Kenney"
+    },
+    {
+      "file": "audio/sfx/photo-clip.wav",
+      "role": "licensed real sampled Foley",
+      "sha256": "8ce31a377a79e90a3615747ef478257325eb517d8b961dd1aa4bc2647ad8f159",
+      "source": "assets/playful-foley/latch.wav",
+      "license": "CC0-1.0",
+      "creator": "Kenney"
+    },
+    {
+      "file": "audio/sfx/retry.wav",
+      "role": "licensed real sampled Foley",
+      "sha256": "3cc5dd21378f50eb32a879bcb7a5d7e03f38f68b8aafdb13fcf049bb51e712ab",
+      "source": "assets/playful-foley/retry.wav",
+      "license": "CC0-1.0",
+      "creator": "Kenney"
+    },
+    {
+      "file": "audio/sfx/correct.wav",
+      "role": "licensed real sampled Foley",
+      "sha256": "737e1ff8a63b306a3a0d1462cd29595950fecc706bd5f3fdaed92464e30cfac7",
+      "source": "assets/playful-foley/correct.wav",
+      "license": "CC0-1.0",
+      "creator": "Kenney"
+    },
+    {
+      "file": "audio/sfx/complete.wav",
+      "role": "licensed real sampled Foley",
+      "sha256": "9719d59ab09c3cf85bde059e97fd3fe11348dc318c6ecf8049d1b7058f07c7a5",
+      "source": "assets/playful-foley/complete.wav",
+      "license": "CC0-1.0",
+      "creator": "Kenney"
+    },
+    {
+      "file": "audio/sfx/photo-turn.wav",
+      "role": "licensed real sampled Foley",
+      "sha256": "7b3f17301417269f17ffb2921a3610ee403d867957a18bb123d7d133da3451de",
+      "source": "assets/playful-foley/reveal.wav",
+      "license": "CC0-1.0",
+      "creator": "Kenney"
+    },
+    {
+      "file": "audio/sfx/star.wav",
+      "role": "licensed real sampled Foley",
+      "sha256": "504dcf41d992e654b1be586ff21594f4573a5ef18c1f5a7e677051cbf05bdcad",
+      "source": "assets/playful-foley/star.wav",
+      "license": "CC0-1.0",
+      "creator": "Kenney"
+    },
+    {
+      "file": "audio/music/feelings-room-loop.wav",
+      "role": "original optional instrumental underscore",
+      "sha256": "d3243885d1fb4b496a7b6aa91d1fa40c1bc8de04fc96aff8e5d2deb400e2bf76",
+      "duration": 24,
+      "creator": "Original procedural composition for this project",
+      "license": "Project original; no third-party samples",
+      "runtimeGain": 0.2
+    },
+    {
+      "file": "book-reference/happy.png",
+      "role": "unchanged textbook portrait crop",
+      "sha256": "887e1ce21aae896776f49a77e40b2922452ee3c94f461153c0b3eb8f1ea1620f",
+      "copyright": "Oxford University Press; textbook content, not original asset",
+      "source": "Family and Friends Starter 2nd ed., page 38",
+      "width": 123,
+      "height": 117
+    },
+    {
+      "file": "book-reference/sad.png",
+      "role": "unchanged textbook portrait crop",
+      "sha256": "400492e5d840722234c3cfc3c158d8d63563bd03412b1890b0714961f3f43feb",
+      "copyright": "Oxford University Press; textbook content, not original asset",
+      "source": "Family and Friends Starter 2nd ed., page 38",
+      "width": 129,
+      "height": 117
+    },
+    {
+      "file": "book-reference/hungry.png",
+      "role": "unchanged textbook portrait crop",
+      "sha256": "73098595a6d4b47bd107e5733b26a51d73fe78e08d62d18e7caf0e759aa6855a",
+      "copyright": "Oxford University Press; textbook content, not original asset",
+      "source": "Family and Friends Starter 2nd ed., page 38",
+      "width": 128,
+      "height": 117
+    },
+    {
+      "file": "book-reference/thirsty.png",
+      "role": "unchanged textbook portrait crop",
+      "sha256": "3b17a3e630de27d45a21dc868ccdfee136f9b4a402672899d27153ce3f7757ee",
+      "copyright": "Oxford University Press; textbook content, not original asset",
+      "source": "Family and Friends Starter 2nd ed., page 38",
+      "width": 135,
+      "height": 117
+    },
+    {
+      "file": "book-reference/hot.png",
+      "role": "unchanged textbook portrait crop",
+      "sha256": "8a5b46b3276d64e776b9acb50800763f96a9aedafac60a25d3c434da9e3ed963",
+      "copyright": "Oxford University Press; textbook content, not original asset",
+      "source": "Family and Friends Starter 2nd ed., page 38",
+      "width": 136,
+      "height": 117
+    },
+    {
+      "file": "book-reference/cold.png",
+      "role": "unchanged textbook portrait crop",
+      "sha256": "4c31cf93ff9d04d300312c4f101272357ec6ffa366013685931dbade64d76a57",
+      "copyright": "Oxford University Press; textbook content, not original asset",
+      "source": "Family and Friends Starter 2nd ed., page 38",
+      "width": 138,
+      "height": 117
+    },
+    {
+      "file": "book-reference/home-panel.webp",
+      "role": "unchanged textbook scene crop",
+      "sha256": "690a4bd8304bcf6c841ed1abdc6d759ffb07e71a787ad44b149d9b4c6c0c06af",
+      "copyright": "Oxford University Press",
+      "width": 801,
+      "height": 578
+    },
+    {
+      "file": "covers/present.webp",
+      "role": "activity cover",
+      "sha256": "76acc566acacc955215a6dba0df0a475f538775d58a944d1ba68816330756440",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "file": "covers/camera.webp",
+      "role": "activity cover",
+      "sha256": "a4c99e09e667eef05165d2d18e1eb49c48dc44149cda05b280d43bca4a21aa64",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "file": "covers/helping.webp",
+      "role": "activity cover",
+      "sha256": "0747c1fe6aea9138f7f7ac6d6f81fc5f36e75ffb04f98b8a70c9a0ee37fd4b49",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "file": "covers/workshop.webp",
+      "role": "activity cover",
+      "sha256": "3bb48db6838bf6d4012c8b48d18e09c5ca8873de14c8206aeb593c12344362f1",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "file": "covers/reporter.webp",
+      "role": "activity cover",
+      "sha256": "c89c71893a49b84e231533fa7ab21aec6471516ef1f2350191f26d1e68f3394e",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "file": "effects/snap/frame-01.png",
+      "role": "effect frame",
+      "sha256": "33a40b3a328607fcf19abfa9ae8ebf22a7ef506dc9903f931f39c41db007a2a5",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/snap/frame-02.png",
+      "role": "effect frame",
+      "sha256": "cd60821923f7e1239b92b3fce0d354bc459b4f10b8657becb275a026e13be83e",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/snap/frame-03.png",
+      "role": "effect frame",
+      "sha256": "d6f53499f231fe12c33000318ad8f1bd590ed229ee373674ed611625d17d1ed4",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/snap/frame-04.png",
+      "role": "effect frame",
+      "sha256": "894c19cb8df33040bb3b9af5b6f8ba241fa058ea673a4935bece810f27ef4dac",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/snap/frame-05.png",
+      "role": "effect frame",
+      "sha256": "8460fd4edf012260e83e62fbb7c17d452f14eeb4571635879460a399bd7d0e5c",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/snap/frame-06.png",
+      "role": "effect frame",
+      "sha256": "f0c193f0cfa940cfe4ab6c62e0c362366f7ac6833989417a720fee669eb1138d",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/snap/frame-07.png",
+      "role": "effect frame",
+      "sha256": "3a47a9d0a4575572a51b9c4af76912eab62006aee97830b5e15654e62d003767",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/snap/frame-08.png",
+      "role": "effect frame",
+      "sha256": "1a58bca8711d7deacba75c05b8df942ba16115fc54ea0948edf5495cbf460bb3",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/snap/frame-09.png",
+      "role": "effect frame",
+      "sha256": "12ee53cee67630cbae8bb1a137c53dd1f1c85da3e5b9754c4aa859f3fb90bc43",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/snap/frame-10.png",
+      "role": "effect frame",
+      "sha256": "7730540318bac6def857aab33a405317b966a46881aa18f038f9906abad985c7",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/snap/static.png",
+      "role": "reduced-motion effect",
+      "sha256": "f0c193f0cfa940cfe4ab6c62e0c362366f7ac6833989417a720fee669eb1138d",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/snap.gif",
+      "role": "effect animation",
+      "sha256": "d651ae29eedf761a11a7fe3a9f49cd70471a5200ba6d89f6990c1e97c3c9cabc",
+      "frames": 10,
+      "durationMs": 600,
+      "loop": false,
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/word-light/frame-01.png",
+      "role": "effect frame",
+      "sha256": "fe0b97d4f9f690e99489da3e2cc83ca9914ac466826a1f42605058cb00884ab5",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/word-light/frame-02.png",
+      "role": "effect frame",
+      "sha256": "4cc1bb0bb3c96460cabdf7a728e73501f91f036cec420280ccef860a650ad635",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/word-light/frame-03.png",
+      "role": "effect frame",
+      "sha256": "168fc0c20bcfd5c655bb90dbcbfd66e2f824eab4f892f9b1c5780707644e2574",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/word-light/frame-04.png",
+      "role": "effect frame",
+      "sha256": "df60c68524442892ddb02f0f48d49d75a4ee914e3de9887f56bfbe1ad190e4f6",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/word-light/frame-05.png",
+      "role": "effect frame",
+      "sha256": "33eaaca090f30786d6f659a40357711734c44df494750afacc0d998534b8abca",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/word-light/frame-06.png",
+      "role": "effect frame",
+      "sha256": "183b7448cf1ba316117714968695fc2292c439c04aefca14426007a059f5d372",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/word-light/frame-07.png",
+      "role": "effect frame",
+      "sha256": "c5d58a69a05f6901361aeb232a2e54badd3d6d6c131952c8a09c00b46e2e9f7a",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/word-light/frame-08.png",
+      "role": "effect frame",
+      "sha256": "3e51c5ee954dea1ac1deb60c8d7f2e7e65e9f27a0e7cd5fb4138966e1b0f7689",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/word-light/frame-09.png",
+      "role": "effect frame",
+      "sha256": "baab80e0cc72c37a1bee3128499c427c4fb80f214d4cef44c32da1990038149c",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/word-light/frame-10.png",
+      "role": "effect frame",
+      "sha256": "fe0b97d4f9f690e99489da3e2cc83ca9914ac466826a1f42605058cb00884ab5",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/word-light/static.png",
+      "role": "reduced-motion effect",
+      "sha256": "183b7448cf1ba316117714968695fc2292c439c04aefca14426007a059f5d372",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/word-light.gif",
+      "role": "effect animation",
+      "sha256": "162856eb3fec49232a0e1e4402d11503cefd52fa66bc544c986fa3d8b157c09e",
+      "frames": 10,
+      "durationMs": 600,
+      "loop": false,
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/correct/frame-01.png",
+      "role": "effect frame",
+      "sha256": "9f574d51cff378e98898257d7c3638bb6c598308a9b63d1fceeaff65a3e00062",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/correct/frame-02.png",
+      "role": "effect frame",
+      "sha256": "0cb9270912b3cc7e5b3300b77a393566a567bdc783a9057506f0af976f1ca318",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/correct/frame-03.png",
+      "role": "effect frame",
+      "sha256": "9364516efb76e963af16ebb4576dd0faa774595be37ea3b6b540f49c4b4212c8",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/correct/frame-04.png",
+      "role": "effect frame",
+      "sha256": "d2127cd7897a0f6a9265cdb19aa166826fe979447ca73d383d0e0f7993b87352",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/correct/frame-05.png",
+      "role": "effect frame",
+      "sha256": "afdcb8cf48daa060ea3bd16b28f57ba0750e0dc2051863c1168bf4b7cdb8f2c4",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/correct/frame-06.png",
+      "role": "effect frame",
+      "sha256": "ba6a824507e00faf5380527e581188b26b0d4a3b71d1515af113efd3d7358155",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/correct/frame-07.png",
+      "role": "effect frame",
+      "sha256": "79cc6f8cca5819060ba78ef7f3a8641b7990e49110c6e221edb3bd395595b35f",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/correct/frame-08.png",
+      "role": "effect frame",
+      "sha256": "3f093e8698aa1de7cd12389e6fde438d08554080c4196b4ee25415aa84563b67",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/correct/frame-09.png",
+      "role": "effect frame",
+      "sha256": "5a3f3576783d1f93d725d70dd694b793b0f04a9fff9094cd5022f7776dfb58d8",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/correct/frame-10.png",
+      "role": "effect frame",
+      "sha256": "b67d95f130de333f1b735e3d64d17e35e7563edf56695d793500d55d383bd3a3",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/correct/static.png",
+      "role": "reduced-motion effect",
+      "sha256": "ba6a824507e00faf5380527e581188b26b0d4a3b71d1515af113efd3d7358155",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/correct.gif",
+      "role": "effect animation",
+      "sha256": "00d241a9297cbda7b5e647bd1e5bff6fbdd8efffca60914482a4e81620fa0f31",
+      "frames": 10,
+      "durationMs": 600,
+      "loop": false,
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/photo-flash/frame-01.png",
+      "role": "effect frame",
+      "sha256": "99c731fadb34ea951a668dd8aa0306398f41a9671ec2d484d409a700b9030de3",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/photo-flash/frame-02.png",
+      "role": "effect frame",
+      "sha256": "376f341c57996e8f8f6e91895fcfc5ee67468f4259513410ead5b4998838f7f5",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/photo-flash/frame-03.png",
+      "role": "effect frame",
+      "sha256": "38bc12f5df7d6daba775fee3dcecf83617a32b54dadecaf6d77b84205780e99d",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/photo-flash/frame-04.png",
+      "role": "effect frame",
+      "sha256": "84c752a9a48a75fb4cd896932964425580b251e5ad3f9501a092a723f2cf4b78",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/photo-flash/frame-05.png",
+      "role": "effect frame",
+      "sha256": "b781cfea7f6a05da2f8e847d2d242a218c97c3f60278bc12de1f4a5914b4d6e2",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/photo-flash/frame-06.png",
+      "role": "effect frame",
+      "sha256": "38132ad8a7375187c3295b640338480a45cc415d95dbae01b3476cc76494c9cf",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/photo-flash/frame-07.png",
+      "role": "effect frame",
+      "sha256": "ab38223525899ee060b1d68db8ce5aa561b23bf9a64e4476315b0c7eb5feb058",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/photo-flash/frame-08.png",
+      "role": "effect frame",
+      "sha256": "f18780463f341077585c9148e79bd12454f394dd167ba0ea3439a31f922094ab",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/photo-flash/frame-09.png",
+      "role": "effect frame",
+      "sha256": "e942e1f79da553fff58db4457de2e8c3e75e1b8309a4348991d45a9b4d1d8425",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/photo-flash/frame-10.png",
+      "role": "effect frame",
+      "sha256": "75b6bb604c459b6c7a70b9235ed6306411241142949560f37fd6a379630e5271",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/photo-flash/static.png",
+      "role": "reduced-motion effect",
+      "sha256": "38132ad8a7375187c3295b640338480a45cc415d95dbae01b3476cc76494c9cf",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/photo-flash.gif",
+      "role": "effect animation",
+      "sha256": "bc9807e8f3a1e123b08bf6acc53861ffa2355d4dd41d02409067b6e97e41624f",
+      "frames": 10,
+      "durationMs": 600,
+      "loop": false,
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/complete/frame-01.png",
+      "role": "effect frame",
+      "sha256": "fe0b97d4f9f690e99489da3e2cc83ca9914ac466826a1f42605058cb00884ab5",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/complete/frame-02.png",
+      "role": "effect frame",
+      "sha256": "677b65d88273726a88ce86c9a5557dc2557c248cd19acb468e56d486baeebfee",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/complete/frame-03.png",
+      "role": "effect frame",
+      "sha256": "0603451f8101eba08440e60a1622a474a00381d40cdd1dcbba5b06a0551a0ca8",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/complete/frame-04.png",
+      "role": "effect frame",
+      "sha256": "bbbba9b0127357627cfd7df880116fb46fa071ffa7dc5d6f62998d6bb0070bc8",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/complete/frame-05.png",
+      "role": "effect frame",
+      "sha256": "62b4b92fa6649d7db714dc8e37aeed336454a79ad8113b0d1873aee926b2c5b2",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/complete/frame-06.png",
+      "role": "effect frame",
+      "sha256": "0cc82e5ba28e69c7714702269fe587b411957c5eaa6f5b5d7e571c7a01fa00b1",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/complete/frame-07.png",
+      "role": "effect frame",
+      "sha256": "4360ed6f91ccbbb0b016fa382b39af659009e76f40386e557f9b411bfa6eceee",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/complete/frame-08.png",
+      "role": "effect frame",
+      "sha256": "72ddea40e6cac36be140caf5699bf0e71b1ae3e78ca99ccbe656fb8bb3b41370",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/complete/frame-09.png",
+      "role": "effect frame",
+      "sha256": "869a960459369cf5a0c872da9dbac16e82464403f140dc0d90695f5e3750e5f8",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/complete/frame-10.png",
+      "role": "effect frame",
+      "sha256": "6c087f6bf9a58a10b6d1ac8e1d36814d7a95037eb171ec3113b61b19f67c6b0c",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/complete/static.png",
+      "role": "reduced-motion effect",
+      "sha256": "0cc82e5ba28e69c7714702269fe587b411957c5eaa6f5b5d7e571c7a01fa00b1",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/complete.gif",
+      "role": "effect animation",
+      "sha256": "50bcb64ffa118e42111a5070118c630bb624660a9639922b7ab1eb8fbbab0507",
+      "frames": 10,
+      "durationMs": 600,
+      "loop": false,
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/return/frame-01.png",
+      "role": "effect frame",
+      "sha256": "0ba90a406d94ea69dc5fcefcbdff4779ef276af4b2345481abb6b680433466de",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/return/frame-02.png",
+      "role": "effect frame",
+      "sha256": "e3b441d294befba1ce5e175671f01520cf246e902c37266d3428eb0b102c5af4",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/return/frame-03.png",
+      "role": "effect frame",
+      "sha256": "b5ce141120f7ec3b673e95d2e51d6e35ec8254ae8db64b277b5e5317dd6cd70f",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/return/frame-04.png",
+      "role": "effect frame",
+      "sha256": "17a45abf9f0ac6c1e4f27d0c567c4994fe9acd0e0359dfd4831d7c1fe57d67c3",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/return/frame-05.png",
+      "role": "effect frame",
+      "sha256": "95f482bea1975c7024b382ebd86b2294b5291b8a00c45466c4eeb7d95899df5d",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/return/frame-06.png",
+      "role": "effect frame",
+      "sha256": "ffca17fd65fe1444367d76ccdb45bdb7b27396c0d3a39900871950c8589adbd5",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/return/frame-07.png",
+      "role": "effect frame",
+      "sha256": "85e01e12223366a5f6e713f5e860d655d52e8561c6b1c63cd52386259d351d68",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/return/frame-08.png",
+      "role": "effect frame",
+      "sha256": "20fc71e55b152ea0f8513be11d4103465d07a369e45b9be147ad74a18ca9e306",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/return/frame-09.png",
+      "role": "effect frame",
+      "sha256": "b12e4cfdb81d26612f1c594a2d431c216b0eaca1d1be738b9355d6ed7625d985",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/return/frame-10.png",
+      "role": "effect frame",
+      "sha256": "777755f4d6a7aa970832032e0875ac26a48d02d26053bfd1dfa423f27c780aff",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/return/static.png",
+      "role": "reduced-motion effect",
+      "sha256": "ffca17fd65fe1444367d76ccdb45bdb7b27396c0d3a39900871950c8589adbd5",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/return.gif",
+      "role": "effect animation",
+      "sha256": "01ef392e27073807968a71af16e57ebcfd76a8a987e6c73b445d7d1113e27cb2",
+      "frames": 10,
+      "durationMs": 600,
+      "loop": false,
+      "width": 320,
+      "height": 240
+    },
+    {
+      "file": "effects/word-light.svg",
+      "role": "read-along glow overlay; audio-clocked, no baked text",
+      "sha256": "21da2ba4d37fe9852ea54db63d14055b42720e112504b9ea1c21776017b32793",
+      "width": 480,
+      "height": 140
+    },
+    {
+      "file": "ui/icons/back.svg",
+      "role": "bare control icon",
+      "sha256": "5d5c80cc01525847975231db76796bf1aead9bb12f9aa8ace97d5205f95a1d1d",
+      "width": 100,
+      "height": 100,
+      "control": "back"
+    },
+    {
+      "file": "ui/back-base.svg",
+      "role": "control asset",
+      "sha256": "4ad22f10d297466b3181dceca7888e52b5b0777edabde4bf23740d618655bbc1",
+      "width": 120,
+      "height": 124,
+      "control": "back",
+      "state": "base"
+    },
+    {
+      "file": "ui/back-pressed.svg",
+      "role": "control asset",
+      "sha256": "bf46e0421373629063204ddefdf514796323b188e76abeeb0c063ac1318c6562",
+      "width": 120,
+      "height": 124,
+      "control": "back",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/back-disabled.svg",
+      "role": "control asset",
+      "sha256": "311de048a7a52b324f27e2ec5f8c41b7d4162847a0c928fc13c38fc047b41a89",
+      "width": 120,
+      "height": 124,
+      "control": "back",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/back-focus.svg",
+      "role": "control asset",
+      "sha256": "48938537db9ecb8096c1833cd939fad9fccc32d436f0d92d9e19f5f26c6bf5fe",
+      "width": 120,
+      "height": 124,
+      "control": "back",
+      "state": "focus"
+    },
+    {
+      "file": "ui/icons/play.svg",
+      "role": "bare control icon",
+      "sha256": "70516210b8f0fd2f0f2c0c7ad584a984e645423d7a614b962a08ac4200651ade",
+      "width": 100,
+      "height": 100,
+      "control": "play"
+    },
+    {
+      "file": "ui/play-base.svg",
+      "role": "control asset",
+      "sha256": "962a999c33510d80d8a2baea4852849cbb521bef248f36c9613585c7b1356048",
+      "width": 120,
+      "height": 124,
+      "control": "play",
+      "state": "base"
+    },
+    {
+      "file": "ui/play-pressed.svg",
+      "role": "control asset",
+      "sha256": "3a3baf57303c64686572a5f63a83b18acd897873a89bd7c42e389408fdfc89e2",
+      "width": 120,
+      "height": 124,
+      "control": "play",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/play-disabled.svg",
+      "role": "control asset",
+      "sha256": "fc7e2b44e46a6af4e9a28a1c8e084a0f9a4d7f60b900e7131bfa0a64a7e8fd79",
+      "width": 120,
+      "height": 124,
+      "control": "play",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/play-focus.svg",
+      "role": "control asset",
+      "sha256": "55eaf22b4b191815a8fe9d77e4a847593d69d25b91505d1fa5caacbe9dc56167",
+      "width": 120,
+      "height": 124,
+      "control": "play",
+      "state": "focus"
+    },
+    {
+      "file": "ui/icons/hear-word.svg",
+      "role": "bare control icon",
+      "sha256": "ea29a491fb66f30b1746fb9cc855a0f07b41b29aa3168c8f8e1ff27439a47098",
+      "width": 100,
+      "height": 100,
+      "control": "hear-word"
+    },
+    {
+      "file": "ui/hear-word-base.svg",
+      "role": "control asset",
+      "sha256": "5d54a82ed1644b0007b2e2dba069a4307f5727b00eacc4d415799abe4d11fcd4",
+      "width": 120,
+      "height": 124,
+      "control": "hear-word",
+      "state": "base"
+    },
+    {
+      "file": "ui/hear-word-pressed.svg",
+      "role": "control asset",
+      "sha256": "ee88c4c9aef489cd3295e37db61b48b62114477335ca2678a9f61cf45d4cba68",
+      "width": 120,
+      "height": 124,
+      "control": "hear-word",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/hear-word-disabled.svg",
+      "role": "control asset",
+      "sha256": "0f517c7903cc01fb0213a5173e7675f6d190edc3b2400ccb70334527f6a3778a",
+      "width": 120,
+      "height": 124,
+      "control": "hear-word",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/hear-word-focus.svg",
+      "role": "control asset",
+      "sha256": "998e6e3bf16f6abef6bf41cb6e4241a3a13a46fbd50a1dcafee61ee2263dcb68",
+      "width": 120,
+      "height": 124,
+      "control": "hear-word",
+      "state": "focus"
+    },
+    {
+      "file": "ui/icons/hear-sentence.svg",
+      "role": "bare control icon",
+      "sha256": "524e409a24c0e87554e754d589a69425e13f9ef91223e4f7ab054d9c8bc9dbe2",
+      "width": 100,
+      "height": 100,
+      "control": "hear-sentence"
+    },
+    {
+      "file": "ui/hear-sentence-base.svg",
+      "role": "control asset",
+      "sha256": "4931f9310420760fd4c7fd6cacaf1f1208596d4a9815d79d3cbe418856345889",
+      "width": 120,
+      "height": 124,
+      "control": "hear-sentence",
+      "state": "base"
+    },
+    {
+      "file": "ui/hear-sentence-pressed.svg",
+      "role": "control asset",
+      "sha256": "c60f14aa4e10b5231fc084159878420a75d41625364024f9372c18f0dc1beca0",
+      "width": 120,
+      "height": 124,
+      "control": "hear-sentence",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/hear-sentence-disabled.svg",
+      "role": "control asset",
+      "sha256": "dcba2a73862a3464fca32adc4d80651240bc6c04689cd343d6bf3707bca3f36b",
+      "width": 120,
+      "height": 124,
+      "control": "hear-sentence",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/hear-sentence-focus.svg",
+      "role": "control asset",
+      "sha256": "a45847d8d7ee60bbf73e08fddd9e143d3890aefdb89e78becce18328188e8fe3",
+      "width": 120,
+      "height": 124,
+      "control": "hear-sentence",
+      "state": "focus"
+    },
+    {
+      "file": "ui/icons/pause.svg",
+      "role": "bare control icon",
+      "sha256": "69fd5d6bc40b7cd86e3e2a8a3cbf89f552997b02966491075928dd125986c51a",
+      "width": 100,
+      "height": 100,
+      "control": "pause"
+    },
+    {
+      "file": "ui/pause-base.svg",
+      "role": "control asset",
+      "sha256": "548dfc3a4baaa122c9b87e6fcddbfa986b32de48e2bb029e3406b2488f964ead",
+      "width": 120,
+      "height": 124,
+      "control": "pause",
+      "state": "base"
+    },
+    {
+      "file": "ui/pause-pressed.svg",
+      "role": "control asset",
+      "sha256": "6ddaeea9f242a4a81abcdd5fa5f92d9da9734d27fd68c83de1d4cf4b75cd489a",
+      "width": 120,
+      "height": 124,
+      "control": "pause",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/pause-disabled.svg",
+      "role": "control asset",
+      "sha256": "640d5e9f4d9528b47d92abcf99fc494dc8f3721dc812bc86b40880ed748982d6",
+      "width": 120,
+      "height": 124,
+      "control": "pause",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/pause-focus.svg",
+      "role": "control asset",
+      "sha256": "892d379e3329fe2b0283ef3b73a2fb4f2dc80614ab071b57dcd353cc85ff241e",
+      "width": 120,
+      "height": 124,
+      "control": "pause",
+      "state": "focus"
+    },
+    {
+      "file": "ui/icons/replay.svg",
+      "role": "bare control icon",
+      "sha256": "f5756586e12d2ab9b288537deabeb759771964a7041d92f5fc73ef290cbc6d63",
+      "width": 100,
+      "height": 100,
+      "control": "replay"
+    },
+    {
+      "file": "ui/replay-base.svg",
+      "role": "control asset",
+      "sha256": "7dd094f4aff964f559155437963af7dfb2f6baf62cdb8fbad436e06c28e40e17",
+      "width": 120,
+      "height": 124,
+      "control": "replay",
+      "state": "base"
+    },
+    {
+      "file": "ui/replay-pressed.svg",
+      "role": "control asset",
+      "sha256": "a02d1d1dbd2c31021deebd2c5bbc9f8db00ee9ad0de3147760f9561d4cb5d25f",
+      "width": 120,
+      "height": 124,
+      "control": "replay",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/replay-disabled.svg",
+      "role": "control asset",
+      "sha256": "29cdcfd4ee6232d3c875deb89defdeab1f6da92532e50da387eb341f422f126d",
+      "width": 120,
+      "height": 124,
+      "control": "replay",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/replay-focus.svg",
+      "role": "control asset",
+      "sha256": "0f981bed8a2fc44c0839b365d76eb40fa02e80a7d738c6752b2535c7f8601fff",
+      "width": 120,
+      "height": 124,
+      "control": "replay",
+      "state": "focus"
+    },
+    {
+      "file": "ui/icons/next.svg",
+      "role": "bare control icon",
+      "sha256": "6476d3ebe482bd69ef821be897ac83d4e7d920f9aa211f7a77d30ceffc8f1e49",
+      "width": 100,
+      "height": 100,
+      "control": "next"
+    },
+    {
+      "file": "ui/next-base.svg",
+      "role": "control asset",
+      "sha256": "5b9742b952e4b2d35171c2997a18f279cc1677e84f7a4aaf61b655851dbd715f",
+      "width": 120,
+      "height": 124,
+      "control": "next",
+      "state": "base"
+    },
+    {
+      "file": "ui/next-pressed.svg",
+      "role": "control asset",
+      "sha256": "d08850b6f2de2017b7aba1247cf064c07e2220ec525a2bb5bfb238ed87c0bb80",
+      "width": 120,
+      "height": 124,
+      "control": "next",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/next-disabled.svg",
+      "role": "control asset",
+      "sha256": "0c55adb68649589f20c24a314c18baf0c979ded253fc6f31f2f2051ec359ac82",
+      "width": 120,
+      "height": 124,
+      "control": "next",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/next-focus.svg",
+      "role": "control asset",
+      "sha256": "75a6388d1c6d4cdea2629c903564fd058fec8014687802d4188f6a55e552722c",
+      "width": 120,
+      "height": 124,
+      "control": "next",
+      "state": "focus"
+    },
+    {
+      "file": "ui/icons/undo.svg",
+      "role": "bare control icon",
+      "sha256": "19d854a380bfeccbf63b1001ad9a3e33656deb486ed92760d7f58b7ea75ca935",
+      "width": 100,
+      "height": 100,
+      "control": "undo"
+    },
+    {
+      "file": "ui/undo-base.svg",
+      "role": "control asset",
+      "sha256": "0bf97592db57b6120a2bf3920277d02142c52ebc96fc8e72eb53bd52a5febc6c",
+      "width": 120,
+      "height": 124,
+      "control": "undo",
+      "state": "base"
+    },
+    {
+      "file": "ui/undo-pressed.svg",
+      "role": "control asset",
+      "sha256": "f06068eaadf9928bc9712b3d5d607d02170f7f32d59a68a034e1aae02f39d9dc",
+      "width": 120,
+      "height": 124,
+      "control": "undo",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/undo-disabled.svg",
+      "role": "control asset",
+      "sha256": "0201645c2b08c9ce88ef48eb5f60c4eb635d289b6fe88d1173522e77ecfe6a6b",
+      "width": 120,
+      "height": 124,
+      "control": "undo",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/undo-focus.svg",
+      "role": "control asset",
+      "sha256": "0c06b0961de0be2882e8c7e23a31b56c89f0bd3059fccf4e7c9d2574fb2ee0a1",
+      "width": 120,
+      "height": 124,
+      "control": "undo",
+      "state": "focus"
+    },
+    {
+      "file": "ui/icons/home.svg",
+      "role": "bare control icon",
+      "sha256": "670de8d22b4e501db93c1402a5a4e47433e70d0e8d2183971a4f9031da26bc02",
+      "width": 100,
+      "height": 100,
+      "control": "home"
+    },
+    {
+      "file": "ui/home-base.svg",
+      "role": "control asset",
+      "sha256": "0b392dc390541b3841987a41ce8fe4c3b394fc5961c9ad7703dce81e3b29e859",
+      "width": 120,
+      "height": 124,
+      "control": "home",
+      "state": "base"
+    },
+    {
+      "file": "ui/home-pressed.svg",
+      "role": "control asset",
+      "sha256": "6a8fe1cb4296a6dac08723e1cf5e1058c562411f23f43434a5d6c3f9b0f13512",
+      "width": 120,
+      "height": 124,
+      "control": "home",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/home-disabled.svg",
+      "role": "control asset",
+      "sha256": "f11ea5ad5dda2c6f667a4efedee426eb1854620a11d5f7c21506d114b92717a7",
+      "width": 120,
+      "height": 124,
+      "control": "home",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/home-focus.svg",
+      "role": "control asset",
+      "sha256": "3b3f462c9f8fb60a1beda03777414557066b2542b18424e409ee6c7a495eb97d",
+      "width": 120,
+      "height": 124,
+      "control": "home",
+      "state": "focus"
+    },
+    {
+      "file": "ui/icons/camera.svg",
+      "role": "bare control icon",
+      "sha256": "8dc7b2f691c4a5936ccfa01dd597668dfdc00bff1c80ed1e5222db38275a746d",
+      "width": 100,
+      "height": 100,
+      "control": "camera"
+    },
+    {
+      "file": "ui/camera-base.svg",
+      "role": "control asset",
+      "sha256": "0437352203abc54b82410240641facc455563bb445dfc58b28e191088a3d5ccf",
+      "width": 120,
+      "height": 124,
+      "control": "camera",
+      "state": "base"
+    },
+    {
+      "file": "ui/camera-pressed.svg",
+      "role": "control asset",
+      "sha256": "40369876171fffb619a68cde285361be862b687dc9addd717167e76081df3880",
+      "width": 120,
+      "height": 124,
+      "control": "camera",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/camera-disabled.svg",
+      "role": "control asset",
+      "sha256": "87332e232a4ada6ad98745bbdbe3bafa96ff60c55112b27aeb6f2ab58ce7f8bd",
+      "width": 120,
+      "height": 124,
+      "control": "camera",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/camera-focus.svg",
+      "role": "control asset",
+      "sha256": "377227855d5ceb7852e21e36d8c8ff85ddd904a1ae9ec5141f8f37ff20d94d8c",
+      "width": 120,
+      "height": 124,
+      "control": "camera",
+      "state": "focus"
+    },
+    {
+      "file": "ui/icons/microphone.svg",
+      "role": "bare control icon",
+      "sha256": "254887b50c91ce471cdbd716d2fc5b1c3febc4bf8e28a9b5f2c3631beabb8597",
+      "width": 100,
+      "height": 100,
+      "control": "microphone"
+    },
+    {
+      "file": "ui/microphone-base.svg",
+      "role": "control asset",
+      "sha256": "4336d945f0c7aefa61a3db3059a6ae7590a7bf1039587d64919880314c658143",
+      "width": 120,
+      "height": 124,
+      "control": "microphone",
+      "state": "base"
+    },
+    {
+      "file": "ui/microphone-pressed.svg",
+      "role": "control asset",
+      "sha256": "9855c88074b36ca83f5996f324493bbfd40b2a3ea57eb5a06a53b0e2d1d7e34a",
+      "width": 120,
+      "height": 124,
+      "control": "microphone",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/microphone-disabled.svg",
+      "role": "control asset",
+      "sha256": "0d189420442edcba6fe23387217e3efe2c1a5c92e816a273376dad9131ed5677",
+      "width": 120,
+      "height": 124,
+      "control": "microphone",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/microphone-focus.svg",
+      "role": "control asset",
+      "sha256": "634d7f3f179d5defa71425ecb13cc8b6de4b41b44990be7a19a5a718f615ce5d",
+      "width": 120,
+      "height": 124,
+      "control": "microphone",
+      "state": "focus"
+    },
+    {
+      "file": "ui/icons/done.svg",
+      "role": "bare control icon",
+      "sha256": "727e809554f05df94cfc128c3d263e4e49a44c86ab713b6b08ec5bbc3f0c4963",
+      "width": 100,
+      "height": 100,
+      "control": "done"
+    },
+    {
+      "file": "ui/done-base.svg",
+      "role": "control asset",
+      "sha256": "bef90074386507f8c9edcfbdc1469e4e13f43a108c477b8ea5c10ea403f4c281",
+      "width": 120,
+      "height": 124,
+      "control": "done",
+      "state": "base"
+    },
+    {
+      "file": "ui/done-pressed.svg",
+      "role": "control asset",
+      "sha256": "a7e11663288486a9f534f8e222ab9262db824981fd0e03f5cf0158b7b6804c73",
+      "width": 120,
+      "height": 124,
+      "control": "done",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/done-disabled.svg",
+      "role": "control asset",
+      "sha256": "832ba0c0129b16ed23024ca9e73a35cce5c0b0b71deed0a1ef3551b716b796f9",
+      "width": 120,
+      "height": 124,
+      "control": "done",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/done-focus.svg",
+      "role": "control asset",
+      "sha256": "bc5501a78cc49e98951b34b7cd0ac2c54abc7a1d8dfbf3e5e82444b637a93a3b",
+      "width": 120,
+      "height": 124,
+      "control": "done",
+      "state": "focus"
+    },
+    {
+      "file": "ui/icons/sound.svg",
+      "role": "bare control icon",
+      "sha256": "e502ab188c870675f73d1686f976cf042eeb1d43da6595ce338d03049d61fb35",
+      "width": 100,
+      "height": 100,
+      "control": "sound"
+    },
+    {
+      "file": "ui/sound-base.svg",
+      "role": "control asset",
+      "sha256": "f498b4b3fadb22e8bb43ea5ce93aa8a8e01141be5cccde8635212f27e26ed9af",
+      "width": 120,
+      "height": 124,
+      "control": "sound",
+      "state": "base"
+    },
+    {
+      "file": "ui/sound-pressed.svg",
+      "role": "control asset",
+      "sha256": "38447311fed0e67047554eff8078e5840052b45bc64a5131176fe3cfcb327e4b",
+      "width": 120,
+      "height": 124,
+      "control": "sound",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/sound-disabled.svg",
+      "role": "control asset",
+      "sha256": "c7fbdb8f1c169ca572e07113d3badb8c397030fd2348d1c01c5d8cbb6b4c7729",
+      "width": 120,
+      "height": 124,
+      "control": "sound",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/sound-focus.svg",
+      "role": "control asset",
+      "sha256": "194bd611f2b4479469d9c77f4e0401c525799f54353f8adfc72c758985007b83",
+      "width": 120,
+      "height": 124,
+      "control": "sound",
+      "state": "focus"
+    },
+    {
+      "file": "ui/icons/mute.svg",
+      "role": "bare control icon",
+      "sha256": "387a305e2a7d25e85909d57a4e163242c8d7828957360dc843900c1ac7902500",
+      "width": 100,
+      "height": 100,
+      "control": "mute"
+    },
+    {
+      "file": "ui/mute-base.svg",
+      "role": "control asset",
+      "sha256": "d3c114826db6cf91827921ef5c1bae8586ddbefd481add16add8f566635fe6a7",
+      "width": 120,
+      "height": 124,
+      "control": "mute",
+      "state": "base"
+    },
+    {
+      "file": "ui/mute-pressed.svg",
+      "role": "control asset",
+      "sha256": "0c130938148ea98558f639d414682aa965347943f66a5a8f9fad6dc3e4232514",
+      "width": 120,
+      "height": 124,
+      "control": "mute",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/mute-disabled.svg",
+      "role": "control asset",
+      "sha256": "29cdfdd2c3f077dc2cfb484810171d4b08ce6dfbd34f6dee60a08991f30bdc9e",
+      "width": 120,
+      "height": 124,
+      "control": "mute",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/mute-focus.svg",
+      "role": "control asset",
+      "sha256": "95de24cb79acb5e65c69ffbf72564cadf20caeab670a325d149d3d8e6ea3bd90",
+      "width": 120,
+      "height": 124,
+      "control": "mute",
+      "state": "focus"
+    },
+    {
+      "file": "ui/icons/help.svg",
+      "role": "bare control icon",
+      "sha256": "20076421950721a83154b1d9b67043c7ddad9dacce6747b3b58541604572811d",
+      "width": 100,
+      "height": 100,
+      "control": "help"
+    },
+    {
+      "file": "ui/help-base.svg",
+      "role": "control asset",
+      "sha256": "3d4cdc44f67d1afbbb1c77f48716aefe9f1a166a35f7b119034891aa0d288c0d",
+      "width": 120,
+      "height": 124,
+      "control": "help",
+      "state": "base"
+    },
+    {
+      "file": "ui/help-pressed.svg",
+      "role": "control asset",
+      "sha256": "cedaca3794c44d3141ade66eb83b99f8970dab0441b701298be3f6d1fbd8f68f",
+      "width": 120,
+      "height": 124,
+      "control": "help",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/help-disabled.svg",
+      "role": "control asset",
+      "sha256": "772e2685a750b8532ff7ca704fb617f74d804cc2e19a969be943e13264e0a692",
+      "width": 120,
+      "height": 124,
+      "control": "help",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/help-focus.svg",
+      "role": "control asset",
+      "sha256": "51f66929a1b0caf48972a8092a39520f762cfe052474b46086e2123c48b04ab8",
+      "width": 120,
+      "height": 124,
+      "control": "help",
+      "state": "focus"
+    },
+    {
+      "file": "ui/icons/close.svg",
+      "role": "bare control icon",
+      "sha256": "e6edaa29b1d3a1cbcd95f0047931050b055edeb01b8dadc44574d972efc624dc",
+      "width": 100,
+      "height": 100,
+      "control": "close"
+    },
+    {
+      "file": "ui/close-base.svg",
+      "role": "control asset",
+      "sha256": "f253265020c0045d3910cb3d60ae334935d2bcb682ea32d3b129017c298c7c0c",
+      "width": 120,
+      "height": 124,
+      "control": "close",
+      "state": "base"
+    },
+    {
+      "file": "ui/close-pressed.svg",
+      "role": "control asset",
+      "sha256": "ff94f26a51a24a1f9638532e04f94240ab39fd84757d49fc7ba7012e3464ca23",
+      "width": 120,
+      "height": 124,
+      "control": "close",
+      "state": "pressed"
+    },
+    {
+      "file": "ui/close-disabled.svg",
+      "role": "control asset",
+      "sha256": "5360837d7b789e7915ff4946d8c8c21829a34fcc846a3cbac30920e334999623",
+      "width": 120,
+      "height": 124,
+      "control": "close",
+      "state": "disabled"
+    },
+    {
+      "file": "ui/close-focus.svg",
+      "role": "control asset",
+      "sha256": "bb8912e21a327d91b92d87c2156329ef864d09f5540bd1bfdddde67c7bffcbf0",
+      "width": 120,
+      "height": 124,
+      "control": "close",
+      "state": "focus"
+    },
+    {
+      "file": "ui/button-wide-base.svg",
+      "role": "text-free button plate",
+      "sha256": "461681b0ac73749fc3712423ee43356a50307782beb9c8db006cc600fbb23379",
+      "width": 360,
+      "height": 104,
+      "state": "base"
+    },
+    {
+      "file": "ui/button-wide-pressed.svg",
+      "role": "text-free button plate",
+      "sha256": "4d8e4b2a20b4a235a4e19a5bbcc9e77baadbf972d8e0b3fdc53387f3b817a58a",
+      "width": 360,
+      "height": 104,
+      "state": "pressed"
+    },
+    {
+      "file": "ui/button-wide-disabled.svg",
+      "role": "text-free button plate",
+      "sha256": "d91cb0cb6b9e723a815224ae5474aa2ffc1d6bd48c02ac4963498e84e899d193",
+      "width": 360,
+      "height": 104,
+      "state": "disabled"
+    },
+    {
+      "file": "ui/button-wide-focus.svg",
+      "role": "text-free button plate",
+      "sha256": "461681b0ac73749fc3712423ee43356a50307782beb9c8db006cc600fbb23379",
+      "width": 360,
+      "height": 104,
+      "state": "focus"
+    },
+    {
+      "file": "ui/photo-frame.svg",
+      "role": "photo surround; center transparent",
+      "sha256": "7c963e3968ceed1cccfb587ca95cd8f9ccdb70434f543f0e5598e2ca8582be45",
+      "width": 600,
+      "height": 640
+    },
+    {
+      "file": "ui/word-tray.svg",
+      "role": "letter source tray",
+      "sha256": "c780abb8d79a45af114dd41b77bbeff5afb0728096cc42c38a323ebf86382c0e",
+      "width": 1000,
+      "height": 170
+    },
+    {
+      "file": "sources/reaction-hungry.png",
+      "role": "imagegen original helping action",
+      "sha256": "f5a66e985d082bcf305448a77cf85bc8f0f1b8e7028fe9d58b3b9b15691290cb",
+      "generation": "exec-8d19433f-308c-44ad-945f-f61d63f7949d",
+      "prompt": "Preserve referenced actor identity/style; exact transparent 3x2 full-body atlas. Six physically connected poses: holds, raises, bites, chews and lowers a sandwich.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/hungry/reaction-01.png",
+      "role": "authored helping action frame",
+      "sha256": "3e25c756b0f81ba8bdf174f4addaf794d31e9833e3d7c3780b3092171fc31bc1",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/reaction-02.png",
+      "role": "authored helping action frame",
+      "sha256": "5bf89172c4f67f16a8bafe32ce4f5e677560b0a4b9c0296c8970068a39aedc7f",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/reaction-03.png",
+      "role": "authored helping action frame",
+      "sha256": "1424ab350e9c9384cda13063abea337dca7df9606c1772a3cbe5b9fac5e326ba",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/reaction-04.png",
+      "role": "authored helping action frame",
+      "sha256": "91944e8b7ab81729c08d9b2237649fed173595e4089c5f4e5b37701f4f9b6701",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/reaction-05.png",
+      "role": "authored helping action frame",
+      "sha256": "f67edc6f6134ee5f71d21815016bd6c5fa3bc07b59b89c7316e43df641ea38c3",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/reaction-06.png",
+      "role": "authored helping action frame",
+      "sha256": "97b55aee9b4875ee2b722306704f380961a2f2ec12e940686225273e0edeff74",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/reaction-final.webp",
+      "role": "helping action final pose",
+      "sha256": "25e0b260c7c7ede33938c503385f453335dfd68ddd17a82ff9fde395ea24278e",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/reaction.gif",
+      "role": "authored-pose motion",
+      "sha256": "d4899b8becb9c70675db9f970efb78237e8b63d61b50b99e886dd6437eac13b4",
+      "frames": 6,
+      "durationMs": 1880,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/reaction-thirsty.png",
+      "role": "imagegen original helping action",
+      "sha256": "8c5f57e86b3d0fd193eafdc2514d9a3f4504a81ec4c2c0ad267856fabb9b2ba4",
+      "generation": "exec-bdbcf3b6-6c1c-456c-85b2-534dd482c34a",
+      "prompt": "Preserve referenced actor identity/style; exact transparent 3x2 full-body atlas. Six physically connected poses: holds, raises, drinks water and lowers an upright glass.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/thirsty/reaction-01.png",
+      "role": "authored helping action frame",
+      "sha256": "f9a4831fa373dfdbc66f4bc775369bdbbe609297e253475914929a669f461aae",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/reaction-02.png",
+      "role": "authored helping action frame",
+      "sha256": "70484e61ddc793874f25d8aece93d8e8d0cf8152168ab45c4d5102c377c2f2c2",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/reaction-03.png",
+      "role": "authored helping action frame",
+      "sha256": "f9d10460811778aae91375ca4d8686595316e2c8e64d18d797c6f4320aaae214",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/reaction-04.png",
+      "role": "authored helping action frame",
+      "sha256": "509b3872765a2a236c71d93bc9b22f19ac09be80121eacd4303a84da3dc42bc8",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/reaction-05.png",
+      "role": "authored helping action frame",
+      "sha256": "efb5786c964d7fd40a446f026f029aa741491f31804fa022e7144e834f05d45e",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/reaction-06.png",
+      "role": "authored helping action frame",
+      "sha256": "27064de730c032862e35b483dd0c6b3cf2ee12cb537b6105a1056dfeb077347e",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/reaction-final.webp",
+      "role": "helping action final pose",
+      "sha256": "e996573a54a90fe520ee0dc41adf54efc12d821a4abf695ee5831be21c460b1d",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/reaction.gif",
+      "role": "authored-pose motion",
+      "sha256": "09e84713efbf86d5a1e950948df2e6c4677cc46cea12e5ec4bf3e80595055d79",
+      "frames": 6,
+      "durationMs": 1880,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/reaction-hot.png",
+      "role": "imagegen original helping action",
+      "sha256": "27a1ef8c12e3a6937e9c1b846eab88da0741fddfc3b52cdd27fc4462dd2c8c37",
+      "generation": "exec-56faf33b-992a-4928-a8c0-e318824e91b2",
+      "prompt": "Preserve referenced actor identity/style; exact transparent 3x2 full-body atlas. Six physically connected poses: holds and fans with an open cream flower fan.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/hot/reaction-01.png",
+      "role": "authored helping action frame",
+      "sha256": "b70d00d93a36e8c332f40fc5626070fb3daae33184e3474ae9de80da28dca557",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/reaction-02.png",
+      "role": "authored helping action frame",
+      "sha256": "85048a91b9b9b922ead8d8e054563e4dfea4abb385c20158f86fdffa08858ddf",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/reaction-03.png",
+      "role": "authored helping action frame",
+      "sha256": "134d9ff70a7d8c8aa0ba1e634618f28f812902239131e732a5fa7e5e571669e5",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/reaction-04.png",
+      "role": "authored helping action frame",
+      "sha256": "21051f74014625ab41ad9f11a99d75d9c50126165cd04084f6f50c412dfb0026",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/reaction-05.png",
+      "role": "authored helping action frame",
+      "sha256": "da2f1b1d8f71c46c1d9d950a32186c89da747eb094bd736afb662f883dc48d54",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/reaction-06.png",
+      "role": "authored helping action frame",
+      "sha256": "d5b1761a93426db420cb36b66372312b7acee0b0c67a369419b1d1b4a4c68988",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/reaction-final.webp",
+      "role": "helping action final pose",
+      "sha256": "073736b76f45074836cc6e3341d3c82661d8b1a2b3e8c6ee5a25445643ed49fd",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/reaction.gif",
+      "role": "authored-pose motion",
+      "sha256": "bd9621d5d01ab9987530181fdd7cbc7fe24183f3bfbb53b28774060062cb872b",
+      "frames": 6,
+      "durationMs": 1880,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/reaction-cold.png",
+      "role": "imagegen original helping action",
+      "sha256": "81b0d0e7cf101611881989e02b64272c95f56c38725f0ec21c8afa63be989829",
+      "generation": "exec-bea1aad8-adae-407c-90af-b617407570c4",
+      "prompt": "Preserve referenced actor identity/style; exact transparent 3x2 full-body atlas. Six physically connected poses: lifts, wraps and tucks a lavender blanket around shoulders.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/cold/reaction-01.png",
+      "role": "authored helping action frame",
+      "sha256": "466441e2e8bcaa2d27bb563a858d1b739d598013c38d94489fc647012229ea69",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/reaction-02.png",
+      "role": "authored helping action frame",
+      "sha256": "9bbffeec514dd9378391181723b7c1f0c13578fd5b19634b2082f7641dab5ad2",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/reaction-03.png",
+      "role": "authored helping action frame",
+      "sha256": "b651656db4450169298a856cf6562381e9da014f9c18cc3611225dd24e55e764",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/reaction-04.png",
+      "role": "authored helping action frame",
+      "sha256": "0d134a870a2984335d572ca1514d8764b17345ba6fac56953c3fbe9d195c89e1",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/reaction-05.png",
+      "role": "authored helping action frame",
+      "sha256": "0a6447c7cbabafea6186a25d4ed0a0901dd0b75ebf9fca4ee6aa4fe71978488c",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/reaction-06.png",
+      "role": "authored helping action frame",
+      "sha256": "72a32b4a5bc27f5b42cfc1db2a12f9495d05251ae7d7270eb759185258a2f828",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/reaction-final.webp",
+      "role": "helping action final pose",
+      "sha256": "fd8ba4fb906e52d1639d573c1ea4ba4465e5e7c43c13d6a683af78b584f57340",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/reaction.gif",
+      "role": "authored-pose motion",
+      "sha256": "1859651191d67e28e5420085e962b2e2dd1259d1babf367f459dc58d4cbfc329",
+      "frames": 6,
+      "durationMs": 1880,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    }
+  ],
+  "actors": {
+    "happy": {
+      "still": "actors/happy/idle.webp",
+      "motion": "actors/happy/happy.gif",
+      "once": "actors/happy/happy-once.gif",
+      "anchor": [
+        200,
+        508
+      ],
+      "canvas": [
+        400,
+        520
+      ],
+      "pronoun": "he",
+      "frames": [
+        {
+          "sourceCellBounds": [
+            165,
+            11,
+            355,
+            493
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.98551
+        },
+        {
+          "sourceCellBounds": [
+            164,
+            14,
+            354,
+            493
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.98551
+        },
+        {
+          "sourceCellBounds": [
+            102,
+            10,
+            415,
+            493
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.98551
+        },
+        {
+          "sourceCellBounds": [
+            106,
+            11,
+            417,
+            493
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.98551
+        },
+        {
+          "sourceCellBounds": [
+            97,
+            13,
+            405,
+            494
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.98551
+        },
+        {
+          "sourceCellBounds": [
+            163,
+            14,
+            356,
+            494
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.98551
+        }
+      ],
+      "timingMs": [
+        220,
+        180,
+        180,
+        220,
+        180,
+        300
+      ],
+      "source": "Original supplementary actors; not a redraw of textbook characters"
+    },
+    "sad": {
+      "still": "actors/sad/idle.webp",
+      "motion": "actors/sad/sad.gif",
+      "once": "actors/sad/sad-once.gif",
+      "anchor": [
+        200,
+        508
+      ],
+      "canvas": [
+        400,
+        520
+      ],
+      "pronoun": "he",
+      "frames": [
+        {
+          "sourceCellBounds": [
+            173,
+            9,
+            351,
+            490
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.9896
+        },
+        {
+          "sourceCellBounds": [
+            163,
+            18,
+            346,
+            490
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.9896
+        },
+        {
+          "sourceCellBounds": [
+            159,
+            17,
+            342,
+            490
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.9896
+        },
+        {
+          "sourceCellBounds": [
+            160,
+            16,
+            343,
+            494
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.9896
+        },
+        {
+          "sourceCellBounds": [
+            157,
+            13,
+            340,
+            494
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.9896
+        },
+        {
+          "sourceCellBounds": [
+            158,
+            14,
+            341,
+            494
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.9896
+        }
+      ],
+      "timingMs": [
+        220,
+        180,
+        180,
+        220,
+        180,
+        300
+      ],
+      "source": "Original supplementary actors; not a redraw of textbook characters"
+    },
+    "hungry": {
+      "still": "actors/hungry/idle.webp",
+      "motion": "actors/hungry/hungry.gif",
+      "once": "actors/hungry/hungry-once.gif",
+      "anchor": [
+        200,
+        508
+      ],
+      "canvas": [
+        400,
+        520
+      ],
+      "pronoun": "she",
+      "frames": [
+        {
+          "sourceCellBounds": [
+            142,
+            15,
+            383,
+            498
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.98551
+        },
+        {
+          "sourceCellBounds": [
+            136,
+            15,
+            378,
+            498
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.98551
+        },
+        {
+          "sourceCellBounds": [
+            130,
+            15,
+            372,
+            498
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.98551
+        },
+        {
+          "sourceCellBounds": [
+            141,
+            16,
+            385,
+            498
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.98551
+        },
+        {
+          "sourceCellBounds": [
+            135,
+            16,
+            379,
+            498
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.98551
+        },
+        {
+          "sourceCellBounds": [
+            128,
+            16,
+            373,
+            498
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.98551
+        }
+      ],
+      "timingMs": [
+        220,
+        180,
+        180,
+        220,
+        180,
+        300
+      ],
+      "source": "Original supplementary actors; not a redraw of textbook characters"
+    },
+    "thirsty": {
+      "still": "actors/thirsty/idle.webp",
+      "motion": "actors/thirsty/thirsty.gif",
+      "once": "actors/thirsty/thirsty-once.gif",
+      "anchor": [
+        200,
+        508
+      ],
+      "canvas": [
+        400,
+        520
+      ],
+      "pronoun": "she",
+      "frames": [
+        {
+          "sourceCellBounds": [
+            120,
+            12,
+            375,
+            499
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97541
+        },
+        {
+          "sourceCellBounds": [
+            116,
+            12,
+            370,
+            499
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97541
+        },
+        {
+          "sourceCellBounds": [
+            102,
+            12,
+            440,
+            499
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97541
+        },
+        {
+          "sourceCellBounds": [
+            118,
+            16,
+            371,
+            501
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97541
+        },
+        {
+          "sourceCellBounds": [
+            114,
+            14,
+            368,
+            501
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97541
+        },
+        {
+          "sourceCellBounds": [
+            113,
+            13,
+            371,
+            501
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97541
+        }
+      ],
+      "timingMs": [
+        220,
+        180,
+        180,
+        220,
+        180,
+        300
+      ],
+      "source": "Original supplementary actors; not a redraw of textbook characters"
+    },
+    "hot": {
+      "still": "actors/hot/idle.webp",
+      "motion": "actors/hot/hot.gif",
+      "once": "actors/hot/hot-once.gif",
+      "anchor": [
+        200,
+        508
+      ],
+      "canvas": [
+        400,
+        520
+      ],
+      "pronoun": "he",
+      "frames": [
+        {
+          "sourceCellBounds": [
+            160,
+            10,
+            397,
+            495
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97342
+        },
+        {
+          "sourceCellBounds": [
+            135,
+            10,
+            372,
+            495
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97342
+        },
+        {
+          "sourceCellBounds": [
+            110,
+            11,
+            347,
+            495
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97342
+        },
+        {
+          "sourceCellBounds": [
+            158,
+            12,
+            396,
+            498
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97342
+        },
+        {
+          "sourceCellBounds": [
+            133,
+            11,
+            372,
+            498
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97342
+        },
+        {
+          "sourceCellBounds": [
+            111,
+            9,
+            350,
+            498
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97342
+        }
+      ],
+      "timingMs": [
+        220,
+        180,
+        180,
+        220,
+        180,
+        300
+      ],
+      "source": "Original supplementary actors; not a redraw of textbook characters"
+    },
+    "cold": {
+      "still": "actors/cold/idle.webp",
+      "motion": "actors/cold/cold.gif",
+      "once": "actors/cold/cold-once.gif",
+      "anchor": [
+        200,
+        508
+      ],
+      "canvas": [
+        400,
+        520
+      ],
+      "pronoun": "she",
+      "frames": [
+        {
+          "sourceCellBounds": [
+            144,
+            14,
+            370,
+            501
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97541
+        },
+        {
+          "sourceCellBounds": [
+            141,
+            17,
+            360,
+            501
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97541
+        },
+        {
+          "sourceCellBounds": [
+            134,
+            13,
+            358,
+            501
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97541
+        },
+        {
+          "sourceCellBounds": [
+            148,
+            14,
+            370,
+            501
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97541
+        },
+        {
+          "sourceCellBounds": [
+            150,
+            15,
+            369,
+            501
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97541
+        },
+        {
+          "sourceCellBounds": [
+            145,
+            17,
+            372,
+            501
+          ],
+          "footX": 200,
+          "footY": 508,
+          "scale": 0.97541
+        }
+      ],
+      "timingMs": [
+        220,
+        180,
+        180,
+        220,
+        180,
+        300
+      ],
+      "source": "Original supplementary actors; not a redraw of textbook characters"
+    }
+  },
+  "buildWords": {
+    "happy": {
+      "letters": [
+        "h",
+        "a",
+        "p",
+        "p",
+        "y"
+      ],
+      "tileAdvance": 120,
+      "baseline": 91,
+      "width": 600,
+      "positions": [
+        {
+          "letter": "h",
+          "x": 0,
+          "y": 0,
+          "asset": "letters/h-base.svg"
+        },
+        {
+          "letter": "a",
+          "x": 120,
+          "y": 0,
+          "asset": "letters/a-base.svg"
+        },
+        {
+          "letter": "p",
+          "x": 240,
+          "y": 0,
+          "asset": "letters/p-base.svg"
+        },
+        {
+          "letter": "p",
+          "x": 360,
+          "y": 0,
+          "asset": "letters/p-base.svg"
+        },
+        {
+          "letter": "y",
+          "x": 480,
+          "y": 0,
+          "asset": "letters/y-base.svg"
+        }
+      ],
+      "initialUse": "Whole-word matching; letter assembly optional with model"
+    },
+    "sad": {
+      "letters": [
+        "s",
+        "a",
+        "d"
+      ],
+      "tileAdvance": 120,
+      "baseline": 91,
+      "width": 360,
+      "positions": [
+        {
+          "letter": "s",
+          "x": 0,
+          "y": 0,
+          "asset": "letters/s-base.svg"
+        },
+        {
+          "letter": "a",
+          "x": 120,
+          "y": 0,
+          "asset": "letters/a-base.svg"
+        },
+        {
+          "letter": "d",
+          "x": 240,
+          "y": 0,
+          "asset": "letters/d-base.svg"
+        }
+      ],
+      "initialUse": "Whole-word matching; letter assembly optional with model"
+    },
+    "hungry": {
+      "letters": [
+        "h",
+        "u",
+        "n",
+        "g",
+        "r",
+        "y"
+      ],
+      "tileAdvance": 120,
+      "baseline": 91,
+      "width": 720,
+      "positions": [
+        {
+          "letter": "h",
+          "x": 0,
+          "y": 0,
+          "asset": "letters/h-base.svg"
+        },
+        {
+          "letter": "u",
+          "x": 120,
+          "y": 0,
+          "asset": "letters/u-base.svg"
+        },
+        {
+          "letter": "n",
+          "x": 240,
+          "y": 0,
+          "asset": "letters/n-base.svg"
+        },
+        {
+          "letter": "g",
+          "x": 360,
+          "y": 0,
+          "asset": "letters/g-base.svg"
+        },
+        {
+          "letter": "r",
+          "x": 480,
+          "y": 0,
+          "asset": "letters/r-base.svg"
+        },
+        {
+          "letter": "y",
+          "x": 600,
+          "y": 0,
+          "asset": "letters/y-base.svg"
+        }
+      ],
+      "initialUse": "Whole-word matching; letter assembly optional with model"
+    },
+    "thirsty": {
+      "letters": [
+        "t",
+        "h",
+        "i",
+        "r",
+        "s",
+        "t",
+        "y"
+      ],
+      "tileAdvance": 120,
+      "baseline": 91,
+      "width": 840,
+      "positions": [
+        {
+          "letter": "t",
+          "x": 0,
+          "y": 0,
+          "asset": "letters/t-base.svg"
+        },
+        {
+          "letter": "h",
+          "x": 120,
+          "y": 0,
+          "asset": "letters/h-base.svg"
+        },
+        {
+          "letter": "i",
+          "x": 240,
+          "y": 0,
+          "asset": "letters/i-base.svg"
+        },
+        {
+          "letter": "r",
+          "x": 360,
+          "y": 0,
+          "asset": "letters/r-base.svg"
+        },
+        {
+          "letter": "s",
+          "x": 480,
+          "y": 0,
+          "asset": "letters/s-base.svg"
+        },
+        {
+          "letter": "t",
+          "x": 600,
+          "y": 0,
+          "asset": "letters/t-base.svg"
+        },
+        {
+          "letter": "y",
+          "x": 720,
+          "y": 0,
+          "asset": "letters/y-base.svg"
+        }
+      ],
+      "initialUse": "Whole-word matching; letter assembly optional with model"
+    },
+    "hot": {
+      "letters": [
+        "h",
+        "o",
+        "t"
+      ],
+      "tileAdvance": 120,
+      "baseline": 91,
+      "width": 360,
+      "positions": [
+        {
+          "letter": "h",
+          "x": 0,
+          "y": 0,
+          "asset": "letters/h-base.svg"
+        },
+        {
+          "letter": "o",
+          "x": 120,
+          "y": 0,
+          "asset": "letters/o-base.svg"
+        },
+        {
+          "letter": "t",
+          "x": 240,
+          "y": 0,
+          "asset": "letters/t-base.svg"
+        }
+      ],
+      "initialUse": "Whole-word matching; letter assembly optional with model"
+    },
+    "cold": {
+      "letters": [
+        "c",
+        "o",
+        "l",
+        "d"
+      ],
+      "tileAdvance": 120,
+      "baseline": 91,
+      "width": 480,
+      "positions": [
+        {
+          "letter": "c",
+          "x": 0,
+          "y": 0,
+          "asset": "letters/c-base.svg"
+        },
+        {
+          "letter": "o",
+          "x": 120,
+          "y": 0,
+          "asset": "letters/o-base.svg"
+        },
+        {
+          "letter": "l",
+          "x": 240,
+          "y": 0,
+          "asset": "letters/l-base.svg"
+        },
+        {
+          "letter": "d",
+          "x": 360,
+          "y": 0,
+          "asset": "letters/d-base.svg"
+        }
+      ],
+      "initialUse": "Whole-word matching; letter assembly optional with model"
+    }
+  },
+  "reactions": {
+    "hungry": {
+      "file": "actors/hungry/reaction.gif",
+      "final": "actors/hungry/reaction-final.webp",
+      "frames": 6,
+      "durationMs": 1880,
+      "anchor": [
+        200,
+        508
+      ],
+      "canvas": [
+        400,
+        520
+      ]
+    },
+    "thirsty": {
+      "file": "actors/thirsty/reaction.gif",
+      "final": "actors/thirsty/reaction-final.webp",
+      "frames": 6,
+      "durationMs": 1880,
+      "anchor": [
+        200,
+        508
+      ],
+      "canvas": [
+        400,
+        520
+      ]
+    },
+    "hot": {
+      "file": "actors/hot/reaction.gif",
+      "final": "actors/hot/reaction-final.webp",
+      "frames": 6,
+      "durationMs": 1880,
+      "anchor": [
+        200,
+        508
+      ],
+      "canvas": [
+        400,
+        520
+      ]
+    },
+    "cold": {
+      "file": "actors/cold/reaction.gif",
+      "final": "actors/cold/reaction-final.webp",
+      "frames": 6,
+      "durationMs": 1880,
+      "anchor": [
+        200,
+        508
+      ],
+      "canvas": [
+        400,
+        520
+      ]
+    }
+  }
+}

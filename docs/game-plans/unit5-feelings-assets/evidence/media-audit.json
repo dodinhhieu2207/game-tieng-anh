@@ -1,0 +1,195 @@
+{
+  "actors": {
+    "happy": {
+      "frames": 6,
+      "distinctFrames": 6,
+      "durationMs": 1280,
+      "canvas": [
+        400,
+        520
+      ],
+      "footBottoms": [
+        507,
+        508,
+        508,
+        508,
+        507,
+        507
+      ],
+      "looping": true,
+      "oneShotAvailable": true
+    },
+    "sad": {
+      "frames": 6,
+      "distinctFrames": 6,
+      "durationMs": 1280,
+      "canvas": [
+        400,
+        520
+      ],
+      "footBottoms": [
+        507,
+        507,
+        507,
+        507,
+        507,
+        507
+      ],
+      "looping": true,
+      "oneShotAvailable": true
+    },
+    "hungry": {
+      "frames": 6,
+      "distinctFrames": 6,
+      "durationMs": 1280,
+      "canvas": [
+        400,
+        520
+      ],
+      "footBottoms": [
+        508,
+        507,
+        508,
+        507,
+        507,
+        508
+      ],
+      "looping": true,
+      "oneShotAvailable": true
+    },
+    "thirsty": {
+      "frames": 6,
+      "distinctFrames": 6,
+      "durationMs": 1280,
+      "canvas": [
+        400,
+        520
+      ],
+      "footBottoms": [
+        508,
+        508,
+        508,
+        507,
+        507,
+        507
+      ],
+      "looping": true,
+      "oneShotAvailable": true
+    },
+    "hot": {
+      "frames": 6,
+      "distinctFrames": 6,
+      "durationMs": 1280,
+      "canvas": [
+        400,
+        520
+      ],
+      "footBottoms": [
+        508,
+        508,
+        508,
+        507,
+        507,
+        507
+      ],
+      "looping": true,
+      "oneShotAvailable": true
+    },
+    "cold": {
+      "frames": 6,
+      "distinctFrames": 6,
+      "durationMs": 1280,
+      "canvas": [
+        400,
+        520
+      ],
+      "footBottoms": [
+        507,
+        507,
+        507,
+        507,
+        507,
+        507
+      ],
+      "looping": true,
+      "oneShotAvailable": true
+    }
+  },
+  "effects": {
+    "complete": {
+      "frames": 10,
+      "oneShot": true
+    },
+    "correct": {
+      "frames": 6,
+      "oneShot": true
+    },
+    "photo-flash": {
+      "frames": 2,
+      "oneShot": true
+    },
+    "return": {
+      "frames": 6,
+      "oneShot": true
+    },
+    "snap": {
+      "frames": 5,
+      "oneShot": true
+    },
+    "word-light": {
+      "frames": 10,
+      "oneShot": true
+    }
+  },
+  "audio": {
+    "clips": 28,
+    "transcriptsMatch": true,
+    "hashBoundWordTimings": true,
+    "humanReviewed": false
+  },
+  "limits": "Technical asset checks; human listening and classroom outcomes not measured.",
+  "assetRecords": 412,
+  "letterGlyphs": 15,
+  "reactions": {
+    "hungry": {
+      "frames": 6,
+      "uniqueFrames": 6,
+      "anchorStable": true,
+      "canvas": [
+        400,
+        520
+      ],
+      "durationMs": 1880
+    },
+    "thirsty": {
+      "frames": 6,
+      "uniqueFrames": 6,
+      "anchorStable": true,
+      "canvas": [
+        400,
+        520
+      ],
+      "durationMs": 1880
+    },
+    "hot": {
+      "frames": 6,
+      "uniqueFrames": 6,
+      "anchorStable": true,
+      "canvas": [
+        400,
+        520
+      ],
+      "durationMs": 1880
+    },
+    "cold": {
+      "frames": 6,
+      "uniqueFrames": 6,
+      "anchorStable": true,
+      "canvas": [
+        400,
+        520
+      ],
+      "durationMs": 1880
+    }
+  }
+}
