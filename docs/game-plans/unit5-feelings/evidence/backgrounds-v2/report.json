@@ -1,6 +1,6 @@
 {
   "origin": "http://127.0.0.1:8765",
-  "checkedAt": "2026-11-26T08:50:45.244Z",
+  "checkedAt": "2026-11-26T09:33:39.328Z",
   "layouts": [
     {
       "route": "feelings-house",
@@ -204,6 +204,9 @@
     }
   ],
   "menuLayouts": 5,
+  "unitSelectorLayouts": 5,
+  "fullPageUnit5Scenery": true,
+  "spaExitAndReturn": true,
   "scenesDistinct": 5,
   "legacySceneryPreserved": true,
   "missingBackgroundRetry": true,

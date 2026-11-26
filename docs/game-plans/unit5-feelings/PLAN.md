@@ -78,6 +78,12 @@ Background technical review: all six generated sources and runtime files are has
 
 ### Public scenery and speaking verification — complete
 
+### Whole-page background clarification — 2026-11-26
+
+The user clarified both the Unit5 world background and Lesson1 game backgrounds. The first scenery release applied the garden inside lessonApp while the outer body retained the generic older-unit sky. Correct that scope: headerState now owns a Unit5-only body class and background variable on every Unit5 route, including direct game links, and clears both when leaving. The garden paints the full viewport behind the unit selector, lesson selector and game frame; the inner panel is transparent so it does not repeat the garden. Each activity retains its distinct v2 scene. Game content, voices, speech endpoint and progress are unchanged.
+
+Local verification: 35 layouts include the Unit5 six-lesson selector, Lesson1 activity selector and five game stages at five widths. Confirmed full-page garden during game routes, separate inner scenes, and SPA transitions Unit5 -> Letter Land -> Unit5 -> Unit4 with no scenery leak. Existing Unit5 navigation, native touch and three legacy-route checks pass. Public results are refreshed after publication.
+
 Runtime release f524b07 is served on the existing GitHub Pages site; its pages-build-and-deployment run 45786975418 completed successfully. All thirty layout checks passed again against the public site, including decoding all new backgrounds, missing-scene retry and leaving Unit5 without affecting Unit4. Evidence: backgrounds-v2-public/report.json and public screenshots.
 
 Little Reporter was also exercised from the actual GitHub Pages origin through native Speak/Done controls and the existing adapter, with approved Higgs recordings substituted for fake microphone bytes at the test transport boundary. All eight actual Cloudflare replies produced the expected UI result: incomplete retry, wrong-pronoun retry and six accepted full sentences with completion/progress. No ASR reply was fabricated. See live-ui-public.json and live-ui-public-*.png. An additional generated two-second silence clip returned UNCLEAR and earned no correct result; its irrelevant hallucinated transcript is retained in live-silence.json as evidence of ASR limitations. This does not measure student accuracy or pronunciation. No student recording was sent or persisted in these checks.
