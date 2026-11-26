@@ -1,6 +1,6 @@
 {
   "origin": "https://dodinhhieu2207.github.io/game-tieng-anh",
-  "checkedAt": "2026-11-26T08:55:59.760Z",
+  "checkedAt": "2026-11-26T09:36:32.703Z",
   "layouts": [
     {
       "route": "feelings-house",
@@ -204,6 +204,9 @@
     }
   ],
   "menuLayouts": 5,
+  "unitSelectorLayouts": 5,
+  "fullPageUnit5Scenery": true,
+  "spaExitAndReturn": true,
   "scenesDistinct": 5,
   "legacySceneryPreserved": true,
   "missingBackgroundRetry": true,
