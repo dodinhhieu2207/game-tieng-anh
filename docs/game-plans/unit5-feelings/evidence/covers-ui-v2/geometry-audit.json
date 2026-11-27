@@ -1,0 +1,6 @@
+{
+  "checkedAt": "2026-11-27T01:40:22.038Z",
+  "variants": 176,
+  "method": "Compare source and revised SVG after replacing only six-digit paint colors; all bytes of glyph paths, viewBox and geometry remain equal",
+  "allEqual": true
+}

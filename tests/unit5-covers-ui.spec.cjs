@@ -2,7 +2,8 @@ const {chromium}=require('C:/Users/Admin/.cache/codex-runtimes/codex-primary-run
 const fs=require('fs'),path=require('path'),assert=require('assert');
 const origin=process.env.U5_QA_ORIGIN||'http://127.0.0.1:8765';
 const routes=['feelings-house','feelings-camera','helping-hands','feelings-workshop','little-reporter'];
-const href=r=>origin+'/index.html?release=coverui2#'+r;
+const release=process.env.U5_QA_RELEASE||'coverui3';
+const href=r=>origin+'/index.html?release='+release+'#'+r;
 const dir=path.resolve('docs/game-plans/unit5-feelings/evidence/covers-ui-v2'+(origin.startsWith('https:')?'-public':''));
 async function decoded(p,selector){return p.locator(selector).evaluateAll(async images=>Promise.all(images.map(async im=>{await im.decode();return {src:im.getAttribute('src'),width:im.naturalWidth,height:im.naturalHeight,box:im.getBoundingClientRect().toJSON()}})));}
 (async()=>{
@@ -47,5 +48,5 @@ async function decoded(p,selector){return p.locator(selector).evaluateAll(async 
  assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);
  fs.writeFileSync(path.join(dir,'report.json'),JSON.stringify({origin,checkedAt:new Date().toISOString(),covers:6,worldAndActivityMenusAtFiveWidths:true,gameLayouts:layouts,nativeWordSuccessAndLetterPlacement:true,focusVisible:true,reducedMotion:true,errors,missing},null,2));
  console.log('PASS six assigned covers, five menu widths, 25 game layouts, native word/letter states, 48px controls and keyboard focus');
- }finally{await b.close();}
+ }catch(e){console.error(JSON.stringify({errors,missing,url:p.url()}));await p.screenshot({path:path.join(dir,'failure.png'),fullPage:true}).catch(()=>{});throw e;}finally{await b.close();}
 })().catch(e=>{console.error(e);process.exit(1)});

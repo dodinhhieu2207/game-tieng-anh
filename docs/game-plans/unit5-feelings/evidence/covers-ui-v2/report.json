@@ -1,6 +1,6 @@
 {
   "origin": "http://127.0.0.1:8765",
-  "checkedAt": "2026-11-27T01:37:04.735Z",
+  "checkedAt": "2026-11-27T01:48:03.569Z",
   "covers": 6,
   "worldAndActivityMenusAtFiveWidths": true,
   "gameLayouts": [
@@ -117,7 +117,7 @@
           "label": "Speak",
           "height": 56,
           "color": "rgb(255, 255, 255)",
-          "bg": "rgb(23, 127, 196)"
+          "bg": "rgb(20, 120, 185)"
         },
         {
           "label": "Music off",
@@ -241,7 +241,7 @@
           "label": "Speak",
           "height": 56,
           "color": "rgb(255, 255, 255)",
-          "bg": "rgb(23, 127, 196)"
+          "bg": "rgb(20, 120, 185)"
         },
         {
           "label": "Music off",
@@ -365,7 +365,7 @@
           "label": "Speak",
           "height": 56,
           "color": "rgb(255, 255, 255)",
-          "bg": "rgb(23, 127, 196)"
+          "bg": "rgb(20, 120, 185)"
         },
         {
           "label": "Music off",
@@ -489,7 +489,7 @@
           "label": "Speak",
           "height": 56,
           "color": "rgb(255, 255, 255)",
-          "bg": "rgb(23, 127, 196)"
+          "bg": "rgb(20, 120, 185)"
         },
         {
           "label": "Music off",
@@ -613,7 +613,7 @@
           "label": "Speak",
           "height": 56,
           "color": "rgb(255, 255, 255)",
-          "bg": "rgb(23, 127, 196)"
+          "bg": "rgb(20, 120, 185)"
         },
         {
           "label": "Music off",
