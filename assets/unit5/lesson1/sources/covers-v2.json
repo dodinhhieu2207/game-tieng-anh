@@ -1,0 +1,148 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-11-27",
+  "mode": "reference-guided original cover generation",
+  "scope": "Unit 5 navigation banner and five Lesson 1 activity covers",
+  "covers": {
+    "world": {
+      "generation": "exec-dbf49dee-5d4a-4f6d-a49d-3a3af35dd063",
+      "prompt": "Create ONE finished wide navigation banner image for Unit 5 of a preschool English learning app. OUTPUT canvas wide 3:1, ideally 1536x512. Reference image 1 (Unit4 Family Park) is the exact STYLE and LAYOUT reference: glossy cyan rounded frame, bright azure sky, puffy clouds, emerald grass, yellow badge top left, large playful bold rounded white/yellow lettering with thick navy outline, clean dimensional illustrated mobile-game finish. Do not copy its family cast. Images 2-4 are CHARACTER IDENTITY references for our Unit5 children: curly brown-haired boy in coral pocket t-shirt and blue shorts; brown pigtail girl in purple and coral; blonde girl in lavender coat. Render these same clothing/hair identities in the clean modeled style, all friendly, with the happy smiling boy prominent at right and the two girls beside him, a colorful little playhouse behind them. Left 52 percent is legible typographic design: yellow star badge reads exactly 'Unit 5'; main large title reads exactly \"He's happy!\"; white book badge below reads exactly '6 lessons'. Do not add any other words or any screenshot/cream-card background. Entire banner fills the wide canvas with very small transparent corner margins only. All lettering, faces and cyan frame fully visible, no clipping. The joyful illustrated characters take right half, not tiny icons. Make this visually belong next to the supplied Unit4 banner.",
+      "source": "sources/covers-v2/world.png",
+      "runtime": "covers/v2/world.webp",
+      "size": [
+        2172,
+        724
+      ],
+      "references": [
+        {
+          "file": "assets/unit4/navigation-v2/unit-card.webp",
+          "sha256": "0f87b05ecad0113e24d313eee89aad66308c67aa87b6990d5029a98818c12520"
+        },
+        {
+          "file": "assets/unit5/lesson1/actors/happy/idle.webp",
+          "sha256": "1e250d735b0fd0dab119971d10e7a37012360133e9fe5c87ce4f88c0676f0d5a"
+        },
+        {
+          "file": "assets/unit5/lesson1/actors/hungry/idle.webp",
+          "sha256": "0064688c49a647a88a0e11c8ce70aacde976f224c78c0c65b44e9b478eba6e22"
+        },
+        {
+          "file": "assets/unit5/lesson1/actors/cold/idle.webp",
+          "sha256": "cfd7a303ae92d8684b7ae140de20e05f172cd92d8334540756f121d7800bb26d"
+        }
+      ]
+    },
+    "present": {
+      "generation": "exec-d98801e9-ae74-4ed1-a3c7-275b720efe05",
+      "prompt": "Create ONE finished 2:1 landscape activity-cover illustration, ideally 1536x768. Reference image 1 is the UNIT5 STYLE reference: saturated blue/green/coral/yellow, clean modeled 2.5D mobile-game illustration, softly glossy dimensional forms, friendly large expressive faces. Other images are character IDENTITY references; keep their hair/clothes, adapt rendering to reference1. Compose a real lively scene filling the frame, not a flat cream flashcard, not a screenshot, no tiny pasted actor, no word answer chips or UI controls. Left 46%: very large readable playful bold rounded white lettering with navy outline and a subtle yellow accent, naturally integrated above scene. Right 54%: the large character and relevant action. Thin rounded colored edge frame, minimal outer margins, all title/faces contained. No Unit number, no Activity number, no subtitle, no additional text. Keep the central faces clear of typography. Bright turquoise sky, sunshine and colorful cozy playhouse with a welcoming open door. The curly-haired coral-shirt boy and pigtail purple-shirt girl stand in doorway, smiling and waving hello, upper-body figures large. Frame turquoise-blue. Exact title on left in three balanced lines: 'The Feelings House'.",
+      "source": "sources/covers-v2/present.png",
+      "runtime": "covers/v2/present.webp",
+      "size": [
+        1774,
+        887
+      ],
+      "references": [
+        {
+          "file": "assets/unit5/lesson1/sources/covers-v2/world.png",
+          "sha256": "9a0646fb0fe98edda5512bcdac46377cd0181fc0eccd5a4e5c404f47c99853e6"
+        },
+        {
+          "file": "assets/unit5/lesson1/actors/happy/idle.webp",
+          "sha256": "1e250d735b0fd0dab119971d10e7a37012360133e9fe5c87ce4f88c0676f0d5a"
+        },
+        {
+          "file": "assets/unit5/lesson1/actors/hungry/idle.webp",
+          "sha256": "0064688c49a647a88a0e11c8ce70aacde976f224c78c0c65b44e9b478eba6e22"
+        }
+      ]
+    },
+    "camera": {
+      "generation": "exec-ddf7a9ed-1e0d-49cf-991f-23dd3a0c9d7f",
+      "prompt": "Create ONE finished 2:1 landscape activity-cover illustration, ideally 1536x768. Reference image 1 is the UNIT5 STYLE reference: saturated blue/green/coral/yellow, clean modeled 2.5D mobile-game illustration, softly glossy dimensional forms, friendly large expressive faces. Other images are character IDENTITY references; keep their hair/clothes, adapt rendering to reference1. Compose a real lively scene filling the frame, not a flat cream flashcard, not a screenshot, no tiny pasted actor, no word answer chips or UI controls. Left 46%: very large readable playful bold rounded white lettering with navy outline and a subtle yellow accent, naturally integrated above scene. Right 54%: the large character and relevant action. Thin rounded colored edge frame, minimal outer margins, all title/faces contained. No Unit number, no Activity number, no subtitle, no additional text. Keep the central faces clear of typography. Sky-blue photo studio corner, big coral-and-gold toy camera on tripod foreground aimed toward the mustard-shirt dark-haired boy. He looks recognizably sad with downturned mouth and gentle eyebrows; kind non-frightening scene, no tears spectacle. A little photo print with his same expression lies at bottom, no words. Frame bright blue. Exact title on left two lines: 'Feelings Camera'.",
+      "source": "sources/covers-v2/camera.png",
+      "runtime": "covers/v2/camera.webp",
+      "size": [
+        1774,
+        887
+      ],
+      "references": [
+        {
+          "file": "assets/unit5/lesson1/sources/covers-v2/world.png",
+          "sha256": "9a0646fb0fe98edda5512bcdac46377cd0181fc0eccd5a4e5c404f47c99853e6"
+        },
+        {
+          "file": "assets/unit5/lesson1/actors/sad/idle.webp",
+          "sha256": "89d11a94c3733f28c452693a469428ffda82543ec9dd71c3c8e41e4452e19d8c"
+        }
+      ]
+    },
+    "helping": {
+      "generation": "exec-2a6447d5-7559-4a3b-b72c-a6962c822edd",
+      "prompt": "Create ONE finished 2:1 landscape activity-cover illustration, ideally 1536x768. Reference image 1 is the UNIT5 STYLE reference: saturated blue/green/coral/yellow, clean modeled 2.5D mobile-game illustration, softly glossy dimensional forms, friendly large expressive faces. Other images are character IDENTITY references; keep their hair/clothes, adapt rendering to reference1. Compose a real lively scene filling the frame, not a flat cream flashcard, not a screenshot, no tiny pasted actor, no word answer chips or UI controls. Left 46%: very large readable playful bold rounded white lettering with navy outline and a subtle yellow accent, naturally integrated above scene. Right 54%: the large character and relevant action. Thin rounded colored edge frame, minimal outer margins, all title/faces contained. No Unit number, no Activity number, no subtitle, no additional text. Keep the central faces clear of typography. Bright warm coral and golden kindness corner, mint table in foreground. The purple-shirt pigtail girl holds her tummy as a child's hand from left gently offers her a clearly visible sandwich; she's encouraged and reaching to receive it. Small glass of water nearby, no other props clutter. Clear action of helping, friendly eye contact. Frame warm golden-orange. Exact title left two lines: 'Helping Hands'.",
+      "source": "sources/covers-v2/helping.png",
+      "runtime": "covers/v2/helping.webp",
+      "size": [
+        1774,
+        887
+      ],
+      "references": [
+        {
+          "file": "assets/unit5/lesson1/sources/covers-v2/world.png",
+          "sha256": "9a0646fb0fe98edda5512bcdac46377cd0181fc0eccd5a4e5c404f47c99853e6"
+        },
+        {
+          "file": "assets/unit5/lesson1/actors/hungry/idle.webp",
+          "sha256": "0064688c49a647a88a0e11c8ce70aacde976f224c78c0c65b44e9b478eba6e22"
+        }
+      ]
+    },
+    "workshop": {
+      "generation": "exec-835adcae-cab6-4b1f-adea-29badb9a5b46",
+      "prompt": "Create ONE finished 2:1 landscape activity-cover illustration, ideally 1536x768. Reference image 1 is the Unit5 STYLE reference: saturated blue/green/coral/yellow, clean modeled 2.5D mobile-game illustration, softly glossy dimensional forms, friendly large expressive faces. Other images are character IDENTITY references; keep their hair/clothes, adapt rendering to reference1. Compose a real lively scene filling the frame, not a flat cream flashcard, not a screenshot, no tiny pasted actor, no UI controls. Left 46%: very large readable playful bold rounded white lettering with navy outline and subtle yellow accent, naturally integrated above scene. Right 54%: large character and relevant action. Thin rounded colored edge frame, minimal outer margins, all title/faces contained. No Unit number, no Activity number, no subtitle. Bright sky-blue and turquoise arts room with honey wood workbench. The brown-bob girl in teal blouse and navy shorts is placing a rounded word tile under a clipped photo of our smiling curly brown-haired coral-shirt boy. One visible tile reads exactly 'happy', no other word tiles or letters. Show real photo matching activity; photo and tile large enough to recognize. A coral camera and few pencils at outer edges. Frame turquoise. Main exact title left stacked in three lines: 'Feelings Photo Workshop'. No extra words apart from main title and happy tile.",
+      "source": "sources/covers-v2/workshop.png",
+      "runtime": "covers/v2/workshop.webp",
+      "size": [
+        1774,
+        887
+      ],
+      "references": [
+        {
+          "file": "assets/unit5/lesson1/sources/covers-v2/world.png",
+          "sha256": "9a0646fb0fe98edda5512bcdac46377cd0181fc0eccd5a4e5c404f47c99853e6"
+        },
+        {
+          "file": "assets/unit5/lesson1/actors/thirsty/idle.webp",
+          "sha256": "90e8cd68498125fb2bfec68454734cc060e69a19bb89193f2dd05ee44aa9ed6c"
+        },
+        {
+          "file": "assets/unit5/lesson1/actors/happy/idle.webp",
+          "sha256": "1e250d735b0fd0dab119971d10e7a37012360133e9fe5c87ce4f88c0676f0d5a"
+        }
+      ]
+    },
+    "reporter": {
+      "generation": "exec-0452742f-001d-477d-a828-cd604cbe0ee7",
+      "prompt": "Create ONE finished 2:1 landscape activity-cover illustration, ideally 1536x768. Reference image 1 is the Unit5 STYLE reference: saturated blue/green/coral/yellow, clean modeled 2.5D mobile-game illustration, softly glossy dimensional forms, friendly large expressive faces. Other images are character IDENTITY references; keep their hair/clothes, adapt rendering to reference1. Compose a real lively scene filling the frame, not a flat cream flashcard, not a screenshot, no tiny pasted actor, no UI controls. Left 46%: very large readable playful bold rounded white lettering with navy outline and subtle yellow accent, naturally integrated above scene. Right 54%: large character and relevant action. Thin rounded colored edge frame, minimal outer margins, all title/faces contained. No Unit number, no Activity number, no subtitle. Sunny blue playroom with violet/coral accents. A brown-bob girl in teal blouse holds a coral toy microphone toward our smiling coral-shirt curly-haired boy, friendly eye contact, visibly taking turns speaking. Two large upper-body children, microphone between them. Behind them a small cheerful sun and books near edges, no stage curtains, no scores, no speech bubbles, no printed answer. Frame violet with bright cyan highlights. Exact title left in two lines: 'Little Reporter'. No other words.",
+      "source": "sources/covers-v2/reporter.png",
+      "runtime": "covers/v2/reporter.webp",
+      "size": [
+        1774,
+        887
+      ],
+      "references": [
+        {
+          "file": "assets/unit5/lesson1/sources/covers-v2/world.png",
+          "sha256": "9a0646fb0fe98edda5512bcdac46377cd0181fc0eccd5a4e5c404f47c99853e6"
+        },
+        {
+          "file": "assets/unit5/lesson1/actors/thirsty/idle.webp",
+          "sha256": "90e8cd68498125fb2bfec68454734cc060e69a19bb89193f2dd05ee44aa9ed6c"
+        },
+        {
+          "file": "assets/unit5/lesson1/actors/happy/idle.webp",
+          "sha256": "1e250d735b0fd0dab119971d10e7a37012360133e9fe5c87ce4f88c0676f0d5a"
+        }
+      ]
+    }
+  }
+}

@@ -1,8 +1,8 @@
 {
   "reactions": [
     {
-      "word": "cold",
-      "exactGifHash": "1859651191d67e28e5420085e962b2e2dd1259d1babf367f459dc58d4cbfc329",
+      "word": "hot",
+      "exactGifHash": "bd9621d5d01ab9987530181fdd7cbc7fe24183f3bfbb53b28774060062cb872b",
       "nativeFramesChange": true,
       "holdsFinalPose": true
     },
@@ -19,8 +19,8 @@
       "holdsFinalPose": true
     },
     {
-      "word": "hot",
-      "exactGifHash": "bd9621d5d01ab9987530181fdd7cbc7fe24183f3bfbb53b28774060062cb872b",
+      "word": "cold",
+      "exactGifHash": "1859651191d67e28e5420085e962b2e2dd1259d1babf367f459dc58d4cbfc329",
       "nativeFramesChange": true,
       "holdsFinalPose": true
     }

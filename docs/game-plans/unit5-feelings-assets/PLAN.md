@@ -58,3 +58,6 @@ Subsequent checkpoint: the user then authorized game implementation. See ../unit
 
 
 Latest 2026-11-26 user correction: backgrounds must match established older-unit artwork. Six v3 images were edited with the v2 layouts as targets and actual Unit3/4 images as style references. The revised background rule supersedes the faded gouache direction; existing actors/voices remain. Exact input hashes and generation IDs are in sources/backgrounds-v3.json. Current manifest has 436 records; native/source old versions remain. Local 35-layout, scene decoding and lifecycle checks pass; see ../unit5-feelings/PLAN.md for current publication evidence.
+
+
+2026-11-27 cover/UI clarification: the user meant the Unit5 navigation card, all five activity covers and their game UI. Six new built-in imagegen covers now match the actual Unit4 banner; exact complete prompts/reference hashes are in sources/covers-v2.json. World is 3:1, activity illustrations 2:1; originals and archive retained. There are also 176 versioned paint-only SVG UI/word/letter variants; exact glyph/geometry preservation is verified. Current manifest has 624 records including original sources/archives/variants, not 624 independent illustrations. Five-width menus/25 game layouts, native word/letter interaction and preserved touch/cleanup checks pass; latest game plan records publication.

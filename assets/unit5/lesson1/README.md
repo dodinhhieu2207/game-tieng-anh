@@ -20,3 +20,10 @@ Mở trang xem thử: http://127.0.0.1:8775/assets/unit5/lesson1/preview.html . 
 Đã tích hợp Present và bốn giao diện hoạt động vào Unit5 Lesson1 trong app local: http://127.0.0.1:8765/index.html?dev=u5feelings1#/unit/5/lesson/1?mode=practice . Báo cáo gameplay nằm tại `docs/game-plans/unit5-feelings/evidence/`; bộ ảnh/âm thanh vẫn có thể xem riêng bằng preview.html.
 
 Frontend đã được đưa lên GitHub Pages. Worker `toy-buddy-speech` đã cập nhật hỗ trợ câu cảm xúc; tám kiểm tra đầu bằng mẫu Higgs qua AI thật và tám lượt kiểm tra UI ghi âm với mẫu Higgs đều cho phản hồi dự kiến. UI dùng micro giả trong kiểm tra tự động và gửi mẫu Higgs đã duyệt tới dịch vụ thật; không giả lập phản hồi nhận diện. Bằng chứng: `docs/game-plans/unit5-feelings/evidence/live-worker-model-clips.json`, `live-ui.json`, `worker-deployment.json`. Chưa đo độ chính xác với giọng trẻ hay chấm phát âm. Bản cập nhật sáu nền mới được kiểm tra riêng trong `evidence/backgrounds-v2/`.
+
+
+## Unit5 covers and synchronized game UI — 2026-11-27
+
+Active world banner: `covers/v2/world.webp` (3:1). Active Lesson1 / game covers: `covers/v2/present.webp`, `camera.webp`, `helping.webp`, `workshop.webp`, `reporter.webp` (2:1). All six are original built-in imagegen outputs referenced to the actual Unit4 banner and existing Unit5 child identities. Exact prompts and source/reference hashes: `sources/covers-v2.json`; original PNGs: `sources/covers-v2/`. The older covers remain archived.
+
+Active vector kit: `ui/v2/`, `words/v2/`, `letters/v2/`. These 176 variants change paint only; every original glyph path, viewBox and dimension remains exact. `sources/ui-v2.json` records the color map and both hashes. Native game controls use blue/white surfaces, golden listening/selection, blue continuation/microphone and explicit green success text. They retain touch/keyboard, audio-ended gates, retry, AI and all existing tasks. Export: `py -3.13 tools/export_unit5_covers_ui_v2.py`. Current manifest: 624 records including archives, source files and variants; this is not 624 distinct illustrations.

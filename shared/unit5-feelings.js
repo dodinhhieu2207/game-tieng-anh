@@ -17,7 +17,7 @@
  const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const shuffle=items=>{const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
  function orderFor(mode){let a=mode==='helping'?[...shuffle(Object.keys(PROPS)),...shuffle(Object.keys(PROPS))]:mode==='house'?[...WORDS]:shuffle(WORDS);if(a.join()===previousOrders.get(mode)&&mode!=='house')a.push(a.shift());previousOrders.set(mode,a.join());return a;}
- const icon=name=>`<img src="${BASE}ui/icons/${name}.svg" alt="">`;
+ const icon=name=>`<img src="${BASE}ui/v2/icons/${name}.svg" alt="">`;
  const button=(action,label,img='play',extra='')=>`<button type="button" class="u5-btn" data-u5-action="${action}" ${extra}>${icon(img)}<span>${label}</span></button>`;
  const actor=(word,options={})=>`<button type="button" class="u5-actor ${options.className||''}" data-u5-actor="${word}" ${options.drop?'data-u5-drop="actor"':''} aria-label="${escape(options.label||'Explore '+word)}"><img src="${BASE}actors/${word}/idle.webp" alt="" draggable="false"></button>`;
  function loadPhaser(){
@@ -114,7 +114,7 @@
    if(this.mode==='house'){
     world.className='u5-world';world.innerHTML=this.labelHTML()+actor(word,{label:'Listen and explore '+word});
     this.$('.u5-controls').innerHTML=button('explore','Listen & explore','play')+button('word','Hear word','hear-word')+button('sentence','Hear sentence','hear-sentence')+button('next','Finish','done','hidden')+this.musicButton();
-    this.$('.u5-extras').innerHTML=`<div class="u5-visits">${WORDS.map(w=>`<button type="button" class="u5-visit" data-u5-visit="${w}" aria-label="Explore ${w}" aria-pressed="${w===word}"><img class="u5-thumb" src="${BASE}actors/${w}/idle.webp" alt=""><img class="u5-word-art" src="${BASE}words/${w}-base.svg" alt="${w}"></button>`).join('')}</div>`;
+    this.$('.u5-extras').innerHTML=`<div class="u5-visits">${WORDS.map(w=>`<button type="button" class="u5-visit" data-u5-visit="${w}" aria-label="Explore ${w}" aria-pressed="${w===word}"><img class="u5-thumb" src="${BASE}actors/${w}/idle.webp" alt=""><img class="u5-word-art" src="${BASE}words/v2/${w}-base.svg" alt="${w}"></button>`).join('')}</div>`;
     this.setPhase('ready','Tap a picture. Listen to the word and the whole sentence.');
    }else if(this.mode==='camera'){
     this.options=shuffle([word,...shuffle(WORDS.filter(w=>w!==word)).slice(0,this.index<2?1:2)]);
@@ -128,10 +128,10 @@
     this.setPhase('ready','Listen first. Then choose something and bring it to the child.');
    }else if(this.mode==='workshop'){
     this.options=shuffle([word,...shuffle(WORDS.filter(w=>w!==word)).slice(0,this.index<2?1:2)]);
-    world.className='u5-world u5-photo-world';world.innerHTML=this.labelHTML(false)+`<div class="u5-photo-mat" aria-hidden="true"><img src="${BASE}ui/photo-frame.svg" alt=""></div>`+actor(word,{drop:true,label:'Place the selected label on this photo'})+`<button type="button" class="u5-receiver" data-u5-drop="label" aria-label="Place the selected word under the photo">Choose a word</button>`;
+    world.className='u5-world u5-photo-world';world.innerHTML=this.labelHTML(false)+`<div class="u5-photo-mat" aria-hidden="true"><img src="${BASE}ui/v2/photo-frame.svg" alt=""></div>`+actor(word,{drop:true,label:'Place the selected label on this photo'})+`<button type="button" class="u5-receiver" data-u5-drop="label" aria-label="Place the selected word under the photo">Choose a word</button>`;
     this.$('.u5-cue').textContent='Find the word.';
     this.$('.u5-controls').innerHTML=button('word','Listen','hear-word')+button('next',this.index===5?'Finish':'Next photo','next','hidden')+this.musicButton();
-    this.$('.u5-extras').innerHTML=`<div class="u5-dock" data-count="${this.options.length}" aria-label="Word labels">${this.options.map(w=>`<button type="button" class="u5-pick u5-word-pick" data-u5-pick="${w}" aria-label="Hear and choose ${w}"><img src="${BASE}words/${w}-base.svg" alt="${w}" draggable="false"></button>`).join('')}</div><div class="u5-optional" hidden><p>Want to build the word? Keep the model to help you.</p>${button('letters','Try letter pieces','play')}</div>`;
+    this.$('.u5-extras').innerHTML=`<div class="u5-dock" data-count="${this.options.length}" aria-label="Word labels">${this.options.map(w=>`<button type="button" class="u5-pick u5-word-pick" data-u5-pick="${w}" aria-label="Hear and choose ${w}"><img src="${BASE}words/v2/${w}-base.svg" alt="${w}" draggable="false"></button>`).join('')}</div><div class="u5-optional" hidden><p>Want to build the word? Keep the model to help you.</p>${button('letters','Try letter pieces','play')}</div>`;
     this.setPhase('choosing','Tap a word to hear it. Drag it or tap the photo label space.');
    }else{
     world.className='u5-world';world.innerHTML=this.labelHTML(this.showModel)+actor(word,{label:'Look at the child'});
@@ -241,7 +241,7 @@
    if(!this.alive(e))return;
    const target=this.$('[data-u5-actor]');
    if(this.mode==='helping')await this.scene.deliver(value,origin,target);
-   else{const receiver=this.$('.u5-receiver');receiver.innerHTML=`<img src="${BASE}words/${this.word}-correct.svg" alt="${this.word}">`;this.scene.sparkle(receiver);this.sfxPlay('tile-snap');}
+   else{const receiver=this.$('.u5-receiver');receiver.innerHTML=`<img src="${BASE}words/v2/${this.word}-correct.svg" alt="${this.word}">`;this.scene.sparkle(receiver);this.sfxPlay('tile-snap');}
    if(!this.alive(e))return;const reaction=this.motion(this.word,this.mode==='helping'?'help':'state');this.setLine(true);this.solved=true;await this.respond(reaction);
   }
   async respond(reaction){
@@ -260,14 +260,14 @@
   next(){if(!this.canContinue)return;if(this.mode==='house'||this.index===this.order.length-1)return this.finish();this.index++;this.renderRound();}
   buildLetters(){
    if(!this.solved||!this.canContinue||this.building)return;this.stopAudio();this.building=true;this.letters=[];this.bank=shuffle([...this.word].map((letter,id)=>({letter,id})));
-   this.$('.u5-extras').innerHTML=`<section class="u5-letter-area"><p class="u5-hint">Use the model. Tap or drag each letter into the next space.</p><img class="u5-letter-model" src="${BASE}words/${this.word}-base.svg" alt="Model: ${this.word}"><div class="u5-letter-targets" aria-label="Build the word">${[...this.word].map((_,i)=>`<button type="button" class="u5-letter-slot" data-u5-slot="${i}" aria-label="Letter space ${i+1}"></button>`).join('')}</div><div class="u5-letter-bank">${this.bank.map(v=>`<button type="button" class="u5-pick u5-letter-pick" data-u5-letter="${v.id}" aria-label="Choose letter ${v.letter}"><img src="${BASE}letters/${v.letter}-base.svg" alt="${v.letter}" draggable="false"></button>`).join('')}</div><div class="u5-controls">${button('undo-letter','Undo','undo')}${button('close-letters','Back to photo','back')}</div></section>`;
+   this.$('.u5-extras').innerHTML=`<section class="u5-letter-area"><p class="u5-hint">Use the model. Tap or drag each letter into the next space.</p><img class="u5-letter-model" src="${BASE}words/v2/${this.word}-base.svg" alt="Model: ${this.word}"><div class="u5-letter-targets" aria-label="Build the word">${[...this.word].map((_,i)=>`<button type="button" class="u5-letter-slot" data-u5-slot="${i}" aria-label="Letter space ${i+1}"></button>`).join('')}</div><div class="u5-letter-bank">${this.bank.map(v=>`<button type="button" class="u5-pick u5-letter-pick" data-u5-letter="${v.id}" aria-label="Choose letter ${v.letter}"><img src="${BASE}letters/v2/${v.letter}-base.svg" alt="${v.letter}" draggable="false"></button>`).join('')}</div><div class="u5-controls">${button('undo-letter','Undo','undo')}${button('close-letters','Back to photo','back')}</div></section>`;
    this.setPhase('building','The model stays above. Find the next letter.');
   }
   letter(id,slot=null){
    if(!this.building||this.phase!=='building')return;const item=this.bank.find(v=>v.id===Number(id));if(!item||this.letters.some(v=>v.id===item.id))return;
    if(slot!==null&&Number(slot)!==this.letters.length){this.status('Place it in the next empty space.');return;}
    if(item.letter!==this.word[this.letters.length]){this.status('Look at the model. Try another letter.');this.sfxPlay('retry');return;}
-   this.letters.push(item);const b=this.$(`[data-u5-letter="${id}"]`);b.disabled=true;b.style.opacity='.3';const box=this.$(`[data-u5-slot="${this.letters.length-1}"]`);box.innerHTML=`<img src="${BASE}letters/${item.letter}-correct.svg" alt="${item.letter}">`;this.scene.sparkle(this.$('.u5-receiver'));this.sfxPlay('tile-snap');
+   this.letters.push(item);const b=this.$(`[data-u5-letter="${id}"]`);b.disabled=true;b.style.opacity='.3';const box=this.$(`[data-u5-slot="${this.letters.length-1}"]`);box.innerHTML=`<img src="${BASE}letters/v2/${item.letter}-correct.svg" alt="${item.letter}">`;this.scene.sparkle(this.$('.u5-receiver'));this.sfxPlay('tile-snap');
    const next=this.$(`[data-u5-slot="${this.letters.length}"]`),strip=this.$('.u5-letter-targets');if(next&&strip){const delta=next.getBoundingClientRect().right-strip.getBoundingClientRect().right;if(delta>0)strip.scrollBy({left:delta+8,behavior:this.reduced.matches?'instant':'smooth'});}
    if(this.letters.length===this.word.length){const e=this.epoch;this.say(this.sentenceKey,{highlight:true}).then(ok=>{if(this.alive(e)){this.setPhase('building',ok?'You built the word! Continue to the next photo when you are ready.':'You built the word. Tap Listen to hear it again.');this.canContinue=true;this.updateControls();}});}
   }

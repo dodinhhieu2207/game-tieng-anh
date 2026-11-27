@@ -58,13 +58,13 @@
       activity('story-clues','u4storyclues',{title:'Story Clues',image:'assets/unit4/lesson6/story-clues/headphones.webp',coverImage:'assets/unit4/lesson6/story-clues/activity-cover.webp',icon:'listen'})
     ],cardImage:'assets/unit4/navigation/lesson6-my-brother.webp',selectorLabel:'Story'}
    }).map(lesson=>({...lesson,cardImage:`assets/unit4/navigation-v2/lesson${lesson.id}-card.webp`,background:`assets/unit4/navigation-v2/lesson${lesson.id}-background.webp`,cardAspect:'2 / 1',selectorLabel:lesson.selectorLabel||['Family words','Grammar','Sounds and letters','Numbers','Letters and Sounds','Story'][lesson.id-1]}))},
-   {id:5,title:"He's happy!",space:'unit5',navigationCard:'assets/unit5/lesson1/covers/present.webp',thumbnail:'assets/unit5/lesson1/actors/happy/idle.webp',selectorScene:'assets/unit5/lesson1/backgrounds/v3/menu.webp',lessons:six({
-    1:{title:'Feelings',description:'Meet happy, sad, hungry, thirsty, hot and cold. Listen, help, match and speak.',status:'available',cardImage:'assets/unit5/lesson1/covers/present.webp',cardAspect:'3 / 2',selectorLabel:'Feelings',targetLanguage:['happy','sad','hungry','thirsty','hot','cold'],activities:[
-     activity('feelings-house','u5feelingshouse',{title:'The Feelings House',coverImage:'assets/unit5/lesson1/covers/present.webp',icon:'flashcards'}),
-     activity('feelings-camera','u5feelingscamera',{title:'Feelings Camera',coverImage:'assets/unit5/lesson1/covers/camera.webp',icon:'listening'}),
-     activity('helping-hands','u5helpinghands',{title:'Helping Hands',coverImage:'assets/unit5/lesson1/covers/helping.webp',icon:'matching'}),
-     activity('feelings-workshop','u5feelingsworkshop',{title:'Feelings Photo Workshop',coverImage:'assets/unit5/lesson1/covers/workshop.webp',icon:'matching'}),
-     activity('little-reporter','u5littlereporter',{title:'Little Reporter',coverImage:'assets/unit5/lesson1/covers/reporter.webp',image:'assets/unit5/lesson1/covers/reporter.webp',icon:'speaking',final:true})
+   {id:5,title:"He's happy!",space:'unit5',navigationCard:'assets/unit5/lesson1/covers/v2/world.webp',thumbnail:'assets/unit5/lesson1/actors/happy/idle.webp',selectorScene:'assets/unit5/lesson1/backgrounds/v3/menu.webp',lessons:six({
+    1:{title:'Feelings',description:'Meet happy, sad, hungry, thirsty, hot and cold. Listen, help, match and speak.',status:'available',cardImage:'assets/unit5/lesson1/covers/v2/present.webp',cardAspect:'2 / 1',selectorLabel:'Feelings',targetLanguage:['happy','sad','hungry','thirsty','hot','cold'],activities:[
+     activity('feelings-house','u5feelingshouse',{title:'The Feelings House',coverImage:'assets/unit5/lesson1/covers/v2/present.webp',icon:'flashcards'}),
+     activity('feelings-camera','u5feelingscamera',{title:'Feelings Camera',coverImage:'assets/unit5/lesson1/covers/v2/camera.webp',icon:'listening'}),
+     activity('helping-hands','u5helpinghands',{title:'Helping Hands',coverImage:'assets/unit5/lesson1/covers/v2/helping.webp',icon:'matching'}),
+     activity('feelings-workshop','u5feelingsworkshop',{title:'Feelings Photo Workshop',coverImage:'assets/unit5/lesson1/covers/v2/workshop.webp',icon:'matching'}),
+     activity('little-reporter','u5littlereporter',{title:'Little Reporter',coverImage:'assets/unit5/lesson1/covers/v2/reporter.webp',image:'assets/unit5/lesson1/covers/v2/reporter.webp',icon:'speaking',final:true})
     ]}
    }).map(l=>l.id===1?l:{...l,locked:true})}
   ],

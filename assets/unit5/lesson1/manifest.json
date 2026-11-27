@@ -4136,6 +4136,982 @@
       "generation": "exec-0517699e-16b3-47dd-8609-e3d0be877f8e",
       "width": 1536,
       "height": 1024
+    },
+    {
+      "file": "sources/covers-v2/world.png",
+      "role": "imagegen original reference-guided cover v2",
+      "sha256": "9a0646fb0fe98edda5512bcdac46377cd0181fc0eccd5a4e5c404f47c99853e6",
+      "generation": "exec-dbf49dee-5d4a-4f6d-a49d-3a3af35dd063",
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "file": "covers/v2/world.webp",
+      "role": "runtime cover v2, encoding only",
+      "sha256": "948f24d808e2331d9fdef5e3d0d1cc7d08c730a342ee6e2913f7eb75230b1d15",
+      "generation": "exec-dbf49dee-5d4a-4f6d-a49d-3a3af35dd063",
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "file": "sources/covers-v2/present.png",
+      "role": "imagegen original reference-guided cover v2",
+      "sha256": "5d457df7f6d9b21c4098be3c6096591ae745295779a8704a5880b0eb405b1201",
+      "generation": "exec-d98801e9-ae74-4ed1-a3c7-275b720efe05",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "file": "covers/v2/present.webp",
+      "role": "runtime cover v2, encoding only",
+      "sha256": "930591328b3544384cbb1e66a6663e3a76693fab1e18e92c131b15e0481598c3",
+      "generation": "exec-d98801e9-ae74-4ed1-a3c7-275b720efe05",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "file": "sources/covers-v2/camera.png",
+      "role": "imagegen original reference-guided cover v2",
+      "sha256": "456dbeb0af5e19dd3de44049c717ba9741613fd01751958a25388d642f1e393c",
+      "generation": "exec-ddf7a9ed-1e0d-49cf-991f-23dd3a0c9d7f",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "file": "covers/v2/camera.webp",
+      "role": "runtime cover v2, encoding only",
+      "sha256": "f6902a9db4d404302a8dc456b37c230959008be2ea2d3308a9527a8574920918",
+      "generation": "exec-ddf7a9ed-1e0d-49cf-991f-23dd3a0c9d7f",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "file": "sources/covers-v2/helping.png",
+      "role": "imagegen original reference-guided cover v2",
+      "sha256": "c8d0e8f468b90d79535e58b7036bf7d316545c06bf146b42dfddcb62acf99c78",
+      "generation": "exec-2a6447d5-7559-4a3b-b72c-a6962c822edd",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "file": "covers/v2/helping.webp",
+      "role": "runtime cover v2, encoding only",
+      "sha256": "617519ecadfc8d7b6a8aa1c90da45ae897faee12bd5d14d5b802340525dac0e1",
+      "generation": "exec-2a6447d5-7559-4a3b-b72c-a6962c822edd",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "file": "sources/covers-v2/workshop.png",
+      "role": "imagegen original reference-guided cover v2",
+      "sha256": "cabd239ee3e7afdf1d7bd990e9e7edcccae409dd61a2b7cf2e1ff60803c49011",
+      "generation": "exec-835adcae-cab6-4b1f-adea-29badb9a5b46",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "file": "covers/v2/workshop.webp",
+      "role": "runtime cover v2, encoding only",
+      "sha256": "c3931d04ed3a4dd001b773ba411b5cbd01d5bf569b2b1c61b31d103552a06d0a",
+      "generation": "exec-835adcae-cab6-4b1f-adea-29badb9a5b46",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "file": "sources/covers-v2/reporter.png",
+      "role": "imagegen original reference-guided cover v2",
+      "sha256": "da5c237a9bdfaf2f7e7c99d22827da8f12f7aec6a42bbeeedda47165625e5cd5",
+      "generation": "exec-0452742f-001d-477d-a828-cd604cbe0ee7",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "file": "covers/v2/reporter.webp",
+      "role": "runtime cover v2, encoding only",
+      "sha256": "9f2328aa200fe77566e200cd839cc2ffb7ce7cf2cfe30be96326e04a639fde4f",
+      "generation": "exec-0452742f-001d-477d-a828-cd604cbe0ee7",
+      "width": 1774,
+      "height": 887
+    },
+    {
+      "file": "ui/v2/back-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "8ffc5a3681f1cd29d82cebe4f49fb806bc376367b34c77ded9f13e4d17493e0c"
+    },
+    {
+      "file": "ui/v2/back-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "298b2d69c9d9282c1972bf36923a64af4753b1d3767955a4891725fe1d20e2b6"
+    },
+    {
+      "file": "ui/v2/back-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "017c2b5929508ba7ea2a0c8bc71b31619525a55809794cfc49728fabdbd26814"
+    },
+    {
+      "file": "ui/v2/back-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "cf3617f56a674dcdc6e56421bbd46bda739ccf3ab34f6d5f150c7497a32d4d3c"
+    },
+    {
+      "file": "ui/v2/button-wide-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "7d997339cb61c4b4d81c53304c76e2443e92890469066979c3635f7b000204dc"
+    },
+    {
+      "file": "ui/v2/button-wide-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "dda5d7737fc348a3dfe4e125b78c2f1e6628592ca64b539160ca3be4402db29b"
+    },
+    {
+      "file": "ui/v2/button-wide-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "7d997339cb61c4b4d81c53304c76e2443e92890469066979c3635f7b000204dc"
+    },
+    {
+      "file": "ui/v2/button-wide-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "46d4e54147f7d7ec6d4d32bb7b1cc04797c0587fc157e0183863ee975195ffe8"
+    },
+    {
+      "file": "ui/v2/camera-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "f121145c10b09835aef3cf35bdf7a5daf0e954016f79bbed8e0be6c4a0b803e4"
+    },
+    {
+      "file": "ui/v2/camera-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "6767618af1973192bc01ba68e8979cda8b1cb42ca2488950f3d024d48f9096a7"
+    },
+    {
+      "file": "ui/v2/camera-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "2bd3b2b03a98b02123eab83c40c28f36e2628aa51355670df52b18564ce8cdc6"
+    },
+    {
+      "file": "ui/v2/camera-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "392323382ca115c4e598048c8ad13583ef7ede4c978a55d166ec18ea69bbcb0d"
+    },
+    {
+      "file": "ui/v2/close-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "3a6de22d74f160e814d31f44f939cf5de3a097585b21925790857db6f2c3ce85"
+    },
+    {
+      "file": "ui/v2/close-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "5c7f7c673add6638a02f7ea6dd867d254484f88c723bb36df56107b5bfc1a2f9"
+    },
+    {
+      "file": "ui/v2/close-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "443c11422d34d6814c77780607298583f84567d95dcfb9efc7bef99c64545c85"
+    },
+    {
+      "file": "ui/v2/close-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "0237380313feb0a97d9c90268eb04b6190ffa4fadc88c6ef3cb06a9333094a75"
+    },
+    {
+      "file": "ui/v2/done-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "449d1a6e3c37fa350587b98f1ebf1aa0b48f9d33d6ce09dc6c0a9ee72a0a2b0b"
+    },
+    {
+      "file": "ui/v2/done-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "acda3079cb5405f062e6365b113612c52ff1dddc84a05841bb07743cd07b63cb"
+    },
+    {
+      "file": "ui/v2/done-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "e5d0bfa8f1ab392d9cfa4519ca7f5efb9ee81495ae8a1ed3244939f2f7773a06"
+    },
+    {
+      "file": "ui/v2/done-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "a916afbc435ba31bb8335afe8ee8c125e77bed23578c27bce6d7d0533717a2a4"
+    },
+    {
+      "file": "ui/v2/hear-sentence-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "c0b8d21c2f637d669fbd78c943421fdd93b4b0f04fb20195239dceba98e0dbbd"
+    },
+    {
+      "file": "ui/v2/hear-sentence-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "a864cc8b2b30888feaaceb6632392726f0a74965f7c311ba1f044cc2803f8e8f"
+    },
+    {
+      "file": "ui/v2/hear-sentence-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "ab58aab047473ba41e9f4f3bfdb744c6a4040b7537ce3a2ac55719a280315fa8"
+    },
+    {
+      "file": "ui/v2/hear-sentence-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "03347e125486a850ff384e61a37eb9549141fc300cf44a9986bc637d4d9bd674"
+    },
+    {
+      "file": "ui/v2/hear-word-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "4254f3bdf2713eff085d1899c169cd7344dc4b8c678971ff73963df9f6beb63a"
+    },
+    {
+      "file": "ui/v2/hear-word-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "8b30e09d4a0996c9b5b7e80c76201c60dfbff37bd61dd3064541f577904512a2"
+    },
+    {
+      "file": "ui/v2/hear-word-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "a4a2dc7789daf1902ba42fc1e6ffba57068a4e61092ed2a3ae29bc12f15c968c"
+    },
+    {
+      "file": "ui/v2/hear-word-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "d60a5656946312ef8997a4662302280fc8234f25ffe7c4f347bf6d8d96b70701"
+    },
+    {
+      "file": "ui/v2/help-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "d54a76d1cffec9619e79f77107c51159450e57ae8ef50a2a050bee805c3f0697"
+    },
+    {
+      "file": "ui/v2/help-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "310f92e97e8f24e544379708fae03339bfc81efd0fe6440068ee8c08bff63822"
+    },
+    {
+      "file": "ui/v2/help-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "b9b0b26f90cfac729a576f3bf094a8b0183c727bd35245be30154be5e275ac2a"
+    },
+    {
+      "file": "ui/v2/help-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "917ea3f22d4b9b9636d04e5bcb3abf4b59c02089f9dddb61c3e331827e0f821d"
+    },
+    {
+      "file": "ui/v2/home-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "01574448a0387002b43b666755fe9a5f454b11038a84aff2b5d5bf48b23cf4ed"
+    },
+    {
+      "file": "ui/v2/home-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "49f9907cce7d0a0f52ab8e4377cf86f88125a82d5e49956eb07e35d14fbabc88"
+    },
+    {
+      "file": "ui/v2/home-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "4ceccc95827f6e84e7092e2532a60d84396a179cf7a58f57dcd1d85224a987b4"
+    },
+    {
+      "file": "ui/v2/home-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "49084af09efc12cdacdca020b39bb90489b646df3d95d0b160d2e824e461623a"
+    },
+    {
+      "file": "ui/v2/microphone-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "1f20d5725d5ea51f6a9c17053fd95177a74b42b4f2b2e902e37ff0a7aa43e6cd"
+    },
+    {
+      "file": "ui/v2/microphone-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "6f548e4480ba534f8f30a5caf2e6ac17a991bab08e80179410be1d925fbcd7b6"
+    },
+    {
+      "file": "ui/v2/microphone-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "eb1a6afba0171637dc7714e679b4745abcc8ab532e2e355b050bce3c555f1dac"
+    },
+    {
+      "file": "ui/v2/microphone-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "98f670de50a7af7324a81f3ebaad1d5e16818bad3446785f32e9527eceec57fc"
+    },
+    {
+      "file": "ui/v2/mute-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "e168e442a06a4ab517f1ca015234cb2bd9ee63c4fec342e897c5eeff5e8c8979"
+    },
+    {
+      "file": "ui/v2/mute-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "d422f615c408503509ceb54bf32d75a70bb3bf4b801b30b9aa071f77ab40bb21"
+    },
+    {
+      "file": "ui/v2/mute-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "09a2112dad980c1cd0714a529b3e4ed1956676a494c389f8dcc5d02829988b89"
+    },
+    {
+      "file": "ui/v2/mute-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "c8ff39da67219ff8543a514e1c5675b533549d2d4ca8833a7de68613138d82f8"
+    },
+    {
+      "file": "ui/v2/next-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "7fe6e664a1f1bcd9918679e20340b262d74d22101e44629953c4fff51745021a"
+    },
+    {
+      "file": "ui/v2/next-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "538d223b605f13fd9c3e6de7d89846238663b21080e5b0bfabdabf6cc741a8b3"
+    },
+    {
+      "file": "ui/v2/next-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "7793cf020403a3252e547f55a5884f6527f35e352ebb72e3d50ac9fe2e14971a"
+    },
+    {
+      "file": "ui/v2/next-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "f06ce7892a42a7ca9bc206101c9bf28f6f60cafbe373b1c386d05241c21d3262"
+    },
+    {
+      "file": "ui/v2/pause-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "ec1e2fb1f5714d5ca68ca3579f7f95eaeca5a9ea472ad8921efeeca20a5a7e1e"
+    },
+    {
+      "file": "ui/v2/pause-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "a941505b38ad3beb6f4cd1213775b69efb84e5f09a569d08145e0b3819bab340"
+    },
+    {
+      "file": "ui/v2/pause-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "5a16ef123047f2481087e7be208a30c77e4219e1c33389e10e203b9512c67540"
+    },
+    {
+      "file": "ui/v2/pause-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "fd2772e2ef09eb0d36f5348eb896c0f308b8918a1d80bc963d79f67d70f67945"
+    },
+    {
+      "file": "ui/v2/photo-frame.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "d644e208b1174e78b6eb8d81e5c2884336165da40378d7553aef07dc2eac2c75"
+    },
+    {
+      "file": "ui/v2/play-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "8ed95fdfce3a3f64292ab7a5af021072eede562baba83cfefaf6017ab9220962"
+    },
+    {
+      "file": "ui/v2/play-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "aa7b2db12c86620fbe810a8f8512ca509518f420d7ce1dc8e2b3501bd17c6426"
+    },
+    {
+      "file": "ui/v2/play-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "0160eef8c95dd8c96a8e18df3a3775a59810651ab5e3b1d1968fc042b5fef761"
+    },
+    {
+      "file": "ui/v2/play-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "ec148c914177732025aa3669b03bc53e03e26a01b3584daf1c0f4ab359b63ec4"
+    },
+    {
+      "file": "ui/v2/replay-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "3255170b3e6de5c5d8ec91c744e6d1be97be09ec6d0fe2cf7d1f94e88b344a23"
+    },
+    {
+      "file": "ui/v2/replay-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "c6641c9089d35a762bbc434b0ea76ab29348646004e371ed3bb8f1156838a573"
+    },
+    {
+      "file": "ui/v2/replay-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "facfabfaf6d65ecf7c3229e35ec5372b566553ccae65fecb72d5e9b92ebef7cb"
+    },
+    {
+      "file": "ui/v2/replay-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "516320f9a9530f62dba7f5a9c1cd5176415d88433a831758032ee3936ee830bc"
+    },
+    {
+      "file": "ui/v2/sound-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "ee2be6aea44ae8d3f917297d01041730fd7c1813d7c4c85ff64396f3fe284406"
+    },
+    {
+      "file": "ui/v2/sound-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "aeb3948cbcdb98c9e70d43864c17c9feefe11ce124e41dcebc82b4ea2ec27cdd"
+    },
+    {
+      "file": "ui/v2/sound-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "0c754a633bc0644a7d872cf9a71d26740f6051cfa3639365ac27a09385b809c3"
+    },
+    {
+      "file": "ui/v2/sound-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "4b3c89fa69df5e4bf21c62aac4e2f18a1c65fa459a43a2badb4bd6a5e3e8973b"
+    },
+    {
+      "file": "ui/v2/undo-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "ad24bd54fd7c5361ade50fd0a6144ac49b937ef1be38d8b4d6ec8e4065400ce2"
+    },
+    {
+      "file": "ui/v2/undo-disabled.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "1af867f6349a828e7fc563cbfd8dfa0d816e8f6773f7cf854c00a9cc57a5825d"
+    },
+    {
+      "file": "ui/v2/undo-focus.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "e959d5798f357f1327349760d3b9b6c9097c8f2f433ea55b1a1e7bf887c8a052"
+    },
+    {
+      "file": "ui/v2/undo-pressed.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "6082cce3ba5898afc7f9605e10d1d9d59fd5dc81c0b06799ffd8e4455e6f47b8"
+    },
+    {
+      "file": "ui/v2/word-tray.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "6618183e6a88a0ecdfbeb6d580417d2454d8366fe0d2c9c43345447f58a94835"
+    },
+    {
+      "file": "ui/v2/icons/back.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "cd714b3df6929b3c638fa04451abab5a7aaa1cdba712d604dc118ca1e8d5663e"
+    },
+    {
+      "file": "ui/v2/icons/camera.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "887c301dfb0dd4d98404ea60040f4242fea314107e8c6b9bed4157dc6f09442c"
+    },
+    {
+      "file": "ui/v2/icons/close.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "7f8e88379aebc6fd7dc55b60d57a555ee4ea587a5404d91ca4d5bdf00f95050c"
+    },
+    {
+      "file": "ui/v2/icons/done.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "c5ad3eeaed3bf9057ac9f662c3bf51846c402ccb07065f5062d25cac5a3a3ffb"
+    },
+    {
+      "file": "ui/v2/icons/hear-sentence.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "ccf592f9143af5d426b2f44b0eb91b2a8c521e41da7d0af1e5947ba3afdcc8bf"
+    },
+    {
+      "file": "ui/v2/icons/hear-word.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "aac7cc6b06592d5ae015d8462b6952e26256760a9bd27f01c4a72bba9bb701f6"
+    },
+    {
+      "file": "ui/v2/icons/help.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "faaaafa1f96473f863dd2b30a6e0f16a795d4691fdaa740813df30d932200746"
+    },
+    {
+      "file": "ui/v2/icons/home.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "ca8e652efc0471ff60c226534ae12ed6cb76ee27319a6ca3fa4e7914f92d414c"
+    },
+    {
+      "file": "ui/v2/icons/microphone.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "bcf295f9eb22a5d41fb73a0b879b46446abac9a796d02b8c6c9af0518a7bd827"
+    },
+    {
+      "file": "ui/v2/icons/mute.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "c072576607f0fef98abffbfcd90e5bf43d8db0fe11f37879e3fff75d792a8ebc"
+    },
+    {
+      "file": "ui/v2/icons/next.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "2226401291cfb8f4fd9b26f4cf8f55528c0ed8b3f4918dbf7b2e950c539c86cc"
+    },
+    {
+      "file": "ui/v2/icons/pause.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "09f372a7dade22539ed02f37709fefd3b2aa6647fcec1c6e406c18559fc5652d"
+    },
+    {
+      "file": "ui/v2/icons/play.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "794c3e9a57613a7934a5c101e502bb0c5aca0d11c61559e0cb410940429965a0"
+    },
+    {
+      "file": "ui/v2/icons/replay.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "0ef17d93dc2a162ee4cf35cf6266f92a82cf3f897c8e9b5b6b9d27763e2dec8e"
+    },
+    {
+      "file": "ui/v2/icons/sound.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "bb79aa82b4d6188029330edb82b3d8783c90aedbcea60ac05090b490e5a1bca1"
+    },
+    {
+      "file": "ui/v2/icons/undo.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "0cea8ad77e0b1324a329f9f99ec31edf353624413fd826fb845e9a5d635564f0"
+    },
+    {
+      "file": "letters/v2/a-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "29d01ec240a320265199c4157e73b59c338e5f89604f282aa0b6e3fef64f80c5"
+    },
+    {
+      "file": "letters/v2/a-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "d6199473d331c732887ff8d25407c3e40f88a36d62f357fa533be04670a0407f"
+    },
+    {
+      "file": "letters/v2/a-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "bde4067405334e8a6ec95cb2f6eed4164ccb5a3fc7766f7e8e64185b5c84d19b"
+    },
+    {
+      "file": "letters/v2/a-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "8df823219fb3b275ea18975d5db11fcbcdf04dc347abd5f38979a55074952e4b"
+    },
+    {
+      "file": "letters/v2/c-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "0730cc94e64feef26591cadb044bf16c3a579449ba917c07a32b538fa0ee8e50"
+    },
+    {
+      "file": "letters/v2/c-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "0f8d77247551716a1c9a1ddcf295d38f09c0e0463fb63b18d31f04e5bede10b6"
+    },
+    {
+      "file": "letters/v2/c-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "8275cfc7c3c329803bf3b9bb17884b0c6a8585567b2fb20ed9e60f3cf728f7da"
+    },
+    {
+      "file": "letters/v2/c-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "459d0fdbd33e1edf285fcded720bb269c81fb5fdd4a4f42b345e9827b51be3bb"
+    },
+    {
+      "file": "letters/v2/d-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "7c5f79c5ed831649a4e227220c0f42a0858a1fa6c9430be27e71cace1f8ad888"
+    },
+    {
+      "file": "letters/v2/d-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "21946a8f0c71b008d7d343175026d5b789c47fa8db0c3ccae4066d2efc5b1a9f"
+    },
+    {
+      "file": "letters/v2/d-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "c104fbdadea68825f1ed1b018c993af0799f6c44be6aba5a04630fabd89f8e1e"
+    },
+    {
+      "file": "letters/v2/d-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "2a2da2fffb1f5fcf12f2a91ba0570c2612df1aa13a6e432b4c24e3e552cf16ea"
+    },
+    {
+      "file": "letters/v2/g-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "6ad32d663d6e2671daaad8446f08e9b095fbc725174bb7336b366d86d15d9573"
+    },
+    {
+      "file": "letters/v2/g-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "09fbc178b92e92aa130a01f0e4984e73412c6945ddb464d9191912c5fb801b11"
+    },
+    {
+      "file": "letters/v2/g-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "0485d24ea15e40045122019004810abb6fa38632f4474db3c4b912c7a873dd0f"
+    },
+    {
+      "file": "letters/v2/g-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "b4451097f66e51b196ef467ba3f9cdc7c7bad5925706a4d0b15a330fec9447a0"
+    },
+    {
+      "file": "letters/v2/h-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "b6b51996d9f24f47a0c7a139934c85cdc48b6f689aba9131076402922621e79b"
+    },
+    {
+      "file": "letters/v2/h-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "2cc7d49cb85d3474bb65de2dd03ce12068c645afbbf93f1e2dc890cb7b5a872f"
+    },
+    {
+      "file": "letters/v2/h-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "10c0072d0485bee4973de6a756be9ec23122f87d1c35bf6fda853a46ea296c0f"
+    },
+    {
+      "file": "letters/v2/h-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "206aaf059a45039571a8a6ca37ef21bc6af2b5a024f01d431f1cd4b3393bae09"
+    },
+    {
+      "file": "letters/v2/i-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "6ea9d19e3f6a9bcf7ce348853298d6e0488fe122fb2ea70346cb81746a65aa75"
+    },
+    {
+      "file": "letters/v2/i-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "162619d85061c8d6fa8b70d223fb26eef0cbc0df846a7198b685df10cb9db0d5"
+    },
+    {
+      "file": "letters/v2/i-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "d8b4c5b454c6e2852025bc30b44598086040a99917cd67fa767b22b8fc295e09"
+    },
+    {
+      "file": "letters/v2/i-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "d4bd10f0b54d4f419a7d871d37502eda43e12455dd65c27a0c0512d8c91d6e65"
+    },
+    {
+      "file": "letters/v2/l-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "896c3e494ac72eb903b465d80ea12729f88af1590d9c64172096dd99b3b08835"
+    },
+    {
+      "file": "letters/v2/l-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "860715f595dedcdd0dce3bb73585ece8c4b9b88452ddbd8109baa79c4a133809"
+    },
+    {
+      "file": "letters/v2/l-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "92c40c5dea135d9789cf39671d98ebe3c79ee9a448220bfa3b4beb4736810a92"
+    },
+    {
+      "file": "letters/v2/l-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "aa3368c6db3762200ea19546fa4a18fa855e1e97ef29aece79c87f56f74e8c61"
+    },
+    {
+      "file": "letters/v2/n-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "61a270eb4cf5c477a07bf70e09a47aee8e56a498ab01937ba28af1dad5e42aad"
+    },
+    {
+      "file": "letters/v2/n-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "c341f9880a5d9a010135f69a70bcf835a3c7aaf7745f6f4ec416123bacea30a7"
+    },
+    {
+      "file": "letters/v2/n-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "3d64655591d015544bfa8b1738c9f57cab5f3c403176cf9eac9876cbf39b59b1"
+    },
+    {
+      "file": "letters/v2/n-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "6e0d8dfe25bd461ddfacc6119b5a306969dcf607823777529661a3166e608e63"
+    },
+    {
+      "file": "letters/v2/o-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "3c4d3567066b5fd5828d8bfeb66af19237f4df457e17d8a20eac448fc7657f0a"
+    },
+    {
+      "file": "letters/v2/o-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "dcca3b38e6a151fb82ba446375dd35196b94c6d82ed50be5a44043c25be5ef5e"
+    },
+    {
+      "file": "letters/v2/o-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "ba4200bc81f8f9665a83a64b1c7632bd80a18bf086a2e1e0a1d8ffc5d36f1860"
+    },
+    {
+      "file": "letters/v2/o-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "17d1594c80bf21cb238cf79e752c8ed21f7d1226fa1d97cb8a23dcaeb269d452"
+    },
+    {
+      "file": "letters/v2/p-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "e9cbb99649c1d9cbd4eb53f1e723ea721f3c2523f37324733b5a2a13bbd87ba0"
+    },
+    {
+      "file": "letters/v2/p-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "621009c0e5de499a64a77d316182fc4a529eefc7c7495b2dddaa573e54102007"
+    },
+    {
+      "file": "letters/v2/p-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "9d2953a7b71d68f3c2b61b1e7778f43a18f04d4882b49aa08064db9e4336aed6"
+    },
+    {
+      "file": "letters/v2/p-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "796d30975c3f9250ea388a6a4aaf581caaf25b22a1e10203016b31a443f23542"
+    },
+    {
+      "file": "letters/v2/r-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "66f9db0acda9e4eacc23dae26e52005e7d75f8eb386617b1852a44f23462d038"
+    },
+    {
+      "file": "letters/v2/r-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "0c2a7364591f6752f03f2e01deef4d2ccb08856d5a2d8101ca9e7f8ced1f5d14"
+    },
+    {
+      "file": "letters/v2/r-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "34e13a7cc2c6c8578346b84ff936ee832ba2830411b566bb954d0768929e1bb1"
+    },
+    {
+      "file": "letters/v2/r-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "74e40a49c5f830a8203fb4cd56d6606f152999a8a744277a7810f8f23a20d65d"
+    },
+    {
+      "file": "letters/v2/receiver.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "bbea2278bdd8f8c30a8818b8d1ebbc3d0d3d624d348a7339742ab57c6aa1588c"
+    },
+    {
+      "file": "letters/v2/s-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "23e3d905a4c0b62904eb659aeb5cdac35311b7fd1941155e6c568c01cd0ca676"
+    },
+    {
+      "file": "letters/v2/s-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "c357a7fd129a197c15ccff267f7bd0e70882d3318de208bbba533e2af05d9b0f"
+    },
+    {
+      "file": "letters/v2/s-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "acbdab49bdc35206a736ffe169f73efadb414ee1db2c0c1a1e1ade4575534e44"
+    },
+    {
+      "file": "letters/v2/s-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "dbef7a12d7d669a75fcc5686c783bcd38590eab4f804e08bf64d9ba4c9caf014"
+    },
+    {
+      "file": "letters/v2/t-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "d495691c8337b12284c743d12329ff97cb31a8cb646fd98d8c45628118c68836"
+    },
+    {
+      "file": "letters/v2/t-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "8797ad74afb389e929f3527accc761ff9cb9bb9a48ba5ff0ebc4a7c7e9106637"
+    },
+    {
+      "file": "letters/v2/t-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "d15df6f2d7b4862815eaf2029b8de83fa5c6fd79c1b396317f3c1596cc526382"
+    },
+    {
+      "file": "letters/v2/t-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "06d619b1b1f7736a55525e88c41ad54eee64582673e85df4814b24a127eacc6e"
+    },
+    {
+      "file": "letters/v2/tile-end.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "61e07229b16ebe91e528ca846b79acd125fcbe2db7d0dade2c94b195bd1a0231"
+    },
+    {
+      "file": "letters/v2/tile-middle.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "61e07229b16ebe91e528ca846b79acd125fcbe2db7d0dade2c94b195bd1a0231"
+    },
+    {
+      "file": "letters/v2/tile-start.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "61e07229b16ebe91e528ca846b79acd125fcbe2db7d0dade2c94b195bd1a0231"
+    },
+    {
+      "file": "letters/v2/u-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "c5d0bacc86ed41f26fb5e33b274b659eae37ea08f50045ce447ac482c17cf6f6"
+    },
+    {
+      "file": "letters/v2/u-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "68b154fee5d28253b95e6b132b26631e3c7911fb4410e56d9fcbbb6c57196aa5"
+    },
+    {
+      "file": "letters/v2/u-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "d1d029a6d150f47899c0ebcdda873b67ed80a563c557ccea37bd21d916247a3a"
+    },
+    {
+      "file": "letters/v2/u-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "3ba6a86251ce467c8e8f4206a1fac156e73408ec5d395e0ceca13cb5e9967041"
+    },
+    {
+      "file": "letters/v2/y-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "c90a999dbf3d751adf636cf4c9d754e77cfcf771546b69ce511054ffebe11ace"
+    },
+    {
+      "file": "letters/v2/y-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "e5940e718a8ca2a9e695172ee6ea754083232ef9fffa36a0b8b727d5637788e7"
+    },
+    {
+      "file": "letters/v2/y-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "b054622d877cfee9c91e987dc006dfa2a81397e69000b5eff4e843e9950833d3"
+    },
+    {
+      "file": "letters/v2/y-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "096c7cd8d88b839789fa45c62be94161601b8730ead2f2510fb44e56d4bdce1b"
+    },
+    {
+      "file": "words/v2/cold-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "fba167202a5477d3e32f78267c77e017eb10ed06a889739d14bc076b5e1a215c"
+    },
+    {
+      "file": "words/v2/cold-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "8a1df6b03dbfd349dc2da8858ee5b5c535ad84d1497ddad1758f0a7a3c7110e2"
+    },
+    {
+      "file": "words/v2/cold-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "a9aaa514dc268cee686914059207f668cf0e3e932a52f7d501bf67ef508f0971"
+    },
+    {
+      "file": "words/v2/cold-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "8b8ef8f037302bf4de9fc0a6d6794a1aff1ac329c9bfc5be0e8f9972025df525"
+    },
+    {
+      "file": "words/v2/happy-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "31368d1cfcdc0721ce20b20c46770505a80d2bdd428924eacee4eb7b1f53aaef"
+    },
+    {
+      "file": "words/v2/happy-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "2500113bb3d95dc5888d3c8cb6fe6edb105fd11621130077abb7f7aa014c5096"
+    },
+    {
+      "file": "words/v2/happy-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "42f334244e8147d7f4aae1533e61f3bc5d5cd24c25a125d5098dcac3f26dd3a3"
+    },
+    {
+      "file": "words/v2/happy-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "ba8b6b1f14f670ab599e5977861b4efeb8c518769063df0ec36d7fd44baeb30c"
+    },
+    {
+      "file": "words/v2/hes.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "808d27a682d7d9351d9d094a444535414919d8d0ef003e2c43bd1e64f808211a"
+    },
+    {
+      "file": "words/v2/hot-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "d2d3b73999832610bf8396a10fbd5630bfd707eea5ec91fa9dd61ed380930ebf"
+    },
+    {
+      "file": "words/v2/hot-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "efdf3ddf8d780f20c007ced64bd54381797c150311354810a6f70358a9a2e4a8"
+    },
+    {
+      "file": "words/v2/hot-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "db00a3c4585e3b7baace480acb55a1127f3099094ba44b0d4c8db40b584716af"
+    },
+    {
+      "file": "words/v2/hot-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "55d840e85e71cb83e0176563745584da074764d0811a8fe9310901d6ab913467"
+    },
+    {
+      "file": "words/v2/hungry-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "24bab7d4f5b926c52659a6b36c5e8628837f192c6acbcad50a492491e4e80422"
+    },
+    {
+      "file": "words/v2/hungry-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "20fc718001920746c31ce95c5cc0f28c1b9c18b8aa80cdaa8ac6bcf0f9d23289"
+    },
+    {
+      "file": "words/v2/hungry-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "7ea708925a60fa389cdcdd56bf3028c53361e98a06cc1dda16ec227fc4f9d842"
+    },
+    {
+      "file": "words/v2/hungry-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "03f01f9485274e3b8e9377235c74bea1aa9a607ef1bd8ee175278cdd0ba371cd"
+    },
+    {
+      "file": "words/v2/sad-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "4725137188f3bbec31d018e0ae04daaa89e3fd769f55efa52ba23912b7261e01"
+    },
+    {
+      "file": "words/v2/sad-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "03957bf241da684a6f6187fa1ff88279dbcbab5a69f1fc1bee48f7a92ac16af1"
+    },
+    {
+      "file": "words/v2/sad-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "59c5dfd100875ef7ef8989b8204aa7ff6869c6812d81e1036d3d1385c5538cd3"
+    },
+    {
+      "file": "words/v2/sad-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "8fd6ac4a9596cc5aa22f07ea5db6673233dc8a23c4c2a96bcd14e6c6caba04e4"
+    },
+    {
+      "file": "words/v2/shes.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "f4fc4094abe7ad46f8fa34bd224895b42024c7f0babfc224670885db29bd2dc0"
+    },
+    {
+      "file": "words/v2/thirsty-base.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "ac852b2031daa729f8bb7a7d20612cf0bc6b93711925539954581851b0ac72b2"
+    },
+    {
+      "file": "words/v2/thirsty-correct.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "96e7432f28ddffef757216feeab875eec4c5ec0c630c9ee1ab76ad6cc0a87cb3"
+    },
+    {
+      "file": "words/v2/thirsty-hint.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "508ac39ad4805d59bb36c55e3d233cd911f6345c41e28a6bf7850cbd5fb111b2"
+    },
+    {
+      "file": "words/v2/thirsty-selected.svg",
+      "role": "blue-white UI v2, paint-only SVG variant",
+      "sha256": "a2d0ef8ce30ef0874852b88064cc3a9b1ce83d08ad1fb71329e6d6911aa94f9d"
     }
   ],
   "actors": {
@@ -5017,5 +5993,18 @@
     "helping": "backgrounds/v3/helping.webp",
     "workshop": "backgrounds/v3/workshop.webp",
     "reporter": "backgrounds/v3/reporter.webp"
+  },
+  "coversV2": {
+    "world": "covers/v2/world.webp",
+    "present": "covers/v2/present.webp",
+    "camera": "covers/v2/camera.webp",
+    "helping": "covers/v2/helping.webp",
+    "workshop": "covers/v2/workshop.webp",
+    "reporter": "covers/v2/reporter.webp"
+  },
+  "uiV2": {
+    "ui": "ui/v2/",
+    "words": "words/v2/",
+    "letters": "letters/v2/"
   }
 }
