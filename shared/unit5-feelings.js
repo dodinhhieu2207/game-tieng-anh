@@ -268,6 +268,7 @@
   async cue(){
    if(!this.loaded||this.dead||['recording','permission','processing','delivery','responding','audio'].includes(this.phase))return;
    if(this.mode==='house')return this.explore();
+   if(this.isTeaching)return this.supportModel();
    const e=this.epoch;if(this.mode==='reporter'){this.showModel=true;this.roundHinted=true;this.setLine(true);}
    if(this.mode==='camera'&&!this.solved)this.heard=false;
    const ok=await this.say(this.mode==='workshop'?'words/'+this.word:this.sentenceKey,{highlight:this.mode!=='camera'||this.solved});

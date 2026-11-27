@@ -1,6 +1,7 @@
 const {chromium}=require('C:/Users/Admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const fs=require('fs'),path=require('path'),assert=require('assert');
 const origin=process.env.U5_QA_ORIGIN||'http://127.0.0.1:8765';
+const corsOrigin=new URL(origin).origin;
 const dir=path.resolve(process.env.U5_LEARN_QA_DIR||'docs/game-plans/unit5-feelings/evidence/learning-v1'+(origin.startsWith('https:')?'-public':''));
 const routes=['feelings-house','feelings-camera','helping-hands','feelings-workshop','little-reporter'];
 const href=r=>origin+'/index.html?release=learning-v1#/unit/5/lesson/1?mode=practice&activity='+r;
@@ -103,7 +104,7 @@ async function answer(p,{wrong=false,touch=false,keyboard=false}={}){
   await p.locator('[data-u5-action=next]').click();await p.locator('.u5-finish').waitFor();assert.equal(await p.evaluate(()=>learningAwards.length),beforeHouse+1);report.house={twoAtATime:true,allSixHeard:true};
   // Reporter: actual existing adapter may be UNCLEAR; listening can continue, without an AI award.
   await p.goto(href('little-reporter'));await ready(p);const beforeReporter=await p.evaluate(()=>learningAwards.length);let simulatedRequests=0;
-  await p.route('**/api/speaking-check',r=>{if(r.request().method()==='OPTIONS')return r.fulfill({status:204,headers:{'Access-Control-Allow-Origin':origin,'Access-Control-Allow-Methods':'POST, OPTIONS','Access-Control-Allow-Headers':'Content-Type'}});simulatedRequests++;return r.fulfill({status:200,headers:{'Access-Control-Allow-Origin':origin,'Content-Type':'application/json'},body:JSON.stringify({result:'UNCLEAR',transcript:'',reason:'recognition-uncertain'})})});
+  await p.route('**/api/speaking-check',r=>{if(r.request().method()==='OPTIONS')return r.fulfill({status:204,headers:{'Access-Control-Allow-Origin':corsOrigin,'Access-Control-Allow-Methods':'POST, OPTIONS','Access-Control-Allow-Headers':'Content-Type'}});simulatedRequests++;return r.fulfill({status:200,headers:{'Access-Control-Allow-Origin':corsOrigin,'Content-Type':'application/json'},body:JSON.stringify({result:'UNCLEAR',transcript:'',reason:'recognition-uncertain'})})});
   for(let i=0;i<6;i++){
    assert(await p.locator('.u5-sentence').isVisible());assert.equal(await p.locator('[data-u5-action=next]').isVisible(),false);
    await p.locator('[data-u5-action=sentence]').click();await p.waitForFunction(()=>Unit5Feelings.current().modelHeard&&Unit5Feelings.current().canContinue);

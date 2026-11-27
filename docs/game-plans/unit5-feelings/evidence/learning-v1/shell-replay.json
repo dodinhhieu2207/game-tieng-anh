@@ -1,0 +1,5 @@
+{
+  "shellReplayUsesWordAndSentence": true,
+  "modelExposedAfterEnded": true,
+  "noReward": true
+}
