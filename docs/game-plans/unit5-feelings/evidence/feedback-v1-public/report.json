@@ -1,0 +1,45 @@
+{
+  "origin": "https://dodinhhieu2207.github.io/game-tieng-anh",
+  "word": "cold",
+  "authoredGlintFramesDiffer": true,
+  "wrongGetsNoMedal": true,
+  "nativeSoundSequence": [
+    {
+      "kind": "play",
+      "src": "https://dodinhhieu2207.github.io/game-tieng-anh/assets/unit5/lesson1/audio/sfx/answer-confirm.wav",
+      "time": 4441.5999999996275
+    },
+    {
+      "kind": "ended",
+      "src": "https://dodinhhieu2207.github.io/game-tieng-anh/assets/unit5/lesson1/audio/sfx/answer-confirm.wav",
+      "time": 4992.699999999255
+    },
+    {
+      "kind": "play",
+      "src": "https://dodinhhieu2207.github.io/game-tieng-anh/assets/unit5/lesson1/audio/sentences/she-cold.mp3",
+      "time": 4993
+    },
+    {
+      "kind": "ended",
+      "src": "https://dodinhhieu2207.github.io/game-tieng-anh/assets/unit5/lesson1/audio/sentences/she-cold.mp3",
+      "time": 6332.5999999996275
+    },
+    {
+      "kind": "play",
+      "src": "https://dodinhhieu2207.github.io/game-tieng-anh/assets/unit5/lesson1/audio/sfx/photo-collected.wav",
+      "time": 6333.199999999255
+    },
+    {
+      "kind": "ended",
+      "src": "https://dodinhhieu2207.github.io/game-tieng-anh/assets/unit5/lesson1/audio/sfx/photo-collected.wav",
+      "time": 6792.5
+    }
+  ],
+  "cueEndsBeforeHiggs": true,
+  "collectionAfterHiggs": true,
+  "onePhotoCollected": true,
+  "midCueExitStopsLateVoice": true,
+  "blobURLsAfterLeave": 0,
+  "reducedMotionStillOnly": true,
+  "errors": []
+}

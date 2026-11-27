@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-11-27T04:12:13.320Z",
+  "origin": "https://dodinhhieu2207.github.io/game-tieng-anh/",
+  "runtimeCommit": "6238458",
+  "deploymentFixCommit": "ee5749e",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 1768057,
+      "sha256": "cd45600ae1d09c89b5638aa11d4ea2a5529d3b2e1256e3508f15dd45d3792d98",
+      "matchesCommit": true
+    },
+    {
+      "path": "shared/game-fonts.css",
+      "bytes": 396,
+      "sha256": "86ac363b74f25aafd655c89e7da497acc2ff7da4b67e54bde7fab0cf5cfcd6d2",
+      "matchesCommit": true
+    },
+    {
+      "path": "shared/game-typography.css",
+      "bytes": 2273,
+      "sha256": "c3fb62fdd2dcd8426a1bce02af2f5a3bd641074b24a48f935212c5af07941f75",
+      "matchesCommit": true
+    },
+    {
+      "path": "shared/unit5-feelings.css",
+      "bytes": 22197,
+      "sha256": "bd15b53aebc71bdcb4f50c3b7ed8f196162dc54bdcbf8a6d2ec6f7b5cb767353",
+      "matchesCommit": true
+    },
+    {
+      "path": "shared/unit5-feelings.js",
+      "bytes": 47884,
+      "sha256": "6a9d40b76a393b89f0f640bcb9577d0068d3161e4e44f381951640cfa92ad245",
+      "matchesCommit": true
+    },
+    {
+      "path": "data/units.js",
+      "bytes": 18162,
+      "sha256": "ff046ec0990b25da377056cde499ab0a0a4347eca35b08fbe45d6ca1b1a5cfd5",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/fonts/Nunito.ttf",
+      "bytes": 276932,
+      "sha256": "bb55a5ca5c2042335b3991af27c4d0705d0ef41cac6164ac737fd8f2a1e85207",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/fonts/Baloo2.ttf",
+      "bytes": 683200,
+      "sha256": "d47a6852548059b1db49a1319d06d499d546c3fa2237cf9eee9c43c8abb025c2",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/effects/feedback-v1/config.js",
+      "bytes": 352,
+      "sha256": "dc0a206456582efac0435bdd9ff8c6b3459badeeabc56e1f5fd55ba2b8fc8d1c",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/effects/feedback-v1/success.gif",
+      "bytes": 119707,
+      "sha256": "dd10f1b4762070587e3da5e4d61f05cb26cc274a5e9bf8dc588b2365eab920a0",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/effects/feedback-v1/success.webp",
+      "bytes": 15658,
+      "sha256": "fca05cc9dd55a01062a0ed7fb5ae0b415bd3173d1af96c3062f0def1bbf8afb1",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/audio/sfx/answer-confirm.wav",
+      "bytes": 37970,
+      "sha256": "07efe69aed7b36499fd1393140c6b62dc82deb5a09dcd5d70e72a07f9ca39eb7",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/audio/sfx/photo-collected.wav",
+      "bytes": 31796,
+      "sha256": "f0b590e50ddddd6ea1cc6a22a5f7cf77d828e36b244874a04e16c07d16fcccb7",
+      "matchesCommit": true
+    }
+  ],
+  "errors": []
+}
