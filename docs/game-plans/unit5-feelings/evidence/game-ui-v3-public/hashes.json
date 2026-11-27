@@ -1,0 +1,153 @@
+{
+  "checkedAt": "2026-11-27T03:32:06.560Z",
+  "runtime": "156e421",
+  "records": [
+    {
+      "file": "ui/v3/icons/back.svg",
+      "status": 200,
+      "sha256": "e611fdaa72196da643dbfd639ad9e076129f0f85345840367bc3e5df56184e3d"
+    },
+    {
+      "file": "ui/v3/icons/undo.svg",
+      "status": 200,
+      "sha256": "5b5ded53b7129bed5a1d2dde1a5855660a85695f3344ba2f7bfc816c24d39606"
+    },
+    {
+      "file": "ui/v3/icons/camera.svg",
+      "status": 200,
+      "sha256": "ecc7ba754af1909b4b28df5654c3cc99993c1f3e6929ef89c5d46852f6eb8de8"
+    },
+    {
+      "file": "ui/v3/icons/close.svg",
+      "status": 200,
+      "sha256": "c8b0ed69b226c0b46474d9dc0f544ee9e7f722085a4219f4bf4e667d3a534d94"
+    },
+    {
+      "file": "ui/v3/icons/music.svg",
+      "status": 200,
+      "sha256": "b5d74f3b5d9263023429872a1c6a61a44899c089ac79027ad20c03807e366f5a"
+    },
+    {
+      "file": "words/v3/happy-ink.svg",
+      "status": 200,
+      "sha256": "efb9e6748538dd685500d26257e529c4f7cd028ab827dba2de21dc049e0ca77e"
+    },
+    {
+      "file": "words/v3/sad-ink.svg",
+      "status": 200,
+      "sha256": "fc21c4806ace305a5d60f057881412fcbb3a4b61ff93bbb1ba38a9db8e3001b0"
+    },
+    {
+      "file": "ui/v3/icons/hear-word.svg",
+      "status": 200,
+      "sha256": "8200000f5c2356ab53b93e1079c4d98c8623eef2cf2f3e3b13e5ea76e3d27dbb"
+    },
+    {
+      "file": "ui/v3/icons/next.svg",
+      "status": 200,
+      "sha256": "9fc7a62f1b1302563fff918761981912916a0d724c1d8c2bf1d9b213d95a086b"
+    },
+    {
+      "file": "ui/v3/icons/home.svg",
+      "status": 200,
+      "sha256": "7bb95e4a1c6c92c006ab58f0898ea599d0814f79962cb76fdaeb02686f98f1e8"
+    },
+    {
+      "file": "ui/v3/icons/done.svg",
+      "status": 200,
+      "sha256": "b1e3ed4a77329eec370a47f349947bb5758b829a7e367907131b15fd0122209e"
+    },
+    {
+      "file": "ui/v3/icons/replay.svg",
+      "status": 200,
+      "sha256": "ced849510cda3c71da1ea2c7508ada251041a44c8b1170b47b5a4e1317c03b5c"
+    },
+    {
+      "file": "words/v3/thirsty-ink.svg",
+      "status": 200,
+      "sha256": "de61d3525439579f89e0d3527144f9dac0920167b6367acee23bb3d83a8f0c27"
+    },
+    {
+      "file": "ui/v3/icons/photo.svg",
+      "status": 200,
+      "sha256": "a5c5eb1fbac05fd88e566c6dd18768a4dc32b1ac81b1950818e601f1d59243c0"
+    },
+    {
+      "file": "ui/v3/icons/sound.svg",
+      "status": 200,
+      "sha256": "8ba7220a7983e13b8c26c747010ba0b097cfb02822674bb52d00be44a31ed646"
+    },
+    {
+      "file": "words/v3/cold-ink.svg",
+      "status": 200,
+      "sha256": "a137d30d386ed519ffaa9df86a60f17fe518610d8a971a43eea58cc31c9838c3"
+    },
+    {
+      "file": "ui/v3/button-gold.webp",
+      "status": 200,
+      "sha256": "514f61bdac7c91f7ea06a66d7ce924d2e8c138350565c30107eb14b267634e34"
+    },
+    {
+      "file": "ui/v3/icons/hear-sentence.svg",
+      "status": 200,
+      "sha256": "572281be4979105bd5dd9481183f170b120cabc383f89049f7837014e288465d"
+    },
+    {
+      "file": "ui/v3/icons/help.svg",
+      "status": 200,
+      "sha256": "d48702c3001c8899c45a45dc86e70e21acd25c84e6f45d879e58a128654305ec"
+    },
+    {
+      "file": "ui/v3/icons/microphone.svg",
+      "status": 200,
+      "sha256": "7c2962cfa76e6ddc573d3ad73da7c7913ceab53cd54a08ed921c863fe6e86236"
+    },
+    {
+      "file": "ui/v3/icons/play.svg",
+      "status": 200,
+      "sha256": "8982922d42d76b6d9ac52653a24ce66f126000ff1731cda0a145781c73d4bf4a"
+    },
+    {
+      "file": "words/v3/hot-ink.svg",
+      "status": 200,
+      "sha256": "fd2eb4e5e83e8feba98c39e65c95eb3ad5931c51f594542e9f92e9d500e037fd"
+    },
+    {
+      "file": "words/v3/hungry-ink.svg",
+      "status": 200,
+      "sha256": "e93d941b07f6c9cbded9c92127bd822968aff0f73708776ec23165c47e3fcd5e"
+    },
+    {
+      "file": "ui/v3/button-blue.webp",
+      "status": 200,
+      "sha256": "d044cb2e491bf3fa9065dc8a43da46764c098a1c3d2f70f40a4de98da28ca9f2"
+    },
+    {
+      "file": "ui/v3/button-white-fixed.webp",
+      "status": 200,
+      "sha256": "796361a4a8e96a9185e955b15f10eef50ab04cc74cb4d09d2deddb98a1c7391d"
+    },
+    {
+      "file": "ui/v3/prompt-plaque.webp",
+      "status": 200,
+      "sha256": "1e492720d1f2a75840e2fc0488c4b9c8a4129a02782d1ab7f382b4de0ad089d0"
+    },
+    {
+      "file": "ui/v3/prop-tray.webp",
+      "status": 200,
+      "sha256": "ef6202d27de2b559996b202e838920ed21f5f8f3cf10ac819e41ff4c5b401a8d"
+    },
+    {
+      "file": "shared/unit5-feelings.css",
+      "status": 200,
+      "sha256": "0e4267918166e0cd05bc724a31bf3a6cc2cceefb9ed07bfb4f262cdee4ecdd94",
+      "expected": "committed Git blob"
+    },
+    {
+      "file": "shared/unit5-feelings.js",
+      "status": 200,
+      "sha256": "13ad8385c73c6b3c99e333829cab919563a6b7e35519f13e67fbd79b9679b342",
+      "expected": "committed Git blob"
+    }
+  ]
+}
