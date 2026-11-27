@@ -6,6 +6,6 @@
 - App Outfit files remain available for existing canvas renderers and fallback; not deleted or renamed.
 
 
-## Current interface selection — 2026-11-27
+## Current interface selection â€” 2026-11-27
 
-User requested a new typography direction for the game website: Baloo 2 (700–800) for interface titles and Nunito (600–900) for controls/menu/instructions. Original variable TTF binaries, METADATA.pb and OFL.txt were downloaded from google/fonts main, folders ofl/baloo2 and ofl/nunito. Both contain Vietnamese/Latin coverage according to upstream metadata. Runtime uses local original TTF files; no font CDN or modified glyph data. Prior Fredoka/LuckiestGuy/Outfit files remain for historical assets and explicit learning models.
+User requested a new typography direction for the game website: Baloo 2 (700â€“800) for interface titles and Nunito (600â€“900) for controls/menu/instructions. Original variable TTF binaries, METADATA.pb and OFL.txt were downloaded from google/fonts main, folders ofl/baloo2 and ofl/nunito. Both contain Vietnamese/Latin coverage according to upstream metadata. Runtime uses local original TTF files; no font CDN or modified glyph data. Prior Fredoka/LuckiestGuy/Outfit files remain for historical assets and explicit learning models.
