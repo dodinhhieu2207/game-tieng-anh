@@ -18,7 +18,7 @@ while(!p.complete){
 }
 assert.equal(p.records.cold.independent,2);assert.equal(p.history.filter(r=>!r.assisted).length,12);
 assert.equal(p.next(),null);assert.throws(()=>p.record('cold',false),/Unsupported/);
-const h=new Path(true);assert.equal(h.pool.join(','),'hungry,thirsty');assert.equal(h.pairs.length,2);
+const h=new Path(true);assert.equal(h.pairs.flat().slice().sort().join(','),'cold,hot,hungry,thirsty');assert.equal(h.pairs.length,2);assert(h.pairs.every(p=>['hungry,thirsty','cold,hot'].includes(p.slice().sort().join(','))));let previous=h.pairs.flat().join(',');for(let i=0;i<20;i++){const next=new Path(true);assert.notEqual(next.pairs.flat().join(','),previous);previous=next.pairs.flat().join(',');}
 // Even a caller that repeats a target on adjacent turns cannot raise it twice.
 const gap=new Path();gap.expose('happy');gap.record('happy',false);gap.record('happy',false);gap.record('happy',false);assert.equal(gap.records.happy.independent,1);
 gap.next();gap.expose('sad');gap.record('sad',false);gap.next();gap.record('happy',false);assert.equal(gap.records.happy.independent,2);

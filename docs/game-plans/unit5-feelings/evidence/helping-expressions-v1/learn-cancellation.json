@@ -1,0 +1,6 @@
+{
+  "profile": "learn",
+  "muteStopsRetryAndLateModel": true,
+  "leaveStopsRetryAndLateModel": true,
+  "noAward": true
+}

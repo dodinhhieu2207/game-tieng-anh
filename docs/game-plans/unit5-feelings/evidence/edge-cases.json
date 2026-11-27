@@ -2,25 +2,25 @@
   "reactions": [
     {
       "word": "hot",
-      "exactGifHash": "bd9621d5d01ab9987530181fdd7cbc7fe24183f3bfbb53b28774060062cb872b",
+      "exactGifHash": "539209bc52dbdd44356c06cc549be89b4b9f994211fb5054609c5cce6449165e",
       "nativeFramesChange": true,
       "holdsFinalPose": true
     },
     {
       "word": "hungry",
-      "exactGifHash": "d4899b8becb9c70675db9f970efb78237e8b63d61b50b99e886dd6437eac13b4",
-      "nativeFramesChange": true,
-      "holdsFinalPose": true
-    },
-    {
-      "word": "thirsty",
-      "exactGifHash": "09e84713efbf86d5a1e950948df2e6c4677cc46cea12e5ec4bf3e80595055d79",
+      "exactGifHash": "cedea74909cfd5f0b2eeb136e9d3af6c83760f4bfddfd652095ebbec5792ea36",
       "nativeFramesChange": true,
       "holdsFinalPose": true
     },
     {
       "word": "cold",
-      "exactGifHash": "1859651191d67e28e5420085e962b2e2dd1259d1babf367f459dc58d4cbfc329",
+      "exactGifHash": "1a421f4986a327d9b1060e91d0c350af9f318cd9b535b3e1648acb0da72a846e",
+      "nativeFramesChange": true,
+      "holdsFinalPose": true
+    },
+    {
+      "word": "thirsty",
+      "exactGifHash": "0155df70dce9e888fbdff47fb5775d92dc566f27eb5bed03d2e3c25954e6655b",
       "nativeFramesChange": true,
       "holdsFinalPose": true
     }

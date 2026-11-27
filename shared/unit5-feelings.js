@@ -16,7 +16,16 @@
  const previousOrders=new Map();let current,phaserPromise;
  const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const shuffle=items=>{const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
- function orderFor(mode){let a=mode==='helping'?[...shuffle(Object.keys(PROPS)),...shuffle(Object.keys(PROPS))]:mode==='house'?[...WORDS]:shuffle(WORDS);if(a.join()===previousOrders.get(mode)&&mode!=='house')a.push(a.shift());previousOrders.set(mode,a.join());return a;}
+ function orderFor(mode){
+  let a;
+  if(mode==='helping'){
+   const first=shuffle(Object.keys(PROPS)),second=shuffle(Object.keys(PROPS));
+   if(first.at(-1)===second[0])second.push(second.shift());
+   if([...first,...second].join()===previousOrders.get(mode)){first.push(first.shift());if(first.at(-1)===second[0])second.push(second.shift());}
+   a=[...first,...second];
+  }else{a=mode==='house'?[...WORDS]:shuffle(WORDS);if(a.join()===previousOrders.get(mode)&&mode!=='house')a.push(a.shift());}
+  previousOrders.set(mode,a.join());return a;
+ }
  const icon=name=>`<img src="${BASE}ui/v3/icons/${name}.svg" alt="">`;
  const button=(action,label,img='play',extra='')=>`<button type="button" class="u5-btn" data-u5-action="${action}" ${extra}>${icon(img)}<span>${label}</span></button>`;
  const actor=(word,options={})=>`<button type="button" class="u5-actor ${options.className||''}" data-u5-actor="${word}" ${options.slot!==undefined?`data-u5-person="${options.slot}"`:''} ${options.drop?'data-u5-drop="actor"':''} aria-label="${escape(options.label||'Explore '+word)}"><img src="${BASE}actors/${word}/idle.webp" alt="" draggable="false"></button>`;
@@ -110,9 +119,11 @@
    const e=this.epoch,controller=this.bootAbort=new AbortController();const bootTimeout=setTimeout(()=>controller.abort(),18000);
    try{
     const backdrop=async()=>{const response=await fetch(BASE+`backgrounds/v3/${this.def.world}.webp`,{signal:controller.signal});if(!response.ok)throw Error('background-asset');const url=URL.createObjectURL(await response.blob());try{const im=new Image();im.src=url;await im.decode();}finally{URL.revokeObjectURL(url);}};
-    const motions=[...WORDS.map(w=>({word:w,key:w,file:w+'-once.gif'})),...(this.mode==='helping'?Object.keys(PROPS).map(w=>({word:w,key:w+'-help',file:'reaction.gif'})):[])];
+    const helping=this.mode==='helping'?window.Unit5HelpingMotion?.words:null;
+    if(this.mode==='helping'&&!Object.keys(PROPS).every(w=>helping?.[w]?.positive&&helping?.[w]?.retry))throw Error('expression-catalogue');
+    const motions=[...WORDS.map(w=>({word:w,key:w,file:`actors/${w}/${w}-once.gif`})),...(helping?Object.keys(PROPS).flatMap(w=>[{word:w,key:w+'-help',file:helping[w].positive.file},{word:w,key:w+'-retry',file:helping[w].retry.file}]):[])];
     const reward=async()=>{const r=await fetch(BASE+'effects/feedback-v1/success.gif',{signal:controller.signal});if(!r.ok)throw Error('feedback-asset');this.successBlob=await r.blob();};
-    const [P]=await Promise.all([loadPhaser(),reward(),backdrop(),Promise.all([document.fonts.load('700 24px "App Outfit"'),document.fonts.load('600 24px "Game Nunito"')]),...motions.map(async item=>{const response=await fetch(BASE+`actors/${item.word}/${item.file}`,{signal:controller.signal});if(!response.ok)throw Error('motion-asset');const blob=await response.blob();const url=URL.createObjectURL(blob);try{await new Promise((resolve,reject)=>{const im=new Image();im.onload=resolve;im.onerror=reject;im.src=url;});this.motionBlobs[item.key]=blob;}finally{URL.revokeObjectURL(url);}})]);
+    const [P]=await Promise.all([loadPhaser(),reward(),backdrop(),Promise.all([document.fonts.load('700 24px "App Outfit"'),document.fonts.load('600 24px "Game Nunito"')]),...motions.map(async item=>{const response=await fetch(BASE+item.file,{signal:controller.signal});if(!response.ok)throw Error('motion-asset');const blob=await response.blob();const url=URL.createObjectURL(blob);try{await new Promise((resolve,reject)=>{const im=new Image();im.onload=resolve;im.onerror=reject;im.src=url;});this.motionBlobs[item.key]=blob;}finally{URL.revokeObjectURL(url);}})]);
     if(!this.alive(e))return;this.scene=new FeelingsScene(this,P);await Promise.race([this.scene.ready,new Promise((_,reject)=>controller.signal.addEventListener('abort',()=>reject(Error('scene-timeout')),{once:true}))]);if(!this.alive(e))return;
     this.loaded=true;this.$('.u5-ready-overlay').hidden=true;this.renderRound();
    }catch(error){if(!this.alive(e))return;this.scene?.dispose();this.scene=null;this.setPhase('error','Some game pictures could not load. Please try again.');this.$('.u5-ready-overlay').innerHTML=`<p>The room could not load.</p>${button('retry-load','Try again','replay')}`;}finally{clearTimeout(bootTimeout);controller.abort();if(this.bootAbort===controller)this.bootAbort=null;}
@@ -188,7 +199,7 @@
   refreshProgress(){const n=this.mode==='house'?this.visited.size:this.collected.length,total=this.learning?this.learning.pairs.flat().length:this.order.length;this.$('.u5-count').textContent=`${n} / ${total}`;this.$('.u5-progress-bar').max=total;this.$('.u5-progress-bar').value=n;if(this.mode==='house'&&this.learn){const next=this.$('[data-u5-action=house-pair]');if(next)next.hidden=this.pairIndex===2||!Unit5Learning.pairs[this.pairIndex].every(w=>this.visited.has(w));}this.root.querySelectorAll('[data-u5-visit]').forEach(b=>b.classList.toggle('is-visited',this.visited.has(b.dataset.u5Visit)));if(this.mode==='house'&&this.visited.size===6){this.canContinue=true;this.$('[data-u5-action=next]').hidden=false;}}
   updateAlbum(){const before=this.$('.u5-album').children.length;this.$('.u5-album').innerHTML=this.collected.map(w=>`<figure><img src="${BASE}actors/${w}/idle.webp" alt=""><figcaption>${w}</figcaption></figure>`).join('');if(this.collected.length>before)this.$('.u5-album').lastElementChild?.classList.add('is-new');}
   updateControls(){
-   if(!this.root)return;const recording=['permission','recording','processing'].includes(this.phase);const busy=['loading','audio','responding','delivery','supporting'].includes(this.phase)||recording;
+   if(!this.root)return;const recording=['permission','recording','processing'].includes(this.phase);const busy=['loading','audio','responding','delivery','supporting','retrying'].includes(this.phase)||recording;
    this.root.querySelectorAll('[data-u5-action]').forEach(b=>{const a=b.dataset.u5Action;b.disabled=busy&&!['cancel','done','retry-load'].includes(a);if(a==='next')b.disabled=!this.canContinue||busy;if(a==='support-model')b.hidden=this.solved;});
    this.root.querySelectorAll('[data-u5-actor]').forEach(b=>b.disabled=busy||this.solved||(this.mode==='camera'||this.mode==='helping')&&!this.heard||this.isTeaching);
    if(this.mode==='house')this.root.querySelectorAll('[data-u5-actor]').forEach(b=>b.disabled=busy);
@@ -249,14 +260,17 @@
   }
   motion(word=this.word,kind='state'){
    if(this.dead)return Promise.resolve(false);const im=this.$(`[data-u5-actor="${word}"] img`);if(!im)return Promise.resolve(false);
-   const finalSrc=BASE+`actors/${word}/${kind==='help'?'reaction-final.webp':'idle.webp'}`;
-   if(this.reduced.matches){if(kind==='help')im.src=finalSrc;return Promise.resolve(true);}
-   const blob=this.motionBlobs[word+(kind==='help'?'-help':'')];if(!blob)return Promise.resolve(false);
+   const meta=this.mode==='helping'?window.Unit5HelpingMotion?.words[word]?.[kind==='help'?'positive':kind]:null;
+   const finalSrc=BASE+(meta?.final||`actors/${word}/${kind==='help'?'reaction-final.webp':'idle.webp'}`);
    this.motionWords.get(word)?.stop(false);
+   if(this.reduced.matches&&kind!=='retry'){if(kind==='help'){im.src=finalSrc;im.dataset.reaction='positive-still';}return Promise.resolve(true);}
+   const blob=this.motionBlobs[word+(kind==='help'?'-help':kind==='retry'?'-retry':'')];if(!blob)return Promise.resolve(false);
    let resolveMotion;const settled=new Promise(resolve=>{resolveMotion=resolve;});
-   const url=URL.createObjectURL(blob),entry={url,im,timer:null,stop:null};this.motionWords.set(word,entry);const e=this.epoch;
-   const stop=(ok=true)=>{if(this.motionWords.get(word)!==entry)return;clearTimeout(entry.timer);im.onload=im.onerror=null;if(im.isConnected)im.src=ok||kind==='help'&&this.solved?finalSrc:BASE+`actors/${word}/idle.webp`;URL.revokeObjectURL(url);this.motionWords.delete(word);resolveMotion(ok);};entry.stop=stop;
-   im.onload=()=>{if(!this.alive(e))return stop(false);im.onload=null;entry.timer=this.later(()=>stop(true),kind==='help'?1920:1320);};im.onerror=()=>stop(false);im.src=url;return settled;
+   const url=this.reduced.matches?null:URL.createObjectURL(blob),entry={url,im,timer:null,stop:null};this.motionWords.set(word,entry);const e=this.epoch;
+   const stop=(ok=true)=>{if(this.motionWords.get(word)!==entry)return;clearTimeout(entry.timer);this.timers.delete(entry.timer);im.onload=im.onerror=null;if(im.isConnected){im.src=ok||kind==='help'&&this.solved?finalSrc:BASE+`actors/${word}/idle.webp`;im.dataset.reaction=kind==='help'&&(ok||this.solved)?'positive-still':'idle';}if(url)URL.revokeObjectURL(url);this.motionWords.delete(word);resolveMotion(ok);};entry.stop=stop;
+   im.dataset.reaction=kind==='help'?'positive':kind;
+   if(this.reduced.matches){im.src=BASE+meta.still;entry.timer=this.later(()=>stop(true),600);return settled;}
+   im.onload=()=>{if(!this.alive(e))return stop(false);im.onload=null;entry.timer=this.later(()=>stop(true),meta?.durationMs||(kind==='help'?1920:1320));};im.onerror=()=>stop(false);im.src=url;return settled;
   }
   stopMotion(){for(const entry of [...this.motionWords.values()])entry.stop(false);this.motionWords.clear();}
   async explore(word=this.word){
@@ -294,13 +308,21 @@
    if(word!==this.word){this.wrong(element,'Not this person. Listen again and look carefully.');return;}
    const e=this.epoch;this.motion(word);this.setLine(true);this.root.querySelectorAll('[data-u5-actor]').forEach(el=>el.classList.add(el===element?'is-correct':'is-other'));this.solved=true;this.responsePending=true;this.setPhase('responding','Well done. Listen to the sentence.');this.showSuccess(element);await this.sfxPlay('answer-confirm');if(this.alive(e))await this.respond();
   }
-  wrong(element,message){this.roundErrors++;this.errors++;this.selected=null;this.root.querySelectorAll('.is-picked').forEach(x=>x.classList.remove('is-picked'));element?.classList.add('is-retry');this.later(()=>element?.classList.remove('is-retry'),550);if(!this.learning)this.sfxPlay('retry');this.status(message);this.$('.u5-status').dataset.tone='retry';if(this.learning)this.supportModel(true);}
+  async wrong(element,message){
+   this.roundErrors++;this.errors++;this.selected=null;const note=this.$('.u5-drop-note');if(note)note.hidden=true;this.root.querySelectorAll('.is-picked').forEach(x=>x.classList.remove('is-picked'));element?.classList.add('is-retry');this.later(()=>element?.classList.remove('is-retry'),550);this.status(message);this.$('.u5-status').dataset.tone='retry';
+   if(this.mode==='helping'){
+    const e=this.epoch;this.stopAudio();this.setPhase('retrying',message);this.$('.u5-status').dataset.tone='retry';
+    await Promise.all([this.motion(this.word,'retry'),this.sfxPlay('retry')]);if(!this.alive(e))return;
+    this.setPhase('choosing',message);if(this.learning)this.supportModel();return;
+   }
+   if(!this.learning)this.sfxPlay('retry');if(this.learning)this.supportModel(true);
+  }
   async drop(){
    if(!this.selected||this.solved||!['choosing','ready'].includes(this.phase))return;
    const value=this.selected,origin=this.pickElement,e=this.epoch;
    const correct=this.mode==='helping'?value===PROPS[this.word]:value===this.word;
    if(!correct){this.wrong(origin,this.mode==='helping'?'Try another thing. What does the child need?':'That word belongs to another picture. Try again.');return;}
-   this.setPhase('delivery','Putting it in place…');
+   this.setPhase('delivery','Putting it in place…');const note=this.$('.u5-drop-note');if(note)note.hidden=true;
    if(this.pickVoice&&!await this.pickVoice){if(this.alive(e))this.setPhase('choosing','Tap the word to hear it, then place it again.');return;}
    if(!this.alive(e))return;
    const target=this.$('[data-u5-actor]');

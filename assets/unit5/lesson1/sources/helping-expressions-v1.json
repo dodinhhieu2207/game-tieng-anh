@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "date": "2026-11-27",
+  "scope": "Helping Hands positive and gently puzzled retry expression phases; preserves approved base actions and source art",
+  "canvas": [
+    400,
+    520
+  ],
+  "anchor": [
+    200,
+    508
+  ],
+  "assets": [
+    {
+      "word": "hungry",
+      "kind": "happy",
+      "generation": "exec-914eb665-fa41-48f3-a07a-6efa26d58f22",
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-914eb665-fa41-48f3-a07a-6efa26d58f22.png",
+      "file": "sources/helping-expressions-v1/hungry-happy.png",
+      "reference": "actors/hungry/reaction-final.webp",
+      "prompt": "Use case: identity-preserve. Asset type: exact six-frame animation atlas for an existing children's educational game. Input image is the edit target and strict character identity/style/wardrobe/physical prop reference. Create ONE transparent PNG atlas, exact 3 columns x 2 rows equal cells, SIX complete full-body poses in reading order. The same brown pigtail girl already holds the same bitten sandwich with both hands at chest height; same purple shirt, coral skirt, teal tights and cream shoes. Keep the sandwich and hands/torso/legs/feet in exactly the original position. Six expression poses: 1 reference small smile, 2 cheeks relax and smile grows, 3 happy gentle closed-eye blink, 4 eyes reopen smiling, 5 delighted rosy-cheek smile, 6 very clear grateful HAPPY open smile. Keep the original mouth/anatomy beautiful and age-appropriate; no new props. Preserve the exact reference hand-painted matte gouache texture, fine dark linework, facial identity, same hair and clothes colors, same size and proportions. Feet must stay at identical positions/baseline within every cell. Only the face/head expression changes subtly; do not scale or rotate whole bodies. Use transparent RGBA, with genuinely zero-alpha empty margins and generous separation between cells. Target1536x1024, six512square cells. No scenery, floor, text, numbers, panels, labels, white rectangle, glows, tears, confetti, celebratory objects or duplicate body parts. Each character exactly matches the input; use intentional distinct expression drawings. Do not redraw into another generic style.",
+      "method": "built-in image_gen reference edit",
+      "grid": [
+        3,
+        2
+      ],
+      "sha256": "a90849257311d7acd1911157575b22f8c3ffb8a7aca6b9ca7686657ac1016b6f",
+      "referenceSha256": "25e0b260c7c7ede33938c503385f453335dfd68ddd17a82ff9fde395ea24278e"
+    },
+    {
+      "word": "hungry",
+      "kind": "retry",
+      "generation": "exec-4fa85d4d-b842-4791-b8eb-8c69abb512f4",
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-4fa85d4d-b842-4791-b8eb-8c69abb512f4.png",
+      "file": "sources/helping-expressions-v1/hungry-retry.png",
+      "reference": "actors/hungry/idle.webp",
+      "prompt": "Use case: identity-preserve. Asset type: exact animation pose atlas for an existing children's educational game. Input image is the strict edit target for character identity, wardrobe, original pose and matte illustration style. Create ONE transparent PNG with exact3columns x2rows equal-cell grid of SIX full-body frames, reading order. The same brown-pigtail girl wears the same purple shirt, coral skirt, teal tights and cream shoes, with one hand on her hungry tummy. Preserve all limbs, hand positions, body, feet and clothes. No sandwich or any object. Six distinct gentle puzzled head-shake poses: 1 original face, 2 eyebrows raised slightly and mouth a small unsure curve, glance left, 3 turn just the head a little left, 4 turn just the head a little right, 5 a small blink returning to center, 6 original centered hungry face. Keep her kind and safe; no happy success smile, no tears, no anger. Keep exactly the reference's soft gouache textures, thin dark outline, colors, same age, facial identity and hair silhouette. This is small facial/head animation; never rotate, bounce, scale or translate the whole character. Feet fixed in the same position/baseline inside each cell, same body dimensions all six cells. Original head size, face proportions and complete anatomy preserved. Target1536x1024 atlas with six512square cells. Genuinely transparent zero-alpha empty background with generous cell margins; no scenery, text, letters, panels, outlines, floor shadow, confetti, rewards, white rectangles or extra characters. Do not substitute a generic character. Make the head-turn and facial change visible in the actual drawn poses, not a static repeated sticker.",
+      "method": "built-in image_gen reference edit",
+      "grid": [
+        3,
+        2
+      ],
+      "sha256": "7f21d9080de6a23a2de36b3b4ba5b08d9fda0ae3c3fa979f55e083d1fa4d5d4a",
+      "referenceSha256": "0064688c49a647a88a0e11c8ce70aacde976f224c78c0c65b44e9b478eba6e22"
+    },
+    {
+      "word": "thirsty",
+      "kind": "happy",
+      "generation": "exec-976663ec-7e53-42ea-9112-415063bc54a1",
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-976663ec-7e53-42ea-9112-415063bc54a1.png",
+      "file": "sources/helping-expressions-v1/thirsty-happy.png",
+      "reference": "actors/thirsty/reaction-final.webp",
+      "prompt": "Use case: identity-preserve. Asset type: exact six-frame animation atlas for an existing children's educational game. Input image is the edit target and strict character identity/style/wardrobe/physical prop reference. Create ONE transparent PNG atlas, exact 3 columns x 2 rows equal cells, SIX complete full-body poses in reading order. The same dark bob-haired girl already holds the same upright glass of water in both hands at chest height; same mint-green blouse, navy shorts and red shoes. Keep the glass, water surface and fingers physically connected and fixed throughout. Six expression poses: 1 reference gentle smile, 2 cheeks relax and smile grows, 3 happy gentle closed-eye blink, 4 eyes reopen smiling, 5 delighted rosy-cheek smile, 6 very clear grateful HAPPY open smile. No spilling, floating glass or new object. Preserve the exact reference hand-painted matte gouache texture, fine dark linework, facial identity, same hair and clothes colors, same size and proportions. Feet must stay at identical positions/baseline within every cell. Only the face/head expression changes subtly; do not scale or rotate whole bodies. Use transparent RGBA, with genuinely zero-alpha empty margins and generous separation between cells. Target1536x1024, six512square cells. No scenery, floor, text, numbers, panels, labels, white rectangle, glows, tears, confetti, celebratory objects or duplicate body parts. Each character exactly matches the input; use intentional distinct expression drawings. Do not redraw into another generic style.",
+      "method": "built-in image_gen reference edit",
+      "grid": [
+        3,
+        2
+      ],
+      "sha256": "5ae116f352b7fd34b4cb9571a2e65e2e113fec8b3b4b2d392fa528d1662f4d79",
+      "referenceSha256": "e996573a54a90fe520ee0dc41adf54efc12d821a4abf695ee5831be21c460b1d"
+    },
+    {
+      "word": "thirsty",
+      "kind": "retry",
+      "generation": "exec-8ba5e78e-1e94-4fa8-ab5d-bde750a1ea74",
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-8ba5e78e-1e94-4fa8-ab5d-bde750a1ea74.png",
+      "file": "sources/helping-expressions-v1/thirsty-retry.png",
+      "reference": "actors/thirsty/idle.webp",
+      "prompt": "Use case: identity-preserve. Asset type: exact animation pose atlas for an existing children's educational game. Input image is the strict edit target for character identity, wardrobe, original pose and matte illustration style. Create ONE transparent PNG with exact3columns x2rows equal-cell grid of SIX full-body frames, reading order. The same dark-bob-haired girl wears the same mint blouse, navy shorts, white socks and red shoes, one hand at the base of her throat showing thirst. Preserve exact body/limbs/feet/hand positions. No glass, water or other object. Six distinct gentle puzzled head-shake poses: 1 original face, 2 eyebrows raised slightly, mouth a small unsure curve and eyes glance left, 3 head turns gently a little left, 4 gently a little right, 5 soft blink returning to center, 6 original centered thirsty face. She remains kind; no tears, anger or delighted success expression. Keep exactly the reference's soft gouache textures, thin dark outline, colors, same age, facial identity and hair silhouette. This is small facial/head animation; never rotate, bounce, scale or translate the whole character. Feet fixed in the same position/baseline inside each cell, same body dimensions all six cells. Original head size, face proportions and complete anatomy preserved. Target1536x1024 atlas with six512square cells. Genuinely transparent zero-alpha empty background with generous cell margins; no scenery, text, letters, panels, outlines, floor shadow, confetti, rewards, white rectangles or extra characters. Do not substitute a generic character. Make the head-turn and facial change visible in the actual drawn poses, not a static repeated sticker.",
+      "method": "built-in image_gen reference edit",
+      "grid": [
+        3,
+        2
+      ],
+      "sha256": "2195e723147a5931418671eb6b313f38a8c9a65254da64174ae916ac1617461f",
+      "referenceSha256": "90e8cd68498125fb2bfec68454734cc060e69a19bb89193f2dd05ee44aa9ed6c"
+    },
+    {
+      "word": "hot",
+      "kind": "happy",
+      "generation": "exec-65a78ff8-8284-43b4-b3fa-e485bfa5b518",
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-65a78ff8-8284-43b4-b3fa-e485bfa5b518.png",
+      "file": "sources/helping-expressions-v1/hot-happy.png",
+      "reference": "actors/hot/reaction-final.webp",
+      "prompt": "Use case: identity-preserve. Asset type: exact six-frame animation atlas for an existing children's educational game. Input image is the edit target and strict character identity/style/wardrobe/physical prop reference. Create ONE transparent PNG atlas, exact 3 columns x 2 rows equal cells, SIX complete full-body poses in reading order. The same curly black-haired boy already holds the same open cream floral fan, wearing the same cream peach T-shirt, green trousers and mustard shoes. Preserve both arms and fan pose, including the other hand near forehead, absolutely the original body and feet position. Six facial expression poses: 1 reference small smile, 2 eyebrows/cheeks relax with relief from heat, 3 relaxed happy blink, 4 eyes reopen, 5 smile grows, 6 clear delighted grateful HAPPY open smile. No sweat added, no new prop. Preserve the exact reference hand-painted matte gouache texture, fine dark linework, facial identity, same hair and clothes colors, same size and proportions. Feet must stay at identical positions/baseline within every cell. Only the face/head expression changes subtly; do not scale or rotate whole bodies. Use transparent RGBA, with genuinely zero-alpha empty margins and generous separation between cells. Target1536x1024, six512square cells. No scenery, floor, text, numbers, panels, labels, white rectangle, glows, tears, confetti, celebratory objects or duplicate body parts. Each character exactly matches the input; use intentional distinct expression drawings. Do not redraw into another generic style.",
+      "method": "built-in image_gen reference edit",
+      "grid": [
+        3,
+        2
+      ],
+      "sha256": "877f2a6a46a73e00475730b5a3ac36d6a3a9e58ca3cc3516cfa847a08487051a",
+      "referenceSha256": "073736b76f45074836cc6e3341d3c82661d8b1a2b3e8c6ee5a25445643ed49fd"
+    },
+    {
+      "word": "hot",
+      "kind": "retry",
+      "generation": "exec-53f895f1-1f7a-4706-ad11-feaa9d079147",
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-53f895f1-1f7a-4706-ad11-feaa9d079147.png",
+      "file": "sources/helping-expressions-v1/hot-retry.png",
+      "reference": "actors/hot/idle.webp",
+      "prompt": "Use case: identity-preserve. Asset type: exact animation pose atlas for an existing children's educational game. Input image is the strict edit target for character identity, wardrobe, original pose and matte illustration style. Create ONE transparent PNG with exact3columns x2rows equal-cell grid of SIX full-body frames, reading order. The same curly black-haired boy wears the same peach cream shirt, green trousers and mustard shoes; one hand near his hot forehead and other hand raised beside his cheek. Preserve original arms/hands/legs/feet and body, all wardrobe details. No fan or other object. Six distinct gentle puzzled head-shake poses: 1 original concerned hot face, 2 slightly raised puzzled eyebrows, a small unsure mouth and glance left, 3 turn just the head a little left, 4 just the head a little right, 5 gentle blink returning to center, 6 original centered hot face. All limbs stay connected. No sweat added, no tears, no anger or happy success smile. Keep exactly the reference's soft gouache textures, thin dark outline, colors, same age, facial identity and hair silhouette. This is small facial/head animation; never rotate, bounce, scale or translate the whole character. Feet fixed in the same position/baseline inside each cell, same body dimensions all six cells. Original head size, face proportions and complete anatomy preserved. Target1536x1024 atlas with six512square cells. Genuinely transparent zero-alpha empty background with generous cell margins; no scenery, text, letters, panels, outlines, floor shadow, confetti, rewards, white rectangles or extra characters. Do not substitute a generic character. Make the head-turn and facial change visible in the actual drawn poses, not a static repeated sticker.",
+      "method": "built-in image_gen reference edit",
+      "grid": [
+        3,
+        2
+      ],
+      "sha256": "7939b23c9b361f742e2a66c646bd99c92427c65892e3d8f5737f7506eb4ce983",
+      "referenceSha256": "35e2f2722153354625266c3d805d19550f8f9d9aaa2df67b3717573b8053f0c9"
+    },
+    {
+      "word": "cold",
+      "kind": "happy",
+      "generation": "exec-cf98d511-4541-42d5-9401-5bb385e2d350",
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-cf98d511-4541-42d5-9401-5bb385e2d350.png",
+      "file": "sources/helping-expressions-v1/cold-happy.png",
+      "reference": "actors/cold/reaction-final.webp",
+      "prompt": "Use case: identity-preserve. Asset type: exact animation pose atlas for an existing children's educational game. Input image is the edit target and strict identity/style/wardrobe/pose reference. Create ONE transparent PNG atlas in an exact 3 columns x 2 rows equal-cell grid, reading order left-to-right top-to-bottom, all SIX complete full-body poses. The same blonde girl is already wrapped snugly in the same lavender blanket; same green skirt, tights and brown boots. Keep her blanket, hands, body and feet in the identical position. Only animate her facial relief: 1 original small smile, 2 relaxed raised cheeks, 3 gentle eyes-closing smile, 4 eyes open and wider warm smile, 5 a delighted open smile with rosy cheeks, 6 a clear happy grateful smile. No teeth distortion, no new object. Preserve the exact matte hand-painted children's book linework, proportions, hair, facial identity, colors and textures of the reference. Every figure must have the SAME body size and feet baseline at the SAME location within its own cell, front facing; generous transparent separation, no clipped head/feet. Character remains stationary; subtle face/head motion must be drawn as actual different poses, never whole-body zoom or rotation. All six frames show the same character, same viewpoint, same body silhouette except tiny natural head changes. Transparent RGBA background; no opaque white rectangles, shadows, floor, scenery, labels, text, panels, arrows, confetti, rewards or extra objects. Target 1536 by 1024 canvas, six 512 square cells. Prioritize clean usable animation registration and original character identity.",
+      "method": "built-in image_gen reference edit",
+      "grid": [
+        3,
+        2
+      ],
+      "sha256": "d37fa4ab714a0c72a4cd6e7b249762a319670762ef1068894abb80c9d6889d1e",
+      "referenceSha256": "fd8ba4fb906e52d1639d573c1ea4ba4465e5e7c43c13d6a683af78b584f57340"
+    },
+    {
+      "word": "cold",
+      "kind": "retry",
+      "generation": "exec-eb410b46-c8fd-4444-9d4e-719f71702731",
+      "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10987-4d44-7173-9799-a54fd1ad82c7\\exec-eb410b46-c8fd-4444-9d4e-719f71702731.png",
+      "file": "sources/helping-expressions-v1/cold-retry.png",
+      "reference": "actors/cold/idle.webp",
+      "prompt": "Use case: identity-preserve. Asset type: exact animation pose atlas for an existing children's educational game. Input image is the edit target and strict identity/style/wardrobe/pose reference. Create ONE transparent PNG atlas in an exact 3 columns x 2 rows equal-cell grid, reading order left-to-right top-to-bottom, all SIX complete full-body poses. The same blonde girl wearing a lavender cardigan and green skirt is still cold with her arms crossed over her chest. Keep all clothes, arms, torso, legs and boots fixed in the original stance. Animate a gentle puzzled head shake, not distress: 1 original concerned face, 2 eyebrows slightly raised and glance slightly left, 3 head turned gently a little left, 4 head turned gently a little right, 5 small puzzled blink coming back to center, 6 original centered concerned face. No blanket, no supplied item, no smile of success, no tears, anger or scolding. Preserve the exact matte hand-painted children's book linework, proportions, hair, facial identity, colors and textures of the reference. Every figure must have the SAME body size and feet baseline at the SAME location within its own cell, front facing; generous transparent separation, no clipped head/feet. Character remains stationary; subtle face/head motion must be drawn as actual different poses, never whole-body zoom or rotation. All six frames show the same character, same viewpoint, same body silhouette except tiny natural head changes. Transparent RGBA background; no opaque white rectangles, shadows, floor, scenery, labels, text, panels, arrows, confetti, rewards or extra objects. Target 1536 by 1024 canvas, six 512 square cells. Prioritize clean usable animation registration and original character identity.",
+      "method": "built-in image_gen reference edit",
+      "grid": [
+        3,
+        2
+      ],
+      "sha256": "e90e0a7ac27197709c0cd15401238061a059cd74d6df228475f33c25d970f81e",
+      "referenceSha256": "cfd7a303ae92d8684b7ae140de20e05f172cd92d8334540756f121d7800bb26d"
+    }
+  ]
+}

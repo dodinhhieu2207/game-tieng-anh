@@ -1,0 +1,115 @@
+{
+  "origin": "http://127.0.0.1:8765",
+  "scope": "Authored Helping GIF playback and task rules, not child learning outcomes",
+  "practice": {
+    "records": [
+      {
+        "word": "thirsty",
+        "retryHash": "596f02ea3e1d5066d7fa5a057daf525102a72e48763ff6ee6ef7335172cfbc33",
+        "actualRetryFramesChange": true,
+        "noRetryReward": true,
+        "returnsToNeed": true,
+        "positiveHash": "0155df70dce9e888fbdff47fb5775d92dc566f27eb5bed03d2e3c25954e6655b",
+        "authoredExpressionTailChanges": true,
+        "holdsHappyPose": true
+      },
+      {
+        "word": "cold",
+        "retryHash": "b3801695459aa481110e9a0f369fdba792ae0d5d903a5335f00d32b6fd474e8d",
+        "actualRetryFramesChange": true,
+        "noRetryReward": true,
+        "returnsToNeed": true,
+        "positiveHash": "1a421f4986a327d9b1060e91d0c350af9f318cd9b535b3e1648acb0da72a846e",
+        "authoredExpressionTailChanges": true,
+        "holdsHappyPose": true
+      },
+      {
+        "word": "hot",
+        "retryHash": "7f36b604637923bf92be95ed6bff9a4fed717cd40fc6ca0b7830158bbde5b366",
+        "actualRetryFramesChange": true,
+        "noRetryReward": true,
+        "returnsToNeed": true,
+        "positiveHash": "539209bc52dbdd44356c06cc549be89b4b9f994211fb5054609c5cce6449165e",
+        "authoredExpressionTailChanges": true,
+        "holdsHappyPose": true
+      },
+      {
+        "word": "hungry",
+        "retryHash": "66e7126952666a8372bf1382fa87deca469cda5c190070859a4564e838ff1f89",
+        "actualRetryFramesChange": true,
+        "noRetryReward": true,
+        "returnsToNeed": true,
+        "positiveHash": "cedea74909cfd5f0b2eeb136e9d3af6c83760f4bfddfd652095ebbec5792ea36",
+        "authoredExpressionTailChanges": true,
+        "holdsHappyPose": true
+      }
+    ],
+    "rounds": 8,
+    "noAdjacentSameNeed": true,
+    "twoBalancedPasses": true,
+    "docksShuffle": true,
+    "nativeSfxBeforeHiggs": true,
+    "replayOrders": [
+      "thirsty,cold,hot,hungry,hot,cold,thirsty,hungry",
+      "cold,thirsty,hungry,hot,cold,hot,hungry,thirsty",
+      "cold,thirsty,hungry,hot,thirsty,cold,hungry,hot",
+      "thirsty,hot,hungry,cold,hungry,hot,thirsty,cold",
+      "hot,cold,thirsty,hungry,hot,thirsty,cold,hungry",
+      "hungry,cold,thirsty,hot,thirsty,cold,hungry,hot",
+      "hungry,hot,cold,thirsty,hot,hungry,cold,thirsty",
+      "hungry,cold,thirsty,hot,thirsty,hungry,cold,hot",
+      "cold,thirsty,hungry,hot,cold,hungry,thirsty,hot"
+    ]
+  },
+  "learn": {
+    "turns": 12,
+    "pairs": [
+      [
+        "hot",
+        "cold"
+      ],
+      [
+        "hungry",
+        "thirsty"
+      ]
+    ],
+    "wrongBeforeTeaching": true,
+    "noIndependentCreditForSupportedAnswer": true
+  },
+  "reducedMotion": {
+    "puzzledStill": true,
+    "happyStill": true
+  },
+  "exit": {
+    "ownedURLs": 0,
+    "noLateVoice": true
+  },
+  "layouts": [
+    {
+      "width": 320,
+      "scroll": 320,
+      "images": 0
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "images": 0
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "images": 0
+    },
+    {
+      "width": 1024,
+      "scroll": 1024,
+      "images": 0
+    },
+    {
+      "width": 1366,
+      "scroll": 1366,
+      "images": 0
+    }
+  ],
+  "errors": []
+}

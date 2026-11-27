@@ -1,0 +1,146 @@
+{
+  "hungry-positive": {
+    "frames": 12,
+    "distinctFrames": 12,
+    "durationMs": 3030,
+    "footBottoms": [
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508
+    ],
+    "oneShot": true
+  },
+  "hungry-retry": {
+    "frames": 8,
+    "distinctFrames": 7,
+    "durationMs": 1100,
+    "footBottoms": [
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508
+    ],
+    "oneShot": true
+  },
+  "thirsty-positive": {
+    "frames": 12,
+    "distinctFrames": 12,
+    "durationMs": 3030,
+    "footBottoms": [
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508
+    ],
+    "oneShot": true
+  },
+  "thirsty-retry": {
+    "frames": 8,
+    "distinctFrames": 7,
+    "durationMs": 1100,
+    "footBottoms": [
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508
+    ],
+    "oneShot": true
+  },
+  "hot-positive": {
+    "frames": 12,
+    "distinctFrames": 12,
+    "durationMs": 3030,
+    "footBottoms": [
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508
+    ],
+    "oneShot": true
+  },
+  "hot-retry": {
+    "frames": 8,
+    "distinctFrames": 7,
+    "durationMs": 1100,
+    "footBottoms": [
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508
+    ],
+    "oneShot": true
+  },
+  "cold-positive": {
+    "frames": 12,
+    "distinctFrames": 12,
+    "durationMs": 3030,
+    "footBottoms": [
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508
+    ],
+    "oneShot": true
+  },
+  "cold-retry": {
+    "frames": 8,
+    "distinctFrames": 7,
+    "durationMs": 1100,
+    "footBottoms": [
+      507,
+      508,
+      508,
+      508,
+      508,
+      508,
+      508,
+      507
+    ],
+    "oneShot": true
+  }
+}

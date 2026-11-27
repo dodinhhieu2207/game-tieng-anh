@@ -5367,6 +5367,828 @@
       "file": "effects/feedback-v1/config.js",
       "role": "source-bound frame anchors and cue durations",
       "sha256": "dc0a206456582efac0435bdd9ff8c6b3459badeeabc56e1f5fd55ba2b8fc8d1c"
+    },
+    {
+      "file": "sources/helping-expressions-v1/hungry-happy.png",
+      "role": "imagegen authored Helping expression atlas",
+      "sha256": "a90849257311d7acd1911157575b22f8c3ffb8a7aca6b9ca7686657ac1016b6f",
+      "generation": "exec-914eb665-fa41-48f3-a07a-6efa26d58f22",
+      "prompt": "Use case: identity-preserve. Asset type: exact six-frame animation atlas for an existing children's educational game. Input image is the edit target and strict character identity/style/wardrobe/physical prop reference. Create ONE transparent PNG atlas, exact 3 columns x 2 rows equal cells, SIX complete full-body poses in reading order. The same brown pigtail girl already holds the same bitten sandwich with both hands at chest height; same purple shirt, coral skirt, teal tights and cream shoes. Keep the sandwich and hands/torso/legs/feet in exactly the original position. Six expression poses: 1 reference small smile, 2 cheeks relax and smile grows, 3 happy gentle closed-eye blink, 4 eyes reopen smiling, 5 delighted rosy-cheek smile, 6 very clear grateful HAPPY open smile. Keep the original mouth/anatomy beautiful and age-appropriate; no new props. Preserve the exact reference hand-painted matte gouache texture, fine dark linework, facial identity, same hair and clothes colors, same size and proportions. Feet must stay at identical positions/baseline within every cell. Only the face/head expression changes subtly; do not scale or rotate whole bodies. Use transparent RGBA, with genuinely zero-alpha empty margins and generous separation between cells. Target1536x1024, six512square cells. No scenery, floor, text, numbers, panels, labels, white rectangle, glows, tears, confetti, celebratory objects or duplicate body parts. Each character exactly matches the input; use intentional distinct expression drawings. Do not redraw into another generic style.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/hungry/help-v2/happy-01.png",
+      "role": "authored expression frame",
+      "sha256": "66b20e85a28f3769aa843f779a62918ac41ccd756a2b29df2592ba16f38776e3",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/help-v2/happy-02.png",
+      "role": "authored expression frame",
+      "sha256": "8eab3393bd8e4901b404218576b24cc9ec88cc8a82a4d885eabc4a1a88cec852",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/help-v2/happy-03.png",
+      "role": "authored expression frame",
+      "sha256": "03e9a2206efafb5cc66871216a5b3846441a082ff8ac4c5212592c84508b38c3",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/help-v2/happy-04.png",
+      "role": "authored expression frame",
+      "sha256": "dff592b87ae4703cae04c7b22cc302f1f9bdf2972baa08b19d4938221012de7b",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/help-v2/happy-05.png",
+      "role": "authored expression frame",
+      "sha256": "d5fec3a959e706d8e78c1e78d7204a0838b7e7b741eb9ac0e04851215dc5102c",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/help-v2/happy-06.png",
+      "role": "authored expression frame",
+      "sha256": "cb2b36a873c95a6c152fb85f2f1eb916984ebe1af3b23aafa331b4ac273e24b2",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/helping-expressions-v1/hungry-retry.png",
+      "role": "imagegen authored Helping expression atlas",
+      "sha256": "7f21d9080de6a23a2de36b3b4ba5b08d9fda0ae3c3fa979f55e083d1fa4d5d4a",
+      "generation": "exec-4fa85d4d-b842-4791-b8eb-8c69abb512f4",
+      "prompt": "Use case: identity-preserve. Asset type: exact animation pose atlas for an existing children's educational game. Input image is the strict edit target for character identity, wardrobe, original pose and matte illustration style. Create ONE transparent PNG with exact3columns x2rows equal-cell grid of SIX full-body frames, reading order. The same brown-pigtail girl wears the same purple shirt, coral skirt, teal tights and cream shoes, with one hand on her hungry tummy. Preserve all limbs, hand positions, body, feet and clothes. No sandwich or any object. Six distinct gentle puzzled head-shake poses: 1 original face, 2 eyebrows raised slightly and mouth a small unsure curve, glance left, 3 turn just the head a little left, 4 turn just the head a little right, 5 a small blink returning to center, 6 original centered hungry face. Keep her kind and safe; no happy success smile, no tears, no anger. Keep exactly the reference's soft gouache textures, thin dark outline, colors, same age, facial identity and hair silhouette. This is small facial/head animation; never rotate, bounce, scale or translate the whole character. Feet fixed in the same position/baseline inside each cell, same body dimensions all six cells. Original head size, face proportions and complete anatomy preserved. Target1536x1024 atlas with six512square cells. Genuinely transparent zero-alpha empty background with generous cell margins; no scenery, text, letters, panels, outlines, floor shadow, confetti, rewards, white rectangles or extra characters. Do not substitute a generic character. Make the head-turn and facial change visible in the actual drawn poses, not a static repeated sticker.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/hungry/help-v2/retry-01.png",
+      "role": "authored expression frame",
+      "sha256": "12946d2264bd99b5b642e75d1ef0ece71a49171af2ec6164615606be5cdf2c3b",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/help-v2/retry-02.png",
+      "role": "authored expression frame",
+      "sha256": "2a14bbfd360bf3992f2114869c5366e2757daf0716c90268e0a94ddab97586b2",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/help-v2/retry-03.png",
+      "role": "authored expression frame",
+      "sha256": "16c3278a65b2bcd20e7464f5e420a279e820f0cb97ced69802119ca9bd140a48",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/help-v2/retry-04.png",
+      "role": "authored expression frame",
+      "sha256": "598e4e982314eade13ea6021b6c013ea0037aadef38a99a223323eb32a709364",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/help-v2/retry-05.png",
+      "role": "authored expression frame",
+      "sha256": "aa978b94888e19862fd47cbfeb82a20739766cac25987af3c4a9a439d4f3a0e0",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/help-v2/retry-06.png",
+      "role": "authored expression frame",
+      "sha256": "bb4d3094fb2bd2ef856978f1c86b87616add6b0e7f56439ec00cce8b8f6cd009",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/help-v2/positive.gif",
+      "role": "authored-pose motion",
+      "sha256": "cedea74909cfd5f0b2eeb136e9d3af6c83760f4bfddfd652095ebbec5792ea36",
+      "frames": 12,
+      "durationMs": 3030,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/help-v2/positive-final.webp",
+      "role": "settled expression",
+      "sha256": "7acb41877d9cea56bffb1b93b6cdbee5cf73bb0c367351bc3f9c3cc85ceaf24c",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/help-v2/retry.gif",
+      "role": "authored-pose motion",
+      "sha256": "66e7126952666a8372bf1382fa87deca469cda5c190070859a4564e838ff1f89",
+      "frames": 8,
+      "durationMs": 1100,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/help-v2/retry-final.webp",
+      "role": "settled expression",
+      "sha256": "afe7725ef705dd905952341c0fb76a7d4b0b36cffdf262f7506275ce8ea5a30f",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hungry/help-v2/retry-still.webp",
+      "role": "reduced-motion puzzled still",
+      "sha256": "30a67befa36750a4c99b0cd1328bf4eeb9ebe033baa253c1a33edef5e1209301",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/helping-expressions-v1/thirsty-happy.png",
+      "role": "imagegen authored Helping expression atlas",
+      "sha256": "5ae116f352b7fd34b4cb9571a2e65e2e113fec8b3b4b2d392fa528d1662f4d79",
+      "generation": "exec-976663ec-7e53-42ea-9112-415063bc54a1",
+      "prompt": "Use case: identity-preserve. Asset type: exact six-frame animation atlas for an existing children's educational game. Input image is the edit target and strict character identity/style/wardrobe/physical prop reference. Create ONE transparent PNG atlas, exact 3 columns x 2 rows equal cells, SIX complete full-body poses in reading order. The same dark bob-haired girl already holds the same upright glass of water in both hands at chest height; same mint-green blouse, navy shorts and red shoes. Keep the glass, water surface and fingers physically connected and fixed throughout. Six expression poses: 1 reference gentle smile, 2 cheeks relax and smile grows, 3 happy gentle closed-eye blink, 4 eyes reopen smiling, 5 delighted rosy-cheek smile, 6 very clear grateful HAPPY open smile. No spilling, floating glass or new object. Preserve the exact reference hand-painted matte gouache texture, fine dark linework, facial identity, same hair and clothes colors, same size and proportions. Feet must stay at identical positions/baseline within every cell. Only the face/head expression changes subtly; do not scale or rotate whole bodies. Use transparent RGBA, with genuinely zero-alpha empty margins and generous separation between cells. Target1536x1024, six512square cells. No scenery, floor, text, numbers, panels, labels, white rectangle, glows, tears, confetti, celebratory objects or duplicate body parts. Each character exactly matches the input; use intentional distinct expression drawings. Do not redraw into another generic style.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/thirsty/help-v2/happy-01.png",
+      "role": "authored expression frame",
+      "sha256": "701ce87e0a4f67686767d7127a83c336e5eca76f2f0f288272aab550a026d0ea",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/help-v2/happy-02.png",
+      "role": "authored expression frame",
+      "sha256": "758c992285c486930b469427f3561c313ad0970c1812834b389718cc9dafe122",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/help-v2/happy-03.png",
+      "role": "authored expression frame",
+      "sha256": "c5804cfd1a79e315f6fb9ffeef14f134445dfee7befff8578df7562ecfec069e",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/help-v2/happy-04.png",
+      "role": "authored expression frame",
+      "sha256": "62a96478e3ab9d7a57420d5fda4dc054fa75f27140873f8d90930eb7feb27bee",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/help-v2/happy-05.png",
+      "role": "authored expression frame",
+      "sha256": "c4b8e32590263cc0328b6f2d8b4340788a3ec37c7a230a57137cd7ff901b20c5",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/help-v2/happy-06.png",
+      "role": "authored expression frame",
+      "sha256": "a636be63a80469233d8882a173d29c0e4368a72c71d048571a57813a9f4b7962",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/helping-expressions-v1/thirsty-retry.png",
+      "role": "imagegen authored Helping expression atlas",
+      "sha256": "2195e723147a5931418671eb6b313f38a8c9a65254da64174ae916ac1617461f",
+      "generation": "exec-8ba5e78e-1e94-4fa8-ab5d-bde750a1ea74",
+      "prompt": "Use case: identity-preserve. Asset type: exact animation pose atlas for an existing children's educational game. Input image is the strict edit target for character identity, wardrobe, original pose and matte illustration style. Create ONE transparent PNG with exact3columns x2rows equal-cell grid of SIX full-body frames, reading order. The same dark-bob-haired girl wears the same mint blouse, navy shorts, white socks and red shoes, one hand at the base of her throat showing thirst. Preserve exact body/limbs/feet/hand positions. No glass, water or other object. Six distinct gentle puzzled head-shake poses: 1 original face, 2 eyebrows raised slightly, mouth a small unsure curve and eyes glance left, 3 head turns gently a little left, 4 gently a little right, 5 soft blink returning to center, 6 original centered thirsty face. She remains kind; no tears, anger or delighted success expression. Keep exactly the reference's soft gouache textures, thin dark outline, colors, same age, facial identity and hair silhouette. This is small facial/head animation; never rotate, bounce, scale or translate the whole character. Feet fixed in the same position/baseline inside each cell, same body dimensions all six cells. Original head size, face proportions and complete anatomy preserved. Target1536x1024 atlas with six512square cells. Genuinely transparent zero-alpha empty background with generous cell margins; no scenery, text, letters, panels, outlines, floor shadow, confetti, rewards, white rectangles or extra characters. Do not substitute a generic character. Make the head-turn and facial change visible in the actual drawn poses, not a static repeated sticker.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/thirsty/help-v2/retry-01.png",
+      "role": "authored expression frame",
+      "sha256": "a8a203c514062b25ffb1bab465289e4782ce559c7ad9c21425f5547a545eac1f",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/help-v2/retry-02.png",
+      "role": "authored expression frame",
+      "sha256": "7444adbfffbe12353f769e7556d1db642891a85daf84643124e775fb6349eebb",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/help-v2/retry-03.png",
+      "role": "authored expression frame",
+      "sha256": "0a4ed7c16a6f5bf9cc427de07b62f33d851726f3f41ef5361e09bd248f892106",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/help-v2/retry-04.png",
+      "role": "authored expression frame",
+      "sha256": "2d79fa851680bdfbe0ff13c1f4cbcd1640075be790edf992bddfbdcd3c731d67",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/help-v2/retry-05.png",
+      "role": "authored expression frame",
+      "sha256": "938240375d2327ff5bda4c0be9321d4cac3932826080789558c6b346aa57618c",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/help-v2/retry-06.png",
+      "role": "authored expression frame",
+      "sha256": "09790508f48ee7e78f837bfa5f07b94b1ad40d8c743b35744ef4f8504eefa090",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/help-v2/positive.gif",
+      "role": "authored-pose motion",
+      "sha256": "0155df70dce9e888fbdff47fb5775d92dc566f27eb5bed03d2e3c25954e6655b",
+      "frames": 12,
+      "durationMs": 3030,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/help-v2/positive-final.webp",
+      "role": "settled expression",
+      "sha256": "f174206902f726a1279eb1baf2c97e028e4e5ac363892387c976f2f9ce7d61ca",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/help-v2/retry.gif",
+      "role": "authored-pose motion",
+      "sha256": "596f02ea3e1d5066d7fa5a057daf525102a72e48763ff6ee6ef7335172cfbc33",
+      "frames": 8,
+      "durationMs": 1100,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/help-v2/retry-final.webp",
+      "role": "settled expression",
+      "sha256": "1021764f058f0c65a242b04dcb4396a8209a2b44a97cade7eaf7791a2c3a696a",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/thirsty/help-v2/retry-still.webp",
+      "role": "reduced-motion puzzled still",
+      "sha256": "39f8134f316179319f1a6fd5faed89cdb9ca76c3c5e9c626515b395d88ab3968",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/helping-expressions-v1/hot-happy.png",
+      "role": "imagegen authored Helping expression atlas",
+      "sha256": "877f2a6a46a73e00475730b5a3ac36d6a3a9e58ca3cc3516cfa847a08487051a",
+      "generation": "exec-65a78ff8-8284-43b4-b3fa-e485bfa5b518",
+      "prompt": "Use case: identity-preserve. Asset type: exact six-frame animation atlas for an existing children's educational game. Input image is the edit target and strict character identity/style/wardrobe/physical prop reference. Create ONE transparent PNG atlas, exact 3 columns x 2 rows equal cells, SIX complete full-body poses in reading order. The same curly black-haired boy already holds the same open cream floral fan, wearing the same cream peach T-shirt, green trousers and mustard shoes. Preserve both arms and fan pose, including the other hand near forehead, absolutely the original body and feet position. Six facial expression poses: 1 reference small smile, 2 eyebrows/cheeks relax with relief from heat, 3 relaxed happy blink, 4 eyes reopen, 5 smile grows, 6 clear delighted grateful HAPPY open smile. No sweat added, no new prop. Preserve the exact reference hand-painted matte gouache texture, fine dark linework, facial identity, same hair and clothes colors, same size and proportions. Feet must stay at identical positions/baseline within every cell. Only the face/head expression changes subtly; do not scale or rotate whole bodies. Use transparent RGBA, with genuinely zero-alpha empty margins and generous separation between cells. Target1536x1024, six512square cells. No scenery, floor, text, numbers, panels, labels, white rectangle, glows, tears, confetti, celebratory objects or duplicate body parts. Each character exactly matches the input; use intentional distinct expression drawings. Do not redraw into another generic style.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/hot/help-v2/happy-01.png",
+      "role": "authored expression frame",
+      "sha256": "122dc05d66f87e5e6b047d8306b8b3ac1f65feeb7d51f5ff10279f3db1a9d76e",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/help-v2/happy-02.png",
+      "role": "authored expression frame",
+      "sha256": "6fe14b1c731a8dac06763688dd6193f422779dbffaf9d36bcbb1224afa24de47",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/help-v2/happy-03.png",
+      "role": "authored expression frame",
+      "sha256": "185585810a4af58a4cc54d53040ff75bac722b49eb345c56c5c31e6dbb18c740",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/help-v2/happy-04.png",
+      "role": "authored expression frame",
+      "sha256": "3c096ea42fd8fbbcf759150953d3a3c18a01916729f3c8341dc50772fe5880e7",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/help-v2/happy-05.png",
+      "role": "authored expression frame",
+      "sha256": "4411d5b1bc804a1c412b2646a104a45dd67ca9bb05d963117bd4c87cfa046597",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/help-v2/happy-06.png",
+      "role": "authored expression frame",
+      "sha256": "4bb0ae58538c1b07950a6e52c8a6e69a6799a7abdc87e721c168a65b045b920f",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/helping-expressions-v1/hot-retry.png",
+      "role": "imagegen authored Helping expression atlas",
+      "sha256": "7939b23c9b361f742e2a66c646bd99c92427c65892e3d8f5737f7506eb4ce983",
+      "generation": "exec-53f895f1-1f7a-4706-ad11-feaa9d079147",
+      "prompt": "Use case: identity-preserve. Asset type: exact animation pose atlas for an existing children's educational game. Input image is the strict edit target for character identity, wardrobe, original pose and matte illustration style. Create ONE transparent PNG with exact3columns x2rows equal-cell grid of SIX full-body frames, reading order. The same curly black-haired boy wears the same peach cream shirt, green trousers and mustard shoes; one hand near his hot forehead and other hand raised beside his cheek. Preserve original arms/hands/legs/feet and body, all wardrobe details. No fan or other object. Six distinct gentle puzzled head-shake poses: 1 original concerned hot face, 2 slightly raised puzzled eyebrows, a small unsure mouth and glance left, 3 turn just the head a little left, 4 just the head a little right, 5 gentle blink returning to center, 6 original centered hot face. All limbs stay connected. No sweat added, no tears, no anger or happy success smile. Keep exactly the reference's soft gouache textures, thin dark outline, colors, same age, facial identity and hair silhouette. This is small facial/head animation; never rotate, bounce, scale or translate the whole character. Feet fixed in the same position/baseline inside each cell, same body dimensions all six cells. Original head size, face proportions and complete anatomy preserved. Target1536x1024 atlas with six512square cells. Genuinely transparent zero-alpha empty background with generous cell margins; no scenery, text, letters, panels, outlines, floor shadow, confetti, rewards, white rectangles or extra characters. Do not substitute a generic character. Make the head-turn and facial change visible in the actual drawn poses, not a static repeated sticker.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/hot/help-v2/retry-01.png",
+      "role": "authored expression frame",
+      "sha256": "17e6ccffb954b9861f5cbccf7fe4449a2ff349fa14a8e24a6edc0926eabf25c6",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/help-v2/retry-02.png",
+      "role": "authored expression frame",
+      "sha256": "5ee04a323b3ee3a48879a9b48b6b38950869da1e464f85c624de8334183f6619",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/help-v2/retry-03.png",
+      "role": "authored expression frame",
+      "sha256": "bad2f7fd5d0eb628acccae00b48062a1e9ad18b83be0d0d9c3adc186ec926eb7",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/help-v2/retry-04.png",
+      "role": "authored expression frame",
+      "sha256": "fe86ed0930da6e3eeafeffa3638d6c14abe6637259958c258e59a44a5a154e11",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/help-v2/retry-05.png",
+      "role": "authored expression frame",
+      "sha256": "de45605de51835178491ddb5695e00fbe26ef69e2a66747e7dd72da37598bc78",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/help-v2/retry-06.png",
+      "role": "authored expression frame",
+      "sha256": "c094afd626df7abcf5994f2e9c440c39524a37d3b3918fac179700e5d7ab3512",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/help-v2/positive.gif",
+      "role": "authored-pose motion",
+      "sha256": "539209bc52dbdd44356c06cc549be89b4b9f994211fb5054609c5cce6449165e",
+      "frames": 12,
+      "durationMs": 3030,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/help-v2/positive-final.webp",
+      "role": "settled expression",
+      "sha256": "619aab1c15a324840a4a30da928b362c8a6836cb99247a9bfae09b3ea62564c4",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/help-v2/retry.gif",
+      "role": "authored-pose motion",
+      "sha256": "7f36b604637923bf92be95ed6bff9a4fed717cd40fc6ca0b7830158bbde5b366",
+      "frames": 8,
+      "durationMs": 1100,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/help-v2/retry-final.webp",
+      "role": "settled expression",
+      "sha256": "a82a74d31c17bc20a6b99fead3f9cf1f4233af1c37af895480e640d85b18c428",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/hot/help-v2/retry-still.webp",
+      "role": "reduced-motion puzzled still",
+      "sha256": "ed37f9a46d86ffc2d508f6ffbb4709599c5f7750ebe4183ca988ba67d00bbe64",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/helping-expressions-v1/cold-happy.png",
+      "role": "imagegen authored Helping expression atlas",
+      "sha256": "d37fa4ab714a0c72a4cd6e7b249762a319670762ef1068894abb80c9d6889d1e",
+      "generation": "exec-cf98d511-4541-42d5-9401-5bb385e2d350",
+      "prompt": "Use case: identity-preserve. Asset type: exact animation pose atlas for an existing children's educational game. Input image is the edit target and strict identity/style/wardrobe/pose reference. Create ONE transparent PNG atlas in an exact 3 columns x 2 rows equal-cell grid, reading order left-to-right top-to-bottom, all SIX complete full-body poses. The same blonde girl is already wrapped snugly in the same lavender blanket; same green skirt, tights and brown boots. Keep her blanket, hands, body and feet in the identical position. Only animate her facial relief: 1 original small smile, 2 relaxed raised cheeks, 3 gentle eyes-closing smile, 4 eyes open and wider warm smile, 5 a delighted open smile with rosy cheeks, 6 a clear happy grateful smile. No teeth distortion, no new object. Preserve the exact matte hand-painted children's book linework, proportions, hair, facial identity, colors and textures of the reference. Every figure must have the SAME body size and feet baseline at the SAME location within its own cell, front facing; generous transparent separation, no clipped head/feet. Character remains stationary; subtle face/head motion must be drawn as actual different poses, never whole-body zoom or rotation. All six frames show the same character, same viewpoint, same body silhouette except tiny natural head changes. Transparent RGBA background; no opaque white rectangles, shadows, floor, scenery, labels, text, panels, arrows, confetti, rewards or extra objects. Target 1536 by 1024 canvas, six 512 square cells. Prioritize clean usable animation registration and original character identity.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/cold/help-v2/happy-01.png",
+      "role": "authored expression frame",
+      "sha256": "83002227b7bab6fa73807e7a6e4059e26eecfdca773864e8fefde041d47d9213",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/help-v2/happy-02.png",
+      "role": "authored expression frame",
+      "sha256": "b6ba86167d18231ea4918424d1eca91fb4d6db9dfd57ebc1b976fe7df01bef6a",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/help-v2/happy-03.png",
+      "role": "authored expression frame",
+      "sha256": "5132c7c6004538c77c909ccd2b868d1589350e333da44b04381e8e0f9b1a492f",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/help-v2/happy-04.png",
+      "role": "authored expression frame",
+      "sha256": "523b55865655483bc5f7163ad1e0fccc4a800ecdc9aa8a43f143db3390f2f5ce",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/help-v2/happy-05.png",
+      "role": "authored expression frame",
+      "sha256": "9ed9f2c9f41bb79634279a3cb1f308e12f491a86b5bda38a6ae278678a65b2e4",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/help-v2/happy-06.png",
+      "role": "authored expression frame",
+      "sha256": "45a56401a344598f14e95083c2987a0168b9c589318965e7e1788ce3e10d9bea",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/helping-expressions-v1/cold-retry.png",
+      "role": "imagegen authored Helping expression atlas",
+      "sha256": "e90e0a7ac27197709c0cd15401238061a059cd74d6df228475f33c25d970f81e",
+      "generation": "exec-eb410b46-c8fd-4444-9d4e-719f71702731",
+      "prompt": "Use case: identity-preserve. Asset type: exact animation pose atlas for an existing children's educational game. Input image is the edit target and strict identity/style/wardrobe/pose reference. Create ONE transparent PNG atlas in an exact 3 columns x 2 rows equal-cell grid, reading order left-to-right top-to-bottom, all SIX complete full-body poses. The same blonde girl wearing a lavender cardigan and green skirt is still cold with her arms crossed over her chest. Keep all clothes, arms, torso, legs and boots fixed in the original stance. Animate a gentle puzzled head shake, not distress: 1 original concerned face, 2 eyebrows slightly raised and glance slightly left, 3 head turned gently a little left, 4 head turned gently a little right, 5 small puzzled blink coming back to center, 6 original centered concerned face. No blanket, no supplied item, no smile of success, no tears, anger or scolding. Preserve the exact matte hand-painted children's book linework, proportions, hair, facial identity, colors and textures of the reference. Every figure must have the SAME body size and feet baseline at the SAME location within its own cell, front facing; generous transparent separation, no clipped head/feet. Character remains stationary; subtle face/head motion must be drawn as actual different poses, never whole-body zoom or rotation. All six frames show the same character, same viewpoint, same body silhouette except tiny natural head changes. Transparent RGBA background; no opaque white rectangles, shadows, floor, scenery, labels, text, panels, arrows, confetti, rewards or extra objects. Target 1536 by 1024 canvas, six 512 square cells. Prioritize clean usable animation registration and original character identity.",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "actors/cold/help-v2/retry-01.png",
+      "role": "authored expression frame",
+      "sha256": "103f84ea20110732a3e5e09ed19789fa1d623a9edf2b82b95aa0ed18cfb451c2",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/help-v2/retry-02.png",
+      "role": "authored expression frame",
+      "sha256": "da6eea95805de0ace8b4d8b6aac9a49f01322575d776afb95e4902c7293186e1",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/help-v2/retry-03.png",
+      "role": "authored expression frame",
+      "sha256": "cfc127d85fcbebe251170e16c06f946f0915ce88c2244568feb15533d6cd75d5",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/help-v2/retry-04.png",
+      "role": "authored expression frame",
+      "sha256": "cad0457bd430b6119f0ec6c034d5848ce229ab83966be8a92d22181d4cd5bfa2",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/help-v2/retry-05.png",
+      "role": "authored expression frame",
+      "sha256": "9163151aa78d5e2ad1d8675dc1205d80de5668cabda47f8b92f89f0186d36fac",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/help-v2/retry-06.png",
+      "role": "authored expression frame",
+      "sha256": "9e83f56f624e4c834c6889738b3f33145a07ede9b0f3ff792a8cb867a0136498",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/help-v2/positive.gif",
+      "role": "authored-pose motion",
+      "sha256": "1a421f4986a327d9b1060e91d0c350af9f318cd9b535b3e1648acb0da72a846e",
+      "frames": 12,
+      "durationMs": 3030,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/help-v2/positive-final.webp",
+      "role": "settled expression",
+      "sha256": "92fcf0b99f583a657deb4f210836f73e475ebd17dc0023329133d3db33eab00f",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/help-v2/retry.gif",
+      "role": "authored-pose motion",
+      "sha256": "b3801695459aa481110e9a0f369fdba792ae0d5d903a5335f00d32b6fd474e8d",
+      "frames": 8,
+      "durationMs": 1100,
+      "loop": false,
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/help-v2/retry-final.webp",
+      "role": "settled expression",
+      "sha256": "5d6e02d2780f87dcbc350d00bb373ef073b7cefa4e73287d0a5fab0e43471d9d",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "actors/cold/help-v2/retry-still.webp",
+      "role": "reduced-motion puzzled still",
+      "sha256": "493b8e8426ed5bd211cc6a198ca09496bb225df6dd8905e7c3cbd70f615c1b3a",
+      "anchor": [
+        200,
+        508
+      ],
+      "width": 400,
+      "height": 520
+    },
+    {
+      "file": "sources/helping-expressions-v1.json",
+      "role": "source prompts and input hashes for authored Helping expressions",
+      "sha256": "9a5c0e6d3ef44f8bdc2be2cac2dc12c8a024dc3b8d4927ce74d9f5f167707716"
+    },
+    {
+      "file": "effects/helping-expressions-v1.js",
+      "role": "Helping expression media catalogue",
+      "sha256": "876ef10ed3f54c0db8e6a7c69ceee045be867b924b5a20aaa1e4829dd2cc65c5"
     }
   ],
   "actors": {
@@ -6324,6 +7146,111 @@
     "cues": {
       "answer-confirm": 0.43,
       "photo-collected": 0.36
+    }
+  },
+  "helpingExpressions": {
+    "version": 1,
+    "canvas": [
+      400,
+      520
+    ],
+    "anchor": [
+      200,
+      508
+    ],
+    "words": {
+      "hungry": {
+        "positive": {
+          "file": "actors/hungry/help-v2/positive.gif",
+          "final": "actors/hungry/help-v2/positive-final.webp",
+          "durationMs": 3030,
+          "frames": 12,
+          "sourcePoseOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "retry": {
+          "file": "actors/hungry/help-v2/retry.gif",
+          "final": "actors/hungry/idle.webp",
+          "durationMs": 1100,
+          "frames": 8,
+          "still": "actors/hungry/help-v2/retry-still.webp"
+        }
+      },
+      "thirsty": {
+        "positive": {
+          "file": "actors/thirsty/help-v2/positive.gif",
+          "final": "actors/thirsty/help-v2/positive-final.webp",
+          "durationMs": 3030,
+          "frames": 12,
+          "sourcePoseOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "retry": {
+          "file": "actors/thirsty/help-v2/retry.gif",
+          "final": "actors/thirsty/idle.webp",
+          "durationMs": 1100,
+          "frames": 8,
+          "still": "actors/thirsty/help-v2/retry-still.webp"
+        }
+      },
+      "hot": {
+        "positive": {
+          "file": "actors/hot/help-v2/positive.gif",
+          "final": "actors/hot/help-v2/positive-final.webp",
+          "durationMs": 3030,
+          "frames": 12,
+          "sourcePoseOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "retry": {
+          "file": "actors/hot/help-v2/retry.gif",
+          "final": "actors/hot/idle.webp",
+          "durationMs": 1100,
+          "frames": 8,
+          "still": "actors/hot/help-v2/retry-still.webp"
+        }
+      },
+      "cold": {
+        "positive": {
+          "file": "actors/cold/help-v2/positive.gif",
+          "final": "actors/cold/help-v2/positive-final.webp",
+          "durationMs": 3030,
+          "frames": 12,
+          "sourcePoseOrder": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            4
+          ]
+        },
+        "retry": {
+          "file": "actors/cold/help-v2/retry.gif",
+          "final": "actors/cold/idle.webp",
+          "durationMs": 1100,
+          "frames": 8,
+          "still": "actors/cold/help-v2/retry-still.webp"
+        }
+      }
     }
   }
 }

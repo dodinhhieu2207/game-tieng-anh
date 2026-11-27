@@ -2,9 +2,12 @@
 (()=>{
  'use strict';
  const PAIRS=[['happy','sad'],['hungry','thirsty'],['hot','cold']];
+ let previousHelping=null;
+ const shuffle=items=>{const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
  class Path{
   constructor(helping=false){
    this.pairs=(helping?PAIRS.slice(1):PAIRS).map(p=>[...p]);this.pair=0;this.turn=0;this.complete=false;this.history=[];
+   if(helping){this.pairs=shuffle(this.pairs).map(shuffle);if(this.pairs.flat().join()===previousHelping)this.pairs.reverse();previousHelping=this.pairs.flat().join();}
    this.records=Object.fromEntries(this.pairs.flat().map(word=>[word,{exposed:false,independent:0,assisted:0,lastIndependent:-2}]));
    this.target=this.pool[0];
   }
