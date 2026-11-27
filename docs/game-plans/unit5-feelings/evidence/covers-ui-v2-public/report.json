@@ -1,0 +1,633 @@
+{
+  "origin": "https://dodinhhieu2207.github.io/game-tieng-anh",
+  "checkedAt": "2026-11-27T01:50:51.470Z",
+  "covers": 6,
+  "worldAndActivityMenusAtFiveWidths": true,
+  "gameLayouts": [
+    {
+      "route": "feelings-house",
+      "scroll": 320,
+      "width": 320,
+      "buttons": [
+        {
+          "label": "Listen & explore",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Hear word",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Hear sentence",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-camera",
+      "scroll": 320,
+      "width": 320,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "helping-hands",
+      "scroll": 320,
+      "width": 320,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-workshop",
+      "scroll": 320,
+      "width": 320,
+      "buttons": [
+        {
+          "label": "Listen",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "little-reporter",
+      "scroll": 320,
+      "width": 320,
+      "buttons": [
+        {
+          "label": "Hear a model",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Hide the sentence",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "label": "Speak",
+          "height": 56,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(20, 120, 185)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-house",
+      "scroll": 390,
+      "width": 390,
+      "buttons": [
+        {
+          "label": "Listen & explore",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Hear word",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Hear sentence",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-camera",
+      "scroll": 390,
+      "width": 390,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "helping-hands",
+      "scroll": 390,
+      "width": 390,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-workshop",
+      "scroll": 390,
+      "width": 390,
+      "buttons": [
+        {
+          "label": "Listen",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "little-reporter",
+      "scroll": 390,
+      "width": 390,
+      "buttons": [
+        {
+          "label": "Hear a model",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Hide the sentence",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "label": "Speak",
+          "height": 56,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(20, 120, 185)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-house",
+      "scroll": 768,
+      "width": 768,
+      "buttons": [
+        {
+          "label": "Listen & explore",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Hear word",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Hear sentence",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-camera",
+      "scroll": 768,
+      "width": 768,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "helping-hands",
+      "scroll": 768,
+      "width": 768,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-workshop",
+      "scroll": 768,
+      "width": 768,
+      "buttons": [
+        {
+          "label": "Listen",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "little-reporter",
+      "scroll": 768,
+      "width": 768,
+      "buttons": [
+        {
+          "label": "Hear a model",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Hide the sentence",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "label": "Speak",
+          "height": 56,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(20, 120, 185)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-house",
+      "scroll": 1024,
+      "width": 1024,
+      "buttons": [
+        {
+          "label": "Listen & explore",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Hear word",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Hear sentence",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-camera",
+      "scroll": 1024,
+      "width": 1024,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "helping-hands",
+      "scroll": 1024,
+      "width": 1024,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-workshop",
+      "scroll": 1024,
+      "width": 1024,
+      "buttons": [
+        {
+          "label": "Listen",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "little-reporter",
+      "scroll": 1024,
+      "width": 1024,
+      "buttons": [
+        {
+          "label": "Hear a model",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Hide the sentence",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "label": "Speak",
+          "height": 56,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(20, 120, 185)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-house",
+      "scroll": 1366,
+      "width": 1366,
+      "buttons": [
+        {
+          "label": "Listen & explore",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Hear word",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Hear sentence",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-camera",
+      "scroll": 1366,
+      "width": 1366,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "helping-hands",
+      "scroll": 1366,
+      "width": 1366,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-workshop",
+      "scroll": 1366,
+      "width": 1366,
+      "buttons": [
+        {
+          "label": "Listen",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "little-reporter",
+      "scroll": 1366,
+      "width": 1366,
+      "buttons": [
+        {
+          "label": "Hear a model",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 241, 172)"
+        },
+        {
+          "label": "Hide the sentence",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "label": "Speak",
+          "height": 56,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(20, 120, 185)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(25, 78, 118)",
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "bad": []
+    }
+  ],
+  "nativeWordSuccessAndLetterPlacement": true,
+  "focusVisible": true,
+  "reducedMotion": true,
+  "errors": [],
+  "missing": []
+}
