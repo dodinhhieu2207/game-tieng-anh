@@ -148,7 +148,7 @@
     "humanReviewed": false
   },
   "limits": "Technical asset checks; human listening and classroom outcomes not measured.",
-  "assetRecords": 669,
+  "assetRecords": 747,
   "letterGlyphs": 15,
   "reactions": {
     "hungry": {
@@ -190,6 +190,64 @@
         520
       ],
       "durationMs": 1880
+    }
+  },
+  "helpingExpressions": {
+    "hungry": {
+      "positive": {
+        "frames": 12,
+        "durationMs": 3030,
+        "oneShot": true,
+        "feetStable": true
+      },
+      "retry": {
+        "frames": 8,
+        "durationMs": 1100,
+        "oneShot": true,
+        "feetStable": true
+      }
+    },
+    "thirsty": {
+      "positive": {
+        "frames": 12,
+        "durationMs": 3030,
+        "oneShot": true,
+        "feetStable": true
+      },
+      "retry": {
+        "frames": 8,
+        "durationMs": 1100,
+        "oneShot": true,
+        "feetStable": true
+      }
+    },
+    "hot": {
+      "positive": {
+        "frames": 12,
+        "durationMs": 3030,
+        "oneShot": true,
+        "feetStable": true
+      },
+      "retry": {
+        "frames": 8,
+        "durationMs": 1100,
+        "oneShot": true,
+        "feetStable": true
+      }
+    },
+    "cold": {
+      "positive": {
+        "frames": 12,
+        "durationMs": 3030,
+        "oneShot": true,
+        "feetStable": true
+      },
+      "retry": {
+        "frames": 8,
+        "durationMs": 1100,
+        "oneShot": true,
+        "feetStable": true
+      }
     }
   }
 }

@@ -1,0 +1,128 @@
+{
+  "runtimeCommit": "bd7fa81",
+  "workflowRun": 45972718444,
+  "checkedAt": "2026-11-27T09:24:19.753Z",
+  "files": [
+    {
+      "path": "index.html",
+      "sha256": "d036978bb724281d9f417aa90cdee1571221d1d6231379d6e287ce6a46f62010",
+      "matchesCommit": true
+    },
+    {
+      "path": "shared/unit5-feelings.js",
+      "sha256": "92ec385759ca96badcacd69b61652e933a0e66b1be92fe3b182650d54d2e783f",
+      "matchesCommit": true
+    },
+    {
+      "path": "shared/unit5-learning.js",
+      "sha256": "0a638f2fb8206518b30e66ad564650265ef974dba912b2c7672d08a4886d1c03",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/hungry/help-v2/positive.gif",
+      "sha256": "cedea74909cfd5f0b2eeb136e9d3af6c83760f4bfddfd652095ebbec5792ea36",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/hungry/help-v2/positive-final.webp",
+      "sha256": "7acb41877d9cea56bffb1b93b6cdbee5cf73bb0c367351bc3f9c3cc85ceaf24c",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/hungry/help-v2/retry.gif",
+      "sha256": "66e7126952666a8372bf1382fa87deca469cda5c190070859a4564e838ff1f89",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/hungry/help-v2/retry-final.webp",
+      "sha256": "afe7725ef705dd905952341c0fb76a7d4b0b36cffdf262f7506275ce8ea5a30f",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/hungry/help-v2/retry-still.webp",
+      "sha256": "30a67befa36750a4c99b0cd1328bf4eeb9ebe033baa253c1a33edef5e1209301",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/thirsty/help-v2/positive.gif",
+      "sha256": "0155df70dce9e888fbdff47fb5775d92dc566f27eb5bed03d2e3c25954e6655b",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/thirsty/help-v2/positive-final.webp",
+      "sha256": "f174206902f726a1279eb1baf2c97e028e4e5ac363892387c976f2f9ce7d61ca",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/thirsty/help-v2/retry.gif",
+      "sha256": "596f02ea3e1d5066d7fa5a057daf525102a72e48763ff6ee6ef7335172cfbc33",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/thirsty/help-v2/retry-final.webp",
+      "sha256": "1021764f058f0c65a242b04dcb4396a8209a2b44a97cade7eaf7791a2c3a696a",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/thirsty/help-v2/retry-still.webp",
+      "sha256": "39f8134f316179319f1a6fd5faed89cdb9ca76c3c5e9c626515b395d88ab3968",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/hot/help-v2/positive.gif",
+      "sha256": "539209bc52dbdd44356c06cc549be89b4b9f994211fb5054609c5cce6449165e",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/hot/help-v2/positive-final.webp",
+      "sha256": "619aab1c15a324840a4a30da928b362c8a6836cb99247a9bfae09b3ea62564c4",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/hot/help-v2/retry.gif",
+      "sha256": "7f36b604637923bf92be95ed6bff9a4fed717cd40fc6ca0b7830158bbde5b366",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/hot/help-v2/retry-final.webp",
+      "sha256": "a82a74d31c17bc20a6b99fead3f9cf1f4233af1c37af895480e640d85b18c428",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/hot/help-v2/retry-still.webp",
+      "sha256": "ed37f9a46d86ffc2d508f6ffbb4709599c5f7750ebe4183ca988ba67d00bbe64",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/cold/help-v2/positive.gif",
+      "sha256": "1a421f4986a327d9b1060e91d0c350af9f318cd9b535b3e1648acb0da72a846e",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/cold/help-v2/positive-final.webp",
+      "sha256": "92fcf0b99f583a657deb4f210836f73e475ebd17dc0023329133d3db33eab00f",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/cold/help-v2/retry.gif",
+      "sha256": "b3801695459aa481110e9a0f369fdba792ae0d5d903a5335f00d32b6fd474e8d",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/cold/help-v2/retry-final.webp",
+      "sha256": "5d6e02d2780f87dcbc350d00bb373ef073b7cefa4e73287d0a5fab0e43471d9d",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/actors/cold/help-v2/retry-still.webp",
+      "sha256": "493b8e8426ed5bd211cc6a198ca09496bb225df6dd8905e7c3cbd70f615c1b3a",
+      "matchesCommit": true
+    },
+    {
+      "path": "assets/unit5/lesson1/effects/helping-expressions-v1.js",
+      "sha256": "876ef10ed3f54c0db8e6a7c69ceee045be867b924b5a20aaa1e4829dd2cc65c5",
+      "matchesCommit": true
+    }
+  ],
+  "errors": []
+}

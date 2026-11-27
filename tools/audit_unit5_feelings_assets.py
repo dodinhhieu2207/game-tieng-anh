@@ -43,6 +43,20 @@ for word,entry in manifest.get('reactions',{}).items():
         im.seek(n);frame=im.convert('RGBA');hashes.append(hashlib.sha256(frame.tobytes()).hexdigest());feet.append(frame.getchannel('A').point(lambda a:255 if a>128 else 0).getbbox()[3])
     assert im.n_frames==6 and len(set(hashes))==6 and max(feet)-min(feet)<=1
     report['reactions'][word]={'frames':6,'uniqueFrames':6,'anchorStable':True,'canvas':list(im.size),'durationMs':entry['durationMs']}
+report['helpingExpressions']={}
+for word,variants in manifest.get('helpingExpressions',{}).get('words',{}).items():
+    report['helpingExpressions'][word]={}
+    for kind in ['positive','retry']:
+        entry=variants[kind];im=Image.open(OUT/entry['file']);assert 'loop' not in im.info
+        durations=[];feet=[];hashes=[]
+        for n in range(im.n_frames):
+            im.seek(n);frame=im.convert('RGBA');durations.append(im.info['duration'])
+            feet.append(frame.getchannel('A').point(lambda a:255 if a>128 else 0).getbbox()[3])
+            hashes.append(hashlib.sha256(frame.tobytes()).hexdigest())
+        assert im.n_frames==entry['frames'] and sum(durations)==entry['durationMs']
+        assert len(set(hashes))>=6 and max(feet)-min(feet)<=1 and (OUT/entry['final']).exists()
+        if kind=='retry':assert entry['final']==f'actors/{word}/idle.webp' and (OUT/entry['still']).exists()
+        report['helpingExpressions'][word][kind]={'frames':im.n_frames,'durationMs':sum(durations),'oneShot':True,'feetStable':True}
 for asset in manifest['assets']:
     p=OUT/asset['file'];assert p.exists() and hashlib.sha256(p.read_bytes()).hexdigest()==asset['sha256'],asset['file']
 (EVIDENCE/'media-audit.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
