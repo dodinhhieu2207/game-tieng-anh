@@ -1,5 +1,15 @@
 # Quy tắc phát triển web Family and Friends – Letter Land
 
+## Hỗ trợ học lần đầu — Unit 5 Lesson 1, yêu cầu 2026-11-27
+
+- Mặc định Learn together, theo cặp từ nhỏ. Present chỉ ghi đã nghe/khám phá; không gọi đó là đã nhớ hoặc thành thạo. Practice là lựa chọn rõ ràng, không ép trẻ mới học vào bài đọc/nói độc lập.
+- Camera, Helping và Workshop có lượt xem–nghe mẫu, sau đó hai lựa chọn trong cặp đang học. Lượt vừa xem mẫu, xin trợ giúp hoặc chọn sai đều ghi có hỗ trợ. Chỉ lượt tự chọn đúng, có lượt khác xen giữa, mới tính vào điều kiện chuyển cặp. Hai lượt mỗi từ là quy tắc tiến trình của phiên này, không phải ngưỡng đã được kiểm chứng về trí nhớ.
+- Chọn sai trong Learn together phải được dạy lại bằng liên kết hình–từ–câu, chờ audio kết thúc rồi thử có hỗ trợ. Không tự sửa thành đúng, không phát thưởng/ghi nhận ảnh chỉ vì đã nghe mẫu. Giữ Camera không lộ đáp án ở lượt nghe độc lập; chỉ hiện từ/đánh dấu mục tiêu trong phần minh họa có trợ giúp rõ ràng.
+- Không trừ sao do thử sai trong Learn together; vẫn phải hoàn thành nhiệm vụ thực tế mới được ghi hoàn tất. Có thể ôn tiếp cặp đã đủ điều kiện hoặc Finish for now; nghỉ giữa chừng không phát completion/sao và không gắn nhãn thất bại.
+- Reporter Learn together cho nghe và luyện cùng giáo viên, không bắt AI duyệt mới sang hình tiếp theo. Nghe mẫu không được ghi thành câu AI đã nhận đúng; nếu có hình chỉ nghe thì không trao completion key dành cho đủ sáu câu được nhận diện. Practice giữ evaluator và gate nói thật.
+- Không suy luận năng lực từ lỗi mic/ASR/mạng, không lưu bản ghi/transcript hoặc hồ sơ nhãn “chậm nhớ”. Điều kiện luyện trong phiên và kết quả chơi không chứng minh hiệu quả học tập; cần quan sát trẻ thực tế. Giữ progress tốt nhất và dữ liệu người học đang có.
+
+
 ## Font giao diện và phản hồi đúng — yêu cầu 2026-11-27
 
 - Bộ font giao diện hiện hành: Nunito cho menu, nút, hướng dẫn và trạng thái; Baloo 2 cho tiêu đề/tên game. Dùng file local và lưu nguồn/giấy phép/hash. Không ép lại Fredoka hoặc Outfit cho toàn bộ UI riêng lẻ. Mẫu đồ chữ, glyph và chữ học đã duyệt có vai trò riêng, giữ hình dạng chuẩn.

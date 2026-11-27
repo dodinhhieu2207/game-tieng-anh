@@ -2,7 +2,7 @@ const {chromium}=require('C:/Users/Admin/.cache/codex-runtimes/codex-primary-run
 const fs=require('fs'),path=require('path'),assert=require('assert');
 const origin=process.env.U5_QA_ORIGIN||'http://127.0.0.1:8765';
 const dir=path.resolve('docs/game-plans/unit5-feelings/evidence/feedback-v1'+(origin.startsWith('https:')?'-public':''));
-const url=origin+'/index.html?release=typefx-feedback#/unit/5/lesson/1?mode=practice&activity=feelings-camera';
+const url=origin+'/index.html?release=typefx-feedback#/unit/5/lesson/1?mode=practice&support=practice&activity=feelings-camera';
 (async()=>{
  fs.mkdirSync(dir,{recursive:true});const b=await chromium.launch({channel:'msedge',headless:true});
  const context=await b.newContext({viewport:{width:1366,height:1000}});

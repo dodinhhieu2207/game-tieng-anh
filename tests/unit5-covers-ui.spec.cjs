@@ -22,7 +22,7 @@ async function decoded(p,selector){return p.locator(selector).evaluateAll(async 
   assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   await p.locator('#lessonApp .learning-zone').screenshot({path:path.join(dir,`activities-${width}.png`)});
   for(const route of routes){
-   await p.goto(href('/unit/5/lesson/1?mode=practice&activity='+route));await p.waitForFunction(()=>Unit5Feelings.current()?.loaded);
+   await p.goto(href('/unit/5/lesson/1?mode=practice&support=practice&activity='+route));await p.waitForFunction(()=>Unit5Feelings.current()?.loaded);
    await decoded(p,'.u5-game img');
    const typography=await p.evaluate(()=>{const font=e=>({family:getComputedStyle(e).fontFamily,size:parseFloat(getComputedStyle(e).fontSize)});return {task:font(document.querySelector('.u5-task-copy p')),control:font(document.querySelector('.u5-btn')),sentence:font(document.querySelector('.u5-sentence')),status:font(document.querySelector('.u5-status'))}});assert(typography.task.family.includes('Game Nunito'));assert(typography.control.family.includes('Game Nunito'));assert(typography.sentence.family.includes('App Outfit'));assert(typography.task.size>=19&&typography.control.size>=19&&typography.sentence.size>=26&&typography.status.size>=18);
    const state=await p.evaluate(()=>{const root=document.querySelector('.u5-game');return {scroll:document.documentElement.scrollWidth,width:innerWidth,buttons:[...root.querySelectorAll('.u5-controls button')].filter(e=>e.offsetWidth&&e.offsetHeight).map(e=>({label:e.textContent.trim(),height:e.getBoundingClientRect().height,color:getComputedStyle(e).color,bg:getComputedStyle(e).backgroundColor})),bad:[...root.querySelectorAll('img')].filter(im=>im.src.includes('/words/')||im.src.includes('/letters/')||im.src.includes('/ui/')).filter(im=>im.src.includes('/letters/')?!im.src.includes('/v2/'):!im.src.includes('/v3/')).map(im=>im.src)}});
@@ -32,7 +32,7 @@ async function decoded(p,selector){return p.locator(selector).evaluateAll(async 
  }
  // Exercise actual word feedback, completed readability, next action and optional letter panel.
  for(const width of [320,1366]){
-  await p.setViewportSize({width,height:1000});await p.goto(href('/unit/5/lesson/1?mode=practice&activity=feelings-workshop').replace('?release=',`?state=${width}&release=`));await p.waitForFunction(()=>Unit5Feelings.current()?.loaded);
+  await p.setViewportSize({width,height:1000});await p.goto(href('/unit/5/lesson/1?mode=practice&support=practice&activity=feelings-workshop').replace('?release=',`?state=${width}&release=`));await p.waitForFunction(()=>Unit5Feelings.current()?.loaded);
   const word=await p.evaluate(()=>Unit5Feelings.current().word);
   await p.locator(`[data-u5-pick="${word}"]`).click();await p.locator('.u5-receiver').click();
   await p.waitForFunction(()=>Unit5Feelings.current().canContinue);

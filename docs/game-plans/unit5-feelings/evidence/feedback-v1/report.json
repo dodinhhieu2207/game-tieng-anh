@@ -7,32 +7,32 @@
     {
       "kind": "play",
       "src": "http://127.0.0.1:8765/assets/unit5/lesson1/audio/sfx/answer-confirm.wav",
-      "time": 1988.800000000745
+      "time": 2162.7000000029802
     },
     {
       "kind": "ended",
       "src": "http://127.0.0.1:8765/assets/unit5/lesson1/audio/sfx/answer-confirm.wav",
-      "time": 2504.199999999255
+      "time": 2677.400000002235
     },
     {
       "kind": "play",
       "src": "http://127.0.0.1:8765/assets/unit5/lesson1/audio/sentences/he-sad.mp3",
-      "time": 2504.699999999255
+      "time": 2677.7000000029802
     },
     {
       "kind": "ended",
       "src": "http://127.0.0.1:8765/assets/unit5/lesson1/audio/sentences/he-sad.mp3",
-      "time": 3644.300000000745
+      "time": 3817.300000000745
     },
     {
       "kind": "play",
       "src": "http://127.0.0.1:8765/assets/unit5/lesson1/audio/sfx/photo-collected.wav",
-      "time": 3644.9000000003725
+      "time": 3818
     },
     {
       "kind": "ended",
       "src": "http://127.0.0.1:8765/assets/unit5/lesson1/audio/sfx/photo-collected.wav",
-      "time": 4064.300000000745
+      "time": 4237.5
     }
   ],
   "cueEndsBeforeHiggs": true,

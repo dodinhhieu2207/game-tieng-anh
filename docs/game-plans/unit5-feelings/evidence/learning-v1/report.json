@@ -1,0 +1,217 @@
+{
+  "origin": "http://127.0.0.1:8765",
+  "scope": "Native first-learning gameplay; one simulated UNCLEAR reply only, no student accuracy claim",
+  "camera": {
+    "turns": 18,
+    "wrongTeachingReplays": 4,
+    "noStarPenalty": true,
+    "teacherRepeatedPair": true,
+    "modelAudioGate": true
+  },
+  "helping-hands": {
+    "turns": 12,
+    "twoChoices": true,
+    "completed": true,
+    "nativeTouch": true,
+    "keyboardPlacement": false
+  },
+  "feelings-workshop": {
+    "turns": 18,
+    "twoChoices": true,
+    "completed": true,
+    "nativeTouch": false,
+    "keyboardPlacement": true
+  },
+  "house": {
+    "twoAtATime": true,
+    "allSixHeard": true
+  },
+  "reporter": {
+    "modelsRemainVisible": 6,
+    "modelOnlyContinues": true,
+    "unclearNotScored": true,
+    "recognitionRepliesSimulated": 1,
+    "noAICompletionAward": true
+  },
+  "profileAndPause": true,
+  "muteAndMidModelLeave": true,
+  "reducedMotionAndKeyboardModel": true,
+  "layouts": [
+    {
+      "route": "feelings-house",
+      "width": 320,
+      "scroll": 320,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "feelings-camera",
+      "width": 320,
+      "scroll": 320,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "helping-hands",
+      "width": 320,
+      "scroll": 320,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "feelings-workshop",
+      "width": 320,
+      "scroll": 320,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "little-reporter",
+      "width": 320,
+      "scroll": 320,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "feelings-house",
+      "width": 390,
+      "scroll": 390,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "feelings-camera",
+      "width": 390,
+      "scroll": 390,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "helping-hands",
+      "width": 390,
+      "scroll": 390,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "feelings-workshop",
+      "width": 390,
+      "scroll": 390,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "little-reporter",
+      "width": 390,
+      "scroll": 390,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "feelings-house",
+      "width": 768,
+      "scroll": 768,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "feelings-camera",
+      "width": 768,
+      "scroll": 768,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "helping-hands",
+      "width": 768,
+      "scroll": 768,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "feelings-workshop",
+      "width": 768,
+      "scroll": 768,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "little-reporter",
+      "width": 768,
+      "scroll": 768,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "feelings-house",
+      "width": 1024,
+      "scroll": 1024,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "feelings-camera",
+      "width": 1024,
+      "scroll": 1024,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "helping-hands",
+      "width": 1024,
+      "scroll": 1024,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "feelings-workshop",
+      "width": 1024,
+      "scroll": 1024,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "little-reporter",
+      "width": 1024,
+      "scroll": 1024,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "feelings-house",
+      "width": 1366,
+      "scroll": 1366,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "feelings-camera",
+      "width": 1366,
+      "scroll": 1366,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "helping-hands",
+      "width": 1366,
+      "scroll": 1366,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "feelings-workshop",
+      "width": 1366,
+      "scroll": 1366,
+      "badImages": 0,
+      "small": []
+    },
+    {
+      "route": "little-reporter",
+      "width": 1366,
+      "scroll": 1366,
+      "badImages": 0,
+      "small": []
+    }
+  ],
+  "errors": []
+}

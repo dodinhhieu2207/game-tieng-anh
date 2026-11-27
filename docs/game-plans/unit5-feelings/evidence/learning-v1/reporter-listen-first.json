@@ -1,0 +1,6 @@
+{
+  "speakingHiddenUntilModelEnds": true,
+  "continuationAfterModel": true,
+  "taskSaysOptionalReady": true,
+  "errors": []
+}

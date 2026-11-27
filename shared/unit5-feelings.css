@@ -1,4 +1,4 @@
-/* Unit5 in-game interface. Inherit the app's Fredoka; reserve Outfit for learning models. */
+/* Unit5 interface. Shared Nunito/Baloo roles; Outfit learning models. */
 .u5-game{
  --u5-ink:#173f65;--u5-blue:#1286c9;--u5-gold:#ffd65c;
  color:var(--u5-ink);font:600 20px/1.35 var(--app-font);max-width:1220px;margin:auto;
@@ -218,6 +218,34 @@ body.u5-feelings-world .app-bottom-nav button[aria-current=page]{background:#e0f
 /* Finite authored reward; placement is source-bound and clipped by the stage. */
 .u5-game .u5-actor.is-correct::after{content:none}
 .u5-game .u5-actor>.u5-result-medal{position:absolute;object-fit:contain;max-width:none;pointer-events:none;filter:drop-shadow(0 3px 3px #6a4a1b33);opacity:1!important;transform:none!important;z-index:7}
+
+/* Teacher-visible pace choice; the scene and its task stay the main focus. */
+.u5-learning-bar{order:0;padding:0 8px;min-width:0}
+.u5-learning-bar summary{min-height:48px;padding:10px 0;cursor:pointer;font-size:18px;font-weight:800}
+.u5-learning-bar summary .u5-pair-label{margin-left:12px;font-weight:700}
+.u5-learning-bar summary:focus-visible{outline:3px solid #7943b4;border-radius:8px}
+.u5-support-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:6px 0 10px}
+.u5-learning-bar [role=group]{display:flex;gap:6px;flex-wrap:wrap}
+.u5-game .u5-learning-bar .u5-btn{min-height:48px;padding:8px 12px;font-size:18px;background:#f2faff;border:2px solid #b4dbe8;box-shadow:none;color:#174c69}
+.u5-game .u5-learning-bar .u5-btn[aria-pressed=true]{background:#d8f1ee;border-color:#237e77;box-shadow:inset 0 -3px #b7ded7}
+.u5-game .u5-learning-bar .u5-btn img{width:24px;height:24px}
+.u5-game .u5-learning-bar [data-u5-action=pause-learning]{margin-left:auto}
+.u5-pair-label{font-size:18px;font-weight:700;color:#486e83}
+.u5-pair-choice{text-align:center;max-width:700px;margin:0 auto}
+.u5-pair-choice p{margin:8px 0;font-size:20px}
+.u5-game .is-guided{filter:drop-shadow(0 0 7px #f3c556);outline:3px solid #dcac35;outline-offset:-3px;border-radius:22px}
+.u5-game .u5-actor.is-guided{outline:none;filter:drop-shadow(0 0 9px #f3c556)}
+.u5-game[data-support=learn][data-mode=reporter] .u5-btn[data-u5-action=sentence]{order:-3}
+.u5-game[data-support=learn][data-mode=reporter] .u5-btn[data-u5-action=speak]{order:1}
+@media(max-width:600px){
+ .u5-game[data-support=learn][data-mode=reporter] .u5-controls>.u5-btn[data-u5-action=sentence]{flex:1 1 calc(100% - 68px);font-size:19px}
+ .u5-game[data-support=learn][data-mode=reporter] .u5-controls>.u5-btn[data-u5-action=speak]{flex:1 1 calc(50% - 5px)}
+ .u5-learning-bar{padding:0;gap:6px}
+ .u5-learning-bar [role=group]{width:100%;display:grid;grid-template-columns:1fr 1fr}
+ .u5-game .u5-learning-bar .u5-btn{font-size:18px;gap:5px;padding:8px}
+ .u5-pair-label{font-size:18px;flex:1}
+ .u5-game .u5-learning-bar [data-u5-action=pause-learning]{max-width:50%;margin-left:0}
+}
 .u5-album figure.is-new{animation:u5-photo-collect .45s cubic-bezier(.2,.8,.3,1)}
 @keyframes u5-photo-collect{0%{opacity:0;translate:0 8px;scale:.93}100%{opacity:1;translate:0 0;scale:1}}
 @media(prefers-reduced-motion:reduce){.u5-album figure.is-new{animation:none}}
