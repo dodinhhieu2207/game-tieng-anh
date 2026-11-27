@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-11-27T01:40:49.256Z",
-  "runtime": "41e2879",
+  "checkedAt": "2026-11-27T01:51:46.331Z",
+  "runtime": "5fdecd6",
   "records": [
     {
       "file": "ui/v2/icons/hear-word.svg",
@@ -61,6 +61,24 @@
       "file": "covers/v2/workshop.webp",
       "status": 200,
       "sha256": "c3931d04ed3a4dd001b773ba411b5cbd01d5bf569b2b1c61b31d103552a06d0a"
+    },
+    {
+      "file": "shared/unit5-feelings.css",
+      "status": 200,
+      "sha256": "02e6f92f698738018ffe71d9d5be0df5be96d7cd854fa00da03dc870c09eb9ca",
+      "expectedSource": "committed Git blob (LF), not Windows worktree CRLF"
+    },
+    {
+      "file": "shared/unit5-feelings.js",
+      "status": 200,
+      "sha256": "b3233ef8c29d2cebcabe0933b7a6fa4b60c1434c728f5dd3ae948f6b6344d132",
+      "expectedSource": "committed Git blob (LF), not Windows worktree CRLF"
+    },
+    {
+      "file": "data/units.js",
+      "status": 200,
+      "sha256": "ff046ec0990b25da377056cde499ab0a0a4347eca35b08fbe45d6ca1b1a5cfd5",
+      "expectedSource": "committed Git blob (LF), not Windows worktree CRLF"
     }
   ]
 }
