@@ -13,14 +13,14 @@
       "holdsFinalPose": true
     },
     {
-      "word": "hot",
-      "exactGifHash": "bd9621d5d01ab9987530181fdd7cbc7fe24183f3bfbb53b28774060062cb872b",
+      "word": "hungry",
+      "exactGifHash": "d4899b8becb9c70675db9f970efb78237e8b63d61b50b99e886dd6437eac13b4",
       "nativeFramesChange": true,
       "holdsFinalPose": true
     },
     {
-      "word": "hungry",
-      "exactGifHash": "d4899b8becb9c70675db9f970efb78237e8b63d61b50b99e886dd6437eac13b4",
+      "word": "hot",
+      "exactGifHash": "bd9621d5d01ab9987530181fdd7cbc7fe24183f3bfbb53b28774060062cb872b",
       "nativeFramesChange": true,
       "holdsFinalPose": true
     }

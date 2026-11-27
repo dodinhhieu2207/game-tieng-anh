@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-27",
+  "tool": "built-in image_gen",
+  "generation": "exec-7b65c2d4-0e4a-4a17-9248-09388a77c934",
+  "originalGeneration": "exec-bf2e3e41-b47c-4d9f-8ce0-1456709ee1a5",
+  "prompt": "Create ONE production animation sprite sheet for correct-answer feedback in a preschool English game. Six equally sized frames in an EXACT 3 columns by 2 rows grid, canvas1536x1024 so each cell512x512. TRUE transparent background. SAME small elegant dimensional success badge centered at (256,256) of each cell: softly beveled warm gold circular medal, glossy pale ivory face, clear bold dark-teal check mark in center, tiny green enamel detail at rim. Keep medal diameter300px and exact position/shape/scale identical in every frame, no ribbons, no characters, no letters or words. Animate ONLY a physically coherent soft white-gold glint traveling across the bevel and check: frame1 calm, frame2 upper-left warm shine, frame3 thin diagonal highlight at left quarter, frame4 highlight in center, frame5 highlight at right quarter, frame6 settled calm with subtle upper-right starlet. No flashing white background, no explosion, no confetti, no new objects, no cell frames, no grid lines, no labels. Use the attached Unit5 art only as a rendering reference for clean polished 2.5D mobile game materials. Every complete medal and its small glow stays within its cell with at least80px empty transparent margin. Premium restrained friendly reward icon, native outlined check fully legible.",
+  "editBrief": "Keep all six medals/grid/poses and traveling glints, clean surrounding haze to true alpha. Native source retained; GIF requires binary-alpha encoding.",
+  "styleReference": "assets/unit5/lesson1/covers/v2/world.webp",
+  "frames": {
+    "grid": [
+      3,
+      2
+    ],
+    "cell": [
+      512,
+      512
+    ],
+    "runtime": [
+      256,
+      256
+    ],
+    "durationsMs": [
+      140,
+      140,
+      150,
+      150,
+      160,
+      220
+    ]
+  },
+  "soundPolicy": "One owned lane, exact native ended before Higgs; cancel on mute/hidden/leave/recording; no student correctness inferred from SFX availability.",
+  "source": "sources/feedback-v1.png",
+  "sourceSha256": "2d7f9541388e6c1d17711e4cd54dae6e41d89c49a74789b65dacc71138c31f2e",
+  "runtime": {
+    "medal": "effects/feedback-v1/success.gif",
+    "still": "effects/feedback-v1/success.webp",
+    "durationMs": 960,
+    "canvas": [
+      400,
+      520
+    ],
+    "bounds": {
+      "happy": [
+        43,
+        32,
+        361,
+        508
+      ],
+      "sad": [
+        99,
+        32,
+        291,
+        507
+      ],
+      "hungry": [
+        80,
+        32,
+        320,
+        508
+      ],
+      "thirsty": [
+        51,
+        32,
+        380,
+        508
+      ],
+      "hot": [
+        77,
+        33,
+        311,
+        508
+      ],
+      "cold": [
+        80,
+        33,
+        311,
+        507
+      ]
+    },
+    "cues": {
+      "answer-confirm": 0.43,
+      "photo-collected": 0.36
+    }
+  },
+  "sounds": {
+    "answer-confirm": {
+      "duration": 0.43,
+      "sources": [
+        {
+          "file": "audio/sfx/photo-clip.wav",
+          "sha256": "8ce31a377a79e90a3615747ef478257325eb517d8b961dd1aa4bc2647ad8f159",
+          "gain": 0.5,
+          "offsetSeconds": 0
+        },
+        {
+          "file": "audio/sfx/correct.wav",
+          "sha256": "737e1ff8a63b306a3a0d1462cd29595950fecc706bd5f3fdaed92464e30cfac7",
+          "gain": 0.65,
+          "offsetSeconds": 0.055
+        },
+        {
+          "file": "audio/sfx/star.wav",
+          "sha256": "504dcf41d992e654b1be586ff21594f4573a5ef18c1f5a7e677051cbf05bdcad",
+          "gain": 0.12,
+          "offsetSeconds": 0.07
+        }
+      ],
+      "processing": "Existing Kenney CC0 Foley mixed only, 8ms in/60ms out fade, peak <=18000 PCM16. No synthesized tones."
+    },
+    "photo-collected": {
+      "duration": 0.36,
+      "sources": [
+        {
+          "file": "audio/sfx/star.wav",
+          "sha256": "504dcf41d992e654b1be586ff21594f4573a5ef18c1f5a7e677051cbf05bdcad",
+          "gain": 0.45,
+          "offsetSeconds": 0
+        },
+        {
+          "file": "audio/sfx/correct.wav",
+          "sha256": "737e1ff8a63b306a3a0d1462cd29595950fecc706bd5f3fdaed92464e30cfac7",
+          "gain": 0.18,
+          "offsetSeconds": 0.025
+        }
+      ],
+      "processing": "Existing Kenney CC0 Foley mixed only, 8ms in/60ms out fade, peak <=18000 PCM16. No synthesized tones."
+    }
+  }
+}

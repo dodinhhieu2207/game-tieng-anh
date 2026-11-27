@@ -1,0 +1,45 @@
+{
+  "origin": "http://127.0.0.1:8765",
+  "word": "sad",
+  "authoredGlintFramesDiffer": true,
+  "wrongGetsNoMedal": true,
+  "nativeSoundSequence": [
+    {
+      "kind": "play",
+      "src": "http://127.0.0.1:8765/assets/unit5/lesson1/audio/sfx/answer-confirm.wav",
+      "time": 1988.800000000745
+    },
+    {
+      "kind": "ended",
+      "src": "http://127.0.0.1:8765/assets/unit5/lesson1/audio/sfx/answer-confirm.wav",
+      "time": 2504.199999999255
+    },
+    {
+      "kind": "play",
+      "src": "http://127.0.0.1:8765/assets/unit5/lesson1/audio/sentences/he-sad.mp3",
+      "time": 2504.699999999255
+    },
+    {
+      "kind": "ended",
+      "src": "http://127.0.0.1:8765/assets/unit5/lesson1/audio/sentences/he-sad.mp3",
+      "time": 3644.300000000745
+    },
+    {
+      "kind": "play",
+      "src": "http://127.0.0.1:8765/assets/unit5/lesson1/audio/sfx/photo-collected.wav",
+      "time": 3644.9000000003725
+    },
+    {
+      "kind": "ended",
+      "src": "http://127.0.0.1:8765/assets/unit5/lesson1/audio/sfx/photo-collected.wav",
+      "time": 4064.300000000745
+    }
+  ],
+  "cueEndsBeforeHiggs": true,
+  "collectionAfterHiggs": true,
+  "onePhotoCollected": true,
+  "midCueExitStopsLateVoice": true,
+  "blobURLsAfterLeave": 0,
+  "reducedMotionStillOnly": true,
+  "errors": []
+}

@@ -65,7 +65,7 @@ def main():
         record(target, 'approved word glyph paths only, tighter viewport for legibility')
     files = {a['file'] for a in added}
     manifest['assets'] = [a for a in manifest['assets'] if a['file'] not in files] + added
-    manifest['interfaceV3'] = {'plates': {k: e['runtime'] for k,e in provenance['assets'].items()}, 'icons': 'ui/v3/icons/', 'wordInk': 'words/v3/', 'interfaceFont': 'Learning Fredoka 600/700, inherited app font', 'learningFont': 'App Outfit 700/800 and unchanged approved paths'}
+    manifest['interfaceV3'] = {'plates': {k: e['runtime'] for k,e in provenance['assets'].items()}, 'icons': 'ui/v3/icons/', 'wordInk': 'words/v3/', 'interfaceFont': 'Game Nunito 700/800, inherited app font; Game Baloo 2 titles', 'learningFont': 'App Outfit 700/800 and unchanged approved paths'}
     manifest_path.write_text(json.dumps(manifest, indent=2)+'\n', encoding='utf-8')
     provenance_path.write_text(json.dumps(provenance, indent=2)+'\n', encoding='utf-8')
     print(f'Exported five original alpha plates, {len(GLYPHS)} interaction glyphs and six approved word-ink assets.')

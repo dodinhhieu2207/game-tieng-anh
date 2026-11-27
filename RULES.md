@@ -1,5 +1,12 @@
 # Quy tắc phát triển web Family and Friends – Letter Land
 
+## Font giao diện và phản hồi đúng — yêu cầu 2026-11-27
+
+- Bộ font giao diện hiện hành: Nunito cho menu, nút, hướng dẫn và trạng thái; Baloo 2 cho tiêu đề/tên game. Dùng file local và lưu nguồn/giấy phép/hash. Không ép lại Fredoka hoặc Outfit cho toàn bộ UI riêng lẻ. Mẫu đồ chữ, glyph và chữ học đã duyệt có vai trò riêng, giữ hình dạng chuẩn.
+- Phản hồi đúng cần có thiết kế VFX/SFX riêng theo nhịp: chạm đúng, xác nhận gọn tại lựa chọn, rồi ghi nhận vào mục tiêu/bộ sưu tập. Tạo asset motion/GIF phù hợp khi cần; không chỉ vẽ một vòng tròn/dấu tick phẳng hoặc rải hạt tùy ý rồi coi là xong.
+- Ưu tiên cảm giác hoàn thiện, ánh sáng có tiết chế, điểm neo đúng và âm thanh ngắn, mềm. Không che mặt nhân vật/từ đang học, không chớp liên tục hoặc phá nhịp học. Tiếng xác nhận kết thúc trước giọng Higgs; dùng sự kiện audio thật. Mute, hidden, recording, leave/restart và reduced motion có đường xử lý đầy đủ.
+- Thử lại và AI chưa nhận diện chắc chắn phải khác đúng. Không tặng hiệu ứng đạt cho UNCLEAR/lỗi mạng; không dùng phần thưởng để thay đổi các gate nghe/nói/chấm đã duyệt. Lưu nhịp VFX/SFX, nguồn âm thanh, sprite frames, anchor, duration và bằng chứng chạy thật trong plan MD của game.
+
 ## Chuẩn asset motion dạng GIF — 2026-11-17
 
 - Khi tạo motion mới cho game, tạo asset GIF riêng theo mẫu Lion đánh trống hai tay đã duyệt trong Beat Band. Dùng các tư thế hoàn chỉnh để tay, thân, dụng cụ và vật bị tác động ăn khớp tại điểm chạm. Tham chiếu `assets/beat-band/lion-drum-v3.gif`.

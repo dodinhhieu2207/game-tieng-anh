@@ -1,0 +1,141 @@
+{
+  "rows": [
+    {
+      "name": "classroom",
+      "width": 320,
+      "scroll": 320,
+      "title": "\"Game Baloo 2\", \"Game Nunito\", sans-serif",
+      "interface": "\"Game Nunito\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "titleSize": "18px",
+      "loaded": true
+    },
+    {
+      "name": "toys",
+      "width": 320,
+      "scroll": 320,
+      "title": "\"Game Baloo 2\", \"Game Nunito\", sans-serif",
+      "interface": "\"Game Nunito\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "titleSize": "18px",
+      "loaded": true
+    },
+    {
+      "name": "family",
+      "width": 320,
+      "scroll": 320,
+      "title": "\"Game Baloo 2\", \"Game Nunito\", sans-serif",
+      "interface": "\"Game Nunito\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "titleSize": "18px",
+      "loaded": true
+    },
+    {
+      "name": "classroom",
+      "width": 390,
+      "scroll": 390,
+      "title": "\"Game Baloo 2\", \"Game Nunito\", sans-serif",
+      "interface": "\"Game Nunito\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "titleSize": "18px",
+      "loaded": true
+    },
+    {
+      "name": "toys",
+      "width": 390,
+      "scroll": 390,
+      "title": "\"Game Baloo 2\", \"Game Nunito\", sans-serif",
+      "interface": "\"Game Nunito\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "titleSize": "18px",
+      "loaded": true
+    },
+    {
+      "name": "family",
+      "width": 390,
+      "scroll": 390,
+      "title": "\"Game Baloo 2\", \"Game Nunito\", sans-serif",
+      "interface": "\"Game Nunito\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "titleSize": "18px",
+      "loaded": true
+    },
+    {
+      "name": "classroom",
+      "width": 768,
+      "scroll": 768,
+      "title": "\"Game Baloo 2\", \"Game Nunito\", sans-serif",
+      "interface": "\"Game Nunito\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "titleSize": "20px",
+      "loaded": true
+    },
+    {
+      "name": "toys",
+      "width": 768,
+      "scroll": 768,
+      "title": "\"Game Baloo 2\", \"Game Nunito\", sans-serif",
+      "interface": "\"Game Nunito\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "titleSize": "20px",
+      "loaded": true
+    },
+    {
+      "name": "family",
+      "width": 768,
+      "scroll": 768,
+      "title": "\"Game Baloo 2\", \"Game Nunito\", sans-serif",
+      "interface": "\"Game Nunito\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "titleSize": "20px",
+      "loaded": true
+    },
+    {
+      "name": "classroom",
+      "width": 1024,
+      "scroll": 1024,
+      "title": "\"Game Baloo 2\", \"Game Nunito\", sans-serif",
+      "interface": "\"Game Nunito\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "titleSize": "23px",
+      "loaded": true
+    },
+    {
+      "name": "toys",
+      "width": 1024,
+      "scroll": 1024,
+      "title": "\"Game Baloo 2\", \"Game Nunito\", sans-serif",
+      "interface": "\"Game Nunito\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "titleSize": "23px",
+      "loaded": true
+    },
+    {
+      "name": "family",
+      "width": 1024,
+      "scroll": 1024,
+      "title": "\"Game Baloo 2\", \"Game Nunito\", sans-serif",
+      "interface": "\"Game Nunito\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "titleSize": "23px",
+      "loaded": true
+    },
+    {
+      "name": "classroom",
+      "width": 1366,
+      "scroll": 1366,
+      "title": "\"Game Baloo 2\", \"Game Nunito\", sans-serif",
+      "interface": "\"Game Nunito\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "titleSize": "23px",
+      "loaded": true
+    },
+    {
+      "name": "toys",
+      "width": 1366,
+      "scroll": 1366,
+      "title": "\"Game Baloo 2\", \"Game Nunito\", sans-serif",
+      "interface": "\"Game Nunito\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "titleSize": "23px",
+      "loaded": true
+    },
+    {
+      "name": "family",
+      "width": 1366,
+      "scroll": 1366,
+      "title": "\"Game Baloo 2\", \"Game Nunito\", sans-serif",
+      "interface": "\"Game Nunito\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+      "titleSize": "23px",
+      "loaded": true
+    }
+  ],
+  "homeAtFiveWidths": true,
+  "errors": []
+}

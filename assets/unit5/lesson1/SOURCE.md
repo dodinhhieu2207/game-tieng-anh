@@ -73,3 +73,10 @@ Six built-in imagegen originals are retained in `sources/covers-v2/` and encoded
 ### Tactile game UI v3, 2026-11-27
 
 Five original built-in imagegen outputs use the accepted Unit5 world cover as their style reference. Prompts and native PNGs are in sources/ui-v3.json and sources/ui-v3/. Runtime ui/v3/*.webp are encoding-only exports with real outer alpha and solid centers; one discarded white-button attempt with an unintended transparent center is not used or registered. The replacement has verified opaque center pixels. Six word-ink SVGs retain the approved learning glyph paths, independently of the new control surfaces. Sixteen original SVG interaction glyphs are authored in tools/export_unit5_ui_v3.py; no external icon license or runtime service is involved. Existing local Fredoka (OFL) and Outfit font files stay unmodified. No new voice, music, SFX or actor motion is generated for this interface correction.
+
+
+### Authored correct-answer kit and typography, 2026-11-27
+
+sources/feedback-v1-original.png is the initial imagegen six-pose source; sources/feedback-v1.png is the reference-edited source. sources/feedback-v1.json records both generation IDs, full original prompt, edit brief, exact grid/encoding and sound provenance. effects/feedback-v1 contains six native exports, the single-play glint GIF, settled WebP and actor-alpha anchor config. GIF uses binary-alpha encoding; originals retain soft alpha. The exact approved actor frames are only inspected for bounds, never repainted.
+
+answer-confirm.wav and photo-collected.wav mix existing local Kenney CC0 photo/glass/coin Foley with gain/offset/fade/peak bounds. Every input hash and coefficient is recorded; original source-manifest.json and CC0 licenses remain. They contain no synthesized notes or new speech. Native ended/cancel gates are separate from recognition/scoring. New web interface font provenance is recorded in assets/fonts/current-interface.json and the project typography document; existing learning paths/audio are unmodified.

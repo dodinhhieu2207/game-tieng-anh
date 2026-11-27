@@ -1,0 +1,1 @@
+window.Unit5Feedback={"medal":"effects/feedback-v1/success.gif","still":"effects/feedback-v1/success.webp","durationMs":960,"canvas":[400,520],"bounds":{"happy":[43,32,361,508],"sad":[99,32,291,507],"hungry":[80,32,320,508],"thirsty":[51,32,380,508],"hot":[77,33,311,508],"cold":[80,33,311,507]},"cues":{"answer-confirm":0.43,"photo-collected":0.36}};

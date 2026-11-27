@@ -1,0 +1,22 @@
+/* Current app typography: rounded game titles, quieter readable interface text.
+   Fonts are bundled locally. Curriculum SVG paths, tracing geometry and canvas fonts stay separate. */
+:root{--app-font:'Game Nunito','App Outfit','Trebuchet MS',sans-serif;--play-title:'Game Baloo 2','Game Nunito',sans-serif}
+html,body{font-family:var(--app-font);font-weight:700}
+button,input,select,textarea{font-family:var(--app-font)}
+.app-header,.app-bottom-nav,#lessonApp,.shell-game-nav,.shell-game-controls,.shell-drawer{font-family:var(--app-font)}
+#lessonApp :is(h1,h2,h3,.shell-unit-name,.activity-card-copy>b,.shell-lesson-copy>b),
+#gameScreen .app-game-heading>b,#gameScreen .current-game h1,#gameStage>section>header h2,
+#gameScreen :is(.u5-finish h2,.fd-head h2,.u4-l2-head h2,.u4n header h2){font-family:var(--play-title)!important;font-weight:800;letter-spacing:0;line-height:1.14}
+#gameScreen :is(p,small,label,summary,[role=status],.u5-btn,.u5-count,.u5-recorder,.u5-receiver,.u4n-controls button,.u4-l2-controls button,.fd-footer button,.fd-panel-actions button,.fd-speak-actions button,.shell-game-controls button,.btn){font-family:var(--app-font)!important}
+#gameScreen :is(.u5-game,.u4n,.u4-l2-game,.fd){font-family:var(--app-font)}
+/* Plain learning models retain their approved shapes; decorative title type never enters these. */
+#gameScreen :is(.u5-sentence,.u5-transcript){font-family:'App Outfit',sans-serif!important}
+.app-game-heading>b{font-weight:800}
+
+#lessonApp :is(small,p,em,.btn,.play-pill){font-family:var(--app-font)!important}
+#gameScreen :is(.fsp,.u4-show,.ja-game,.jj-fine,.jsd-game,.pl-game){font-family:var(--app-font)}
+#gameScreen :is(.ja-game,.pl-game){--app-font:'Game Nunito','App Outfit','Trebuchet MS',sans-serif}
+#gameScreen :is(.fsp button,.u4-show-actions button,.ja-game button,.jj-fine button,.jsd-game button,.u4n button,.fd button:not(.fd-tile):not(.fd-person)){font-family:var(--app-font)!important}
+#gameScreen :is(.ja-game h2,.jj-fine h2){font-family:var(--play-title)!important;font-weight:800}
+#gameScreen :is(p,[role=status],.u5-task-copy p,.u5-cue){font-weight:700}
+#gameScreen :is(.u5-btn,.u4n-controls button,.u4-l2-controls button,.fd-footer button,.fd-panel-actions button,.fd-speak-actions button,.btn){font-weight:800}

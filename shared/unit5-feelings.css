@@ -214,3 +214,10 @@ body.u5-feelings-world .shell-game-nav{background:#fffffff2;border-color:#b4dbe9
 #lessonApp.u5-feelings-library .shell-art-activity .play-pill{background:#1478b9;box-shadow:0 3px 0 #105b97}
 body.u5-feelings-world .app-bottom-nav{background:#fffffff5;border-color:#9bd3ed;box-shadow:0 5px 0 #85bddb66}
 body.u5-feelings-world .app-bottom-nav button[aria-current=page]{background:#e0f3ff;border-color:#168bd2}
+
+/* Finite authored reward; placement is source-bound and clipped by the stage. */
+.u5-game .u5-actor.is-correct::after{content:none}
+.u5-game .u5-actor>.u5-result-medal{position:absolute;object-fit:contain;max-width:none;pointer-events:none;filter:drop-shadow(0 3px 3px #6a4a1b33);opacity:1!important;transform:none!important;z-index:7}
+.u5-album figure.is-new{animation:u5-photo-collect .45s cubic-bezier(.2,.8,.3,1)}
+@keyframes u5-photo-collect{0%{opacity:0;translate:0 8px;scale:.93}100%{opacity:1;translate:0 0;scale:1}}
+@media(prefers-reduced-motion:reduce){.u5-album figure.is-new{animation:none}}

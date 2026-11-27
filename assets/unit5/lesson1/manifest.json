@@ -5302,6 +5302,71 @@
       "file": "words/v3/cold-ink.svg",
       "role": "approved word glyph paths only, tighter viewport for legibility",
       "sha256": "a137d30d386ed519ffaa9df86a60f17fe518610d8a971a43eea58cc31c9838c3"
+    },
+    {
+      "file": "sources/feedback-v1.png",
+      "role": "imagegen original reward pose sheet",
+      "sha256": "2d7f9541388e6c1d17711e4cd54dae6e41d89c49a74789b65dacc71138c31f2e"
+    },
+    {
+      "file": "sources/feedback-v1-original.png",
+      "role": "imagegen initial source retained",
+      "sha256": "f7eabd28f6d7232ff8254e11fcfff5e83538dd434fa330fe15e83b1d291ab1e8"
+    },
+    {
+      "file": "effects/feedback-v1/frame-01.png",
+      "role": "authored reward pose, native grid crop/encoding",
+      "sha256": "c5e86d075a72b511565af017976d3e439551a01d4d57dfe838865a34bc34bf3d"
+    },
+    {
+      "file": "effects/feedback-v1/frame-02.png",
+      "role": "authored reward pose, native grid crop/encoding",
+      "sha256": "45a3640e911018b6e3585bcd6bc5625fb82b6286241b475202850c2808d7d0c0"
+    },
+    {
+      "file": "effects/feedback-v1/frame-03.png",
+      "role": "authored reward pose, native grid crop/encoding",
+      "sha256": "0e2564f4c1f2c271222006ac9334aade06040bf19e1e7098e23aea4f92c6348c"
+    },
+    {
+      "file": "effects/feedback-v1/frame-04.png",
+      "role": "authored reward pose, native grid crop/encoding",
+      "sha256": "a0b157bec87b957c4b855b92c088bd0ee64345571b74d80e0b01793d895668b4"
+    },
+    {
+      "file": "effects/feedback-v1/frame-05.png",
+      "role": "authored reward pose, native grid crop/encoding",
+      "sha256": "8bb922fc2bd366f4d845bd668d93a8b25a7ac1ec53aa1264980032473a6c9194"
+    },
+    {
+      "file": "effects/feedback-v1/frame-06.png",
+      "role": "authored reward pose, native grid crop/encoding",
+      "sha256": "20154b8ca7e6139c285863f72d17b6e5a053ed6943ead129a196164ee450fa5c"
+    },
+    {
+      "file": "effects/feedback-v1/success.gif",
+      "role": "single-play six-pose glint GIF, binary-alpha encoding required by GIF",
+      "sha256": "dd10f1b4762070587e3da5e4d61f05cb26cc274a5e9bf8dc588b2365eab920a0"
+    },
+    {
+      "file": "effects/feedback-v1/success.webp",
+      "role": "settled/static reduced-motion medal",
+      "sha256": "fca05cc9dd55a01062a0ed7fb5ae0b415bd3173d1af96c3062f0def1bbf8afb1"
+    },
+    {
+      "file": "audio/sfx/answer-confirm.wav",
+      "role": "finite soft success cue, mixed existing CC0 Foley",
+      "sha256": "07efe69aed7b36499fd1393140c6b62dc82deb5a09dcd5d70e72a07f9ca39eb7"
+    },
+    {
+      "file": "audio/sfx/photo-collected.wav",
+      "role": "finite soft success cue, mixed existing CC0 Foley",
+      "sha256": "f0b590e50ddddd6ea1cc6a22a5f7cf77d828e36b244874a04e16c07d16fcccb7"
+    },
+    {
+      "file": "effects/feedback-v1/config.js",
+      "role": "source-bound frame anchors and cue durations",
+      "sha256": "dc0a206456582efac0435bdd9ff8c6b3459badeeabc56e1f5fd55ba2b8fc8d1c"
     }
   ],
   "actors": {
@@ -6207,7 +6272,58 @@
     },
     "icons": "ui/v3/icons/",
     "wordInk": "words/v3/",
-    "interfaceFont": "Learning Fredoka 600/700, inherited app font",
+    "interfaceFont": "Game Nunito 700/800, inherited app font; Game Baloo 2 titles",
     "learningFont": "App Outfit 700/800 and unchanged approved paths"
+  },
+  "feedbackV1": {
+    "medal": "effects/feedback-v1/success.gif",
+    "still": "effects/feedback-v1/success.webp",
+    "durationMs": 960,
+    "canvas": [
+      400,
+      520
+    ],
+    "bounds": {
+      "happy": [
+        43,
+        32,
+        361,
+        508
+      ],
+      "sad": [
+        99,
+        32,
+        291,
+        507
+      ],
+      "hungry": [
+        80,
+        32,
+        320,
+        508
+      ],
+      "thirsty": [
+        51,
+        32,
+        380,
+        508
+      ],
+      "hot": [
+        77,
+        33,
+        311,
+        508
+      ],
+      "cold": [
+        80,
+        33,
+        311,
+        507
+      ]
+    },
+    "cues": {
+      "answer-confirm": 0.43,
+      "photo-collected": 0.36
+    }
   }
 }
