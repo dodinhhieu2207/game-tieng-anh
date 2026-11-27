@@ -1,0 +1,28 @@
+{
+  "runtimeCommit": "36bbb58",
+  "workflowRun": 45967745507,
+  "checkedAt": "2026-11-27T08:45:29.919Z",
+  "files": [
+    {
+      "path": "index.html",
+      "sha256": "9b43206501ea0b28d67c3f625e7d90d54516188b12ed39f2b74fa5c930f9dcb2",
+      "matchesCommit": true
+    },
+    {
+      "path": "shared/unit5-learning.js",
+      "sha256": "bb3a971fe9d461d6049c5b4bee06be74c141aea009bef6b9b38b6be4b36f3860",
+      "matchesCommit": true
+    },
+    {
+      "path": "shared/unit5-feelings.js",
+      "sha256": "a6facd8df32d561f7848128354ff0058f40495cb42092ad4e8cf001aba845ba0",
+      "matchesCommit": true
+    },
+    {
+      "path": "shared/unit5-feelings.css",
+      "sha256": "ef609a3241a4c8e40597255b42b5d5a0e30e0ff552ccf150ce71b9c7462f4b8b",
+      "matchesCommit": true
+    }
+  ],
+  "errors": []
+}

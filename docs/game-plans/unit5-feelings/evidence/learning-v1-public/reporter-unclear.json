@@ -1,0 +1,10 @@
+{
+  "origin": "https://dodinhhieu2207.github.io/game-tieng-anh",
+  "asrReplySimulated": true,
+  "fixtureContract": "normalized string and answerType null",
+  "uiKind": "UNCLEAR",
+  "noScore": true,
+  "optionalListeningContinuation": true,
+  "speakHiddenUntilModelEnds": true,
+  "errors": []
+}

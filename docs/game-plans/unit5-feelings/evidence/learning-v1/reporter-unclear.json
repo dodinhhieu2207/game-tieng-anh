@@ -1,0 +1,10 @@
+{
+  "origin": "http://127.0.0.1:8765",
+  "asrReplySimulated": true,
+  "fixtureContract": "normalized string and answerType null",
+  "uiKind": "UNCLEAR",
+  "noScore": true,
+  "optionalListeningContinuation": true,
+  "speakHiddenUntilModelEnds": true,
+  "errors": []
+}

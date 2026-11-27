@@ -1,6 +1,6 @@
 {
   "origin": "http://127.0.0.1:8765",
-  "scope": "Native first-learning gameplay; one simulated UNCLEAR reply only, no student accuracy claim",
+  "scope": "Native first-learning gameplay. Original comprehensive run used one invalid simulated service reply; contract-complete UNCLEAR was separately verified in reporter-unclear.json. No student accuracy claim.",
   "camera": {
     "turns": 18,
     "wrongTeachingReplays": 4,
@@ -29,9 +29,12 @@
   "reporter": {
     "modelsRemainVisible": 6,
     "modelOnlyContinues": true,
-    "unclearNotScored": true,
+    "unclearNotScored": null,
     "recognitionRepliesSimulated": 1,
-    "noAICompletionAward": true
+    "noAICompletionAward": true,
+    "invalidResponseNotScored": true,
+    "unclearRecheck": "reporter-unclear.json",
+    "fixtureCorrection": "The original fixture omitted normalized and answerType; the adapter correctly rejected it. A separate native check asserts the actual UNCLEAR result and no-score UI."
   },
   "profileAndPause": true,
   "muteAndMidModelLeave": true,
