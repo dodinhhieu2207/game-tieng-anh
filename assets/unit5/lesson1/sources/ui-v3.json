@@ -1,0 +1,64 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-11-27",
+  "scope": "In-game interface redesign, five original tactile raster surfaces",
+  "styleReference": "assets/unit5/lesson1/covers/v2/world.webp",
+  "assets": {
+    "button-gold": {
+      "generation": "exec-f01e5d5d-2546-4402-a595-ff031aa93800",
+      "prompt": "Create ONE professional original UI asset for a preschool mobile game, matching the reference's bright clean modeled 2.5D finish, glossy rounded toy-like construction, coherent frontal lighting. TRUE TRANSPARENT background, tight small transparent margin. Front-facing orthographic horizontal elongated rounded rectangle, 3:1 wide canvas. Complete shape fully visible. This is a blank physical button surface for native HTML text on top: leave the central 75 percent flat quiet and totally empty. No letters, numbers, icons, animals, scenery, sparkles or texture grain. Smooth modeled bevel rim, subtle small downward extrusion, top edge highlight, soft clean silhouette, no huge external shadow. Warm sunny golden-yellow face with honey gold rim and orange-gold lower edge; tiny cream highlight along upper lip.",
+      "source": "sources/ui-v3/button-gold.png",
+      "runtime": "ui/v3/button-gold.webp",
+      "sourceSha256": "e16d9331f119baf186aef6009bad0345c169035373e74f487ec93af6fad32586",
+      "size": [
+        2172,
+        724
+      ]
+    },
+    "button-blue": {
+      "generation": "exec-c557eb08-e3a8-46ac-842c-267f9fd87934",
+      "prompt": "Create ONE professional original UI asset for a preschool mobile game, matching the reference's bright clean modeled 2.5D finish, glossy rounded toy-like construction, coherent frontal lighting. TRUE TRANSPARENT background, tight small transparent margin. Front-facing orthographic horizontal elongated rounded rectangle, 3:1 wide canvas. Complete shape fully visible. This is a blank physical button surface for native HTML text on top: leave the central 75 percent flat quiet and totally empty. No letters, numbers, icons, animals, scenery, sparkles or texture grain. Smooth modeled bevel rim, subtle small downward extrusion, top edge highlight, soft clean silhouette, no huge external shadow. Saturated deep sky-blue face, bright cyan bevel and rich navy-blue lower edge; tiny pale blue upper lip highlight. Center blue must be dark enough for white text.",
+      "source": "sources/ui-v3/button-blue.png",
+      "runtime": "ui/v3/button-blue.webp",
+      "sourceSha256": "9c705a6f9278e96cce68ab725ce373101ff8b6994d04b7bf2c82aa3574c21f31",
+      "size": [
+        2172,
+        724
+      ]
+    },
+    "button-white-fixed": {
+      "generation": "exec-17d828c1-91fd-4827-bce2-8f730af8ae7f",
+      "prompt": "Create ONE original UI blank secondary button matching the supplied reference clean blue/gold 2.5D mobile-game rendering. Wide 3:1 canvas. Rounded rectangle with a thick glossy cyan-blue bevel edge, subtle darker blue lower extrusion, bright but fully OPAQUE pale icy blue center (#e3f5ff). This entire center must be solid opaque paint, never a hole or transparent window. Transparency only OUTSIDE the complete button silhouette. Quiet empty center for dark navy native HTML text. No icons, letters, text or sparkle. Orthographic front view, tiny margin, fully visible corners. Genuine alpha outside only.",
+      "source": "sources/ui-v3/button-white-fixed.png",
+      "runtime": "ui/v3/button-white-fixed.webp",
+      "sourceSha256": "ec7e7f921e13def100363095fd8fc5c506fe0f77aeea6ce6062bd31797a1fe78",
+      "size": [
+        2172,
+        724
+      ]
+    },
+    "prompt-plaque": {
+      "generation": "exec-94bbd7c2-5754-43f4-9bda-4569e6d3d4f6",
+      "prompt": "Create ONE original in-game prompt plaque for a preschool educational mobile game, matching reference's modeled 2.5D gloss, bright blue and sunny gold palette. Wide horizontal 4:1 canvas, front facing rounded rectangular sign. A clear fully OPAQUE very pale blue face (#e8f6ff), thick cyan-blue rounded outer border with a thin honey-gold inner trim and small ivory highlights, gentle dimensional lower blue lip. Central 75% completely empty and calm for native dark text. TRUE transparent background ONLY outside the plaque, absolutely no transparency inside the plaque, no knocked out center. All corners visible, very small margin. No icons, words, characters, numbers, stars or scenery.",
+      "source": "sources/ui-v3/prompt-plaque.png",
+      "runtime": "ui/v3/prompt-plaque.webp",
+      "sourceSha256": "f7a5182d33cafaceb739b944be67ace0b58253833b111ae171f2f3eb47b02daa",
+      "size": [
+        2172,
+        724
+      ]
+    },
+    "prop-tray": {
+      "generation": "exec-2656827f-77cd-471a-9a21-a2307ee0aa84",
+      "prompt": "Create ONE original toy-like prop selection tray for a preschool game, reference style clean modeled 2.5D mobile-game art. Wide horizontal 4:1 canvas. Empty shallow tray viewed almost front-on with slight view of its top interior. Rounded turquoise-blue side walls, polished warm golden honey wooden lip, pale sky-blue matte inner floor. Warm light from upper left, small physically coherent bevel and tiny lower shadow. Central inner 80% totally empty and opaque, no compartments, no props or objects, no text, icons or numbers. Transparent background ONLY outside the tray. The whole tray fills canvas with tiny transparent margin. Children will choose independently rendered items placed on top of this tray.",
+      "source": "sources/ui-v3/prop-tray.png",
+      "runtime": "ui/v3/prop-tray.webp",
+      "sourceSha256": "262ef955d889e55722b754148e49a852ecac1c72c16926122914d868e824aab0",
+      "size": [
+        2172,
+        724
+      ]
+    }
+  },
+  "styleReferenceSha256": "948f24d808e2331d9fdef5e3d0d1cc7d08c730a342ee6e2913f7eb75230b1d15"
+}

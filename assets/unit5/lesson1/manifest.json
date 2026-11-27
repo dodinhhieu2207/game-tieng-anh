@@ -5112,6 +5112,196 @@
       "file": "words/v2/thirsty-selected.svg",
       "role": "blue-white UI v2, paint-only SVG variant",
       "sha256": "a2d0ef8ce30ef0874852b88064cc3a9b1ce83d08ad1fb71329e6d6911aa94f9d"
+    },
+    {
+      "file": "sources/ui-v3/button-gold.png",
+      "role": "imagegen original tactile UI plate",
+      "sha256": "e16d9331f119baf186aef6009bad0345c169035373e74f487ec93af6fad32586",
+      "generation": "exec-f01e5d5d-2546-4402-a595-ff031aa93800",
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "file": "ui/v3/button-gold.webp",
+      "role": "runtime tactile UI plate, encoding only",
+      "sha256": "514f61bdac7c91f7ea06a66d7ce924d2e8c138350565c30107eb14b267634e34",
+      "generation": "exec-f01e5d5d-2546-4402-a595-ff031aa93800",
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "file": "sources/ui-v3/button-blue.png",
+      "role": "imagegen original tactile UI plate",
+      "sha256": "9c705a6f9278e96cce68ab725ce373101ff8b6994d04b7bf2c82aa3574c21f31",
+      "generation": "exec-c557eb08-e3a8-46ac-842c-267f9fd87934",
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "file": "ui/v3/button-blue.webp",
+      "role": "runtime tactile UI plate, encoding only",
+      "sha256": "d044cb2e491bf3fa9065dc8a43da46764c098a1c3d2f70f40a4de98da28ca9f2",
+      "generation": "exec-c557eb08-e3a8-46ac-842c-267f9fd87934",
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "file": "sources/ui-v3/button-white-fixed.png",
+      "role": "imagegen original tactile UI plate",
+      "sha256": "ec7e7f921e13def100363095fd8fc5c506fe0f77aeea6ce6062bd31797a1fe78",
+      "generation": "exec-17d828c1-91fd-4827-bce2-8f730af8ae7f",
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "file": "ui/v3/button-white-fixed.webp",
+      "role": "runtime tactile UI plate, encoding only",
+      "sha256": "796361a4a8e96a9185e955b15f10eef50ab04cc74cb4d09d2deddb98a1c7391d",
+      "generation": "exec-17d828c1-91fd-4827-bce2-8f730af8ae7f",
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "file": "sources/ui-v3/prompt-plaque.png",
+      "role": "imagegen original tactile UI plate",
+      "sha256": "f7a5182d33cafaceb739b944be67ace0b58253833b111ae171f2f3eb47b02daa",
+      "generation": "exec-94bbd7c2-5754-43f4-9bda-4569e6d3d4f6",
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "file": "ui/v3/prompt-plaque.webp",
+      "role": "runtime tactile UI plate, encoding only",
+      "sha256": "1e492720d1f2a75840e2fc0488c4b9c8a4129a02782d1ab7f382b4de0ad089d0",
+      "generation": "exec-94bbd7c2-5754-43f4-9bda-4569e6d3d4f6",
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "file": "sources/ui-v3/prop-tray.png",
+      "role": "imagegen original tactile UI plate",
+      "sha256": "262ef955d889e55722b754148e49a852ecac1c72c16926122914d868e824aab0",
+      "generation": "exec-2656827f-77cd-471a-9a21-a2307ee0aa84",
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "file": "ui/v3/prop-tray.webp",
+      "role": "runtime tactile UI plate, encoding only",
+      "sha256": "ef6202d27de2b559996b202e838920ed21f5f8f3cf10ac819e41ff4c5b401a8d",
+      "generation": "exec-2656827f-77cd-471a-9a21-a2307ee0aa84",
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "file": "ui/v3/icons/music.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "b5d74f3b5d9263023429872a1c6a61a44899c089ac79027ad20c03807e366f5a"
+    },
+    {
+      "file": "ui/v3/icons/hear-word.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "8200000f5c2356ab53b93e1079c4d98c8623eef2cf2f3e3b13e5ea76e3d27dbb"
+    },
+    {
+      "file": "ui/v3/icons/hear-sentence.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "572281be4979105bd5dd9481183f170b120cabc383f89049f7837014e288465d"
+    },
+    {
+      "file": "ui/v3/icons/play.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "8982922d42d76b6d9ac52653a24ce66f126000ff1731cda0a145781c73d4bf4a"
+    },
+    {
+      "file": "ui/v3/icons/next.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "9fc7a62f1b1302563fff918761981912916a0d724c1d8c2bf1d9b213d95a086b"
+    },
+    {
+      "file": "ui/v3/icons/done.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "b1e3ed4a77329eec370a47f349947bb5758b829a7e367907131b15fd0122209e"
+    },
+    {
+      "file": "ui/v3/icons/microphone.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "7c2962cfa76e6ddc573d3ad73da7c7913ceab53cd54a08ed921c863fe6e86236"
+    },
+    {
+      "file": "ui/v3/icons/sound.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "8ba7220a7983e13b8c26c747010ba0b097cfb02822674bb52d00be44a31ed646"
+    },
+    {
+      "file": "ui/v3/icons/help.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "d48702c3001c8899c45a45dc86e70e21acd25c84e6f45d879e58a128654305ec"
+    },
+    {
+      "file": "ui/v3/icons/undo.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "5b5ded53b7129bed5a1d2dde1a5855660a85695f3344ba2f7bfc816c24d39606"
+    },
+    {
+      "file": "ui/v3/icons/back.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "e611fdaa72196da643dbfd639ad9e076129f0f85345840367bc3e5df56184e3d"
+    },
+    {
+      "file": "ui/v3/icons/close.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "c8b0ed69b226c0b46474d9dc0f544ee9e7f722085a4219f4bf4e667d3a534d94"
+    },
+    {
+      "file": "ui/v3/icons/replay.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "ced849510cda3c71da1ea2c7508ada251041a44c8b1170b47b5a4e1317c03b5c"
+    },
+    {
+      "file": "ui/v3/icons/camera.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "ecc7ba754af1909b4b28df5654c3cc99993c1f3e6929ef89c5d46852f6eb8de8"
+    },
+    {
+      "file": "ui/v3/icons/home.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "7bb95e4a1c6c92c006ab58f0898ea599d0814f79962cb76fdaeb02686f98f1e8"
+    },
+    {
+      "file": "ui/v3/icons/photo.svg",
+      "role": "project-authored 64px dual-tone interaction glyph",
+      "sha256": "a5c5eb1fbac05fd88e566c6dd18768a4dc32b1ac81b1950818e601f1d59243c0"
+    },
+    {
+      "file": "words/v3/happy-ink.svg",
+      "role": "approved word glyph paths only, tighter viewport for legibility",
+      "sha256": "efb9e6748538dd685500d26257e529c4f7cd028ab827dba2de21dc049e0ca77e"
+    },
+    {
+      "file": "words/v3/sad-ink.svg",
+      "role": "approved word glyph paths only, tighter viewport for legibility",
+      "sha256": "fc21c4806ace305a5d60f057881412fcbb3a4b61ff93bbb1ba38a9db8e3001b0"
+    },
+    {
+      "file": "words/v3/hungry-ink.svg",
+      "role": "approved word glyph paths only, tighter viewport for legibility",
+      "sha256": "e93d941b07f6c9cbded9c92127bd822968aff0f73708776ec23165c47e3fcd5e"
+    },
+    {
+      "file": "words/v3/thirsty-ink.svg",
+      "role": "approved word glyph paths only, tighter viewport for legibility",
+      "sha256": "de61d3525439579f89e0d3527144f9dac0920167b6367acee23bb3d83a8f0c27"
+    },
+    {
+      "file": "words/v3/hot-ink.svg",
+      "role": "approved word glyph paths only, tighter viewport for legibility",
+      "sha256": "fd2eb4e5e83e8feba98c39e65c95eb3ad5931c51f594542e9f92e9d500e037fd"
+    },
+    {
+      "file": "words/v3/cold-ink.svg",
+      "role": "approved word glyph paths only, tighter viewport for legibility",
+      "sha256": "a137d30d386ed519ffaa9df86a60f17fe518610d8a971a43eea58cc31c9838c3"
     }
   ],
   "actors": {
@@ -6006,5 +6196,18 @@
     "ui": "ui/v2/",
     "words": "words/v2/",
     "letters": "letters/v2/"
+  },
+  "interfaceV3": {
+    "plates": {
+      "button-gold": "ui/v3/button-gold.webp",
+      "button-blue": "ui/v3/button-blue.webp",
+      "button-white-fixed": "ui/v3/button-white-fixed.webp",
+      "prompt-plaque": "ui/v3/prompt-plaque.webp",
+      "prop-tray": "ui/v3/prop-tray.webp"
+    },
+    "icons": "ui/v3/icons/",
+    "wordInk": "words/v3/",
+    "interfaceFont": "Learning Fredoka 600/700, inherited app font",
+    "learningFont": "App Outfit 700/800 and unchanged approved paths"
   }
 }

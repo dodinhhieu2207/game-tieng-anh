@@ -1,0 +1,1083 @@
+{
+  "origin": "http://127.0.0.1:8765",
+  "checkedAt": "2026-11-27T03:22:27.346Z",
+  "covers": 6,
+  "worldAndActivityMenusAtFiveWidths": true,
+  "gameLayouts": [
+    {
+      "route": "feelings-house",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 19
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 19
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 26
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 18
+        }
+      },
+      "scroll": 320,
+      "width": 320,
+      "buttons": [
+        {
+          "label": "Explore",
+          "height": 65,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Word",
+          "height": 78,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Sentence",
+          "height": 78,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-camera",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 19
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 19
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 26
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 18
+        }
+      },
+      "scroll": 320,
+      "width": 320,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 71.59375,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "helping-hands",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 19
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 19
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 26
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 18
+        }
+      },
+      "scroll": 320,
+      "width": 320,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 71.59375,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-workshop",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 19
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 19
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 26
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 18
+        }
+      },
+      "scroll": 320,
+      "width": 320,
+      "buttons": [
+        {
+          "label": "Listen",
+          "height": 65,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "little-reporter",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 19
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 19
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 26
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 18
+        }
+      },
+      "scroll": 320,
+      "width": 320,
+      "buttons": [
+        {
+          "label": "Hear model",
+          "height": 78,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Hide words",
+          "height": 78,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Speak",
+          "height": 65,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-house",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 28
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 18
+        }
+      },
+      "scroll": 390,
+      "width": 390,
+      "buttons": [
+        {
+          "label": "Explore",
+          "height": 65,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Word",
+          "height": 78,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Sentence",
+          "height": 78,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-camera",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 28
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 18
+        }
+      },
+      "scroll": 390,
+      "width": 390,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 65,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "helping-hands",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 28
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 18
+        }
+      },
+      "scroll": 390,
+      "width": 390,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 65,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-workshop",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 28
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 18
+        }
+      },
+      "scroll": 390,
+      "width": 390,
+      "buttons": [
+        {
+          "label": "Listen",
+          "height": 65,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "little-reporter",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 19
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 28
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 18
+        }
+      },
+      "scroll": 390,
+      "width": 390,
+      "buttons": [
+        {
+          "label": "Hear model",
+          "height": 78,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Hide words",
+          "height": 78,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Speak",
+          "height": 65,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 56,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-house",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 21
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 22
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 32
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        }
+      },
+      "scroll": 768,
+      "width": 768,
+      "buttons": [
+        {
+          "label": "Explore",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Word",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Sentence",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 58,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-camera",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 21
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 22
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 32
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        }
+      },
+      "scroll": 768,
+      "width": 768,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 58,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "helping-hands",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 21
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 22
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 32
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        }
+      },
+      "scroll": 768,
+      "width": 768,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 58,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-workshop",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 21
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 22
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 32
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        }
+      },
+      "scroll": 768,
+      "width": 768,
+      "buttons": [
+        {
+          "label": "Listen",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 58,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "little-reporter",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 21
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 22
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 32
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        }
+      },
+      "scroll": 768,
+      "width": 768,
+      "buttons": [
+        {
+          "label": "Hear model",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Hide words",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Speak",
+          "height": 72,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 58,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-house",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 21
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 22
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 35.84
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        }
+      },
+      "scroll": 1024,
+      "width": 1024,
+      "buttons": [
+        {
+          "label": "Explore",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Word",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Sentence",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 58,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-camera",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 21
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 22
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 35.84
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        }
+      },
+      "scroll": 1024,
+      "width": 1024,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 58,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "helping-hands",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 21
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 22
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 35.84
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        }
+      },
+      "scroll": 1024,
+      "width": 1024,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 58,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-workshop",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 21
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 22
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 35.84
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        }
+      },
+      "scroll": 1024,
+      "width": 1024,
+      "buttons": [
+        {
+          "label": "Listen",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 58,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "little-reporter",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 21
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 22
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 35.84
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        }
+      },
+      "scroll": 1024,
+      "width": 1024,
+      "buttons": [
+        {
+          "label": "Hear model",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Hide words",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Speak",
+          "height": 72,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 58,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-house",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 26
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 22
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 44
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        }
+      },
+      "scroll": 1366,
+      "width": 1366,
+      "buttons": [
+        {
+          "label": "Explore",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Word",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Sentence",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 58,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-camera",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 26
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 22
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 44
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        }
+      },
+      "scroll": 1366,
+      "width": 1366,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 58,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "helping-hands",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 26
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 22
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 44
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        }
+      },
+      "scroll": 1366,
+      "width": 1366,
+      "buttons": [
+        {
+          "label": "Hear the clue",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 58,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "feelings-workshop",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 26
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 22
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 44
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        }
+      },
+      "scroll": 1366,
+      "width": 1366,
+      "buttons": [
+        {
+          "label": "Listen",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 58,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    },
+    {
+      "route": "little-reporter",
+      "typography": {
+        "task": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 26
+        },
+        "control": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 22
+        },
+        "sentence": {
+          "family": "\"App Outfit\", sans-serif",
+          "size": 44
+        },
+        "status": {
+          "family": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif",
+          "size": 20
+        }
+      },
+      "scroll": 1366,
+      "width": 1366,
+      "buttons": [
+        {
+          "label": "Hear model",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Hide words",
+          "height": 72,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Speak",
+          "height": 72,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "label": "Music off",
+          "height": 58,
+          "color": "rgb(23, 63, 101)",
+          "bg": "rgb(232, 247, 255)"
+        }
+      ],
+      "bad": []
+    }
+  ],
+  "nativeWordSuccessAndLetterPlacement": true,
+  "focusVisible": true,
+  "reducedMotion": true,
+  "errors": [],
+  "missing": []
+}

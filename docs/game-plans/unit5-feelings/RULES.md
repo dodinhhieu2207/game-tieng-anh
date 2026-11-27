@@ -1,6 +1,6 @@
 # Unit 5 Lesson 1 — playable activities
 
-User authorized implementation after the five-activity outline with “V làm đi” on 2026-11-26. Use the recommended Phaser + GIF approach already presented; do not repeat the stack question. Retain the finished lesson1 asset pack, local App Outfit, complete Higgs recordings, acoustic word timings and existing shell/progress/speech APIs.
+User authorized implementation after the five-activity outline with “V làm đi” on 2026-11-26. Use the recommended Phaser + GIF approach already presented; do not repeat the stack question. Retain the finished lesson1 asset pack, local app fonts (Fredoka interface, Outfit learning models), complete Higgs recordings, acoustic word timings and existing shell/progress/speech APIs.
 
 - Exact scope: Present (Feelings House), Feelings Camera, Helping Hands, Feelings Photo Workshop and Little Reporter. Do not invent Unit 5 Lessons 2–6 or touch unrelated Unit 4 changes.
 - Primary vocabulary: happy, sad, hungry, thirsty, hot, cold. Whole-word matching comes before optional supported letter assembly. No required timed reading or independent seven-letter spelling task.
@@ -10,3 +10,6 @@ User authorized implementation after the five-activity outline with “V làm đ
 - Pointer drag and tap/select-place plus keyboard alternatives are required. Every meaningful control has an accessible name and >=48px target; no drag-only completion.
 - Little Reporter uses existing Unit3Speech recording boundary and Worker. Add one bounded feeling-sentence grammar; correct means a complete sentence with matching pronoun and adjective, not a pronunciation score. UNCLEAR/device/network failures do not add mistakes. Never show teacher approval as AI or bypass endpoint validation.
 - Reuse allowlisted endpoint, upload limit, neutral whole-lesson ASR context and uncertainty handling. No transcript/audio persistence, secret in client, new origin or provider. Only temporary replay blob URLs; revoke on round/leave.
+
+
+Latest UI correction, 2026-11-27: changing only paint colors does not fulfill the requested UI/UX. Match the actual global app typography (Learning Fredoka 600/700), keep plain Outfit for complete learning sentences and existing approved glyph paths, and explicitly size task/controls/feedback/word models for classroom and mobile. Use original authored tactile UI artwork, a compact task/progress strip, clear primary/secondary controls, nearby choice docks and an identifiable microphone state console. Preserve all actual scoring/gates/progress and do not imply a microphone meter or live transcript without actual data. Test all five games, actual native interactions and five widths.

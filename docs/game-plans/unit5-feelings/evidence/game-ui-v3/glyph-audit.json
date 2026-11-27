@@ -1,0 +1,26 @@
+[
+  {
+    "word": "happy",
+    "pathsIdentical": true
+  },
+  {
+    "word": "sad",
+    "pathsIdentical": true
+  },
+  {
+    "word": "hungry",
+    "pathsIdentical": true
+  },
+  {
+    "word": "thirsty",
+    "pathsIdentical": true
+  },
+  {
+    "word": "hot",
+    "pathsIdentical": true
+  },
+  {
+    "word": "cold",
+    "pathsIdentical": true
+  }
+]

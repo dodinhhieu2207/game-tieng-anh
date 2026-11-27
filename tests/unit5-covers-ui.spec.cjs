@@ -2,9 +2,9 @@ const {chromium}=require('C:/Users/Admin/.cache/codex-runtimes/codex-primary-run
 const fs=require('fs'),path=require('path'),assert=require('assert');
 const origin=process.env.U5_QA_ORIGIN||'http://127.0.0.1:8765';
 const routes=['feelings-house','feelings-camera','helping-hands','feelings-workshop','little-reporter'];
-const release=process.env.U5_QA_RELEASE||'coverui3';
+const release=process.env.U5_QA_RELEASE||'gameui1';
 const href=r=>origin+'/index.html?release='+release+'#'+r;
-const dir=path.resolve('docs/game-plans/unit5-feelings/evidence/covers-ui-v2'+(origin.startsWith('https:')?'-public':''));
+const dir=path.resolve(process.env.U5_QA_DIR||'docs/game-plans/unit5-feelings/evidence/game-ui-v3'+(origin.startsWith('https:')?'-public':''));
 async function decoded(p,selector){return p.locator(selector).evaluateAll(async images=>Promise.all(images.map(async im=>{await im.decode();return {src:im.getAttribute('src'),width:im.naturalWidth,height:im.naturalHeight,box:im.getBoundingClientRect().toJSON()}})));}
 (async()=>{
  fs.mkdirSync(dir,{recursive:true});
@@ -24,9 +24,10 @@ async function decoded(p,selector){return p.locator(selector).evaluateAll(async 
   for(const route of routes){
    await p.goto(href('/unit/5/lesson/1?mode=practice&activity='+route));await p.waitForFunction(()=>Unit5Feelings.current()?.loaded);
    await decoded(p,'.u5-game img');
-   const state=await p.evaluate(()=>{const root=document.querySelector('.u5-game');return {scroll:document.documentElement.scrollWidth,width:innerWidth,buttons:[...root.querySelectorAll('.u5-controls button')].filter(e=>e.offsetWidth&&e.offsetHeight).map(e=>({label:e.textContent.trim(),height:e.getBoundingClientRect().height,color:getComputedStyle(e).color,bg:getComputedStyle(e).backgroundColor})),bad:[...root.querySelectorAll('img')].filter(im=>im.src.includes('/words/')||im.src.includes('/letters/')||im.src.includes('/ui/')).filter(im=>!im.src.includes('/v2/')).map(im=>im.src)}});
+   const typography=await p.evaluate(()=>{const font=e=>({family:getComputedStyle(e).fontFamily,size:parseFloat(getComputedStyle(e).fontSize)});return {task:font(document.querySelector('.u5-task-copy p')),control:font(document.querySelector('.u5-btn')),sentence:font(document.querySelector('.u5-sentence')),status:font(document.querySelector('.u5-status'))}});assert(typography.task.family.includes('Learning Fredoka'));assert(typography.control.family.includes('Learning Fredoka'));assert(typography.sentence.family.includes('App Outfit'));assert(typography.task.size>=19&&typography.control.size>=19&&typography.sentence.size>=26&&typography.status.size>=18);
+   const state=await p.evaluate(()=>{const root=document.querySelector('.u5-game');return {scroll:document.documentElement.scrollWidth,width:innerWidth,buttons:[...root.querySelectorAll('.u5-controls button')].filter(e=>e.offsetWidth&&e.offsetHeight).map(e=>({label:e.textContent.trim(),height:e.getBoundingClientRect().height,color:getComputedStyle(e).color,bg:getComputedStyle(e).backgroundColor})),bad:[...root.querySelectorAll('img')].filter(im=>im.src.includes('/words/')||im.src.includes('/letters/')||im.src.includes('/ui/')).filter(im=>im.src.includes('/letters/')?!im.src.includes('/v2/'):!im.src.includes('/v3/')).map(im=>im.src)}});
    assert(state.scroll<=width+1,route+' overflow');assert(state.buttons.every(x=>x.height>=48));assert.deepEqual(state.bad,[]);
-   await p.screenshot({path:path.join(dir,`${route}-${width}.png`),fullPage:true});layouts.push({route,...state});
+   await p.screenshot({path:path.join(dir,`${route}-${width}.png`),fullPage:true});layouts.push({route,typography,...state});
   }
  }
  // Exercise actual word feedback, completed readability, next action and optional letter panel.

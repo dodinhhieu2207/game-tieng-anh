@@ -1,0 +1,37 @@
+{
+  "rows": [
+    {
+      "width": 320,
+      "scroll": 320,
+      "bad": [],
+      "font": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif"
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "bad": [],
+      "font": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif"
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "bad": [],
+      "font": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif"
+    },
+    {
+      "width": 1024,
+      "scroll": 1024,
+      "bad": [],
+      "font": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif"
+    },
+    {
+      "width": 1366,
+      "scroll": 1366,
+      "bad": [],
+      "font": "\"Learning Fredoka\", \"App Outfit\", \"Trebuchet MS\", sans-serif"
+    }
+  ],
+  "listenPlaysExistingHiggs": true,
+  "speakOpensActivity": true,
+  "errors": []
+}
